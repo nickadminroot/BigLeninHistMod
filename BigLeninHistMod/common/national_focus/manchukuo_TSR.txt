@@ -1,0 +1,2190 @@
+﻿focus_tree = {
+	id = manchukuo_focus_tsr
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = MAN
+			has_dlc = "No Compromise, No Surrender"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1800 }
+
+#	focus = {
+#		id = CHI_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = MAN_tsr_pacify_the_countryside
+		icon = GFX_goal_generic_major_war
+		x = 9
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			unlock_decision_category_tooltip = MAN_banditry_category
+			set_variable = { MAN_maintain_control_timer = 180 }
+			custom_effect_tooltip = MAN_pacify_the_countryside_effect_tooltip
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_army_modernization
+		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_army #GFX_goal_generic_small_arms
+		prerequisite = { focus = MAN_tsr_pacify_the_countryside }
+		x = -2
+		y = 1
+		relative_position_id = MAN_tsr_pacify_the_countryside
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_mukden_military_academy
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = MAN_tsr_army_modernization }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+		
+		completion_reward = {
+			add_ideas = MAN_mukden_military_academy
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_invite_japanese_settlers
+		icon = GFX_focus_JAP_promote_japanese_settlement
+		prerequisite = { focus = MAN_tsr_pacify_the_countryside }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_pacify_the_countryside
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_idea = MAN_banditry }
+			NOT = { has_war_with = JAP }
+			JAP = {
+				exists = yes
+			}
+			OR = {
+				is_ally_with = JAP
+				JAP = {
+					has_opinion = {
+						target = ROOT
+						value > 74
+					}		
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		complete_tooltip = {
+
+			JAP = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = MAN_accepted_japanese_settlers_opm
+				}	
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_state = {
+				limit = { has_state_flag = MAN_invite_japanese_settlers_2IC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+
+		completion_reward = {
+
+			JAP = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = MAN_accepted_japanese_settlers_opm
+				}	
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT }
+				add_manpower = 25417
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT }
+				add_manpower = 33846
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_collective_farms
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = MAN_tsr_invite_japanese_settlers }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_invite_japanese_settlers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_law_university
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_tsr_collective_farms focus = MAN_tsr_mukden_military_academy focus = MAN_tsr_expand_the_textile_industry }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_collective_farms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_research_and_education_department
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_tsr_law_university }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_law_university
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				num_of_factories > 50
+				all_state = {
+					OR = {
+						NOT = { is_core_of = CHI }
+						NOT = { is_core_of = PRC }
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { is_in_faction_with = ROOT }
+							CONTROLLER = { is_subject_of = ROOT }
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1			
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_trade_delegation
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = MAN_tsr_pacify_the_countryside }
+		x = 2
+		y = 1
+		relative_position_id = MAN_tsr_pacify_the_countryside
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = MAN_trade_delegation
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_expand_the_textile_industry
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = MAN_tsr_trade_delegation }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_trade_delegation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = MAN_expand_the_textile_industry_IC
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = MAN_expand_the_textile_industry_IC
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_obedience
+		icon = GFX_focus_JAP_align_the_concordia_association
+		x = 18
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = MAN_manchukuo_film_association
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_hoankyoku
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = MAN_tsr_obedience }
+		x = -2
+		y = 1
+		relative_position_id = MAN_tsr_obedience
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		
+
+		completion_reward = {
+
+			add_stability = 0.1
+
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				if = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+				}
+				add_ideas = MAN_hoankyoku_idea
+			}
+
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_expand_the_navy
+		icon = GFX_focus_MAN_manchurian_navy
+		prerequisite = { focus = MAN_tsr_obedience }
+		x = 2
+		y = 1
+		relative_position_id = MAN_tsr_obedience
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = {  }
+		
+
+		completion_reward = {
+
+			navy_experience = 75
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			716 = {
+				IF = {
+					limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "Momo Class"
+					creator = JAP
+					name = "Hai Wei"
+				}
+			}
+			ELSE = {
+				create_ship = {
+					type = destroyer_1
+					creator = "JAP"
+					name = "Hai Wei"
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_first_five_year_plan
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MAN_tsr_obedience }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_obedience
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			country_event = wtt_manchukou.11
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_trading_illicit_goods
+		icon = GFX_focus_PRC_allow_special_goods_trade
+		prerequisite = { focus = MAN_tsr_first_five_year_plan }
+		x = -1
+		y = 1
+		relative_position_id = MAN_tsr_first_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = MAN_tsr_illicit_trade
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_invite_japanese_investors
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = MAN_tsr_first_five_year_plan }
+		x = -3
+		y = 1
+		relative_position_id = MAN_tsr_first_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			NOT = { has_war_with = JAP }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			
+			random_core_state = {
+				prioritize = { 328 }
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			JAP = {
+				country_event = {
+					id = tsr_manchukuo.13
+					hours = 4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_expand_the_railways
+		icon = GFX_focus_SOV_south_manchuria_railway
+		prerequisite = { focus = MAN_tsr_invite_japanese_investors }
+		x = 2
+		y = 1
+		relative_position_id = MAN_tsr_invite_japanese_investors
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				716 = {
+					is_fully_controlled_by = ROOT
+				}
+				328 = {
+					is_fully_controlled_by = ROOT
+				} 
+				610 = {
+					is_fully_controlled_by = ROOT
+				} 
+				717 = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+
+			if = {
+					limit = {
+						controls_state = 716
+					}
+					build_railway = { #Mukden-Korean border
+						path = {
+							11771 9885 3895 3839 3970 6981
+						}
+					}
+					build_railway = { #Mukden - Dalian
+						path = {
+							11771 987 9781 11764 964 3783
+						}
+					}
+				}
+			if = {
+				limit = { 
+					328 = { is_fully_controlled_by = ROOT } 
+					controls_state = 715
+					controls_state = 716
+				}
+				build_railway = {
+					path = { #Mukden - Hsinking - Harbin
+						11771 11808 916 4642 4572 4503 7652 10433
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 716
+					controls_state = 610
+				}
+				build_railway = { #Mukden - Chinese border
+					path = { 11771 6951 11815 9835 6837 11886 3900 }
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 714
+					controls_state = 715
+				}
+				build_railway = { #Mukden - central Manchuria
+					path = { 11771 846 9831 930 4633 4561 4506 7582 10433 }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = MAN_south_manchuria_railway_company
+
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_expand_showa_steel_works
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MAN_tsr_invite_japanese_investors }
+		x = -2
+		y = 1
+		relative_position_id = MAN_tsr_invite_japanese_investors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			716 = { is_fully_controlled_by = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			unlock_decision_tooltip = MAN_develop_liaotung_iron_ore_deposits
+			unlock_decision_tooltip = MAN_establish_the_erdaojiang_special_steel_experimental_plant
+		}
+		
+	}
+
+	focus = {
+		id = MAN_tsr_develop_aluminum_sources
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = MAN_tsr_expand_showa_steel_works }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_expand_showa_steel_works
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { has_tech = excavation1 }
+				add_tech_bonus = {
+					name = MAN_develop_aluminum_sources
+					bonus = 1.0
+					uses = 1
+					category = excavation_tech
+				}
+			}
+			else = {
+				set_technology = { excavation1 = 1 }
+			}
+			unlock_decision_tooltip = MAN_develop_kirin_aluminium_deposits
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_strengthen_ties_with_nissan
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = MAN_tsr_invite_japanese_investors }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_invite_japanese_investors
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = unlock_mio_tt
+				show_mio_tooltip = JAP_nissan_organization
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MAN_nissan
+			}
+			add_tech_bonus = {
+				name = MAN_tsr_strengthen_ties_with_nissan
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_mangyo
+		icon = GFX_focus_generic_industrialists
+		prerequisite = { focus = MAN_tsr_strengthen_ties_with_nissan }
+		prerequisite = { focus = MAN_tsr_expand_showa_steel_works }
+		prerequisite = { focus = MAN_tsr_expand_the_railways }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_strengthen_ties_with_nissan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			add_political_power = 50
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = MAN_tsr_mangyo_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = MAN_mangyo
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_idea = MAN_showa_steel_works
+					}
+					swap_ideas = {
+						remove_idea = MAN_showa_steel_works
+						add_idea = MAN_mangyo
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_idea = MAN_south_manchuria_railway_company
+					}
+					swap_ideas = {
+						remove_idea = MAN_south_manchuria_railway_company
+						add_idea = MAN_mangyo
+					}
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_social_research_unit
+		icon = GFX_focus_JAP_expand_the_showa_research_association
+		prerequisite = { focus = MAN_tsr_expand_the_railways }
+		x = 2
+		y = 2
+		relative_position_id = MAN_tsr_invite_japanese_investors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_second_five_year_plan
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MAN_tsr_mangyo }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_mangyo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			if = {
+				limit = { has_idea = MAN_five_year_plan_air }
+				NOT = { has_idea = MAN_five_year_plan_air }
+			}
+			if = {
+				limit = { has_idea = MAN_five_year_plan_tank }
+				NOT = { has_idea = MAN_five_year_plan_tank }
+			}
+			if = {
+				limit = { has_idea = MAN_five_year_plan_industry }
+				NOT = { has_idea = MAN_five_year_plan_industry }
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = MAN_five_year_plan_air }
+					NOT = { has_idea = MAN_five_year_plan_tank }
+					NOT = { has_idea = MAN_five_year_plan_industry }
+				}
+				NOT = { has_idea = MAN_five_year_plan_air }
+			}
+			amount_research_slots > 3
+			industrial_complex > 14
+			arms_factory > 14
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			country_event = wtt_manchukou.11
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_national_defense_state
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = MAN_tsr_second_five_year_plan }
+		x = 0
+		y = 1
+		relative_position_id = MAN_tsr_second_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = MAN_national_defense_state
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_mukden_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MAN_tsr_first_five_year_plan }
+		x = 1
+		y = 1
+		relative_position_id = MAN_tsr_first_five_year_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			716 = { is_fully_controlled_by = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			716 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+
+				mio:CHI_mukden_arsenal_organization = {
+					add_mio_size = 2
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_mamc
+		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_airforce #GFX_goal_generic_air_fighter
+		prerequisite = { focus = MAN_tsr_mukden_arsenal }
+		x = 0
+		y = 2
+		relative_position_id = MAN_tsr_mukden_arsenal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = MAN_mamc_light_organization
+				show_mio_tooltip = MAN_mamc_medium_organization
+				show_mio_tooltip = MAN_mamc_heavy_organization
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				mio:MAN_mamc_light_organization = {
+					add_mio_funds = 500
+				}
+				mio:MAN_mamc_medium_organization = {
+					add_mio_funds = 500
+				}
+				mio:MAN_mamc_heavy_organization = {
+					add_mio_funds = 500
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MAN_mamc_light
+				show_ideas_tooltip = MAN_mamc_medium
+				show_ideas_tooltip = MAN_mamc_heavy
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_alliance_with_the_kwantung_army
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = MAN_tsr_first_five_year_plan }
+		x = 3
+		y = 1
+		relative_position_id = MAN_tsr_first_five_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			remove_ideas = MAN_kwantung_veto
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_doctrine_cost_reduction = {
+				name = MAN_alliance_with_the_kwantung_army
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_request_dalian
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		prerequisite = { focus = MAN_tsr_alliance_with_the_kwantung_army }
+		x = 3
+		y = 1
+		relative_position_id = MAN_tsr_alliance_with_the_kwantung_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			JAP = {
+				owns_state = 745
+				controls_state = 745
+			}
+			ROOT = {
+				is_subject_of = JAP
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		
+
+		completion_reward = {
+			JAP = {
+				country_event = {
+					id = tsr_manchukuo.2
+					hours = 6
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_further_mobilization
+		icon = GFX_focus_CHI_tongzi_jun
+		prerequisite = { focus = MAN_tsr_alliance_with_the_kwantung_army }
+		x = -1
+		y = 1
+		relative_position_id = MAN_tsr_alliance_with_the_kwantung_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = MAN_strengthen_army 
+					}
+				}
+				add_ideas = MAN_mobilization
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = MAN_strengthen_army
+					add_idea = MAN_strong_army
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_strengthen_the_manchukuo_imperial_army
+		icon = GFX_focus_PRC_develop_the_army 
+		prerequisite = { focus = MAN_tsr_alliance_with_the_kwantung_army }
+		x = 1
+		y = 1
+		relative_position_id = MAN_tsr_alliance_with_the_kwantung_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		
+
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = MAN_mobilization 
+					}
+				}
+				add_ideas = MAN_strengthen_army
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = MAN_mobilization
+					add_idea = MAN_strong_army
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_expand_xingan_army
+		icon = GFX_focus_secret_rearmament 
+		prerequisite = { focus = MAN_tsr_strengthen_the_manchukuo_imperial_army }
+		x = 1
+		y = 1
+		relative_position_id = MAN_tsr_strengthen_the_manchukuo_imperial_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = MAN_xingan_army_resigned
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			hidden_effect = {
+
+				delete_unit_template_and_units = {
+					division_template = "Xing'an Army"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Xing'an Army"
+					division_names_group = MON_CAV_01
+					role = garrison
+					template_counter = 110
+					is_locked = no
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 2 y = 0 }
+					}
+				}
+
+			}
+
+			#custom_effect_tooltip = generic_skip_one_line_tt
+
+			761 = {
+				create_unit = {
+				    division = "name = \"1. Xing'an Army\" division_template = \"Xing'an Army\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    officer = {
+				    	name = MAN_kanjurjab
+				    }
+				}
+				create_unit = {
+				    division = "name = \"2. Xing'an Army\" division_template = \"Xing'an Army\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+				    owner = ROOT
+				    officer = {
+				    	name = MON_navaanneren
+				    }
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			MAN_urzhin_garmaev = {
+				add_planning = 1
+				add_attack = 1
+			}
+			MAN_jonjurjab = {
+				add_planning = 1
+				add_attack = 1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_the_question_of_leadership
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_tsr_strengthen_the_manchukuo_imperial_army }
+		prerequisite = { focus = MAN_tsr_further_mobilization }
+		x = -1
+		y = 1
+		relative_position_id = MAN_tsr_strengthen_the_manchukuo_imperial_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = {
+				id = tsr_manchukuo.1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = {
+				MAN_aisin_gioro_puyi
+			}
+		}
+
+	}
+
+	focus = {
+		id = MAN_tsr_chinese_leadership
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = MAN_tsr_the_question_of_leadership }
+		x = -2
+		y = 1
+
+		mutually_exclusive = {
+			focus = MAN_tsr_empire_of_manchukuo
+		}
+
+		relative_position_id = MAN_tsr_the_question_of_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					character = MAN_zhang_jinghui
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			IF = {
+				limit = {
+					MAN_pujie = {
+						is_country_leader = no
+					}
+				}
+				add_corps_commander_role = {
+					character = MAN_pujie
+					traits = { politically_connected infantry_leader }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+					legacy_id = -1
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					MAN_pujie = {
+						is_country_leader = yes
+					}
+				}
+				add_field_marshal_role = {
+					character = MAN_pujie
+					traits = { politically_connected infantry_leader offensive_doctrine }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 4
+					legacy_id = -1
+				}
+			}
+			IF = {
+				limit = {
+					MAN_aisin_gioro_puyi = {
+						is_country_leader = yes
+					}
+				}
+				add_field_marshal_role = {
+					character = MAN_aisin_gioro_puyi
+					traits = { trait_cautious }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+					legacy_id = -1
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = MAN_tsr_chinese_leadership_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			MAN_low_legitimacy_level_down = yes
+
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_vassalize_mengukuo
+		icon = GFX_focus_JAP_mengjiang_united_autonomous_government 
+		prerequisite = { focus = MAN_tsr_chinese_leadership }
+		x = -1
+		y = 1
+		relative_position_id = MAN_tsr_chinese_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject_of = JAP
+			NOT = { has_war_with = JAP }
+			NOT = { has_war_with = MEN }
+			MEN = {
+				exists = yes
+				is_subject_of = JAP
+			}
+		}
+
+		bypass = {
+			MEN = {
+				OR = {
+					exists = no
+					NOT = {
+						is_subject_of = JAP
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+
+		completion_reward = {
+			MEN = {
+				every_army_leader = {
+					set_nationality = MAN
+				}
+			}
+			annex_country = { target = MEN transfer_troops = yes }
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_national_cooperation_government
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = MAN_tsr_chinese_leadership }
+		x = 1
+		y = 1
+		relative_position_id = MAN_tsr_chinese_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_the_two_emperors
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = MAN_tsr_vassalize_mengukuo }
+		prerequisite = { focus = MAN_tsr_national_cooperation_government }
+		x = 0
+		y = 2
+		relative_position_id = MAN_tsr_chinese_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject_of = JAP
+			compare_autonomy_state > autonomy_wtt_imperial_protectorate			
+			MAN = { 
+				ic_ratio = {
+					tag = JAP
+					ratio > 0.2
+				}
+			}
+			strength_ratio = {
+				tag = JAP
+				ratio > 0.25
+			}
+			controls_state = 608
+		}
+
+		bypass = {
+			is_subject = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_autonomy_ratio = {
+				value = 0.15
+				localization = MAN_the_two_emperors
+			}
+			MAN_low_legitimacy_level_down_twice = yes
+			unlock_decision_tooltip = {
+				decision = MAN_request_full_control_over_china
+				show_effect_tooltip = no 
+			}	
+			set_cosmetic_tag = MAN_restored
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_empire_of_manchukuo
+		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun 
+		prerequisite = { focus = MAN_tsr_the_question_of_leadership }
+		x = 2
+		y = 1
+
+		mutually_exclusive = {
+			focus = MAN_tsr_chinese_leadership
+		}
+
+		relative_position_id = MAN_tsr_the_question_of_leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					character = MAN_aisin_gioro_puyi
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			MAN_low_legitimacy_level_down = yes
+			set_cosmetic_tag = MAN_empire_of_manchukuo
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_embrace_state_shintoism
+		icon = GFX_focus_jap_spiritual_mobilization
+		prerequisite = { focus = MAN_tsr_empire_of_manchukuo }
+		x = 0
+		y = 1
+
+		relative_position_id = MAN_tsr_empire_of_manchukuo
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		
+		completion_reward = {
+			add_dynamic_modifier = {
+			 	modifier = MAN_state_shintoism_dm
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = MAN_tsr_embrace_state_shintoism_tt
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_work_with_the_kempeitai
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = MAN_tsr_embrace_state_shintoism }
+		x = -1
+		y = 1
+
+		relative_position_id = MAN_tsr_embrace_state_shintoism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = MAN_tsr_work_with_the_kempeitai
+				bonus = 0.75
+				uses = 2
+				category = military_police_tech
+			}	
+			
+			IF = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_ideas = MAN_kempeitai_idea_lar
+				IF = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					custom_effect_tooltip = generic_skip_one_line_tt
+					create_intelligence_agency = yes
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_ideas = MAN_kempeitai_idea_no_lar
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_promote_manchu_identity
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAN_tsr_embrace_state_shintoism }
+		x = 1
+		y = 1
+
+		relative_position_id = MAN_tsr_embrace_state_shintoism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		
+		completion_reward = {
+			MAN_add_or_modify_state_shintoism = yes
+			add_to_variable = { MAN_state_shintoism_recruitable_population_factor = 0.05 tooltip = recruitable_population_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			MAN_low_legitimacy_level_down = yes
+			custom_effect_tooltip = MAN_tsr_promote_manchu_identity_tt
+		}
+	}
+
+	focus = {
+		id = MAN_tsr_claim_outer_manchuria
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = MAN_tsr_promote_manchu_identity }
+		prerequisite = { focus = MAN_tsr_work_with_the_kempeitai }
+		x = -1
+		y = 1
+
+		relative_position_id = MAN_tsr_promote_manchu_identity
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION } 
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			408 = { add_claim_by = ROOT }
+			409 = { add_claim_by = ROOT }
+			657 = { add_claim_by = ROOT }
+			560 = { add_claim_by = ROOT }
+			561 = { add_claim_by = ROOT }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = claim_outer_manchuria_tt
+		}
+	}
+
+	
+}

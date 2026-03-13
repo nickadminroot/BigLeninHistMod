@@ -1,0 +1,23 @@
+focus_tree = {
+	id = filler_focus
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+	
+	focus = {
+		id = filler_national_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		}
+	}
+}

@@ -1,0 +1,4 @@
+graphical_culture = westerngfx
+graphical_culture_2d = western_2d
+
+color = { 0 0 0 }

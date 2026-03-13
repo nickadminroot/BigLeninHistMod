@@ -1,0 +1,23 @@
+state = {
+	id = 940
+	name = "STATE_940"
+	manpower = 463559
+	state_category = pastoral
+	resources = {
+		rubber = 4 
+	}
+	history = {
+		owner = NPL
+		add_core_of = NPL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			13278 2 
+		}
+	}
+	provinces = {
+		13278 13279 13280
+	}
+	local_supplies = 0.0 
+}

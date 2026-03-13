@@ -1,0 +1,82 @@
+﻿##### ARGENTINA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+ARG_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = ""
+	fallback_name = "Orfey %d"					
+
+}
+
+### LIGHT CRUISER NAMES###
+ARG_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = ""
+	fallback_name = "Prokiller %d"
+
+}
+
+### HEAVY CRUISER NAMES###
+ARG_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = ""
+	fallback_name = "Kotix %d"
+}
+
+
+### BATTLESHIP NAMES ###
+ARG_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = ""
+	fallback_name = "Felix %d"		
+}
+
+### BATTLECRUISER NAMES ###
+ARG_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = ""
+	fallback_name = "Larion %d"		
+
+}
+
+### AIRCRAFT CARRIER NAMES ###
+ARG_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = ""
+	fallback_name = "Бомж %d"	
+}
+
+### SUBMARINES ###
+ARG_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = ""
+	fallback_name = "Rifactor %d"
+	
+}
