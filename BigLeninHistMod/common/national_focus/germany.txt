@@ -1115,10 +1115,10 @@ focus_tree = {
 					}
 				}
 				51 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1159,10 +1159,10 @@ focus_tree = {
 		completion_reward = {
 
 			59 = { #Hannover
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2184,7 +2184,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = oil
-				amount > 149 #This needs to correspond to the Bypass values in the previous focuses
+				amount > 120 #This needs to correspond to the Bypass values in the previous focuses
 				extracted = yes
 			}
 			has_resources_in_collection = {
@@ -2528,7 +2528,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2580,7 +2580,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5480,7 +5480,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -5631,7 +5631,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -6250,7 +6250,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_plan_z
-		cost = 10
+		cost = 5
 		available = {
 			#NOT = { has_completed_focus = GER_high_seas_fleet }
 		}
@@ -6957,7 +6957,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_construct_aircraft_carriers
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -7349,7 +7349,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 2
 	
 		available = {
 			OR = {
@@ -7403,7 +7403,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_trade_interdiction
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 		}
@@ -7531,7 +7531,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_cruiser_warfare
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 		}
@@ -7608,7 +7608,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_trade_interdiction
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 			has_war = yes
@@ -7693,7 +7693,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_wolfpack_tactics
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
 		}
@@ -7800,7 +7800,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_panzerschiff_raiders
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -8174,7 +8174,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_war_preparations
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 			has_war = no
@@ -8213,7 +8213,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_war_preparations
-		cost = 10
+		cost = 5
 
 
 		available = {
@@ -9767,8 +9767,9 @@ focus_tree = {
 			86 = { is_owned_by = GER }
 		}
 		
-		available = { 
-			is_subject = no 
+		available = {
+			date > 1941.7.1
+			is_subject = no
 		}
 
 		will_lead_to_war_with = LIT
@@ -10358,10 +10359,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-				NPL = {
+				SWE = {
 					give_resource_rights = {
 						receiver = ROOT 
-						state = 918 #Västerbotten 
+						state = 141 #Stockholm
 					}
 				}
 		}

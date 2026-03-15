@@ -693,7 +693,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = limited_rearmament_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -719,6 +719,12 @@ focus_tree = {
 					add_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
 				}	
 			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
 
@@ -730,7 +736,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = shadow_scheme_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1331,7 +1337,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = air_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1647,7 +1653,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1780,7 +1786,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_convoy_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1910,7 +1916,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1964,7 +1970,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5581,7 +5587,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5832,7 +5838,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_home_defence
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5861,7 +5867,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_issue_gasmasks
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -5889,7 +5895,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_military_training_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -5914,7 +5920,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_home_defence
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

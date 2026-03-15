@@ -2,7 +2,8 @@ state={
 	id=813
 	name="STATE_813"
 	history={
-		owner = BLT
+		owner = EST
+		add_core_of = EST
 		victory_points = {
 			4640 1 #Narva
 		}

@@ -2,7 +2,8 @@ state={
 	id=814
 	name="STATE_814"
 	history={
-		owner = BLT
+		owner = LIT
+		add_core_of = LIT
 		victory_points = {
 			11312 1 #Marijampole
 		}

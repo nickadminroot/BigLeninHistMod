@@ -723,7 +723,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -9114,7 +9114,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_comintern
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -9134,14 +9134,14 @@ focus_tree = {
 
 		completion_reward = {
 			annex_country = {
-				target = BLT
+				target = LIT
 			}
-			#every_state = {
-			#	limit = {
-			#		is_core_of = BLT
-			#	}
-			#	add_core_of = SOV
-			#}
+			annex_country = {
+				target = LAT
+			}
+			annex_country = {
+				target = EST
+			}
 		}
 	}
 

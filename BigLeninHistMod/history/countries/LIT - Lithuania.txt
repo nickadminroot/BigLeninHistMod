@@ -1,4 +1,4 @@
-capital = 808
+capital = 11
 
 # Starting tech - minimal setup
 set_technology = {
@@ -28,4 +28,4 @@ set_popularities = {
 	}
 }
 
-set_convoys = 1000
+set_convoys = 50

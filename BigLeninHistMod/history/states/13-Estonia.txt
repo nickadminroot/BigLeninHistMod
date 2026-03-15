@@ -5,7 +5,8 @@ state={
 		steel=2.000
 	}
 	history={
-		owner = BLT
+		owner = EST
+		add_core_of = EST
 		victory_points = {
 			3174 1 #Voru
 		}

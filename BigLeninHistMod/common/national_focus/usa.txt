@@ -752,7 +752,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_neutrality_act
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

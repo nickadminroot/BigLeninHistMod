@@ -2,7 +2,8 @@ state={
 	id=810
 	name="STATE_810"
 	history={
-		owner = BLT
+		owner = LAT
+		add_core_of = LAT
 		victory_points = {
 			6222 3 #Jelgava
 		}

@@ -24,7 +24,7 @@
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -841,7 +841,7 @@
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1547,7 +1547,7 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
-		cost = 10
+		cost = 16
 
 		available_if_capitulated = yes
 

@@ -5,7 +5,8 @@ state={
 		steel=1.000
 	}
 	history={
-		owner = BLT
+		owner = LAT
+		add_core_of = LAT
 		victory_points = {
 			9340 5 
 		}
