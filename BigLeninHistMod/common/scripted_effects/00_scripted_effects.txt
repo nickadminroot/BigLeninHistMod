@@ -4301,3 +4301,335 @@ set_african_central_bank_variables = {
 	set_variable = { org_africa_central_bank_industrial_complex_factor = 0.1}
 	set_variable = { org_africa_central_bank_infrastructure_factor = 0.1}
 }
+
+# DLC compatibility effects - stub effects for missing DLC content
+
+# ETH effects
+ETH_add_random_mil_factory_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+		random_owned_state = {
+			limit = { is_controlled_by = ROOT }
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
+
+ETH_BOP_decentralization_large_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_deescalate_the_war_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_escalate_the_war_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_electrify_state_remove_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_upgrade_state_category = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_transfer_promised_states = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_get_ships_from_country = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_set_up_lon_arms_resolution_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_abba_jofir = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_haile_selassie_gugsa = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_hailu_tekle_haymanot = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+ETH_seyoum_mengesha = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+# WTT political struggle effects
+WTT_political_struggle_recalculate_support = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+WTT_political_struggle_remove_current_country = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+WTT_recalculate_state_support_for_ROOT = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+# Chile effects
+CHL_anarchic_society_level_down = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+CHL_anarchic_society_level_up = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+CHL_jorge_gonzález_von_marées = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+# Paraguay effects
+PAR_jose_felix_estigarribia = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+PAR_Jose_Felix_Estigarribia = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+# PHI effects
+PHI_artemio_ricarte = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+PHI_jose_laurel = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+PHI_cobalt_sea_achievement = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+# ENG speech effects
+play_warning_to_japan_effect = {
+	hidden_effect = {
+		set_country_flag = play_warning_to_japan_flag
+	}
+}
+
+play_blood_toil_tears_sweat_effect = {
+	hidden_effect = {
+		set_country_flag = play_speech_flag
+	}
+}
+
+play_their_finest_hour_effect = {
+	hidden_effect = {
+		set_country_flag = play_speech_flag
+	}
+}
+
+play_we_shall_fight_on_the_beaches_effect = {
+	hidden_effect = {
+		set_country_flag = play_speech_flag
+	}
+}
+
+# PRC effects
+PRC_execute_infiltration_effects_for_PREV = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+PRC_low_popular_support_level_down = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+PRC_soviet_tribute_level_up = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+# RNG effects
+RNG_add_or_modify_state_shintoism = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+	}
+}
+
+# SMB naval advisor effects
+SMB_naval_eng_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_fra_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_ger_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_ita_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_jap_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_sov_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_naval_usa_advisors_effect = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+SMB_purchase_dreadnoughts_tt_gen = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+# VEN effects
+VEN_blockade_countries = {
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+	}
+}
+
+# TUR effects
+TUR_set_appropriate_cosmetic_tag = {
+	if = {
+		limit = { NOT = { has_dlc = "Battle for the Bosporus" } }
+	}
+}
+
+# Various character effects - stubbed
+CHI_song_zheyuan = { }
+CHI_sun_tongxuan = { }
+GND_yu_hanmou = { }
+GXC_bai_chongxi = { }
+GXC_chen_jitang = { }
+GXC_li_zongren = { }
+KHM_ma_hushan = { }
+KHM_ma_zhancang = { }
+KUM_yulbars_khan = { }
+MEN_altanochir = { }
+MEN_jodbajab = { }
+SHX_wang_jingguo = { }
+SHX_yan_xishan = { }
+SIC_liu_xiang = { }
+SIK_sheng_shicai = { }
+SIK_sheng_shiqi = { }
+SND_han_fuju = { }
+XSM_ma_bufang = { }
+XSM_ma_buqing = { }
+XSM_ma_hongkui = { }
+YUN_hu_ruoyu = { }
+YUN_long_yun = { }
+UKR_mykhailo_omelianovych_pavlenko = { }
+AFG_create_puppet_army = { }
+BLR_radislau_astrouski = { }
+BOL_german_busch_beccera = { }
+BOL_indigenous_council = { }
+BRA_alvaro_alberto_da_motta_e_silva = { }
+BRA_augusto_rademaker = { }
+BRA_candido_mariano = { }
+BRA_cristovao_de_castro = { }
+BRA_eduardo_gomes = { }
+BRA_eurico_gaspar_dutra = { }
+BRA_geremia_lunarelli = { }
+BRA_getulio_vargas = { }
+BRA_gois_monterio = { }
+BRA_henrique_aristides_guilhem = { }
+BRA_indigenous_council = { }
+BRA_mascarenhas_de_morais = { }
+BRA_olympio_falconiere_da_cunha = { }
+BRA_plinio_salgado = { }
+BRA_protogenes_guimaraes = { }
+BRA_renato_de_almeida_guillobel = { }
+BRA_silvio_de_noronha = { }
+BRM_ba_maw = { }
+BRM_myat_phaya_lat = { }
+create_soviet_iranian_joint_submarine = { }
+CRO_ante_pavelic = { }
+CRO_duro_jakcin = { }
+GEO_ioseb_jughashvili = { }
+GEO_shalva_maglakelidze = { }
+GER_hans_von_luck = { }
+GER_wilhelm_ritter_von_thoma = { }
+HES_philipp_of_hesse = { }
+ITA_ferdinando_umberto_filippo_adalberto = { }
+KAR_jalmari_takkinen = { }
+KAR_ukki_vainamoinen = { }
+change_variable = { }

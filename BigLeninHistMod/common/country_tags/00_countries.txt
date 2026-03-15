@@ -9,7 +9,7 @@ HOL	= "countries/Holland.txt"
 CZE	= "countries/Czechoslovakia.txt"
 POL	= "countries/Poland.txt"
 AUS	= "countries/Austria.txt"
-LIT	= "countries/Lithuania.txt"
+LIT	= "countries/LIT.txt"
 EST	= "countries/Estonia.txt"
 LAT	= "countries/Latvia.txt"
 SPR = "countries/Spain.txt"
@@ -365,7 +365,7 @@ RNG = "countries/Reorganized National Government.txt"
 PSR = "countries/Philippine Second Republic.txt"
 HBC = "countries/Hebei-Chahar.txt"
 NPL = "countries/NPL.txt"
-LIT = "countries/LIT.txt"
+# LIT already defined at line 12
 BLT = "countries/LIT.txt"
 
 #NOTE: Useful to add a basic default loc entry for each tag in 00_countries.txt so that hovering over a tag will show the tag's name in loc (ie. PAP: "Papal States")
