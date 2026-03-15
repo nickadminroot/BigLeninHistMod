@@ -1,0 +1,59 @@
+###############################
+### AI ANNEXATION CATEGORIES ###
+###############################
+
+ai_annexation_ger_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+	priority = 10
+	
+	visible = {
+		original_tag = GER
+	}
+}
+
+ai_annexation_eng_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	priority = 10
+	
+	visible = {
+		original_tag = ENG
+	}
+}
+
+ai_annexation_usa_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	priority = 10
+	
+	visible = {
+		original_tag = USA
+	}
+}
+
+ai_annexation_sov_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	priority = 10
+	
+	visible = {
+		original_tag = SOV
+	}
+}

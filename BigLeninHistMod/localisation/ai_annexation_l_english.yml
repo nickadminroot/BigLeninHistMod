@@ -1,0 +1,58 @@
+l_english:
+
+ # Germany Category
+ ai_annexation_ger_cat: "AI Annexation - Germany"
+ ai_annexation_ger_cat_desc: "Decisions to puppet Balkan nations as Reichskommissariats"
+
+ # Germany Decisions
+ GER_annex_romania: "Puppet Romania"
+ GER_annex_romania_desc: "Establish Romania as a Reichskommissariat under German control."
+ GER_annex_romania_tt: "Romania is now a Reichskommissariat"
+ 
+ GER_annex_bulgaria: "Puppet Bulgaria"
+ GER_annex_bulgaria_desc: "Establish Bulgaria as a Reichskommissariat under German control."
+ GER_annex_bulgaria_tt: "Bulgaria is now a Reichskommissariat"
+ 
+ GER_annex_hungary: "Puppet Hungary"
+ GER_annex_hungary_desc: "Establish Hungary as a Reichskommissariat under German control."
+ GER_annex_hungary_tt: "Hungary is now a Reichskommissariat"
+
+ # Britain Category
+ ai_annexation_eng_cat: "AI Annexation - Britain"
+ ai_annexation_eng_cat_desc: "Decisions to annex British dominions"
+
+ # Britain Decisions
+ ENG_annex_canada: "Annex Canada"
+ ENG_annex_canada_desc: "Annex Canada into the United Kingdom."
+ 
+ ENG_annex_australia: "Annex Australia"
+ ENG_annex_australia_desc: "Annex Australia into the United Kingdom."
+ 
+ ENG_annex_newzealand: "Annex New Zealand"
+ ENG_annex_newzealand_desc: "Annex New Zealand into the United Kingdom."
+ 
+ ENG_annex_southafrica: "Annex South Africa"
+ ENG_annex_southafrica_desc: "Annex South Africa into the United Kingdom."
+ 
+ ENG_annex_india: "Annex India"
+ ENG_annex_india_desc: "Annex India into the United Kingdom."
+
+ # USA Category
+ ai_annexation_usa_cat: "AI Annexation - USA"
+ ai_annexation_usa_cat_desc: "Decisions to annex neighboring nations"
+
+ # USA Decisions
+ USA_annex_mexico: "Annex Mexico"
+ USA_annex_mexico_desc: "Annex Mexico into the United States."
+
+ # USSR Category
+ ai_annexation_sov_cat: "AI Annexation - USSR"
+ ai_annexation_sov_cat_desc: "Decisions to annex neighboring nations"
+
+ # USSR Decisions
+ SOV_annex_mongolia: "Annex Mongolia"
+ SOV_annex_mongolia_desc: "Annex Mongolia into the Soviet Union."
+
+ # Research Slot Tooltips
+ GER_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries puppeted"
+ ENG_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries annexed"

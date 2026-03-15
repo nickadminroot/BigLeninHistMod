@@ -1,0 +1,494 @@
+###############################
+#### AI ANNEXATION DECISIONS ###
+###############################
+
+#################
+#### GERMANY ####
+#################
+
+ai_annexation_ger_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+	visible = {
+		original_tag = GER
+	}
+}
+
+# Germany - Puppet Romania as Reichskommissariat
+GER_annex_romania = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+	available = {
+		date > 1938.1.1
+		ROM = {
+			exists = yes
+			is_subject = no
+			is_ai = yes
+		}
+		has_government = fascism
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		ROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_reichskommissariat
+			}
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		set_country_flag = GER_romania_puppeted
+		custom_effect_tooltip = GER_annex_romania_tt
+		hidden_effect = {
+			GER_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Germany - Puppet Bulgaria as Reichskommissariat
+GER_annex_bulgaria = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+	available = {
+		date > 1938.1.1
+		BUL = {
+			exists = yes
+			is_subject = no
+			is_ai = yes
+		}
+		has_government = fascism
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		BUL = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_reichskommissariat
+			}
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		set_country_flag = GER_bulgaria_puppeted
+		custom_effect_tooltip = GER_annex_bulgaria_tt
+		hidden_effect = {
+			GER_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Germany - Puppet Hungary as Reichskommissariat
+GER_annex_hungary = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+	available = {
+		date > 1938.1.1
+		HUN = {
+			exists = yes
+			is_subject = no
+			is_ai = yes
+		}
+		has_government = fascism
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		HUN = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_reichskommissariat
+			}
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		set_country_flag = GER_hungary_puppeted
+		custom_effect_tooltip = GER_annex_hungary_tt
+		hidden_effect = {
+			GER_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+#################
+##### BRITAIN ###
+#################
+
+ai_annexation_eng_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	visible = {
+		original_tag = ENG
+	}
+}
+
+# Britain - Annex Canada
+ENG_annex_canada = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	available = {
+		date > 1938.1.1
+		CAN = {
+			exists = yes
+			is_subject = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		CAN = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = CAN transfer_troops = yes }
+		set_country_flag = ENG_canada_annexed
+		hidden_effect = {
+			ENG_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Britain - Annex Australia
+ENG_annex_australia = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	available = {
+		date > 1938.1.1
+		AST = {
+			exists = yes
+			is_subject = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		AST = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = AST transfer_troops = yes }
+		set_country_flag = ENG_australia_annexed
+		hidden_effect = {
+			ENG_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Britain - Annex New Zealand
+ENG_annex_newzealand = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	available = {
+		date > 1938.1.1
+		NZL = {
+			exists = yes
+			is_subject = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		NZL = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = NZL transfer_troops = yes }
+		set_country_flag = ENG_newzealand_annexed
+		hidden_effect = {
+			ENG_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Britain - Annex South Africa
+ENG_annex_southafrica = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	available = {
+		date > 1938.1.1
+		SAF = {
+			exists = yes
+			is_subject = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		SAF = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = SAF transfer_troops = yes }
+		set_country_flag = ENG_southafrica_annexed
+		hidden_effect = {
+			ENG_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+# Britain - Annex India
+ENG_annex_india = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = ENG
+	}
+	
+	available = {
+		date > 1938.1.1
+		RAJ = {
+			exists = yes
+			is_subject = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		RAJ = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = RAJ transfer_troops = yes }
+		set_country_flag = ENG_india_annexed
+		hidden_effect = {
+			ENG_update_research_slots_ai = yes
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+###############
+##### USA #####
+###############
+
+ai_annexation_usa_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		original_tag = USA
+	}
+}
+
+# USA - Annex Mexico
+USA_annex_mexico = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	available = {
+		date > 1938.1.1
+		MEX = {
+			exists = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		MEX = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = MEX transfer_troops = yes }
+		set_country_flag = USA_mexico_annexed
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
+
+###############
+##### USSR #####
+###############
+
+ai_annexation_sov_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		original_tag = SOV
+	}
+}
+
+# USSR - Annex Mongolia
+SOV_annex_mongolia = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	available = {
+		date > 1938.1.1
+		MON = {
+			exists = yes
+			is_ai = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	complete_effect = {
+		MON = {
+			every_owned_state = {
+				limit = { is_core_of = PREV }
+				set_compliance = 100
+			}
+		}
+		annex_country = { target = MON transfer_troops = yes }
+		set_country_flag = SOV_mongolia_annexed
+	}
+	
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			NOT = { is_ai = yes }
+		}
+	}
+}
