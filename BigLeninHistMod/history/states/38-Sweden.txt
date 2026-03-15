@@ -4,8 +4,8 @@ state = {
 	manpower = 931955
 	state_category = town
 	history = {
-		owner = NPL
-		add_core_of = NPL
+		owner = SWE
+		add_core_of = SWE
 		victory_points = {
 			11091 2 # Gävle
 		}

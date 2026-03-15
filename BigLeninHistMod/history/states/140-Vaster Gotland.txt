@@ -8,8 +8,8 @@ state = {
 		coal = 1 #initial distribution 
 	}
 	history = {
-		owner = NPL
-		add_core_of = NPL
+		owner = SWE
+		add_core_of = SWE
 		victory_points = {
 			383 10 
 		}
