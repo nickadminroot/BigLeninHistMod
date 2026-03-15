@@ -1140,6 +1140,51 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_trade_deal_with_sweden
+		icon = GFX_focus_generic_befriend_sweden
+		prerequisite = { focus = GER_construct_the_reichsautobahn focus = GER_autarky_efforts }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_construct_the_reichsautobahn
+		cost = 5
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = SWE
+				SWE = { is_subject = no }
+				NOT = { has_war_with = SWE }
+				SWE = {
+					custom_trigger_tooltip = {
+						tooltip = GER_alone_or_peace_faction_tt
+						is_alone_or_in_faction_at_peace_with_GER = yes
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL}
+
+		completion_reward = {
+			SWE = {
+				country_event = { id = wuw_GER_diplomacy.1 days = 2 }
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				SWE = {
+					add_ideas = GER_german_trade_ns
+					add_opinion_modifier = {
+						target = PREV
+						modifier = GER_trading_partners
+					}
+				}
+				custom_effect_tooltip = war_will_cancel_deal_tt
+			}
+		}
+	}
 	
 	
 	focus = {
