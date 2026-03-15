@@ -8563,29 +8563,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = SPR_fortify_la_linea_de_la_concepcion_tt
-			hidden_effect = {
-				169 = {
-					add_building_construction = {
-						type = bunker
-						province = {
-							id = 13228
-							id = 10094
-						}
-						level = 3
-						instant_build = yes
-					}
-				}
-				173 = {
-					add_building_construction = {
-						type = bunker
-						province = {
-							id = 7153
-						}
-						level = 3
-						instant_build = yes
-					}
-				}
 			}
 		}
 	}
