@@ -9609,62 +9609,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_reassert_eastern_claims
-		cost = 10
+		cost = 3
 
 		will_lead_to_war_with = POL
-
-		bypass = {
-			OR = {
-				has_war_with = POL
-				is_in_faction_with = POL
-				NOT = {
-					85 = {
-						controller = {
-							original_tag = POL 
-						}
-						owner = {
-							original_tag = POL 
-						}
-					}
-				}
-			}
-		}
 
 		continue_if_invalid = yes
 
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 949999 } #100 div			
-			#Make custom trigger tooltip here
-			85 = {
-				owner = {
-					original_tag = POL
-				}
-				controller = {
-					original_tag = POL
-				}
-			}
-			OR = {
-				POL = {
-					has_civil_war = no
-				}
-				#custom_trigger_tooltip = {
-					#tooltip = GER_danzig_trigger_polish_civil_war
-					AND = {
-						any_other_country = {
-							original_tag = POL
-							has_civil_war = yes
-							OR = {
-								is_in_faction_with = ROOT
-								has_volunteers_amount_from = {
-									tag = GER
-									count > 0
-								}
-							}
-						}
-					}
-				#}
-			}
+			date > 1939.8.1
 		}
 
 		ai_will_do = {
@@ -9696,72 +9648,19 @@ focus_tree = {
 		
 		completion_reward = {
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
-			if = {
-				limit = {
-					85 = {
-						controller = {
-							tag = POL
-							has_civil_war = no
-						}
-					}
-				}
-				effect_tooltip = {
-					transfer_state = 85
-					add_state_core = 85
-					transfer_state = 807
-					add_state_core = 807
-					remove_state_claim = 86
-					remove_state_claim = 762
-				}
-				POL = {
-					country_event = { id = germany.86 }
-					if = {
-						limit = { NOT = { is_in_faction_with = ROOT } }
-						custom_effect_tooltip = needs_approval
-					}
-					if = {
-						limit = { 
-							is_in_faction_with = ROOT 
-							ROOT = { is_faction_leader = yes }
-						}
-						custom_effect_tooltip = GER_danzig_or_war_POL_faction_GER_leader
-					}
-					if = {
-						limit = {
-							is_in_faction_with = ROOT 
-							NOT = { ROOT = { is_faction_leader = yes } }
-						}
-						custom_effect_tooltip = GER_danzig_or_war_POL_faction_GER_noleader
-					}
-				}
+			create_wargoal = {
+				type = annex_everything
+				target = POL
 			}
 			if = {
 				limit = {
-					85 = {
-						owner = {
-							OR = {
-								original_tag = POL
-								tag = POL
-							}
-							has_civil_war = yes
-						}
+					ENG = {
+						is_in_faction_with = CAN
 					}
 				}
-				random_other_country = {
-					limit = {
-						original_tag = POL
-						has_civil_war = yes
-						OR = {
-							is_in_faction_with = GER
-							has_volunteers_amount_from = {
-								tag = GER
-								count > 0
-							}
-						}
-					}
-					country_event = { id = germany.113 days = 1 }
+				ENG = {
+					add_to_faction = POL
 				}
-				custom_effect_tooltip = GER_danzig_or_war_POL_civil_war
 			}
 		}
 	}
@@ -10894,28 +10793,20 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
-		cost = 10
+		cost = 5
 
 		will_lead_to_war_with = SOV
 
 		bypass = {
-			OR = {
-				has_war_with = SOV
-				SOV = {
-					exists = no
-				}
-			}
 		}
 
 		available_if_capitulated = no
 
 		available = {
-			is_subject = no
+			date > 1941.5.1
 		}
 
 		cancel = {
-			is_subject = yes
-			NOT = { country_exists = SOV }
 		}
 
 		historical_ai = {
@@ -10993,24 +10884,7 @@ focus_tree = {
 					}
 				}
 			}
-
-			IF = {
-				limit = {
-					KUB = {
-						exists = no
-					}
-					DON = {
-						exists = no
-					}
-					SOV = {
-						NOT = {
-						}
-					}
-				}
-				country_event = {
-					id = wuw_GER_legions.8
-				}	
-			}
+			
 		}
 	}
 
