@@ -32,7 +32,7 @@ focus_tree = {
 	inlay_window = {
 		id = jap_imperial_influence_inlay_window
 		
-		position = { X = 10000 y = 1700 }
+		position = { X = 4500 y = 1100 }
 
 	}
 
