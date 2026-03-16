@@ -57,3 +57,17 @@ ai_annexation_sov_cat = {
 		original_tag = SOV
 	}
 }
+
+ai_annexation_jap_cat = {
+	icon = generic_operation
+	
+	allowed = {
+		original_tag = JAP
+	}
+	
+	priority = 10
+	
+	visible = {
+		original_tag = JAP
+	}
+}

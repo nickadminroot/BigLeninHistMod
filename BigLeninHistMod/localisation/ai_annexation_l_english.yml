@@ -53,6 +53,14 @@
  SOV_annex_mongolia: "Annex Mongolia"
  SOV_annex_mongolia_desc: "Annex Mongolia into the Soviet Union."
 
+ # Japan Category
+ ai_annexation_jap_cat: "AI Annexation - Japan"
+ ai_annexation_jap_cat_desc: "Decisions to annex puppet nations"
+
+ # Japan Decisions
+ JAP_annex_manchukuo: "Annex Manchukuo"
+ JAP_annex_manchukuo_desc: "Annex Manchukuo into the Japanese Empire."
+
  # Research Slot Tooltips
  GER_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries puppeted"
  ENG_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries annexed"

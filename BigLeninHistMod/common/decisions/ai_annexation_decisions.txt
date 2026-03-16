@@ -7,19 +7,7 @@
 #################
 
 ai_annexation_ger_cat = {
-	icon = generic_operation
-	
-	allowed = {
-		original_tag = GER
-	}
-	
-	visible = {
-		original_tag = GER
-	}
-}
-
-# Germany - Puppet Romania as Reichskommissariat
-GER_annex_romania = {
+	GER_annex_romania = {
 	icon = generic_operation
 	
 	allowed = {
@@ -158,25 +146,17 @@ GER_annex_hungary = {
 		}
 	}
 }
+}
+
+# Germany - Puppet Romania as Reichskommissariat
+
 
 #################
 ##### BRITAIN ###
 #################
 
 ai_annexation_eng_cat = {
-	icon = generic_operation
-	
-	allowed = {
-		original_tag = ENG
-	}
-	
-	visible = {
-		original_tag = ENG
-	}
-}
-
-# Britain - Annex Canada
-ENG_annex_canada = {
+	ENG_annex_canada = {
 	icon = generic_operation
 	
 	allowed = {
@@ -384,24 +364,17 @@ ENG_annex_india = {
 		}
 	}
 }
+}
+
+# Britain - Annex Canada
+
 
 ###############
 ##### USA #####
 ###############
 
 ai_annexation_usa_cat = {
-	icon = generic_operation
-	
-	allowed = {
-		original_tag = USA
-	}
-	
-	visible = {
-		original_tag = USA
-	}
-}
-
-# USA - Annex Mexico
+	# USA - Annex Mexico
 USA_annex_mexico = {
 	icon = generic_operation
 	
@@ -438,25 +411,16 @@ USA_annex_mexico = {
 		}
 	}
 }
+}
+
+
 
 ###############
 ##### USSR #####
 ###############
 
 ai_annexation_sov_cat = {
-	icon = generic_operation
-	
-	allowed = {
-		original_tag = SOV
-	}
-	
-	visible = {
-		original_tag = SOV
-	}
-}
-
-# USSR - Annex Mongolia
-SOV_annex_mongolia = {
+	SOV_annex_mongolia = {
 	icon = generic_operation
 	
 	allowed = {
@@ -492,3 +456,53 @@ SOV_annex_mongolia = {
 		}
 	}
 }
+}
+
+ # USSR - Annex Mongolia
+
+
+ ###############
+ ##### JAPAN ####
+ ###############
+
+ ai_annexation_jap_cat = {
+ 	# Japan - Annex Manchukuo
+ 	JAP_annex_manchukuo = {
+ 	icon = generic_operation
+ 	
+ 	allowed = {
+ 		original_tag = JAP
+ 	}
+ 	
+ 	available = {
+ 		date > 1938.1.1
+ 		MAN = {
+ 			exists = yes
+ 			is_subject = yes
+ 			is_ai = yes
+ 		}
+ 	}
+ 	
+ 	fire_only_once = yes
+ 	
+ 	complete_effect = {
+ 		MAN = {
+ 			every_owned_state = {
+ 				limit = { is_core_of = PREV }
+ 				set_compliance = 100
+ 			}
+ 		}
+ 		annex_country = { target = MAN transfer_troops = yes }
+ 		set_country_flag = JAP_manchukuo_annexed
+ 	}
+ 	
+ 	ai_will_do = {
+ 		base = 100
+ 		modifier = {
+ 			factor = 0
+ 			NOT = { is_ai = yes }
+ 		}
+ 	}
+ }
+ }
+
