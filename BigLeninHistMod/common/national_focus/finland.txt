@@ -730,43 +730,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					NORDIC_is_nordic = yes
-					NOT = { has_war_with = ROOT }
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = FIN_nordic_amity
-				}
-				ROOT = {
-					add_opinion_modifier = {
-						target = PREV
-						modifier = FIN_nordic_amity
-					}
-				}
-			}
 
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						NORDIC_is_nordic = yes
-						NOT = { has_war_with = ROOT }
-					}
-					add_ai_strategy = {
-						type = befriend 
-						id = ROOT
-						value = 25
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = befriend 
-							id = PREV
-							value = 25
-						}
-					}
-				}
-			}
 		}
 	}
 	
@@ -959,12 +923,6 @@ focus_tree = {
 			has_government = neutrality
 			is_in_faction = no 
 		}
-		bypass = {
-			is_faction_leader = yes 
-			any_allied_country = {
-				NORDIC_is_nordic = yes 
-			}
-		}
 
 		search_filters = {}
 
@@ -980,52 +938,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = FIN_northern_defense_front_countries_tt
 			every_other_country = {
-				limit = {
-					OR = {
-						NORDIC_is_nordic = yes
-						is_baltic_country = yes
-					}
-					NOT = {
-						has_war_with = ROOT
-						has_government = communism
-						any_allied_country = {
-							has_war_with = ROOT
-						}
-					}
-					is_subject = no
-				}
-				if = {
-					limit = {
-						has_government = ROOT
-					}
-					add_ai_strategy = {
-						type = befriend
-						id = ROOT
-						value = 50
-					}
-				}
-				tooltip = every_independent_nordic_and_baltic_country_tt
-				hidden_effect = {
-					if = {
-						limit = {
-							is_subject = no
-						}
-					}
-					# AI more friendly
-					add_ai_strategy = { 
-						type = befriend 
-						id = ROOT
-						value = 40
-					}
-					ROOT = {
-						add_ai_strategy = { 
-							type = befriend 
-							id = PREV
-							value = 40
-						}
-					}
-					country_event = { id = generic.5 hours = 2 }
-				}
+				
 				custom_effect_tooltip = FIN_northern_defense_front_faction_tt
 			}
 		}
@@ -1308,9 +1221,6 @@ focus_tree = {
 		available = {
 			any_core_state = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
-				controller = {
-					NORDIC_is_nordic = yes
-				}
 				OR = {
 					has_resources_amount = {
 						resource = steel
@@ -1352,9 +1262,6 @@ focus_tree = {
 				limit = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					is_core_of = THIS.controller
-					controller = {
-						NORDIC_is_nordic = yes
-					}
 					OR = {
 						has_resources_amount = {
 							resource = steel
@@ -1460,9 +1367,7 @@ focus_tree = {
 		relative_position_id = FIN_northern_defense_front
 		cost = 10
 		available = {
-			any_allied_country = {
-				NORDIC_is_nordic = yes
-			}
+			always = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1472,12 +1377,11 @@ focus_tree = {
 			if= { #For tooltip purposes
 				limit = {
 					any_allied_country = {
-						NORDIC_is_nordic = yes
+						always = no
 					}
 				}
 				every_country = {
 					limit = {
-						NORDIC_is_nordic = yes
 						OR = {
 							tag = ROOT
 							is_in_faction_with = ROOT
@@ -1541,12 +1445,12 @@ focus_tree = {
 			if= { #For tooltip purposes
 				limit = {
 					any_allied_country = {
-						NORDIC_is_nordic = yes
+						always = no
 					}
 				}
 				every_country = {
 					limit = {
-						NORDIC_is_nordic = yes
+						always = no
 						OR = {
 							tag = ROOT
 							is_in_faction_with = ROOT

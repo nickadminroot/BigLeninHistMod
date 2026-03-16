@@ -120,43 +120,6 @@ on_actions = {
 			}
 		}
 	}
-	
-	# ROOT is capitulated country, FROM is winner
-	on_capitulation = {
-		effect = { #Achievement Two Arms Against Tyranny
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-					FROM = {
-						OR = {
-							original_tag = FIN
-							is_in_faction_with = FIN
-						}
-						num_faction_members < 3
-						num_faction_members > 1
-						any_allied_country = {
-							NORDIC_is_nordic = yes
-						}
-					}
-
-					ROOT = {
-						original_tag = SOV
-					}
-				}
-
-				set_global_flag = capitulated_soviet_with_only_finland_and_another_nordic
-			}
-			if = { #Flag locking Achievement "Everything is Awesome"
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-					ROOT = {
-						original_tag = DEN
-					}
-				}
-				set_global_flag = achievement_den_has_never_been_capitulated
-			}
-		}
-	}
 
 	##ROOT is affected country
 	on_uncapitulation = {
@@ -567,7 +530,7 @@ on_actions = {
 			log = "[ROOT.GetName] is declaring war on [FROM.GetName]"
 			if = {
 				limit = {
-					FROM = { NORDIC_is_nordic = yes }
+					FROM = { always = no }
 					ROOT = { NORDIC_is_nordic = no }  
 				}
 				FROM = {
@@ -1192,7 +1155,7 @@ on_actions = {
 		effect = { # Clearing attacker variable 
 			if = {
 				limit = {
-					NORDIC_is_nordic = yes 
+					always = no 
 					has_variable = NORDIC_attacker
 				}
 				clear_variable = NORDIC_attacker
@@ -3481,7 +3444,7 @@ on_actions = {
 							has_country_flag = NORDIC_union_leader
 						}
 					}
-					NORDIC_is_nordic = yes
+					always = no
 				}
 				set_country_flag = NORDIC_alliance_member
 				NORDIC_add_to_nordic_alliance = yes 
@@ -3530,7 +3493,7 @@ on_actions = {
 						has_country_flag = NORDIC_union_leader
 					}
 					FROM = { 
-						NORDIC_is_nordic = yes
+						always = no
 					}
 				}
 				FROM = {
@@ -3570,26 +3533,6 @@ on_actions = {
 				FROM = {
 					FIN_form_finnish_democratic_republic = yes
 				}
-			}
-		}
-	}
-	# FROM is the faction Leader, ROOT is the country leaving the faction 
-	on_leave_faction = {
-		effect = { # Removing Joint Focus Tree flags 
-			if = {
-				limit = {
-					NORDIC_is_nordic = yes
-					OR = {
-						has_country_flag = NORDIC_council_leader 
-						has_country_flag = NORDIC_league_leader
-						has_country_flag = NORDIC_union_leader
-						has_country_flag = NORDIC_alliance_member
-					} 
-				}
-				clr_country_flag = NORDIC_council_leader
-				clr_country_flag = NORDIC_league_leader
-				clr_country_flag = NORDIC_union_leader
-				clr_country_flag = NORDIC_alliance_member
 			}
 		}
 	}

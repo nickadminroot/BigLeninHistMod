@@ -6601,25 +6601,6 @@ focus_tree = {
 				}
 
 			}
-
-			#custom_effect_tooltip = generic_skip_one_line_tt
-
-			761 = {
-				create_unit = {
-				    division = "name = \"Dai-Ichi Mongoru Dokuritsu-gun\" division_template = \"Mongoru Dokuritsu-gun\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-				    owner = ROOT
-				    officer = {
-				    	name = MAN_kanjurjab
-				    }
-				}
-				create_unit = {
-				    division = "name = \"Dai-Ni Mongoru Dokuritsu-gun\" division_template = \"Mongoru Dokuritsu-gun\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
-				    owner = ROOT
-				    officer = {
-				    	name = MON_navaanneren
-				    }
-				}
-			}
 			
 		}
 	}
@@ -6654,7 +6635,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {  }
 
 		completion_reward = {
 
