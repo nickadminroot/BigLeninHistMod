@@ -4,9 +4,12 @@ state = {
 	manpower = 2635146 # Was 3935146
 	state_category = large_city
 	resources = {
-		steel = 14 # was: 24, then 16
-		tungsten = 8 # In replacement of nitrate
-		chromium = 4 # in replacement of nitrate
+		steel = 2000 # was: 24, then 16
+		tungsten = 2000 # In replacement of nitrate
+		chromium = 2000 # in replacement of nitrate
+		aluminium = 2000 # in replacement of nitrate
+		rubber = 2000 # in replacement of nitrate
+		oil = 2000 # in replacement of nitrate
 	}
 	history = {
 		owner = NPL
