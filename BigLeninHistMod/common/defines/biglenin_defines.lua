@@ -35,10 +35,11 @@ NDefines.NCountry.CONVOY_INTERNATIONAL_MARKET_RANGE_FACTOR = 0.5
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 250
 NDefines.NAir.CAPACITY_PENALTY=0.869
 NDefines.NAir.SUPPLY_NEED_FACTOR = 0.01
+NDefines.NOperatives.OPERATIVE_BASE_BOOST_IDEOLOGY = 0
 
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.1
 
-NDefines.NDoctrines.DEFAULT_REWARD_MASTERY = 20
+NDefines.NDoctrines.DEFAULT_REWARD_MASTERY = 50
 NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = {  -- Mastery gain from naval missions is reduced, just like training
 		0.0, -- HOLD
 		1, -- PATROL

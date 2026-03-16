@@ -17,7 +17,7 @@ bicycle_heroes = {
     visible = yes # Trigger that determines whether the doctrine is shown in the list at all
     reward_gfx = [GFX_NAME] # Optional - if set, will override the default reward icon strip. Frame 1 to X correspond to reward 1 to X, and X+1 to 2X should be the same but grayed out
 
-    xp_cost = 0
+    xp_cost = 100
     xp_type = army   # army, navy or air
 
     ai_will_do = { }

@@ -13,7 +13,7 @@ mobile_warfare = {
     available = yes # Trigger that determines whether the doctrine can be selected
     visible = yes # Trigger that determines whether the doctrine is shown in the list at all
 
-    xp_cost = 0
+    xp_cost = 100
     xp_type = army   # army, navy or air
 
     ai_will_do = { }
