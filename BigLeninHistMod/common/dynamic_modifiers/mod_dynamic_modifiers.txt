@@ -3,3 +3,17 @@ fleet_costs_modifier = {
 	
 	consumer_goods_factor = fleet_expansion_penalty
 }
+
+allied_africa_control_modifier = {
+	icon = GFX_idea_generic_navy_bonus
+	
+	industrial_capacity_factory = allied_africa_control_bonus
+	production_factory_max_efficiency_factor = allied_africa_control_bonus
+}
+
+axis_africa_control_modifier = {
+	icon = GFX_idea_generic_navy_bonus
+	
+	industrial_capacity_factory = axis_africa_control_bonus
+	production_factory_max_efficiency_factor = axis_africa_control_bonus
+}

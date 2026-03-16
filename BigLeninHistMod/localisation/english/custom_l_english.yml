@@ -2,3 +2,7 @@
  filler_national_focus:0 "Filler Focus"
  fleet_costs_modifier:0 "Fleet Costs"
  fleet_costs_modifier_desc:0 "Our naval ambitions directly reflect on the budget of the country, more and more enterprises will be required to process metal, create weapons, logistics and finance projects. The stronger we want to become the #1 naval power in the world - the stronger it will affect the potential of our industry."
+ allied_africa_control_modifier:0 "African Control (Allies)"
+ allied_africa_control_modifier_desc:0 "Control over African territories provides industrial bonuses. Each controlled territory above the Axis adds +0.5% to industrial capacity and production efficiency."
+ axis_africa_control_modifier:0 "African Control (Axis)"
+ axis_africa_control_modifier_desc:0 "Control over African territories provides industrial bonuses. Each controlled territory above the Allies adds +0.5% to industrial capacity and production efficiency."

@@ -4633,3 +4633,270 @@ ITA_ferdinando_umberto_filippo_adalberto = { }
 KAR_jalmari_takkinen = { }
 KAR_ukki_vainamoinen = { }
 change_variable = { }
+
+#####################################
+### Africa Control Modifiers #########
+#####################################
+
+calculate_africa_control = {
+	set_temp_variable = { allied_count = 0 }
+	set_temp_variable = { axis_count = 0 }
+	
+	if = {
+		limit = {
+			661 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			448 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			449 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			662 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			450 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			463 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			451 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			663 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			452 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			447 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			907 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			446 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			453 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			183 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			182 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	if = {
+		limit = {
+			116 = { controller = { OR = { is_in_faction_with = ENG is_subject_of = ENG } } }
+		}
+		add_to_temp_variable = { allied_count = 1 }
+	}
+	
+	if = {
+		limit = {
+			661 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			448 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			449 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			662 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			450 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			463 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			451 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			663 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			452 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			447 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			907 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			446 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			453 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			183 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			182 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	if = {
+		limit = {
+			116 = { controller = { OR = { is_in_faction_with = GER is_subject_of = GER } } }
+		}
+		add_to_temp_variable = { axis_count = 1 }
+	}
+	
+	set_temp_variable = { control_diff = allied_count }
+	subtract_from_temp_variable = { control_diff = axis_count }
+	multiply_temp_variable = { control_diff = 0.005 }
+	
+	if = {
+		limit = { check_variable = { control_diff > 0 } }
+		set_variable = { allied_africa_control_bonus = control_diff }
+		set_variable = { axis_africa_control_bonus = control_diff }
+		multiply_variable = { axis_africa_control_bonus = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { control_diff < 0 } }
+		set_variable = { axis_africa_control_bonus = control_diff }
+		multiply_variable = { axis_africa_control_bonus = -1 }
+		set_variable = { allied_africa_control_bonus = control_diff }
+		multiply_variable = { allied_africa_control_bonus = -1 }
+	}
+	else = {
+		set_variable = { allied_africa_control_bonus = 0 }
+		set_variable = { axis_africa_control_bonus = 0 }
+	}
+}
+
+apply_africa_control_modifiers = {
+	if = {
+		limit = {
+			OR = {
+				is_in_faction_with = ENG
+				tag = ENG
+			}
+		}
+		if = {
+			limit = { has_dynamic_modifier = { modifier = allied_africa_control_modifier } }
+			remove_dynamic_modifier = { modifier = allied_africa_control_modifier }
+		}
+		add_dynamic_modifier = { modifier = allied_africa_control_modifier }
+	}
+	else = {
+		if = {
+			limit = { has_dynamic_modifier = { modifier = allied_africa_control_modifier } }
+			remove_dynamic_modifier = { modifier = allied_africa_control_modifier }
+		}
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				is_in_faction_with = GER
+				tag = GER
+			}
+		}
+		if = {
+			limit = { has_dynamic_modifier = { modifier = axis_africa_control_modifier } }
+			remove_dynamic_modifier = { modifier = axis_africa_control_modifier }
+		}
+		add_dynamic_modifier = { modifier = axis_africa_control_modifier }
+	}
+	else = {
+		if = {
+			limit = { has_dynamic_modifier = { modifier = axis_africa_control_modifier } }
+			remove_dynamic_modifier = { modifier = axis_africa_control_modifier }
+		}
+	}
+}

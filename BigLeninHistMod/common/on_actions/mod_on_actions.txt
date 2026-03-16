@@ -109,6 +109,8 @@ on_actions = {
 		every_country = {
 			set_variable = { fleet_expansion_penalty = 0 }
 			set_variable = { previous_dockyards = 0 }
+			set_variable = { allied_africa_control_bonus = 0 }
+			set_variable = { axis_africa_control_bonus = 0 }
 			add_dynamic_modifier = { modifier = fleet_costs_modifier }
 		}
 			
@@ -158,6 +160,8 @@ on_actions = {
 				}
 			 }
 			
+			ROOT = { calculate_africa_control = yes }
+			
 			every_country = {
 				if = {
 					limit = {
@@ -173,6 +177,14 @@ on_actions = {
 				
 				remove_dynamic_modifier = { modifier = fleet_costs_modifier }
 				add_dynamic_modifier = { modifier = fleet_costs_modifier }
+				if = {
+					limit = {
+						ITA = {
+							has_war_with = ENG
+						}
+					}
+					apply_africa_control_modifiers = yes
+				}
 			}
         }
 	}
