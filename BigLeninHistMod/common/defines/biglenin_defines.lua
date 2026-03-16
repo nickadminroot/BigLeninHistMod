@@ -41,7 +41,7 @@ NDefines.NOperatives.MAX_PROPAGANDA_WAR_SUPPORT_IMPACT = 0
 
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.1
 
-NDefines.NDoctrines.DEFAULT_REWARD_MASTERY = 50
+NDefines.NDoctrines.DEFAULT_REWARD_MASTERY = 100
 NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = {  -- Mastery gain from naval missions is reduced, just like training
 		0.0, -- HOLD
 		1, -- PATROL
