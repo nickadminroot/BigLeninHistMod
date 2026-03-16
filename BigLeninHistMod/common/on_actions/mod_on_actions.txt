@@ -135,7 +135,6 @@ on_actions = {
                     is_ai = no
 					USA = {
 						exists = yes
-						is_ai = no
 					}
                 }
 				send_embargo = USA

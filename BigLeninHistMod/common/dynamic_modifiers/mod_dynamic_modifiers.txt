@@ -5,14 +5,14 @@ fleet_costs_modifier = {
 }
 
 allied_africa_control_modifier = {
-	icon = GFX_idea_generic_navy_bonus
+	icon = GFX_idea_generic_navy_african_1
 	
 	industrial_capacity_factory = allied_africa_control_bonus
 	production_factory_max_efficiency_factor = allied_africa_control_bonus
 }
 
 axis_africa_control_modifier = {
-	icon = GFX_idea_generic_navy_bonus
+	icon = GFX_idea_generic_navy_african_1
 	
 	industrial_capacity_factory = axis_africa_control_bonus
 	production_factory_max_efficiency_factor = axis_africa_control_bonus
