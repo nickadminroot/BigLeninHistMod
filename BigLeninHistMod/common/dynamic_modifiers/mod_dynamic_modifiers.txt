@@ -1,0 +1,5 @@
+fleet_costs_modifier = {
+	icon = GFX_idea_generic_navy_bonus
+	
+	consumer_goods_factor = fleet_expansion_penalty
+}

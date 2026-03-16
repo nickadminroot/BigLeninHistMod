@@ -88,23 +88,29 @@ on_actions = {
 				}
 				
 			}
-			every_country = { 
-				if = {
-					limit = {
-						has_government = democratic
-					}
-					set_occupation_law_where_available = autonomous_occupation
+		every_country = { 
+			if = {
+				limit = {
+					has_government = democratic
 				}
-				else_if = {
-					limit = {
-						has_government = communism
-					}
-					set_occupation_law_where_available = liberate_workers_occupation
-				}
-				else = {
-					set_occupation_law_where_available = foreign_civilian_oversight
-				}
+				set_occupation_law_where_available = autonomous_occupation
 			}
+			else_if = {
+				limit = {
+					has_government = communism
+				}
+				set_occupation_law_where_available = liberate_workers_occupation
+			}
+			else = {
+				set_occupation_law_where_available = foreign_civilian_oversight
+			}
+		}
+		
+		every_country = {
+			set_variable = { fleet_expansion_penalty = 0 }
+			set_variable = { previous_dockyards = 0 }
+			add_dynamic_modifier = { modifier = fleet_costs_modifier }
+		}
 			
         }
     }
@@ -146,11 +152,28 @@ on_actions = {
 				}
 				every_country = {
 					limit = {
-			 			is_embargoing = USA
-			 		}
-			 		break_embargo = USA
+				 		is_embargoing = USA
+				 	}
+				 	break_embargo = USA
 				}
 			 }
+			
+			every_country = {
+				if = {
+					limit = {
+						num_of_naval_factories > 30
+					}
+					set_variable = { fleet_expansion_penalty = num_of_naval_factories }
+					subtract_from_variable = { fleet_expansion_penalty = 30 }
+					multiply_variable = { fleet_expansion_penalty = 0.02 }
+				}
+				else = {
+					set_variable = { fleet_expansion_penalty = 0 }
+				}
+				
+				remove_dynamic_modifier = { modifier = fleet_costs_modifier }
+				add_dynamic_modifier = { modifier = fleet_costs_modifier }
+			}
         }
 	}
 
