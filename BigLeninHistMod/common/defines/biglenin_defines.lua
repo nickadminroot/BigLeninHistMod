@@ -36,6 +36,8 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 250
 NDefines.NAir.CAPACITY_PENALTY=0.869
 NDefines.NAir.SUPPLY_NEED_FACTOR = 0.01
 NDefines.NOperatives.OPERATIVE_BASE_BOOST_IDEOLOGY = 0
+NDefines.NOperatives.MAX_PROPAGANDA_STABILITY_IMPACT = 0			-- Max total penalty from operative performing the propaganda mission in a country
+NDefines.NOperatives.MAX_PROPAGANDA_WAR_SUPPORT_IMPACT = 0	
 
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0.1
 
