@@ -2113,67 +2113,6 @@ on_actions = {
 		}
 	}
 
-	on_monthly_COG = {
-
-		# Checks to see if Rwanda should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = rwandan_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 768
-						has_war = no
-					}
-					RWA = {
-						exists = no
-					}
-					768 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.20
-					hours = 6
-					random_hours = 24
-				}
-			}
-		}
-
-		# Checks to see if Burundi should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = burundian_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 769
-						has_war = no
-					}
-					BRD = {
-						exists = no
-					}
-					769 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.21
-					days = 1
-					random_days = 2
-				}
-			}
-		}
-
-	}
 
 	on_monthly_ENG = {
 
