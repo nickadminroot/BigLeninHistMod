@@ -132,10 +132,7 @@ on_actions = {
 		effect = {
 			every_country = {
                 limit = {
-                    is_ai = no
-					USA = {
-						exists = yes
-					}
+                    NOT = { tag = NPL }
                 }
 				send_embargo = USA
             }
