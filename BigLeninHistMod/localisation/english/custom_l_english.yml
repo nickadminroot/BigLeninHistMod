@@ -6,3 +6,5 @@
  allied_africa_control_modifier_desc:0 "Control over African territories provides industrial bonuses. Each controlled territory above the Axis adds +0.5% to industrial capacity and production efficiency."
  axis_africa_control_modifier:0 "African Control (Axis)"
  axis_africa_control_modifier_desc:0 "Control over African territories provides industrial bonuses. Each controlled territory above the Allies adds +0.5% to industrial capacity and production efficiency."
+ ENG_iraq_under_control:0 "Iraq Under Control"
+ ENG_iraq_under_control_desc:0 "Control of Iraq provides access to additional oil resources, increasing fuel production."

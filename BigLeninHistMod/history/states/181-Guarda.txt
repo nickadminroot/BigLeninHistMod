@@ -4,7 +4,7 @@ state = {
 	manpower = 964700
 	state_category = town
 	resources = {
-		tungsten = 300 #was 150 # was: 300
+		tungsten = 150 #was 150 # was: 300
 		coal = 1 #initial distribution
 	}
 	history = {
