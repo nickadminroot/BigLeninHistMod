@@ -725,6 +725,12 @@ focus_tree = {
 				level = 2
 				instant_build = yes
 			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
 
@@ -867,7 +873,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -932,40 +938,7 @@ focus_tree = {
 	focus = {
 		id = royal_ordinance_focus
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						num_of_factories > 30
-					}
-					GER = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					threat > 0.2
-					has_idea = ENG_no_further_appeasement_idea
-					NOT = { has_government = democratic }
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_dlc = "Man the Guns" }
-				}
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						num_of_factories > 30
-					}
-					GER = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					threat > 0.2
-					NOT = { has_government = democratic }
-				}
-			}
-		} #at war with major or ger in rhineland or high threat
+		} #available even in peacetime
 		prerequisite = { focus = uk_industrial_focus }
 		icon = GFX_goal_generic_construct_mil_factory
 		x = -1
@@ -1121,7 +1094,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 3
 		}
@@ -5752,6 +5725,7 @@ focus_tree = {
 					freedom_level = 0.5
 				}
 			}
+			add_ideas = ENG_iraq_under_control
 		}
 	}
 	focus = {
