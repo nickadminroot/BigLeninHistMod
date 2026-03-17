@@ -28,6 +28,19 @@ ideas = {
 			
 
 		}
+		ENG_iraq_under_control = {
+		picture = generic_goods_red_bonus
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			country_resource_oil = 20
+		}
+	}
 
 		ENG_king_edward = {
 			
