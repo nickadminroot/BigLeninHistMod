@@ -526,7 +526,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -2044,7 +2044,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -2283,7 +2283,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -2461,7 +2461,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -2486,7 +2486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_increase_aircraft_production
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
@@ -2518,7 +2518,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_intensify_pilot_training_program
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_ground_support }
 
@@ -2591,7 +2591,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = SOV_transpolar_flights
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2638,7 +2638,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			195 = { #LENINGRAD
@@ -2784,7 +2784,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -2874,7 +2874,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -3004,7 +3004,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -3092,7 +3092,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_reinforce_northern_naval_bases
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3149,7 +3149,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 5
+		cost = 2
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3228,7 +3228,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 
@@ -3281,7 +3281,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_submarine_warfare }
 
@@ -3330,7 +3330,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_surface_warfare }
 
@@ -3380,7 +3380,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 			if = {
@@ -3496,7 +3496,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3627,7 +3627,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3680,7 +3680,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3741,7 +3741,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 10
+		cost = 2
 
 		available = {
 		}
@@ -3768,7 +3768,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -4058,7 +4058,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -4879,8 +4879,8 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
-		dynamic = yes 
+		cost = 5
+		dynamic = yes
 		available = {
 
 		}
@@ -5267,7 +5267,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_improve_the_stalin_line }
 
@@ -5508,7 +5508,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_the_molotov_line }
 
@@ -5651,7 +5651,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_move_industry_to_the_urals
-		cost = 5
+		cost = 2
 
 		available = {
 			219 = {
@@ -6005,7 +6005,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 2
 
 		available = {
 			OR = {
@@ -7351,7 +7351,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -7589,7 +7589,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
-		cost = 10
+		cost = 5
 
 		available = {
 			has_country_flag = {
@@ -8371,7 +8371,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
@@ -8402,7 +8402,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_positive_heroism
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8422,7 +8422,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_revive_the_stakhanovite_movement
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8511,7 +8511,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_positive_heroism }
 
@@ -8539,7 +8539,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_collectivist_propaganda
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8559,7 +8559,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_socialist_emulation
-		cost = 10
+		cost = 5
 
 		available = {
 
