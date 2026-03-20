@@ -95,7 +95,7 @@ country_event = {
 				tag = AUS
 				OR = {
 					has_idea = AUS_treaty_of_saint_germain_en_laye
-					has_idea = AUS_revised_treaty_of_saint_germain_en_laye
+					always = yes
 				}
 			}
 		}
