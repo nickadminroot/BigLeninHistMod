@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				every_character = {
+					limit = { is_navy_leader = yes }
+					add_dynamic_modifier = { modifier = fleet_overstack_dynamic_modifier  }
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			BLH_check_fleet_size = yes 
+		}
+	}
+}

@@ -1,0 +1,320 @@
+scripted_gui = {
+	open_naval_calculator_production_button = {
+		context_type = player_context
+		window_name = "production_naval_calculator_open_button"
+		parent_window_token = production_tab
+
+		dirty = global.update_monie_ui
+
+		effects = {
+			open_naval_calculator_production_button_click = {
+				if = {
+					limit = { NOT = { has_country_flag = open_naval_cap_calculator } }
+					set_country_flag = open_naval_cap_calculator
+				}
+				else = {
+					clr_country_flag = open_naval_cap_calculator
+				}
+			}
+		}
+	}
+	horst_admiral_current_command_limit_used = {
+		context_type = player_context 
+		parent_window_name  = "navy_reserve_portrait_window" 
+		window_name = "horst_admiral_current_command_limit_used_window"
+		dynamic_lists = { 
+			admirals_leading_battlefleets_list = {
+				array = battle_admirals
+				value = v
+				index = i
+				change_scope = yes
+				entry_container = admirals_with_fleets_list
+			}
+		}
+        properties = {
+			admiral_portrait  = {
+				image = "[GetAdmiralPortrait]"
+			}			
+        }		
+	}
+	
+
+    # Naval Calculator Screen
+	calculator_tab = {
+		context_type = player_context
+		window_name = "calculator_tab"
+
+		dirty = global.update_monie_ui
+
+		visible = {
+			ROOT = {
+				OR = {
+					has_country_flag = open_naval_cap_calculator
+				}
+			}
+		}
+
+		triggers = {
+
+			# Destroyers
+			increase_destroyer_count_calculator_click_enabled = {
+				check_variable = { var = destroyer_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = destroyer_count_calculator value = 150 compare = less_than }
+			}
+
+			decrease_destroyer_count_calculator_click_enabled = {
+				check_variable = { var = destroyer_count_calculator value = 0 compare = greater_than }
+			}
+
+			# Light Cruisers
+			increase_light_cruiser_count_calculator_click_enabled = {
+				check_variable = { var = light_cruiser_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = light_cruiser_count_calculator value = 150 compare = less_than }
+			}
+
+			decrease_light_cruiser_count_calculator_click_enabled = {
+				check_variable = { var = light_cruiser_count_calculator value = 0 compare = greater_than }
+			}
+
+			# Heavy Cruisers
+			increase_heavy_cruiser_count_calculator_click_enabled = {
+				check_variable = { var = heavy_cruiser_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = heavy_cruiser_count_calculator value = 150 compare = less_than }
+			}
+
+			decrease_heavy_cruiser_count_calculator_click_enabled = {
+				check_variable = { var = heavy_cruiser_count_calculator value = 0 compare = greater_than }
+			}
+
+			# Battleships
+			increase_battleship_count_calculator_click_enabled = {
+				check_variable = { var = battleship_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = battleship_count_calculator value = 150 compare = less_than }
+			}
+			decrease_battleship_count_calculator_click_enabled = {
+				check_variable = { var = battleship_count_calculator value = 0 compare = greater_than }
+				check_variable = { var = battleship_count_calculator value = 150 compare = less_than_or_equals }
+			}
+
+			# Battlecruisers
+			increase_battlecruiser_count_calculator_click_enabled = {
+				check_variable = { var = battlecruiser_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = battlecruiser_count_calculator value = 150 compare = less_than }
+			}
+			decrease_battlecruiser_count_calculator_click_enabled = {
+				check_variable = { var = battlecruiser_count_calculator value = 0 compare = greater_than }
+				check_variable = { var = battlecruiser_count_calculator value = 150 compare = less_than_or_equals }
+			}
+
+			# Carriers
+			increase_carrier_count_calculator_click_enabled = {
+				check_variable = { var = carrier_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = carrier_count_calculator value = 150 compare = less_than }
+			}
+			decrease_carrier_count_calculator_click_enabled = {
+				check_variable = { var = carrier_count_calculator value = 0 compare = greater_than }
+				check_variable = { var = carrier_count_calculator value = 150 compare = less_than_or_equals }
+			}
+
+			# SHBB
+			increase_shbb_count_calculator_click_enabled = {
+				check_variable = { var = shbb_count_calculator value = 0 compare = greater_than_or_equals }
+				check_variable = { var = shbb_count_calculator value = 150 compare = less_than }
+			}
+			decrease_shbb_count_calculator_click_enabled = {
+				check_variable = { var = shbb_count_calculator value = 0 compare = greater_than }
+				check_variable = { var = shbb_count_calculator value = 150 compare = less_than_or_equals }
+			}
+
+		}
+
+		effects = {
+			close_naval_cap_calculator_click = {
+				clr_country_flag = open_naval_cap_calculator
+			}
+
+		  # Destroyer Increase/Decrease
+			increase_destroyer_count_calculator_click = {
+				add_to_variable = { destroyer_count_calculator = 1 }
+				add_to_variable = { destroyer_count_calculator_total = 1 }
+				clamp_variable = {
+					var = destroyer_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+
+			}
+			decrease_destroyer_count_calculator_click = {
+				subtract_from_variable = { destroyer_count_calculator = 1 }
+				subtract_from_variable = { destroyer_count_calculator_total = 1 }
+				clamp_variable = {
+					var = destroyer_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # Light Cruiser Increase/Decrease
+			increase_light_cruiser_count_calculator_click = {
+				add_to_variable = { light_cruiser_count_calculator = 1 }
+				add_to_variable = { light_cruiser_count_calculator_total = 2 }
+				clamp_variable = {
+					var = light_cruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_light_cruiser_count_calculator_click = {
+				subtract_from_variable = { light_cruiser_count_calculator = 1 }
+				subtract_from_variable = { light_cruiser_count_calculator_total = 2 }
+				clamp_variable = {
+					var = light_cruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # Heavy Cruiser Increase/Decrease
+			increase_heavy_cruiser_count_calculator_click = {
+				add_to_variable = { heavy_cruiser_count_calculator = 1 }
+				add_to_variable = { heavy_cruiser_count_calculator_total = 2 }
+				clamp_variable = {
+					var = heavy_cruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_heavy_cruiser_count_calculator_click = {
+				subtract_from_variable = { heavy_cruiser_count_calculator = 1 }
+				subtract_from_variable = { heavy_cruiser_count_calculator_total = 2 }
+				clamp_variable = {
+					var = heavy_cruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # Battleship Increase/Decrease
+			increase_battleship_count_calculator_click = {
+				add_to_variable = { battleship_count_calculator = 1 }
+				add_to_variable = { battleship_count_calculator_total = 4 }
+				clamp_variable = {
+					var = battleship_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_battleship_count_calculator_click = {
+				subtract_from_variable = { battleship_count_calculator = 1 }
+				subtract_from_variable = { battleship_count_calculator_total = 4 }
+				clamp_variable = {
+					var = battleship_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # Battlecruiser Increase/Decrease
+			increase_battlecruiser_count_calculator_click = {
+				add_to_variable = { battlecruiser_count_calculator = 1 }
+				add_to_variable = { battlecruiser_count_calculator_total = 4 }
+				clamp_variable = {
+					var = battlecruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_battlecruiser_count_calculator_click = {
+				subtract_from_variable = { battlecruiser_count_calculator = 1 }
+				subtract_from_variable = { battlecruiser_count_calculator_total = 4 }
+				clamp_variable = {
+					var = battlecruiser_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # Carrier Increase/Decrease
+			increase_carrier_count_calculator_click = {
+				add_to_variable = { carrier_count_calculator = 1 }
+				add_to_variable = { carrier_count_calculator_total = 6 }
+				clamp_variable = {
+					var = carrier_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_carrier_count_calculator_click = {
+				subtract_from_variable = { carrier_count_calculator = 1 }
+				subtract_from_variable = { carrier_count_calculator_total = 6 }
+				clamp_variable = {
+					var = carrier_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+
+		  # SHBB Increase/Decrease
+			increase_shbb_count_calculator_click = {
+				add_to_variable = { shbb_count_calculator = 1 }
+				add_to_variable = { shbb_count_calculator_total = 6 }
+				clamp_variable = {
+					var = shbb_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+			decrease_shbb_count_calculator_click = {
+				subtract_from_variable = { shbb_count_calculator = 1 }
+				subtract_from_variable = { shbb_count_calculator_total = 6 }
+				clamp_variable = {
+					var = shbb_count_calculator
+					min = 0
+					max = 150
+				}
+				ingame_update_setup = yes
+				refresh_gui = yes
+				calculator_fleet_size = yes
+			}
+		}
+	}
+}
