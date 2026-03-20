@@ -332,30 +332,6 @@ ideas = {
 					has_government = communism
 					if = {
 						limit = {
-							PHI_SEA = yes
-						}
-						if = {
-							limit = {
-								has_idea = PHI_ties_with_republican_spain
-							}
-							has_idea = PHI_ties_with_republican_spain
-						}
-						else_if = {
-							limit = {
-								has_idea = PHI_ties_with_republican_spain_2
-							}
-							has_idea = PHI_ties_with_republican_spain_2
-						}
-						else = {
-							hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
-						}
-					}
-					else = {
-						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
-					}
-					SWE_rapid_mob_manpower_law_trigger = yes 
-					if = {
-						limit = {
 							original_tag = DEN
 							has_dlc = "Arms Against Tyranny"
 						}

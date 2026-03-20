@@ -215,15 +215,6 @@ ENG_vauxhall_organization = {
 				}
 			}
 		}
-		IF = {
-			limit = { FROM = { original_tag = IRQ } }
-			FROM = {
-				OR = {
-					has_idea = IRQ_anglo_iraqi_treaty
-					has_idea = IRQ_anglo_iraqi_mutual_defense_agreement
-				}
-			}
-		}
 	}
 
 	initial_trait = {
@@ -982,29 +973,5 @@ ENG_crossley_motors_organization = {
 			}
 		}
 
-		IF = { 
-			limit = {
-				FROM = { 
-					OR = {
-						original_tag = EST 
-						original_tag = LAT
-						original_tag = LIT
-					}
-				}
-			}
-			FROM = {
-				has_completed_focus = BALTIC_crossley_motors
-			}
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = IRQ } }
-			FROM = {
-				OR = {
-					has_idea = IRQ_anglo_iraqi_treaty
-					has_idea = IRQ_anglo_iraqi_mutual_defense_agreement
-				}
-			}
-		}
 	}
 }

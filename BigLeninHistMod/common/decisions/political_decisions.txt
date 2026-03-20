@@ -1968,14 +1968,6 @@ political_actions = {
 
 		available = {
             fascism > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
 			if = {
 				limit = {
 					has_aat = yes 
@@ -2088,14 +2080,6 @@ political_actions = {
 
 		available = {
             democratic > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
         }
 	
 		modifier = {
@@ -2134,14 +2118,6 @@ political_actions = {
 
 		available = {
             communism > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
         }
 	
 		modifier = {
@@ -2203,14 +2179,7 @@ political_actions = {
 
 		available = {
             neutrality > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+            
         }
 	
 		modifier = {
@@ -2249,14 +2218,7 @@ political_actions = {
 			else = {
 				fascism < 0.2
 			}
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			IF = {
 				limit = {
 					has_aat = yes 
@@ -2381,14 +2343,7 @@ political_actions = {
 
 		available = {
 			democratic < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 		}
 
 		visible = {
@@ -2460,14 +2415,7 @@ political_actions = {
 
 		available = {
 			communism < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			IF = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
@@ -2581,14 +2529,7 @@ political_actions = {
 
 		available = {
 			neutrality < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 		}
 
 		remove_trigger = {
@@ -2635,14 +2576,7 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			if = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
@@ -2691,14 +2625,7 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			if = {
 				limit = {
 					tag = TUR
@@ -2756,14 +2683,7 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			if = {
 				limit = {
 					original_tag = BUL
@@ -2812,14 +2732,7 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
+			
 			if = {
 				limit = {
 					tag = TUR

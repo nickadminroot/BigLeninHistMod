@@ -117,10 +117,6 @@ IF = {
 		set_character_flag = IRQ_golden_square_char
 	}
 
-	add_ideas = IRQ_ghazi_i
-	add_ideas = IRQ_golden_square
-	add_ideas = IRQ_anglo_iraqi_treaty
-	add_ideas = IRQ_agrarian_society
 
 	#variables for Royal Iraqi Army modifier
 

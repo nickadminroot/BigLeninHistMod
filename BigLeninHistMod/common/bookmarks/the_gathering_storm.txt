@@ -538,16 +538,6 @@ bookmarks = {
 			minor = yes
 			history = "SPAIN_GATHERING_STORM_DESC"
 			ideology = democratic
-			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
-			}
-			focuses = {
-				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
-			}
 		}
 
 		"POR"={
@@ -965,9 +955,6 @@ bookmarks = {
 			ideology = neutrality
 			available = { has_dlc = "Graveyard of Empires" }
 			ideas = {
-				IRQ_golden_square
-				IRQ_anglo_iraqi_treaty
-				IRQ_agrarian_society
 			}
 			focuses = {
 				IRQ_rally_behind_the_hashemite_dynasty
