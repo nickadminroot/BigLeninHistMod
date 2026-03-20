@@ -137,55 +137,55 @@ on_actions = {
 				send_embargo = USA
             }
 		}
-		effect = {
-			GER = {
-				set_collaboration = {
-					target = POL
-					value = 1
-				}
-				set_collaboration = {
-					target = FRA
-					value = 1
-				}
-				set_collaboration = {
-					target = BEL
-					value = 1
-				}
-				set_collaboration = {
-					target = HOL
-					value = 1
-				}
-				set_collaboration = {
-					target = NOR
-					value = 1
-				}
-			}
-			ITA = {
-				set_collaboration = {
-					target = YUG
-					value = 1
-				}
-				set_collaboration = {
-					target = GRE
-					value = 1
-				}
-				set_collaboration = {
-					target = ALB
-					value = 1
-				}
-			}
-			JAP = {
-				set_collaboration = {
-					target = CHI
-					value = 1
-				}
-				set_collaboration = {
-					target = SIA
-					value = 1
-				}
-			}
+		# effect = {
+		# 	GER = {
+		# 		set_collaboration = {
+		# 			target = POL
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = FRA
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = BEL
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = HOL
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = NOR
+		# 			value = 1
+		# 		}
+		# 	}
+		# 	ITA = {
+		# 		set_collaboration = {
+		# 			target = YUG
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = GRE
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = ALB
+		# 			value = 1
+		# 		}
+		# 	}
+		# 	JAP = {
+		# 		set_collaboration = {
+		# 			target = CHI
+		# 			value = 1
+		# 		}
+		# 		set_collaboration = {
+		# 			target = SIA
+		# 			value = 1
+		# 		}
+		# 	}
  
-		}
+		# }
 		
 
 	}

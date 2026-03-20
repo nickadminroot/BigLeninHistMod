@@ -9,8 +9,8 @@ collaboration_government_set_up_planning_committees = {
 
 	equipment = {
 		civilian_factories = {
-			amount = 3
-			days = 90
+			amount = 1
+			days = 30
 		}
 	}
 }
@@ -23,7 +23,7 @@ collaboration_government_train_paramilitary_forces = {
 	icon = "GFX_phase_collaboration_government_train_paramilitary_forces_small"
 	
 	equipment = {
-		infantry_equipment = 1000
+		infantry_equipment = 100
 	}
 }
 
@@ -36,8 +36,8 @@ collaboration_government_contact_military_officers = {
 	
 	equipment = {
 		civilian_factories = {
-			amount = 3
-			days = 30
+			amount = 1
+			days = 10
 		}
 	}
 }
