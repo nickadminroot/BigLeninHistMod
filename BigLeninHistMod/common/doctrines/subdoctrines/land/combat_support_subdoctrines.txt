@@ -295,10 +295,20 @@ air_cavalry = {
                 max_strength = 0.03
             }
         }
-        rescue_liasions = {
+     rescue_liasions = {
             helicopter_field_hospital = {
             battalion_mult = {
-                category = category_all_infantry
+                category = category_infantry_light
+                    max_strength = 0.05 
+                    default_morale = 0.05 
+                }
+                battalion_mult = {
+                category = category_infantry_standard
+                    max_strength = 0.05 
+                    default_morale = 0.05 
+                }
+                battalion_mult = {
+                category = category_infantry_heavy
                     max_strength = 0.05 
                     default_morale = 0.05 
                 }
@@ -310,7 +320,17 @@ air_cavalry = {
         transport_assault = {
             helicopter_transport = {
                 battalion_mult = {
-                    category = category_light_infantry
+                    category = category_infantry_light
+                    maximum_speed = 0.2
+                    breakthrough = 0.05
+                }
+                battalion_mult = {
+                    category = category_infantry_standard
+                    maximum_speed = 0.2
+                    breakthrough = 0.05
+                }
+                battalion_mult = {
+                    category = category_infantry_heavy
                     maximum_speed = 0.2
                     breakthrough = 0.05
                 }
@@ -322,7 +342,15 @@ air_cavalry = {
         intervention_units = {
             helicopter_brigade = {
                 battalion_mult = {
-                    category = category_all_infantry
+                    category = category_infantry_light
+                    soft_attack = 0.1
+                }
+                battalion_mult = {
+                    category = category_infantry_standard
+                    soft_attack = 0.1
+                }
+                battalion_mult = {
+                    category = category_infantry_heavy
                     soft_attack = 0.1
                 }
                 max_organisation = 10
@@ -816,7 +844,15 @@ field_engineering = {
             engineer = {
                 max_organisation = 5
                 battalion_mult = {
-                    category = category_all_infantry
+                    category = category_infantry_light
+                    entrenchment = 0.02
+                }
+                battalion_mult = {
+                    category = category_infantry_standard
+                    entrenchment = 0.02
+                }
+                battalion_mult = {
+                    category = category_infantry_heavy
                     entrenchment = 0.02
                 }
             }
@@ -842,7 +878,15 @@ field_engineering = {
                     defense = 0.1
                 }
                 battalion_mult = {
-                    category = category_all_infantry
+                    category = category_infantry_light
+                    soft_attack = 0.05
+                }
+                battalion_mult = {
+                    category = category_infantry_standard
+                    soft_attack = 0.05
+                }
+                battalion_mult = {
+                    category = category_infantry_heavy
                     soft_attack = 0.05
                 }
             }

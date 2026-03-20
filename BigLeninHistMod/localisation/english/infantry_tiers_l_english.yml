@@ -1,0 +1,11 @@
+﻿l_english:
+ category_infantry_light:0 "Light Infantry"
+ category_infantry_light_desc:0 "Lower-quality infantry units with reduced soft attack but improved supply efficiency. Includes militia, irregulars, and other improvised formations."
+ category_infantry_standard:0 "Standard Infantry"
+ category_infantry_standard_desc:0 "The backbone of any army. Standard infantry provides a balanced mix of firepower, organization, and supply consumption."
+ category_infantry_heavy:0 "Heavy Infantry"
+ category_infantry_heavy_desc:0 "Elite infantry units with enhanced soft attack and organization. Includes special forces, motorized, and mechanized infantry."
+ light_infantry:0 "Light Infantry Battalion"
+ light_infantry_desc:0 "A lightly equipped infantry battalion with reduced soft attack but lower supply consumption and organization requirements. Ideal for cavalry and mobile divisions."
+ heavy_infantry:0 "Heavy Infantry Battalion"
+ heavy_infantry_desc:0 "A heavily equipped infantry battalion with enhanced soft attack and organization. Higher supply consumption and training time reflect the elite status of these troops."

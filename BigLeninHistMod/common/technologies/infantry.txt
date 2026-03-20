@@ -105,7 +105,10 @@ technologies = {
 
 	infantry_weapons2 = {
 
-		category_light_infantry = {
+		category_infantry_light = {
+			soft_attack = 0.05
+		}
+		category_infantry_standard = {
 			soft_attack = 0.05
 		}
 
@@ -113,7 +116,7 @@ technologies = {
 			soft_attack = 0.05
 		}
 
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			soft_attack = 0.05
 		}
 
@@ -226,7 +229,10 @@ technologies = {
 	}
 	improved_infantry_weapons_2 = {
 
-		category_light_infantry = {
+		category_infantry_light = {
+			soft_attack = 0.05
+		}
+		category_infantry_standard = {
 			soft_attack = 0.05
 		}
 
@@ -234,7 +240,7 @@ technologies = {
 			soft_attack = 0.05
 		}
 
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			soft_attack = 0.05
 		}
 
@@ -276,7 +282,15 @@ technologies = {
 
 	infantry_at = {
 
-		category_all_infantry = {
+		category_infantry_light = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_standard = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_heavy = {
 			hard_attack = 0.25
 			ap_attack = 1
 		}
@@ -324,7 +338,15 @@ technologies = {
 
 	infantry_at2 = {
 
-		category_all_infantry = {
+		category_infantry_light = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_standard = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_heavy = {
 			hard_attack = 0.25
 			ap_attack = 1
 		}
@@ -420,13 +442,16 @@ technologies = {
 
 	advanced_infantry_weapons2 = {
 
-		category_light_infantry = {
+		category_infantry_light = {
+			soft_attack = 0.05
+		}
+		category_infantry_standard = {
 			soft_attack = 0.05
 		}
 		category_cavalry = {
 			soft_attack = 0.05
 		}
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			soft_attack = 0.1
 		}
 
@@ -962,20 +987,12 @@ technologies = {
 
 
 	tech_special_forces = {
-		category_special_forces = {
+		category_infantry_heavy = {
 			acclimatization_hot_climate_gain_factor = 0.05
 			acclimatization_cold_climate_gain_factor = 0.05
 		}
 
 		allow_branch = { NOT = { has_dlc = "Arms Against Tyranny" } }
-
-		#dependencies = {
-		#	OR = {
-		#		marines = 1
-		#		paratrooper = 1
-		#		mountaineer = 1
-		#	}
-		#}
 
 		path = {
 			leads_to_tech = advanced_special_forces
@@ -1012,7 +1029,7 @@ technologies = {
 			improved_special_forces
 		}
 
-		category_special_forces = {
+		category_infantry_heavy = {
 			max_organisation = 5
 			defense = 0.05
 		}
@@ -1146,7 +1163,7 @@ technologies = {
 
 
 	elite_forces = {
-		category_special_forces = {
+		category_infantry_heavy = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
@@ -1538,7 +1555,11 @@ technologies = {
 
 	support_weapons = {
 
-		category_infantry_and_bicycle = {
+		category_infantry_light = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_infantry_standard = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1546,11 +1567,7 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1620,7 +1637,11 @@ technologies = {
 
 	support_weapons2 = {
 
-		category_infantry_and_bicycle = {
+		category_infantry_light = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_infantry_standard = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1628,11 +1649,7 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1697,7 +1714,11 @@ technologies = {
 
 	support_weapons3 = {
 
-		category_infantry_and_bicycle = {
+		category_infantry_light = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_infantry_standard = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1705,11 +1726,7 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1761,7 +1778,11 @@ technologies = {
 
 	support_weapons4 = {
 
-		category_infantry_and_bicycle = {
+		category_infantry_light = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		category_infantry_standard = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -1769,11 +1790,7 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}
-		category_special_forces_leg_infantry = {
-			defense = 0.03
-			breakthrough = 0.03
-		}
-		category_vehicle_infantry = {
+		category_infantry_heavy = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
@@ -2634,7 +2651,15 @@ technologies = {
 		research_cost = 1
 		start_year = 1936
 
-		category_all_infantry = {
+		category_infantry_light = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_standard = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_heavy = {
 			hard_attack = 0.25
 			ap_attack = 1
 		}
@@ -2771,7 +2796,21 @@ technologies = {
 		research_cost = 1
 		start_year = 1936
 
-		category_all_infantry = {
+		category_infantry_light = {
+			river = {
+				movement = 0.1
+				attack = 0.1
+				defence = 0.05
+			}
+		}
+		category_infantry_standard = {
+			river = {
+				movement = 0.1
+				attack = 0.1
+				defence = 0.05
+			}
+		}
+		category_infantry_heavy = {
 			river = {
 				movement = 0.1
 				attack = 0.1
@@ -2890,7 +2929,15 @@ technologies = {
 		research_cost = 1
 		start_year = 1947
 
-		category_all_infantry = {
+		category_infantry_light = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_standard = {
+			hard_attack = 0.25
+			ap_attack = 1
+		}
+		category_infantry_heavy = {
 			hard_attack = 0.25
 			ap_attack = 1
 		}
@@ -2959,7 +3006,17 @@ technologies = {
 		research_cost = 1
 
 
-		category_all_infantry = {
+		category_infantry_light = {
+			hard_attack = 0.15
+			soft_attack = 0.15
+			ap_attack = 0.15
+		}
+		category_infantry_standard = {
+			hard_attack = 0.15
+			soft_attack = 0.15
+			ap_attack = 0.15
+		}
+		category_infantry_heavy = {
 			hard_attack = 0.15
 			soft_attack = 0.15
 			ap_attack = 0.15
