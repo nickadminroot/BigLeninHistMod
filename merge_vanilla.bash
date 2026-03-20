@@ -11,15 +11,19 @@ VNEW="$2"
 MOD="$3"
 
 # safety
-TIMESTAMP=$(date +%Y%m%d%H%M%S)
-BACKUP="${MOD}_backup_${TIMESTAMP}"
-echo "Creating backup of mod -> ${BACKUP}"
-mkdir -p "$BACKUP"
-cp -a "$MOD/." "$BACKUP/"
+#TIMESTAMP=$(date +%Y%m%d%H%M%S)
+#BACKUP="${MOD}_backup_${TIMESTAMP}"
+#echo "Creating backup of mod -> ${BACKUP}"
+#mkdir -p "$BACKUP"
+#cp -a "$MOD/." "$BACKUP/"
 
 # Find files that are Modified or Renamed between vanilla_old and vanilla_new
 # We exclude purely added files in new vanilla (we don't want to create new files in mod)
-mapfile -t files < <(git diff --no-index --name-status --diff-filter=MR -- "$VOLD" "$VNEW" | awk '{ if ($1 ~ /^R/) print $3; else print $2 }')
+mapfile -t files < <(
+  git diff --no-index --name-status --diff-filter=MR -- "$VOLD" "$VNEW" \
+  | awk '{ if ($1 ~ /^R/) print $3; else print $2 }' \
+  | sed -E "s#^.*/vanilla_old/##"
+)
 
 if [ "${#files[@]}" -eq 0 ]; then
   echo "No modified/renamed files between vanilla versions (or git not available). Exiting."
@@ -36,7 +40,7 @@ for f in "${files[@]}"; do
   modfile="$MOD/$f"
   basefile="$VOLD/$f"
   newfile="$VNEW/$f"
-
+  
   if [ -f "$modfile" ]; then
     echo "Merging: $f (present in mod) ..."
     # ensure base and new exist
