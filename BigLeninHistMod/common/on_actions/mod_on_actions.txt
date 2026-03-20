@@ -105,6 +105,13 @@ on_actions = {
 				set_occupation_law_where_available = foreign_civilian_oversight
 			}
 		}
+
+		every_country = {
+			limit = {
+				is_major = no
+			}
+			add_ideas = minor_buff_idea
+		}
 		
 		every_country = {
 			set_variable = { fleet_expansion_penalty = 0 }
