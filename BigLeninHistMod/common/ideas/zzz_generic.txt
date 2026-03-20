@@ -18,7 +18,7 @@ ideas = {
 
 		minor_buff_idea = {
 			allowed = {
-				always = no
+				always = yes
 			}
 			allowed_civil_war = {
 				always = yes

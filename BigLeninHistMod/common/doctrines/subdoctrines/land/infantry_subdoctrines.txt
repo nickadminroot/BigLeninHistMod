@@ -232,6 +232,9 @@ large_unit_tactics = {
            infantry = {
                 combat_width = -0.3
             }
+            heavy_infantry = {
+                combat_width = -0.3
+            }
         }
         unit_knowledge_sharing = {
         #3
@@ -802,6 +805,7 @@ irregulars = {
         supply_consumption = -0.01
     }
 
+
     # EFFECTS
 
     rewards = {
@@ -813,6 +817,9 @@ irregulars = {
                 combat_width = -0.4
             }
             militia = {
+                combat_width = -0.4
+            }
+            light_infantry = {
                 combat_width = -0.4
             }
             category_infantry_light = {
