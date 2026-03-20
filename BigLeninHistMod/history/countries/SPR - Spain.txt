@@ -16,7 +16,7 @@ if = {
 		set_air_oob = "SPR_1936_air_legacy"
 	}
 }
-set_political_power = 1000
+set_political_power = 2000
 if = {
 	limit = {
 		NOT = {
