@@ -169,7 +169,7 @@ BLH_check_fleet_size = {
 			value = heavy_cruiser_count 
 		}
 		multiply_temp_variable  = { 
-			var =  heavy_cruiser_count_temp value = 2
+			var =  heavy_cruiser_count_temp value = 7
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -180,15 +180,19 @@ BLH_check_fleet_size = {
 			value = light_cruiser_count 
 		}
 		multiply_temp_variable  = { 
-			var =  light_cruiser_count_temp value = 2
+			var =  light_cruiser_count_temp value = 5
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
 			value = light_cruiser_count_temp
 		}
 		set_temp_variable = {
-		var = destroyer_count_temp
-		value = destroyer_count
+			var = destroyer_count_temp
+			value = destroyer_count
+		}
+		multiply_temp_variable = {
+			var = destroyer_count_temp
+			value = 3
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -199,7 +203,7 @@ BLH_check_fleet_size = {
 			value = battleship_count 
 		}
 		multiply_temp_variable  = { 
-			var =  battleship_count_temp value = 4
+			var =  battleship_count_temp value = 10
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -210,7 +214,7 @@ BLH_check_fleet_size = {
 			value = battlecruiser_count 
 		}
 		multiply_temp_variable  = { 
-			var =  battlecruiser_count_temp value = 4
+			var =  battlecruiser_count_temp value = 8
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -221,7 +225,7 @@ BLH_check_fleet_size = {
 			value = carrier_count 
 		}
 		multiply_temp_variable  = { 
-			var =  carrier_count_temp value = 6
+			var =  carrier_count_temp value = 12
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -232,7 +236,7 @@ BLH_check_fleet_size = {
 			value = shbb_count
 		}
 		multiply_temp_variable = {
-			var = shbb_count_temp value = 6
+			var = shbb_count_temp value = 12
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
@@ -289,6 +293,10 @@ BLH_check_fleet_size = {
 		set_temp_variable = {
 			var =submarine_count_temp
 			value = submarine_count 
+		}
+		multiply_temp_variable = {
+			var = submarine_count_temp
+			value = 4
 		}
 		add_to_temp_variable = {
 			var = command_limit_used_temp
