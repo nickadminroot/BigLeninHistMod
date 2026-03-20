@@ -215,10 +215,10 @@ JAP_mitsubishi_heavy_industries_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -649,10 +649,10 @@ JAP_yokosuka_naval_arsenal_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -1472,10 +1472,10 @@ JAP_mitsubishi_kobe_shipyard_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -1746,10 +1746,10 @@ JAP_mitsubishi_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -2487,10 +2487,10 @@ JAP_kokura_arsenal_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -2688,10 +2688,10 @@ JAP_nissan_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}
@@ -2908,10 +2908,10 @@ JAP_tokyo_automobile_industries_organization = {
 				has_completed_focus = PHI_align_with_japan
 				if = {
 					limit = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 					NOT = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 			}

@@ -81,11 +81,11 @@ USA_chrysler_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -332,11 +332,11 @@ USA_detroit_arsenal_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -602,11 +602,11 @@ USA_electric_boat_company_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -880,11 +880,11 @@ USA_north_american_aviation_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -1008,11 +1008,11 @@ USA_lockheed_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -1301,11 +1301,11 @@ USA_springfield_armory_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -1465,11 +1465,11 @@ USA_ford_motor_company_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {
@@ -1583,11 +1583,11 @@ USA_rock_island_arsenal_organization = {
 			if = {
 				limit = {
 					FROM = {
-						has_completed_focus = PHI_declare_military_emergency
+						always = no
 					}
 				}
 				FROM = {
-					has_completed_focus = PHI_declare_military_emergency
+					always = no
 				}
 			}
 			else = {

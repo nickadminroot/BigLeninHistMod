@@ -6286,10 +6286,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
@@ -6362,10 +6362,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
@@ -6894,10 +6894,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
@@ -6927,10 +6927,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
@@ -6962,10 +6962,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
@@ -7074,10 +7074,10 @@ ideas = {
 					has_completed_focus = PHI_align_with_japan
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
+							always = no
 						}
 					}
 				}
