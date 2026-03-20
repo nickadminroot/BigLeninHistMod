@@ -295,28 +295,20 @@ BLH_check_fleet_size = {
 			value = submarine_count_temp
 		}		
 		set_temp_variable = { t = num_ships_with_type@carrier }
-		if = { 
-			limit = { check_variable = { num_carriers_exploit > 2 } }
-			add_to_temp_variable = {
-			var = command_limit_used_temp
-			value = 30 
-			
-			}
-		}
 		clear_variable = command_limit_used 
 		add_to_variable = { 
 			var = command_limit_used
 			value = command_limit_used_temp
 		}
 		if = {  
-			limit = { check_variable = {  command_limit_used > 100 } }
+			limit = { check_variable = {  command_limit_used > 150 } }
 			add_to_temp_variable = { 
 				var = command_limit_penalty_calc
 				value = command_limit_used
 			}
 			subtract_from_temp_variable = {
 				var = command_limit_penalty_calc
-				value = 100
+				value = 150
 			}
 			multiply_temp_variable = {
 				var = command_limit_penalty_calc

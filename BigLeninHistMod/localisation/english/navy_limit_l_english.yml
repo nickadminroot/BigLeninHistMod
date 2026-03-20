@@ -1,9 +1,9 @@
 ﻿l_english:
  GetAdmiralNameTitle_def:0 "Admiral [THIS.GetName]"
  GetShipCount_def:0 "£fleet_texticon Ship Count: [?THIS.get_num_ships]"
- GetCommandLimit_under_def:0 "£command_power_texticon §GCommand Limit: [?THIS.command_limit_used]/100§!"
- GetCommandLimit_equal_def:0 "£command_power_texticon §HCommand Limit: [?THIS.command_limit_used]/100§!"
- GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/100 Ships of your country won`t be able do deal any damage to the enemy!§!"
+ GetCommandLimit_under_def:0 "£command_power_texticon §GCommand Limit: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_equal_def:0 "£command_power_texticon §HCommand Limit: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/150 Ships of your country won`t be able do deal any damage to the enemy!§!"
  TOTAL_SHIPS_CALCULATOR:0 "[?ROOT.number_of_ships_calculator]"
  COMMAND_LIMIT:0 "[GetCalculatorCommandLimit]"
  NUM_CAPITAL_SHIPS_CALCULATOR:0 "[?ROOT.capital_count_calculator]"
