@@ -347,73 +347,7 @@ USA_detroit_arsenal_organization = {
 		}
 	}
 
-	add_trait = {
-		token = PHI_mio_trait_coconut_fuel_adaptations
-		name = PHI_mio_trait_coconut_fuel_adaptations
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-		special_trait_background = yes
-
-		position = { x = 0 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-			FROM = {
-					is_hired_as_advisor = yes
-				}
-			}
-		}
-
-		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
-		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			fuel_consumption = -0.10
-			reliability = -0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
 	}
-
-	add_trait = {
-		token = PHI_mio_trait_widened_tracks
-		name = PHI_mio_trait_widened_tracks
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-		special_trait_background = yes
-
-		position = { x = 0 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-		}
-
-		relative_position_id = generic_mio_trait_improved_tracks
-		any_parent = { generic_mio_trait_improved_tracks }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			reliability = 0.07
-			maximum_speed = 0.03
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-}
 
 USA_tank_destroyer_board_organization = {
 	name = tank_destroyer_board
@@ -612,42 +546,7 @@ USA_electric_boat_company_organization = {
 		}
 	}
 
-	add_trait = {
-		token = PHI_mio_trait_coconut_fuel_adaptations
-		name = PHI_mio_trait_coconut_fuel_adaptations
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-		special_trait_background = yes
-
-		position = { x = 0 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-			FROM = {
-					is_hired_as_advisor = yes
-				}
-			}
-		}
-
-		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
-		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			fuel_consumption = -0.10
-			reliability = -0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
 	}
-
-}
 
 USA_brooklyn_naval_yard_organization = {
 	include = generic_battle_line_ship_organization
@@ -1436,58 +1335,6 @@ USA_ford_motor_company_organization = {
 
 		ai_will_do = {
 			base = 2
-		}
-	}
-
-	add_trait = {
-		token = PHI_mio_trait_coconut_fuel_adaptations
-		name = PHI_mio_trait_coconut_fuel_adaptations
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-		special_trait_background = yes
-
-		position = { x = 0 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-			FROM = {
-					is_hired_as_advisor = yes
-				}
-			}
-		}
-
-		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
-		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			fuel_consumption = -0.10
-			reliability = -0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-}
-
-
-
-USA_rock_island_arsenal_organization = {
-	include = generic_artillery_organization
-	icon = GFX_idea_rock_island_arsenal
-	
-	allowed = {	 
-		OR = {
-			tag = USA 
-			AND = {
-				original_tag = PHI 
-				has_dlc = "No Compromise, No Surrender"
-			}
 		}
 	}
 
