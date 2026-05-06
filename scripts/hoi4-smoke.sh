@@ -9,7 +9,7 @@ MOD_NAME="BigLeninHistMod"
 REAL_HOME="$HOME"
 
 HOI4_DIR="${HOI4_DIR:-$REAL_HOME/.steam/steam/steamapps/common/Hearts of Iron IV}"
-SMOKE_TIMEOUT="${SMOKE_TIMEOUT:-120s}"
+SMOKE_TIMEOUT="${SMOKE_TIMEOUT:-30s}"
 SMOKE_TAG="${SMOKE_TAG:-GER}"
 SMOKE_MAX_MATCH_LINES="${SMOKE_MAX_MATCH_LINES:-200}"
 HOI4_SMOKE_KEEP_DATA="${HOI4_SMOKE_KEEP_DATA:-0}"
@@ -88,7 +88,18 @@ printf 'hoi4-smoke: timeout: %s, start tag: %s\n' "$SMOKE_TIMEOUT" "$SMOKE_TAG"
     HOME="$FAKE_HOME" \
     LINUX_DATA_HOME="$FAKE_XDG_DATA_HOME" \
     XDG_DATA_HOME="$FAKE_XDG_DATA_HOME" \
-    timeout "$SMOKE_TIMEOUT" "$RUN_HOI4" \
+    timeout --kill-after=10s "$SMOKE_TIMEOUT" bash -c '
+        setsid "$@" &
+        child=$!
+        trap '"'"'
+            kill -TERM "-$child" 2>/dev/null || true
+            sleep 2
+            kill -KILL "-$child" 2>/dev/null || true
+            wait "$child" 2>/dev/null || true
+            exit 124
+        '"'"' TERM INT
+        wait "$child"
+    ' hoi4-smoke-run "$RUN_HOI4" \
         -gdpr-compliant \
         -debug_mode \
         "-start_tag=$SMOKE_TAG" \

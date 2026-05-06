@@ -26,7 +26,7 @@ bash scripts/hoi4-smoke.sh
 
 Configuration:
 - `HOI4_DIR` - Override the installed game path. Defaults to `$HOME/.steam/steam/steamapps/common/Hearts of Iron IV`.
-- `SMOKE_TIMEOUT` - How long to let HOI4 run before `timeout` stops it. Defaults to `120s`; timeout exit code `124` is acceptable.
+- `SMOKE_TIMEOUT` - How long to let HOI4 run before `timeout` stops it. Defaults to `30s`; timeout exit code `124` is acceptable. The script launches HOI4 in a separate process group and kills that process group on timeout, with `timeout --kill-after=10s` as a fallback.
 - `SMOKE_TAG` - Start country tag. Defaults to `GER`.
 - `PDX_SMOKE_HOME` - Use a fixed isolated temp/user-data root for debugging. When set, data is retained.
 - `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
