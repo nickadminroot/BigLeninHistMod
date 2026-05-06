@@ -282,7 +282,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					FROM = { is_literally_china = yes }
 					event_target:WTT_current_china_leader = {
 						tag = ROOT
 					}
@@ -299,7 +298,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					is_literally_china = yes
 					event_target:WTT_current_china_leader = {
 						tag = FROM
 					}

@@ -86,12 +86,10 @@ SOV_morozov_design_bureau_organization = {
 			}
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				} 
 				has_dlc = "Waking the Tiger"
 			}
-			NOR_AAT = yes
 			AND = {
 				original_tag = PHI 
 				has_dlc = "No Compromise, No Surrender"
@@ -132,7 +130,6 @@ SOV_morozov_design_bureau_organization = {
 				}
 				FROM = {
 					OR = {
-						is_literally_china = yes
 						tag = MAN
 						tag = MEN
 					}
@@ -146,7 +143,6 @@ SOV_morozov_design_bureau_organization = {
 					has_dlc = "No Compromise, No Surrender"
 					FROM = {
 						OR = {
-							is_literally_china_not_prc = yes
 							tag = MAN
 							tag = MEN
 						}
@@ -1168,7 +1164,6 @@ SOV_rubin_design_bureau_organization = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
 			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -2751,7 +2746,6 @@ SOV_gaz_organization = {
 				tag = AFG
 				has_dlc = "Graveyard of Empires"
 			}
-			NOR_AAT = yes
 		}
 	}
 

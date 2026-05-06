@@ -307,7 +307,6 @@ JAP_intervene_in_china = {
 		visible = {
 			JAP_has_idea_JAP_intervene_in_china = yes
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 		}
 
@@ -357,7 +356,6 @@ JAP_intervene_in_china = {
 		visible = {
 			has_completed_focus = JAP_strategic_offensives #JAP_secure_china
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 			event_target:WTT_current_china_leader = {
 				NOT = { is_puppet_of = JAP }
@@ -447,7 +445,6 @@ JAP_intervene_in_china = {
 		visible = {
 			JAP_has_idea_JAP_intervene_in_china = yes
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 		}
 
@@ -1036,7 +1033,6 @@ foreign_politics = {
 			NOT = { has_country_flag = JAP_offered_china_white_peace_flag }
 			is_subject = no
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 		}
 		
@@ -5874,7 +5870,6 @@ JAP_kwantung_army_decisions = {
 			}
 			613 = {
 				OWNER = {
-					is_literally_china = yes
 					NOT = {
 						is_ally_with = ROOT
 						has_war_with = ROOT # In case someone other than CHI owns this for example 
@@ -5952,7 +5947,6 @@ JAP_kwantung_army_decisions = {
 		target_trigger = {
 			#Target is FROM
 			FROM = {
-				is_literally_china = yes
 				NOT = {
 					is_ally_with = ROOT
 					has_war_with = ROOT
@@ -6070,7 +6064,6 @@ JAP_kwantung_army_decisions = {
 	    target_trigger = {
 	        FROM = {
 	        	controller = {
-	        		is_literally_china = yes
 	        		has_war_with = ROOT
 	        	}
 	        	any_neighbor_state = {
@@ -6087,7 +6080,6 @@ JAP_kwantung_army_decisions = {
 		visible = { 
 			has_completed_focus = JAP_strategic_offensives
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 		}
 	
@@ -6119,7 +6111,6 @@ JAP_kwantung_army_decisions = {
 					is_controlled_by = ROOT
 					controller = {
 						NOT = {
-							is_literally_china = yes
 							has_war_with = ROOT
 						}
 					}
@@ -10767,7 +10758,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 			has_completed_focus = JAP_reorganized_national_government
 			has_subject = RNG
 			any_country = {
-				is_literally_china = yes
 				NOT = {
 					original_tag = RNG
 				}
@@ -10797,7 +10787,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 
 			every_country = {
 				limit = {
-					is_literally_china = yes
 					NOT = {
 						original_tag = RNG
 					}
@@ -10814,7 +10803,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 			effect_tooltip = {
 				every_country = {
 					limit = {
-						is_literally_china = yes
 						NOT = {
 							original_tag = RNG
 						}
@@ -12026,7 +12014,6 @@ propaganda_efforts = {
 		available = {
 			has_war_support < 0.8
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 		}
 

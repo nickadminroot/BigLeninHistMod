@@ -1382,7 +1382,6 @@ news_event = {
 	option = {
 		name = tsr_manchukuo_news.1.a
 		trigger = {
-			is_literally_china = yes
 		}
 	}
 	option = {
@@ -1403,7 +1402,6 @@ news_event = {
 			NOT = {
 			 	original_tag = MAN
 			 	original_tag = JAP
-			 	is_literally_china = yes
 			}
 		}
 	}

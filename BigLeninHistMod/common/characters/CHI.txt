@@ -153,7 +153,6 @@ characters = {
 				allowed = {
 					OR = {
 						original_tag  = CHI
-						is_chinese_warlord = yes 
 					}
 				}
 				available  = {
@@ -181,7 +180,6 @@ characters = {
 				allowed = {
 					OR = {
 						original_tag  = CHI
-						is_chinese_warlord = yes 
 					}
 				}
 				available  = {
@@ -1902,7 +1900,6 @@ characters = {
 			allowed  = {
 				or  = {
 					original_tag  = CHI
-					is_chinese_warlord = yes 
 				}
 				has_dlc = "La Resistance"
 				has_dlc = "Waking the Tiger"
@@ -2916,7 +2913,6 @@ characters = {
 				slot = army_chief
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						tag = MAN
 					}
 				}
@@ -2959,7 +2955,6 @@ characters = {
 				cost = 25
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						tag = MAN
 					}
 				}
@@ -3015,7 +3010,6 @@ characters = {
 				cost = 25
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						tag = MAN
 					}
 				}
@@ -3038,7 +3032,6 @@ characters = {
 				cost = 25
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						tag = MAN
 					}
 				}
@@ -3128,7 +3121,6 @@ characters = {
 				allowed = {
 					OR = {
 						original_tag = CHI
-						is_chinese_warlord = yes 
 					}
 				}
 				available  = {

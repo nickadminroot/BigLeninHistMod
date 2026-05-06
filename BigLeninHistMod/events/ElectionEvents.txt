@@ -184,7 +184,6 @@ country_event = {
 			}
 		}
 		DEN_aat = no #Denmark has custom election events
-		NOR_AAT = no
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = { has_idea = fascism_defeated }
@@ -258,7 +257,6 @@ country_event = {
 			}
 		}
 		DEN_aat = no #Denmark has custom election events
-		NOR_AAT = no
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = { has_idea = communism_defeated }
@@ -341,7 +339,6 @@ country_event = {
 				date < 1949.1.1
 			}
 			AND = {
-				NOR_AAT = yes
 				date < 1949.1.1
 			} 
 			AND = { 
@@ -612,7 +609,6 @@ country_event = {
 		fascism > 0.5
 		is_puppet = no
 		DEN_aat = no #Denmark has custom election events
-		NOR_AAT = no 
 		NOT = {
 			AND = {
 				original_tag = SPR
@@ -675,7 +671,6 @@ country_event = {
 		communism > 0.5
 		is_puppet = no
 		DEN_aat = no #Denmark has custom election events
-		NOR_AAT = no 
 		NOT = {
 			AND = {
 				original_tag = GRE

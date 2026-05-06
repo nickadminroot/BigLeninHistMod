@@ -1180,7 +1180,6 @@ democratic_on_the_rise = {
 			check_has_focus_tree_to_switch_to_democratic = yes
 			if = {
 				limit = {
-					NOR_AAT = yes 
 				}
 				original_tag = NOR 
 				has_country_flag = NOR_included_in_generic_political

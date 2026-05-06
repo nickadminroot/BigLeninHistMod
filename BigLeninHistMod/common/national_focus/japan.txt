@@ -2437,7 +2437,6 @@ focus_tree = {
 						custom_trigger_tooltip = {
 							tooltip = JAP_tojos_premiership_tt
 							NOT = {
-								is_literally_china = yes
 							}
 						}
 					}	
@@ -3902,7 +3901,6 @@ focus_tree = {
 
 		available = {
 			any_enemy_country = {
-				is_literally_china = yes
 			}
 			NOT = {
 				has_idea = JAP_surprise_invasion_idea

@@ -6766,7 +6766,6 @@ mod_artillery_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				}
 				has_dlc = "Waking the Tiger"
@@ -7179,7 +7178,6 @@ mod_infantry_equipment_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				}
 				has_dlc = "Waking the Tiger"

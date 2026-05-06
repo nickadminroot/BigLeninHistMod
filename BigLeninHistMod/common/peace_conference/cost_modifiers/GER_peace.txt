@@ -46,7 +46,6 @@ peace_action_modifiers = {
         enable = {
             ROOT = {
                 OR = {
-                    is_literally_china = yes
                     original_tag = CHI
                 }
             }

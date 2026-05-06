@@ -72,10 +72,8 @@ on_actions = {
 		effect = {
 			every_country = {
 				limit = {
-					is_chinese_warlord = yes
 				}
 				
-				add_to_array = { global.is_chinese_warlord = THIS } 
 				set_variable = { press_warlord_to_become_puppet_political_power_cost = CHI.press_warlord_to_become_puppet_political_power_cost }
 				set_variable = { press_warlord_to_become_puppet_influence_points_cost = CHI.press_warlord_to_become_puppet_influence_points_cost }
 				set_variable = { press_warlord_to_become_puppet_influence_points_trigger = CHI.press_warlord_to_become_puppet_influence_points_trigger }
@@ -95,7 +93,6 @@ on_actions = {
 			every_state = {
 				limit = {
 					owner = {
-						is_literally_china = yes
 						controls_state = PREV
 					}
 				}
@@ -996,7 +993,6 @@ on_actions = {
 					}
 
 					ROOT = {
-						is_chinese_warlord = yes
 						NOT = { has_idea = idea_CHI_sympathetic_judges }
 					}
 				}
@@ -1014,13 +1010,11 @@ on_actions = {
 					}
 
 					ROOT = {
-						is_chinese_warlord = yes
 					}
 				}
 
 				every_subject_country = {
 					limit = {
-						is_chinese_warlord = yes
 						NOT = { tag = ROOT }
 					}
 
@@ -1038,7 +1032,6 @@ on_actions = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					ROOT = {
-						is_chinese_warlord = yes
 						
 					}
 
@@ -1774,10 +1767,8 @@ on_actions = {
 					}
 					
 					FROM = { #China, but not PRC, is attacked by an occupier
-						is_literally_china_not_prc = yes
 					}
 					ROOT = {
-						is_literally_china = no
 					}
 					PRC = {
 						NOT = { has_war_with = ROOT }
@@ -1853,7 +1844,6 @@ on_actions = {
 						PRC = {
 							NOT = {
 								any_enemy_country = {
-									is_literally_china_not_prc = yes
 									NOT = { tag = RNG }
 								}
 							}
@@ -2054,7 +2044,6 @@ on_actions = {
 				## array here of all not PRC, then check if has characters 
 				every_country = {
 					limit = {
-					 	is_literally_china = yes
 					 	NOT = { tag = PRC }
 					 	NOT = {
 					 		is_subject_of = PRC
@@ -3802,7 +3791,6 @@ on_actions = {
     					original_tag = CHI
     				}
     				ROOT = {
-    					is_chinese_warlord = yes
     				}
     			}
 

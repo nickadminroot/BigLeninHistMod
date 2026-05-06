@@ -1751,7 +1751,6 @@ country_event = { # Warlord accepts event
 
 			every_subject_country = {
 				limit = {
-					is_chinese_warlord = yes
 					NOT = { tag = FROM }
 				}
 

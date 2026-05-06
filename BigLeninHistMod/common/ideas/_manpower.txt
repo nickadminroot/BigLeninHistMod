@@ -86,7 +86,6 @@ ideas = {
 
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_had_volunteer_only_flag }
 				}
@@ -236,7 +235,6 @@ ideas = {
 				}
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
@@ -475,7 +473,6 @@ ideas = {
 				}
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
@@ -715,7 +712,6 @@ ideas = {
 				}
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
@@ -947,7 +943,6 @@ ideas = {
 				}
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
@@ -1172,7 +1167,6 @@ ideas = {
 				}
 				if = {
 					limit = {
-						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}

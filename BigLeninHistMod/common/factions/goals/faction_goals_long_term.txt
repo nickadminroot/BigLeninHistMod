@@ -132,7 +132,6 @@ faction_goal_secure_chinese_waters = {
 	}
 	visible = {
 		FROM = {
-			is_literally_china = yes
 			has_war = yes
 			OR = {
 				has_faction_template = faction_template_chinese_united_front
@@ -209,7 +208,6 @@ faction_goal_no_japanese_in_china = {
 	}
 	visible = {
 		FROM = {
-			is_literally_china = yes
 			any_enemy_country = {
 				original_tag = JAP
 			}

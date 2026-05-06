@@ -229,7 +229,6 @@ characters={
 			allowed = {
 				OR = {
 					original_tag = USA
-					is_literally_china = yes
 				}
 			}
 			available = {
@@ -354,7 +353,6 @@ characters={
 				idea_token = douglas_macarthur
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						original_tag = USA
 					}
 				}
@@ -413,7 +411,6 @@ characters={
 				idea_token = douglas_macarthur
 				allowed = {
 					OR = {
-						is_literally_china = yes
 						original_tag = USA
 					}
 				}
@@ -736,7 +733,6 @@ characters={
 			ledger = army
 			allowed = {
 				OR = {
-					is_literally_china = yes
 					original_tag = USA
 				}
 			}

@@ -1952,7 +1952,6 @@ war_measures = {
 					}
 				}
 			}
-			PHI_SEA = no
 		}
 
 		fire_only_once = yes

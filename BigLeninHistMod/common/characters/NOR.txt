@@ -52,7 +52,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_martin_tranmael
 			allowed  = {
-				NOR_AAT = yes 
 			}
 			traits  = {
 				NOR_democratic_powerhouse
@@ -90,7 +89,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_johan_h_andresen
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				is_country_leader = no
@@ -144,7 +142,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_olav_scheflo
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = democratic			
@@ -174,7 +171,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_eivind_heiberg
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				OR = {
@@ -207,7 +203,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_christopher_hornsrud
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				OR = {
@@ -239,7 +234,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_kirsten_hansteen
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				OR = {
@@ -278,7 +272,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_peder_anker_wedel_jarlsberg
 			allowed  = {
-				NOR_AAT = yes
 			}
 			traits  = {
 				NOR_royal_chamberlain
@@ -433,7 +426,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_vidkun_quisling
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {				
 				NOT = {
@@ -457,7 +449,6 @@ characters={
 			slot = army_chief
 			idea_token = NOR_vidkun_quisling
 			allowed = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = fascism 
@@ -476,7 +467,6 @@ characters={
 			idea_token = NOR_vidkun_quisling
 			ledger = army
 			allowed = {
-				NOR_AAT = yes
 			}
 			traits = {
 				army_entrenchment_1
@@ -536,7 +526,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_jonas_lie
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				OR = {
@@ -622,7 +611,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_johan_ludwig_mowinckel
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = democratic
@@ -668,7 +656,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_peder_furubotn
 			allowed  = {
-				NOR_AAT = yes
 			}
 			traits  = {
 				NOR_communist_agitator
@@ -692,7 +679,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_jeanette_olsen
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_completed_focus = NOR_prosecute_the_nkp
@@ -725,7 +711,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_lev_trotsky
 			allowed  = {
-				NOR_AAT = yes
 			}	
 			ai_will_do = {
 				factor = 1
@@ -781,7 +766,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_sverre_riisnaes
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = fascism 
@@ -808,7 +792,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_birger_meidell
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				OR = {
@@ -838,7 +821,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_ragnar_skancke
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = fascism 
@@ -865,7 +847,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_rolf_fuglesang
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = fascism 
@@ -893,7 +874,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_eivind_blehr
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_government = fascism 
@@ -924,7 +904,6 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_joakim_lehmkuhl
 			allowed  = {
-				NOR_AAT = yes
 			}
 			available = {
 				has_completed_focus = NOR_approach_the_fatherland_league 
@@ -951,7 +930,6 @@ characters={
 			slot = political_advisor 
 			idea_token = NOR_hans_ystgaard
 			allowed = {
-				NOR_AAT = yes 
 			}
 			visible = {
 				OR = {
@@ -1474,7 +1452,6 @@ characters={
 
 			ledger = army
 				allowed = {
-					NOR_AAT = yes 
 				}
 				
 				traits = {

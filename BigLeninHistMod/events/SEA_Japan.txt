@@ -11986,7 +11986,6 @@ country_event = {
 			has_added_tension_amount > 10 
 			has_offensive_war = yes
 			any_country = {
-				is_literally_china = yes
 				has_war_with = PREV
 			}
 		}

@@ -66,7 +66,6 @@ WTT_all_warlords_support_china_in_war = {
 	reversed = yes
 	allowed = {
 		#NOT = { has_dlc = "No Compromise, No Surrender"}
-		is_literally_china_not_prc = yes
 	}
 
 	enable = {
@@ -93,7 +92,6 @@ WTT_all_warlords_support_china_in_war = {
 WTT_all_warlords_support_china_in_war = {
 	allowed = {
 		NOT = { has_dlc = "No Compromise, No Surrender"}
-		is_literally_china_not_prc = yes
 	}
 	enable = {
 		CHI = { is_faction_leader = yes }

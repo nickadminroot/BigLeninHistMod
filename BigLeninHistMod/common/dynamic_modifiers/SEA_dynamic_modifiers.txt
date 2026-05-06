@@ -1070,7 +1070,6 @@ CHI_electrification_and_mass_education_modifier = {
 		ROOT = { 
 			OWNER = {
 				OR = {
-					is_literally_china = no
 					has_war_with = CHI
 				}
 			} # ROOT refers to the state on which the modifier is added

@@ -32,7 +32,6 @@ defined_text = { #Country
 	}
 	text = {
 		trigger = {
-			is_chinese_warlord = yes
 		}
 		localization_key = WTT_unlock_struggle_warlord
 	}
@@ -333,7 +332,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = CHI
@@ -343,7 +341,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = PRC
@@ -353,7 +350,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = GXC
@@ -363,7 +359,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = YUN
@@ -373,7 +368,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = SHX
@@ -383,7 +377,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = XSM
@@ -393,7 +386,6 @@ defined_text = { #Event target scope_<TAG>
 	text = {
 		trigger = {
 			any_country = {
-				is_chinese_warlord = yes
 				has_country_flag = warlord_supports_@PREV
 			}
 			original_tag = SIK

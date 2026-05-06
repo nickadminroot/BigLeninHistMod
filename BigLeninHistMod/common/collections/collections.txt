@@ -124,7 +124,6 @@ countries_china = {
 	name = COLLECTION_COUNTRIES_CHINA
 	operators = {
 		limit = {
-			WTT_is_chinese_country = yes 
 		}
 	}
 }
@@ -583,7 +582,6 @@ the_northern_mandate_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			CHI_northern_mandate_states = yes
 		}
 	}
 	name = COLLECTION_STATES_IN_ASIA_AND_IN_OCEANIA
@@ -593,7 +591,6 @@ the_southern_mandate_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			CHI_southern_mandate_states = yes
 		}
 	}
 	name = COLLECTION_STATES_IN_ASIA_AND_IN_OCEANIA
@@ -603,7 +600,6 @@ the_greater_game_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			CHI_greater_game_states = yes
 		}
 	}
 	name = COLLECTION_STATES_IN_ASIA_AND_IN_OCEANIA

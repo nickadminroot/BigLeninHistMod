@@ -656,7 +656,6 @@ focus_tree = {
 				congress_medium_support_trigger = yes
 			}
 			else = {
-				congress_high_support_trigger = yes
 			}
 			democratic > 0.95
 			custom_trigger_tooltip = {
@@ -2189,7 +2188,6 @@ focus_tree = {
 					threat < 0.5
 					has_war = no
 				}
-				congress_high_support_trigger = yes
 			}
 			else = {
 				congress_low_support_trigger = yes
@@ -2947,7 +2945,6 @@ focus_tree = {
 					threat < 0.5
 					has_war = no
 				}
-				congress_high_support_trigger = yes
 			}
 			else = {
 				congress_low_support_trigger = yes

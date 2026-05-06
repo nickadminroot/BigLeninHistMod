@@ -74,7 +74,6 @@ autonomy_state = {
 				has_dlc = "No Compromise, No Surrender"
 				OVERLORD = { tag = CHI }
 			}
-			is_chinese_warlord = no
 		}
 	}
 	

@@ -129,7 +129,6 @@ CHI_border_clashes = {
 
 		# VPI by Yard1
 		target_root_trigger = {
-			is_literally_china = yes
 		}
 		#target_array = neighbors
 
@@ -145,7 +144,6 @@ CHI_border_clashes = {
 
 
 			FROM = { 
-				is_literally_china = yes 
 				any_neighbor_country = {
 					OR = {
 						tag = ROOT 

@@ -30,7 +30,6 @@ GER_porsche_organization = {
 				original_tag = IRQ 
 				has_dlc = "Graveyard of Empires"
 			}
-			NOR_AAT = yes
 		}
 	}
 
@@ -1806,7 +1805,6 @@ GER_messerschmitt_organization = {
 	allowed = {	
 		OR = {
 			original_tag = GER
-			NOR_AAT = yes 
 		}
 	}
 
@@ -2353,7 +2351,6 @@ GER_heinkel_organization = {
 				original_tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
-			NOR_AAT = yes
 		}
 	}
 

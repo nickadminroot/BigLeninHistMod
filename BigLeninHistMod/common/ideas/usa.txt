@@ -1340,7 +1340,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1378,7 +1377,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			available = {
@@ -1520,7 +1518,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1602,7 +1599,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1660,7 +1656,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1781,7 +1776,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1821,7 +1815,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			
@@ -1862,7 +1855,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = USA
-					PHI_SEA = yes
 				}
 			}
 			

@@ -2866,7 +2866,6 @@ MAN_china_matters = {
 		target_trigger = {
 			#Target is FROM
 			FROM = {
-				is_literally_china = yes
 				is_subject_of = JAP
 			}
 		}

@@ -2134,7 +2134,6 @@ USA_intervention_mandate = {
 				congress_medium_support_trigger = yes
 			}
 			else = {
-				congress_high_support_trigger = yes
 			}
 			not = { has_war_with = FROM }
 		}
@@ -2848,7 +2847,6 @@ USA_intervention_mandate = {
 				congress_medium_support_trigger = yes
 			}
 			else = {
-				congress_high_support_trigger = yes
 			}
 		}
 		visible = {
@@ -2947,7 +2945,6 @@ USA_intervention_mandate = {
 				congress_medium_support_trigger = yes
 			}
 			else = {
-				congress_high_support_trigger = yes
 			}
 		}
 		visible = {

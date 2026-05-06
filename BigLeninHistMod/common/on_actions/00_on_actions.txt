@@ -641,7 +641,6 @@ on_actions = {
 			#make sure warlords don't use the same guy
 			if = {
 				limit = {
-					is_chinese_warlord = yes
 				}
 				if = {
 					limit = {

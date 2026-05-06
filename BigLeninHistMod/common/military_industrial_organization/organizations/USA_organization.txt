@@ -52,8 +52,6 @@ USA_chrysler_organization = {
 				tag = MEX 
 				has_dlc = "Man the Guns"
 			}
-			NOR_AAT = yes 
-			PHI_SEA = yes
 		}
 	}
 
@@ -189,73 +187,7 @@ USA_chrysler_organization = {
 		}
 	}
 
-	add_trait = {
-		token = PHI_mio_trait_coconut_fuel_adaptations
-		name = PHI_mio_trait_coconut_fuel_adaptations
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-		special_trait_background = yes
-
-		position = { x = 0 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-			FROM = {
-				PHI_vicente_lava = {
-					is_hired_as_advisor = yes
-				}
-			}
-		}
-
-		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
-		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			fuel_consumption = -0.10
-			reliability = -0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
 	}
-
-	add_trait = {
-		token = PHI_mio_trait_ad_hoc_armor_reinforcement
-		name = PHI_mio_trait_ad_hoc_armor_reinforcement
-		icon = GFX_generic_mio_department_icon_tank_general_armor
-		special_trait_background = yes
-
-		position = { x = 5 y = 3 }  
-		
-		visible = {
-			FROM = { original_tag = PHI }
-		}
-
-		available = {
-		}
-
-		any_parent = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			hardness = 0.05
-			armor_value = 0.03
-			maximum_speed = -0.03
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-}
 
 USA_army_ordnance_department_organization = {
 	include = generic_medium_tank_organization
@@ -305,7 +237,6 @@ USA_detroit_arsenal_organization = {
 	allowed = {	
 		OR = {
 			tag = USA
-			PHI_SEA = yes
 		}
 	}
 	available = {
@@ -430,7 +361,6 @@ USA_detroit_arsenal_organization = {
 
 		available = {
 			FROM = {
-				PHI_vicente_lava = {
 					is_hired_as_advisor = yes
 				}
 			}
@@ -581,7 +511,6 @@ USA_electric_boat_company_organization = {
 	allowed = {	
 		OR = {
 			tag = USA 
-			PHI_SEA = yes
 		}
 	}
 
@@ -697,7 +626,6 @@ USA_electric_boat_company_organization = {
 
 		available = {
 			FROM = {
-				PHI_vicente_lava = {
 					is_hired_as_advisor = yes
 				}
 			}
@@ -850,7 +778,6 @@ USA_north_american_aviation_organization = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
 			}
-			PHI_SEA = yes
 		}
 	}
 
@@ -987,7 +914,6 @@ USA_lockheed_organization = {
 	allowed = {	
 		OR = {
 			tag = USA 
-			PHI_SEA = yes
 		}
 	}
 
@@ -1527,7 +1453,6 @@ USA_ford_motor_company_organization = {
 
 		available = {
 			FROM = {
-				PHI_vicente_lava = {
 					is_hired_as_advisor = yes
 				}
 			}

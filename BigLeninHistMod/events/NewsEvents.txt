@@ -11333,7 +11333,6 @@ news_event = {
 	is_triggered_only = yes
 	trigger = { # Added to minimise the amount of spam non-chinese player about the United Front joining
 		FROM = { 
-			is_chinese_warlord = no
 			NOT = {
 				has_faction_template = faction_template_chinese_united_front
 				is_ally_with = event_target:WTT_current_china_leader 

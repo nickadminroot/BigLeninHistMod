@@ -34,7 +34,6 @@ generic_tank_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				}
 				has_dlc = "Waking the Tiger"
@@ -6856,7 +6855,6 @@ generic_artillery_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				}
 				has_dlc = "Waking the Tiger"
@@ -7269,7 +7267,6 @@ generic_infantry_equipment_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					is_literally_china = yes
 					tag = MAN
 				}
 				has_dlc = "Waking the Tiger"
