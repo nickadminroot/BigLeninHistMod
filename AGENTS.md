@@ -32,7 +32,7 @@ Configuration:
 - `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
 - `SMOKE_MAX_MATCH_LINES` - Maximum matching log-context lines to print on failure. Defaults to `200`.
 
-The script writes temporary `dlc_load.json` and `mod/BigLeninHistMod.mod` files inside the isolated user-data directory only. It does not modify normal Paradox launcher state.
+The script seeds the isolated user-data directory from the normal profile's DLC state (`dlc_load.json`, `dlc_signature`, and `game_data.json` when present), then writes a temporary `mod/BigLeninHistMod.mod` and enables only this mod. If the installed game directory has an executable `cream.sh`, the script launches through it to match the local normal DLC-enabled start path; otherwise it launches `run_hoi4` directly. Timestamped CreamAPI `[info]` console lines are filtered from smoke output. It does not modify normal Paradox launcher state.
 
 ---
 
