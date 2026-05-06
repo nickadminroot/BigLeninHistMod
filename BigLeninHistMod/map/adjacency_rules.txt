@@ -136,7 +136,7 @@ adjacency_rule =
 	
 	required_provinces = { 6287 3277 3325 3260 394 }
 	
-	icon = 2431
+	icon = 2455
 	offset = { -2 0 -7 }
 }
 

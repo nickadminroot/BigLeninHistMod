@@ -240,8 +240,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 1421;10184;sea;2899;-1;-1;-1;-1;;Sulu-Mindanao
 12118;1224;sea;8751;-1;-1;-1;-1;;Cebu-Samar
 5864;5838;;-1;-1;-1;-1;-1;OTRANTO_STRAIT;Otranto Strait
-2506;2455;;-1;2912;367;2968;361;GIBRALTAR_STRAIT;Strait between provinces 2506 and 2455
--1;-1;;-1;-1;-1;-1;-1;-1 
+2455;2506;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
+-1;-1;;-1;-1;-1;-1;-1;-1
 #Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment
 
 
