@@ -7,7 +7,32 @@ This is vanilla-like multiplayer oriented historical modification for Hearts of 
 
 - `./vanilla/documentation/` - Documentation about modding for HOI4. **Read this regularly.**
 - `./vanilla/` - Vanilla game files the mod is based on.
-- `./BigLeninHistMod/` - Mod files. **Agents should modify files only in this folder and its subfolders.**
+- `./BigLeninHistMod/` - Shipped mod files. This is the folder published to Steam Workshop.
+- `./scripts/` - Local development and validation scripts. These are repository tooling and should not be shipped to Steam Workshop.
+
+Agents should modify shipped game/mod content only in `./BigLeninHistMod/` and its subfolders. Repository tooling, documentation, and agent instructions may be modified outside that folder when the task explicitly concerns tooling or workflow.
+
+---
+
+## Local Smoke Test
+
+Use `scripts/hoi4-smoke.sh` to launch the locally installed HOI4 binary with this mod enabled in an isolated Paradox user-data directory, then fail if `logs/error.log` contains serious startup/load errors.
+
+Run from the repository root:
+
+```bash
+bash scripts/hoi4-smoke.sh
+```
+
+Configuration:
+- `HOI4_DIR` - Override the installed game path. Defaults to `$HOME/.steam/steam/steamapps/common/Hearts of Iron IV`.
+- `SMOKE_TIMEOUT` - How long to let HOI4 run before `timeout` stops it. Defaults to `120s`; timeout exit code `124` is acceptable.
+- `SMOKE_TAG` - Start country tag. Defaults to `GER`.
+- `PDX_SMOKE_HOME` - Use a fixed isolated temp/user-data root for debugging. When set, data is retained.
+- `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
+- `SMOKE_MAX_MATCH_LINES` - Maximum matching log-context lines to print on failure. Defaults to `200`.
+
+The script writes temporary `dlc_load.json` and `mod/BigLeninHistMod.mod` files inside the isolated user-data directory only. It does not modify normal Paradox launcher state.
 
 ---
 
