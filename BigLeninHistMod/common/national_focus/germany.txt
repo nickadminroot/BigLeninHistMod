@@ -14607,7 +14607,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_diplomatic_pressure_on_potential_allies
-		icon = GFX_focus_generic_diplomacy
+		icon = GFX_goal_generic_political_pressure
 		x = -4
 		y = 2
 		relative_position_id = GER_loyalty_to_the_fuhrer
@@ -14634,9 +14634,9 @@ focus_tree = {
 
 	focus = {
 		id = GER_develop_hungarian_bauxite_deposits
-		icon = GFX_focus_generic_construct_civilian_factory
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = GER_diplomatic_pressure_on_potential_allies
 		cost = 2
@@ -14682,7 +14682,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_expand_oil_extraction_in_ploesti
-		icon = GFX_focus_generic_oil_refining
+		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
 		x = 0
 		y = 1
@@ -14725,9 +14725,9 @@ focus_tree = {
 
 	focus = {
 		id = GER_sofia_initiative
-		icon = GFX_focus_generic_construct_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_diplomatic_pressure_on_potential_allies
 		cost = 2
@@ -14768,23 +14768,50 @@ focus_tree = {
 
 		completion_reward = {
 			GER = {
-				set_autonomy = {
-					target = HUN
-					autonomy_state = autonomy_reichskommissariat
-					end_wars = no
-					end_civil_wars = no
+				if = {
+					limit = {
+						NOT = {
+							HUN = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = HUN
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
 				}
-				set_autonomy = {
-					target = ROM
-					autonomy_state = autonomy_reichskommissariat
-					end_wars = no
-					end_civil_wars = no
+				if = {
+					limit = {
+						NOT = {
+							ROM = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = ROM
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
 				}
-				set_autonomy = {
-					target = BUL
-					autonomy_state = autonomy_reichskommissariat
-					end_wars = no
-					end_civil_wars = no
+				if = {
+					limit = {
+						NOT = {
+							BUL = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = BUL
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
 				}
 			}
 

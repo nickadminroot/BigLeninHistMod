@@ -22690,356 +22690,356 @@ GER_the_fading_eagle_category = {
 		}
 
 	}
+}
 
-	GER_united_industry_dec_cat = {
-		GER_united_industry_military_exercises = {
-			priority = 70
-			icon = GFX_decision_generic_military_exercises
+GER_united_industry_dec_cat = {
+	GER_united_industry_military_exercises = {
+		priority = 70
+		icon = GFX_decision_generic_military
 
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_military_exercises_done_flag }
-			}
-
-			available = {
-				date < 1939.9.1
-			}
-
-			fire_only_once = yes
-			cost = 50
-			days_remove = 70
-
-			modifier = {
-				army_attack_factor = 0.05
-			}
-
-			remove_effect = {
-				set_country_flag = GER_united_industry_military_exercises_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		allowed = {
+			original_tag = GER
 		}
 
-		GER_united_industry_radio_exchange = {
-			priority = 60
-			icon = GFX_decision_generic_signal_intelligence
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_radio_exchange_done_flag }
-			}
-
-			fire_only_once = yes
-			cost = 50
-			days_remove = 30
-
-			modifier = {
-				coordination_bonus = 0.03
-			}
-
-			remove_effect = {
-				set_country_flag = GER_united_industry_radio_exchange_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_military_exercises_done_flag }
 		}
 
-		GER_united_industry_vienna_research_center = {
-			priority = 90
-			icon = GFX_decision_generic_research
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_vienna_research_center_done_flag }
-			}
-
-			available = {
-				4 = {
-					is_fully_controlled_by = ROOT
-				}
-			}
-
-			fire_only_once = yes
-			cost = 50
-			days_remove = 60
-
-			modifier = {
-				research_speed_factor = 0.05
-			}
-
-			remove_effect = {
-				4 = {
-					add_building_construction = {
-						type = nuclear_reactor
-						level = 1
-						instant_build = yes
-					}
-				}
-				set_country_flag = GER_united_industry_vienna_research_center_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		available = {
+			date < 1939.9.1
 		}
 
-		GER_united_industry_distributed_aircraft_industry = {
-			priority = 80
-			icon = GFX_decision_generic_air_research
+		fire_only_once = yes
+		cost = 50
+		days_remove = 70
 
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_distributed_aircraft_industry_done_flag }
-			}
-
-			fire_only_once = yes
-			cost = 100
-			days_remove = 90
-
-			modifier = {
-				aircraft_manufacturer_cost_factor = -0.05
-			}
-
-			remove_effect = {
-				set_country_flag = GER_united_industry_distributed_aircraft_industry_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		modifier = {
+			army_attack_factor = 0.05
 		}
 
-		GER_united_industry_civilian_industry = {
-			priority = 50
-			icon = GFX_decision_generic_construction
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_civilian_industry_done_flag }
-			}
-
-			fire_only_once = yes
-			cost = 150
-			days_remove = 90
-
-			remove_effect = {
-				GER = {
-					65 = {
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				HUN = {
-					43 = {
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
-					}
-					155 = {
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				ROM = {
-					46 = {
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				BUL = {
-					48 = {
-						add_building_construction = {
-							type = industrial_complex
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				set_country_flag = GER_united_industry_civilian_industry_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		remove_effect = {
+			set_country_flag = GER_united_industry_military_exercises_done_flag
 		}
 
-		GER_united_industry_military_industry = {
-			priority = 40
-			icon = GFX_decision_generic_military_industry
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_military_industry_done_flag }
-			}
-
-			fire_only_once = yes
-			cost = 150
-			days_remove = 90
-
-			remove_effect = {
-				GER = {
-					65 = {
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				HUN = {
-					43 = {
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
-						}
-					}
-					155 = {
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				ROM = {
-					46 = {
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				BUL = {
-					48 = {
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
-				set_country_flag = GER_united_industry_military_industry_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
-		}
-
-		GER_united_industry_protect_strategic_resources = {
-			priority = 30
-			icon = GFX_decision_generic_fortify_the_borders
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				has_completed_focus = GER_consolidate_management_of_minor_powers
-				NOT = { has_country_flag = GER_united_industry_protect_strategic_resources_done_flag }
-			}
-
-			fire_only_once = yes
-			cost = 75
-			days_remove = 60
-
-			remove_effect = {
-				HUN = {
-					43 = {
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
-						}
-					}
-					155 = {
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				ROM = {
-					46 = {
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				BUL = {
-					48 = {
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				971 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						instant_build = yes
-						province = {
-							all_provinces = yes
-							limit_to_naval_base = yes
-						}
-					}
-				}
-				set_country_flag = GER_united_industry_protect_strategic_resources_done_flag
-			}
-
-			ai_will_do = {
-				base = 0
-			}
+		ai_will_do = {
+			base = 0
 		}
 	}
 
+	GER_united_industry_radio_exchange = {
+		priority = 60
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_radio_exchange_done_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		modifier = {
+			coordination_bonus = 0.03
+		}
+
+		remove_effect = {
+			set_country_flag = GER_united_industry_radio_exchange_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_united_industry_vienna_research_center = {
+		priority = 90
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_vienna_research_center_done_flag }
+		}
+
+		available = {
+			4 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = 0.05
+		}
+
+		remove_effect = {
+			4 = {
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = GER_united_industry_vienna_research_center_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_united_industry_distributed_aircraft_industry = {
+		priority = 80
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_distributed_aircraft_industry_done_flag }
+		}
+
+		fire_only_once = yes
+		cost = 100
+		days_remove = 90
+
+		modifier = {
+			aircraft_manufacturer_cost_factor = -0.05
+		}
+
+		remove_effect = {
+			set_country_flag = GER_united_industry_distributed_aircraft_industry_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_united_industry_civilian_industry = {
+		priority = 50
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_civilian_industry_done_flag }
+		}
+
+		fire_only_once = yes
+		cost = 150
+		days_remove = 90
+
+		remove_effect = {
+			GER = {
+				65 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			HUN = {
+				43 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			ROM = {
+				46 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			BUL = {
+				48 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			set_country_flag = GER_united_industry_civilian_industry_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_united_industry_military_industry = {
+		priority = 40
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_military_industry_done_flag }
+		}
+
+		fire_only_once = yes
+		cost = 150
+		days_remove = 90
+
+		remove_effect = {
+			GER = {
+				65 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			HUN = {
+				43 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			ROM = {
+				46 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			BUL = {
+				48 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			set_country_flag = GER_united_industry_military_industry_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_united_industry_protect_strategic_resources = {
+		priority = 30
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_consolidate_management_of_minor_powers
+			NOT = { has_country_flag = GER_united_industry_protect_strategic_resources_done_flag }
+		}
+
+		fire_only_once = yes
+		cost = 75
+		days_remove = 60
+
+		remove_effect = {
+			HUN = {
+				43 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 5
+						instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			ROM = {
+				46 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			BUL = {
+				48 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			971 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+			set_country_flag = GER_united_industry_protect_strategic_resources_done_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
 }
+
 
 
 
