@@ -1,25 +1,25 @@
-﻿l_english:
+l_english:
 
  # Focus Names
- SOV_mobilization_first_wave: "Первая волна мобилизации"
- SOV_mobilization_second_wave: "Вторая волна мобилизации"
- SOV_order_227: "Приказ 227"
- SOV_operation_bagration: "Операция Багратион"
+ SOV_mobilization_first_wave: "First Wave of Mobilization"
+ SOV_mobilization_second_wave: "Second Wave of Mobilization"
+ SOV_order_227: "Order 227"
+ SOV_operation_bagration: "Operation Bagration"
 
  # Focus Descriptions
- SOV_mobilization_first_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
- SOV_mobilization_second_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
- SOV_order_227_desc: "Вождь велел не отступать, мы и не собирались, но теперь это зафиксировано на бумаге."
- SOV_operation_bagration_desc: "Время выбить врага с наших земель!"
+ SOV_mobilization_first_wave_desc: "We need to mobilize reserves in order to effectively counter the enemy."
+ SOV_mobilization_second_wave_desc: "We need to mobilize reserves in order to effectively counter the enemy."
+ SOV_order_227_desc: "The Leader ordered us not to retreat, and we had no intention of doing so, but now it is written in stone."
+ SOV_operation_bagration_desc: "Time to drive the enemy from our lands!"
 
  # National Spirits
- SOV_no_step_back: "Ни шагу назад"
- SOV_no_step_back_desc: "Приказ Сталина о запрете отступления без приказа."
- SOV_bagration: "Багратион"
- SOV_bagration_desc: "Массированная советская операция по освобождению Белоруссии."
+ SOV_no_step_back: "Not One Step Back"
+ SOV_no_step_back_desc: "Stalin's order prohibiting retreat without permission."
+ SOV_bagration: "Bagration"
+ SOV_bagration_desc: "Massive Soviet operation to liberate Belarus."
 
  # Custom Tooltips
- SOV_mobilization_first_wave_tt: "Создано 170 пехотных{divisions}Новобранцы"
- SOV_mobilization_second_wave_tt: "Создано 170 пехотных{divisions}Новобранцы"
- SOV_order_227_added_tt: "Добавлен национальный дух 'Ни шагу назад'. Удалено решение 'Приказ 227'."
- SOV_operation_bagration_tt: "Получен национальный дух 'Багратион' на 90 дней."
+ SOV_mobilization_first_wave_tt: "170 infantry divisions created: Novobrantsy"
+ SOV_mobilization_second_wave_tt: "170 infantry divisions created: Novobrantsy"
+ SOV_order_227_added_tt: "Added national spirit 'Not One Step Back'. Removed decision 'Order 227'."
+ SOV_operation_bagration_tt: "Received national spirit 'Bagration' for 90 days."

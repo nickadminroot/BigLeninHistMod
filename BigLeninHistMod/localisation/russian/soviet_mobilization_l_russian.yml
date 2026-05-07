@@ -1,0 +1,25 @@
+﻿l_russian:
+
+ # Focus Names
+ SOV_mobilization_first_wave: "Первая волна мобилизации"
+ SOV_mobilization_second_wave: "Вторая волна мобилизации"
+ SOV_order_227: "Приказ 227"
+ SOV_operation_bagration: "Операция Багратион"
+
+ # Focus Descriptions
+ SOV_mobilization_first_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
+ SOV_mobilization_second_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
+ SOV_order_227_desc: "Вождь велел не отступать, мы и не собирались, но теперь это зафиксировано на бумаге."
+ SOV_operation_bagration_desc: "Время выбить врага с наших земель!"
+
+ # National Spirits
+ SOV_no_step_back: "Ни шагу назад"
+ SOV_no_step_back_desc: "Приказ Сталина о запрете отступления без приказа."
+ SOV_bagration: "Багратион"
+ SOV_bagration_desc: "Массированная советская операция по освобождению Белоруссии."
+
+ # Custom Tooltips
+ SOV_mobilization_first_wave_tt: "Создано 170 пехотных дивизий: Новобранцы"
+ SOV_mobilization_second_wave_tt: "Создано 170 пехотных дивизий: Новобранцы"
+ SOV_order_227_added_tt: "Добавлен национальный дух 'Ни шагу назад'. Удалено решение 'Приказ 227'."
+ SOV_operation_bagration_tt: "Получен национальный дух 'Багратион' на 90 дней."
