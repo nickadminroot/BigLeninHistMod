@@ -34,14 +34,14 @@ if = {
 }
 
 ##### RECRUIT VANILLA CHARACTERS #####
-IF = {
+if = {
 	limit = {
 		has_dlc = "Graveyard of Empires"
 	}
 	recruit_character = IRQ_yasin_al_hashimi
 	recruit_character = IRQ_ghazi_i
 }
-IF = {
+if = {
 	limit = {
 		NOT = {
 			has_dlc = "Graveyard of Empires"
@@ -66,7 +66,7 @@ recruit_character = IRQ_faisal_ii
 
 ##### GoE Setup #####
 
-IF = { 
+if = { 
 	limit = {
 		has_dlc = "Graveyard of Empires"
 	}
@@ -191,7 +191,7 @@ IF = {
 	set_variable = { IRQ_navy_screen_defence_factor = 0 }
 	set_variable = { IRQ_production_speed_coastal_bunker_factor = 0 }
 
-	IF = {
+	if = {
 		limit = { has_dlc = "Arms Against Tyranny" }
 		give_market_access = ENG
 	}
@@ -222,7 +222,7 @@ IF = {
 
 }
 
-IF = {
+if = {
 	limit = {
 		NOT = {
 			has_dlc	= "Graveyard of Empires"
@@ -243,7 +243,7 @@ IF = {
 	add_political_power = 1198
 	add_command_power = 100
 	
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Graveyard of Empires"
 		}
@@ -302,7 +302,7 @@ IF = {
 		retire_character = IRQ_bakr_sidqi
 		add_ideas = IRQ_regent_idea
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dlc = "Graveyard of Empires" }
 		}
@@ -385,7 +385,7 @@ set_popularities = {
 		fascism = 30
 		neutrality = 70
 	}
-	IF = {
+	if = {
 		limit = { 
 			NOT = { 
 				has_dlc = "Graveyard of Empires" 

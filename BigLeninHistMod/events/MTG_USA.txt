@@ -64,8 +64,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_union_representation_act
-						has_completed_focus = USA_democratic_socialism
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = mtg_usa_civil_war_fascists.4 days = 15 }
@@ -398,7 +398,7 @@ country_event = {
 			if = {
 				limit = {
 					not = {
-						has_completed_focus = USA_guarantee_the_american_dream
+						always = no
 					}
 				}
 				country_event = mtg_usa_civil_war_fascists.22 #forms neutral bloc
@@ -496,7 +496,6 @@ country_event = {
 					division_template = {
 						name = "National Guard"
 						priority = 2
-						division_names_group = CSA_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -626,9 +625,9 @@ country_event = {
 					limit = {
 						OR = {
 							has_government = fascism
-							has_completed_focus = ENG_organize_the_blackshirts
-							has_completed_focus = FRA_right_wing_rhetoric
-							has_completed_focus = FRA_utilize_the_leagues
+							always = no
+							always = no
+							always = no
 						}
 						is_major = yes
 						has_war = no
@@ -654,9 +653,9 @@ country_event = {
 						has_government = democratic
 						not = {
 							OR = {
-								has_completed_focus = ENG_organize_the_blackshirts
-								has_completed_focus = FRA_right_wing_rhetoric
-								has_completed_focus = FRA_utilize_the_leagues
+								always = no
+								always = no
+								always = no
 							}
 						}
 						is_major = yes
@@ -898,7 +897,6 @@ state_event = {
 					name = "Local Volunteers"
 					priority = 0
 					is_locked = yes
-					division_names_group = CSA_INF_01
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -1096,8 +1094,8 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_ally_with_the_silver_shirts
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = mtg_usa_civil_war_democrats.20 days = 280 }
@@ -1110,7 +1108,7 @@ country_event = {
 			country_event = { id = mtg_usa_civil_war_democrats.3 days = 15 random_days = 6 }
 			if = {
 				limit = {
-					has_completed_focus = USA_national_prosperity_program
+					always = no
 				}
 				country_event = { id = mtg_usa_civil_war_democrats.4 days = 15 random_days = 12 }
 			}
@@ -1468,7 +1466,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = USA_recruit_the_free_corps
+					always = no
 				}
 				set_country_flag = USA_free_corps_raised
 				division_template = {
@@ -1756,7 +1754,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = USA_work_with_the_bund
+					always = no
 				}
 				country_event = mtg_usa_civil_war_democrats.22
 				every_owned_state = {
@@ -1793,7 +1791,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = USA_work_with_the_bund
+				always = no
 			}
 			create_corps_commander = {
 				name = "Fritz Kuhn"
@@ -2449,7 +2447,7 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			has_completed_focus = USA_send_lindbergh_to_germany
+			always = no
 		}
 		ai_chance = {
 			factor = 30
@@ -4547,7 +4545,7 @@ country_event = {
 		if = {
 			limit = {
 				not = {
-					has_completed_focus = USA_limited_intervention
+					always = no
 				}
 			}
 			add_war_support = -0.05

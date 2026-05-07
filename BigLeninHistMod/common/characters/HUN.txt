@@ -110,7 +110,7 @@ characters = {
 				visible = {
 					OR = {
 						has_completed_focus = wuw_HUN_strengthen_horthys_reign
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}		
 			}
@@ -257,8 +257,8 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
-					has_completed_focus = wuw_HUN_the_old_habsburg_king
+					always = no
+					always = no
 				}
 			}
 		}
@@ -296,8 +296,8 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
+						always = no
+						always = no
 						has_completed_focus = wuw_HUN_undermine_the_admiral
 					}
 				}
@@ -1342,8 +1342,8 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
-					has_completed_focus = wuw_HUN_the_old_habsburg_king
+					always = no
+					always = no
 				}
 			}
 		}
@@ -1374,8 +1374,8 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_reenlist_the_sich_riflemen
-					has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
+					always = no
+					always = no
 				}
 			}
 		}
@@ -1404,7 +1404,7 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
+					always = no
 				}
 			}
 		}
@@ -1433,7 +1433,7 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
+					always = no
 				}
 			}
 		}
@@ -2360,7 +2360,7 @@ characters = {
 					OR = {
 						has_completed_focus = wuw_HUN_integrate_the_volksbund
 						has_completed_focus = wuw_HUN_invite_german_investors
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+						always = no
 					}
 				}
 			}
@@ -2455,7 +2455,7 @@ characters = {
 							ruling_only = yes
 							character = HUN_franz_anton_bach
 						}	
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+						always = no
 					}
 				}
 			}
@@ -2728,7 +2728,7 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
+						always = no
 					}
 				}
 				NOT = {
@@ -2737,7 +2737,7 @@ characters = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
@@ -2745,11 +2745,11 @@ characters = {
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}
-					has_completed_focus = wuw_HUN_end_the_regency
+					always = no
 				}
 			}
 
@@ -2828,8 +2828,8 @@ characters = {
 				visible = {
 					NOT = {
 						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_end_the_white_terror
+							always = no
+							always = no
 							has_completed_focus = wuw_HUN_undermine_the_admiral
 						}
 					}
@@ -2881,15 +2881,15 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_elect_a_fascist_king
+						always = no
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
+						always = no
 					}
 				}
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
@@ -2902,12 +2902,12 @@ characters = {
 						has_dlc = "Gotterdammerung"
 					}
 					OR = {
-						has_completed_focus = wuw_HUN_elect_a_democratic_king
-						has_completed_focus = wuw_HUN_elections_in_the_revolutionary_council
+						always = no
+						always = no
 					}
 				}
 				else = {
-					has_completed_focus = HUN_elect_a_democratic_king
+					always = no
 				}
 			}
 
@@ -2949,7 +2949,7 @@ characters = {
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}
@@ -3006,14 +3006,14 @@ characters = {
 				visible = {
 					NOT = {
 						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
+							always = no
 							has_completed_focus = wuw_HUN_continue_the_regency
 						}
 					}
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}
@@ -3021,7 +3021,7 @@ characters = {
 							has_autonomy_state = autonomy_supervised_state
 						}
 					}
-					has_completed_focus = wuw_HUN_elections_in_the_revolutionary_council
+					always = no
 				}
 
 				traits = {
@@ -3245,17 +3245,17 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_establish_the_second_republic
+						always = no
+						always = no
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}
 			}
 
 			available = {
 				has_government = communism 
-				has_completed_focus = wuw_HUN_join_the_comintern
+				always = no
 			}
 
 			traits = {
@@ -3293,8 +3293,8 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_join_the_comintern
+						always = no
+						always = no
 					}
 				}
 			}
@@ -3382,8 +3382,8 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
+						always = no
+						always = no
 						has_completed_focus = wuw_HUN_undermine_the_admiral
 					}
 				}
@@ -3509,7 +3509,7 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}
 			}
@@ -3554,7 +3554,7 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}
 			}
@@ -3643,8 +3643,8 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_join_the_comintern
+						always = no
+						always = no
 					}
 				}
 			}
@@ -3692,7 +3692,7 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}
 			}
@@ -3818,17 +3818,17 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_establish_the_second_republic
+						always = no
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
+						always = no
 					}
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = wuw_HUN_goulash_communism
-					has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
+					always = no
+					always = no
 				}
 				has_government = communism
 			}
@@ -3867,13 +3867,13 @@ characters = {
 
 			visible = {
 				NOT = {
-					has_completed_focus = wuw_HUN_end_the_white_terror
+					always = no
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = wuw_HUN_end_the_regency
+					always = no
 					has_completed_focus = wuw_HUN_continue_the_regency
 				}
 			}
@@ -3913,15 +3913,15 @@ characters = {
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
-						has_completed_focus = wuw_HUN_end_the_white_terror
+						always = no
+						always = no
 						has_completed_focus = wuw_HUN_continue_the_regency
 					}
 				}
 			}
 
 			available = {
-				has_completed_focus = wuw_HUN_a_responsible_government
+				always = no
 				OR = {
 					has_government = democratic
 					has_government = neutrality
@@ -3967,7 +3967,7 @@ characters = {
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}
@@ -4156,8 +4156,8 @@ characters = {
 			visible = {
 				owner = {
 					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
+						always = no
+						always = no
 					}
 				}
 			}
@@ -4181,8 +4181,8 @@ characters = {
 			visible = {
 				owner = {
 					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
+						always = no
+						always = no
 					}
 				}
 			}
@@ -4206,8 +4206,8 @@ characters = {
 			visible = {
 				owner = {
 					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
+						always = no
+						always = no
 					}
 				}
 			}

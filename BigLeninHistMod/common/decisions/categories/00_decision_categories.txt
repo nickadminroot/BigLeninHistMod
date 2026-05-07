@@ -178,13 +178,13 @@ fascism_on_the_rise = {
 			AND = {
 				original_tag = FIN
 				is_ai = yes
-				EST = { has_completed_focus = EST_national_pride_in_finland }
+				EST = { always = no }
 			}
 		}
 		NOT = {
 			AND = {
 				has_dlc = "La Resistance"
-				POR = { has_completed_focus = POR_the_empire_of_brazil }
+				POR = { always = no }
 				tag = BRA
 				has_government = neutrality
 				has_civil_war = yes
@@ -375,7 +375,7 @@ governments_in_exile = {
 
 	visible = {
 		NOT = {
-			has_completed_focus = NOR_the_kings_no 
+			always = no 
 		}
 	}
 

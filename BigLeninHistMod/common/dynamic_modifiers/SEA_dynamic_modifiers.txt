@@ -914,7 +914,7 @@ CHI_gung_ho_idea = {
 	icon = GFX_idea_CHI_initiate_gung_ho_movement
 	enable = {
 		has_war = yes 
-		has_completed_focus = CHI_initiate_the_gung_ho_movement
+		always = no
 	}
 
 	war_support_factor = CHI_gung_ho_idea_war_support_factor 

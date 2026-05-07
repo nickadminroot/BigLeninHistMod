@@ -1246,8 +1246,8 @@ news_event = {
 				AND = {
 					tag = GER
 					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1272,8 +1272,8 @@ news_event = {
 					AND = {
 						tag = GER
 						OR = {
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							always = no
+							always = no
 						}
 					}
 					tag = ITA

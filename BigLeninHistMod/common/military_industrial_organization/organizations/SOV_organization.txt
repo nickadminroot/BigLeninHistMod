@@ -99,7 +99,7 @@ SOV_morozov_design_bureau_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
@@ -113,17 +113,17 @@ SOV_morozov_design_bureau_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_comitern
+				always = no
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { tag = MEX }
 			}
 			FROM = { is_in_faction_with = SOV }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				hidden_trigger = {
 					NOT = { has_dlc = "No Compromise, No Surrender" }
@@ -135,9 +135,9 @@ SOV_morozov_design_bureau_organization = {
 					}
 				} 
 			}
-			FROM = { has_completed_focus = CHI_hire_soviet_designer }
+			FROM = { always = no }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				hidden_trigger = {
 					has_dlc = "No Compromise, No Surrender"
@@ -152,11 +152,11 @@ SOV_morozov_design_bureau_organization = {
 			FROM = {
 				OR = {
 					has_country_flag = SOV_accepted_Morozov
-					has_completed_focus = CHI_sea_hire_soviet_designer
+					always = no
 				}
 			} 
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				hidden_trigger = {
 					has_dlc = "No Compromise, No Surrender"
@@ -192,23 +192,23 @@ SOV_morozov_design_bureau_organization = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+			FROM = { always = no }
 		}
 	}
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				FROM = { original_tag = CHI }
 			}
 			FROM = { 
 				OR ={
-					has_completed_focus = CHI_utilize_the_albazinian_contact
-					has_completed_focus = CHI_secure_the_soviet_border
+					always = no
+					always = no
 				} 
 				NOT = {
 					has_country_flag = SOV_accepted_Astrov
@@ -344,14 +344,14 @@ SOV_astrov_design_bureau_organization = {
 		}	
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = CHI }
 			}
@@ -359,15 +359,15 @@ SOV_astrov_design_bureau_organization = {
 		}
 	}
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				FROM = { original_tag = CHI }
 			}
 			FROM = { 
 				OR ={
-					has_completed_focus = CHI_utilize_the_albazinian_contact
-					has_completed_focus = CHI_secure_the_soviet_border
+					always = no
+					always = no
 				} 
 				NOT = {
 					has_country_flag = SOV_accepted_Morozov
@@ -509,14 +509,14 @@ SOV_okmo_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -533,7 +533,7 @@ SOV_okmo_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = CHI }
 			}
@@ -541,15 +541,15 @@ SOV_okmo_organization = {
 		}
 	}
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				FROM = { original_tag = CHI }
 			}
 			FROM = { 
 				OR ={
-					has_completed_focus = CHI_utilize_the_albazinian_contact
-					has_completed_focus = CHI_secure_the_soviet_border
+					always = no
+					always = no
 				} 
 				NOT = {
 					has_country_flag = SOV_accepted_Morozov
@@ -691,15 +691,15 @@ SOV_mytishchy_machine_building_plant_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
+			FROM = { always = no }
 		}
 	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
@@ -834,21 +834,21 @@ SOV_kirov_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				FROM = { 
 					original_tag = BEL 
 				} 
 			}
 
-			FROM = { has_completed_focus = BEL_invite_soviet_tank_makers }
+			FROM = { always = no }
 		}
 	}
 
@@ -998,14 +998,14 @@ SOV_nevskoye_design_bureau_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -1168,40 +1168,40 @@ SOV_rubin_design_bureau_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+			FROM = { always = no }
 		}
 	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+			FROM = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ARG }
 			}
-			FROM = { has_completed_focus = ARG_russian_manufacturers }
+			FROM = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = BRA }
 			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
+			FROM = { always = no }
 		}
 	}
 
@@ -1743,11 +1743,11 @@ SOV_mig_design_bureau_organization = {
 	}
 	
 	visible = {
-		IF = { 
+		if = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+			FROM = { always = no }
 		}
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = BRA }
 				has_dlc = "Trial of Allegiance"
@@ -1756,30 +1756,30 @@ SOV_mig_design_bureau_organization = {
 	}
 
 	available = {
-		IF = { #Dissolve Bureau Purge
+		if = { #Dissolve Bureau Purge
 			limit = {
 				FROM = { original_tag = SOV }
 			}
 			FROM = { NOT = { has_country_flag = SOV_mig_design_bureau_dissolved_flag } }
 		}
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ARG }
 			}
-			FROM = { has_completed_focus = ARG_russian_manufacturers }
+			FROM = { always = no }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = BRA }
 			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
+			FROM = { always = no }
 		}
 	}
 
@@ -1923,21 +1923,21 @@ SOV_ilyushin_design_bureau_organization = {
 	}
 	
 	available = {
-		IF = { #Dissolve Bureau Purge
+		if = { #Dissolve Bureau Purge
 			limit = {
 				FROM = { original_tag = SOV }
 			}
 			FROM = { NOT = { has_country_flag = SOV_ilyushin_design_bureau_dissolved_flag } }
 		}
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -2090,7 +2090,7 @@ SOV_yakovlev_design_bureau_organization = {
 	}
 
 	available = {
-		IF = { #Dissolve Bureau Purge
+		if = { #Dissolve Bureau Purge
 			limit = {
 				FROM = { original_tag = SOV }
 			}
@@ -2231,7 +2231,7 @@ SOV_tupolev_design_bureau_organization = {
 	}
 
 	available = {
-		IF = { #Dissolve Bureau Purge
+		if = { #Dissolve Bureau Purge
 			limit = {
 				FROM = { original_tag = SOV }
 			}
@@ -2459,17 +2459,17 @@ SOV_grabin_design_bureau_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = GRE } }
 			FROM = {
-				has_completed_focus = GRE_appeal_to_the_soviet_union 
+				always = no 
 			}
 		}
 	}
@@ -2750,22 +2750,22 @@ SOV_gaz_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_soviet-ethiopian_trade_agreement }
+			FROM = { always = no }
 		}
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -2782,31 +2782,31 @@ SOV_gaz_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
+			FROM = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ARG }
 			}
-			FROM = { has_completed_focus = ARG_russian_manufacturers }
+			FROM = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = BRA }
 			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
+			FROM = { always = no }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = AFG }
 			}
-			FROM = { has_completed_focus = AFG_truck_factory }
+			FROM = { always = no }
 		}
 	}
 

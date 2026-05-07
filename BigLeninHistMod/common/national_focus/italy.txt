@@ -5018,7 +5018,7 @@ focus_tree = {
 
 			custom_effect_tooltip = ITA_citta_dell_aria_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						2 = {
 							is_fully_controlled_by = ROOT
@@ -7138,14 +7138,14 @@ focus_tree = {
 		relative_position_id = ITA_incrociatori_leggeri
 		cost = 5
 		available = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				has_tech = improved_depth_charges
 				has_tech = sonar
 			}
-			ELSE = {
+			else = {
 				has_tech = basic_destroyer
 			}
 		}
@@ -8940,7 +8940,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = { 
-			IF = {
+			if = {
 				limit = { has_dlc = "La Resistance" }
 				swap_ideas = {
 					remove_idea = ITA_servizio_informazione_militare_ns
@@ -8948,7 +8948,7 @@ focus_tree = {
 				}
 				ITA_create_padre_ildefonso_operative = yes
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "La Resistance"
@@ -9533,7 +9533,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -10577,7 +10577,7 @@ focus_tree = {
 		completion_reward = {
 
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					is_in_faction = no  
@@ -10585,7 +10585,7 @@ focus_tree = {
 				custom_effect_tooltip = add_faction_goal_secure_north_africa_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					is_in_faction = yes 

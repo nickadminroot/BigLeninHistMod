@@ -82,12 +82,12 @@ if = {
 }
 
 set_research_slots = 4
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
 	set_stability = 0.45 # Was 0.5, but they now get +5% from the Eiffel Tower
-	ELSE = {
+	else = {
 		set_stability = 0.5
 	}
 }
@@ -292,7 +292,7 @@ if = {
 		}
 	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Gotterdammerung"
 		}

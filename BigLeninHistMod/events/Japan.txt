@@ -18,10 +18,10 @@ country_event = {
 
 		add_war_support = 0.05
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
+					always = no
 				}
 			}
 			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
@@ -29,7 +29,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				CHI = {
 					exists = yes
@@ -40,10 +40,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					CHI = {
@@ -55,13 +55,13 @@ country_event = {
 				target = CHI
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -73,7 +73,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -90,7 +90,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				SHX = {
 					exists = yes
@@ -101,10 +101,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					SHX = {
@@ -116,13 +116,13 @@ country_event = {
 				target = SHX
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -134,7 +134,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -151,7 +151,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				SND = {
 					exists = yes
@@ -162,10 +162,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					SND = {
@@ -177,13 +177,13 @@ country_event = {
 				target = SND
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -195,7 +195,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -212,7 +212,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				HBC = {
 					exists = yes
@@ -223,10 +223,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					HBC = {
@@ -238,13 +238,13 @@ country_event = {
 				target = HBC
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -256,7 +256,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -273,7 +273,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				XIC = {
 					exists = yes
@@ -285,10 +285,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					XIC = {
@@ -300,13 +300,13 @@ country_event = {
 				target = XIC
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -318,7 +318,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -335,10 +335,10 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
+					always = no
 				}
 			}
 			
@@ -355,7 +355,7 @@ country_event = {
 
 		USA = { set_country_flag = { flag = USA_china_window days = 60 value = 1 } }
 
-		IF = {
+		if = {
 			limit = {
 				has_country_leader = { id = 700 ruling_only = yes }
 			}
@@ -386,7 +386,7 @@ country_event = {
 		}
 
 		#HBC STATES
-		IF = {
+		if = {
 			limit = {
 				608 = {
 					is_controlled_by = FROM
@@ -396,7 +396,7 @@ country_event = {
 				transfer_state = 608
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				608 = {
 					OWNER = {
@@ -416,11 +416,11 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			608 = { add_claim_by = ROOT }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				614 = {
 					is_controlled_by = FROM
@@ -430,7 +430,7 @@ country_event = {
 				transfer_state = 614
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				614 = {
 					OWNER = {
@@ -466,11 +466,11 @@ country_event = {
 
 			}
 		}
-		ELSE = {
+		else = {
 			614 = { add_claim_by = ROOT }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				1039 = {
 					is_controlled_by = FROM
@@ -481,7 +481,7 @@ country_event = {
 				transfer_state = 1039
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				1039 = {
 					is_controlled_by = FROM
@@ -492,7 +492,7 @@ country_event = {
 			}
 			transfer_state = 1039
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				1039 = {
 					OWNER = {
@@ -530,7 +530,7 @@ country_event = {
 
 		#### SND STATES
 
-		IF = {
+		if = {
 			limit = {
 				597 = {
 					is_controlled_by = FROM
@@ -540,7 +540,7 @@ country_event = {
 				transfer_state = 597
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				597 = {
 					OWNER = {
@@ -559,11 +559,11 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			597 = { add_claim_by = ROOT }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				1038 = {
 					is_controlled_by = FROM
@@ -573,7 +573,7 @@ country_event = {
 				transfer_state = 1038
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				1038 = {
 					OWNER = {
@@ -613,12 +613,12 @@ country_event = {
 			}
 
 		}
-		ELSE = {
+		else = {
 			1038 = { add_claim_by = ROOT }
 		}
 
 		#SHANDONG
-		IF = {
+		if = {
 			limit = {
 				743 = {
 					is_controlled_by = FROM
@@ -628,7 +628,7 @@ country_event = {
 				transfer_state = 743
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				743 = {
 					OWNER = {
@@ -647,7 +647,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			743 = { add_claim_by = ROOT }
 		}
 
@@ -692,7 +692,7 @@ country_event = {
 
 		add_state_claim = 613
 
-		IF = {
+		if = {
 			limit = {
 				has_country_leader = { id = 700 ruling_only = yes }
 			}
@@ -850,7 +850,7 @@ country_event = {
 			news_event = { days = 5 id = news.5 }
 		}
 		JAP = {
-			IF = {
+			if = {
 				limit = {
 					286 = {
 						CONTROLLER = {
@@ -864,7 +864,7 @@ country_event = {
 				}
 				transfer_state = 286
 			}
-			IF = {
+			if = {
 				limit = {
 					670 = {
 						CONTROLLER = {
@@ -878,7 +878,7 @@ country_event = {
 				}
 				transfer_state = 670
 			}
-			IF = {
+			if = {
 				limit = {
 					671 = {
 						CONTROLLER = {
@@ -892,7 +892,7 @@ country_event = {
 				}
 				transfer_state = 671
 			}
-			IF = {
+			if = {
 				limit = {
 					741 = {
 						CONTROLLER = {
@@ -906,7 +906,7 @@ country_event = {
 				}
 				transfer_state = 741
 			}
-			IF = {
+			if = {
 				limit = {
 					728 = {
 						CONTROLLER = {
@@ -920,7 +920,7 @@ country_event = {
 				}
 				transfer_state = 728
 			}
-			IF = {
+			if = {
 				limit = {
 					1017 = {
 						CONTROLLER = {

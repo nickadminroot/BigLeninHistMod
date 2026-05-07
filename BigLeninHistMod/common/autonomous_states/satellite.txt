@@ -60,28 +60,28 @@ autonomy_state = {
 	
 	can_take_level = {
 		#trigger here
-		IF = {
+		if = {
 			limit = {
 				original_tag = COG
 				has_dlc = "Gotterdammerung"			
 			}
-			has_completed_focus = CONGO_republic_of_congo
+			always = no
 			NOT = {
-				has_completed_focus = CONGO_dominion_of_congo
+				always = no
 			}
 		}
 	}
 
 	can_lose_level = {
 		#trigger here
-		IF = {
+		if = {
 			limit = {
 				OVERLORD = { original_tag = BEL } 
 				original_tag = COG
 				has_dlc = "Gotterdammerung"			
 			}
 			NOT = {
-				has_completed_focus = CONGO_dominion_of_congo
+				always = no
 			}
 		}
 	}

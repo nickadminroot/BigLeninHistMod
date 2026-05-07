@@ -16,7 +16,7 @@ if = {
 
 # Starting tech
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Graveyard of Empires"
 	}
@@ -31,7 +31,7 @@ IF = {
 		tech_engineers = 1
 	}
 
-	ELSE = {
+	else = {
 		set_technology = {
 			infantry_weapons = 1
 			infantry_weapons1 = 1
@@ -134,7 +134,7 @@ set_variable = { PER_technological_modifier_production_cost_land_facility_factor
 set_variable = { PER_technological_modifier_production_cost_naval_facility_factor = 0 }
 set_variable = { PER_technological_modifier_production_cost_nuclear_facility_factor = 0 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Graveyard of Empires"
 	}
@@ -192,7 +192,7 @@ IF = {
 	recruit_character = PER_kazem_hasibi
 	recruit_character = PER_ahmad_zirakzadeh
 
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			NOT = {
 				has_dlc = "Graveyard of Empires"
@@ -228,7 +228,7 @@ IF = {
 	add_political_power = 1198
 	add_command_power = 100
 	
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Graveyard of Empires"
 		}
@@ -272,7 +272,7 @@ IF = {
 
 		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
 
-		ELSE = {
+		else = {
 			#generic focuses
 			complete_national_focus = army_effort
 			complete_national_focus = equipment_effort

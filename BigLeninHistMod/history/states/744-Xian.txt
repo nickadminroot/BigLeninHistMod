@@ -12,7 +12,7 @@ state = {
 		add_core_of = CHI
 		
 		1938.10.25 = {
-		IF = {
+		if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender" 
 				}

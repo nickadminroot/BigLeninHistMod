@@ -42,7 +42,7 @@ if = {
 	}
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
 	}
@@ -300,7 +300,7 @@ if = {
 		state = 386
 	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Gotterdammerung"
 		}

@@ -242,7 +242,7 @@ defined_text = {
 	name = GetRailwayGunsTooltip
 	text = {
 		trigger = {
-			has_completed_focus = ITA_mobilize_the_railway_guns #Focus grants bonuses
+			always = no #Focus grants bonuses
 		}
 		localization_key = ITA_mobilize_the_railway_guns_dynamic_modifier_tt
 	}
@@ -255,7 +255,7 @@ defined_text = {
 	name = GetSuperHeavyAircraftTooltip
 	text = {
 		trigger = {
-			has_completed_focus = ITA_the_king_of_the_skies #Focus grants bonuses
+			always = no #Focus grants bonuses
 		}
 		localization_key = ITA_the_king_of_the_skies_dynamic_modifier_tt
 	}
@@ -269,8 +269,8 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_modern_musculus #Focus grants bonuses
-				has_completed_focus = ITA_a_time_for_war #Focus grants bonuses
+				always = no #Focus grants bonuses
+				always = no #Focus grants bonuses
 			}
 		}
 		localization_key = ITA_modern_musculus_dynamic_modifier_tt
@@ -284,7 +284,7 @@ defined_text = {
 	name = GetSuperHeavyShipsTooltip
 	text = {
 		trigger = {
-			has_completed_focus = ITA_caligulas_pride #Focus grants bonuses
+			always = no #Focus grants bonuses
 		}
 		localization_key = ITA_caligulas_pride_dynamic_modifier_tt
 	}
@@ -762,7 +762,7 @@ defined_text = { #Titles Vittorio Emanuele III Dies
 	name = GetVittorioDiesEventTitles
 	text = { #Emperor Title
 		trigger = { 
-			has_completed_focus = ITA_proclaim_the_italian_empire
+			always = no
 		}
 		localization_key = bba_news.106.t_emperor
 	}
@@ -775,7 +775,7 @@ defined_text = { #Desc Vittorio Emanuele III Dies
 	name = GetVittorioDiesEventDesc
 	text = { #Emperor Desc
 		trigger = { 
-			has_completed_focus = ITA_proclaim_the_italian_empire
+			always = no
 		}
 		localization_key = bba_news.106.desc_emperor
 	}
@@ -814,7 +814,7 @@ defined_text = { #Litoranea Balbo name based on political path
 	name = GetAppropriateLitoraneaBalboName
 	text = {
 		trigger = { 
-			has_completed_focus = ITA_defy_the_duce
+			always = no
 		}
 		localization_key = ITA_litoranea_balbo_alt
 	}
@@ -827,7 +827,7 @@ defined_text = { #Moschettieri del Duce name based on political path
 	name = GetAppropriateMoschetieridelDuceName
 	text = { # Anti-Fascist
 		trigger = { 
-			has_completed_focus = ITA_defy_the_duce
+			always = no
 		}
 		localization_key = ITA_moschettieri_del_duce_alt
 	}
@@ -842,7 +842,7 @@ defined_text = { #Moschettieri del Duce name based on political path
 	}
 	text = { # King
 		trigger = { 
-			has_completed_focus = ITA_monarchia_d_italia
+			always = no
 			NOT = {
 				has_government = fascism
 				has_government = communism
@@ -859,7 +859,7 @@ defined_text = { #Moschettieri del Duce desc based on political path
 	name = GetAppropriateMoschetieridelDuceDesc
 	text = { # Anti-Fascist
 		trigger = { 
-			has_completed_focus = ITA_defy_the_duce
+			always = no
 		}
 		localization_key = ITA_moschettieri_del_duce_desc_alt
 	}
@@ -874,7 +874,7 @@ defined_text = { #Moschettieri del Duce desc based on political path
 	}
 	text = { # King
 		trigger = { 
-			has_completed_focus = ITA_monarchia_d_italia
+			always = no
 			NOT = {
 				has_government = fascism
 				has_government = communism
@@ -891,7 +891,7 @@ defined_text = { #Albanian Fascist Militia name based on political path
 	name = GetAppropriateAlbanianFascistMilitiaName
 	text = { # King
 		trigger = { 
-			has_completed_focus = ITA_monarchia_d_italia
+			always = no
 		}
 		localization_key = ITA_albanian_fascist_militia_alt
 	}

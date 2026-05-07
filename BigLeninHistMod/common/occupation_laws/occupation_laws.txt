@@ -523,8 +523,8 @@ reconciliation = {
 		original_tag = TUR
 		has_dlc = "Battle for the Bosporus"
 		OR = {
-			has_completed_focus = TUR_a_common_destiny_for_all_of_turkey
-			has_completed_focus = TUR_permit_regional_elections
+			always = no
+			always = no
 		}
 		FROM = { original_tag = KUR }
 	}
@@ -566,7 +566,7 @@ colonial_police = {
 			}
 			AND = {
 				original_tag = BEL
-				has_completed_focus = CONGO_force_publique
+				always = no
 				FROM = { capital_scope = { is_on_continent = africa } }
 			}
 		}
@@ -717,7 +717,7 @@ secretaries_general = {
 	visible = {
 		has_dlc = "Gotterdammerung"
 		BEL = {
-			has_completed_focus = BEL_secretaries_general
+			always = no
 		}
 		FROM = { original_tag = BEL }
 		NOT = {
@@ -896,7 +896,7 @@ senbu_occupation_law = {
 				}
 				AND = {
 					has_dlc = "No Compromise, No Surrender"
-					has_completed_focus = CHI_tsr_the_reorganied_government
+					always = no
 				}
 			}
 			

@@ -13,7 +13,7 @@ set_technology = {
 	basic_train = 1
 }
 
-IF = {
+if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }
 	}
@@ -98,7 +98,7 @@ set_grand_doctrine = new_strategic_destruction
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dlc = "By Blood Alone" }
 		}

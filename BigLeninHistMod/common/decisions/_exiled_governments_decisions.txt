@@ -125,7 +125,7 @@ governments_in_exile = {
 
 		days_remove = 120
 		remove_effect = {
-			IF = {
+			if = {
 				limit = {
 					tag = ETH
 				}

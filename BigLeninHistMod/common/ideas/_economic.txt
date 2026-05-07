@@ -31,17 +31,17 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				IF = {
+				if = {
 					limit = {
 						original_tag = USA
 					}
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
-				ELSE = {
+				else = {
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
@@ -77,17 +77,17 @@ ideas = {
 				factory_energy_consumption = -0.3
 			}
 			allowed_to_remove = {
-				IF = {
+				if = {
 					limit = {
 						original_tag = USA
 					}
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
-				ELSE = {
+				else = {
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
@@ -125,7 +125,7 @@ ideas = {
 			available = {
 				has_war_support > 0.15
 				
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -133,22 +133,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -165,7 +165,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -182,7 +182,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.3
@@ -194,9 +194,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -220,7 +220,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -266,7 +266,7 @@ ideas = {
 			available = {
 				has_war_support > 0.25
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -274,28 +274,28 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						OR = {
-							has_completed_focus = HUN_secret_rearmament
+							always = no
 							NOT = { has_idea = HUN_treaty_of_triannon_aat }
 						}
 					}
-					ELSE = {
+					else = {
 						OR = {
-							has_completed_focus = HUN_secret_rearmament
+							always = no
 							NOT = { has_idea = HUN_treaty_of_triannon }
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -304,7 +304,7 @@ ideas = {
 							NOT = { has_idea = HUN_treaty_of_triannon_aat_wuw }
 						}
 					}
-					ELSE = {
+					else = {
 						OR = {
 							has_completed_focus = wuw_HUN_secret_rearmament
 							NOT = { has_idea = HUN_treaty_of_triannon_wuw }
@@ -314,7 +314,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.5
@@ -326,9 +326,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_3
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -365,7 +365,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -412,7 +412,7 @@ ideas = {
 					NOT = {
 						has_idea = war_economy
 					}
-					has_completed_focus = GUAY_coup_detat
+					always = no
 				}
    			}
 		}
@@ -437,7 +437,7 @@ ideas = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -445,22 +445,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -477,7 +477,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -494,7 +494,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.75
@@ -506,9 +506,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -545,7 +545,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -620,7 +620,7 @@ ideas = {
 					}
 					NOT = { 
 						has_completed_focus = JAP_sea_national_defense_state 
-						has_completed_focus = JAP_prepare_for_the_final_war 
+						always = no 
 					}
 				}
 			}
@@ -635,7 +635,7 @@ ideas = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -643,22 +643,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -675,7 +675,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -692,7 +692,7 @@ ideas = {
 				
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.9
@@ -704,9 +704,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -730,7 +730,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -845,14 +845,14 @@ ideas = {
 			visible = {
 				original_tag = JAP
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 				OR = {
@@ -1038,8 +1038,8 @@ ideas = {
 			allowed_to_remove = {
 				OR = {
 					has_war = yes
-					has_completed_focus = POL_integrate_gdansk_industries
-					has_completed_focus = POL_expand_gdynia_seaport
+					always = no
+					always = no
 					NOT = {
 						owns_state = 85
 						owns_state = 807
@@ -1102,7 +1102,7 @@ ideas = {
 						original_tag = PRC
 						has_dlc = "No Compromise, No Surrender"
 					}
-					NOT = { has_completed_focus = PRC_promote_paper_bills }
+					NOT = { always = no }
 				}
 			}
 
@@ -1187,7 +1187,7 @@ ideas = {
 						original_tag = PRC
 						has_dlc = "No Compromise, No Surrender"
 					}
-					NOT = { has_completed_focus = PRC_promote_paper_bills }
+					NOT = { always = no }
 				}
 			}
 
@@ -1446,7 +1446,7 @@ ideas = {
 
 				has_war = yes
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							original_tag = JAP
@@ -1457,7 +1457,7 @@ ideas = {
 						has_government = communism
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = JAP
 					}
@@ -1474,20 +1474,20 @@ ideas = {
 				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
-					IF = {
+					if = {
 						limit = {
 							original_tag = GER
 						}
 						has_idea = totaler_krieg_economy
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = {
 							original_tag = JAP
 						}
 						#has_completed_focus = JAP_sea_state_general_mobilization_law
 						has_idea = national_defense_state
 					}
-					ELSE = {
+					else = {
 						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
 					}
 				}
@@ -1496,7 +1496,7 @@ ideas = {
 					NOT = { has_opinion_modifier = MR_pact }
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = CHI
 						has_dlc = "Waking the Tiger"
@@ -1567,7 +1567,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = RAJ
-				has_completed_focus = RAJ_special_economic_zones
+				always = no
 			}
 			available = {
 

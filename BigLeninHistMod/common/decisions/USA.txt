@@ -79,7 +79,7 @@ war_measures = {
 		}
 
 		available = {
-			has_completed_focus = USA_ally_with_the_silver_shirts
+			always = no
 		}
 		visible = {
 			has_civil_war = yes
@@ -152,7 +152,7 @@ war_measures = {
 			}
 		}
 		visible = {
-			has_completed_focus = USA_recruit_the_free_corps
+			always = no
 			not = { has_country_flag = USA_free_corps_raised }
 			not = { has_government = democratic }
 		}
@@ -1052,7 +1052,7 @@ foreign_support = {
 				has_global_flag = USA_support_the_anti_fascist_war_flag
 			}
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_war_with = JAP
 			}
 		}
@@ -1062,14 +1062,14 @@ foreign_support = {
 
 		target_root_trigger = {
 			OR = {
-				has_completed_focus = USA_limited_intervention
+				always = no
 				has_completed_focus = USA_lend_lease_act
 			}
 		}
 
 		target_trigger = {
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_war_with = JAP
 			}
 		}
@@ -1077,7 +1077,7 @@ foreign_support = {
 		visible = {
 			has_government = democratic
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_war_with = JAP
 			}
 		}
@@ -1088,7 +1088,7 @@ foreign_support = {
 			modifier = {
 				factor = 3
 				any_other_country = {
-					has_completed_focus = CHI_mission_to_the_us
+					always = no
 					has_idea = CHI_soong_mei_ling
 					surrender_progress > 0.2
 					has_defensive_war = yes
@@ -1143,7 +1143,7 @@ foreign_support = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_idea = CHI_soong_mei_ling
 				has_war_with = JAP
 			}
@@ -1154,7 +1154,7 @@ foreign_support = {
 
 		target_trigger = {
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_idea = CHI_soong_mei_ling
 				has_war_with = JAP
 			}
@@ -1163,7 +1163,7 @@ foreign_support = {
 		visible = {
 			has_government = democratic
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				always = no
 				has_idea = CHI_soong_mei_ling
 				has_war_with = JAP
 			}
@@ -1175,7 +1175,7 @@ foreign_support = {
 			modifier = {
 				factor = 3
 				FROM = {
-					has_completed_focus = CHI_mission_to_the_us
+					always = no
 					has_idea = CHI_soong_mei_ling
 					surrender_progress > 0.2
 					has_defensive_war = yes
@@ -1216,7 +1216,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1245,7 +1245,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 
 		}
@@ -1275,7 +1275,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1305,7 +1305,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1337,7 +1337,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1549,7 +1549,7 @@ economy_decisions = {
 			}
 		}
 		visible = {
-			has_completed_focus = USA_communal_property_act
+			always = no
 		}
 		cost = 50
 		ai_will_do = {
@@ -1722,7 +1722,7 @@ foreign_politics = {
 				has_war = yes
 				is_in_faction_with = USA
 			}
-			has_completed_focus = USA_unholy_alliance
+			always = no
 		}
 		available = {
 			SOV = {
@@ -1888,7 +1888,7 @@ USA_war_plans = {
 					limit = {
 						is_faction_leader = yes
 						JAP = {
-							IF = {
+							if = {
 								limit = {
 									is_in_faction = no
 								}
@@ -1900,7 +1900,7 @@ USA_war_plans = {
 									value > 19
 								}
 							}
-							ELSE = {
+							else = {
 								collection_size = {
 									input = {
 										input = collection:faction_controlled_non_core_states
@@ -2190,7 +2190,7 @@ USA_intervention_mandate = {
 			not = {
 				has_war_with = FROM
 			}
-			has_completed_focus = USA_focus_on_europe
+			always = no
 		}
 		target_trigger = {
 			FROM = {
@@ -2251,7 +2251,7 @@ USA_intervention_mandate = {
 			not = {
 				has_war_with = FROM
 			}
-			has_completed_focus = USA_focus_on_asia
+			always = no
 		}
 
 		target_trigger = {
@@ -2307,7 +2307,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_anschluss_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = GER
 			}
@@ -2354,7 +2354,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_munich_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = GER
 			}
@@ -2401,7 +2401,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_MR_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = GER
 			}
@@ -2469,7 +2469,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_baltic_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = SOV
 			}
@@ -2522,7 +2522,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_army_of_aggression_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = FRA
 			}
@@ -2575,7 +2575,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_albania_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = ITA
 			}
@@ -2628,7 +2628,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_yugoslavia_window
-			has_completed_focus = USA_focus_on_europe
+			always = no
 			not = {
 				has_war_with = ITA
 			}
@@ -2696,7 +2696,7 @@ USA_intervention_mandate = {
 					}
 				}
 			}
-			has_completed_focus = USA_focus_on_asia
+			always = no
 			not = {
 				has_war_with = JAP
 			}
@@ -2743,7 +2743,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_indochina_window
-			has_completed_focus = USA_focus_on_asia
+			always = no
 			not = {
 				has_war_with = JAP
 			}
@@ -2790,7 +2790,7 @@ USA_intervention_mandate = {
 		}
 		visible = {
 			has_country_flag = USA_panay_window
-			has_completed_focus = USA_focus_on_asia
+			always = no
 			not = {
 				has_war_with = JAP
 			}
@@ -3124,7 +3124,7 @@ operations = {
 			DEN = {
 				is_subject = yes
 			}
-			IF = {
+			if = {
 				limit = {	
 					DEN = {
 						is_subject = yes

@@ -226,8 +226,8 @@ characters={
 					has_government = communism	
 				}		
 				OR = {
-					has_completed_focus = NOR_compromise_with_the_nkp
-					has_completed_focus = NOR_social_incrementalism
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -262,7 +262,7 @@ characters={
 			}
 			available = {
 				NOT = {
-					has_completed_focus = NOR_send_the_king_back_to_denmark
+					always = no
 				}
 			}
 			ai_will_do = {
@@ -318,8 +318,8 @@ characters={
 			
 			visible = {
 				OR = {
-					has_completed_focus = NOR_the_kingdom_of_norway
-					has_completed_focus = NOR_preparing_the_return_to_norway
+					always = no
+					always = no
 				}
 				NOT = {
 					has_global_flag = NOR_the_norwegian_king_is_dead
@@ -408,7 +408,7 @@ characters={
 			}
 			available = {				
 				NOT = {
-					has_completed_focus = NOR_get_rid_of_quisling 
+					always = no 
 					#has_completed_focus = NOR_arrest_quisling
 				}
 				is_country_leader = no
@@ -430,7 +430,7 @@ characters={
 			}
 			available = {
 				has_government = fascism 
-				NOT = { has_completed_focus = NOR_jonas_lie_coup }
+				NOT = { always = no }
 			}
 			traits = {
 				army_chief_reform_1
@@ -505,7 +505,7 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = NOR_squash_dissent
+					always = no
 					has_government = fascism 
 				}
 			}
@@ -519,7 +519,7 @@ characters={
 			}
 			available = {
 				has_government = fascism 
-				NOT = { has_completed_focus = NOR_bring_back_quisling }
+				NOT = { always = no }
 			}
 			traits = {
 				army_chief_drill_2
@@ -588,8 +588,8 @@ characters={
 			available = {
 				has_government = democratic
 				OR = {
-					has_completed_focus = NOR_vote_of_no_confidence
-					has_completed_focus = NOR_continue_nygaardsvold_government
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -651,7 +651,7 @@ characters={
 			allowed  = {
 			}
 			available = {
-				has_completed_focus = NOR_prosecute_the_nkp
+				always = no
 			}
 			traits  = {
 				NOR_radical_trade_unionist
@@ -689,7 +689,7 @@ characters={
 			}
 			available = {
 				has_country_flag = NOR_trotsky_embraced
-				NOT = { has_completed_focus = NOR_compromise_with_the_nkp } 
+				NOT = { always = no } 
 				NOT = { has_government = fascism } 
 				NOT = { has_government = neutrality }
 				NOR_trotsky_not_in_sov = yes 
@@ -701,10 +701,10 @@ characters={
 		}
 		corps_commander={
 			visible = {
-				has_completed_focus = NOR_a_resurgent_labor_movement
+				always = no
 				has_country_flag = NOR_trotsky_embraced
 				NOT = {	
-					has_completed_focus = NOR_compromise_with_the_nkp 
+					always = no 
 				}
 			}
 			traits={  }
@@ -762,7 +762,7 @@ characters={
 			available = {
 				OR = {
 					has_government = fascism 
-					has_completed_focus = NOR_nasjonal_samling
+					always = no
 				}
 			}
 			traits  = {
@@ -814,7 +814,7 @@ characters={
 			}
 			available = {
 				has_government = fascism 
-				has_completed_focus = NOR_crackdown_on_civilian_life
+				always = no
 			}
 			traits  = {
 				NOR_pan_germanist_minister
@@ -867,7 +867,7 @@ characters={
 			allowed  = {
 			}
 			available = {
-				has_completed_focus = NOR_approach_the_fatherland_league 
+				always = no 
 			}
 			traits  = {
 				NOR_conservative_businessman
@@ -894,13 +894,13 @@ characters={
 			visible = {
 				OR = {
 					has_government = democratic
-					has_completed_focus = NOR_prosecute_the_nkp
+					always = no
 				}
 			}
 			available = { 
 				OR = {
 					has_government = democratic
-					has_completed_focus = NOR_prosecute_the_nkp
+					always = no
 				}
 			}
 			traits = {
@@ -1823,8 +1823,8 @@ characters={
 				available = {
 					has_government = democratic
 					OR = {
-						has_completed_focus = NOR_vote_of_no_confidence
-						has_completed_focus = NOR_continue_nygaardsvold_government
+						always = no
+						always = no
 					}
 				}
 				traits  = {

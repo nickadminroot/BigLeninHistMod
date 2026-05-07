@@ -342,7 +342,7 @@ faction_goal_war_on_communism_in_asia = {
 	visible = {
 		FROM = {
 			original_tag = JAP
-			has_completed_focus = JAP_the_great_spiritual_evil
+			always = no
 		}
 	}
 	completed = {
@@ -383,7 +383,7 @@ faction_goal_war_on_communism_in_asia = {
 		base = 0
 		modifier = {
 			add = 100 # Prio when taken the focus
-			has_completed_focus = JAP_strike_down_the_enemy_of_the_people
+			always = no
 		}
 	}
 }
@@ -420,7 +420,7 @@ faction_goal_contain_japanese_expansion_asia = {
 	}
 	completed = {
 		JAP = {
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}
@@ -432,7 +432,7 @@ faction_goal_contain_japanese_expansion_asia = {
 					value < 20
 				}
 			}
-			ELSE = {
+			else = {
 				collection_size = {
 					input = {
 						input = collection:faction_controlled_non_core_states

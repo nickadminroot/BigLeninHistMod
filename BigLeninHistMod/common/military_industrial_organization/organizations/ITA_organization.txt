@@ -36,7 +36,7 @@ ITA_fiat_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
 		}
@@ -44,26 +44,26 @@ ITA_fiat_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 158 #PIEMONT (Torino)
 			}
 			ITA_is_northern_designer = yes
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = GRE } }
 			FROM = {
-				has_completed_focus = GRE_rapprochement_with_the_italians
+				always = no
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -80,14 +80,14 @@ ITA_fiat_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = BRA
 				}
 			}
 			FROM = {
-				has_completed_focus = BRA_italian_trucks
+				always = no
 			}
 		}
 	}
@@ -152,18 +152,18 @@ ITA_crda_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = { controls_state = 736 } #LITORALE (Trieste) 
 			ITA_is_northern_designer = yes
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -181,7 +181,7 @@ ITA_crda_organization = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = HUN }
 			}
@@ -409,7 +409,7 @@ ITA_macchi_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_air_designers }
 		}
@@ -417,13 +417,13 @@ ITA_macchi_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 159 #LOMBARDIA
 			}
@@ -569,7 +569,7 @@ ITA_caproni_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_air_designers }
 		}
@@ -577,13 +577,13 @@ ITA_caproni_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 159 #LOMBARDIA
 			}
@@ -671,7 +671,7 @@ ITA_imam_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_air_designers }
 		}
@@ -679,13 +679,13 @@ ITA_imam_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 117 #CAMPANIA (Napoli)
 			}
@@ -775,23 +775,23 @@ ITA_fiat_aviazione_organization = {
 	}
 	
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = {
+		else = {
 			FROM = {
 				controls_state = 158 #PIEDMONT (Torino)
 			}
 			ITA_is_northern_designer = yes
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			FROM = { 
-				has_completed_focus = BRA_italian_aircraft
+				always = no
 			} 
 		}		
 	}
@@ -884,7 +884,7 @@ ITA_beretta_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
 		}
@@ -892,13 +892,13 @@ ITA_beretta_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 159 #LOMBARDIA	
 			}
@@ -947,18 +947,18 @@ ITA_lancia_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = { controls_state = 159 } #LOMBARDIA
 			ITA_is_northern_designer = yes
 		}
 		
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -1016,7 +1016,7 @@ ITA_breda_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
 		}
@@ -1024,13 +1024,13 @@ ITA_breda_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ITA } }
 			}
 			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ELSE = { #original_tag = ITA
+		else = { #original_tag = ITA
 			FROM = {
 				controls_state = 159 #LOMBARDIA
 			}
@@ -1114,7 +1114,7 @@ ITA_officine_meccaniche_organization = {
 	
 	available = {
 		FROM = {
-			has_completed_focus = ITA_new_ricostruzione_industriale
+			always = no
 		}
 	}
 
@@ -1169,7 +1169,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1198,7 +1198,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1225,7 +1225,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1455,7 +1455,7 @@ ITA_ansaldo_train_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 				has_completed_focus = ITA_strengthen_northern_industry
 			}
 		}

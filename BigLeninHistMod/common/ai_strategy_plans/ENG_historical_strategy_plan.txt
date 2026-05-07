@@ -26,8 +26,8 @@ ENG_historical_plan = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			GER = { has_completed_focus = GER_oppose_hitler_ww }
+			GER = { always = no }
+			GER = { always = no }
 		}
 	}
 

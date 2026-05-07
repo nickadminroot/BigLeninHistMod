@@ -550,7 +550,7 @@ if = {
 		has_dlc = "No Step Back"
 	}
 
-	IF = {
+	if = {
 		limit = { has_dlc = "Poland: United and Ready"} 
 
 		create_equipment_variant = {
@@ -609,7 +609,7 @@ if = {
 		}
 	}
 
-	ELSE = {
+	else = {
 		create_equipment_variant = {
 			name = "TKS"
 			type = light_tank_chassis_0

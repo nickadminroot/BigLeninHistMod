@@ -2848,7 +2848,7 @@ focus_tree = {
 			effect_tooltip = { #This is done for tooltip purposes
 				add_dynamic_modifier = { modifier = GER_bewegungskrieg_modifier }
 			}
-			IF = {
+			if = {
 				limit = { 
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes
@@ -3022,7 +3022,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -4219,7 +4219,7 @@ focus_tree = {
 			effect_tooltip = { #This is done for tooltip purposes
 				add_dynamic_modifier = { modifier = GER_blitzkrieg_modifier }
 			}
-			IF = {
+			if = {
 				limit = { 
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes
@@ -4706,7 +4706,7 @@ focus_tree = {
 			
 			
 			
-			IF = {
+			if = {
 				limit = { has_dlc = "Gotterdammerung" }
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_unlocks_eben_emael_raid_tt
@@ -6104,7 +6104,7 @@ focus_tree = {
 				tooltip = sp_tag_jet_speed_factor_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6618,14 +6618,14 @@ focus_tree = {
 		relative_position_id = GER_expand_kriegsmarinewerft
 		cost = 5
 		available = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				NOT = { has_completed_focus = GER_high_seas_fleet }
 				has_tech = early_ship_hull_carrier
 			}
-			ELSE = {
+			else = {
 				NOT = { has_completed_focus = GER_high_seas_fleet }
 				has_tech = early_carrier
 			}
@@ -6835,14 +6835,14 @@ focus_tree = {
 		relative_position_id = GER_expand_kriegsmarinewerft
 		cost = 10
 		available = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				NOT = { has_completed_focus = GER_high_seas_fleet }
 				has_tech = improved_ship_hull_heavy
 			}
-			ELSE = {
+			else = {
 				NOT = { has_completed_focus = GER_high_seas_fleet }
 				has_tech = improved_battleship
 			}
@@ -7434,7 +7434,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_trade_interdiction_lock_other_focus_tt
 
-			IF = {
+			if = {
 				limit = {
 					GER_karl_donitz = {
 						is_unit_leader = yes
@@ -7598,7 +7598,7 @@ focus_tree = {
 				category = ca_tech
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc =  "Man the Guns"
 				}
@@ -9148,7 +9148,7 @@ focus_tree = {
 
 		completion_reward = {
 			POL = {
-				IF = {
+				if = {
 				limit = {
 					72 = {
 						NOT = {
@@ -9158,7 +9158,7 @@ focus_tree = {
 				}
 				transfer_state = 72
 				}
-				IF = {
+				if = {
 					limit = {
 						72 = {
 							NOT = {
@@ -9207,8 +9207,8 @@ focus_tree = {
 					}
 				}
 				NOT = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 		}
@@ -9502,7 +9502,7 @@ focus_tree = {
 				add_idea = triumphant_will
 			}	
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -9907,7 +9907,7 @@ focus_tree = {
 					country_exists = HOL
 					NOT = { HOL = { is_in_faction_with = GER } }
 					NOT = { has_war_with = HOL }
-					NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+					NOT = { HOL = { always = no } }
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -9921,8 +9921,8 @@ focus_tree = {
 					country_exists = HOL
 					NOT = { HOL = { is_in_faction_with = GER } }
 					NOT = { has_war_with = HOL }
-					HOL = { has_completed_focus = HOL_cave_to_the_germans } 
-					NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+					HOL = { always = no } 
+					NOT = { HOL = { always = no } }
 				}
 				HOL = {
 					country_event = { id = mtg_germany.1 hours = 6 }
@@ -10320,7 +10320,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -10347,7 +10347,7 @@ focus_tree = {
 				name = GER_crossing_the_atlantic
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -10564,7 +10564,7 @@ focus_tree = {
 			custom_effect_tooltip = GER_challenge_the_monroe_doctrine_tt
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						USA = {
 							OR = {
@@ -10998,7 +10998,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {
 					type = annex_everything
@@ -11006,7 +11006,7 @@ focus_tree = {
 					expire = 0
 				}
 			}
-			ELSE = {
+			else = {
 				every_country = {
 					limit = { original_tag = SOV }
 					GER = {

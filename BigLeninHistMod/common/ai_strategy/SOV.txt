@@ -371,7 +371,7 @@ southern_thrust = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_the_southern_thrust
+		always = no
 		OR = {
 			country_exists = IRQ
 			country_exists = PER
@@ -408,7 +408,7 @@ claims_on_poland = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_claims_on_poland
+		always = no
 		country_exists = POL
 	}
 	abort = {
@@ -458,7 +458,7 @@ claims_on_sinkiang = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_spheres_of_influence_in_china
+		always = no
 		country_exists = CHI
 	}
 	abort = {
@@ -479,7 +479,7 @@ japan_ally = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_reconcile_japan
+		always = no
 		country_exists = JAP
 	}
 	abort = {
@@ -504,8 +504,8 @@ germany_ally = {
 	}
 	enable = {
 		OR = {
-			has_completed_focus = SOV_anti_capitalist_policies
-			GER = { has_completed_focus = GER_alliance_with_the_ussr }
+			always = no
+			GER = { always = no }
 		}
 		country_exists = GER
 	}
@@ -615,7 +615,7 @@ manchukuo_soviet_aid = {
 		has_government = communism
 		country_exists = MAN
 		MAN = {
-			has_completed_focus = MAN_tsr_soviet_aid
+			always = no
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1008,17 +1008,17 @@ SOV_dont_send_volunteers_that_early_to_china = {
 		OR = {
 			#Soviet focus plans are set so that they support a Chinese tag in 39-40
 			AND = {
-				has_completed_focus = SOV_the_gobi_gambit
+				always = no
 				country_exists = SIK
 				SIK = { has_war_with = JAP }
 			}
 			AND = {
-				has_completed_focus = SOV_two_red_flags
+				always = no
 				country_exists = PRC
 				PRC = { has_war_with = JAP }
 			}
 			AND = {
-				has_completed_focus = SOV_support_the_kuomintang
+				always = no
 				country_exists = CHI
 				CHI = { has_war_with = JAP }
 			}
@@ -1894,7 +1894,7 @@ SOV_khakimov_proposal_sov = {
 
 	enable = {
 		has_idea = SOV_maksim_litvinov
-		has_completed_focus = SOV_the_khakimov_proposal
+		always = no
 		SAU = {
 			has_opinion = {
 				target = SOV
@@ -1944,7 +1944,7 @@ SOV_khakimov_proposal_sau = {
 	enable = {
 		SOV = {
 			has_idea = SOV_maksim_litvinov
-			has_completed_focus = SOV_the_khakimov_proposal
+			always = no
 			is_subject = no
 		}
 		is_subject = no
@@ -2016,7 +2016,7 @@ SOV_coming_to_getcha_iran = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_preemptive_invasion_of_iran
+		always = no
 		PER = {
 			exists = yes
 			is_in_faction = no
@@ -2058,7 +2058,7 @@ SOV_ENG_tagteam_iran = {
 		}
 	}
 	enable = {
-		has_completed_focus = SOV_preemptive_invasion_of_iran
+		always = no
 		has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
 		RAJ = {
 			is_in_faction_with = ENG

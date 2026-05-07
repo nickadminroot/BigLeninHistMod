@@ -49,30 +49,30 @@ CHI_border_clashes = {
 				#Completed border war on opposition and other warlord has picked a side
 				AND = {
 					OR = {
-						has_completed_focus = CHI_anti_opposition_campaigns
-						has_completed_focus = CHI_sea_anti_opposition_campaigns
+						always = no
+						always = no
 					}
 					OR = {
 						AND = {
 							OR = {
-								has_completed_focus = CHI_cooperation_with_the_nationalists
-								has_completed_focus = CHI_sea_cooperation_with_the_nationalists
+								always = no
+								always = no
 							}
 							OR = {
-								FROM = { has_completed_focus = CHI_cooperation_with_the_communists }
-								FROM = { has_completed_focus = CHI_sea_cooperation_with_the_communists }
+								FROM = { always = no }
+								FROM = { always = no }
 							}
 							NOT = { is_subject_of = event_target:WTT_communist_china }
 							FROM = { NOT = { is_subject_of = event_target:WTT_current_china_leader } }
 						}
 						AND = {
 							OR = {
-								has_completed_focus = CHI_cooperation_with_the_communists
-								has_completed_focus = CHI_sea_cooperation_with_the_communists
+								always = no
+								always = no
 							}
 							OR = {
-								FROM = { has_completed_focus = CHI_cooperation_with_the_nationalists }
-								FROM = { has_completed_focus = CHI_sea_cooperation_with_the_nationalists }
+								FROM = { always = no }
+								FROM = { always = no }
 							}
 							NOT = { is_subject_of = event_target:WTT_current_china_leader }
 							FROM = { NOT = { is_subject_of = event_target:WTT_communist_china } }
@@ -85,8 +85,8 @@ CHI_border_clashes = {
 					tag = event_target:WTT_communist_china
 					FROM = { 
 						OR = {
-							has_completed_focus = CHI_cooperation_with_the_nationalists 
-							has_completed_focus = CHI_sea_cooperation_with_the_nationalists 
+							always = no 
+							always = no 
 						}
 					}
 				}
