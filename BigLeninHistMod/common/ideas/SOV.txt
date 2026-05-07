@@ -10284,4 +10284,31 @@ ideas = {
 			}
 		}
 
+		SOV_no_step_back = {
+			name = SOV_no_step_back
+
+			picture = generic_war_economy
+
+			removal_cost = -1
+
+			modifier = {
+				defense = -0.1
+				army_org_factor = 0.1
+			}
+		}
+
+		SOV_bagration = {
+			name = SOV_bagration
+
+			picture = generic_major_war
+
+			removal_cost = -1
+
+			modifier = {
+				attack = 0.15
+				max_speed = 0.1
+				defense = 0.15
+			}
+		}
+
 }

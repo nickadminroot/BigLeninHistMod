@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -9981,7 +9981,136 @@ focus_tree = {
 #			add_political_power = 50
 #		}
 #	}
-#
+
+	focus = {
+		id = SOV_mobilization_first_wave
+		icon = GFX_goal_generic_war_populace
+		x = 10
+		y = 15
+		cost = 10
+
+		available = {
+			has_war_with = GER
+		}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			division_template = {
+				name = "Novobrantsy"
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+				}
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Novobrantsy\" division_template = \"Novobrantsy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 170
+				}
+			}
+
+			set_country_flag = SOV_mobilization_first_wave_completed
+			custom_effect_tooltip = SOV_mobilization_first_wave_tt
+		}
+	}
+
+	focus = {
+		id = SOV_mobilization_second_wave
+		icon = GFX_goal_generic_war_populace
+		prerequisite = { focus = SOV_mobilization_first_wave }
+		x = 0
+		y = 1
+		relative_position_id = SOV_mobilization_first_wave
+		cost = 10
+
+		available = {
+			has_war_with = GER
+			date > 1942.5.1
+		}
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Novobrantsy\" division_template = \"Novobrantsy\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 170
+				}
+			}
+
+			set_country_flag = SOV_mobilization_second_wave_completed
+			custom_effect_tooltip = SOV_mobilization_second_wave_tt
+		}
+	}
+
+	focus = {
+		id = SOV_order_227
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_mobilization_second_wave }
+		x = 0
+		y = 1
+		relative_position_id = SOV_mobilization_second_wave
+		cost = 10
+
+		available = {
+			has_war_with = GER
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			add_idea = SOV_no_step_back
+
+			if = {
+				limit = {
+					has_decision = SOV_order_227
+				}
+				remove_decision = SOV_order_227
+			}
+
+			custom_effect_tooltip = SOV_order_227_added_tt
+		}
+	}
+
+	focus = {
+		id = SOV_operation_bagration
+		icon = GFX_goal_generic_offensive
+		prerequisite = { focus = SOV_order_227 }
+		x = 0
+		y = 1
+		relative_position_id = SOV_order_227
+		cost = 10
+
+		available = {
+			has_war_with = GER
+			date > 1943.1.1
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SOV_bagration
+				days = 90
+			}
+
+			custom_effect_tooltip = SOV_operation_bagration_tt
+		}
+	}
+
+}
+
 #	focus = {
 #		id = SOV_educate_the_masses_east
 #		icon = GFX_goal_generic_dangerous_deal
