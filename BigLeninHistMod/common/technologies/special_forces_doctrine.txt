@@ -1403,23 +1403,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		doctrine = yes	
-		research_cost = 2.25
-		rangers_special_forces_contribution_factor = -0.1 
-		categories = {
-			special_forces_doctrine
-			cat_rangers_doctrine
-		}		
-		category_infantry_heavy = {
-			max_organisation = 5
-			soft_attack = 0.05
-		}
-		enable_subunits = {
-			rangers_support
-		}	
-		doctrine = yes	
-		research_cost = 2.25
-		
 		allow = {
 			AND = {
 				has_tech = rangers_tech
@@ -1448,7 +1431,7 @@ technologies = {
 			special_forces_doctrine
 			cat_rangers_doctrine
 		}		
-		category_special_forces = {
+		category_infantry_heavy = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
@@ -1458,7 +1441,6 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2.25
 		
-
 		allow = {
 			AND = {
 				has_tech = rangers_tech

@@ -2002,7 +2002,6 @@ on_actions = {
 			ROOT = {
 				if = {
 					limit = {
-						NOR_aat = yes 
 						has_completed_focus = NOR_building_an_independent_norway
 						NOT = { 
 							has_dynamic_modifier = { modifier = NOR_independent_norway_dmod }

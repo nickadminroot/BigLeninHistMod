@@ -13801,7 +13801,6 @@ form_ethiopian_empire_category  = {
 					province = 13237
 					value = 5
 				}
-				ETH_upgrade_state_category = yes 
 			}
 			#custom_effect_tooltip = ETH_prevents_further_capital_moves_tt
 			#set_country_flag = ETH_has_moved_capital_flag
@@ -13904,7 +13903,6 @@ form_ethiopian_empire_category  = {
 					province = 1086
 					value = 9
 				}
-				ETH_upgrade_state_category = yes 
 				add_core_of = ROOT 
 			}
 			custom_effect_tooltip = ETH_prevents_further_capital_moves_tt

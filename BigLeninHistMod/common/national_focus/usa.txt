@@ -258,7 +258,6 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
 			has_government = democratic
 		}
 		
@@ -298,7 +297,6 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -338,7 +336,6 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -574,7 +571,6 @@ focus_tree = {
 
 
 		available = {
-			congress_low_support_trigger = yes
 			democratic > 0.95
 			NOT = { has_idea_with_trait = fascist_demagogue }
 			NOT = { has_idea_with_trait = communist_revolutionary }
@@ -653,7 +649,6 @@ focus_tree = {
 				limit = {
 					has_war_support > 0.4
 				}
-				congress_medium_support_trigger = yes
 			}
 			else = {
 			}
@@ -2190,7 +2185,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				congress_low_support_trigger = yes
 			}
 		}
 		
@@ -2392,7 +2386,6 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
 		}
 		
 		bypass = {
@@ -2947,7 +2940,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				congress_low_support_trigger = yes
 			}
 			controls_state = 378
 			controls_state = 358

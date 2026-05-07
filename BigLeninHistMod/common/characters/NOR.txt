@@ -17,7 +17,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_democratic = yes
 		}
 		country_leader={
 			ideology=socialism
@@ -38,7 +37,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_democratic = yes
 		}
 		country_leader={
 			ideology=socialism
@@ -60,7 +58,6 @@ characters={
 				factor = 1
 				modifier = {
 					add = 20
-					NOR_is_historical_ai = yes 
 				}
 			}
 		}
@@ -75,7 +72,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_democratic = yes
 		}
 		country_leader={
 			ideology=conservatism
@@ -102,7 +98,6 @@ characters={
 	NOR_adam_egede_nissen={ # Stalinist Communist
 		name=NOR_adam_egede_nissen
 		allowed_civil_war = {
-			NOR_char_cw_stalinist = yes 
 		}
 		portraits={
 			civilian={
@@ -128,8 +123,6 @@ characters={
 		}
 		allowed_civil_war = {
 			OR = {
-				NOR_char_cw_labor_only = yes 
-				NOR_char_cw_trotskyist = yes 
 			}
 		}
 		country_leader={
@@ -161,9 +154,6 @@ characters={
 		}
 		allowed_civil_war = {
 			OR = {
-				NOR_char_cw_labor_only = yes 
-				NOR_char_cw_trotskyist = yes 
-				NOR_char_cw_stalinist = yes
 			}
 		}
 		
@@ -193,9 +183,6 @@ characters={
 		}
 		allowed_civil_war = {
 			OR = {
-				NOR_char_cw_labor_only = yes 
-				NOR_char_cw_trotskyist = yes 
-				NOR_char_cw_stalinist = yes
 			}
 		}
 		
@@ -225,8 +212,6 @@ characters={
 		}
 		allowed_civil_war = {
 			OR = {
-				NOR_char_cw_labor_only = yes 
-				NOR_char_cw_stalinist = yes
 			}
 		}
 		
@@ -260,7 +245,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes
 		}
 		country_leader = {
 			ideology = despotism
@@ -285,7 +269,6 @@ characters={
 				base = 0
 				modifier = {
 					add = 200
-					NOR_is_monarchist_ai = yes
 				}
 			}
 		}
@@ -298,7 +281,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes
 		}		
 		country_leader={
 			ideology=despotism
@@ -319,7 +301,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes
 		}
 		country_leader = {
 			ideology = despotism
@@ -361,7 +342,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes
 		}
 
 		country_leader = {
@@ -413,7 +393,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		country_leader={
@@ -441,7 +420,6 @@ characters={
 				base = 0
 				modifier = {
 					add = 200
-					NOR_is_fascist_ai = yes
 				}
 			}
 		}
@@ -488,7 +466,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		country_leader={
@@ -513,7 +490,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		country_leader={
@@ -572,13 +548,11 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 			
 		}
 		advisor={
 			slot = political_advisor
 			idea_token = NOR_axel_aubert
 			allowed  = {
-				NOR_aat = yes 
 			}
 			visible = {
 				NOT = {
@@ -605,7 +579,6 @@ characters={
 			}
 		}
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 		advisor={
 			slot = political_advisor
@@ -634,7 +607,6 @@ characters={
 				base = 0
 				modifier = {
 					add = 50
-					NOR_is_stalinist_ai = yes
 				}
 			}
 		}
@@ -649,7 +621,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_stalinist = yes 
 		}
 
 		advisor={
@@ -672,7 +643,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_trotskyist = yes 
 		}
 		
 		advisor={
@@ -704,7 +674,6 @@ characters={
 
 				
 		allowed_civil_war = {
-			NOR_char_cw_trotskyist = yes 
 		}
 
 		advisor={
@@ -716,7 +685,6 @@ characters={
 				factor = 1
 				modifier = {
 					add = 100
-					NOR_is_trotskyist_ai = yes 
 				}
 			}
 			available = {
@@ -759,7 +727,6 @@ characters={
 
 
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		advisor={
@@ -785,7 +752,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		advisor={
@@ -814,7 +780,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 		
 		advisor={
@@ -840,7 +805,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 		
 		advisor = {
@@ -867,7 +831,6 @@ characters={
 		}
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 		
 		advisor = {
@@ -895,8 +858,6 @@ characters={
 
 		allowed_civil_war = {
 			OR = {
-				NOR_char_cw_fascist = yes 
-				NOR_char_cw_conservative = yes 
 			}
 		}
 		
@@ -923,7 +884,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_labor_only = yes 
 		}
 
 		advisor = {
@@ -967,7 +927,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 
 		corps_commander={
@@ -1025,7 +984,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 
 		corps_commander={
@@ -1135,7 +1093,6 @@ characters={
 		}
 
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 
 		navy_leader={
@@ -1153,7 +1110,6 @@ characters={
 		name=NOR_wilhelm_von_tangen_hansteen
 
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 				
 		advisor={
@@ -1210,7 +1166,6 @@ characters={
 		name=NOR_skule_storheil
 	
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 		
 		advisor={
@@ -1261,7 +1216,6 @@ characters={
 		name=NOR_tryggve_gran
 		
 		allowed_civil_war = {
-			NOR_char_cw_fascist = yes 
 		}
 		
 		advisor={
@@ -1437,7 +1391,6 @@ characters={
 		name=NOR_birger_eriksen
 	
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}
 	
 		advisor={
@@ -1474,7 +1427,6 @@ characters={
 			name=NOR_alfred_roscher_lund 
 			
 			allowed_civil_war = {
-				NOR_char_cw_labor_only = yes 
 			}
 			
 			advisor={
@@ -1563,7 +1515,6 @@ characters={
 			name=NOR_konrad_sundlo
 			
 			allowed_civil_war = {
-				NOR_char_cw_labor_only = yes 
 			}
 
 			advisor={
@@ -1625,7 +1576,6 @@ characters={
 		name=NOR_otto_ruge
 			
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}		
 
 		advisor={
@@ -1662,7 +1612,6 @@ characters={
 		name=NOR_rasmus_hatledal
 		
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}		
 
 		advisor={
@@ -1691,7 +1640,6 @@ characters={
 		name=NOR_bjorn_christophersen
 		
 		allowed_civil_war = {
-			NOR_char_cw_loyalist = yes 
 		}		
 		
 		advisor = {
@@ -1724,7 +1672,6 @@ characters={
 			name=NOR_kristian_laake
 			
 			allowed_civil_war = {
-				NOR_char_cw_loyalist = yes 
 			}					
 			
 			advisor={
@@ -1799,7 +1746,6 @@ characters={
 		name="Hjalmar Riiser-Larsen"
 		
 		allowed_civil_war = {
-			NOR_char_cw_conservative = yes 
 		}				
 		
 		portraits={
@@ -1847,7 +1793,6 @@ characters={
 		name="Adolf Indrebø"
 
 		allowed_civil_war = {
-			NOR_char_cw_democratic = yes 
 		}
 
 		portraits={
@@ -1864,7 +1809,6 @@ characters={
 			name=NOR_halvdan_koht
 
 			allowed_civil_war = {
-				NOR_char_cw_labor_only = yes 
 			}
 
 			advisor = {
@@ -1924,7 +1868,6 @@ characters={
 			name=NOR_trygve_halvdan_lie
 
 			allowed_civil_war = {
-				NOR_char_cw_labor_only = yes 
 			}
 			
 			advisor={

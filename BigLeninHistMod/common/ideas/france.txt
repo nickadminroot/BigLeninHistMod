@@ -459,10 +459,6 @@ ideas = {
 					instant = yes
 				}
 			}
-
-			modifier = {
-				infantry_attack_factor = 0.05
-			}
 		}
 		FRA_methodical_battle_bonus = {
 			picture = generic_defensive_line
@@ -470,10 +466,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-				defense_factor = 0.1
-				entrenchment_speed = 0.5
-			}
 		}
 		FRA_infantry_tanks_bonus = {
 			picture = generic_armor

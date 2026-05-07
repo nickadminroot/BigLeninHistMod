@@ -1487,7 +1487,6 @@ characters={
 						has_completed_focus  = USA_reach_out_to_the_ware_group
 					}
 					AND = {
-						SWE_refuge_for_revolutionaries_trigger = yes
 						USA = { has_completed_focus = USA_america_first }
 					}
 				}
@@ -1535,7 +1534,6 @@ characters={
 						has_completed_focus  = USA_reach_out_to_the_ware_group
 					}
 					AND = {
-						SWE_refuge_for_revolutionaries_trigger = yes
 						USA = { has_completed_focus = USA_america_first }
 					}
 				}

@@ -3565,8 +3565,6 @@ characters={
 								}
 							}
 						}
-
-						SWE_refuge_for_revolutionaries_trigger = yes
 					}
 				}
 				traits = {
@@ -3745,7 +3743,6 @@ characters={
 								}
 							}
 						}
-						SWE_refuge_for_revolutionaries_trigger = yes
 					}
 				}
 				traits = {
@@ -4069,7 +4066,6 @@ characters={
 							}
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {
@@ -4126,7 +4122,6 @@ characters={
 							}
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {

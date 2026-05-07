@@ -45,12 +45,10 @@ characters={
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
 					}
 				}
 			}
@@ -134,21 +132,17 @@ characters={
 					base = 5
 					modifier = {
 						factor = 0
-						DEN_historical_ai = yes
 					}
 					modifier = {
 						factor = 15
-						DEN_royal_ai = yes
 					}
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -212,21 +206,17 @@ characters={
 					base = 5
 					modifier = {
 						factor = 0
-						DEN_historical_ai = yes
 					}
 					modifier = {
 						factor = 10
-						DEN_royal_ai = yes
 					}
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -302,17 +292,14 @@ characters={
 					base = 5
 					modifier = {
 						factor = 0
-						DEN_historical_ai = yes
 					}
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -404,14 +391,10 @@ characters={
 					base = 5
 					modifier = {
 						factor = 0
-						DEN_historical_ai = yes
 					}
 					modifier = {
 						factor = 0
 						OR = {
-							DEN_rearming_ai = yes
-							DEN_royal_ai = yes					
-							DEN_fascist_ai = yes
 						}
 					}
 				}
@@ -420,12 +403,10 @@ characters={
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_low_BOP_decrease_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_low_BOP_increase_effect = yes
 					}
 				}
 			}
@@ -491,24 +472,18 @@ characters={
 					modifier = {
 						factor = 0
 						OR = {
-							DEN_historical_ai = yes
-							DEN_rearming_ai = yes
-							DEN_royal_ai = yes
 						}
 					}
 					modifier = {
 						factor = 10
-						DEN_fascist_ai = yes
 					}
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_medium_BOP_increase_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_medium_BOP_decrease_effect = yes
 					}
 				}
 			}
@@ -1700,27 +1675,21 @@ characters={
 				base = 5
 				modifier = {
 					factor = 10
-					DEN_historical_ai = yes
 				}
 				modifier = {
 					factor = 0
 					OR = {
 						is_subject = yes
 						has_country_flag = DEN_has_occupation_flag
-						DEN_rearming_ai = yes
-						DEN_royal_ai = yes					
-						DEN_fascist_ai = yes
 					}
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -1754,7 +1723,6 @@ characters={
 				base = 5
 				modifier = {
 					factor = 0.5
-					DEN_historical_ai = yes
 				}
 				modifier = {
 					factor = 5
@@ -1763,20 +1731,15 @@ characters={
 				modifier = {
 					factor = 10
 					OR = {
-						DEN_rearming_ai = yes
-						DEN_royal_ai = yes					
-						DEN_fascist_ai = yes
 					}
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -1807,24 +1770,19 @@ characters={
 				base = 5
 				modifier = {
 					factor = 10
-					DEN_historical_ai = yes
 				}
 				modifier = {
 					factor = 10
 					OR = {
-						DEN_rearming_ai = yes
-						DEN_royal_ai = yes					
 					}
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -1856,19 +1814,16 @@ characters={
 				modifier = {
 					factor = 5
 					OR = {
-						DEN_historical_ai = yes
 						is_subject = yes
 					}
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -1898,17 +1853,14 @@ characters={
 				base = 5
 				modifier = {
 					factor = 10
-					DEN_historical_ai = yes
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -1940,12 +1892,10 @@ characters={
 				}
 				on_add = {
 					owner = {
-						DEN_advisor_low_BOP_decrease_effect = yes
 					}
 				}
 				on_remove = {
 					owner = {
-						DEN_advisor_low_BOP_increase_effect = yes
 					}
 				}
 			}
@@ -1997,16 +1947,12 @@ characters={
 				base = 5
 				modifier = {
 					factor = 5
-						DEN_historical_ai = yes
 				}
 				modifier = {
 					factor = 10
 					OR = {
 						is_subject = yes
 						has_country_flag = DEN_has_occupation_flag
-						DEN_rearming_ai = yes
-						DEN_royal_ai = yes					
-						DEN_fascist_ai = yes
 					}
 				}
 				modifier = {
@@ -2019,12 +1965,10 @@ characters={
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -2053,12 +1997,10 @@ characters={
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -2088,27 +2030,21 @@ characters={
 				base = 5
 				modifier = {
 					factor = 5
-					DEN_historical_ai = yes
 				}
 				modifier = {
 					factor = 10
 					OR = {
 						is_subject = yes
 						has_country_flag = DEN_has_occupation_flag
-						DEN_rearming_ai = yes
-						DEN_royal_ai = yes					
-						DEN_fascist_ai = yes
 					}
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -2138,17 +2074,14 @@ characters={
 				base = 5
 				modifier = {
 					factor = 10
-					DEN_historical_ai = yes
 				}
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_medium_BOP_decrease_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_medium_BOP_increase_effect = yes
 				}
 			}
 		}
@@ -2195,12 +2128,10 @@ characters={
 			}
 			on_add = {
 				owner = {
-					DEN_advisor_low_BOP_increase_effect = yes
 				}
 			}
 			on_remove = {
 				owner = {
-					DEN_advisor_low_BOP_decrease_effect = yes
 				}
 			}
 		}
@@ -2231,7 +2162,6 @@ characters={
 				base = 5
 				modifier = {
 					factor = 0.5
-					DEN_historical_ai = yes
 				}
 			}
 			on_add = {

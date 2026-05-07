@@ -12468,7 +12468,6 @@ economy_decisions = {
 
 		remove_effect = {
 			FROM = {
-				ETH_upgrade_state_category = yes
 			}
 		}
 

@@ -3198,7 +3198,6 @@ characters = {
 							}
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			
@@ -3336,7 +3335,6 @@ characters = {
 							}
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {
@@ -3403,7 +3401,6 @@ characters = {
 							has_completed_focus = ITA_bring_back_exiled_intellectuals
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {

@@ -1089,8 +1089,6 @@ characters = {
 							has_completed_focus = POL_a_leftist_sejm
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
-					CHL_hub_of_the_revolution_trigger = yes
 				}
 			}
 			allowed = {
@@ -1250,7 +1248,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = POL_the_sanation_right 
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			allowed = {
@@ -1294,7 +1291,6 @@ characters = {
 							has_government = communism 
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {
@@ -1340,7 +1336,6 @@ characters = {
 							has_government = communism 
 						}
 					}
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {

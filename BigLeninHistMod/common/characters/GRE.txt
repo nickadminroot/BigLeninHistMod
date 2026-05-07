@@ -181,8 +181,6 @@ characters={
 								}
 							}
 						}
-						SWE_refuge_for_revolutionaries_trigger = yes
-						CHL_hub_of_the_revolution_trigger = yes
 					}
 				}
 				traits = {
@@ -1508,7 +1506,6 @@ characters={
 							compare = greater_than_or_equals 
 						}
 					}
-					CHL_hub_of_the_revolution_trigger = yes
 				}
 				
 			}
@@ -1538,7 +1535,6 @@ characters={
 			available = {
 				OR = {
 					has_government = communism 
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {
@@ -1634,10 +1630,6 @@ characters={
 							}
 						}
 					}
-
-					SWE_refuge_for_revolutionaries_trigger = yes
-
-					CHL_hub_of_the_revolution_trigger = yes
 				}
 			}
 			traits = {

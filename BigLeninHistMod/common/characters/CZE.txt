@@ -414,7 +414,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -427,7 +426,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 						}
 					}
 				}
@@ -550,7 +548,6 @@
 				}
 				available = {
 					OR = {
-						CZE_SLO_is_not_its_own_thing = yes
 						SLO = {
 							is_subject_of = ROOT
 							NOT = {
@@ -593,12 +590,8 @@
 				available = {
 					has_character_flag = CZE_released_from_prison
 					OR = {
-						CZE_SLO_is_not_its_own_thing = yes
 						SLO = {
 							is_subject_of = ROOT
-							SLO_vojtech_tuka = {
-								is_country_leader = no
-							}
 							NOT = {
 								has_government = fascism
 							}
@@ -618,7 +611,6 @@
 				logistics_skill=1
 				legacy_id=-1
 				visible = {
-					CZE_SLO_is_not_its_own_thing = yes
 					has_completed_focus = CZE_align_slovak_catholics
 					has_completed_focus = CZE_catholic_focus
 				}
@@ -661,7 +653,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -674,7 +665,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -719,12 +709,8 @@
 			}
 			available = {
 				OR = {
-					CZE_SLO_is_not_its_own_thing = yes
 					SLO = {
 						is_subject_of = ROOT
-						SLO_jozef_tiso = {
-							is_country_leader = no
-						}
 						NOT = {
 							has_government = fascism
 						}
@@ -739,9 +725,6 @@
 				SLO = {
 					OR = {
 						exists = no
-						SLO_jozef_tiso = {
-							is_country_leader = no
-						}
 					}
 				}
 				NOT = {
@@ -813,7 +796,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -826,7 +808,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -876,7 +857,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -889,7 +869,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 						}
 					}
 				}
@@ -1094,7 +1073,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1107,7 +1085,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1174,7 +1151,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1187,7 +1163,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -1229,7 +1204,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1242,7 +1216,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1288,7 +1261,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1301,7 +1273,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1349,7 +1320,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1362,7 +1332,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1442,7 +1411,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1455,7 +1423,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1495,7 +1462,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1508,7 +1474,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -1575,7 +1540,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -1588,7 +1552,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 						}
 					}
 				}
@@ -1751,7 +1714,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1764,7 +1726,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -1786,7 +1747,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -1799,7 +1759,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -1858,7 +1817,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -1871,7 +1829,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -2127,7 +2084,6 @@
 				has_completed_focus = CZE_comprise_with_the_carpathians
 			}
 			visible = {
-				CZE_RUT_is_not_its_own_thing = yes
 				NOT = {
 					OR = {
 						has_completed_focus = CZE_appeal_to_the_castle
@@ -2441,7 +2397,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -2454,7 +2409,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -2496,7 +2450,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -2509,7 +2462,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -2753,7 +2705,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -2766,7 +2717,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}	
@@ -2864,7 +2814,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -2877,7 +2826,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -2977,7 +2925,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -2990,7 +2937,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3058,7 +3004,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3071,7 +3016,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3165,7 +3109,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3178,7 +3121,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3216,7 +3158,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3229,7 +3170,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3275,7 +3215,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3288,7 +3227,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3328,7 +3266,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3341,7 +3278,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3438,7 +3374,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3451,7 +3386,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3502,7 +3436,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3515,7 +3448,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3547,7 +3479,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3560,7 +3491,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -3643,7 +3573,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3656,7 +3585,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3730,7 +3658,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -3743,7 +3670,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 					}
 				}
 			}
@@ -3790,7 +3716,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3803,7 +3728,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3838,7 +3762,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3851,7 +3774,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3887,7 +3809,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -3900,7 +3821,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -3998,7 +3918,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_increase_effect = yes
 							custom_effect_tooltip = generic_skip_one_line_tt
 						}
 					}
@@ -4011,7 +3930,6 @@
 									id = CZE_bop_army_readiness
 								}
 							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -4046,7 +3964,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4059,7 +3976,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}	
@@ -4097,7 +4013,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4110,7 +4025,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4148,7 +4062,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4161,7 +4074,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4194,7 +4106,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4207,7 +4118,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4246,7 +4156,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4259,7 +4168,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4295,7 +4203,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4308,7 +4215,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4341,7 +4247,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4354,7 +4259,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4393,7 +4297,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4406,7 +4309,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4442,7 +4344,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4455,7 +4356,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}
@@ -4494,7 +4394,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_increase_effect = yes
 						custom_effect_tooltip = generic_skip_one_line_tt
 					}
 				}
@@ -4507,7 +4406,6 @@
 								id = CZE_bop_army_readiness
 							}
 						}
-						CZE_bop_very_low_decrease_effect = yes
 					}
 				}
 			}

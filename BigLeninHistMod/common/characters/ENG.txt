@@ -1959,7 +1959,6 @@ characters={
 			available  = {
 				OR = {
 					has_government  = communism 
-					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			allowed  = {
@@ -1996,7 +1995,6 @@ characters={
 						}
 						
 						hidden_effect = {
-							ETH_BOP_decentralization_large_effect = yes
 						}
 					}				
 				}
