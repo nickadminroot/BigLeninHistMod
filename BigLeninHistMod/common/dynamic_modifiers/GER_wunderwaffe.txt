@@ -1,0 +1,31 @@
+GER_heavy_water_supplies_stable = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_wunderwaffen
+
+	remove_trigger = {
+		NOT = {
+			controls_state = 110
+		}
+	}
+
+	production_speed_nuclear_reactor_factor = 0.25
+	production_speed_nuclear_facility_factor = 0.25
+	sp_commercial_nuclear_reactor_speed_factor = 0.25
+	sp_nuclear_bomb_speed_factor = 0.25
+	sp_nuclear_warheads_speed_factor = 0.25
+}
+
+GER_heavy_water_supplies_shortage = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_wunderwaffen
+
+	remove_trigger = {
+		controls_state = 110
+	}
+
+	production_speed_nuclear_reactor_factor = -0.75
+	production_speed_nuclear_facility_factor = -0.75
+	sp_commercial_nuclear_reactor_speed_factor = -0.75
+	sp_nuclear_bomb_speed_factor = -0.75
+	sp_nuclear_warheads_speed_factor = -0.75
+}

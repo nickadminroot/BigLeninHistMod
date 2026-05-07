@@ -4083,16 +4083,18 @@ focus_tree = {
 	focus = {
 		id = GER_uranverein
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = GER_improve_the_logistics_system focus = GER_defend_the_vaterland }
-		x = 1
-		y = 1
-		relative_position_id = GER_improve_the_logistics_system
-		cost = 5
+		prerequisite = { focus = GER_wunderwaffe }
+		x = -2
+		y = 2
+		relative_position_id = GER_wunderwaffe
+		cost = 10
 		available = {
-			has_war_with_major = yes
+			date > "1942.9.1"
+			controls_state = 110
+			NOT = { has_country_flag = GER_wunderwaffe_branch_lock_flag }
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			if = {
@@ -4112,6 +4114,9 @@ focus_tree = {
 					value = 0.5
 				}
 			}
+
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4157,6 +4162,39 @@ focus_tree = {
 					tooltip = sp_nuclear_warheads_speed_factor_tt
 				}
 			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+				}
+				complete_special_project = {
+					project = sp:sp_nuclear_reactor
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
+				}
+				complete_special_project = {
+					project = sp:sp_nuclear_bomb
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
+				}
+				complete_special_project = {
+					project = sp:sp_nuclear_warheads
+				}
+			}
+
+			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_stable }
+			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_shortage }
 		}
 	}
 	
@@ -6117,31 +6155,19 @@ focus_tree = {
 	focus = {
 		id = GER_amerikabomber
 		icon = GFX_focus_GER_amerikabomber
-		prerequisite = { focus = GER_aerodynamic_research_institute }
+		prerequisite = { focus = GER_wunderwaffe }
 
-		x = 0
-		y = 1
-		relative_position_id = GER_aerodynamic_research_institute
+		x = -4
+		y = 2
+		relative_position_id = GER_wunderwaffe
 		cost = 10
 
-		continue_if_invalid = yes
-		cancel_if_invalid = no
-
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_war_with_american_country_tt
-				any_enemy_country = {
-					capital_scope = { 
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-				}
-			}
+			date > "1942.9.1"
+			NOT = { has_country_flag = GER_wunderwaffe_branch_lock_flag }
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		select_effect = {
 			if = {
@@ -6158,6 +6184,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
@@ -12558,6 +12587,251 @@ focus_tree = {
 				GER_wunderwaffen_production_speed_facility_factor = 0.1
 				tooltip = production_speed_facility_factor_tt
 			}
+			add_ideas = GER_wunderwaffe_development_idea
+		}
+	}
+
+	focus = {
+		id = GER_wunderwaffe_me262
+		icon = GFX_focus_generic_jet_planes
+		prerequisite = { focus = GER_wunderwaffe }
+
+		x = 2
+		y = 2
+		relative_position_id = GER_wunderwaffe
+		cost = 10
+
+		available = {
+			date > "1942.9.1"
+			NOT = { has_country_flag = GER_wunderwaffe_branch_lock_flag }
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP }
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+
+			add_tech_bonus = {
+				name = GER_wunderwaffe_me262
+				bonus = 1
+				uses = 1
+				category = jet_technology
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Me-262"
+					allow_without_tech = yes
+					type = small_plane_airframe_4
+					design_team = mio:GER_messerschmitt_organization
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_2x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = drop_tanks
+						special_type_slot_3 = self_sealing_fuel_tanks_small
+					}
+					icon = "GFX_GER_jet_plane_1_medium"
+					model = "GER_jet_plane_entity"
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_air_axial_jet_engine }
+				}
+				complete_special_project = {
+					project = sp:sp_air_axial_jet_engine
+				}
+			}
+
+			GER_add_or_modify_wunderwaffen = yes
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_air_axial_jet_engine }
+				}
+				add_to_variable = { 
+					GER_wunderwaffen_sp_tag_jet_speed_factor = 0.15
+					tooltip = sp_tag_jet_speed_factor_tt
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_wunderwaffe_rotte
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_wunderwaffe_me262 }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_wunderwaffe_me262
+		cost = 10
+
+		available = {
+			date > "1942.9.1"
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+
+			add_tech_bonus = {
+				name = GER_wunderwaffe_rotte
+				bonus = 1
+				uses = 1
+				category = cat_heavy_armor
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+				}
+				complete_special_project = {
+					project = sp:sp_land_land_cruiser
+				}
+			}
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_sp_tag_artillery_speed_factor = 0.15
+				tooltip = sp_tag_artillery_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_wunderwaffe_maus
+		icon = GFX_focus_generic_heavy_tank
+		prerequisite = { focus = GER_wunderwaffe }
+
+		x = 0
+		y = 2
+		relative_position_id = GER_wunderwaffe
+		cost = 10
+
+		available = {
+			date > "1942.9.1"
+			NOT = { has_country_flag = GER_wunderwaffe_branch_lock_flag }
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+
+			add_tech_bonus = {
+				name = GER_wunderwaffe_maus
+				bonus = 1
+				uses = 1
+				category = cat_heavy_armor
+			}
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Maus"
+					type = super_heavy_tank_chassis_1
+					design_team = mio:GER_porsche_organization
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_super_heavy_cannon
+						turret_type_slot = tank_super_heavy_four_man_tank_turret
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = smoke_launchers
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 8
+						tank_nsb_armor_upgrade = 6
+					}
+					icon = "GFX_GER_advanced_heavy_tank_medium"
+				}
+			}
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_sp_tag_tank_speed_factor = 0.15
+				tooltip = sp_tag_tank_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_wunderwaffe_e50
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_wunderwaffe_maus }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_wunderwaffe_maus
+		cost = 10
+
+		available = {
+			date > "1944.9.1"
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+			set_country_flag = { flag = GER_wunderwaffe_e50_unification_ready_flag days = 180 value = 1 }
+
+			add_ideas = GER_noveyshie_tankovye_razrabotki_idea
+
+			add_tech_bonus = {
+				name = GER_wunderwaffe_e50
+				bonus = 1
+				uses = 1
+				category = cat_medium_armor
+			}
+
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GER_wunderwaffen_sp_tag_tank_speed_factor = 0.15
+				tooltip = sp_tag_tank_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_wunderwaffe_e50_unification
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_wunderwaffe_e50 }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_wunderwaffe_e50
+		cost = 10
+
+		available = {
+			NOT = { has_country_flag = GER_wunderwaffe_e50_unification_ready_flag }
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
+			set_country_flag = { flag = GER_wunderwaffe_branch_lock_flag days = 365 value = 1 }
+			remove_ideas = GER_noveyshie_tankovye_razrabotki_idea
 		}
 	}
 
@@ -14942,236 +15216,6 @@ focus_tree = {
 			hidden_effect = {
 				clr_country_flag = GER_loyalty_to_the_fuhrer_flag
 			}
-		}
-	}
-
-	focus = {
-		id = GER_diplomatic_pressure_on_potential_allies
-		icon = GFX_goal_generic_political_pressure
-		x = -4
-		y = 2
-		relative_position_id = GER_loyalty_to_the_fuhrer
-		cost = 5
-
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			HUN = {
-				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
-			}
-			ROM = {
-				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
-			}
-			BUL = {
-				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
-			}
-		}
-	}
-
-	focus = {
-		id = GER_develop_hungarian_bauxite_deposits
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
-		x = -2
-		y = 1
-		relative_position_id = GER_diplomatic_pressure_on_potential_allies
-		cost = 2
-
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			HUN = {
-				43 = {
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_resource = {
-						type = aluminium
-						amount = 20
-					}
-				}
-				155 = {
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_resource = {
-						type = aluminium
-						amount = 20
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_expand_oil_extraction_in_ploesti
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
-		x = 0
-		y = 1
-		relative_position_id = GER_diplomatic_pressure_on_potential_allies
-		cost = 2
-
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			ROM = {
-				46 = {
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 4
-						instant_build = yes
-					}
-					add_resource = {
-						type = oil
-						amount = 15
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = GER_expand_oil_extraction_in_ploesti
-				bonus = 1
-				uses = 2
-				category = oil_processing
-			}
-		}
-	}
-
-	focus = {
-		id = GER_sofia_initiative
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
-		x = 2
-		y = 1
-		relative_position_id = GER_diplomatic_pressure_on_potential_allies
-		cost = 2
-
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			BUL = {
-				48 = {
-					add_building_construction = {
-						type = arms_factory
-						level = 8
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_consolidate_management_of_minor_powers
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = GER_develop_hungarian_bauxite_deposits }
-		x = 0
-		y = 1
-		relative_position_id = GER_develop_hungarian_bauxite_deposits
-		cost = 5
-
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			GER = {
-				if = {
-					limit = {
-						NOT = {
-							HUN = {
-								is_subject = yes
-							}
-						}
-					}
-					set_autonomy = {
-						target = HUN
-						autonomy_state = autonomy_reichsprotectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							ROM = {
-								is_subject = yes
-							}
-						}
-					}
-					set_autonomy = {
-						target = ROM
-						autonomy_state = autonomy_reichsprotectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							BUL = {
-								is_subject = yes
-							}
-						}
-					}
-					set_autonomy = {
-						target = BUL
-						autonomy_state = autonomy_reichsprotectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-				}
-			}
-
-			HUN = {
-				set_cosmetic_tag = HUN_GER
-				add_ideas = GER_united_industry
-			}
-			ROM = {
-				set_cosmetic_tag = ROM_GER
-				add_ideas = GER_united_industry
-			}
-			BUL = {
-				set_cosmetic_tag = BUL_GER
-				add_ideas = GER_united_industry
-			}
-			GER = {
-				add_ideas = GER_united_industry
-			}
-
-			unlock_decision_category_tooltip = GER_united_industry_dec_cat
 		}
 	}
 }
