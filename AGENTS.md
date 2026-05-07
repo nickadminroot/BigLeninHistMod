@@ -31,7 +31,7 @@ Configuration:
 - `PDX_SMOKE_HOME` - Use a fixed isolated temp/user-data root for debugging. When set, data is retained.
 - `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
 - `SMOKE_MAX_MATCH_LINES` - Maximum matching log-context lines to print on failure. Defaults to `200`.
-- `SMOKE_IGNORED_ERROR_FILES_PATTERN` - Extended regex for error-log source files to ignore in smoke output and failure counting. Defaults to `common/units/infantry\.txt|common/decisions/USA\.txt`.
+- `SMOKE_IGNORED_ERROR_FILES_PATTERN` - Extended regex for error-log source files to ignore in smoke output and failure counting. Defaults to `common/units/infantry[.]txt|common/decisions/USA[.]txt`.
 
 The script seeds the isolated user-data directory from the normal profile's DLC state (`dlc_load.json`, `dlc_signature`, and `game_data.json` when present), then writes a temporary `mod/BigLeninHistMod.mod` and enables only this mod. If the installed game directory has an executable `cream.sh`, the script launches through it to match the local normal DLC-enabled start path; otherwise it launches `run_hoi4` directly. Timestamped CreamAPI `[info]` console lines are filtered from smoke output. It does not modify normal Paradox launcher state.
 

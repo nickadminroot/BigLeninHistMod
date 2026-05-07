@@ -13,7 +13,7 @@ SMOKE_TIMEOUT="${SMOKE_TIMEOUT:-60s}"
 SMOKE_TAG="${SMOKE_TAG:-GER}"
 SMOKE_MAX_MATCH_LINES="${SMOKE_MAX_MATCH_LINES:-200}"
 HOI4_SMOKE_KEEP_DATA="${HOI4_SMOKE_KEEP_DATA:-0}"
-SMOKE_IGNORED_ERROR_FILES_PATTERN="${SMOKE_IGNORED_ERROR_FILES_PATTERN:-common/units/infantry\.txt|common/decisions/USA\.txt}"
+SMOKE_IGNORED_ERROR_FILES_PATTERN="${SMOKE_IGNORED_ERROR_FILES_PATTERN:-common/units/infantry[.]txt|common/decisions/USA[.]txt}"
 
 RUN_HOI4="$HOI4_DIR/run_hoi4"
 CREAM_WRAPPER="$HOI4_DIR/cream.sh"
@@ -153,18 +153,50 @@ if [[ ! -f "$ERROR_LOG" ]]; then
 fi
 
 pattern='Error:|Invalid trigger|Invalid effect|Unexpected token|Couldn'\''t find texture|Missing texture|MAP_ERROR'
-all_matches="$(grep -En "$pattern" "$ERROR_LOG" || true)"
-matches="$(printf '%s\n' "$all_matches" | grep -Ev "$SMOKE_IGNORED_ERROR_FILES_PATTERN" || true)"
-matching_line_count="$(printf '%s\n' "$matches" | grep -c . || true)"
-ignored_line_count="$(printf '%s\n' "$all_matches" | grep -E "$SMOKE_IGNORED_ERROR_FILES_PATTERN" | grep -c . || true)"
-matches="$(printf '%s\n' "$matches" | sed -n "1,${SMOKE_MAX_MATCH_LINES}p")"
+MATCHES_FILE="$SMOKE_ROOT/matching-errors.txt"
+MATCH_COUNTS_FILE="$SMOKE_ROOT/matching-error-counts.txt"
+awk \
+    -v pattern="$pattern" \
+    -v ignore_pattern="$SMOKE_IGNORED_ERROR_FILES_PATTERN" \
+    -v output_file="$MATCHES_FILE" '
+function flush_entry() {
+    if (entry == "") {
+        return
+    }
+    if (entry ~ pattern) {
+        if (ignore_pattern != "" && entry ~ ignore_pattern) {
+            ignored_count++
+        } else {
+            match_count++
+            printf("---- error entry %d ----\n", match_count) >> output_file
+            line_count = split(entry, entry_lines, "\n")
+            for (line_index = 1; line_index <= line_count; line_index++) {
+                printf("  %s\n", entry_lines[line_index]) >> output_file
+            }
+        }
+    }
+    entry = ""
+}
+/^\[[0-9]{2}:[0-9]{2}:[0-9]{2}\]\[/ {
+    flush_entry()
+}
+{
+    entry = entry (entry == "" ? "" : "\n") $0
+}
+END {
+    flush_entry()
+    printf("%d %d\n", match_count, ignored_count)
+}
+' "$ERROR_LOG" > "$MATCH_COUNTS_FILE"
+read -r matching_entry_count ignored_entry_count < "$MATCH_COUNTS_FILE"
+matches="$(sed -n "1,${SMOKE_MAX_MATCH_LINES}p" "$MATCHES_FILE" 2>/dev/null || true)"
 
-if [[ "$matching_line_count" -gt 0 ]]; then
+if [[ "$matching_entry_count" -gt 0 ]]; then
     printf 'hoi4-smoke: serious startup/load errors found in %s\n' "$ERROR_LOG" >&2
-    printf 'hoi4-smoke: matching error lines: %s\n' "$matching_line_count" >&2
-    printf 'hoi4-smoke: ignored matching lines: %s\n' "$ignored_line_count" >&2
+    printf 'hoi4-smoke: matching error entries: %s\n' "$matching_entry_count" >&2
+    printf 'hoi4-smoke: ignored matching entries: %s\n' "$ignored_entry_count" >&2
     printf '%s\n' "$matches" >&2
-    if [[ "$matching_line_count" -gt "$SMOKE_MAX_MATCH_LINES" ]]; then
+    if [[ "$(wc -l < "$MATCHES_FILE")" -gt "$SMOKE_MAX_MATCH_LINES" ]]; then
         printf 'hoi4-smoke: output truncated to %s lines; inspect the retained error.log for full details\n' "$SMOKE_MAX_MATCH_LINES" >&2
     fi
     printf 'hoi4-smoke: isolated data retained at %s\n' "$SMOKE_ROOT" >&2
