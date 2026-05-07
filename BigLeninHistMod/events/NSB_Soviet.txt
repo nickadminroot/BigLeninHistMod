@@ -113,7 +113,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -194,7 +194,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -249,7 +249,7 @@ country_event = {
 			base = 10
 		}
 
-		if = {
+		IF = {
 			limit = {
 				has_idea = SOV_genrikh_yagoda
 			}
@@ -268,7 +268,7 @@ country_event = {
 
 			activate_advisor = SOV_nikolay_yezhov
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_idea = SOV_nikolay_yezhov
 			}
@@ -295,7 +295,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -404,13 +404,13 @@ country_event = {
 		#Increase moscow trial index by 1 for next event title
 		add_to_variable = { SOV_moscow_trial_index = 1 }
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -508,7 +508,7 @@ unit_leader_event = {
 		SOV_paranoia_decrease_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_decrease_tt
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -583,7 +583,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_low_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -652,7 +652,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_low_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -751,7 +751,7 @@ unit_leader_event = {
 			}
 		}
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -809,7 +809,7 @@ unit_leader_event = {
 			}
 		}
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -898,13 +898,13 @@ country_event = {
 			base = 10
 		}
 
-		if = {
+		IF = {
 			limit = {
 				has_idea = SOV_purged_junior_army_officers_3
 			}
 			#NOTHING HAPPENS, but this should not be a possibility
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_idea = SOV_purged_junior_army_officers_2
 			}
@@ -913,7 +913,7 @@ country_event = {
 				add_idea = SOV_purged_junior_army_officers_3
 			}
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_idea = SOV_purged_junior_army_officers_1
 			}
@@ -922,7 +922,7 @@ country_event = {
 				add_idea = SOV_purged_junior_army_officers_2
 			}
 		}
-		else = {
+		ELSE = {
 			add_ideas = SOV_purged_junior_army_officers_1
 		}
 
@@ -934,13 +934,13 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -1044,13 +1044,13 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_very_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -1147,7 +1147,7 @@ unit_leader_event = {
 		SOV_paranoia_decrease_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_decrease_tt
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -1222,7 +1222,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -1295,7 +1295,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -1355,13 +1355,13 @@ country_event = {
 			base = 10
 		}
 
-		if = {
+		IF = {
 			limit = {
 				has_idea = SOV_purged_junior_navy_officers_3
 			}
 			# NOTHING HAPPENS, but this should not be a possibility
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_idea = SOV_purged_junior_navy_officers_2
 			}
@@ -1370,7 +1370,7 @@ country_event = {
 				add_idea = SOV_purged_junior_navy_officers_3
 			}
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_idea = SOV_purged_junior_navy_officers_1
 			}
@@ -1379,7 +1379,7 @@ country_event = {
 				add_idea = SOV_purged_junior_navy_officers_2
 			}
 		}
-		else = {
+		ELSE = {
 			add_ideas = SOV_purged_junior_navy_officers_1
 		}
 
@@ -1391,13 +1391,13 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_low_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -1495,13 +1495,13 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_very_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -1580,7 +1580,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -1647,7 +1647,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_medium_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_regular
 			}
@@ -1701,7 +1701,7 @@ country_event = {
 			base = 10
 		}
 
-		if = {
+		IF = {
 			limit = { # MIG
 				check_variable = {
 					var = SOV_random_bureau_to_dissolve
@@ -1710,7 +1710,7 @@ country_event = {
 				}
 				NOT = { has_country_flag = SOV_mig_design_bureau_dissolved_flag }
 			}
-			if = { # If no AAT -> Then remove designer (in case it was hired etc)
+			IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny" }
 				}
@@ -1720,7 +1720,7 @@ country_event = {
 			set_country_flag = SOV_mig_design_bureau_dissolved_flag
 			unlock_decision_tooltip = SOV_reinstate_mig_design_bureau
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = { # ILYUSHIN
 				check_variable = {
 					var = SOV_random_bureau_to_dissolve
@@ -1729,7 +1729,7 @@ country_event = {
 				}
 				NOT = { has_country_flag = SOV_ilyushin_design_bureau_dissolved_flag }
 			}
-			if = { # If no AAT -> Then remove designer (in case it was hired etc)
+			IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny" }
 				}
@@ -1739,7 +1739,7 @@ country_event = {
 			set_country_flag = SOV_ilyushin_design_bureau_dissolved_flag
 			unlock_decision_tooltip = SOV_reinstate_ilyushin_design_bureau
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = { # TUPOLEV
 				check_variable = {
 					var = SOV_random_bureau_to_dissolve
@@ -1748,7 +1748,7 @@ country_event = {
 				}
 				NOT = { has_country_flag = SOV_tupolev_design_bureau_dissolved_flag }
 			}
-			if = { # If no AAT -> Then remove designer (in case it was hired etc)
+			IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny" }
 				}
@@ -1758,11 +1758,11 @@ country_event = {
 			set_country_flag = SOV_tupolev_design_bureau_dissolved_flag
 			unlock_decision_tooltip = SOV_reinstate_tupolev_design_bureau
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = { #YAKOVLEV
 				NOT = { has_country_flag = SOV_yakovlev_design_bureau_dissolved_flag }
 			}
-			if = { # If no AAT -> Then remove designer (in case it was hired etc)
+			IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny" }
 				}
@@ -1772,12 +1772,12 @@ country_event = {
 			set_country_flag = SOV_yakovlev_design_bureau_dissolved_flag
 			unlock_decision_tooltip = SOV_reinstate_yakovlev_design_bureau
 		}
-		else = { #RANDOMIZED VALUE FOR BUREAU HAS ALREADY BEEN DISSOLVED - Fallback to first non-dissolved bureau
-			if = { # MIG
+		ELSE = { #RANDOMIZED VALUE FOR BUREAU HAS ALREADY BEEN DISSOLVED - Fallback to first non-dissolved bureau
+			IF = { # MIG
 				limit = {
 					NOT = { has_country_flag = SOV_mig_design_bureau_dissolved_flag }
 				}
-				if = { # If no AAT -> Then remove designer (in case it was hired etc)
+				IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 					limit = {
 						NOT = { has_dlc = "Arms Against Tyranny" }
 					}
@@ -1787,11 +1787,11 @@ country_event = {
 				set_country_flag = SOV_mig_design_bureau_dissolved_flag
 				unlock_decision_tooltip = SOV_reinstate_mig_design_bureau
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = { # ILYUSHIN
 					NOT = { has_country_flag = SOV_ilyushin_design_bureau_dissolved_flag }
 				}
-				if = { # If no AAT -> Then remove designer (in case it was hired etc)
+				IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 					limit = {
 						NOT = { has_dlc = "Arms Against Tyranny" }
 					}
@@ -1801,11 +1801,11 @@ country_event = {
 				set_country_flag = SOV_ilyushin_design_bureau_dissolved_flag
 				unlock_decision_tooltip = SOV_reinstate_ilyushin_design_bureau
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = { # TUPOLEV
 					NOT = { has_country_flag = SOV_tupolev_design_bureau_dissolved_flag }
 				}
-				if = { # If no AAT -> Then remove designer (in case it was hired etc)
+				IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 					limit = {
 						NOT = { has_dlc = "Arms Against Tyranny" }
 					}
@@ -1815,8 +1815,8 @@ country_event = {
 				set_country_flag = SOV_tupolev_design_bureau_dissolved_flag
 				unlock_decision_tooltip = SOV_reinstate_tupolev_design_bureau
 			}
-			else = { #YAKOVLEV
-				if = { # If no AAT -> Then remove designer (in case it was hired etc)
+			ELSE = { #YAKOVLEV
+				IF = { # If no AAT -> Then remove designer (in case it was hired etc)
 					limit = {
 						NOT = { has_dlc = "Arms Against Tyranny" }
 					}
@@ -1836,13 +1836,13 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_very_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_purge_event_unavoidable_flag
 			}
 			custom_effect_tooltip = SOV_purge_event_unavoidable_purge_great_tt
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -1890,7 +1890,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = {
+			IF = {
 				limit = {
 					NOT = { has_country_flag = SOV_purged_airforce_chiefs_flag }
 				}
@@ -1931,7 +1931,7 @@ country_event = {
 		#PARANOIA decreases
 		SOV_paranoia_high_decrease_effect = yes
 
-		if = {
+		IF = {
 			limit = {
 				has_political_power < SOV_purge_event_pp_to_avoid_great
 			}
@@ -2295,7 +2295,7 @@ country_event = {
 		}
 
 		#Lone Wolf Finland can't join any factions - Tooltip for player
-		if = {
+		IF = {
 			limit = {	
 				FIN_is_lone_wolf_finland = yes
 			}
@@ -2347,7 +2347,7 @@ country_event = {
 		}
 
 		#Lone Wolf Finland can't join any factions - Tooltip for player
-		if = {
+		IF = {
 			limit = {	
 				FIN_is_lone_wolf_finland = yes
 			}
@@ -2423,7 +2423,7 @@ country_event = {
 		}
 
 		hidden_effect = { #Country is slightly more willing to cooperate with Soviets
-			if = {
+			IF = {
 				limit = {
 					FROM = {
 						original_tag = SOV
@@ -2440,7 +2440,7 @@ country_event = {
 					value = 10
 				}
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					FROM = {
 						original_tag = ITA
@@ -2514,7 +2514,7 @@ country_event = {
 
 		#CAPITAL
 		capital_scope = {
-			if = {
+			IF = {
 				limit = {
 					infrastructure < 4
 				}
@@ -2524,7 +2524,7 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					infrastructure < 5
 				}
@@ -2534,7 +2534,7 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -2549,7 +2549,7 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -2567,7 +2567,7 @@ country_event = {
 		}
 
 		#ADDITIONAL RANDOM STATE
-		if = {
+		IF = {
 			limit = {
 				any_owned_state = {
 					is_capital = no
@@ -2577,7 +2577,7 @@ country_event = {
 				limit = {
 					is_capital = no
 				}
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -2587,7 +2587,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				if = {
+				IF = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
@@ -2803,13 +2803,13 @@ country_event = {
 
 		FROM = {
 			effect_tooltip = {
-				if = {
+				IF = {
 					limit = {
 						ROOT = { controls_state = 463 }
 					}
 					transfer_state = 463 #ALASKA
 				}
-				if = {
+				IF = {
 					limit = {
 						ROOT = { controls_state = 650 }
 					}
@@ -2872,13 +2872,13 @@ country_event = {
 	option = { #Ok
 		name = NSB_soviet_foreign_politics_events.31.a
 		
-		if = {
+		IF = {
 			limit = {
 				FROM = { controls_state = 463 }
 			}
 			transfer_state = 463 #ALASKA
 		}
-		if = {
+		IF = {
 			limit = {
 				FROM = { controls_state = 650 }
 			}
@@ -3065,13 +3065,13 @@ country_event = {
 			}
 		}
 
-		if = {
+		IF = {
 			limit = {
 				NOT = {
 					is_in_faction_with = FROM
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					OR = {
 						has_government = fascism
@@ -3083,7 +3083,7 @@ country_event = {
 					target = FROM
 				}
 			}
-			else = {
+			ELSE = {
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = FROM
@@ -3678,13 +3678,13 @@ country_event = {
 
 		FROM = {
 			effect_tooltip = {
-				if = {
+				IF = {
 					limit = {
 						NOT = {
 							is_in_faction_with = ROOT
 						}
 					}
-					if = {
+					IF = {
 						limit = {
 							OR = {
 								has_government = fascism
@@ -3697,7 +3697,7 @@ country_event = {
 						}
 					}
 				}
-				else = {
+				ELSE = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
 						target = ROOT
@@ -3879,7 +3879,7 @@ country_event = {
 	option = { # Nice
 		name = NSB_soviet_foreign_politics_events.10.a
 		
-		if = { #Spanish POUM -> Not actually transfering them, just creating spoawning them
+		IF = { #Spanish POUM -> Not actually transfering them, just creating spoawning them
 			limit = {
 				tag = SPC
 			}
@@ -3889,7 +3889,7 @@ country_event = {
 				producer = FROM
 			}
 		}
-		else = { #Chinese tags get different stuff -> SOV actually sends stuff
+		ELSE = { #Chinese tags get different stuff -> SOV actually sends stuff
 			effect_tooltip = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -4156,7 +4156,7 @@ country_event = {
 			}
 			transfer_state = 537
 			transfer_state = 555
-			if = {
+			IF = {
 				limit = {
 					has_country_flag = SOV_hokkaido_included_in_peace_deal_flag
 				}
@@ -4179,7 +4179,7 @@ country_event = {
 	option = { # Bad for them
 		name = NSB_soviet_foreign_politics_events.265.a
 
-		if = {
+		IF = {
 			limit = {
 				has_country_flag = SOV_hokkaido_included_in_peace_deal_flag
 			}
@@ -4341,7 +4341,7 @@ country_event = {
 			#Diplo stuff
 			add_opinion_modifier = { target = FROM modifier = SOV_soviet_japanese_pact_against_usa }
 			FROM = { add_opinion_modifier = { target = ROOT modifier = SOV_soviet_japanese_pact_against_usa } }
-			if = {
+			IF = {
 				limit = {
 					NOT = {
 						has_non_aggression_pact_with = SOV
@@ -4366,21 +4366,21 @@ country_event = {
 			638 = { add_claim_by = JAP } #Guam
 
 			#War
-			if = {
+			IF = {
 				limit = {
 					JAP = {	has_war_with = USA }
 					NOT = { SOV = { has_war_with = USA } }
 				}
 				SOV = { add_to_war = { targeted_alliance = JAP enemy = USA hostility_reason = asked_to_join } }
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					SOV = { has_war_with = USA }
 					NOT = { JAP = {	has_war_with = USA } }
 				}
 				JAP = { add_to_war = { targeted_alliance = SOV enemy = USA hostility_reason = asked_to_join } }
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					NOT = { SOV = { has_war_with = USA } }
 					NOT = { JAP = {	has_war_with = USA } }
@@ -4468,21 +4468,21 @@ country_event = {
 			638 = { add_claim_by = JAP } #Guam
 		}
 		#War
-		if = {
+		IF = {
 			limit = {
 				JAP = {	has_war_with = USA }
 				NOT = { SOV = { has_war_with = USA } }
 			}
 			SOV = { add_to_war = { targeted_alliance = JAP enemy = USA hostility_reason = asked_to_join } }
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				SOV = { has_war_with = USA }
 				NOT = { JAP = {	has_war_with = USA } }
 			}
 			JAP = { add_to_war = { targeted_alliance = SOV enemy = USA hostility_reason = asked_to_join } }
 		}
-		else_if = {
+		ELSE_IF = {
 			limit = {
 				NOT = { SOV = { has_war_with = USA } }
 				NOT = { JAP = {	has_war_with = USA } }
@@ -4790,7 +4790,7 @@ country_event = {
 						type = chromium
 						amount = 3
 					}
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -4803,7 +4803,7 @@ country_event = {
 				}
 
 				617 = { #URUMQI
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -4916,7 +4916,7 @@ country_event = {
 					type = chromium
 					amount = 3
 				}
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -4929,7 +4929,7 @@ country_event = {
 			}
 
 			617 = { #URUMQI
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5071,7 +5071,7 @@ country_event = {
 						type = oil
 						amount = 6
 					}
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5084,7 +5084,7 @@ country_event = {
 				}
 				give_resource_rights = { receiver = SOV state = 618 } # Grant Resource rights to SOV
 				617 = { #URUMQI - Infra
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5202,7 +5202,7 @@ country_event = {
 					type = oil
 					amount = 6
 				}
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5215,7 +5215,7 @@ country_event = {
 			}
 			give_resource_rights = { receiver = SOV state = 618 } # Grant Resource rights to SOV (Not scoping to make tooltip slightly shorter)
 			617 = { #URUMQI - Infra
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5295,7 +5295,7 @@ country_event = {
 				custom_effect_tooltip = SOV_sinkiang_when_project_finishes_tt
 				
 				617 = { #URUMQI - Mil
-					if = {
+					IF = {
 						limit = {
 							free_building_slots = {
 								building = arms_factory
@@ -5312,7 +5312,7 @@ country_event = {
 					}
 				}
 				759 = { #KUNLUN SHAN - Infra + Air base + Forts
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5322,7 +5322,7 @@ country_event = {
 							instant_build = yes
 						}
 					}
-					if = {
+					IF = {
 						limit = {
 							air_base < 9
 						}
@@ -5332,7 +5332,7 @@ country_event = {
 							instant_build = yes
 						}
 					}
-					else_if = {
+					ELSE_IF = {
 						limit = {
 							air_base < 10
 						}
@@ -5354,7 +5354,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				if = {  #DABANCHENG - Forts
+				IF = {  #DABANCHENG - Forts
 					limit = {
 						has_full_control_of_state = 760
 					}
@@ -5469,7 +5469,7 @@ country_event = {
 
 			custom_effect_tooltip = SOV_sinkiang_when_project_finishes_tt
 			617 = { #URUMQI - Mil
-				if = {
+				IF = {
 					limit = {
 						free_building_slots = {
 							building = arms_factory
@@ -5486,7 +5486,7 @@ country_event = {
 				}
 			}
 			759 = { #KUNLUN SHAN - Infra + Air base + Forts
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5496,7 +5496,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				if = {
+				IF = {
 					limit = {
 						air_base < 9
 					}
@@ -5506,7 +5506,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				else_if = {
+				ELSE_IF = {
 					limit = {
 						air_base < 10
 					}
@@ -5528,7 +5528,7 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			if = {  #DABANCHENG - Forts
+			IF = {  #DABANCHENG - Forts
 				limit = {
 					SIK = { has_full_control_of_state = 760 }
 				}
@@ -5603,7 +5603,7 @@ country_event = {
 				custom_effect_tooltip = SOV_sinkiang_when_project_finishes_tt
 				
 				755 = { #HAIXI - Infra
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5615,7 +5615,7 @@ country_event = {
 					}
 				}
 				756 = { #JIUQUAN - Infra + Oil
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5631,7 +5631,7 @@ country_event = {
 					}
 				}
 				604 = { #QINGHAI (Golmud) - Infra 
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5651,7 +5651,7 @@ country_event = {
 					}
 				}
 				754 = { #GOLOG (Lanzhou) - Infra
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5671,7 +5671,7 @@ country_event = {
 					}
 				}
 				283 = { #GANSU - Infra + Air Base + Fort
-					if = {
+					IF = {
 						limit = {
 							infrastructure < 5
 						}
@@ -5681,7 +5681,7 @@ country_event = {
 							instant_build = yes
 						}
 					}
-					if = {
+					IF = {
 						limit = {
 							air_base < 9
 						}
@@ -5691,7 +5691,7 @@ country_event = {
 							instant_build = yes
 						}
 					}
-					else_if = {
+					ELSE_IF = {
 						limit = {
 							air_base < 10
 						}
@@ -5796,7 +5796,7 @@ country_event = {
 			custom_effect_tooltip = SOV_sinkiang_when_project_finishes_tt
 			
 			755 = { #HAIXI - Infra
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5808,7 +5808,7 @@ country_event = {
 				}
 			}
 			756 = { #JIUQUAN - Infra + Oil
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5824,7 +5824,7 @@ country_event = {
 				}
 			}
 			604 = { #QINGHAI (Golmud) - Infra 
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5844,7 +5844,7 @@ country_event = {
 				}
 			}
 			754 = { #GOLOG (Lanzhou) - Infra
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5864,7 +5864,7 @@ country_event = {
 				}
 			}
 			283 = { #GANSU - Infra + Air Base + Fort
-				if = {
+				IF = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5874,7 +5874,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				if = {
+				IF = {
 					limit = {
 						air_base < 9
 					}
@@ -5884,7 +5884,7 @@ country_event = {
 						instant_build = yes
 					}
 				}
-				else_if = {
+				ELSE_IF = {
 					limit = {
 						air_base < 10
 					}
@@ -6136,7 +6136,7 @@ country_event = {
 			}
 		}
 
-		if = {
+		IF = {
 			limit = {
 				is_subject_of = SOV
 			}
@@ -6175,7 +6175,7 @@ country_event = {
 					id = SIK		
 					value = -200
 				}
-				if = {
+				IF = {
 					limit = {
 						has_war = no
 					}
@@ -6185,7 +6185,7 @@ country_event = {
 						value = 100
 					}
 				}
-				else = {
+				ELSE = {
 					add_ai_strategy = {
 						type = antagonize
 						id = SIK		
@@ -6203,7 +6203,7 @@ country_event = {
 				id = SOV			
 				value = -100
 			}
-			if = {
+			IF = {
 				limit = {
 					CHI = { is_faction_leader = yes }
 					NOT = { has_war_with = CHI }	
@@ -6214,7 +6214,7 @@ country_event = {
 					value = 100
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					PRC = { is_faction_leader = yes }
 					NOT = { has_war_with = PRC }	
@@ -6225,7 +6225,7 @@ country_event = {
 					value = 100
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					XSM = { is_faction_leader = yes }
 					NOT = { has_war_with = XSM }	
@@ -6236,7 +6236,7 @@ country_event = {
 					value = 100
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					SHX = { is_faction_leader = yes }
 					NOT = { has_war_with = SHX }	
@@ -6247,7 +6247,7 @@ country_event = {
 					value = 100
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					YUN = { is_faction_leader = yes }
 					NOT = { has_war_with = YUN }	
@@ -6258,7 +6258,7 @@ country_event = {
 					value = 100
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					GXC = { is_faction_leader = yes }
 					NOT = { has_war_with = GXC }	
@@ -6276,7 +6276,7 @@ country_event = {
 			limit = {
 				is_in_faction_with = ROOT
 			}
-			if = {
+			IF = {
 				limit = {
 					has_guaranteed = ROOT
 				}
@@ -6286,7 +6286,7 @@ country_event = {
 					active = no
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					is_guaranteed_by = ROOT
 				}
@@ -6298,7 +6298,7 @@ country_event = {
 					}
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					has_non_aggression_pact_with = ROOT
 				}
@@ -6308,7 +6308,7 @@ country_event = {
 					active = no
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					has_military_access_to = ROOT
 				}
@@ -6318,7 +6318,7 @@ country_event = {
 					active = no
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					gives_military_access_to = ROOT
 				}
@@ -6526,23 +6526,23 @@ country_event = {
 		#Effects to Soviets
 		effect_tooltip = {
 			FROM = {
-				if = {
+				IF = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
-					if = {
+					IF = {
 						limit = {
 							NOT = { has_tech = basic_ship_hull_cruiser }
 						}
 						set_technology = { basic_ship_hull_cruiser = 1 }
 					}
-					if = {
+					IF = {
 						limit = {
 							NOT = { has_tech = basic_cruiser_armor_scheme }
 						}
 						set_technology = { basic_cruiser_armor_scheme = 1 }
 					}
-					if = {
+					IF = {
 						limit = {
 							has_tech = basic_heavy_battery
 						}
@@ -6567,7 +6567,7 @@ country_event = {
 							}
 						}
 					}
-					else = {
+					ELSE = {
 						create_equipment_variant = {
 							name = "Hipper Class"
 							type = ship_hull_cruiser_2
@@ -6612,8 +6612,8 @@ country_event = {
 						category = dd_tech
 					}
 				}
-				else = { #No MTG
-					if = {
+				ELSE = { #No MTG
+					IF = {
 						limit = {
 							NOT = { has_tech = basic_heavy_cruiser }
 						}
@@ -6715,23 +6715,23 @@ country_event = {
 	option = { # Good
 		name = NSB_soviet_soviet_german_trade_agreement.2.a
 
-		if = {
+		IF = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			if = {
+			IF = {
 				limit = {
 					NOT = { has_tech = basic_ship_hull_cruiser }
 				}
 				set_technology = { basic_ship_hull_cruiser = 1 }
 			}
-			if = {
+			IF = {
 				limit = {
 					NOT = { has_tech = basic_cruiser_armor_scheme }
 				}
 				set_technology = { basic_cruiser_armor_scheme = 1 }
 			}
-			if = {
+			IF = {
 				limit = {
 					has_tech = basic_heavy_battery
 				}
@@ -6756,7 +6756,7 @@ country_event = {
 					}
 				}
 			}
-			else = {
+			ELSE = {
 				create_equipment_variant = {
 					name = "Hipper Class"
 					type = ship_hull_cruiser_2
@@ -6801,8 +6801,8 @@ country_event = {
 				category = dd_tech
 			}			
 		}
-		else = { #No MTG
-			if = {
+		ELSE = { #No MTG
+			IF = {
 				limit = {
 					NOT = { has_tech = basic_heavy_cruiser }
 				}
@@ -7360,7 +7360,7 @@ country_event = {
 	option = { # Good, let's ask POL
 		name = NSB_soviet_policies_of_collective_security.6.a
 
-		if = {
+		IF = {
 			limit = {
 				country_exists = POL
 			}
@@ -7371,7 +7371,7 @@ country_event = {
 			}
 			custom_effect_tooltip = NSB_soviet_policies_of_collective_security_tt
 		}
-		else = { #Fallback in case Poland gets wiped out during this political jobbery
+		ELSE = { #Fallback in case Poland gets wiped out during this political jobbery
 			FROM = { country_event = { id = NSB_soviet_policies_of_collective_security.2 hours = 8 random_hours = 4 } }
 
 			effect_tooltip = {
@@ -7610,7 +7610,7 @@ country_event = {
 	option = { # Good
 		name = NSB_soviet_atomic_bomb_project.1.a
 
-		if = {
+		IF = {
 			limit = {
 				NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
 			}
@@ -7619,7 +7619,7 @@ country_event = {
 				value = 0.4
 			}
 		}
-		else = {
+		ELSE = {
 			add_timed_idea = {
 				idea = SOV_stolen_vital_nuclear_information
 				days = 180
@@ -7644,7 +7644,7 @@ country_event = {
 
 		effect_tooltip = {
 			var:SOV_aggrieved_country_atomic_spies = {
-				if = {
+				IF = {
 					limit = {
 						original_tag = USA
 					}
@@ -7653,7 +7653,7 @@ country_event = {
 						modifier = SOV_attempted_to_infiltrate_manhattan_project
 					}
 				}
-				else = {
+				ELSE = {
 					add_opinion_modifier = {
 						target = ROOT
 						modifier = SOV_attempted_to_infiltrate_our_atomic_program
@@ -7678,7 +7678,7 @@ country_event = {
 
 		add_political_power = 50
 
-		if = {
+		IF = {
 			limit = {
 				original_tag = USA
 			}
@@ -7687,7 +7687,7 @@ country_event = {
 				modifier = SOV_attempted_to_infiltrate_manhattan_project
 			}
 		}
-		else = {
+		ELSE = {
 			add_opinion_modifier = {
 				target = FROM
 				modifier = SOV_attempted_to_infiltrate_our_atomic_program
@@ -7840,7 +7840,7 @@ country_event = {
 	option = {
 		name = NSB_soviet_spanish_civil_war.2.a
 		
-		if = {
+		IF = {
 			limit = {
 				NOT = { has_template = "International Marxist Brigades" }
 			}
@@ -7882,7 +7882,7 @@ country_event = {
 			days = 180
 		}
 
-		if = {
+		IF = {
 			limit = {
 				NOT = { has_template = "Soviet Special Brigades" }
 			}
@@ -7932,7 +7932,7 @@ country_event = {
 			days = 180
 		}
 
-		if = {
+		IF = {
 			limit = {
 				NOT = { has_template = "International Marxist Brigades" }
 			}
@@ -8047,13 +8047,13 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			FROM = {
-				if = {
+				IF = {
 					limit = {
 						check_variable = { SOV_planned_economy_industrial_capacity_factory_initial < 0.1 }
 					}
 					add_to_variable = { SOV_planned_economy_industrial_capacity_factory_initial = 0.01 }
 				}
-				if = {
+				IF = {
 					limit = {
 						check_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_initial > -0.1 }
 					}
@@ -8145,14 +8145,14 @@ country_event = {
 			SOV_left_opposition_civil_war_start = yes 
 
 			# Return Trotsky from Mexico
-			if = {
+			IF = {
 				limit = {
 					has_global_flag = AAT_trotsky_in_mexico
 				}
 				set_global_flag = flag_trotsky_returning_to_ussr_from_mexico
 				MEX = { country_event = { id = mexico.22 hours = 1} }	
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					has_global_flag = NOR_trotsky_in_norway
 				}
@@ -9070,7 +9070,7 @@ country_event = {
 		name = NSB_soviet_permanent_revolution.1.a
 
 		effect_tooltip = {
-			if = { #I f country has banned communism, then add the weakened version of the NS
+			IF = { #I f country has banned communism, then add the weakened version of the NS
 				limit = {
 					has_country_flag = banned_communism_flag
 				}
@@ -9079,7 +9079,7 @@ country_event = {
 					days = 120
 				}
 			}
-			else = {
+			ELSE = {
 				add_timed_idea = {
 					idea = SOV_trotskyist_revolutionary_agitation
 					days = 120
@@ -9107,7 +9107,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = { #sUBJECT EFFECTS
+			IF = { #sUBJECT EFFECTS
 				limit = {
 					is_subject_of = FROM
 				}
@@ -9117,9 +9117,9 @@ country_event = {
 					localization = SOV_for_the_common_good
 				}
 			}
-			else = { #ALLY EFFECTS
+			ELSE = { #ALLY EFFECTS
 				add_ideas = SOV_for_the_common_good_allies
-				if = {
+				IF = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
@@ -9136,7 +9136,7 @@ country_event = {
 		name = NSB_soviet_for_the_common_good.1.a
 
 		effect_tooltip = {
-			if = { #sUBJECT EFFECTS
+			IF = { #sUBJECT EFFECTS
 				limit = {
 					is_subject_of = FROM
 				}
@@ -9146,9 +9146,9 @@ country_event = {
 					localization = SOV_for_the_common_good
 				}
 			}
-			else = { #ALLY EFFECTS
+			ELSE = { #ALLY EFFECTS
 				add_ideas = SOV_for_the_common_good_allies
-				if = {
+				IF = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
@@ -12180,7 +12180,7 @@ country_event = {
 			base = 5 # The AI needs all the help it can get
 		}
 		#Check for Karelian uprising since war against SOS (AI Stalin) is declared there
-		if = {
+		IF = {
 			limit = {
 				check_variable = { SOV.SOV_nationalist_country = KAR }
 				FIN = {
@@ -12202,7 +12202,7 @@ country_event = {
 				}
 			}
 		}
-		else = {
+		ELSE = {
 			var:SOV.SOV_nationalist_country = {
 				add_named_threat = { 
 					threat = -1
@@ -12230,7 +12230,7 @@ country_event = {
 		}
 
 		#Check for Karelian uprising since war against SOS (AI Stalin) is declared there
-		if = {
+		IF = {
 			limit = {
 				check_variable = { SOV.SOV_nationalist_country = KAR }
 				FIN = {
@@ -12265,7 +12265,7 @@ country_event = {
 		}
 
 		#Check for Karelian uprising and Finnish commitment to show in tooltip when appropriate
-		if = {
+		IF = {
 			limit = {
 				check_variable = { SOV.SOV_nationalist_country = KAR }
 				FIN = {
@@ -12887,7 +12887,7 @@ country_event = {
 		FROM = {
 			country_event = { id = NSB_soviet_fascist_tsarist.17 }
 		}
-		if = {
+		IF = {
 			limit = {
 				tag = ENG
 				FRA = {
@@ -12898,7 +12898,7 @@ country_event = {
 			}
 			FRA = { country_event = { id = NSB_soviet_fascist_tsarist.19 hours = 12 random = 60 } }
 		}
-		if = {
+		IF = {
 			limit = {
 				tag = FRA
 				ENG = {
@@ -12937,14 +12937,14 @@ country_event = {
 				set_faction_name = TRIPLE_ENTENTE
 				add_to_faction = ROOT
 			}
-			if = {
+			IF = {
 				limit = {
 					FROM = { tag = ENG }
 					FRA = { is_in_faction = no }
 				}
 				FRA = { country_event = { id = NSB_soviet_fascist_tsarist.19 hours = 12 random = 60 } }
 			}
-			if = {
+			IF = {
 				limit = {
 					FROM = { tag = FRA }
 					ENG = { is_in_faction = no }
