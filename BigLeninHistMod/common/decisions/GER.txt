@@ -19490,8 +19490,6 @@ GER_realpolitik_cat = {
 			}
 		}
 	
-	}
-
 	# Found a Transcaucasian Satellite
 	GER_found_a_transcacuasian_satellite_state_decision = {
 
