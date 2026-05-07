@@ -6960,7 +6960,7 @@ SOV_set_up_nkvd = {
 		}
 	}
 
-	IF = {
+	if = {
 		limit = {
 			OR = {
 				AND = {
@@ -6988,7 +6988,7 @@ SOV_set_up_nkvd = {
 			}
 		}
 	}
-	IF = {
+	if = {
 		limit = {}
 		random_owned_controlled_state = {
 			create_unit = {
@@ -7121,7 +7121,7 @@ SOV_set_up_left_opposition_militia = {
 	    is_locked = yes
 	}
 	every_owned_state = {
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					has_state_category = city
@@ -7134,7 +7134,7 @@ SOV_set_up_left_opposition_militia = {
 				division = "name = \"Workers' Miltia Brigade\" division_template = \"Trotskyist Workers' Militia\" start_experience_factor = 0.09 start_equipment_factor = 0.85" owner = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				NOT = { has_state_category = enclave }
 				NOT = { has_state_category = wasteland }
@@ -7175,7 +7175,7 @@ SOV_set_up_right_opposition_militia = {
 	    is_locked = yes
 	}
 	every_owned_state = {
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					has_state_category = city
@@ -7188,7 +7188,7 @@ SOV_set_up_right_opposition_militia = {
 				division = "name = \"Workers' Miltia Brigade\" division_template = \"Bukharinist Workers' Militia\" start_experience_factor = 0.09 start_equipment_factor = 0.85" owner = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				NOT = { has_state_category = enclave }
 				NOT = { has_state_category = wasteland }
@@ -7198,7 +7198,7 @@ SOV_set_up_right_opposition_militia = {
 			}
 		}
 		# More Peasant Militia if collectivization has been reversed
-		IF = {
+		if = {
 			limit = {
 				ROOT = { has_completed_focus = SOV_reverse_the_collectivization_process }
 				NOT = { has_state_category = enclave }
@@ -7213,7 +7213,7 @@ SOV_set_up_right_opposition_militia = {
 
 SOV_set_up_extras_from_concessions = {
 	# Extra Troops from Japan?
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_CSW_transfer_vladivostok_flag
 			any_country= {
@@ -7224,7 +7224,7 @@ SOV_set_up_extras_from_concessions = {
 		SOV_set_up_japanese_troops = yes
 	}
 	# Equipment from Japan in return for North Sakhalin
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_CSW_transfer_sakhalin_flag
 			any_country= {
@@ -7232,7 +7232,7 @@ SOV_set_up_extras_from_concessions = {
 				owns_state = 655
 			}
 		}
-		IF = {
+		if = {
 			limit = { check_variable = { SOV.SOV_japanese_rifles > 0 } }
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
@@ -7240,7 +7240,7 @@ SOV_set_up_extras_from_concessions = {
 				producer = JAP
 			}
 		}
-		IF = {
+		if = {
 			limit = { check_variable = { SOV.SOV_japanese_guns > 0 } }
 			add_equipment_to_stockpile = {
 			    type = artillery_equipment
@@ -7248,7 +7248,7 @@ SOV_set_up_extras_from_concessions = {
 				producer = JAP
 			}
 		}
-		IF = {
+		if = {
 			limit = { check_variable = { SOV.SOV_japanese_fighters > 0 } }
 			add_equipment_to_stockpile = {
 			    type = small_plane_airframe
@@ -7259,7 +7259,7 @@ SOV_set_up_extras_from_concessions = {
 	}
 
 	# Advisors from Germany
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_CSW_german_advisors_flag
 		}
@@ -7272,11 +7272,11 @@ SOV_set_up_extras_from_concessions = {
 	}
 
 	# Equipment from Germany
-	IF = { 
+	if = { 
 		limit = { 
 			has_country_flag = SOV_CSW_baku_oil_flag 
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "No Step Back"
@@ -7284,7 +7284,7 @@ SOV_set_up_extras_from_concessions = {
 			}
 			add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = 100 producer = GER }
 		}
-		ELSE = { 
+		else = { 
 			add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 100 producer = GER variant_name = "Panzer II Ausf. a" } 
 		}
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 producer = GER }
@@ -7294,7 +7294,7 @@ SOV_set_up_extras_from_concessions = {
 
 
 	# German Ukrainian Insurrection
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_CSW_ukraine_germany_ready_flag
 		}
@@ -7513,17 +7513,17 @@ SOV_start_setting_up_hq_state = {
 SOV_set_civil_war_state = {
 	custom_effect_tooltip = SOV_set_civil_war_state_tt
 
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		FROM = { set_state_flag = SOV_left_opposition_state }
 		FROM = { clr_state_flag = SOV_is_aligning_left }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		FROM = { set_state_flag = SOV_right_opposition_state }
 		FROM = { clr_state_flag = SOV_is_aligning_right }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_exiles = yes }
 		FROM = { set_state_flag = SOV_exiles_state }
 		FROM = { clr_state_flag = SOV_is_aligning_exiles }
@@ -7534,15 +7534,15 @@ SOV_set_civil_war_state = {
 SOV_start_infiltrating_state = {
 	custom_effect_tooltip = SOV_start_infiltrating_state_tt
 	set_country_flag = { flag = SOV_align_state_in_process days = 14 value = 1 }
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		FROM = { set_state_flag = SOV_is_aligning_left }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		FROM = { set_state_flag = SOV_is_aligning_right }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_exiles = yes }
 		FROM = { set_state_flag = SOV_is_aligning_exiles }
 	}
@@ -7553,7 +7553,7 @@ SOV_initiate_civil_war = {
 
 		# Set War Flag
 		set_global_flag = SOV_soviet_civil_war
-		IF = {
+		if = {
 			limit = {
 				SOV_is_exiles = yes 
 			}
@@ -7578,7 +7578,7 @@ SOV_initiate_civil_war = {
 }
 
 SOV_set_up_civil_war_capital = {
-	IF = {
+	if = {
 		limit = {
 			check_variable = { ROOT.SOV_civil_war_start_state = 0 }
 		}
@@ -7590,15 +7590,15 @@ SOV_set_up_civil_war_capital = {
 				NOT = { region = 133 }
 			}
 			set_variable = { ROOT.SOV_civil_war_start_state = THIS }
-			IF = {
+			if = {
 				limit = { SOV_is_left_opposition = yes }
 				THIS = { set_state_flag = SOV_left_opposition_state }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { SOV_is_right_opposition = yes }
 				THIS = { set_state_flag = SOV_right_opposition_state }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { SOV_is_exiles = yes }
 				THIS = { set_state_flag = SOV_exiles_state }
 			}
@@ -7608,14 +7608,14 @@ SOV_set_up_civil_war_capital = {
 		state = var:ROOT.SOV_civil_war_start_state
 		remember_old_capital = no
 	}
-	IF = {
+	if = {
 		limit = {
 			check_variable = { ROOT.SOV_stalinist_civil_war_start_state = 0 }
 		}
 		set_variable = { ROOT.SOV_stalinist_civil_war_start_state = 219 }
 	}
 	# Increase importance of Chita if capital, and add hub (for supply and surrender)
-	IF = {
+	if = {
 		limit = {
 			var:ROOT.SOV_civil_war_start_state = { state = 563 }
 		}
@@ -7637,15 +7637,15 @@ SOV_set_up_civil_war_capital = {
 
 SOV_set_up_civil_war_army_fractions = {
 	# Verify armed forces fractions
-	IF = {
+	if = {
 		limit = { SOV_is_right_opposition = yes }
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_right_opposition_army_support }
 			}
 			set_variable = { ROOT.SOV_right_opposition_army_support = 0.2 }
 		}
-		IF = { 
+		if = { 
 			limit = { 
 				SOV = { is_ai = yes } 
 				check_variable = { ROOT.SOV_right_opposition_army_support < 0.55 }
@@ -7657,7 +7657,7 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_right_opposition_navy_support }
 			}
@@ -7668,7 +7668,7 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_right_opposition_air_support }
 			}
@@ -7686,17 +7686,17 @@ SOV_set_up_civil_war_army_fractions = {
 		set_temp_variable = { temp_centre_air = 1 }
 		subtract_from_temp_variable = { temp_centre_air = ROOT.SOV_right_opposition_air_support }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV_is_left_opposition = yes
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_left_opposition_army_support }
 			}
 			set_variable = { ROOT.SOV_left_opposition_army_support = 0.2 }
 		}
-		IF = { 
+		if = { 
 			limit = { 
 				SOV = { is_ai = yes } 
 				check_variable = { ROOT.SOV_left_opposition_army_support < 0.55 }
@@ -7708,7 +7708,7 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_left_opposition_navy_support }
 			}
@@ -7719,7 +7719,7 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_left_opposition_air_support }
 			}
@@ -7737,17 +7737,17 @@ SOV_set_up_civil_war_army_fractions = {
 		set_temp_variable = { temp_centre_air = 1 }
 		subtract_from_temp_variable = { temp_centre_air = ROOT.SOV_left_opposition_air_support }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV_is_exiles = yes
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_exiles_army_support }
 			}
 			set_variable = { ROOT.SOV_exiles_army_support = 0.2 }
 		}
-		IF = { 
+		if = { 
 			limit = { 
 				SOV = { is_ai = yes }
 				check_variable = { ROOT.SOV_exiles_army_support < 0.55 }
@@ -7759,7 +7759,7 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_exiles_navy_support }
 			}
@@ -7770,13 +7770,13 @@ SOV_set_up_civil_war_army_fractions = {
 			min = 0
 			max = 0.9
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_variable = ROOT.SOV_exiles_air_support }
 			}
 			set_variable = { ROOT.SOV_exiles_air_support = 0 }
 		}
-		IF = { 
+		if = { 
 			limit = { 
 				SOV = { is_ai = yes } 
 				check_variable = { ROOT.SOV_exiles_air_support < 0.55 }
@@ -7801,21 +7801,21 @@ SOV_set_up_civil_war_army_fractions = {
 
 SOV_start_civil_war = {
 	# Define the Player Country Ideology
-	IF= {
+	if= {
 		limit = { SOV_is_left_opposition = yes }
 		set_temp_variable = { temp_ideology = token:communism }
 	}
-	ELSE_IF= {
+	else_if= {
 		limit = { SOV_is_right_opposition = yes }
 		set_temp_variable = { temp_ideology = token:communism }
 	}
-	ELSE_IF= {
+	else_if= {
 		limit = { SOV_is_exiles = yes }
 		set_temp_variable = { temp_ideology = token:neutrality }
 	}
 
 	# Lose border war with JAP 
-	IF = {
+	if = {
 		limit = {
 			has_border_war_between = {
 				attacker = 527
@@ -7828,7 +7828,7 @@ SOV_start_civil_war = {
 			defender = 408
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_border_war_between = {
 				attacker = 408
@@ -7843,7 +7843,7 @@ SOV_start_civil_war = {
 	}
 
 	# Dismantle the comintern (if faction leader)
-	IF = { 
+	if = { 
 		limit = {
 			ROOT = { is_faction_leader = yes }
 		}
@@ -7857,17 +7857,17 @@ SOV_start_civil_war = {
 		capital = var:ROOT.SOV_stalinist_civil_war_start_state
 		states = all
 		states_filter = {
-			IF= {
+			if= {
 				limit = { SOV_is_left_opposition = yes }
 				NOT = { has_state_flag = SOV_left_opposition_state }
 				is_fully_controlled_by = ROOT
 			}
-			ELSE_IF= {
+			else_if= {
 				limit = { SOV_is_right_opposition = yes }
 				NOT = { has_state_flag = SOV_right_opposition_state }
 				is_fully_controlled_by = ROOT
 			}
-			ELSE_IF= {
+			else_if= {
 				limit = { SOV_is_exiles = yes }
 				NOT = { has_state_flag = SOV_exiles_state }
 				is_fully_controlled_by = ROOT
@@ -7881,15 +7881,15 @@ SOV_start_civil_war = {
 
 		keep_political_leader = yes
 		keep_unit_leaders_trigger = {
-			IF = {
+			if = {
 				limit = { SOV_is_left_opposition = yes }
 				has_trait = trait_SOV_trotskyist
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { SOV_is_right_opposition = yes }
 				has_trait = trait_SOV_bukharinist
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { SOV_is_exiles = yes }
 				has_trait = trait_SOV_monarchist_sympathizer
 			}
@@ -7912,12 +7912,12 @@ SOV_start_civil_war = {
 		}
 		# Set Stalin as Leader if alive, else set Beriya
 		# recruit_character = SOV_iosif_stalin
-		IF = { 
+		if = { 
 			limit = { SOV = { has_character = SOV_iosif_stalin }}
 			SOV = { SOV_iosif_stalin = { set_nationality = SOS } }
 			promote_character = { character = SOV_iosif_stalin  ideology = stalinism }
 		}
-		ELSE = {
+		else = {
 			SOV = { SOV_lavrenty_beriya = { set_nationality = SOS } }
 			promote_character = { character = SOV_lavrenty_beriya  ideology = stalinism }
 		}
@@ -7926,7 +7926,7 @@ SOV_start_civil_war = {
 		remove_ideas = SOV_the_fourth_international_idea
 
 		# Rally the Red Army!
-		IF = {
+		if = {
 			limit = {
 				num_divisions < 5
 			}
@@ -7967,13 +7967,13 @@ SOV_start_civil_war = {
 		}
 
 		# The Support of the NKVD
-		IF = {
+		if = {
 			limit = {
 				NOT = { any_other_country = { has_country_flag = SOV_nkvd_aligned_flag } }
 			}
 			SOV_set_up_nkvd = yes
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				OR = {
 					SOV = {
@@ -8034,40 +8034,40 @@ SOV_start_civil_war = {
 
 		complete_national_focus = SOV_the_path_of_marxism_leninism
 		complete_national_focus = SOV_the_centre
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_stalin_constitution_completed_flag } }
 			complete_national_focus = SOV_the_stalin_constitution
 		}
 
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_zinovyevite_terrorist_center_completed_flag } }
 			unlock_national_focus = SOV_the_zinovyevite_terrorist_center # effect already played out
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_anti_soviet_trotskyist_center_completed_flag } }
 			unlock_national_focus = SOV_the_anti_soviet_trotskyist_center # effect already played out
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_workers_dictatorship_completed_flag }}
 			complete_national_focus = SOV_the_workers_dictatorship
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_military_conspiracy_completed_flag } }
 			unlock_national_focus = SOV_the_military_conspiracy # effect already played out
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_socialism_in_one_country_completed_flag } }
 			complete_national_focus = SOV_socialism_in_one_country
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_secure_the_administration_completed_flag } }
 			complete_national_focus = SOV_secure_the_administration
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_the_bloc_of_rights_and_trotskyites_completed_flag } }
 			unlock_national_focus = SOV_the_bloc_of_rights_and_trotskyites # effect already played out
 		}
-		IF = {
+		if = {
 			limit = { SOV = { has_country_flag = SOV_behead_the_snake_completed_flag } }
 			unlock_national_focus = SOV_behead_the_snake # effect already played out
 		}
@@ -8093,7 +8093,7 @@ SOV_start_civil_war = {
 		}
 
 		# give germany Wargoal if needed
-		IF = {
+		if = {
 			limit = {
 				GER = { 
 					has_completed_focus = GER_war_with_the_ussr # has completed War with the USSR
@@ -8111,7 +8111,7 @@ SOV_start_civil_war = {
 		}
 	}
 	### Opposition country - new SOV 
-	IF = {
+	if = {
 		limit = {
 			has_template = "NKVD Pogranichnaya Diviziya"
 		}
@@ -8121,7 +8121,7 @@ SOV_start_civil_war = {
 		}
 	}
 	# Exiles don't get any NKVD templates unless they later desert
-	IF = {
+	if = {
 		limit = { SOV_is_exiles = yes }
 		SOV = {
 			delete_unit_template_and_units = {
@@ -8131,12 +8131,12 @@ SOV_start_civil_war = {
 		}
 	}	
 	# Stalinist military will no longer be a thing in this country 
-	IF = {
+	if = {
 		limit = { has_country_flag = SOV_stalinist_military_flag }
 		clr_country_flag = SOV_stalinist_military_flag
 	}
 	# Return non-converted states
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		every_controlled_state = {
 			limit = { #This is a bit silly, but necessary.
@@ -8149,7 +8149,7 @@ SOV_start_civil_war = {
 			}
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		every_controlled_state = {
 			limit = { 
@@ -8162,7 +8162,7 @@ SOV_start_civil_war = {
 			}
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_exiles = yes }
 		every_controlled_state = {
 			limit = { 
@@ -8207,7 +8207,7 @@ SOV_start_civil_war = {
 
 
 	# Bring exiled characters back:
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		every_character = {
 			limit = {
@@ -8217,7 +8217,7 @@ SOV_start_civil_war = {
 			clr_character_flag = SOV_exiled_flag
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		every_character = {
 			limit = {
@@ -8227,7 +8227,7 @@ SOV_start_civil_war = {
 			clr_character_flag = SOV_exiled_flag
 		}
 	}
-	ELSE_IF = { # Political Advisors handled individually in post-CW focuses
+	else_if = { # Political Advisors handled individually in post-CW focuses
 		limit = { SOV_is_exiles = yes }
 		every_character = {
 			limit = {
@@ -8242,7 +8242,7 @@ SOV_start_civil_war = {
 	}
 
 	# Ensure no Communist Commanders end up with exiles
-	IF = {
+	if = {
 		limit = { SOV_is_exiles = yes }
 		SOV = {
 			every_unit_leader = {
@@ -8255,7 +8255,7 @@ SOV_start_civil_war = {
 		}
 	}
 
-	IF = {
+	if = {
 		limit = { check_variable = { SOV_opposition_popular_support > 1 } }
 		country_event = {
 			id = NSB_soviet_civil_war_common.006
@@ -8271,7 +8271,7 @@ SOV_start_civil_war = {
 	SOV = { set_rule = { can_join_factions = no }}
 	
 	# add Supply hub
-	IF = {
+	if = {
 		limit = { 
 			has_country_flag = SOV_supply_hub_flag
 		}
@@ -8318,18 +8318,18 @@ SOV_start_civil_war = {
 	}
 
 	# Anti Comintern Pact 
-	IF = {
+	if = {
 		limit = {
 			GER = { has_completed_focus = GER_anti_comintern_pact }
 		}
 		# Add effects to SOS
-		IF = {
+		if = {
 			limit = {
 				GER = { has_completed_focus = GER_anti_soviet_pact }
 			}
 			SOS = { add_opinion_modifier = { target = GER modifier = worse_pact_against_us } }
 		}
-		ELSE = {
+		else = {
 			SOS = { add_opinion_modifier = { target = GER modifier = pact_against_us } }
 		}
 		every_country = {
@@ -8344,7 +8344,7 @@ SOV_start_civil_war = {
 			SOS = { add_opinion_modifier = { target = PREV modifier = worse_pact_against_us } }
 		}
 		# Clear effect for non-communist Russias
-		IF = { 
+		if = { 
 			limit = { NOT = { has_government = communism } }
 			every_country = {
 				limit = {
@@ -8377,7 +8377,7 @@ SOV_left_opposition_civil_war_start = {
 	}
 
 	# Modify Stability
-	IF = {
+	if = {
 		limit = {
 			has_completed_focus = SOV_gain_support_from_party_members
 		}
@@ -8386,7 +8386,7 @@ SOV_left_opposition_civil_war_start = {
 
 	### Set up special units
 	# The Support of the NKVD
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_nkvd_aligned_flag
 		}
@@ -8402,7 +8402,7 @@ SOV_left_opposition_civil_war_start = {
 	SOV_launch_wreckers = yes
 
 	# Check Foreign Funds
-	IF = {
+	if = {
 		limit = { has_completed_focus = SOV_funds_for_the_cause }
 		add_timed_idea = {
 			idea = SOV_foreign_funds_idea
@@ -8425,7 +8425,7 @@ SOV_right_opposition_civil_war_start = {
 	}
 
 	# Modify Stability
-	IF = {
+	if = {
 		limit = {
 			has_completed_focus = SOV_gain_support_from_party_members
 		}
@@ -8433,7 +8433,7 @@ SOV_right_opposition_civil_war_start = {
 	}
 
 	# Reverse the collectivisation process
-	IF = {
+	if = {
 		limit = { has_completed_focus = SOV_reverse_the_collectivization_process }
 		add_timed_idea = {
 			idea = SOV_support_from_farmers
@@ -8443,7 +8443,7 @@ SOV_right_opposition_civil_war_start = {
 
 	### Set up special units
 	# The Support of the NKVD
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_nkvd_aligned_flag
 		}
@@ -8483,7 +8483,7 @@ SOV_exiles_civil_war_start = {
 
 	### Set up special units
 	# From The Eyes Fear Fokus
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = Sov_the_eyes_fear_flag
 		}
@@ -8556,7 +8556,7 @@ SOV_exiles_civil_war_start = {
 	}
 
 	# Stariki
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_muster_the_old_guard_flag
 		}
@@ -8599,7 +8599,7 @@ SOV_exiles_civil_war_start = {
 	}
 
 	# Cavalry
-	IF = {
+	if = {
 		limit = {
 			has_completed_focus = SOV_approach_semyonov
 		}
@@ -8610,7 +8610,7 @@ SOV_exiles_civil_war_start = {
 			}
 		}
 	}
-	IF = {
+	if = {
 		limit = {
 			any_state = { has_state_flag = SOV_exiles_cavalry_flag }
 		}
@@ -8636,7 +8636,7 @@ SOV_exiles_civil_war_start = {
 
 
 		}
-		IF = {
+		if = {
 			limit = { check_variable = { SOV_exiles_manchurian_cavalry > 0 } }
 			division_template = {
 				name = "Manchurian Cavalry"
@@ -8704,7 +8704,7 @@ SOV_exiles_civil_war_start = {
 	}
 
 	# Tolkachi
-	IF = {
+	if = {
 		limit = { has_country_flag = SOV_tolkachi_flag }
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -8733,7 +8733,7 @@ SOV_exiles_civil_war_start = {
 }
 
 SOV_launch_wreckers = {
-	IF = {
+	if = {
 		limit = {
 			has_country_flag = SOV_organize_wreckers_flag
 		}
@@ -8942,7 +8942,7 @@ SOV_opposition_support_low_decrease_effect = {
 }
 
 SOV_launch_stalinist_counter_measure = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_global_flag = SOV_soviet_civil_war_over } # Sanity check, in order not to activate more missions once the war has started
 		}
@@ -8952,7 +8952,7 @@ SOV_launch_stalinist_counter_measure = {
 			random_days = 10
 		}
 	}
-	IF = {
+	if = {
 		limit = { NOT = { has_country_flag = SOV_stalinist_focuses_started } } # Only first time
 		set_country_flag = SOV_stalinist_focuses_started
 		country_event = {
@@ -8962,7 +8962,7 @@ SOV_launch_stalinist_counter_measure = {
 	}
 }
 SOV_get_centre_military_support = {
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		set_variable = { SOV.SOV_centre_army_support = 1 }
 		subtract_from_variable = { SOV.SOV_centre_army_support = SOV.SOV_left_opposition_army_support }
@@ -8971,7 +8971,7 @@ SOV_get_centre_military_support = {
 		set_variable = { SOV.SOV_centre_air_support = 1 }
 		subtract_from_variable = { SOV.SOV_centre_air_support = SOV.SOV_left_opposition_air_support }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		set_variable = { SOV.SOV_centre_army_support = 1 }
 		subtract_from_variable = { SOV.SOV_centre_army_support = SOV.SOV_right_opposition_army_support }
@@ -8980,7 +8980,7 @@ SOV_get_centre_military_support = {
 		set_variable = { SOV.SOV_centre_air_support = 1 }
 		subtract_from_variable = { SOV.SOV_centre_air_support = SOV.SOV_right_opposition_air_support }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_exiles = yes }
 		set_variable = { SOV.SOV_centre_army_support = 1 }
 		subtract_from_variable = { SOV.SOV_centre_army_support = SOV.SOV_exiles_army_support }
@@ -8994,7 +8994,7 @@ SOV_get_centre_military_support = {
 
 SOV_increase_opposition_army_support = {
 	custom_effect_tooltip = SOV_increase_opposition_army_support_tt
-	IF = {
+	if = {
 		limit = { SOV_is_left_opposition = yes }
 		add_to_variable = { SOV.SOV_left_opposition_army_support = 0.1 }
 		clamp_variable = {
@@ -9003,7 +9003,7 @@ SOV_increase_opposition_army_support = {
 			min = 0.1
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_right_opposition = yes }
 		add_to_variable = { SOV.SOV_right_opposition_army_support = 0.1 }
 		clamp_variable = {
@@ -9012,7 +9012,7 @@ SOV_increase_opposition_army_support = {
 			min = 0.1
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { SOV_is_exiles = yes }
 		add_to_variable = { SOV.SOV_exiles_army_support = 0.1 }
 		clamp_variable = {
@@ -9024,7 +9024,7 @@ SOV_increase_opposition_army_support = {
 	SOV_get_centre_military_support = yes 
 }
 SOV_increase_opposition_army_support_small = {
-	IF = {
+	if = {
 		limit = {
 			SOV_is_opposition = yes 
 		}
@@ -9033,7 +9033,7 @@ SOV_increase_opposition_army_support_small = {
 			random_list = {
 				25 = {}
 				50 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_army_support = 0.02 }
 						clamp_variable = {
@@ -9042,7 +9042,7 @@ SOV_increase_opposition_army_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_army_support = 0.02 }
 						clamp_variable = {
@@ -9051,7 +9051,7 @@ SOV_increase_opposition_army_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_army_support = 0.02 }
 						clamp_variable = {
@@ -9062,7 +9062,7 @@ SOV_increase_opposition_army_support_small = {
 					}
 				}
 				25 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_army_support = 0.05 }
 						clamp_variable = {
@@ -9071,7 +9071,7 @@ SOV_increase_opposition_army_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_army_support = 0.05 }
 						clamp_variable = {
@@ -9080,7 +9080,7 @@ SOV_increase_opposition_army_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_army_support = 0.05 }
 						clamp_variable = {
@@ -9097,7 +9097,7 @@ SOV_increase_opposition_army_support_small = {
 }
 
 SOV_increase_opposition_navy_support_small = {
-	IF = {
+	if = {
 		limit = {
 			SOV_is_opposition = yes 
 		}
@@ -9106,7 +9106,7 @@ SOV_increase_opposition_navy_support_small = {
 			random_list = {
 				25 = {}
 				50 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_navy_support = 0.02 }
 						clamp_variable = {
@@ -9115,7 +9115,7 @@ SOV_increase_opposition_navy_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_navy_support = 0.02 }
 						clamp_variable = {
@@ -9124,7 +9124,7 @@ SOV_increase_opposition_navy_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_navy_support = 0.02 }
 						clamp_variable = {
@@ -9135,7 +9135,7 @@ SOV_increase_opposition_navy_support_small = {
 					}
 				}
 				25 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_navy_support = 0.05 }
 						clamp_variable = {
@@ -9144,7 +9144,7 @@ SOV_increase_opposition_navy_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_navy_support = 0.05 }
 						clamp_variable = {
@@ -9153,7 +9153,7 @@ SOV_increase_opposition_navy_support_small = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_navy_support = 0.05 }
 						clamp_variable = {
@@ -9170,7 +9170,7 @@ SOV_increase_opposition_navy_support_small = {
 }
 
 SOV_add_armed_forces_support_state = {
-	IF = {
+	if = {
 		limit = {
 			SOV_is_opposition = yes 
 		}
@@ -9179,7 +9179,7 @@ SOV_add_armed_forces_support_state = {
 			random_list = {
 				25 = {}
 				50 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_army_support = 0.01 }
 						clamp_variable = {
@@ -9188,7 +9188,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_army_support = 0.01}
 						clamp_variable = {
@@ -9197,7 +9197,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_army_support = 0.01 }
 						clamp_variable = {
@@ -9208,7 +9208,7 @@ SOV_add_armed_forces_support_state = {
 					}
 				}
 				25 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_army_support = 0.02 }
 						clamp_variable = {
@@ -9217,7 +9217,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_army_support = 0.02 }
 						clamp_variable = {
@@ -9226,7 +9226,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_army_support = 0.02 }
 						clamp_variable = {
@@ -9240,7 +9240,7 @@ SOV_add_armed_forces_support_state = {
 			random_list = {
 				25 = {}
 				50 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_navy_support = 0.01 }
 						clamp_variable = {
@@ -9249,7 +9249,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_navy_support = 0.01}
 						clamp_variable = {
@@ -9258,7 +9258,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_navy_support = 0.01 }
 						clamp_variable = {
@@ -9269,7 +9269,7 @@ SOV_add_armed_forces_support_state = {
 					}
 				}
 				25 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_navy_support = 0.02 }
 						clamp_variable = {
@@ -9278,7 +9278,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_navy_support = 0.02 }
 						clamp_variable = {
@@ -9287,7 +9287,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_navy_support = 0.02 }
 						clamp_variable = {
@@ -9301,7 +9301,7 @@ SOV_add_armed_forces_support_state = {
 			random_list = {
 				25 = {}
 				50 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_air_support = 0.01 }
 						clamp_variable = {
@@ -9310,7 +9310,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_air_support = 0.01}
 						clamp_variable = {
@@ -9319,7 +9319,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_air_support = 0.01 }
 						clamp_variable = {
@@ -9330,7 +9330,7 @@ SOV_add_armed_forces_support_state = {
 					}
 				}
 				25 = {
-					IF = {
+					if = {
 						limit = { SOV_is_left_opposition = yes }
 						add_to_variable = { SOV.SOV_left_opposition_air_support = 0.02 }
 						clamp_variable = {
@@ -9339,7 +9339,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_right_opposition = yes }
 						add_to_variable = { SOV.SOV_right_opposition_air_support = 0.02 }
 						clamp_variable = {
@@ -9348,7 +9348,7 @@ SOV_add_armed_forces_support_state = {
 							min = 0.1
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = { SOV_is_exiles = yes }
 						add_to_variable = { SOV.SOV_exiles_air_support = 0.02 }
 						clamp_variable = {
@@ -9441,31 +9441,31 @@ SOV_set_up_dynamic_modifiers_civil_war = { #Used for Stalinist side in the CW
 		modifier = SOV_opposition_popular_support
 	}
 	# Five Year Plan
-	IF = {
+	if = {
 		limit = {
 			SOV = { has_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }}
 		}
 		add_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV = { has_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }}
 		}
 		add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV = { has_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }}
 		}
 		add_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV = { has_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }}
 		}
 		add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			SOV = { has_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier }}
 		}

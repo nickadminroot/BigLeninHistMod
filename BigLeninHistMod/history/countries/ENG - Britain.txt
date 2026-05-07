@@ -87,14 +87,14 @@ if = {
 	}
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
 	give_guarantee = BEL
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Graveyard of Empires"
 	}
@@ -103,7 +103,7 @@ IF = {
 
 IRQ = {
 	give_military_access = ENG
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Compromise, No Surrender"
 		}
@@ -602,7 +602,7 @@ set_popularities = {
 
 
 create_faction_from_template = faction_template_allies
-IF= {
+if= {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
 	}

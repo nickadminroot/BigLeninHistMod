@@ -22,13 +22,13 @@ USA_marmon_herrington_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -57,7 +57,7 @@ USA_chrysler_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
@@ -240,14 +240,14 @@ USA_detroit_arsenal_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = USA } 
 			}
@@ -277,7 +277,7 @@ USA_detroit_arsenal_organization = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = PHI } 
 			}
@@ -449,7 +449,7 @@ USA_electric_boat_company_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
@@ -604,13 +604,13 @@ USA_newport_news_shipbuilding_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -681,13 +681,13 @@ USA_north_american_aviation_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -817,7 +817,7 @@ USA_lockheed_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
@@ -1110,7 +1110,7 @@ USA_springfield_armory_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
@@ -1226,7 +1226,7 @@ USA_ford_motor_company_organization = {
 	}
 	
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = POL }
 			}
@@ -1234,7 +1234,7 @@ USA_ford_motor_company_organization = {
 				has_country_flag = POL_ford_motors
 			}
 		}
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = BRA }
 			}
@@ -1246,14 +1246,14 @@ USA_ford_motor_company_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}
 			FROM = { NOT = { has_war_with = USA } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ROM } }
 			FROM = { has_country_flag = USA_mot_chosen }
 		}
@@ -1271,7 +1271,7 @@ USA_ford_motor_company_organization = {
 				has_completed_focus = BALTIC_ford_motors
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_TAG = BRA
@@ -1339,7 +1339,7 @@ USA_ford_motor_company_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = USA } }
 			}

@@ -29,7 +29,7 @@ ideas = {
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.015 group = mobilization_laws }
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -37,22 +37,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -69,7 +69,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -144,7 +144,7 @@ ideas = {
 					is_subject = no
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -152,22 +152,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -184,7 +184,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -239,7 +239,7 @@ ideas = {
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						has_dlc	= "Graveyard of Empires"
 						original_tag = AFG
@@ -382,7 +382,7 @@ ideas = {
 					is_subject = no
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -390,22 +390,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -422,7 +422,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -477,7 +477,7 @@ ideas = {
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						has_dlc	= "Graveyard of Empires"
 						original_tag = AFG
@@ -621,7 +621,7 @@ ideas = {
 					is_subject = no
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -629,22 +629,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -661,7 +661,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -852,7 +852,7 @@ ideas = {
 					is_subject = no
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -860,22 +860,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -892,7 +892,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -947,7 +947,7 @@ ideas = {
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						has_dlc	= "Graveyard of Empires"
 						original_tag = AFG
@@ -1076,7 +1076,7 @@ ideas = {
 					is_subject = no
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -1084,22 +1084,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -1116,7 +1116,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -1171,7 +1171,7 @@ ideas = {
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						has_dlc	= "Graveyard of Empires"
 						original_tag = AFG

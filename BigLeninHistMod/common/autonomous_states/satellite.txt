@@ -60,7 +60,7 @@ autonomy_state = {
 	
 	can_take_level = {
 		#trigger here
-		IF = {
+		if = {
 			limit = {
 				original_tag = COG
 				has_dlc = "Gotterdammerung"			
@@ -74,7 +74,7 @@ autonomy_state = {
 
 	can_lose_level = {
 		#trigger here
-		IF = {
+		if = {
 			limit = {
 				OVERLORD = { original_tag = BEL } 
 				original_tag = COG

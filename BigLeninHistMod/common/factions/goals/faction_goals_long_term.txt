@@ -420,7 +420,7 @@ faction_goal_contain_japanese_expansion_asia = {
 	}
 	completed = {
 		JAP = {
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}
@@ -432,7 +432,7 @@ faction_goal_contain_japanese_expansion_asia = {
 					value < 20
 				}
 			}
-			ELSE = {
+			else = {
 				collection_size = {
 					input = {
 						input = collection:faction_controlled_non_core_states

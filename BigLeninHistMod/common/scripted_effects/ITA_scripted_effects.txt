@@ -21,7 +21,7 @@
 ITA_end_the_italo_ethiopian_war = {
 	clr_global_flag = second_italo_ethiopian_war_flag
 	# check if Italian victory
-	IF = {
+	if = {
 		limit = {
 			any_country = {
 				OR = {
@@ -35,7 +35,7 @@ ITA_end_the_italo_ethiopian_war = {
 			set_country_flag = ITA_victory_in_ethiopia_flag
 		}
 	}
-	ELSE = {
+	else = {
 		ITA = {
 			set_country_flag = ITA_defeat_in_ethiopia_flag
 		}

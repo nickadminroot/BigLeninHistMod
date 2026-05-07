@@ -396,7 +396,7 @@ ideas = {
 		proper_heritage_spirit = {
 			ledger = army
 			available = {
-				IF = {
+				if = {
 					limit = { 
 						original_tag = AFG 
 						has_dlc = "Graveyard of Empires"
@@ -407,7 +407,7 @@ ideas = {
 						has_doctrine = mounted_infantry
 					}
 				}
-				ELSE = {
+				else = {
 					OR = {
 						has_doctrine = grand_battleplan
 						has_doctrine = mounted_infantry

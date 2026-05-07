@@ -237,7 +237,7 @@ FRA_vichy_france = {
 								is_controlled_by_ROOT_or_ally = yes 
 							}
 							set_variable = { GER.state_to_target = THIS}
-							IF = {
+							if = {
 								limit = {
 									GER = {
 										divisions_in_state = {
@@ -1352,7 +1352,7 @@ economy_decisions = {
 					instant_build = yes
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1406,7 +1406,7 @@ economy_decisions = {
 					instant_build = yes
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1461,7 +1461,7 @@ economy_decisions = {
 					instant_build = yes
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1510,7 +1510,7 @@ economy_decisions = {
 					instant_build = yes
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1564,7 +1564,7 @@ economy_decisions = {
 					instant_build = yes
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}

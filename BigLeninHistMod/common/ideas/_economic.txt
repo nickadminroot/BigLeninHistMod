@@ -31,7 +31,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				IF = {
+				if = {
 					limit = {
 						original_tag = USA
 					}
@@ -41,7 +41,7 @@ ideas = {
 						has_completed_focus = USA_limited_intervention
 					}
 				}
-				ELSE = {
+				else = {
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
@@ -77,7 +77,7 @@ ideas = {
 				factory_energy_consumption = -0.3
 			}
 			allowed_to_remove = {
-				IF = {
+				if = {
 					limit = {
 						original_tag = USA
 					}
@@ -87,7 +87,7 @@ ideas = {
 						has_completed_focus = USA_limited_intervention
 					}
 				}
-				ELSE = {
+				else = {
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
@@ -125,7 +125,7 @@ ideas = {
 			available = {
 				has_war_support > 0.15
 				
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -133,22 +133,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -165,7 +165,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -266,7 +266,7 @@ ideas = {
 			available = {
 				has_war_support > 0.25
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -274,7 +274,7 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -283,19 +283,19 @@ ideas = {
 							NOT = { has_idea = HUN_treaty_of_triannon_aat }
 						}
 					}
-					ELSE = {
+					else = {
 						OR = {
 							has_completed_focus = HUN_secret_rearmament
 							NOT = { has_idea = HUN_treaty_of_triannon }
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -304,7 +304,7 @@ ideas = {
 							NOT = { has_idea = HUN_treaty_of_triannon_aat_wuw }
 						}
 					}
-					ELSE = {
+					else = {
 						OR = {
 							has_completed_focus = wuw_HUN_secret_rearmament
 							NOT = { has_idea = HUN_treaty_of_triannon_wuw }
@@ -437,7 +437,7 @@ ideas = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -445,22 +445,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -477,7 +477,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -635,7 +635,7 @@ ideas = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
@@ -643,22 +643,22 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					ELSE = {
+					else = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
 					}
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
@@ -675,7 +675,7 @@ ideas = {
 							
 						}		
 					}
-					ELSE = {
+					else = {
 						custom_trigger_tooltip = {
 							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
 							NOT = { 
@@ -1446,7 +1446,7 @@ ideas = {
 
 				has_war = yes
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							original_tag = JAP
@@ -1457,7 +1457,7 @@ ideas = {
 						has_government = communism
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = JAP
 					}
@@ -1474,20 +1474,20 @@ ideas = {
 				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
-					IF = {
+					if = {
 						limit = {
 							original_tag = GER
 						}
 						has_idea = totaler_krieg_economy
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = {
 							original_tag = JAP
 						}
 						#has_completed_focus = JAP_sea_state_general_mobilization_law
 						has_idea = national_defense_state
 					}
-					ELSE = {
+					else = {
 						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
 					}
 				}
@@ -1496,7 +1496,7 @@ ideas = {
 					NOT = { has_opinion_modifier = MR_pact }
 				}
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = CHI
 						has_dlc = "Waking the Tiger"

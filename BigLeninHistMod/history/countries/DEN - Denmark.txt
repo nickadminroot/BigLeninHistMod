@@ -28,7 +28,7 @@ if = {
 }
 
 # Diplomacy
-IF = {
+if = {
 	limit = {
 		OR = {
 			has_dlc = "Together for Victory"
@@ -40,7 +40,7 @@ IF = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.4
 	}
-	ELSE = {
+	else = {
 		puppet = ICE
 	}
 }

@@ -2684,7 +2684,7 @@ characters = {
 					}
 					NOT = { has_character_flag = SOV_exiled_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_global_flag = flag_mexico_invited_trotsky_to_government
 						NOT = { has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico }
@@ -3650,7 +3650,7 @@ characters = {
 					limit = { original_tag = MAN }
 					custom_trigger_tooltip = {
 					 	tooltip = SOV_grigory_semyonov_man_tt
-					 	IF = {
+					 	if = {
 					 		limit = {
 					 			SOV = { 
 					 				has_completed_focus = SOV_approach_semyonov 

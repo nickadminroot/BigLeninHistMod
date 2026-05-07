@@ -400,7 +400,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						DEN = {
 							exists = yes

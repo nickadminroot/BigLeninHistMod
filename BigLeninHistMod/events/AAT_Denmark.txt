@@ -1837,7 +1837,7 @@ country_event = { #Denmark becomes independent peacefully
 					has_completed_focus = DEN_pledge_allegiance
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					FROM = { is_in_faction_with = ROOT }
 				}
@@ -7059,7 +7059,7 @@ country_event = { #Denmark joins the alliance
 			FROM = { add_to_faction = ROOT }
 		}
 		else = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -7068,7 +7068,7 @@ country_event = { #Denmark joins the alliance
 				add_faction_initiative = 1
 				add_to_faction = FROM
 			}
-			ELSE = {
+			else = {
 				set_rule = { can_create_factions = yes }
 				create_faction = DEN_nordic_cooperation_alliance
 				add_to_faction = FROM

@@ -400,13 +400,13 @@ HUN_gyor_program_initiatives_category = {
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
 			has_completed_focus = wuw_HUN_quantity_over_quality
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
 				has_tech = basic_heavy_tank_chassis
 			}
-			ELSE = {
+			else = {
 				has_tech = basic_heavy_tank
 			}
 			has_country_flag = HUN_activated_huba_ii_flag
@@ -1305,7 +1305,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					664 = {
 						is_claimed_by = ROOT
@@ -1316,7 +1316,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					664 = {
 						NOT = {
@@ -1392,7 +1392,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					70 = {
 						is_claimed_by = ROOT
@@ -1403,7 +1403,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					70 = {
 						NOT = {
@@ -1479,7 +1479,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					71 = {
 						is_claimed_by = ROOT
@@ -1490,7 +1490,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					71 = {
 						NOT = {
@@ -1566,7 +1566,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					73 = {
 						is_claimed_by = ROOT
@@ -1577,7 +1577,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					73 = {
 						NOT = {
@@ -1653,7 +1653,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					76 = {
 						is_claimed_by = ROOT
@@ -1664,7 +1664,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					76 = {
 						NOT = {
@@ -1740,7 +1740,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					84 = {
 						is_claimed_by = ROOT
@@ -1751,7 +1751,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					84 = {
 						NOT = {
@@ -1827,7 +1827,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					83 = {
 						is_claimed_by = ROOT
@@ -1838,7 +1838,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					83 = {
 						NOT = {
@@ -1914,7 +1914,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					82 = {
 						is_claimed_by = ROOT
@@ -1925,7 +1925,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					82 = {
 						NOT = {
@@ -2001,7 +2001,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					764 = {
 						is_claimed_by = ROOT
@@ -2012,7 +2012,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					764 = {
 						NOT = {
@@ -2088,7 +2088,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						is_claimed_by = ROOT
@@ -2099,7 +2099,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						NOT = {
@@ -2169,7 +2169,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						is_claimed_by = ROOT
@@ -2180,7 +2180,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						NOT = {
@@ -2609,7 +2609,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					109 = {
 						is_claimed_by = ROOT
@@ -2620,7 +2620,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					109 = {
 						NOT = {
@@ -2696,7 +2696,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					103 = {
 						is_claimed_by = ROOT
@@ -2707,7 +2707,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					103 = {
 						NOT = {
@@ -3124,7 +3124,7 @@ HUN_the_empire_category = {
 				transfer_state_to = ROOT
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						is_claimed_by = ROOT
@@ -3135,7 +3135,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						NOT = {
@@ -3414,7 +3414,7 @@ HUN_the_empire_category = {
 			POL = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = POL_KINGDOM
-				IF = {
+				if = {
 					limit = {
 						has_character = POL_karl_albrecht
 					}
@@ -3690,7 +3690,7 @@ HUN_the_empire_category = {
 				}	
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					MEX = {
 						NOT = {
@@ -3806,7 +3806,7 @@ HUN_the_empire_category = {
 				}	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					CRO = {
 						NOT = {
@@ -3819,7 +3819,7 @@ HUN_the_empire_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					102 = {
 						NOT = {
@@ -3832,7 +3832,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					853 = {
 						NOT = {
@@ -3845,7 +3845,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					AUS = {
 						is_subject_of = ROOT
@@ -3956,7 +3956,7 @@ HUN_the_empire_category = {
 				drop_cosmetic_tag = yes	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					LBV = {
 						NOT = {
@@ -4100,7 +4100,7 @@ political_actions = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					61 = {
 						is_claimed_by = ROOT
@@ -4111,7 +4111,7 @@ political_actions = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					61 = {
 						NOT = {
@@ -4560,7 +4560,7 @@ HUN_fascist_movements_category = {
 			        }
 			    }
 
-			    IF = {
+			    if = {
 			    	limit = {
 			    		PREV = {
 			    			has_idea = HUN_the_volksbund_idea
@@ -4573,7 +4573,7 @@ HUN_fascist_movements_category = {
 
 			    custom_effect_tooltip = generic_skip_one_line_tt
 
-			    IF = {
+			    if = {
 			    	limit = {
 			    		PREV = {
 			    			NOT = {
@@ -4633,7 +4633,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_the_volksbund_idea
 				}
@@ -4775,7 +4775,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						exists = yes
@@ -4796,7 +4796,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_the_volksbund_idea
 				}
@@ -5153,7 +5153,7 @@ political_actions = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						OR = {
@@ -5172,7 +5172,7 @@ political_actions = {
 					activate_advisor = GER_hermann_goring_king_of_hun
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					GER = {
 						has_government = fascism

@@ -1473,19 +1473,19 @@ MAN_war_preparations = {
 		complete_effect = {
 
 			
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than_or_equals }
 				}
 				custom_effect_tooltip = MAN_can_prepare_more_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = less_than }
 				}
 				set_variable = { var = MAN_seize_arms_prep value = 10 }
 			}
-			ELSE = {
+			else = {
 				add_to_variable = { var = MAN_seize_arms_prep value = 10 }
 			}
 
@@ -1529,30 +1529,30 @@ MAN_war_preparations = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than_or_equals }
 				}
 				custom_effect_tooltip = MAN_can_prepare_more_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = JAP }
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 producer = JAP }
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = JAP }
-				IF = {
+				if = {
 					limit = {
 						JAP = {
 							has_tech = improved_infantry_weapons
@@ -1561,7 +1561,7 @@ MAN_war_preparations = {
 					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 2000 producer = JAP }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "No Step Back"
@@ -1571,7 +1571,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 50 producer = JAP }
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
 			}
-			ELSE_IF = { 
+			else_if = { 
 				limit = {
 					has_dlc = "No Step Back"
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
@@ -1579,7 +1579,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 50 producer = JAP variant_name = "Type 95 Ha-Go"}
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
@@ -1587,7 +1587,7 @@ MAN_war_preparations = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = JAP }
-				IF = {
+				if = {
 					limit = {
 						JAP = {
 							has_tech = fighter1
@@ -1597,7 +1597,7 @@ MAN_war_preparations = {
 				}
 				add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 50 producer = JAP }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
@@ -1605,7 +1605,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 100 producer = JAP variant_name = "Ki-10" }
 				add_equipment_to_stockpile = { type = small_plane_cas_airframe_0 amount = 50 producer = JAP variant_name = "Ki-3"}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = less_than }
@@ -1614,7 +1614,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_1 days = 30 }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = less_than }
@@ -1623,7 +1623,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_1 days = 60 }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = less_than }
@@ -1632,7 +1632,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_2 days = 60 }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than }
@@ -1641,7 +1641,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_2 days = 90 }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 60 compare = less_than }

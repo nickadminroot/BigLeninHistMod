@@ -243,7 +243,7 @@ country_event = {
 						}
 						SPR_manuel_azana = { set_nationality = SPD }
 					}
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_country_leader = {
@@ -252,7 +252,7 @@ country_event = {
 								}
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								NOT = {
 									can_be_country_leader = SPR_manuel_azana
@@ -268,7 +268,7 @@ country_event = {
 								promote_leader = yes
 							}
 						}
-						ELSE = {
+						else = {
 							promote_character = {
 							    character = SPR_manuel_azana
 							    ideology = conservatism
@@ -2537,7 +2537,7 @@ country_event = {
 				SPD = {
 					retire_ideology_leader = fascism
 					retire_ideology_leader = neutrality
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_country_leader = {
@@ -2546,7 +2546,7 @@ country_event = {
 								}
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								NOT = {
 									can_be_country_leader = SPR_manuel_azana
@@ -2562,7 +2562,7 @@ country_event = {
 								promote_leader = yes
 							}
 						}
-						ELSE = {
+						else = {
 							promote_character = {
 							    character = SPR_manuel_azana
 							    ideology = conservatism
@@ -8236,7 +8236,7 @@ country_event = {
 					}
 					SPR_manuel_azana = { set_nationality = SPD }
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_country_leader = {
@@ -8245,7 +8245,7 @@ country_event = {
 							}
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								can_be_country_leader = SPR_manuel_azana
@@ -8261,7 +8261,7 @@ country_event = {
 							promote_leader = yes
 						}
 					}
-					ELSE = {
+					else = {
 						promote_character = {
 						    character = SPR_manuel_azana
 						    ideology = conservatism

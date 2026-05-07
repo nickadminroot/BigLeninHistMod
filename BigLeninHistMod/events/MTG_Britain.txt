@@ -2293,7 +2293,7 @@ country_event = {
 		}
 
 		FROM = {
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}

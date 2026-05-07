@@ -35,20 +35,20 @@ GER_porsche_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = MEX }
 			}
 			FROM = { is_in_faction_with = GER }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
@@ -279,11 +279,11 @@ GER_henschel_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = PER } }
 			FROM = { has_completed_focus = PER_german_tanks }
 		}
@@ -291,14 +291,14 @@ GER_henschel_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				OR = { 
 					FROM = { original_tag = BUL }
@@ -313,7 +313,7 @@ GER_henschel_organization = {
 			}
 			
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = { 
 				OR = {
@@ -324,7 +324,7 @@ GER_henschel_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = PER } }
 			FROM = { has_completed_focus = PER_german_tanks }
 		}
@@ -519,7 +519,7 @@ GER_man_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
@@ -847,13 +847,13 @@ GER_daimler_benz_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = BRA
@@ -864,7 +864,7 @@ GER_daimler_benz_organization = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = BEL
@@ -1810,7 +1810,7 @@ GER_messerschmitt_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
@@ -1983,7 +1983,7 @@ GER_junkers_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
@@ -1991,14 +1991,14 @@ GER_junkers_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT  = { original_tag = GER } }
 			}
@@ -2356,14 +2356,14 @@ GER_heinkel_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = BUL }
 			}
@@ -2382,7 +2382,7 @@ GER_heinkel_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = { original_tag = NOR }
 			}
@@ -2992,7 +2992,7 @@ GER_rheinmetall_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
@@ -3001,7 +3001,7 @@ GER_rheinmetall_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = HUN } }
 			FROM = { has_completed_focus = wuw_HUN_seek_german_contracts }
 		}
@@ -3146,7 +3146,7 @@ GER_mauser_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
@@ -3154,14 +3154,14 @@ GER_mauser_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT  = { original_tag = GER } }
 			}
@@ -3303,14 +3303,14 @@ GER_opel_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -3327,7 +3327,7 @@ GER_opel_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ROM } }
 			FROM = { has_country_flag = GER_mot_chosen }
 		}	

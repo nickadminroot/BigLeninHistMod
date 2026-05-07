@@ -554,7 +554,7 @@ propaganda_efforts = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					tag = BRA
@@ -563,13 +563,13 @@ propaganda_efforts = {
 				#has_tech = radio
 				has_completed_focus = BRA_radio_nacional
 			}
-			ELSE = {
+			else = {
 				threat > 0.25
 				has_tech = radio
 			}
 		
 
-			IF = {
+			if = {
 				limit = {
 					tag = AFG
 				}
@@ -577,7 +577,7 @@ propaganda_efforts = {
 				#has_tech = radio
 				has_completed_focus = AFG_establish_radio_networks
 			}
-			ELSE = {
+			else = {
 				threat > 0.25
 				has_tech = radio
 			}
@@ -1915,7 +1915,7 @@ war_measures = {
 		visible = {
 			is_major = yes
 			date > 1940.1.1
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 				}
@@ -1929,7 +1929,7 @@ war_measures = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
             		has_dlc = "Graveyard of Empires"
 				}
@@ -1941,7 +1941,7 @@ war_measures = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -2134,7 +2134,7 @@ economy_decisions = {
         fire_only_once = no
 
         available = {
-			IF = { 
+			if = { 
 				limit = { 
 					OR = { 
 						has_dlc = "Man the Guns" 	
@@ -2143,7 +2143,7 @@ economy_decisions = {
 				}
 				has_war_with_non_exiled_country = yes   
 			}
-			ELSE = {
+			else = {
 				has_war = yes
 			}
 			any_owned_state = {

@@ -9860,14 +9860,14 @@ operations = {
 			has_government = democratic
 			has_war_with = GER
 			ICE = { exists = yes }
-			IF = {
+			if = {
 				limit = {
 					NOR = { has_government = democratic }
 				}
 				NOR = { has_capitulated = yes }
 				is_in_faction_with = NOR
 			}
-			ELSE = {
+			else = {
 				any_country_with_original_tag = {
 					original_tag_to_check = NOR 
 					has_capitulated = yes
@@ -10019,14 +10019,14 @@ operations = {
 			has_war_with = GER
 			IRE = { exists = yes }
 			NOT = { is_in_faction_with = IRE }
-			IF = {
+			if = {
 				limit = {
 					NOR = { has_government = democratic }
 				}
 				NOR = { has_capitulated = yes }
 				is_in_faction_with = NOR
 			}
-			ELSE = {
+			else = {
 				any_country_with_original_tag = {
 					original_tag_to_check = NOR 
 					has_capitulated = yes

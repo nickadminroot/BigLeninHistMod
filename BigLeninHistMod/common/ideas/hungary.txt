@@ -2346,7 +2346,7 @@ ideas = {
 			picture = HUN_ganz_danubius
 
 			available = {
-				IF = {
+				if = {
 					limit = { 
 						has_dlc = "Death or Dishonor" 
 						NOT = {
@@ -2355,7 +2355,7 @@ ideas = {
 					}
 					has_completed_focus = HUN_naval_warfare
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}
@@ -2392,7 +2392,7 @@ ideas = {
 			picture = HUN_obudai_hajogyar
 
 			available = {
-				IF = {
+				if = {
 					limit = { 
 						has_dlc = "Death or Dishonor" 
 						NOT = {
@@ -2401,7 +2401,7 @@ ideas = {
 					}
 					has_completed_focus = HUN_naval_warfare
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}

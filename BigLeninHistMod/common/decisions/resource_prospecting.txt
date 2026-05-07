@@ -3695,7 +3695,7 @@ prospect_for_resources = {
 			controls_state = 889
 			num_of_civilian_factories_available_for_projects > 4
 			has_tech = excavation3
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						original_tag = BEL
@@ -9394,14 +9394,14 @@ prospect_for_resources = {
 			owns_state = 942
 			controls_state = 942
 			num_of_civilian_factories_available_for_projects > 4
-			IF = {
+			if = {
 				limit = {
 					original_tag = BRA
 					has_dlc = "Trial of Allegiance"
 				}
 				has_completed_focus = BRA_federal_development
 			}
-			ELSE = {
+			else = {
 				has_tech = excavation4
 			}
 		}

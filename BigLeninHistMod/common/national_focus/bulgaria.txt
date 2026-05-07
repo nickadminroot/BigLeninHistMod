@@ -652,7 +652,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -669,7 +669,7 @@ focus_tree = {
 					value = 0.8
 				}
 			}
-			ELSE = {
+			else = {
 				add_breakthrough_progress = {
 					specialization = specialization_nuclear
 					value = 1
@@ -902,7 +902,7 @@ focus_tree = {
 			    uses = 2
 				category = light_air
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -913,7 +913,7 @@ focus_tree = {
 					add_mio_size = 3
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = BUL_dar
 			}
@@ -1039,7 +1039,7 @@ focus_tree = {
 				category = cat_strategic_bomber
 				category = tactical_bomber
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -1090,7 +1090,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = support_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -1101,7 +1101,7 @@ focus_tree = {
 					add_mio_size = 3
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = BUL_dvf
 			}
@@ -1140,7 +1140,7 @@ focus_tree = {
 			    uses = 2
 				category = artillery
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -1151,7 +1151,7 @@ focus_tree = {
 					add_mio_size = 3
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = BUL_dvf_sopot
 			}
@@ -1174,11 +1174,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = { has_dlc = "Arms Against Tyranny"}
 					unlock_decision_category_tooltip = foreign_mio_decisions_category
 				}
-				ELSE = {
+				else = {
 					if = {
 						limit = {
 							country_exists = GER
@@ -1214,7 +1214,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { NOT = { has_dlc = "Arms Against Tyranny"} }
 					activate_targeted_decision = { target = GER decision = BUL_military_agreements }
 					activate_targeted_decision = { target = ENG decision = BUL_military_agreements }
@@ -2404,7 +2404,7 @@ focus_tree = {
 					province = 9783
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -2415,7 +2415,7 @@ focus_tree = {
 					add_mio_size = 3
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = BUL_varna_naval_dockyard
 			}

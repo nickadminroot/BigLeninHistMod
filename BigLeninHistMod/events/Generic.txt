@@ -248,7 +248,7 @@ country_event = {
 		}
 		add_to_faction = FROM
 		FROM = { country_event = { id = generic.3 hours = 6 } }
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				ROOT = {
@@ -475,7 +475,7 @@ country_event = {
 				has_government = democratic
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = ENG
@@ -500,7 +500,7 @@ country_event = {
 				has_government = fascism
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = ENG
@@ -526,7 +526,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = ENG
@@ -565,7 +565,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = ENG
@@ -1093,7 +1093,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = AUS
@@ -1116,7 +1116,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = AUS
@@ -1139,7 +1139,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = AUS
@@ -1176,7 +1176,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = AUS

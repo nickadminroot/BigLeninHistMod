@@ -980,13 +980,13 @@ ideas = {
 		 	}
 
 		 	available = {
-		 		IF = {
+		 		if = {
 		 			limit = {
 		 				FROM = { NOT = { original_tag = BRA } }
 		 			}
 		 			FROM = { NOT = { has_war_with = BRA } }
 		 		}
-		 		ELSE = { #original_tag = BRA
+		 		else = { #original_tag = BRA
 		 			FROM = {
 		 				OR = {
 		 					has_completed_focus = SMB_domestic_production
@@ -1015,13 +1015,13 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						FROM = { NOT = { original_tag = BRA } }
 					}
 					FROM = { NOT = { has_war_with = BRA } }
 				}
-				ELSE = {
+				else = {
 					FROM = {
 						OR = {
 							has_completed_focus = SMB_establish_aircraft_industry
@@ -1090,13 +1090,13 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						FROM = { NOT = { original_tag = BRA } }
 					}
 					FROM = { NOT = { has_war_with = BRA } }
 				}
-				ELSE = { #original_tag = BRA
+				else = { #original_tag = BRA
 					FROM = {
 						controls_state = 500 #Rio de Janeiro
 					}

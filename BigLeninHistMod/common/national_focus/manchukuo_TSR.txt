@@ -595,7 +595,7 @@
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			716 = {
-				IF = {
+				if = {
 					limit = {
 					free_building_slots = {
 						building = dockyard
@@ -614,7 +614,7 @@
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
@@ -625,7 +625,7 @@
 					name = "Hai Wei"
 				}
 			}
-			ELSE = {
+			else = {
 				create_ship = {
 					type = destroyer_1
 					creator = "JAP"
@@ -1024,14 +1024,14 @@
 					instant_build = yes
 				}
 		}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				custom_effect_tooltip = unlock_mio_tt
 				show_mio_tooltip = JAP_nissan_organization
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MAN_nissan
 			}
@@ -1117,7 +1117,7 @@
 			show_ideas_tooltip = MAN_mangyo
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_idea = MAN_showa_steel_works
 					}
@@ -1126,7 +1126,7 @@
 						add_idea = MAN_mangyo
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = MAN_south_manchuria_railway_company
 					}
@@ -1306,7 +1306,7 @@
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1356,7 +1356,7 @@
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1378,7 +1378,7 @@
 				}
 			}
 
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MAN_mamc_light
 				show_ideas_tooltip = MAN_mamc_medium
@@ -1512,7 +1512,7 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_idea = MAN_strengthen_army 
@@ -1520,7 +1520,7 @@
 				}
 				add_ideas = MAN_mobilization
 			}
-			ELSE = {
+			else = {
 				swap_ideas = {
 					remove_idea = MAN_strengthen_army
 					add_idea = MAN_strong_army
@@ -1561,7 +1561,7 @@
 		
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_idea = MAN_mobilization 
@@ -1569,7 +1569,7 @@
 				}
 				add_ideas = MAN_strengthen_army
 			}
-			ELSE = {
+			else = {
 				swap_ideas = {
 					remove_idea = MAN_mobilization
 					add_idea = MAN_strong_army
@@ -1748,7 +1748,7 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					MAN_pujie = {
 						is_country_leader = no
@@ -1765,7 +1765,7 @@
 					legacy_id = -1
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					MAN_pujie = {
 						is_country_leader = yes
@@ -1782,7 +1782,7 @@
 					legacy_id = -1
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN_aisin_gioro_puyi = {
 						is_country_leader = yes
@@ -2077,13 +2077,13 @@
 				category = military_police_tech
 			}	
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = MAN_kempeitai_idea_lar
-				IF = {
+				if = {
 					limit = {
 						has_intelligence_agency = no
 					}
@@ -2091,7 +2091,7 @@
 					create_intelligence_agency = yes
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = MAN_kempeitai_idea_no_lar
 			}

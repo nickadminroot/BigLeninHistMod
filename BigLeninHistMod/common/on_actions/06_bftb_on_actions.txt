@@ -37,7 +37,6 @@ on_actions = {
 				}
 				TUR = { 
 					remove_ideas = TUR_german_advisors 
-					GER_hans_von_luck = { set_nationality = GER }
 				} 
 			}
 			if = {

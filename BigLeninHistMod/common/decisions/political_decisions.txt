@@ -597,7 +597,7 @@ fascism_on_the_rise = {
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 				}
@@ -1956,7 +1956,7 @@ political_actions = {
 					has_idea = idea_RAJ_kingmaker	
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 					original_tag = AUS
@@ -2218,7 +2218,7 @@ political_actions = {
 				fascism < 0.2
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					has_aat = yes 
 					original_tag = NOR 
@@ -2227,7 +2227,7 @@ political_actions = {
 					has_idea = NOR_anti_communist_sentiment_ns
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					original_tag = CHL
@@ -2256,14 +2256,14 @@ political_actions = {
 		visible = {
 			NOT = { has_government = fascism }
 			fascism > 0
-			IF = { 
+			if = { 
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}
 				NOT = { original_tag = GRE }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 					original_tag = AUS
@@ -2348,13 +2348,13 @@ political_actions = {
 		visible = {
 			NOT = { has_government = democratic }
 			democratic > 0
-			IF = { 
+			if = { 
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}
 				NOT = { original_tag = GRE }
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 				}
@@ -2415,7 +2415,7 @@ political_actions = {
 		available = {
 			communism < 0.2
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					original_tag = CHL
@@ -2437,7 +2437,7 @@ political_actions = {
 		visible = {
 			NOT = { has_government = communism }
 			communism > 0
-			IF = { 
+			if = { 
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}

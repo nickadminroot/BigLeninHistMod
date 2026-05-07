@@ -215,33 +215,33 @@ JAP_create_yoshio_kodama_operative = {
 #### MODIFYING THE DYNAMIC MODIFIERS
 
 JAP_add_or_modify_showa_statism = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
 		}
 		custom_effect_tooltip = JAP_add_showa_statism_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_showa_statism_modifier_tt
 	}
 }
 
 JAP_add_or_modify_state_shintoism = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
 		}
 		custom_effect_tooltip = JAP_add_state_shinotism_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_state_shinotism_modifier_tt
 	}
 }
 
 JAP_add_or_modify_early_industrialization = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { 
 				has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } 
@@ -251,13 +251,13 @@ JAP_add_or_modify_early_industrialization = {
 		custom_effect_tooltip = JAP_add_early_industrialization_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm }
 		}
 		custom_effect_tooltip = JAP_modify_early_industrialization_modifier_tt
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm }
 		}
@@ -266,7 +266,7 @@ JAP_add_or_modify_early_industrialization = {
 }
 
 JAP_add_or_modify_imperial_army = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { 
 				has_dynamic_modifier = { 
@@ -280,13 +280,13 @@ JAP_add_or_modify_imperial_army = {
 		custom_effect_tooltip = JAP_add_imperial_army_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_imperial_army_dm } }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_imperial_army_dm } 
 		}
 		custom_effect_tooltip = JAP_modify_imperial_army_modifier_tt
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_national_army_dm } 
 		}
@@ -295,7 +295,7 @@ JAP_add_or_modify_imperial_army = {
 }
 
 JAP_add_or_modify_imperial_navy = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { 
 				has_dynamic_modifier = { 
@@ -309,13 +309,13 @@ JAP_add_or_modify_imperial_navy = {
 		custom_effect_tooltip = JAP_add_imperial_navy_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_imperial_navy_dm } }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_imperial_navy_dm }
 		}
 		custom_effect_tooltip = JAP_modify_imperial_navy_modifier_tt
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_japanese_navy_dm }
 		}
@@ -324,7 +324,7 @@ JAP_add_or_modify_imperial_navy = {
 }
 
 JAP_add_or_modify_army_and_naval_air_services = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { 
 				has_dynamic_modifier = { 
@@ -338,13 +338,13 @@ JAP_add_or_modify_army_and_naval_air_services = {
 		custom_effect_tooltip = JAP_add_army_and_naval_air_services_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_army_and_naval_air_services_dm } }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_army_and_naval_air_services_dm }
 		}
 		custom_effect_tooltip = JAP_modify_army_and_naval_air_services_modifier_tt
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dynamic_modifier = { modifier = JAP_japanese_airforce_dm }
 		}
@@ -353,79 +353,79 @@ JAP_add_or_modify_army_and_naval_air_services = {
 }
 
 JAP_add_or_modify_east_asia_co_prosperity_sphere = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_east_asia_co_prosperity_sphere_dm } }
 		}
 		custom_effect_tooltip = JAP_add_east_asia_co_prosperity_sphere_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_east_asia_co_prosperity_sphere_dm } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_east_asia_co_prosperity_sphere_modifier_tt
 	}
 }
 
 JAP_add_or_modify_imperial_way = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
 		}
 		custom_effect_tooltip = JAP_add_the_imperial_way_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_the_imperial_way_modifier_tt
 	}
 }
 
 JAP_add_or_modify_advanced_weapon_projects = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_advanced_weapon_projects_dm } }
 		}
 		custom_effect_tooltip = JAP_add_advanced_weapon_projects_dm
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_advanced_weapon_projects_dm } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_advanced_weapon_projects_dm
 	}
 }
 
 JAP_add_or_modify_civilian_cabinet = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_civilian_cabinet_modifier } }
 		}
 		custom_effect_tooltip = JAP_add_civilian_cabinet_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_civilian_cabinet_modifier } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_civilian_cabinet_modifier_tt
 	}
 }
 
 JAP_add_or_modify_communist_party_modifier = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
 		}
 		custom_effect_tooltip = JAP_add_communist_party_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_communist_party_modifier_tt
 	}
 }
 
 JAP_add_or_modify_rounouha_modifier = {
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = JAP_rounouha_modifier } }
 		}
 		custom_effect_tooltip = JAP_add_rounouha_modifier_tt
 		hidden_effect = { add_dynamic_modifier = { modifier = JAP_rounouha_modifier } }
 	}
-	ELSE = {
+	else = {
 		custom_effect_tooltip = JAP_modify_rounouha_modifier_tt
 	}
 }
@@ -438,7 +438,7 @@ JAP_add_or_modify_rounouha_modifier = {
 # Setup faction-wide effects where JAP is FROM (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_from = {
 	
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "No Compromise, No Surrender"
@@ -458,7 +458,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			FROM = {
 				original_tag = JAP
@@ -477,7 +477,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			FROM = {
 				original_tag = JAP
@@ -493,7 +493,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			FROM = {
 				original_tag = JAP
@@ -514,7 +514,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 # Setup faction-wide effects where JAP is ROOT (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_root = {
 	
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				NOT = {
@@ -536,7 +536,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				original_tag = JAP
@@ -557,7 +557,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				original_tag = JAP
@@ -575,7 +575,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				original_tag = JAP
@@ -598,7 +598,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 # Setup faction-wide effects where JAP is neither ROOT nor FROM (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_JAP = {
 	
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "No Compromise, No Surrender"
@@ -619,7 +619,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			JAP = {
 				OR = {
@@ -639,7 +639,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			JAP = {
 				has_completed_focus = JAP_ministry_of_greater_east_asia
@@ -656,7 +656,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			JAP = {
 				has_completed_focus = JAP_the_minitry_of_pan_asian_development
@@ -678,7 +678,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 # Setup faction-wide effects where JAP is ROOT, but target is THIS (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_root_this = {
 	
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "No Compromise, No Surrender"
@@ -699,7 +699,7 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				OR = {
@@ -719,7 +719,7 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				has_completed_focus = JAP_ministry_of_greater_east_asia
@@ -736,7 +736,7 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
+	if = {
 		limit = {
 			ROOT = {
 				has_completed_focus = JAP_the_minitry_of_pan_asian_development
@@ -760,7 +760,7 @@ JAP_one_more_member_increase_peasants_education_strength = {
 	add_to_variable = { #always add a faction member
 		JAP_educating_the_peasants_modifier_allies_count = 1
 	}
-	IF = {
+	if = {
 		limit = {
 			check_variable = { #only add RnD bonus if you haven't reached 10 faction member yet
 				var = JAP_educating_the_peasants_modifier_allies_count
@@ -778,7 +778,7 @@ JAP_one_less_member_decrease_peasants_education_strength = {
 	subtract_from_variable = { #always remove faction members
 		JAP_educating_the_peasants_modifier_allies_count = 1
 	}
-	IF = {
+	if = {
 		limit = {
 			check_variable = { #Gotta have at least one ally
 				var = JAP_educating_the_peasants_modifier_allies_count
@@ -822,7 +822,7 @@ JAP_mobilize_railway_guns = {
 JAP_trigger_democratic_civil_war = {
 
 	# The Colonies and Imperial Protectorates Break Ties 
-	IF = {
+	if = {
 		limit = {
 			MAN = { is_subject_of = ROOT }
 		}
@@ -834,7 +834,7 @@ JAP_trigger_democratic_civil_war = {
 			}	
 			effect_tooltip = {
 				set_cosmetic_tag = MAN_kwantung_army
-				IF = {
+				if = {
 					limit = {
 						has_idea = MAN_kwantung_veto 
 					}
@@ -843,7 +843,7 @@ JAP_trigger_democratic_civil_war = {
 				add_ideas = MAN_militarism 
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				MEN = { is_subject_of = ROOT }
 			}
@@ -851,7 +851,7 @@ JAP_trigger_democratic_civil_war = {
 		}
 	}
 	
-	IF = {
+	if = {
 		limit = {
 			KOR = { is_subject_of = ROOT }
 		}
@@ -873,7 +873,7 @@ JAP_trigger_democratic_civil_war = {
 			}	
 		}
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = KOR
@@ -881,13 +881,13 @@ JAP_trigger_democratic_civil_war = {
 		}
 		release = KOR # Korea
 	}
-	IF = {
+	if = {
 		limit = {
 			PLU = { is_subject_of = ROOT }
 		}
 		set_autonomy = { target = PLU autonomy_state = autonomy_free }
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = PLU
@@ -895,13 +895,13 @@ JAP_trigger_democratic_civil_war = {
 		}
 		release = PLU # Palau
 	}
-	IF = {
+	if = {
 		limit = {
 			FOR = { is_subject_of = ROOT }
 		}
 		set_autonomy = { target = FOR autonomy_state = autonomy_free }
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = FOR
@@ -928,13 +928,13 @@ JAP_trigger_democratic_civil_war = {
 
 
 	# Setup for Army, Navy and Air Sizes
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_army_support }
 		}
 		set_variable = { ROOT.JAP_opposition_army_support = 0.4 }
 	}
-	IF = { 
+	if = { 
 		limit = { 
 			JAP = { is_ai = yes } 
 			check_variable = { ROOT.JAP_opposition_army_support < 0.6 }
@@ -946,7 +946,7 @@ JAP_trigger_democratic_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_seek_yakuza_support
 		}
@@ -957,7 +957,7 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_disillusioned_young_officers
 		}
@@ -968,7 +968,7 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_first_bit_of_army_support_flag
 		}
@@ -979,7 +979,7 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
 		}
@@ -990,13 +990,13 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_navy_support }
 		}
 		set_variable = { ROOT.JAP_opposition_navy_support = 0.6 }
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_the_navy_moderates
 		}
@@ -1007,7 +1007,7 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_navy_support_support_flag
 		}
@@ -1023,7 +1023,7 @@ JAP_trigger_democratic_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_air_support }
 		}
@@ -1034,7 +1034,7 @@ JAP_trigger_democratic_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_the_navy_moderates
 		}
@@ -1045,7 +1045,7 @@ JAP_trigger_democratic_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
 		}
@@ -1138,7 +1138,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV.PREV = {
     				NOT = {
@@ -1240,7 +1240,7 @@ JAP_trigger_democratic_civil_war = {
 	    		}
 	    	}
 
-	    	IF = {
+	    	if = {
 	    		limit = {
 	    			PREV = {
 	    				has_country_flag = JAP_IJA_recruited_more_conscripts_flag
@@ -1272,7 +1272,7 @@ JAP_trigger_democratic_civil_war = {
 	    		}
 	    	}
 
-	    	IF = {
+	    	if = {
 	    		limit = {
 	    			PREV = {
 	    				has_country_flag = JAP_IJA_recruited_kwantung_army_units_for_cw_flag
@@ -1326,7 +1326,7 @@ JAP_trigger_democratic_civil_war = {
 
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV.PREV = {
     				NOT = {
@@ -1339,7 +1339,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_diverted_military_funds_flag
@@ -1353,7 +1353,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_limited_the_militarys_power_flag
@@ -1368,7 +1368,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_organized_student_protests_flag
@@ -1383,7 +1383,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				OR = {
@@ -1455,7 +1455,7 @@ JAP_trigger_democratic_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			has_country_flag = JAP_secured_more_police_forces_flag
     		}
@@ -1532,7 +1532,7 @@ JAP_trigger_democratic_civil_war = {
 	
     custom_effect_tooltip = generic_skip_one_line_tt
 
-    IF = {
+    if = {
     	limit = {
     		has_completed_focus = JAP_raise_support_within_the_proletarian_class
     	}
@@ -1541,7 +1541,7 @@ JAP_trigger_democratic_civil_war = {
 
     custom_effect_tooltip = generic_skip_one_line_tt
 
-    IF = {
+    if = {
     	limit = {
     		has_country_flag = JAP_will_replace_hirohito_with_nobuhito_flag
     	}
@@ -1553,7 +1553,7 @@ JAP_trigger_democratic_civil_war = {
     }
 
     hidden_effect = {
-    	IF = {
+    	if = {
     		limit = {
     			has_country_flag = JAP_communists_siezed_infantry_weapons_flag
     		}
@@ -1563,7 +1563,7 @@ JAP_trigger_democratic_civil_war = {
     			producer = ROOT
     		}	
     	}
-    	IF = {
+    	if = {
     		limit = {
     			has_country_flag = JAP_communists_siezed_artillery_flag
     		}
@@ -1573,7 +1573,7 @@ JAP_trigger_democratic_civil_war = {
     			producer = ROOT
     		}	
     	}
-    	IF = {
+    	if = {
     		limit = {
     			has_country_flag = JAP_communists_siezed_trucks_flag
     		}
@@ -1583,7 +1583,7 @@ JAP_trigger_democratic_civil_war = {
     			producer = ROOT
     		}	
     	}
-    	IF = {
+    	if = {
     		limit = {
     			has_country_flag = JAP_IJA_secured_army_arsenals_flag
     		}
@@ -1601,7 +1601,7 @@ JAP_trigger_democratic_civil_war = {
 JAP_trigger_communist_civil_war = {
 	
 	# The Colonies and Imperial Protectorates Break Ties 
-	IF = {
+	if = {
 		limit = {
 			MAN = { is_subject_of = ROOT }
 		}
@@ -1613,7 +1613,7 @@ JAP_trigger_communist_civil_war = {
 			}	
 			effect_tooltip = {
 				set_cosmetic_tag = MAN_kwantung_army
-				IF = {
+				if = {
 					limit = {
 						has_idea = MAN_kwantung_veto 
 					}
@@ -1622,7 +1622,7 @@ JAP_trigger_communist_civil_war = {
 				add_ideas = MAN_militarism 
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				MEN = { is_subject_of = ROOT }
 			}
@@ -1630,7 +1630,7 @@ JAP_trigger_communist_civil_war = {
 		}
 	}
 	
-	IF = {
+	if = {
 		limit = {
 			KOR = { is_subject_of = ROOT }
 		}
@@ -1648,7 +1648,7 @@ JAP_trigger_communist_civil_war = {
 			}	
 		}
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = KOR
@@ -1656,13 +1656,13 @@ JAP_trigger_communist_civil_war = {
 		}
 		release = KOR # Korea
 	}
-	IF = {
+	if = {
 		limit = {
 			PLU = { is_subject_of = ROOT }
 		}
 		set_autonomy = { target = PLU autonomy_state = autonomy_free }
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = PLU
@@ -1670,13 +1670,13 @@ JAP_trigger_communist_civil_war = {
 		}
 		release = PLU # Palau
 	}
-	IF = {
+	if = {
 		limit = {
 			FOR = { is_subject_of = ROOT }
 		}
 		set_autonomy = { target = FOR autonomy_state = autonomy_free }
 	}
-	IF = {
+	if = {
 		limit = {
 			any_controlled_state = {
 				is_core_of = FOR
@@ -1703,13 +1703,13 @@ JAP_trigger_communist_civil_war = {
 
 
 	# Setup for Army, Navy and Air Sizes
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_army_support }
 		}
 		set_variable = { ROOT.JAP_opposition_army_support = 0.4 }
 	}
-	IF = { 
+	if = { 
 		limit = { 
 			JAP = { is_ai = yes } 
 			check_variable = { ROOT.JAP_opposition_army_support < 0.6 }
@@ -1721,7 +1721,7 @@ JAP_trigger_communist_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_seek_yakuza_support
 		}
@@ -1732,7 +1732,7 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_disillusioned_young_officers
 		}
@@ -1743,7 +1743,7 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_first_bit_of_army_support_flag
 		}
@@ -1754,7 +1754,7 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
 		}
@@ -1765,13 +1765,13 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_navy_support }
 		}
 		set_variable = { ROOT.JAP_opposition_navy_support = 0.5 }
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_the_navy_moderates
 		}
@@ -1782,7 +1782,7 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_navy_support_support_flag
 		}
@@ -1798,7 +1798,7 @@ JAP_trigger_communist_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_variable = ROOT.JAP_opposition_air_support }
 		}
@@ -1809,7 +1809,7 @@ JAP_trigger_communist_civil_war = {
 		min = 0
 		max = 0.9
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_completed_focus = JAP_sway_the_navy_moderates
 		}
@@ -1820,7 +1820,7 @@ JAP_trigger_communist_civil_war = {
 			min = 0.1
 		}
 	}
-	IF = {
+	if = {
 		limit = {  
 			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
 		}
@@ -1918,7 +1918,7 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV.PREV = {
     				NOT = {
@@ -2038,7 +2038,7 @@ JAP_trigger_communist_civil_war = {
 	    		}
 	    	}
 
-	    	IF = {
+	    	if = {
 	    		limit = {
 	    			PREV = {
 	    				has_country_flag = JAP_IJA_recruited_more_conscripts_flag
@@ -2070,7 +2070,7 @@ JAP_trigger_communist_civil_war = {
 	    		}
 	    	}
 
-	    	IF = {
+	    	if = {
 	    		limit = {
 	    			PREV = {
 	    				has_country_flag = JAP_IJA_recruited_kwantung_army_units_for_cw_flag
@@ -2124,7 +2124,7 @@ JAP_trigger_communist_civil_war = {
 
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV.PREV = {
     				NOT = {
@@ -2137,7 +2137,7 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_diverted_military_funds_flag
@@ -2151,7 +2151,7 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_limited_the_militarys_power_flag
@@ -2166,7 +2166,7 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				has_country_flag = JAP_organized_student_protests_flag
@@ -2181,7 +2181,7 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
 
-    	IF = {
+    	if = {
     		limit = {
     			PREV = {
     				OR = {
@@ -2316,7 +2316,7 @@ JAP_trigger_communist_civil_war = {
     			}
     		}
 
-    		IF = {
+    		if = {
     			limit = {
     				#PREV = {
     					NOT = {
@@ -2405,7 +2405,7 @@ JAP_trigger_communist_civil_war = {
     			    owner = PREV
     			}
     		}
-    		IF = {
+    		if = {
     			limit = {
     				ROOT = {
     					has_country_flag = JAP_secured_more_police_forces_flag
@@ -2499,7 +2499,7 @@ JAP_trigger_communist_civil_war = {
 	
 	custom_effect_tooltip = generic_skip_one_line_tt
 
-	IF = {
+	if = {
 		limit = {
 			has_completed_focus = JAP_raise_support_within_the_proletarian_class
 		}
@@ -2507,7 +2507,7 @@ JAP_trigger_communist_civil_war = {
 	}
 
 	hidden_effect = {
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = JAP_communists_siezed_infantry_weapons_flag
 			}
@@ -2517,7 +2517,7 @@ JAP_trigger_communist_civil_war = {
 				producer = ROOT
 			}	
 		}
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = JAP_communists_siezed_artillery_flag
 			}
@@ -2527,7 +2527,7 @@ JAP_trigger_communist_civil_war = {
 				producer = ROOT
 			}	
 		}
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = JAP_communists_siezed_trucks_flag
 			}
@@ -2537,7 +2537,7 @@ JAP_trigger_communist_civil_war = {
 				producer = ROOT
 			}	
 		}
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = JAP_IJA_secured_army_arsenals_flag
 			}
@@ -2559,7 +2559,7 @@ JAP_set_up_asian_resistance_states = {
 	hidden_effect = {
 		for_each_scope_loop = {
 			array = global.countries 
-			IF = {
+			if = {
 				limit = {
 					# Find countries with cores in asia that do not already exist as free or puppeted nations
 					exists = no 
@@ -3819,7 +3819,7 @@ JAP_add_influential_imperial_faction = {
 #Army Goes Up
 JAP_army_faction_goes_up_from_tier_1_to_tier_2 = {
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry
@@ -3885,7 +3885,7 @@ JAP_army_faction_goes_up_from_tier_1_to_tier_2 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_1 
 			add_idea = JAP_army_faction_tier_2
@@ -3898,7 +3898,7 @@ JAP_army_faction_goes_up_from_tier_2_to_tier_3 = {
 
 	JAP_add_influential_imperial_faction = yes
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -3964,7 +3964,7 @@ JAP_army_faction_goes_up_from_tier_2_to_tier_3 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_2 
 			add_idea = JAP_army_faction_tier_3
@@ -3977,7 +3977,7 @@ JAP_army_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4080,7 +4080,7 @@ JAP_army_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_3 
@@ -4141,7 +4141,7 @@ JAP_army_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4193,7 +4193,7 @@ JAP_army_faction_goes_down_from_tier_4_to_tier_3 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_4
 			add_idea = JAP_army_faction_tier_3
@@ -4207,7 +4207,7 @@ JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4273,7 +4273,7 @@ JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_3
 			add_idea = JAP_army_faction_tier_2
@@ -4285,7 +4285,7 @@ JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
 
 JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4351,7 +4351,7 @@ JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_army_faction_tier_2
 			add_idea = JAP_army_faction_tier_1
@@ -4367,7 +4367,7 @@ JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
 #Naval Goes Up
 JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = {
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4433,7 +4433,7 @@ JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_1 
 			add_idea = JAP_naval_faction_tier_2
@@ -4447,7 +4447,7 @@ JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4513,7 +4513,7 @@ JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_2 
 			add_idea = JAP_naval_faction_tier_3
@@ -4526,7 +4526,7 @@ JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4637,7 +4637,7 @@ JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_3 
@@ -4698,7 +4698,7 @@ JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4750,7 +4750,7 @@ JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = {
 		
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_4
 			add_idea = JAP_naval_faction_tier_3
@@ -4764,7 +4764,7 @@ JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4830,7 +4830,7 @@ JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_3
 			add_idea = JAP_naval_faction_tier_2
@@ -4842,7 +4842,7 @@ JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
 
 JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = {
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -4908,7 +4908,7 @@ JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		swap_ideas = {
 			remove_idea = JAP_naval_faction_tier_2
 			add_idea = JAP_naval_faction_tier_1
@@ -4948,7 +4948,7 @@ JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
 		add_idea = JAP_zaibatsu_faction_tier_4
 	}
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -5077,7 +5077,7 @@ JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
 			limit = {
 				OR = {
@@ -5194,7 +5194,7 @@ JAP_government_faction_goes_up_from_tier_3_to_tier_4 = {
 		add_idea = JAP_government_faction_tier_4
 	}
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_completed_focus = JAP_end_the_interservice_rivalry 
@@ -5324,7 +5324,7 @@ JAP_government_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	}
 	# If Army and Navy no longer compare themselves to eachother 
-	ELSE = {
+	else = {
 
 		#Demote the Dominant Faction:
 		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
@@ -5478,7 +5478,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			add_idea = JAP_army_faction_tier_2
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_4
 			}
@@ -5488,7 +5488,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			}
 			JAP_add_influential_imperial_faction = yes
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_3
 			}
@@ -5498,7 +5498,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_2
 			}
@@ -5593,7 +5593,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			add_idea = JAP_army_faction_tier_3
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_4
 			}
@@ -5604,7 +5604,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 				add_idea = JAP_naval_faction_tier_3
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_3
 			}
@@ -5614,7 +5614,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_2
 			}
@@ -5674,7 +5674,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			add_idea = JAP_army_faction_tier_4
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_4
 			}
@@ -5684,7 +5684,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			}
 			JAP_add_influential_imperial_faction = yes
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_3
 			}
@@ -5694,7 +5694,7 @@ JAP_army_faction_goes_up_and_navy_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_naval_faction_tier_2
 			}
@@ -5799,7 +5799,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			add_idea = JAP_naval_faction_tier_2
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_4
 			}
@@ -5809,7 +5809,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			}
 			JAP_add_influential_imperial_faction = yes
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_3
 			}
@@ -5819,7 +5819,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_2
 			}
@@ -5914,7 +5914,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			add_idea = JAP_naval_faction_tier_3
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_4
 			}
@@ -5925,7 +5925,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			#We're gonna have to add an extra Influential Faction point here
 			add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_3
 			}
@@ -5935,7 +5935,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 }  #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_2
 			}
@@ -5995,7 +5995,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			add_idea = JAP_naval_faction_tier_4
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_4
 			}
@@ -6005,7 +6005,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			}
 			JAP_add_influential_imperial_faction = yes
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_3
 			}
@@ -6015,7 +6015,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 			}
 			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = JAP_army_faction_tier_2
 			}
@@ -6064,7 +6064,7 @@ JAP_naval_faction_goes_up_and_army_goes_down = {
 JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 	
 	## ON TIER 1 ##
-	IF = {
+	if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_1_equal_navy
 		}
@@ -6073,7 +6073,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_1_lesser_1
 		}
@@ -6082,7 +6082,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_1_lesser_2
 		}
@@ -6091,7 +6091,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_1_lesser_3
 		}
@@ -6101,7 +6101,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 		}	
 	}
 	## ON TIER 2 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_2_equal_navy
 		}
@@ -6110,7 +6110,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_2_greater_1
 		}
@@ -6119,7 +6119,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_2_lesser_1
 		}
@@ -6128,7 +6128,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_2_lesser_2
 		}
@@ -6138,7 +6138,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 		}
 	}
 	## ON TIER 3 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_3_equal_navy
 		}
@@ -6147,7 +6147,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_3_greater_1
 		}
@@ -6156,7 +6156,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_3_greater_2
 		}
@@ -6165,7 +6165,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_3_lesser_1
 		}
@@ -6175,7 +6175,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 		}
 	}
 	## ON TIER 4 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_4_greater_1
 		}
@@ -6184,7 +6184,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_4
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_4_greater_2
 		}
@@ -6193,7 +6193,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_army_faction_tier_4
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_army_faction_tier_4_greater_3
 		}
@@ -6208,7 +6208,7 @@ JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
 JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 	
 	## ON TIER 1 ##
-	IF = {
+	if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_1_equal_army
 		}
@@ -6217,7 +6217,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_1_lesser_1
 		}
@@ -6226,7 +6226,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_1_lesser_2
 		}
@@ -6235,7 +6235,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_1
 		}	
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_1_lesser_3
 		}
@@ -6245,7 +6245,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 		}	
 	}
 	## ON TIER 2 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_2_equal_army
 		}
@@ -6254,7 +6254,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_2_greater_1
 		}
@@ -6263,7 +6263,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_2_lesser_1
 		}
@@ -6272,7 +6272,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_2
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_2_lesser_2
 		}
@@ -6282,7 +6282,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 		}
 	}
 	## ON TIER 3 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_3_equal_army
 		}
@@ -6291,7 +6291,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_3_greater_1
 		}
@@ -6300,7 +6300,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_3_greater_2
 		}
@@ -6309,7 +6309,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_3
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_3_lesser_1
 		}
@@ -6319,7 +6319,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 		}
 	}
 	## ON TIER 4 ##
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_4_greater_1
 		}
@@ -6328,7 +6328,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_4
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_4_greater_2
 		}
@@ -6337,7 +6337,7 @@ JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
 			add_idea = JAP_naval_faction_tier_4
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_idea = JAP_naval_faction_tier_4_greater_3
 		}

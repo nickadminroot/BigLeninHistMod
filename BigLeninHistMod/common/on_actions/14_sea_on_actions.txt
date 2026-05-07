@@ -107,7 +107,7 @@ on_actions = {
 		#JAPAN - Launch event that notifies about Kodoha coup and advisor protection if 1936 start date, as well as the 1936 election
 		effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					date < "1936.2.2"
 				}
@@ -130,7 +130,7 @@ on_actions = {
 		#MONGOLIA - Launch event that will lead to the Tauran incident and the border war against Manchukuo 
 		effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					date < "1936.2.2"
 				}
@@ -148,7 +148,7 @@ on_actions = {
 		#KOREA/JAPAN - Set up the resistance DMs 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_game_rule = {
@@ -177,7 +177,7 @@ on_actions = {
 
 		# Adding in the Great Wall province effect
 		effect = {
-			IF = {
+			if = {
 				limit = { has_dlc = "No Compromise, No Surrender" }
 				328 = { # Kirin
 					add_province_modifier = {
@@ -510,7 +510,7 @@ on_actions = {
 		effect = {
 
 			# For resetting Sonno Joui for Japan
-			IF = {
+			if = {
 				limit = {
 					JAP = { has_idea = JAP_expel_the_barbarians }
 					ROOT = {
@@ -547,7 +547,7 @@ on_actions = {
 		}
 
 		effect = { # Trigger the han fuju flees event
-			IF = {
+			if = {
 				limit = {
 					FROM.FROM = {
 						state = 1038 #Jinan
@@ -588,7 +588,7 @@ on_actions = {
 		}
 
 		effect = { #BEL-inspired fall of Phillipines
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					FROM.FROM = {
@@ -700,7 +700,7 @@ on_actions = {
 		# Changing out the presidential palace building for  
 		effect = {
 			# New owner is CHI
-			IF = {
+			if = {
 				limit = {
 					ROOT = { tag = CHI }
 					FROM = { tag = PRC }
@@ -720,7 +720,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = { tag = CHI }
 					FROM = { NOT = { tag = PRC } }
@@ -742,7 +742,7 @@ on_actions = {
 			}
 
 			# New owner is PRC
-			IF = {
+			if = {
 				limit = {
 					ROOT = { tag = PRC }
 					FROM = { tag = CHI }
@@ -762,7 +762,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = { tag = PRC }
 					FROM = { NOT = { tag = CHI } }
@@ -784,7 +784,7 @@ on_actions = {
 			}
 
 			# New owner is anyone, but CHI and PRC
-			IF = {
+			if = {
 				limit = {
 					ROOT = { NOT = { tag = CHI } }
 					FROM = { tag = PRC }
@@ -804,7 +804,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = { NOT = { tag = PRC } }
 					FROM = { tag = CHI }
@@ -831,7 +831,7 @@ on_actions = {
 	on_offer_join_faction = {
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = JAP
@@ -846,7 +846,7 @@ on_actions = {
 		}
 
 		effect = { # Adding the correct stuff for puppets for German Mitteleuropa stuff
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = JAP
@@ -865,7 +865,7 @@ on_actions = {
 
 		effect = {
 			#Remove JAP_POL_anti_soviet_pact if joining commie Soviet in faction
-			IF = {
+			if = {
 				limit = {
 					original_tag = SOV
 					has_government = communism
@@ -902,7 +902,7 @@ on_actions = {
 	on_join_faction = { 
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -917,7 +917,7 @@ on_actions = {
 		}
 
 		effect = { # Adding the correct stuff for puppets for Japanese GEACPS stuff
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -936,7 +936,7 @@ on_actions = {
 
 		effect = {
 			#Remove JAP_POL_anti_soviet_pact if joining commie Soviet in faction
-			IF = {
+			if = {
 				limit = {
 					has_idea = JAP_POL_anti_soviet_pact
 					FROM = {
@@ -969,7 +969,7 @@ on_actions = {
 	on_puppet = {
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -1076,7 +1076,7 @@ on_actions = {
 		}
 
 		effect = { # Adding the correct stuff for puppets for Japanese GEACPS stuff
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -1115,7 +1115,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = JAP
@@ -1138,7 +1138,7 @@ on_actions = {
 
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -1221,7 +1221,7 @@ on_actions = {
 	on_release_as_puppet = {
 
 		effect = { # Adding the correct stuff for puppets for the Japanese GEACPS faction stuff
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = JAP
@@ -1246,7 +1246,7 @@ on_actions = {
 		effect = {
 
 			# To tie Philippine ideoloy with Japan's ideology
-			IF = {
+			if = {
 				limit = {
 					original_tag = JAP 
 				}
@@ -1270,7 +1270,7 @@ on_actions = {
 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = JAP
@@ -1278,11 +1278,11 @@ on_actions = {
 				}
 				
 				#NAVY MODIFIERS
-				IF = {
+				if = {
 					limit = {
 						has_government = fascism
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_japanese_navy_dm }
 						}
@@ -1294,11 +1294,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = democratic
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_imperial_navy_dm }
 						}
@@ -1310,11 +1310,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = neutrality
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_japanese_navy_dm }
 						}
@@ -1326,11 +1326,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = communism
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_imperial_navy_dm }
 						}
@@ -1344,11 +1344,11 @@ on_actions = {
 				}
 
 				#ARMY MODIFIERS
-				IF = {
+				if = {
 					limit = {
 						has_government = fascism
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_national_army_dm }
 						}
@@ -1360,11 +1360,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = democratic
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_imperial_army_dm }
 						}
@@ -1376,11 +1376,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = neutrality
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_national_army_dm }
 						}
@@ -1392,11 +1392,11 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_government = communism
 					}
-					IF =  {
+					if =  {
 						limit = {
 							has_dynamic_modifier = { modifier = JAP_imperial_army_dm }
 						}
@@ -1420,7 +1420,7 @@ on_actions = {
 		effect = {
 
 			# Remove pact opinion modifiers if at war with Germany
-			IF = {
+			if = {
 				limit = {
 					tag = JAP
 					FROM = {
@@ -1436,7 +1436,7 @@ on_actions = {
 			}
 
 			#Call Anti-Soviet pact members to war
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = SOV
@@ -2018,7 +2018,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = { ## When war against CHI and PRC breaks out - some generals flip to PRC
+			if = { ## When war against CHI and PRC breaks out - some generals flip to PRC
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					OR = { 
@@ -3076,7 +3076,7 @@ on_actions = {
 
 		effect = {
 			# Give Japan a celebratory event when the democratic side wins the civil war 
-			IF = {
+			if = {
 				limit = {
 					original_tag = JAP
 					has_government = democratic
@@ -3140,7 +3140,7 @@ on_actions = {
 
 		effect = {
 			#Yulbars Khan flees
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						OR = {
@@ -3151,12 +3151,12 @@ on_actions = {
 						has_war_with = SIK
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						original_tag = KUM
 						is_subject_of = KHM
 					}
-					IF = {
+					if = {
 						limit = {
 							KHM = {
 								has_capitulated = no
@@ -3169,8 +3169,8 @@ on_actions = {
 							}
 						}
 					}
-					ELSE = {
-						IF = {
+					else = {
+						if = {
 							limit = {
 								CHI = {
 									exists = yes
@@ -3185,14 +3185,14 @@ on_actions = {
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						original_tag = KUM
 						NOT = {
 							is_subject_of = KHM
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							CHI = {
 								exists = yes
@@ -3206,8 +3206,8 @@ on_actions = {
 						}
 					}
 				}
-				ELSE = {
-					IF = {
+				else = {
+					if = {
 						limit = {
 							CHI = {
 								exists = yes
@@ -3227,14 +3227,14 @@ on_actions = {
 		# Ma Hongbin flees 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = KHM
 						has_character = XSM_ma_hongbin
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						NXM = {
 							exists = yes
@@ -3247,7 +3247,7 @@ on_actions = {
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						XSM = {
 							exists = yes
@@ -3260,7 +3260,7 @@ on_actions = {
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						GSM = {
 							exists = yes
@@ -3280,7 +3280,7 @@ on_actions = {
 		# Mahmut Muhiti offers to return to Sinkiangi service 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = KHM
@@ -3302,7 +3302,7 @@ on_actions = {
 		# Ma Hushan flees with gold to India 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = KHM
@@ -3355,7 +3355,7 @@ on_actions = {
 		}
 
 		effect = { # Trigger the dissolutuion of the HBC event
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = HBC
@@ -3395,7 +3395,7 @@ on_actions = {
 
 		#PRC capitulates
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = PRC
@@ -3409,7 +3409,7 @@ on_actions = {
 					remove_dynamic_modifier = { modifier = PRC_the_yulin_garrison }
 				}
 			}
-			IF = { #If PRC capitulates after having completed Burn the Paper tiger and is faction leader, then make China a major so they can continue the fight against Japan
+			if = { #If PRC capitulates after having completed Burn the Paper tiger and is faction leader, then make China a major so they can continue the fight against Japan
 				limit = {
 					ROOT = {
 						original_tag = PRC
@@ -3443,7 +3443,7 @@ on_actions = {
 		# Three way civil war - demo Japan is defeated and should be annexed into com JAP 
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = JAP
@@ -3465,7 +3465,7 @@ on_actions = {
 
 		# Remove nine-power treaty signatory
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					is_in_array = {
 						array = CHI.nine_power_treaty_signatories
@@ -3564,7 +3564,7 @@ on_actions = {
 			}
 		}
 		effect = {	#JAP: lose US puppet cosmetic tag if no longer a US puppet 
-			IF = {
+			if = {
 				limit = {
 					original_tag = JAP
 					has_cosmetic_tag = JAP_us_occupation
@@ -3649,7 +3649,7 @@ on_actions = {
 	# ROOT is winner, FROM is loser (called for all winners against all losers)
 	on_before_peace_conference_start = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = { NOT = { has_country_flag = peace_winner_flag } }
 				}
@@ -3663,7 +3663,7 @@ on_actions = {
 
         effect = {
             FROM = {
-                IF = {    #This prevents the country capping again after just having been puppeted
+                if = {    #This prevents the country capping again after just having been puppeted
                     limit = {
                         has_idea = BEL_surrender_ns
                     }
@@ -3674,7 +3674,7 @@ on_actions = {
 
         effect = {
             FROM = {
-                IF = {    #This prevents Japan from capping again after just having been puppeted
+                if = {    #This prevents Japan from capping again after just having been puppeted
                     limit = {
                         has_idea = JAP_accepted_the_potsdam_agreement
                     }
@@ -3685,7 +3685,7 @@ on_actions = {
 
         effect = {
             FROM = {
-                IF = {    # This prevents Japan from having a non-allowed eco modifier after being puppeted etc 
+                if = {    # This prevents Japan from having a non-allowed eco modifier after being puppeted etc 
                     limit = {
                         has_idea = national_defense_state
                     }
@@ -3699,7 +3699,7 @@ on_actions = {
 
         # CHI has lost and RNG has been validated as an actual China 
         effect = {
-    		IF = {
+    		if = {
     			limit = {
     				# The Reorganized National Government is a winner
     				ROOT = {
@@ -3720,7 +3720,7 @@ on_actions = {
 
         # Merging of Japanese puppet governments into one (ONLY WHEN JAPAN IS AN AI)
         effect = {
-        	IF = {
+        	if = {
         		limit = {
         			# Japan is a winner and has the RNG as their puppet 
         			ROOT = {
@@ -3745,7 +3745,7 @@ on_actions = {
 
         # Merging of accidental leftover Japan into American Japanese puppet government if there is one, if Japan surrendered through the focus  
         effect = {
-        	IF = {
+        	if = {
         		limit = {
         			# USA is a winner and has the JAP as their puppet 
         			ROOT = {
@@ -3784,7 +3784,7 @@ on_actions = {
     	# Kuomintang getting their generals if manually annexing subject warlords 
     	effect = {
 
-    		IF = {
+    		if = {
     			limit = {
     				has_dlc = "No Compromise, No Surrender"
     				FROM = {
@@ -3794,20 +3794,17 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = CHI_song_zheyuan
     					}
     				}
     				ROOT = {
-    					CHI_song_zheyuan = {
-    						set_nationality = FROM
-    					}
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = CHI_wan_fulin
@@ -3820,20 +3817,17 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = SND_han_fuju
     					}
     				}
     				ROOT = {
-    					SND_han_fuju = {
-    						set_nationality = FROM
-    					}
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = CHI_sun_tongxuan
@@ -3846,7 +3840,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = CHI_fu_zuoyi
@@ -3859,7 +3853,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = SHX_wang_jingguo
@@ -3872,7 +3866,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = XSM_ma_hongkui
@@ -3885,7 +3879,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = XSM_ma_buqing
@@ -3898,7 +3892,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = XSM_ma_bufang
@@ -3911,7 +3905,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = KUM_yulbars_khan
@@ -3924,7 +3918,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = KHM_ma_hushan
@@ -3937,7 +3931,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = KHM_ma_zhancang
@@ -3950,7 +3944,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = CHI_gu_zhutong
@@ -3963,7 +3957,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = SIC_yang_sen
@@ -3976,7 +3970,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = SIC_liu_wenhui
@@ -3989,7 +3983,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = YUN_lu_han
@@ -4002,7 +3996,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = YUN_hu_ruoyu
@@ -4015,7 +4009,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = GXC_li_zongren
@@ -4028,7 +4022,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = GXC_bai_chongxi
@@ -4041,7 +4035,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = GXC_chen_jitang
@@ -4054,7 +4048,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = GND_yu_hanmou
@@ -4067,7 +4061,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = MEN_jodbajab
@@ -4080,7 +4074,7 @@ on_actions = {
     				}
     			}
 
-    			IF = {
+    			if = {
     				limit = {
     					ROOT = {
     						has_character = MEN_altanochir

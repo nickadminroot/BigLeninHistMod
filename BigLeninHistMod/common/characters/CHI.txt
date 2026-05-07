@@ -2763,7 +2763,7 @@ characters = {
 				specialization_nuclear = 2
 			}
 			visible = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}

@@ -2580,7 +2580,7 @@ FIN_foreign_politics_decision_category = {
 
 					### TRANSFER STATES ###
 					#KARJALA
-					IF = {
+					if = {
 						limit = {	
 							146 = {
 								is_owned_by = FIN
@@ -2592,7 +2592,7 @@ FIN_foreign_politics_decision_category = {
 					}
 
 					#SALLA
-					IF = {
+					if = {
 						limit = {
 							147 = {
 								is_owned_by = FIN
@@ -2604,7 +2604,7 @@ FIN_foreign_politics_decision_category = {
 					}
 
 					#PETSAMO
-					IF = {
+					if = {
 						limit = {
 							722 = {	
 								is_owned_by = FIN
@@ -2887,7 +2887,7 @@ FIN_foreign_politics_decision_category = {
 					white_peace = ROOT
 				}
 
-				IF = {
+				if = {
 					limit = {
 						GER = {
 							has_military_access_to = ROOT
@@ -2932,7 +2932,7 @@ FIN_foreign_politics_decision_category = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						ROOT = {
 							has_idea = FIN_the_lone_wolf

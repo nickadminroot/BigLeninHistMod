@@ -1138,7 +1138,7 @@ SOV_is_opposition_state = {
 
 SOV_is_display_state = {
 	is_owned_by = SOV
-	IF = {
+	if = {
 		limit = { ROOT = { SOV_is_left_opposition = yes } }
 		OR = {
 			any_neighbor_state = { has_state_flag = SOV_left_opposition_state } # You can influence if you control a neighbor state
@@ -1146,7 +1146,7 @@ SOV_is_display_state = {
 			has_state_flag = SOV_stalinist_state # Show states that have had a crackdown as well 
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { ROOT = { SOV_is_right_opposition = yes } }
 		OR = {
 			any_neighbor_state = { has_state_flag = SOV_right_opposition_state }  # You can influence if you control a neighbor state
@@ -1154,7 +1154,7 @@ SOV_is_display_state = {
 			has_state_flag = SOV_stalinist_state # Show states that have had a crackdown as well 
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { ROOT = { SOV_is_exiles = yes } }
 		OR = {
 			any_neighbor_state = { has_state_flag = SOV_exiles_state }  # You can influence if you control a neighbor state

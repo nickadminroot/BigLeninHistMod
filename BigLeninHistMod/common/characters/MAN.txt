@@ -1010,7 +1010,7 @@ characters = {
 				original_tag = MAN
 			}
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}
@@ -1019,7 +1019,7 @@ characters = {
 						has_completed_focus = MAN_tsr_ally_bandit_leaders
 					}
 				}
-				ELSE = {
+				else = {
 					has_completed_focus = MAN_five_people_armies
 				}
 				not_already_hired_except_as = political_advisor
@@ -1038,7 +1038,7 @@ characters = {
 				original_tag = MAN
 			}
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}
@@ -1047,7 +1047,7 @@ characters = {
 						has_completed_focus = MAN_tsr_ally_bandit_leaders
 					}
 				}
-				ELSE = {
+				else = {
 					has_completed_focus = MAN_five_people_armies
 				}
 				not_already_hired_except_as = high_command

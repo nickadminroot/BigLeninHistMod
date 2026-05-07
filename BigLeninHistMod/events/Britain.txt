@@ -991,7 +991,7 @@ country_event = {
         	# This doesn't work here
         	#country_event = { id = generic.6 days = 1 }  
         }
-        IF = {
+        if = {
         	limit = { 
         		has_dlc = "Arms Against Tyranny"	
         	}

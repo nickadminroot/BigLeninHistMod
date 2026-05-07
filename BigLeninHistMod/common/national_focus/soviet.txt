@@ -206,7 +206,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					any_owned_state = {
 						is_controlled_by = ROOT 
@@ -237,7 +237,7 @@ focus_tree = {
 					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
 			}
-			ELSE = {
+			else = {
 				random_owned_controlled_state = {
 					limit = {
 						# industrial_complex > 0
@@ -256,7 +256,7 @@ focus_tree = {
 					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					check_variable = { num_owned_states > 1}
 					any_owned_state = {
@@ -289,7 +289,7 @@ focus_tree = {
 					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					check_variable = { num_owned_states > 1 }
 				}
@@ -1198,7 +1198,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -1317,7 +1317,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -1907,7 +1907,7 @@ focus_tree = {
 		completion_reward = {
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_country_leader = {
 							ruling_only = yes
@@ -1919,7 +1919,7 @@ focus_tree = {
 						name = SOV_stalingrad_hydro_station
 					}
 				}
-				ELSE = {
+				else = {
 					set_province_name = {
 						id = 3555
 						name = SOV_volgograd_hydro_station
@@ -2129,7 +2129,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = SOV_modernize_aircraft_facilities_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						260 = {
 							is_fully_controlled_by = ROOT
@@ -3720,13 +3720,13 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				add_ideas = cruiser_submarine_specialization_mtg
 			}
-			ELSE = {
+			else = {
 				add_ideas = cruiser_submarine_specialization
 			}
 		}
@@ -4915,7 +4915,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -4933,7 +4933,7 @@ focus_tree = {
 					value = 0.5
 				}
 			}
-			ELSE = {
+			else = {
 				add_breakthrough_progress = {
 					specialization = specialization_nuclear
 					value = 0.8
@@ -4944,7 +4944,7 @@ focus_tree = {
 
 			custom_effect_tooltip = SOV_soviet_atomic_bomb_project_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						588 = {
 							is_fully_controlled_by = ROOT
@@ -6894,7 +6894,7 @@ focus_tree = {
 
 			SOV_paranoia_low_decrease_effect = yes
 
-			IF = {
+			if = {
 				limit ={
 					is_faction_leader = yes 
 				}
@@ -8664,7 +8664,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 
-			IF = {
+			if = {
 				limit = { 
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes
@@ -8841,7 +8841,7 @@ focus_tree = {
 
 			add_political_power = 35
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes

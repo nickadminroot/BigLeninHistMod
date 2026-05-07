@@ -7807,7 +7807,7 @@ country_event = {
 			}
 			white_peace = ROOT
 		}
-		IF = {
+		if = {
 			limit = {
 				RAJ = { has_country_flag = RAJ_mughal_captured_states }
 			}

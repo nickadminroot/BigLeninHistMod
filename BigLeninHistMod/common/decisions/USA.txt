@@ -1888,7 +1888,7 @@ USA_war_plans = {
 					limit = {
 						is_faction_leader = yes
 						JAP = {
-							IF = {
+							if = {
 								limit = {
 									is_in_faction = no
 								}
@@ -1900,7 +1900,7 @@ USA_war_plans = {
 									value > 19
 								}
 							}
-							ELSE = {
+							else = {
 								collection_size = {
 									input = {
 										input = collection:faction_controlled_non_core_states
@@ -3124,7 +3124,7 @@ operations = {
 			DEN = {
 				is_subject = yes
 			}
-			IF = {
+			if = {
 				limit = {	
 					DEN = {
 						is_subject = yes

@@ -3597,7 +3597,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			110 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -3759,7 +3759,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			7 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -3927,7 +3927,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			6 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -4176,7 +4176,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			808 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -4390,7 +4390,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			202 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -4802,7 +4802,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			231 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -5032,7 +5032,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			405 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -5326,7 +5326,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			219 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -5545,7 +5545,7 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					RKM = {
 						exists = yes
@@ -5567,7 +5567,7 @@ GER_reichskommissariats = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					RKO = {
 						exists = yes
@@ -5589,7 +5589,7 @@ GER_reichskommissariats = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					RKU = {
 						exists = yes
@@ -5611,7 +5611,7 @@ GER_reichskommissariats = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					RKT = {
 						exists = yes
@@ -5633,7 +5633,7 @@ GER_reichskommissariats = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					RKK = {
 						exists = yes
@@ -5655,7 +5655,7 @@ GER_reichskommissariats = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					RKL = {
 						exists = yes
@@ -6202,7 +6202,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			88 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -6460,7 +6460,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			9 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -6713,7 +6713,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			41 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -6975,7 +6975,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			109 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -7306,7 +7306,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			126 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -8095,7 +8095,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			458 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -8516,7 +8516,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			546 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -8935,7 +8935,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			489 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -9208,7 +9208,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			494 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -9533,7 +9533,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			695 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -9866,7 +9866,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			395 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -10697,7 +10697,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			291 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -11416,7 +11416,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			439 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -12065,7 +12065,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			743 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -12409,7 +12409,7 @@ GER_reichskommissariats = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			979 = {
-				IF = {
+				if = {
 					limit = {
 						OWNER = {
 							NOT = {
@@ -13602,7 +13602,7 @@ GER_austro_hungarian_empire = {
 					original_tag = AUS
 				}
 				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
-				IF = {
+				if = {
 					limit = {
 						CZE = {
 							exists = yes
@@ -13616,7 +13616,7 @@ GER_austro_hungarian_empire = {
 					original_tag = HUN
 				}
 				AUS = { country_event = { id = wtt_germany.68 hours = 1 } }
-				IF = {
+				if = {
 					limit = {
 						CZE = {
 							exists = yes
@@ -16167,7 +16167,7 @@ GER_monroe_doctrine_cat = {
 			custom_effect_tooltip = GER_destabilize_the_monroe_doctrine_decision_effect_tt
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						USA = {
 							has_country_flag = USA_save_monroe_flag
@@ -16181,7 +16181,7 @@ GER_monroe_doctrine_cat = {
 					}
 				}
 
-				ELSE = {
+				else = {
 					USA = {
 						news_event = {
 							id = wuw_GER_monroe_news.1
@@ -16311,7 +16311,7 @@ GER_monroe_doctrine_cat = {
 
 			hidden_effect = {
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_country_flag = GER_monroe_conflict_started_flag
@@ -16422,7 +16422,7 @@ GER_monroe_doctrine_cat = {
 			for_each_scope_loop = {
 				array = global.monroe_doctrine_countries_to_destabilize
 
-				IF = {
+				if = {
 					limit = { #this should never happen but just to be sure
 						NOT = {
 							is_in_faction_with = GER
@@ -18876,7 +18876,7 @@ GER_realpolitik_cat = {
 			}
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = {
 						is_faction_leader = no
 					}
@@ -18984,7 +18984,7 @@ GER_realpolitik_cat = {
 			}
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = {
 						is_faction_leader = no
 					}
@@ -19078,7 +19078,7 @@ GER_realpolitik_cat = {
 						ideology = ROOT
 						popularity = 0.1
 					}
-					IF = {
+					if = {
 						limit = {
 							ROOT = {
 								has_government = democratic
@@ -19089,7 +19089,7 @@ GER_realpolitik_cat = {
 							days = 180
 						}	
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = {
 							ROOT = {
 								has_government = neutrality
@@ -19209,7 +19209,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_ubd_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -19218,7 +19218,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_personal_union
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 				}
@@ -19227,7 +19227,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_colony
 				}
 			}
-			ELSE = {
+			else = {
 				set_autonomy = { 
 					target = UBD 
 					autonomy_state = autonomy_puppet 
@@ -19414,7 +19414,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_ukr_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -19423,7 +19423,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_personal_union
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 				}
@@ -19432,7 +19432,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_colony
 				}
 			}
-			ELSE = {
+			else = {
 				set_autonomy = { 
 					target = UKR 
 					autonomy_state = autonomy_puppet 
@@ -19558,7 +19558,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_geo_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -19567,7 +19567,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_personal_union
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 				}
@@ -19576,7 +19576,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_colony
 				}
 			}
-			ELSE = {
+			else = {
 				set_autonomy = { 
 					target = GEO 
 					autonomy_state = autonomy_puppet 
@@ -19795,7 +19795,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_blr_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -19804,7 +19804,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_personal_union
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 				}
@@ -19813,7 +19813,7 @@ GER_realpolitik_cat = {
 					autonomy_state = autonomy_colony
 				}
 			}
-			ELSE = {
+			else = {
 				set_autonomy = { 
 					target = BLR 
 					autonomy_state = autonomy_puppet 
@@ -19926,7 +19926,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_flanders_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 					BEL = {
@@ -19941,7 +19941,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 					BEL = {
@@ -19956,7 +19956,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					BEL = {
 						NOT = {
@@ -20062,7 +20062,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_bri_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 					BRI = {
@@ -20077,7 +20077,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 					BRI = {
@@ -20092,7 +20092,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					BRI = {
 						NOT = {
@@ -20211,7 +20211,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_wls_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 					WLS = {
@@ -20226,7 +20226,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 					WLS = {
@@ -20241,7 +20241,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					WLS = {
 						NOT = {
@@ -20375,7 +20375,7 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_sco_state_transfer_effect_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 					SCO = {
@@ -20390,7 +20390,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = democratic
 					SCO = {
@@ -20405,7 +20405,7 @@ GER_realpolitik_cat = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					SCO = {
 						NOT = {
@@ -21115,7 +21115,7 @@ GER_volkskommissariats_cat = {
 
 		remove_effect = {
 
-			IF = { #We're using a flag here instead so that you don't accidentally remove a potential cosmetic tag you gain AFTER taking this decision for the first time
+			if = { #We're using a flag here instead so that you don't accidentally remove a potential cosmetic tag you gain AFTER taking this decision for the first time
 				limit = {
 					NOT = {
 						has_country_flag = GER_integrate_volkskommissariats_cosmetic_tag_flag
@@ -21659,7 +21659,7 @@ GER_spreading_the_red_flame_cat = {
 			custom_effect_tooltip = if_they_accept_tt
 
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = { 
 						FROM = {
 							is_subject_of = ROOT
@@ -21667,7 +21667,7 @@ GER_spreading_the_red_flame_cat = {
 					}
 					add_ideas = GER_proletarian_solidarity_subject_ns
 				}
-				ELSE = {
+				else = {
 					add_ideas = GER_proletarian_solidarity_ns
 				}
 			}

@@ -1307,7 +1307,7 @@ characters={
 					has_completed_focus  = FRA_utilize_the_leagues 
 					has_focus_tree  = vichy_french_focus
 				}
-				IF  = {
+				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
@@ -1325,7 +1325,7 @@ characters={
 				}
 			}
 			on_add  = {
-				IF  = {
+				if  = {
 					limit  = {
 						NOT  = {
 							owner = { tag = VIC }

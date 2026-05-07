@@ -197,14 +197,14 @@ JAP_mitsubishi_heavy_industries_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -563,14 +563,14 @@ JAP_yokosuka_naval_arsenal_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -985,7 +985,7 @@ JAP_maizuru_naval_arsenal_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -995,14 +995,14 @@ JAP_maizuru_naval_arsenal_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -1349,14 +1349,14 @@ JAP_mitsubishi_kobe_shipyard_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -1564,7 +1564,7 @@ JAP_mitsubishi_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -1574,14 +1574,14 @@ JAP_mitsubishi_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -1593,7 +1593,7 @@ JAP_mitsubishi_organization = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -2326,14 +2326,14 @@ JAP_kokura_arsenal_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -2498,13 +2498,13 @@ JAP_nissan_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = MAN }
 			}
@@ -2514,14 +2514,14 @@ JAP_nissan_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -2533,7 +2533,7 @@ JAP_nissan_organization = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -2709,14 +2709,14 @@ JAP_tokyo_automobile_industries_organization = {
 	}
 	
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = PHI
@@ -2841,14 +2841,14 @@ JAP_nagoya_arsenal_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = JAP } }
 			}
 			FROM = { NOT = { has_war_with = JAP } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = MAN }
 			}

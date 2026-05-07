@@ -72,7 +72,7 @@ focus_tree = {
 			show_ideas_tooltip = HUN_jusztinian_seredi
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -150,7 +150,7 @@ focus_tree = {
 			show_ideas_tooltip = HUN_kalman_daranyi
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -215,7 +215,7 @@ focus_tree = {
 			}
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -676,7 +676,7 @@ focus_tree = {
 
 			add_threat = 1
 
-			IF = {
+			if = {
 				limit = {
 					FRA = {
 						always = no
@@ -692,7 +692,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						NOT = {
@@ -718,7 +718,7 @@ focus_tree = {
 						days = 1
 					}
 				}
-				ELSE = {
+				else = {
 					HUN_remove_trianon_effect = yes
 					news_event = { id = news.298 days = 1 }
 				}
@@ -726,7 +726,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = disarmed_nation
 				}
@@ -771,7 +771,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -783,7 +783,7 @@ focus_tree = {
 					add_idea = HUN_more_power_to_the_regent_idea
 				}
 			}
-			ELSE = {
+			else = {
 				add_political_power = 75
 				add_war_support = 0.05
 				add_stability = 0.02
@@ -829,7 +829,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_levente_associations
 				}
@@ -838,7 +838,7 @@ focus_tree = {
 					add_idea = HUN_levente_associations_act_of_defense
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_levente_associations_secret_rearmament
 				}
@@ -894,7 +894,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = HUN_volksbund_good
 
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						has_government = fascism
@@ -1039,7 +1039,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_government = fascism
@@ -1052,7 +1052,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = fascism
 				}
@@ -1396,7 +1396,7 @@ focus_tree = {
 
 			hidden_effect = {
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_idea = HUN_fidel_palffy
@@ -1415,7 +1415,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_idea = HUN_fidel_palffy
@@ -1628,7 +1628,7 @@ focus_tree = {
 
 			add_ideas = HUN_promoted_hungarianism
 			
-			IF = {
+			if = {
 				limit = {
 					has_completed_focus = wuw_HUN_outlaw_the_party_of_national_will
 				}
@@ -1682,7 +1682,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_hungarian_national_defense_association
 				}
@@ -1691,7 +1691,7 @@ focus_tree = {
 					add_idea = HUN_hungarian_national_defense_association_turan_hunters
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_hungarian_national_defense_association_horthyist
 				}
@@ -1700,7 +1700,7 @@ focus_tree = {
 					add_idea = HUN_hungarian_national_defense_association_horthyist_turan_hunters
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_hungarian_national_defense_association_greenshirts
 				}
@@ -1712,7 +1712,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					TUR = {
 						exists = yes
@@ -2011,14 +2011,14 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					country_exists = CZE
 					664 = { is_owned_by = CZE }
 				}
 				strength_ratio = { tag = CZE ratio > 0.75 }
 			}
-			IF = {
+			if = {
 				limit = {
 					country_exists = SLO
 					664 = { is_owned_by = SLO }
@@ -2053,14 +2053,14 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = HUN_demands_tt
-			IF = {
+			if = {
 				limit = {
 					CZE = {
 						exists = yes
 						owns_state = 664
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						CZE = { is_subject = yes }
 					}
@@ -2070,12 +2070,12 @@ focus_tree = {
 						expire = 0
 						generator = { 664 }
 					}
-					ELSE = {
+					else = {
 						CZE = { country_event = DOD_hungary.80 }
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					SLO = {
 						exists = yes
@@ -2084,7 +2084,7 @@ focus_tree = {
 				}
 				SLO = { country_event = DOD_hungary.80 }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					664 = {
 						NOT = {
@@ -2134,7 +2134,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					73 = {
 						is_owned_by = CZE
@@ -2237,7 +2237,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					ROM = {
 						owns_state = 76
@@ -2272,7 +2272,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					76 = {
 						is_owned_by = ROM
@@ -2294,7 +2294,7 @@ focus_tree = {
 				}
 			}
 
-			ELSE = {
+			else = {
 				random_country = {
 					limit = {
 						owns_state = 76
@@ -2337,7 +2337,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						is_owned_by = YUG
@@ -2372,7 +2372,7 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = HUN_demands_tt
-			IF = {
+			if = {
 				limit = {
 					YUG = {
 						is_subject = yes
@@ -2385,8 +2385,8 @@ focus_tree = {
 					expire = 0
 					generator = { 45 }
 				}
-				ELSE = {
-					IF = {
+				else = {
+					if = {
 						limit = {
 							OR = {
 								45 = { is_owned_by = YUG }
@@ -2398,7 +2398,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						NOT = {
@@ -2459,7 +2459,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						is_owned_by = AUS
@@ -2544,7 +2544,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = { country_exists = SLO }
 				strength_ratio = { tag = SLO ratio > 0.75 }
 				NOT = { has_war_with = SLO }
@@ -2579,7 +2579,7 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = HUN_demands_tt
-			IF = {
+			if = {
 				limit = {
 					70 = {
 						controller = {
@@ -2604,7 +2604,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					SLO = {
 						exists = yes
@@ -2616,7 +2616,7 @@ focus_tree = {
 				}
 				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
 			}
-			IF = {
+			if = {
 				limit = {
 					SLO = {
 						exists = yes
@@ -2692,7 +2692,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					SLO = {
 						exists = yes
@@ -2714,7 +2714,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = HUN_demands_tt
 				every_country = {
 					limit = {
@@ -2867,7 +2867,7 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = wuw_HUN_seek_german_contracts_tt
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						has_opinion = {
@@ -2885,7 +2885,7 @@ focus_tree = {
 					level = 1
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					GER = {
 						has_opinion = {
@@ -2903,7 +2903,7 @@ focus_tree = {
 					level = 2
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					GER = {
 						has_opinion = {
@@ -2924,7 +2924,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -2937,14 +2937,14 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_henschel
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -2957,7 +2957,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_rheinmetall
 			}
@@ -3011,7 +3011,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3024,7 +3024,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3037,7 +3037,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_fiat
 			}
@@ -3106,7 +3106,7 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = wuw_HUN_renew_the_rome_protocols_interventionalism_tt
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_wuw_interventionism
 				}
@@ -3116,21 +3116,21 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					country_exists = AUS
 				}
 				reverse_add_opinion_modifier = { target = AUS modifier = HUN_renew_the_rome_protocols }
 				add_opinion_modifier = { target = AUS modifier = HUN_renew_the_rome_protocols }
 			}
-			IF = {
+			if = {
 				limit = {
 					country_exists = ITA
 				}
 				reverse_add_opinion_modifier = { target = ITA modifier = HUN_renew_the_rome_protocols }
 				add_opinion_modifier = { target = ITA modifier = HUN_renew_the_rome_protocols }
 			}
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -3477,7 +3477,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					ITA = { is_in_faction = no }
 				}
@@ -3496,7 +3496,7 @@ focus_tree = {
 							value = 200
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							country_exists = AUS
 							AUS = {
@@ -3509,7 +3509,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA = { is_faction_leader = yes }
 				}
@@ -3517,7 +3517,7 @@ focus_tree = {
 					country_event = generic.2
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA = { is_in_faction_with = FRA }
 				}
@@ -3526,7 +3526,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_country_leader = {
 							ruling_only = yes
@@ -3653,7 +3653,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_levente_associations
 				}
@@ -3662,7 +3662,7 @@ focus_tree = {
 					add_idea = HUN_levente_associations_secret_rearmament
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_levente_associations_act_of_defense
 				}
@@ -3802,11 +3802,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = { country_exists = AUS }
 				reverse_add_opinion_modifier = { target = AUS modifier = HUN_reintegrate_the_railroads }
 			}
-			IF = {
+			if = {
 				limit = { country_exists = CZE }
 				reverse_add_opinion_modifier = { target = CZE modifier = HUN_reintegrate_the_railroads }
 			}
@@ -3882,11 +3882,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = { country_exists = AUS }
 				reverse_add_opinion_modifier = { target = AUS modifier = HUN_reintegrate_the_railroads }
 			}
-			IF = {
+			if = {
 				limit = { country_exists = CZE }
 				reverse_add_opinion_modifier = { target = CZE modifier = HUN_reintegrate_the_railroads }
 			}
@@ -3944,7 +3944,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					43 = {
 						free_building_slots = {
@@ -4014,7 +4014,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					43 = {
 						free_building_slots = {
@@ -4036,7 +4036,7 @@ focus_tree = {
 						amount = 6
 					}
 				}
-				ELSE = {
+				else = {
 					random_owned_controlled_state = {
 						limit = {
 							is_core_of = ROOT
@@ -4094,7 +4094,7 @@ focus_tree = {
 				days = 420
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -4220,7 +4220,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						any_controlled_state = {
@@ -4230,7 +4230,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = wuw_HUN_enlarge_the_ganz_danubius_division_tt
 			}
-			ELSE = {
+			else = {
 				random_controlled_state = {
 					limit = {
 						is_coastal = yes
@@ -4246,7 +4246,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -4259,7 +4259,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_ganz_danubius
 			}
@@ -4396,13 +4396,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "Arms Against Tyranny"
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw
 					}
@@ -4411,7 +4411,7 @@ focus_tree = {
 						add_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 					}
@@ -4422,11 +4422,11 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw
 					}
@@ -4435,7 +4435,7 @@ focus_tree = {
 						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 					}
@@ -4456,7 +4456,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					wuw_HUN_does_not_have_trianon = no
 				}
@@ -4503,13 +4503,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "Arms Against Tyranny"
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw
 					}
@@ -4518,7 +4518,7 @@ focus_tree = {
 						add_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
 					}
@@ -4529,11 +4529,11 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw
 					}
@@ -4542,7 +4542,7 @@ focus_tree = {
 						add_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 					}
@@ -4557,7 +4557,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					wuw_HUN_does_not_have_trianon = no
 				}
@@ -4623,13 +4623,13 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					FRA = { always = no }
 				}
 				FRA = { country_event = DOD_hungary.140 }
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { FRA = { always = no } }
 				}
@@ -4681,7 +4681,7 @@ focus_tree = {
 			navy_experience = 15
 			add_ideas = HUN_naval_warfare
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -4694,14 +4694,14 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_obudai_hajogyar
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -4807,7 +4807,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						always = no 
@@ -4823,7 +4823,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					43 = {
 						is_owned_and_controlled_by = ROOT
@@ -4838,7 +4838,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					154 = {
 						is_owned_and_controlled_by = ROOT
@@ -4951,7 +4951,7 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = HUN_ferenc_szombathelyi
 			show_ideas_tooltip = HUN_vilmos_roder
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -5005,7 +5005,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = bicycle_infantry
@@ -5015,7 +5015,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					43 = {
 						free_building_slots = {
@@ -5035,7 +5035,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					155 = {
 						free_building_slots = {
@@ -5203,7 +5203,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					155 = {
 						free_building_slots = {
@@ -5470,7 +5470,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					43 = {
 						free_building_slots = {
@@ -5627,7 +5627,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -5640,7 +5640,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = mw_aircraft
 			}
@@ -5835,7 +5835,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -5848,7 +5848,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = mavag_aircraft
 			}
@@ -6084,7 +6084,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6160,7 +6160,7 @@ focus_tree = {
 
 		available = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
@@ -6171,7 +6171,7 @@ focus_tree = {
 					has_tech = heavy_fighter3
 				}
 			}
-			ELSE = {
+			else = {
 				NOT = {
 					has_tech = advanced_small_airframe
 					has_tech = advanced_medium_airframe
@@ -6278,7 +6278,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}
@@ -6361,7 +6361,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6374,7 +6374,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_danuvia_inf
 			}
@@ -6418,7 +6418,7 @@ focus_tree = {
 		completion_reward = {
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_tech = bicycle_infantry
@@ -6444,7 +6444,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = mechanised_infantry
@@ -6505,7 +6505,7 @@ focus_tree = {
 				}
 			}
 
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_tech = mechanised_infantry
 				}
@@ -6619,7 +6619,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6632,7 +6632,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_mavag_assault_guns
 			}
@@ -6684,7 +6684,7 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
-			IF = {
+			if = {
 				limit = {
 					any_owned_state = {
 						is_coastal = yes
@@ -6876,7 +6876,7 @@ focus_tree = {
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
 			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { has_tech = tech_engineers }
 					division_template = {
 						name = "Light Division"
@@ -6899,7 +6899,7 @@ focus_tree = {
 							artillery = { x = 0 y = 2 }
 						}
 					}
-					ELSE = {
+					else = {
 						division_template = {
 							name = "Light Division"
 							division_names_group = HUN_INF_01
@@ -7161,7 +7161,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -7170,7 +7170,7 @@ focus_tree = {
 					add_mio_research_bonus = 0.05
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_industrial_concern
 				show_ideas_tooltip = HUN_mwg_raba
 			}
@@ -7198,13 +7198,13 @@ focus_tree = {
 
 		available = {
 			#has_country_flag = HUN_reverse_engineered_skoda_tanks
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
 				has_tech = basic_medium_tank_chassis
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_tech = basic_medium_tank
 				}
@@ -7229,11 +7229,11 @@ focus_tree = {
 				category = cat_medium_armor
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_tech = improved_medium_tank_chassis
 					}
@@ -7258,7 +7258,7 @@ focus_tree = {
 						#icon = "GFX_ITA_basic_medium_tank_medium"
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = wuw_HUN_the_turan_40_tt
 					effect_tooltip = {
 						#40M Turán
@@ -7283,7 +7283,7 @@ focus_tree = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_tech = advanced_medium_tank_chassis
 					}
@@ -7308,7 +7308,7 @@ focus_tree = {
 						#icon = "GFX_ITA_basic_medium_tank_medium"
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = wuw_HUN_the_turan_43_tt
 					effect_tooltip = {
 						#43M Turán III
@@ -7337,7 +7337,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -7350,7 +7350,7 @@ focus_tree = {
 				}
 
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_hti_turan
 			}
@@ -7403,11 +7403,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_tech = advanced_medium_tank_chassis
 					}
@@ -7430,7 +7430,7 @@ focus_tree = {
 						#icon = "GFX_ITA_advanced_medium_art_medium"
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = wuw_HUN_zrinyi_arty_tt
 					effect_tooltip = {
 						# 43M Zrínyi
@@ -7453,7 +7453,7 @@ focus_tree = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_tech = improved_medium_tank_chassis
 					}
@@ -7478,7 +7478,7 @@ focus_tree = {
 						#icon = "GFX_ITA_advanced_medium_spaa_medium"
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = wuw_HUN_nimrod_aa_tt
 					effect_tooltip = {
 						# 40M Nimród
@@ -7553,11 +7553,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_tech = improved_light_tank_chassis
 					}
@@ -7581,7 +7581,7 @@ focus_tree = {
 						#icon = "GFX_ITA_improved_light_tank_medium"
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = wuw_HUN_the_toldi_tt
 					effect_tooltip = {
 						#38M Toldi
@@ -7655,7 +7655,7 @@ focus_tree = {
 				category = para_tech
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -7716,7 +7716,7 @@ focus_tree = {
 
 			hidden_effect = {
 
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -7737,7 +7737,7 @@ focus_tree = {
 					}
 				}
 						
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -7759,7 +7759,7 @@ focus_tree = {
 					
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -7780,7 +7780,7 @@ focus_tree = {
 					}
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -7801,7 +7801,7 @@ focus_tree = {
 					}
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -7822,7 +7822,7 @@ focus_tree = {
 					}
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -7843,7 +7843,7 @@ focus_tree = {
 					}
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -7864,7 +7864,7 @@ focus_tree = {
 					}
 				}
 					
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -7942,7 +7942,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = mountain_gun
@@ -8060,7 +8060,7 @@ focus_tree = {
 			custom_effect_tooltip = wuw_HUN_expand_the_arpad_line_tt
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -8081,7 +8081,7 @@ focus_tree = {
 					}
 				}				
 
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -8102,7 +8102,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						73 = {
 							free_building_slots = {
@@ -8123,7 +8123,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -8144,7 +8144,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -8165,7 +8165,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -8185,7 +8185,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -8204,7 +8204,7 @@ focus_tree = {
 					    province = 711
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						76 = {
 							free_building_slots = {
@@ -8228,7 +8228,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						84 = {
@@ -8238,7 +8238,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = wuw_HUN_expand_the_arpad_line_can_have_more_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					84 = {
 						is_fully_controlled_by = ROOT
@@ -8353,7 +8353,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = wartime_train
@@ -8484,7 +8484,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						any_controlled_state = {
@@ -8494,7 +8494,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = wuw_HUN_renew_the_shipping_industry_tt
 			}
-			ELSE = {
+			else = {
 				random_owned_controlled_state = {
 					limit = {
 						has_state_flag = HUN_dockyards_flag
@@ -8514,7 +8514,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						any_controlled_state = {
@@ -8524,7 +8524,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = wuw_HUN_renew_the_shipping_industry_tt
 			}
-			ELSE = {
+			else = {
 				random_owned_controlled_state = {
 					prioritize = { 103 }
 					limit = {

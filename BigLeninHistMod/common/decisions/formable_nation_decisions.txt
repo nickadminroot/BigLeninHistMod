@@ -450,7 +450,7 @@ form_nordic_league_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					933 = {
 						NOT = {
@@ -465,7 +465,7 @@ form_nordic_league_category = {
 				933 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					213 = {
 						NOT = {
@@ -480,7 +480,7 @@ form_nordic_league_category = {
 				213 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					215 = {
 						NOT = {
@@ -495,7 +495,7 @@ form_nordic_league_category = {
 				215 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					216 = {
 						NOT = {
@@ -1083,7 +1083,7 @@ form_austria_hungary_category = {
 			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { tag = AUS }
 					}
@@ -2924,13 +2924,13 @@ form_european_union_category = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { original_tag = ENG }
 				}
 				set_cosmetic_tag = EUR_UNIFIED
 			}
-			ELSE = {
+			else = {
 				set_cosmetic_tag = ENG_imperial_federation_unified #Europe-a-Nation
 			}
 
@@ -6821,7 +6821,7 @@ form_roman_empire_category = {
 			hidden_effect = { 
 				set_global_flag = the_bosporan_kingdom_flag
 
-				IF = {
+				if = {
 					limit = {
 						ITA = {
 							has_government = fascism
@@ -6836,7 +6836,7 @@ form_roman_empire_category = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						ITA = {
 							has_government = neutrality
@@ -8780,7 +8780,7 @@ form_maphilindo_category = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8861,7 +8861,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8919,7 +8919,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8985,7 +8985,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -9168,7 +9168,7 @@ form_hre_category = {
 		}
 
 		visible = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -9194,7 +9194,7 @@ form_hre_category = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					NOT = {
 						has_dlc = "Gotterdammerung"
@@ -14318,13 +14318,13 @@ form_horn_of_africa_africa_category = {
 		}
 
 		visible = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 				}
 				has_completed_focus = ETH_develop_the_horn_of_africa
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = AFA
@@ -14359,7 +14359,7 @@ form_horn_of_africa_africa_category = {
 		}
 
 		available = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 				}
@@ -14381,7 +14381,7 @@ form_horn_of_africa_africa_category = {
 				controls_state = 559 # Somaliland
 				controls_state = 844 # Jubaland
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = AFA
@@ -14412,7 +14412,7 @@ form_horn_of_africa_africa_category = {
 				controls_state = 559 # Somaliland
 				controls_state = 844 # Jubaland
 			}
-			ELSE = {
+			else = {
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -15302,7 +15302,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Dominican Republic
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						319 = {
@@ -15314,7 +15314,7 @@ antilles_category = {
 			}
 			
 			# Haiti
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						318 = {
@@ -15326,7 +15326,7 @@ antilles_category = {
 			}
 
 			# Cuba
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						315 = {
@@ -15338,7 +15338,7 @@ antilles_category = {
 			}
 
 			# Jamaica
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						689 = {
@@ -15350,7 +15350,7 @@ antilles_category = {
 			}
 
 			# Northern Bahamas
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						690 = {
@@ -15362,7 +15362,7 @@ antilles_category = {
 			}
 
 			# Southern Bahamas
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						693 = {
@@ -15374,7 +15374,7 @@ antilles_category = {
 			}
 
 			# Puerto Rico
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						686 = {
@@ -15386,7 +15386,7 @@ antilles_category = {
 			}
 
 			# French Caribbean
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						694 = {
@@ -15398,7 +15398,7 @@ antilles_category = {
 			}
 
 			# Leeward Islands
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						308 = {
@@ -15410,7 +15410,7 @@ antilles_category = {
 			}
 
 			# Windward Islands
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						692 = {
@@ -15484,7 +15484,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Curacao
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						695 = {
@@ -15552,7 +15552,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Tobago
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						691 = {
@@ -15725,7 +15725,7 @@ latin_africa_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Leopoldville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						295 = {
@@ -15737,7 +15737,7 @@ latin_africa_category = {
 			}
 			
 			# Coquilhatville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						538 = {
@@ -15749,7 +15749,7 @@ latin_africa_category = {
 			}
 
 			# Lusambo
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						888 = {
@@ -15761,7 +15761,7 @@ latin_africa_category = {
 			}
 
 			# Elizabethville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						889 = {
@@ -15773,7 +15773,7 @@ latin_africa_category = {
 			}
 
 			# Costermanville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						890 = {
@@ -15785,7 +15785,7 @@ latin_africa_category = {
 			}
 
 			# Stanleyville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						718 = {
@@ -15797,7 +15797,7 @@ latin_africa_category = {
 			}
 
 			# Rwanda
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						768 = {
@@ -15809,7 +15809,7 @@ latin_africa_category = {
 			}
 
 			# Burundi
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						769 = {
@@ -15821,7 +15821,7 @@ latin_africa_category = {
 			}
 
 			# North Angola
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						796 = {
@@ -15833,7 +15833,7 @@ latin_africa_category = {
 			}
 
 			# Luanda
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						540 = {
@@ -15845,7 +15845,7 @@ latin_africa_category = {
 			}
 
 			# South West Angola
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						892 = {
@@ -15857,7 +15857,7 @@ latin_africa_category = {
 			}
 
 			# Zambesi
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						891 = {
@@ -15869,7 +15869,7 @@ latin_africa_category = {
 			}
 
 			# Middle Congo
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						772 = {
@@ -15881,7 +15881,7 @@ latin_africa_category = {
 			}
 
 			# Gabon
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						539 = {
@@ -15893,7 +15893,7 @@ latin_africa_category = {
 			}
 
 			# Equatorial Guinea
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						297 = {
@@ -15905,7 +15905,7 @@ latin_africa_category = {
 			}
 
 			# Sao Tome
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						705 = {
@@ -15917,7 +15917,7 @@ latin_africa_category = {
 			}
 
 			# Cameroon
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						773 = {
@@ -15929,7 +15929,7 @@ latin_africa_category = {
 			}
 
 			# Equatorial Africa
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						660 = {
@@ -15941,7 +15941,7 @@ latin_africa_category = {
 			}
 
 			# Chad
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						774 = {
@@ -15953,7 +15953,7 @@ latin_africa_category = {
 			}
 
 			# B.E.T
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						775 = {
@@ -16170,7 +16170,7 @@ germany_formable_category = {
 			custom_effect_tooltip = declare_germany_reunified_decision_tt 
 			hidden_effect = {
 				# Brandenburg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							64 = {
@@ -16182,7 +16182,7 @@ germany_formable_category = {
 				}
 
 				# Vorpommern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							62 = {
@@ -16194,7 +16194,7 @@ germany_formable_category = {
 				}
 
 				# Mecklenburg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							61 = {
@@ -16206,7 +16206,7 @@ germany_formable_category = {
 				}
 
 				# Sachsen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							65 = {
@@ -16218,7 +16218,7 @@ germany_formable_category = {
 				}
 
 				# Holstein
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							58 = {
@@ -16230,7 +16230,7 @@ germany_formable_category = {
 				}
 
 				# Schleswig
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							909 = {
@@ -16242,7 +16242,7 @@ germany_formable_category = {
 				}
 
 				# Hannover
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							59 = {
@@ -16254,7 +16254,7 @@ germany_formable_category = {
 				}
 
 				# Thüringen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							60 = {
@@ -16266,7 +16266,7 @@ germany_formable_category = {
 				}
 
 				# Weser-Ems
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							56 = {
@@ -16278,7 +16278,7 @@ germany_formable_category = {
 				}
 
 				# Westfalen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							57 = {
@@ -16290,7 +16290,7 @@ germany_formable_category = {
 				}
 
 				# Hessen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							55 = {
@@ -16302,7 +16302,7 @@ germany_formable_category = {
 				}
 
 				# Rhineland
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							51 = {
@@ -16314,7 +16314,7 @@ germany_formable_category = {
 				}
 
 				# Moselland
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							42 = {
@@ -16326,7 +16326,7 @@ germany_formable_category = {
 				}
 
 				# Baden
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							978 = {
@@ -16338,7 +16338,7 @@ germany_formable_category = {
 				}
 
 				# Württemberg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							50 = {
@@ -16350,7 +16350,7 @@ germany_formable_category = {
 				}
 
 				# Franken
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							54 = {
@@ -16362,7 +16362,7 @@ germany_formable_category = {
 				}
 
 				# Oberbayern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							52 = {
@@ -16374,7 +16374,7 @@ germany_formable_category = {
 				}
 
 				# Niederbayern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							53 = {
@@ -16482,7 +16482,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Luxemburg
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						8 = {
@@ -16589,7 +16589,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Alsace-Lorraine
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						28 = {
@@ -16691,7 +16691,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# South Jutland
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						912 = {
@@ -16810,7 +16810,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Ermland-Masuren
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						5 = {
@@ -16822,7 +16822,7 @@ germany_formable_category = {
 			}
 
 			# Königsberg
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						763 = {
@@ -16834,7 +16834,7 @@ germany_formable_category = {
 			}
 
 			# Memel
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						188 = {
@@ -16950,7 +16950,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Lower Silesia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						66 = {
@@ -16962,7 +16962,7 @@ germany_formable_category = {
 			}
 
 			# Upper Silesia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						67 = {
@@ -16974,7 +16974,7 @@ germany_formable_category = {
 			}
 
 			# Katowice
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						762 = {
@@ -17109,7 +17109,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Posen
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						86 = {
@@ -17121,7 +17121,7 @@ germany_formable_category = {
 			}
 
 			# Ostmark
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						68 = {
@@ -17133,7 +17133,7 @@ germany_formable_category = {
 			}
 
 			# Hinterpommern
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						63 = {
@@ -17145,7 +17145,7 @@ germany_formable_category = {
 			}
 
 			# Gdynia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						807 = {
@@ -17157,7 +17157,7 @@ germany_formable_category = {
 			}
 
 			# Danzig
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						85 = {

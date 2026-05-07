@@ -48,28 +48,28 @@ country_event = {
 			}
 		}
 		effect_tooltip = {
-			IF = { #ERITREA
+			if = { #ERITREA
 				limit = {
 					has_full_control_of_state = 550
 				}
 				transfer_state = 550
 				550 = { add_compliance = 50 }
 			}
-			IF = { #SOMALILAND
+			if = { #SOMALILAND
 				limit = {
 					has_full_control_of_state = 559
 				}
 				transfer_state = 559
 				559 = { add_compliance = 50 }
 			}
-			IF = { #JUBALAND
+			if = { #JUBALAND
 				limit = {
 					has_full_control_of_state = 844
 				}
 				transfer_state = 844
 				844 = { add_compliance = 50 }
 			}
-			IF = {
+			if = {
 				limit = {
 					908 = {
 						is_owned_by = FROM
@@ -86,7 +86,7 @@ country_event = {
 			FROM = {
 				country_event = { id = BBA_italy_second_italo_ethiopian_war.2 days = 1 }
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}
@@ -140,7 +140,7 @@ country_event = {
 			}
 		}
 
-		IF = { #ERITREA
+		if = { #ERITREA
 			limit = {
 				FROM = { has_full_control_of_state = 550 }
 			}
@@ -149,7 +149,7 @@ country_event = {
 				550 = { add_compliance = 50 }
 			}
 		}
-		IF = { #SOMALILAND
+		if = { #SOMALILAND
 			limit = {
 				FROM = { has_full_control_of_state = 559 }
 			}
@@ -158,7 +158,7 @@ country_event = {
 				559 = { add_compliance = 50 }
 			}
 		}
-		IF = { #JUBALAND
+		if = { #JUBALAND
 			limit = {
 				FROM = { has_full_control_of_state = 844 }
 			}
@@ -167,7 +167,7 @@ country_event = {
 				844 = { add_compliance = 50 }
 			}
 		}
-		IF = { #AFAR always goes to ETH if owned by ITA
+		if = { #AFAR always goes to ETH if owned by ITA
 			limit = {
 				owns_state = 908
 			}
@@ -178,7 +178,7 @@ country_event = {
 		}
 		white_peace = FROM
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						is_in_faction_with = ROOT
@@ -229,7 +229,7 @@ country_event = {
 			}
 		}
 
-		IF = { #ERITREA
+		if = { #ERITREA
 			limit = {
 				FROM = { has_full_control_of_state = 550 }
 			}
@@ -238,7 +238,7 @@ country_event = {
 				550 = { add_compliance = 50 }
 			}
 		}
-		IF = { #SOMALILAND
+		if = { #SOMALILAND
 			limit = {
 				FROM = { has_full_control_of_state = 559 }
 			}
@@ -247,7 +247,7 @@ country_event = {
 				559 = { add_compliance = 50 }
 			}
 		}
-		IF = { #JUBALAND
+		if = { #JUBALAND
 			limit = {
 				FROM = { has_full_control_of_state = 844 }
 			}
@@ -256,7 +256,7 @@ country_event = {
 				844 = { add_compliance = 50 }
 			}
 		}
-		IF = { #AFAR always goes to ETH if owned by ITA
+		if = { #AFAR always goes to ETH if owned by ITA
 			limit = {
 				owns_state = 908
 			}
@@ -267,7 +267,7 @@ country_event = {
 		}
 		white_peace = FROM
 
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -301,7 +301,7 @@ country_event = {
 			base = 10
 		}
 
-		IF = { #ERITREA
+		if = { #ERITREA
 			limit = {
 				FROM = { has_full_control_of_state = 550 }
 			}
@@ -310,7 +310,7 @@ country_event = {
 				550 = { add_compliance = 50 }
 			}
 		}
-		IF = { #SOMALILAND
+		if = { #SOMALILAND
 			limit = {
 				FROM = { has_full_control_of_state = 559 }
 			}
@@ -319,7 +319,7 @@ country_event = {
 				559 = { add_compliance = 50 }
 			}
 		}
-		IF = { #JUBALAND
+		if = { #JUBALAND
 			limit = {
 				FROM = { has_full_control_of_state = 844 }
 			}
@@ -328,7 +328,7 @@ country_event = {
 				844 = { add_compliance = 50 }
 			}
 		}
-		IF = { #AFAR always goes to ETH if owned by ITA
+		if = { #AFAR always goes to ETH if owned by ITA
 			limit = {
 				owns_state = 908
 			}
@@ -339,7 +339,7 @@ country_event = {
 		}
 		white_peace = FROM
 
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -395,7 +395,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY AND NOT TOO MANY MISSIONS ACTIVE, GO AHEAD
+			if = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY AND NOT TOO MANY MISSIONS ACTIVE, GO AHEAD
 				limit = {
 					ITA_missiolinis_cd_ready = yes
 					ITA_missiolinis_can_have_a_new_mission = yes
@@ -885,13 +885,13 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				log = "NO MISSIOLINI PER TE BAMBINO"
 			}
 			country_event = { id = BBA_italy_missiolinis.00 days = 180 }
 
 			#Re-set vars and flags if re-rolling
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_missiolinis_rerolling_flag
 				}
@@ -971,7 +971,7 @@ country_event = {
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
 
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -1005,7 +1005,7 @@ country_event = {
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
 		
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -1082,7 +1082,7 @@ country_event = {
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
 		
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -1116,7 +1116,7 @@ country_event = {
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
 		
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
 				NOT = { has_completed_focus = ITA_solid_progress }
@@ -1308,7 +1308,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+			if = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 				limit = {
 					ITA_missiolinis_cd_ready = yes
 				}
@@ -1316,7 +1316,7 @@ country_event = {
 					unit_leader_event = BBA_italy_missiolinis.21
 				}
 			}
-			ELSE = { #OTHERWISE RE-TRIGGER EVENT AFTER MIN CD TIME
+			else = { #OTHERWISE RE-TRIGGER EVENT AFTER MIN CD TIME
 				country_event = { id = BBA_italy_missiolinis.20 days = ITA_missiolinis_min_cd_between_missions }
 			}
 		}
@@ -1378,14 +1378,14 @@ unit_leader_event = {
 			base = 10
 		}
 
-		IF = { # BBA
+		if = { # BBA
 			limit = {
 				has_dlc = "By Blood Alone"
 				ETH_is_in_exile = yes
 			}
 			activate_mission = ITA_missiolini_pacify_ethiopia
 		}
-		ELSE = { # NO BBA
+		else = { # NO BBA
 			activate_mission = ITA_missiolini_pacify_ethiopia_vanilla
 		}
 	}
@@ -2069,7 +2069,7 @@ unit_leader_event = {
 			ITA_missiolinis_initialize_new_mission_effect = yes
 			set_country_flag = ITA_missiolini_industrial_research_triggered_flag #Less probable to have this more than once
 
-			IF = {
+			if = {
 				limit = {
 					date > 1943.1.1
 				}
@@ -2126,7 +2126,7 @@ unit_leader_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					date > 1941.1.1
 				}
@@ -2181,7 +2181,7 @@ unit_leader_event = {
 					}
 				}
 			}
-			ELSE = { #Safe to assume that it's date > 1939.1.1
+			else = { #Safe to assume that it's date > 1939.1.1
 				random_list = {
 					30 = { #PORDUCTION BRANCH
 						modifier = { #If tech is already researched then this makes no sense
@@ -2268,19 +2268,19 @@ unit_leader_event = {
 			ITA_missiolinis_revert_new_mission_initialization_effect = yes
 
 			#Revert other stuff in the immediate effect
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_missiolini_research_production_flag
 				}
 				clr_country_flag = ITA_missiolini_research_production_flag
 			}
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_missiolini_research_industry_flag
 				}
 				clr_country_flag = ITA_missiolini_research_industry_flag
 			}
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_missiolini_research_construction_flag
 				}
@@ -2372,13 +2372,13 @@ unit_leader_event = {
 			ITA_missiolinis_initialize_new_mission_effect = yes
 			set_country_flag = ITA_missiolini_expand_intelligence_service_triggered_flag #Less probable to have this more than once
 
-			IF = { #Create Intelligence Agency
+			if = { #Create Intelligence Agency
 				limit = {
 					has_intelligence_agency = no 
 				}
 				set_country_flag = { flag = ITA_missiolini_upgrade_agency_goal_flag value = 1 }
 			}
-			ELSE = { #Upgrade Intelligence Agency
+			else = { #Upgrade Intelligence Agency
 				random_list = {
 					30 = { #Form Cryptology Department
 						modifier = {
@@ -3184,7 +3184,7 @@ unit_leader_event = {
 		}
 		
 		add_political_power = -15
-		IF = {
+		if = {
 			limit = {
 				271 = {
 					is_fully_controlled_by = ITA
@@ -3196,7 +3196,7 @@ unit_leader_event = {
 				add_resistance = 5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				837 = {
 					is_fully_controlled_by = ITA
@@ -3210,7 +3210,7 @@ unit_leader_event = {
 		}
 
 		#Ruler joins Italy as General
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -3218,38 +3218,18 @@ unit_leader_event = {
 				FROM = { retire_character = ITA_haile_selassie_gugsa_doppleganger }
 			}
 			ETH = {
-				ETH_haile_selassie_gugsa = {
-					demote_leader = yes
-					IF = {
-						limit = {
-							is_advisor = yes
-						}
-						remove_any_country_role_from_character = yes
-					}
-					set_nationality = ITA
-				}
 			}
 		}
-		ELSE = {
+		else = {
 			show_unit_leaders_tooltip = ITA_haile_selassie_gugsa_doppleganger
 			hidden_effect = {
 				FROM = { retire_character = ITA_haile_selassie_gugsa_doppleganger }
 				for_each_scope_loop = {
 					array = global.countries
-					IF = {
+					if = {
 						limit = {
 							original_tag = ETH
 							has_character = ETH_haile_selassie_gugsa
-						}
-						ETH_haile_selassie_gugsa = {
-							demote_leader = yes
-							IF = {
-								limit = {
-									is_advisor = yes
-								}
-								remove_any_country_role_from_character = yes
-							}
-							set_nationality = ITA
 						}
 					}
 				}
@@ -3258,7 +3238,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						838 = {
@@ -3271,7 +3251,7 @@ unit_leader_event = {
 				}
 				ITA_abba_jofir_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.2 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3284,7 +3264,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3297,7 +3277,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3310,7 +3290,7 @@ unit_leader_event = {
 			base = 0
 		}
 
-		IF = {
+		if = {
 			limit = {
 				271 = {
 					is_fully_controlled_by = ITA
@@ -3321,7 +3301,7 @@ unit_leader_event = {
 				transfer_state = 271 #SHEWA
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				837 = {
 					is_fully_controlled_by = ITA
@@ -3333,13 +3313,13 @@ unit_leader_event = {
 			}
 		}
 		puppet = ORO
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
 			ETH = {
 				ETH_haile_selassie_gugsa = {
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -3357,17 +3337,17 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			for_each_scope_loop = {
 				array = global.countries
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = ETH
 						has_character = ETH_haile_selassie_gugsa
 					}
 					ETH_haile_selassie_gugsa = {
-						IF = {
+						if = {
 							limit = {
 								is_advisor = yes
 							}
@@ -3393,7 +3373,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						838 = {
@@ -3406,7 +3386,7 @@ unit_leader_event = {
 				}
 				ITA_abba_jofir_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.2 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3419,7 +3399,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3432,7 +3412,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3445,7 +3425,7 @@ unit_leader_event = {
 			base = 10
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				271 = {
 					is_fully_controlled_by = ITA
@@ -3456,7 +3436,7 @@ unit_leader_event = {
 				add_resistance = -5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				837 = {
 					is_fully_controlled_by = ITA
@@ -3470,7 +3450,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						838 = {
@@ -3483,7 +3463,7 @@ unit_leader_event = {
 				}
 				ITA_abba_jofir_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.2 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3496,7 +3476,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3509,7 +3489,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3560,7 +3540,7 @@ unit_leader_event = {
 		}
 		
 		add_political_power = -15
-		IF = {
+		if = {
 			limit = {
 				838 = {
 					is_fully_controlled_by = ITA
@@ -3572,7 +3552,7 @@ unit_leader_event = {
 				add_resistance = 5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				839 = {
 					is_fully_controlled_by = ITA
@@ -3586,7 +3566,7 @@ unit_leader_event = {
 		}
 
 		#Ruler joins Italy as General
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -3596,7 +3576,7 @@ unit_leader_event = {
 			ETH = {
 				ETH_abba_jofir = {
 					demote_leader = yes
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -3606,7 +3586,7 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			show_unit_leaders_tooltip = ITA_abba_jofir_doppleganger
 
 			hidden_effect = {
@@ -3614,14 +3594,14 @@ unit_leader_event = {
 				for_each_scope_loop = {
 					array = global.countries
 
-					IF = {
+					if = {
 						limit = {
 							original_tag = ETH
 							has_character = ETH_abba_jofir
 						}
 						ETH_abba_jofir = {
 							demote_leader = yes
-							IF = {
+							if = {
 								limit = {
 									is_advisor = yes
 								}
@@ -3636,7 +3616,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3649,7 +3629,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3662,7 +3642,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3675,7 +3655,7 @@ unit_leader_event = {
 			base = 0
 		}
 
-		IF = {
+		if = {
 			limit = {
 				838 = {
 					is_fully_controlled_by = ITA
@@ -3686,7 +3666,7 @@ unit_leader_event = {
 				transfer_state = 838 #ILLUBABOR-KAFFA
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				839 = {
 					is_fully_controlled_by = ITA
@@ -3700,7 +3680,7 @@ unit_leader_event = {
 		}
 		puppet = GBA
 		GBA = { set_cosmetic_tag = jimma }
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -3722,7 +3702,7 @@ unit_leader_event = {
 							id = -1
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -3732,11 +3712,11 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			for_each_scope_loop = {
 				array = global.countries
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = ETH
 						has_character = ETH_abba_jofir
@@ -3758,7 +3738,7 @@ unit_leader_event = {
 								id = -1
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								is_advisor = yes
 							}
@@ -3776,7 +3756,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3789,7 +3769,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3802,7 +3782,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3815,7 +3795,7 @@ unit_leader_event = {
 			base = 10
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				838 = {
 					is_fully_controlled_by = ITA
@@ -3826,7 +3806,7 @@ unit_leader_event = {
 				add_resistance = -5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				839 = {
 					is_fully_controlled_by = ITA
@@ -3840,7 +3820,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						840 = {
@@ -3853,7 +3833,7 @@ unit_leader_event = {
 				}
 				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.3 days = 30 random_days = 10 } }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						842 = {
@@ -3866,7 +3846,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -3919,7 +3899,7 @@ unit_leader_event = {
 		}
 		
 		add_political_power = -15
-		IF = {
+		if = {
 			limit = {
 				840 = {
 					is_fully_controlled_by = ITA
@@ -3931,7 +3911,7 @@ unit_leader_event = {
 				add_resistance = 5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				841 = {
 					is_fully_controlled_by = ITA
@@ -3945,7 +3925,7 @@ unit_leader_event = {
 		}
 
 		#Ruler joins Italy as General
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -3953,39 +3933,19 @@ unit_leader_event = {
 				FROM = { retire_character = ITA_hailu_tekle_haymanot_doppleganger }
 			}
 			ETH = {
-				ETH_hailu_tekle_haymanot = {
-					demote_leader = yes
-					IF = {
-						limit = {
-							is_advisor = yes
-						}
-						remove_any_country_role_from_character = yes
-					}
-					set_nationality = ITA
-				}
 			}
 		}
-		ELSE = {
+		else = {
 			show_unit_leaders_tooltip = ITA_hailu_tekle_haymanot_doppleganger
 			hidden_effect = {
 				FROM = { retire_character = ITA_hailu_tekle_haymanot_doppleganger }
 				for_each_scope_loop = {
 					array = global.countries
 
-					IF = {
+					if = {
 						limit = {
 							original_tag = ETH
 							has_character = ETH_hailu_tekle_haymanot
-						}
-						ETH_hailu_tekle_haymanot = {
-							demote_leader = yes
-							IF = {
-								limit = {
-									is_advisor = yes
-								}
-								remove_any_country_role_from_character = yes
-							}
-							set_nationality = ITA
 						}
 					}
 				}
@@ -3994,7 +3954,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						842 = {
@@ -4007,7 +3967,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -4020,7 +3980,7 @@ unit_leader_event = {
 			base = 0
 		}
 
-		IF = {
+		if = {
 			limit = {
 				840 = {
 					is_fully_controlled_by = ITA
@@ -4031,7 +3991,7 @@ unit_leader_event = {
 				transfer_state = 840 #GOJJAM
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				841 = {
 					is_fully_controlled_by = ITA
@@ -4045,7 +4005,7 @@ unit_leader_event = {
 		}
 		puppet = BEG
 		BEG = { set_cosmetic_tag = gojjam }
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -4067,7 +4027,7 @@ unit_leader_event = {
 							id = -1
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -4077,11 +4037,11 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			for_each_scope_loop = {
 				array = global.countries
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = ETH
 						has_character = ETH_hailu_tekle_haymanot
@@ -4103,7 +4063,7 @@ unit_leader_event = {
 								id = -1
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								is_advisor = yes
 							}
@@ -4121,7 +4081,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						842 = {
@@ -4134,7 +4094,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -4147,7 +4107,7 @@ unit_leader_event = {
 			base = 10
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				840 = {
 					is_fully_controlled_by = ITA
@@ -4158,7 +4118,7 @@ unit_leader_event = {
 				add_resistance = -5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				841 = {
 					is_fully_controlled_by = ITA
@@ -4172,7 +4132,7 @@ unit_leader_event = {
 
 		#Send next event
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						842 = {
@@ -4185,7 +4145,7 @@ unit_leader_event = {
 				}
 				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = BBA_italy_local_rulers.4 days = 30 random_days = 10 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = ITA_ends_event_chain_tt
 			}
 		}
@@ -4240,7 +4200,7 @@ unit_leader_event = {
 		}
 		
 		add_political_power = -15
-		IF = {
+		if = {
 			limit = {
 				842 = {
 					is_fully_controlled_by = ITA
@@ -4252,7 +4212,7 @@ unit_leader_event = {
 				add_resistance = 5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				843 = {
 					is_fully_controlled_by = ITA
@@ -4266,7 +4226,7 @@ unit_leader_event = {
 		}
 
 		#Ruler joins Italy as General
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -4276,7 +4236,7 @@ unit_leader_event = {
 			}
 			ETH = {
 				ETH_seyoum_mengesha = {
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -4286,7 +4246,7 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			log = "ETH is gone"
 			show_unit_leaders_tooltip = ITA_seyoum_mengesha_doppleganger
 			hidden_effect = {
@@ -4294,13 +4254,13 @@ unit_leader_event = {
 				for_each_scope_loop = {
 					array = global.countries
 
-					IF = {
+					if = {
 						limit = {
 							original_tag = ETH
 							has_character = ETH_seyoum_mengesha
 						}
 						ETH_seyoum_mengesha = {
-							IF = {
+							if = {
 								limit = {
 									is_advisor = yes
 								}
@@ -4323,7 +4283,7 @@ unit_leader_event = {
 			base = 0
 		}
 
-		IF = {
+		if = {
 			limit = {
 				842 = {
 					is_fully_controlled_by = ITA
@@ -4334,7 +4294,7 @@ unit_leader_event = {
 				transfer_state = 842 #TIGRAY
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				843 = {
 					is_fully_controlled_by = ITA
@@ -4346,7 +4306,7 @@ unit_leader_event = {
 			}
 			843 = { add_core_of = TIG }
 		}
-		IF = {
+		if = {
 			limit = {
 				908 = {
 					is_fully_controlled_by = ITA
@@ -4360,7 +4320,7 @@ unit_leader_event = {
 			908 = { add_core_of = TIG }
 		}
 		puppet = TIG
-		IF = {
+		if = {
 			limit = {
 				country_exists = ETH
 			}
@@ -4382,7 +4342,7 @@ unit_leader_event = {
 							id = -1
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							is_advisor = yes
 						}
@@ -4392,11 +4352,11 @@ unit_leader_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			for_each_scope_loop = {
 				array = global.countries
 
-				IF = {
+				if = {
 					limit = {
 						original_tag = ETH
 						has_character = ETH_seyoum_mengesha
@@ -4418,7 +4378,7 @@ unit_leader_event = {
 								id = -1
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								is_advisor = yes
 							}
@@ -4444,7 +4404,7 @@ unit_leader_event = {
 			base = 10
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				842 = {
 					is_fully_controlled_by = ITA
@@ -4455,7 +4415,7 @@ unit_leader_event = {
 				add_resistance = -5
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				843 = {
 					is_fully_controlled_by = ITA
@@ -4603,7 +4563,7 @@ country_event = {
 
 		retire_character = ITA_italo_balbo
 		
-		IF = {
+		if = {
 			limit = {
 				has_character = ITA_giuseppe_tellera
 			}
@@ -4764,13 +4724,13 @@ country_event = {
 	option = { 
 		name = BBA_italy_air_accident.11.a
 
-		IF = {
+		if = {
 			limit = {
 				has_Character = ITA_pietro_pintor
 			}
 			retire_character = ITA_pietro_pintor
 		}
-		IF = {
+		if = {
 			limit = {
 				has_Character = ITA_aldo_pellegrini
 			}
@@ -4807,7 +4767,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_air_accident.12.a
 
-		IF = { #Upgrade trait
+		if = { #Upgrade trait
 			limit = {	
 				has_character = ITA_aldo_pellegrini
 			}
@@ -5119,7 +5079,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = SWE
 				}
@@ -5415,7 +5375,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_naval_cooperation_programs.17.a
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
@@ -5436,7 +5396,7 @@ country_event = {
 			create_ship = { type = ship_hull_midget_submarine equipment_variant = "CB Class" creator = FROM }
 			create_ship = { type = ship_hull_midget_submarine equipment_variant = "CB Class" creator = FROM }
 		}
-		ELSE = {
+		else = {
 			create_equipment_variant = {
 				name = "CB Class"
 				type = midget_submarine
@@ -5603,13 +5563,13 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		IF = {
+		if = {
 			limit = {
 				tag = RSI
 			}
 			complete_national_focus = ITA_the_italian_social_republic
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				tag = RDS
 			}
@@ -5919,7 +5879,7 @@ country_event = {
 		
 		FROM = { end_puppet = ROOT }
 
-		IF = {
+		if = {
 			limit = {
 				is_in_faction_with = FROM
 			}
@@ -6119,7 +6079,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_deposed_leader_flag
@@ -6139,7 +6099,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_council_deposes_duce.1.a
 
-		IF = { #DEMOCRATIC Monarchy
+		if = { #DEMOCRATIC Monarchy
 			limit = {
 				OR = {
 					has_completed_focus = ITA_christian_democracy
@@ -6149,7 +6109,7 @@ country_event = {
 			ITA_grand_council = {
 				set_character_name = ITA_grand_council_alt
 
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_ideology_group = democratic }
 					}
@@ -6162,20 +6122,20 @@ country_event = {
 						}
 					}
 				}
-				ELSE = {
+				else = {
 					promote_character = yes
 				}
 			}
 			
 		}
-		ELSE_IF = { #MONARCHIST
+		else_if = { #MONARCHIST
 			limit = {
 				has_completed_focus = ITA_monarchia_d_italia
 			}
 			ITA_grand_council = {
 				set_character_name = ITA_grand_council_alt
 
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_ideology_group = neutrality }
 					}
@@ -6188,12 +6148,12 @@ country_event = {
 						}
 					}
 				}
-				ELSE = {
+				else = {
 					promote_character = yes
 				}
 			}
 		}
-		ELSE = { #FASCIST
+		else = { #FASCIST
 			ITA_grand_council = {
 				promote_character = yes
 			}
@@ -6256,7 +6216,7 @@ country_event = {
 		hidden_effect = {
 			ITA_purge_advisors_effect = yes
 			ITA_clear_purge_flag_effect = yes
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_country_flag = ITA_some_fascists_purged }
 				}
@@ -6269,7 +6229,7 @@ country_event = {
 				set_country_flag = ITA_first_purge_happened_flag
 				country_event = { id = BBA_italy_purge_the_party.1 days = 7 random_days = 3 }
 			}
-			ELSE = {
+			else = {
 				country_event = { id = bba_news.100 hours = 12 random_hours = 8 } 				
 			}
 		}
@@ -6292,7 +6252,7 @@ country_event = {
 		hidden_effect = {
 			ITA_purge_generals_effect = yes
 			ITA_clear_purge_flag_effect = yes
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_country_flag = ITA_no_fascists_purged }
 				}
@@ -6305,7 +6265,7 @@ country_event = {
 				set_country_flag = ITA_first_purge_happened_flag 
 				country_event = { id = BBA_italy_purge_the_party.1 days = 7 random_days = 3 }
 			}
-			ELSE = {
+			else = {
 				country_event = { id = bba_news.100 hours = 12 random_hours = 8 } 				
 			}
 		}
@@ -6332,7 +6292,7 @@ country_event = {
 
 		hidden_effect = {
 			ITA_dont_purge_effect = yes
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_country_flag = ITA_no_fascists_purged }
 				}
@@ -6345,7 +6305,7 @@ country_event = {
 				set_country_flag = ITA_first_purge_happened_flag 
 				country_event = { id = BBA_italy_purge_the_party.1 days = 7 random_days = 3 }
 			}
-			ELSE = {
+			else = {
 				country_event = { id = bba_news.100 hours = 12 random_hours = 8 } 			
 			}
 		}
@@ -6375,20 +6335,20 @@ country_event = {
 			ITA_purge_advisors_effect = yes
 			ITA_purge_generals_effect = yes
 			ITA_clear_purge_flag_effect = yes
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_country_flag = ITA_many_fascists_purged }
 				}
 				set_country_flag = ITA_many_fascists_purged
 			}
-			IF = { 
+			if = { 
 				limit = {
 					NOT = { has_country_flag = ITA_first_purge_happened_flag }
 				}
 				set_country_flag = ITA_first_purge_happened_flag
 				country_event = { id = BBA_italy_purge_the_party.1 days = 7 random_days = 3 }
 			}
-			ELSE = {
+			else = {
 				country_event = { id = bba_news.100 hours = 12 random_hours = 8 } 				
 			}
 		}
@@ -6618,13 +6578,13 @@ country_event = {
 			}
 		}
 		
-		IF = {
+		if = {
 			limit = { #For France
 				original_tag = FRA 
 			}
 			ITA_franco_italian_cooperation_effect = yes
 		}
-		ELSE = { #For England
+		else = { #For England
 			ITA_anglo_italian_cooperation_effect = yes
 		}
 
@@ -6988,7 +6948,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					ITA_comitato_di_liberazione_nazionale = {
 						has_ideology = marxism
@@ -6999,7 +6959,7 @@ country_event = {
 					ideology = marxism
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA_comitato_di_liberazione_nazionale = {
 						has_ideology = socialism
@@ -7129,13 +7089,13 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		IF = { #People are supporting
+		if = { #People are supporting
 			limit = {
 				check_variable = { ITA_trucks_from_leftist_aid > 0 }
 			}
 			country_event = BBA_italy_communist_events.03
 		}
-		ELSE = { #No one supported T_T
+		else = { #No one supported T_T
 			country_event = BBA_italy_communist_events.04
 		}
 	}
@@ -7207,7 +7167,7 @@ country_event = {
 	option = {
 		name = BBA_italy_communist_events.05.a
 
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes
 			}
@@ -7222,7 +7182,7 @@ country_event = {
 				category = land_doctrine
 			}
 		}
-		ELSE = {
+		else = {
 			army_experience = 15
 			air_experience = 15
 			navy_experience = 15
@@ -7364,7 +7324,7 @@ country_event = {
 	#Ok
 	option = {
 		name = BBA_italy_communist_events.09.a
-		IF = {	
+		if = {	
 			limit = {
 				ITA_antonio_gramsci = { 
 					is_country_leader = yes
@@ -7377,7 +7337,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			effect_tooltip = {
 				remove_trait = {
 					character = ITA_antonio_gramsci
@@ -7427,7 +7387,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					ITA_comitato_di_liberazione_nazionale = {
 						has_ideology = marxism
@@ -7438,7 +7398,7 @@ country_event = {
 					ideology = marxism
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA_comitato_di_liberazione_nazionale = {
 						has_ideology = socialism
@@ -7513,7 +7473,7 @@ country_event = {
 	option = {
 		name = BBA_italy_democratic_events.03.a
 
-		IF = { #SICILIA PRIO
+		if = { #SICILIA PRIO
 			limit = {
 				115 = {
 					controller = {
@@ -7526,7 +7486,7 @@ country_event = {
 				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
 			}
 		}
-		ELSE_IF = { #CAMPANIA next - Camorra Napolitana
+		else_if = { #CAMPANIA next - Camorra Napolitana
 			limit = {
 				117 = {
 					controller = {
@@ -7539,7 +7499,7 @@ country_event = {
 				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
 			}
 		}
-		ELSE_IF = { #CALABRIA
+		else_if = { #CALABRIA
 			limit = {
 				156 = {
 					controller = {
@@ -7552,7 +7512,7 @@ country_event = {
 				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
 			}
 		}
-		ELSE = { #FALLBACK
+		else = { #FALLBACK
 			random_state = {
 				limit = {
 					is_core_of = ITA
@@ -7581,7 +7541,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					any_state = {
 						is_core_of = ITA
@@ -7609,7 +7569,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				random_state = {
 					limit = {
 						is_core_of = ITA
@@ -7629,7 +7589,7 @@ country_event = {
 			}
 
 			#REPEAT EVENT
-			IF = {	
+			if = {	
 				limit = {
 					any_state = {
 						is_core_of = ITA
@@ -7708,7 +7668,7 @@ country_event = {
 
 		custom_effect_tooltip = if_they_accept_tt
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					ETH = {
 						OR = {
@@ -7719,7 +7679,7 @@ country_event = {
 				}
 				white_peace = FROM
 			}
-			ELSE = {
+			else = {
 				white_peace = FROM
 				FROM = { puppet = ROOT }
 			}
@@ -7844,7 +7804,7 @@ country_event = {
 		custom_effect_tooltip = if_they_accept_tt
 		effect_tooltip = {
 			puppet = ETH
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = yes
 				}
@@ -7997,7 +7957,7 @@ country_event = {
 
 		white_peace = FROM
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						is_in_faction_with = ROOT
@@ -8013,7 +7973,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM  = { has_country_flag = ITA_ethiopia_gets_puppeted_flag }
 			}
@@ -8169,7 +8129,7 @@ country_event = {
 
 		effect_tooltip = {
 			FROM = { puppet = ROOT }
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						is_in_faction = yes
@@ -8260,7 +8220,7 @@ country_event = {
 		name = BBA_italy_anti_colonialism_events.06.a #intentional
 
 		puppet = FROM
-		IF = {
+		if = {
 			limit = {
 				is_in_faction = yes
 			}
@@ -8536,7 +8496,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { #Need to scope to FROM to work with scripted trigger
 					ROOT = {
@@ -8585,7 +8545,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_someone_decolonized_flag
 				}
@@ -8627,7 +8587,7 @@ country_event = {
 				}
 				add_dynamic_modifier = { modifier = ITA_anti_colonialism_sentiment }
 			}
-			IF = {
+			if = {
 				limit = {
 					country_can_be_reasonable_target_of_wargoal = yes
 				}
@@ -8642,7 +8602,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = ITA_someone_decolonized_flag
 				}
@@ -8666,7 +8626,7 @@ country_event = {
 		#GET AVERAGE COMPLIANCE OF REGIONS
 
 		#NORTH AFRICA
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_north_africa = yes
@@ -8749,7 +8709,7 @@ country_event = {
 		}
 
 		#EAST AFRICA
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_east_africa = yes
@@ -8834,7 +8794,7 @@ country_event = {
 		}
 
 		#WEST AFRICA
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_west_africa = yes
@@ -8898,7 +8858,7 @@ country_event = {
 		}
 
 		#CENTRAL AFRICA
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_central_africa = yes
@@ -8962,7 +8922,7 @@ country_event = {
 		}
 
 		#SOUTH AFRICA
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_south_africa = yes
@@ -9026,7 +8986,7 @@ country_event = {
 		}
 
 		#MIDDLE EAST
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					ITA_state_is_in_middle_east = yes
@@ -10032,7 +9992,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.5.a
 		
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Together for Victory"
 			}
@@ -10045,7 +10005,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "Together for Victory"
@@ -10115,7 +10075,7 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {	
 						OR = {		
@@ -10132,7 +10092,7 @@ country_event = {
 				}
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					ROOT = {	
 						OR = {		
@@ -10148,7 +10108,7 @@ country_event = {
 					transfer_state = 163
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = {	
 						OR = {		
@@ -10214,7 +10174,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.9.a
 
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					FROM = {
@@ -10232,7 +10192,7 @@ country_event = {
 				transfer_state = 103
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					FROM = {
@@ -10250,7 +10210,7 @@ country_event = {
 				transfer_state = 163
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					FROM = {
@@ -10284,7 +10244,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.10.a
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					NOT = {
@@ -10292,7 +10252,7 @@ country_event = {
 					}
 				}
 			} 
-			IF = {
+			if = {
 				limit = {
 					controls_state = 103
 				}
@@ -10304,7 +10264,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					controls_state = 852
 				}
@@ -10316,7 +10276,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					controls_state = 163
 				}
@@ -10329,7 +10289,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			ROOT = {
 				add_opinion_modifier = {
 					target = FROM
@@ -10425,7 +10385,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.13.a
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					is_in_faction_with = FROM
@@ -10795,7 +10755,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				ENG = {
 					NOT = {
@@ -10812,7 +10772,7 @@ country_event = {
 		}
 
 		
-		IF = {
+		if = {
 			limit = {
 				FRA = {
 					NOT = {
@@ -10831,7 +10791,7 @@ country_event = {
 		add_stability = -0.1
 		add_war_support = -0.05
 
-		IF = {
+		if = {
 			limit = {#Checks if ENG is hosting exiled ETH or if an ally does
 				ITA_hosting_exiled_ethiopia = yes
 				ITA = { #ITA must be at war with ETH
@@ -11149,7 +11109,7 @@ country_event = {
 		802 = {
 			remove_core_of = YUG
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					802 = {
@@ -11161,7 +11121,7 @@ country_event = {
 				transfer_state = 802
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					802 = {
@@ -11222,7 +11182,7 @@ country_event = {
 		HUN = {
 			give_guarantee = ITA
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					45 = {
@@ -11234,7 +11194,7 @@ country_event = {
 				add_claim_by = HUN
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				45 = {
 					is_claimed_by = ITA
@@ -11244,7 +11204,7 @@ country_event = {
 				remove_claim_by = ITA
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					45 = {
@@ -11260,7 +11220,7 @@ country_event = {
 				transfer_state = 45
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				any_country = {
 					is_subject_of = ITA
@@ -11331,13 +11291,13 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				ETH = {
 					has_country_flag = ETH_refused_forced_peace_flag
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ETH = { is_in_faction_with = ENG }
 				}
@@ -11362,7 +11322,7 @@ country_event = {
 			}
 		}
 
-		IF = { #Only send this event if France controls the necessary state(s)
+		if = { #Only send this event if France controls the necessary state(s)
 			limit = {
 				FRA = {
 					controls_state = 268
@@ -11379,23 +11339,23 @@ country_event = {
 
 		hidden_effect = {
 			set_global_flag = ITA_will_get_british_somalia
-			IF = {
+			if = {
 				limit = {	
 					has_country_flag = ITA_italy_suing_for_peace_flag
 				}
 				clr_country_flag = ITA_italy_suing_for_peace_flag
 			}
-			ELSE_IF = { #If France didn't have the necessary state(s), send this event
+			else_if = { #If France didn't have the necessary state(s), send this event
 				limit = {
 					ENG = {
 						controls_state = 906
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_global_flag = second_italo_ethiopian_war_flag
 					}
-					IF = {
+					if = {
 						limit = {
 							has_global_flag = end_of_second_italo_ethiopian_war_flag
 						}
@@ -11411,7 +11371,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = { #If Britain didn't have the necessary state(s), send this event
+			else_if = { #If Britain didn't have the necessary state(s), send this event
 				limit = {
 					FRA = {
 						controls_state = 458
@@ -11426,7 +11386,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = { #If France didn't have the necessary state(s), send this event
+			else_if = { #If France didn't have the necessary state(s), send this event
 				limit = {
 					ENG = {
 						controls_state = 116
@@ -11440,7 +11400,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = { #If Britain didn't have the necessary state(s), send this event
+			else = { #If Britain didn't have the necessary state(s), send this event
 				FRA = {
 					country_event = { #Balkan claims event
 					    id = BBA_italy_interaction_events.36
@@ -11461,13 +11421,13 @@ country_event = {
 			base = 50
 		}
 
-		IF = {
+		if = {
 			limit = {
 				ETH = {
 					has_country_flag = ETH_refused_forced_peace_flag
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ETH = { is_in_faction_with = ENG }
 				}
@@ -11482,7 +11442,7 @@ country_event = {
 			}
 		}
 
-		IF = { #Send this event if France controls the necessary state(s)
+		if = { #Send this event if France controls the necessary state(s)
 			limit = {
 				FRA = {
 					controls_state= 268
@@ -11496,7 +11456,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 906
@@ -11510,7 +11470,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If Britain didn't have the necessary state(s), send this event
+		else_if = { #If Britain didn't have the necessary state(s), send this event
 			limit = {
 				FRA = {
 					controls_state = 458
@@ -11525,7 +11485,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11539,7 +11499,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -11551,17 +11511,17 @@ country_event = {
 
 		hidden_effect = {
 			set_country_flag = ITA_italy_has_started_negotiations_flag
-			IF = {
+			if = {
 				limit = {	
 					has_country_flag = ITA_italy_suing_for_peace_flag
 				}
 				clr_country_flag = ITA_italy_suing_for_peace_flag
 			}
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = second_italo_ethiopian_war_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						has_global_flag = end_of_second_italo_ethiopian_war_flag
 					}
@@ -11631,7 +11591,7 @@ country_event = {
 			set_global_flag = ITA_will_get_french_somaliland
 		}
 
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				ENG = {
 					controls_state = 906
@@ -11645,7 +11605,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If Britain didn't have the necessary state(s), send this event
+		else_if = { #If Britain didn't have the necessary state(s), send this event
 			limit = {
 				FRA = {
 					controls_state = 458
@@ -11660,7 +11620,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11674,7 +11634,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -11697,7 +11657,7 @@ country_event = {
 			base = 50
 		}
 
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				ENG = {
 					controls_state = 906
@@ -11711,7 +11671,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If Britain didn't have the necessary state(s), send this event
+		else_if = { #If Britain didn't have the necessary state(s), send this event
 			limit = {
 				FRA = {
 					controls_state = 458
@@ -11726,7 +11686,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11740,7 +11700,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -11814,7 +11774,7 @@ country_event = {
 			set_global_flag = ITA_will_get_socotra
 		}
 
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				FRA = {
 					controls_state = 458
@@ -11829,7 +11789,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11843,7 +11803,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -11854,7 +11814,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -11873,7 +11833,7 @@ country_event = {
 			base = 50
 		}
 
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				FRA = {
 					controls_state = 458
@@ -11888,7 +11848,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = { #If France didn't have the necessary state(s), send this event
+		else_if = { #If France didn't have the necessary state(s), send this event
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11902,7 +11862,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -11913,7 +11873,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -11984,7 +11944,7 @@ country_event = {
 			set_global_flag = ITA_will_get_tunisia
 		}
 		
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -11998,7 +11958,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -12009,7 +11969,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -12028,7 +11988,7 @@ country_event = {
 			base = 50
 		}
 
-		IF = { #Send this event if Britain controls the necessary state(s)
+		if = { #Send this event if Britain controls the necessary state(s)
 			limit = {
 				ENG = {
 					controls_state = 116
@@ -12042,7 +12002,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { #If Britain didn't have the necessary state(s), send this event
+		else = { #If Britain didn't have the necessary state(s), send this event
 			FRA = {
 				country_event = { #Balkan claims event
 				    id = BBA_italy_interaction_events.36
@@ -12053,7 +12013,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -12132,7 +12092,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -12160,7 +12120,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -12183,7 +12143,7 @@ country_event = {
 
 	immediate = { #For Loc purposes
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_italy_has_started_negotiations_flag
@@ -12191,7 +12151,7 @@ country_event = {
 				}
 				set_country_flag = ITA_italy_has_started_negotiations_flag
 			}
-			ELSE = {
+			else = {
 				set_country_flag = ITA_italy_has_started_negotiations_flag
 			}
 		}
@@ -12305,7 +12265,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 				ENG = {
@@ -12321,7 +12281,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 				FRA = {
@@ -12336,7 +12296,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 				ENG = {
@@ -12351,7 +12311,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 				FRA = {
@@ -12368,7 +12328,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 				ENG = {
@@ -12383,7 +12343,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_balkans
 			}
@@ -12464,7 +12424,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 			}
@@ -12477,7 +12437,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 			}
@@ -12489,7 +12449,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 			}
@@ -12501,7 +12461,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 			}
@@ -12514,7 +12474,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 			}
@@ -12526,7 +12486,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_balkans
 			}
@@ -12600,7 +12560,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = ITA_deposed_leader_flag
@@ -12615,7 +12575,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_country_flag = ITA_pope_took_over_italy_flag }
 			}
@@ -12654,7 +12614,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.39.a 
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 			}
@@ -12663,7 +12623,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 			}
@@ -12672,7 +12632,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 			}
@@ -12681,7 +12641,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 			}
@@ -12690,7 +12650,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 			}
@@ -12712,7 +12672,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						is_faction_leader = yes
@@ -12755,7 +12715,7 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					ENG = {
 						is_faction_leader = yes
@@ -12764,7 +12724,7 @@ country_event = {
 				ENG = { add_to_faction = FRA }
 				ENG = { add_to_faction = ITA }
 			}
-			ELSE = {
+			else = {
 				ROOT = {
 					create_faction_from_template = {
 						template = faction_template_the_little_entente
@@ -12821,7 +12781,7 @@ country_event = { #Hidden event
 		ai_chance = {
 			base = 100
 		}
-		IF = {
+		if = {
 			limit = {
 				ENG = {
 					is_faction_leader = yes
@@ -12830,7 +12790,7 @@ country_event = { #Hidden event
 			ENG = { add_to_faction = FRA }
 			ENG = { add_to_faction = ITA }
 		}
-		ELSE = {
+		else = {
 			ROOT = {
 				create_faction_from_template = {
 					template = faction_template_the_little_entente
@@ -13231,11 +13191,11 @@ country_event = { #England receives the news that Italy signed a peace treaty wi
 				news_event = { hours = 6 id = BBA_italy_interaction_events_news.2 }
 			}
 			clr_country_flag = ITA_italy_asks_ethiopian_host_for_help
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = second_italo_ethiopian_war_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						has_global_flag = end_of_second_italo_ethiopian_war_flag
 					}
@@ -13377,7 +13337,7 @@ country_event = {
 				province = 1086
 				instant_build = yes
 			}
-			IF = {
+			if = {
 				limit = {
 					anti_air_building < 5
 				}

@@ -1,4 +1,4 @@
-﻿add_namespace = nsb_news
+add_namespace = nsb_news
 
 #Polish Peasant's strike civil war
 news_event = {
@@ -528,7 +528,7 @@ news_event = {
 		hidden_effect = {
 			random_list = {
 				15 = {
-					IF = {
+					if = {
 						limit = {
 							GEO = {
 								exists = yes
@@ -542,7 +542,7 @@ news_event = {
 							}
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = {
 							GEO = {
 								exists = no
@@ -555,16 +555,6 @@ news_event = {
 								long_name = SOV_communism_party_russian_long
 								name = SOV_communism_party
 							}	
-							GEO_ioseb_jughashvili = {
-								add_country_leader_role = {
-									promote_leader = yes
-									country_leader = {
-										ideology = stalinism
-										expire = "1965.1.1.1"
-										traits = { GEO_vengeful_stalinist } 
-									}
-								}	
-							}
 						}
 					}
 				}
@@ -1095,7 +1085,7 @@ news_event = {
 				has_completed_focus = SOV_the_fourth_international
 			}
 			add_timed_idea = { idea = SOV_the_fourth_international_idea days = 720 }
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						character = SOV_iosif_stalin

@@ -765,7 +765,7 @@ country_event = { # to FROM, China wants to remove 9 power treaty
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_completed_focus = CHI_invoke_the_nine_powers
@@ -783,7 +783,7 @@ country_event = { # to FROM, China wants to remove 9 power treaty
 				target = JAP
 				modifier = CHI_broke_the_nine_powers_treaty_opm 
 			}	
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
@@ -796,7 +796,7 @@ country_event = { # to FROM, China wants to remove 9 power treaty
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				add_opinion_modifier = {
 					target = JAP 
 					modifier = embargo
@@ -1127,25 +1127,25 @@ country_event = { # Event for answering the chinese asking for soviet MIO/design
 	option = { # Yes!
 		name = SEA_china.26.a
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = SOV_accepted_Morozov
 					}
 					custom_effect_tooltip = available_mio_tt
 					show_mio_tooltip = SOV_morozov_design_bureau_organization
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_country_flag = SOV_accepted_Astrov
 					}
 					custom_effect_tooltip = available_mio_tt
 					show_mio_tooltip = SOV_astrov_design_bureau_organization
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_country_flag = SOV_accepted_OKMO
 					}
@@ -1153,22 +1153,22 @@ country_event = { # Event for answering the chinese asking for soviet MIO/design
 					show_mio_tooltip = SOV_okmo_organization
 				}
 			}
-			ELSE = {
-				IF = {
+			else = {
+				if = {
 					limit = {
 						has_country_flag = SOV_accepted_Morozov
 					}
 					custom_effect_tooltip = available_mio_tt
 					show_ideas_tooltip = SOV_morozov_design_bureau
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_country_flag = SOV_accepted_Astrov
 					}
 					custom_effect_tooltip = available_mio_tt
 					show_ideas_tooltip = SOV_astrov_design_bureau
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_country_flag = SOV_accepted_OKMO
 					}
@@ -1206,7 +1206,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 			base = 1
 		}
 
-		IF = {
+		if = {
 			limit = {
 				597 = {
 					is_controlled_by = ROOT
@@ -1216,7 +1216,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 				transfer_state = 597
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				614 = {
 					is_controlled_by = ROOT
@@ -1226,7 +1226,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 				transfer_state = 614
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				743 = {
 					is_controlled_by = ROOT
@@ -1237,7 +1237,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				608 = {
 					is_controlled_by = ROOT
@@ -1248,7 +1248,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				1038 = {
 					is_controlled_by = ROOT
@@ -1259,7 +1259,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				1039 = {
 					is_controlled_by = ROOT
@@ -1270,7 +1270,7 @@ country_event = { # China tries to stall war with Japan, HBC and SND get the cha
 				transfer_state = 1039
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				1039 = {
 					is_controlled_by = ROOT
@@ -1384,7 +1384,7 @@ country_event = { # Event for improving illicit trade
 	option = { 
 		name = SEA_china_improvement.2.a
 		custom_effect_tooltip = CHI_modify_illicit_trade_tt
-		IF = {
+		if = {
 			limit = {
 				check_variable = { CHI_illicit_trade_consumer_goods < 0 }
 			}
@@ -1393,7 +1393,7 @@ country_event = { # Event for improving illicit trade
 				tooltip = consumer_goods_factor_tt
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
 					var = CHI_illicit_trade_industrial_capacity_factory
@@ -1406,7 +1406,7 @@ country_event = { # Event for improving illicit trade
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
 					var = CHI_illicit_trade_industrial_capacity_dockyard
@@ -1460,7 +1460,7 @@ country_event = { # Hidden  for increasing conscription factor
 			CHI_corruption_in_the_armed_forces_conscription_factor = CHI_corruption_in_the_armed_forces_conscription_factor_improvement
 			tooltip = conscription_factor_tt
 		}
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
 					var = CHI_corruption_in_the_armed_forces_conscription_factor
@@ -1483,7 +1483,7 @@ country_event = { # Event for improving illicit trade
 
 	option = { 
 		name = SEA_china_improvement.5.a
-		IF = {
+		if = {
 			limit = {
 				check_variable = { CHI_illicit_trade_consumer_goods < 0 }
 			}
@@ -1492,7 +1492,7 @@ country_event = { # Event for improving illicit trade
 				tooltip = consumer_goods_factor_tt
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
 					var = CHI_illicit_trade_industrial_capacity_factory
@@ -1505,7 +1505,7 @@ country_event = { # Event for improving illicit trade
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				check_variable = {
 					var = CHI_illicit_trade_industrial_capacity_dockyard
@@ -1518,7 +1518,7 @@ country_event = { # Event for improving illicit trade
 				tooltip = industrial_capacity_dockyard_tt
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					check_variable = {
@@ -1544,7 +1544,7 @@ country_event = { # Event for improving illicit trade
 				random_days = 10
 			} 
 		}
-		ELSE = {
+		else = {
 			country_event = {
 				id = SEA_china_improvement.3
 				days = 2
@@ -1903,7 +1903,7 @@ country_event = {
 			base = 10
 		}
 
-		IF = {
+		if = {
 			limit = {
 				PRC = {
 					NOT = {
@@ -1922,7 +1922,7 @@ country_event = {
 				}
 			}	
 		}
-		ELSE = {
+		else = {
 			add_country_leader_role = {
 				character = CHI_chen_mingshu
 				promote_leader = yes
@@ -2137,13 +2137,13 @@ country_event = {
 	option = {
 		name = SEA_china_democratic.3.a
 
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes 
 			}
 			add_to_faction = FROM
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				is_in_faction = yes
 				is_faction_leader = no
@@ -2673,7 +2673,7 @@ country_event = { # [FROM.GetNameDefCap] Invests in our Economy
 				level = 2
 				instant_build = yes
 			}	
-			IF = {
+			if = {
 				limit = {
 					infrastructure < 5
 				}
@@ -2854,7 +2854,7 @@ country_event = { # Warlord accepts event
 	option = {
 		name = SEA_china_democratic.18.a
 		
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = is_pressing_warlord 
 			}
@@ -2883,7 +2883,7 @@ country_event = { # Warlord rejects integration
 	option = {
 		name = SEA_china_democratic.19.a
 
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = is_pressing_warlord 
 			}

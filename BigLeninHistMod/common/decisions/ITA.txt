@@ -5999,7 +5999,7 @@ ITA_diplomacy_balkan_decision_category = {
 		days_remove = 7
 
 		remove_effect = {
-			IF = {
+			if = {
 				limit = {
 					CRO = {
 						NOT = {
@@ -6067,7 +6067,7 @@ ITA_diplomacy_balkan_decision_category = {
 		days_remove = 7
 
 		remove_effect = {
-			IF = {
+			if = {
 				limit = { has_dlc = "Together for Victory" }
 				ITA = {
 					set_autonomy = {
@@ -6078,7 +6078,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = { ITA = { has_government = fascism } }
 				CRO = {
 					ITA_prince_aimone = {
@@ -6094,7 +6094,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = { ITA = { has_government = neutrality } }
 				CRO = {
 					ITA_prince_aimone = {
@@ -6195,7 +6195,7 @@ ITA_diplomacy_balkan_decision_category = {
 				transfer_state = 44
 				transfer_state = 805
 				transfer_state = 934
-				IF = {
+				if = {
 					limit = {
 						802 = {
 							is_controlled_by = ITA
@@ -6203,7 +6203,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 					transfer_state = 802
 				}
-				IF = {
+				if = {
 					limit = {
 						970 = {
 							is_controlled_by = ITA
@@ -6219,7 +6219,7 @@ ITA_diplomacy_balkan_decision_category = {
 			970 = {
 				add_core_of = ALB
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Together for Victory"
 				}
@@ -6232,7 +6232,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "Together for Victory"
@@ -6324,7 +6324,7 @@ ITA_diplomacy_balkan_decision_category = {
 			MNT = {
 				transfer_state = 105
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Together for Victory"
 				}
@@ -6337,7 +6337,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "Together for Victory"
@@ -6641,7 +6641,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA = {
 						has_government = fascism
@@ -6654,7 +6654,7 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ITA = {
 						has_government = neutrality

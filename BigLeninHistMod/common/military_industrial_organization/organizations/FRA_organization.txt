@@ -27,7 +27,7 @@ FRA_renault_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -37,14 +37,14 @@ FRA_renault_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}	
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -55,7 +55,7 @@ FRA_renault_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -151,7 +151,7 @@ FRA_amx_organization = {
 		tag = FRA 
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = FRA } 
 			}
@@ -211,13 +211,13 @@ FRA_acf_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -267,7 +267,7 @@ FRA_bloch_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -277,14 +277,14 @@ FRA_bloch_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -295,7 +295,7 @@ FRA_bloch_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -379,7 +379,7 @@ FRA_somua_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = POL }
 			}
@@ -391,7 +391,7 @@ FRA_somua_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
@@ -415,7 +415,7 @@ FRA_mas_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -425,14 +425,14 @@ FRA_mas_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}

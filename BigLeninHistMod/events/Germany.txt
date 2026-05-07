@@ -1961,7 +1961,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					ITA = {
 						OR = {
@@ -2088,7 +2088,7 @@ country_event = {
 			clr_country_flag = AUS_antischluss_active_flag
 		}
 
-		IF = {
+		if = {
 			limit = {
 				ITA = {
 					OR = {
@@ -2102,7 +2102,7 @@ country_event = {
 				country_event = { id = BBA_italy_interaction_events.24 hours = 1 }
 			}
 		}
-		ELSE = {
+		else = {
 			GER = {
 				add_opinion_modifier = { target = ROOT modifier = GER_anschluss_rejected }
 				country_event = { days = 1 id = germany.29 }
@@ -3531,7 +3531,7 @@ country_event = {
 	option = {
 		name = germany.52.a
 
-		IF = {
+		if = {
 			limit = {
 				72 = {
 					NOT = {
@@ -3541,7 +3541,7 @@ country_event = {
 			}
 			transfer_state = 72
 		}
-		IF = {
+		if = {
 			limit = {
 				72 = {
 					NOT = {
@@ -6381,7 +6381,7 @@ country_event = {
 					add_dynamic_modifier = { modifier = GER_airforce_modifier }
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -6494,7 +6494,7 @@ country_event = {
 					add_dynamic_modifier = { modifier = GER_airforce_modifier }
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -6592,7 +6592,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -6705,7 +6705,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -6848,7 +6848,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -6961,7 +6961,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -7098,7 +7098,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -7211,7 +7211,7 @@ country_event = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						PREV.PREV = {
 							NOT = {
@@ -9820,7 +9820,7 @@ country_event = {
 		}
 		# Ensure that Liberated Austria is democratic
 
-		IF = {
+		if = {
 			limit = {
 				AUS = {
 					exists = no
@@ -9835,7 +9835,7 @@ country_event = {
 			}
 		}
 
-		ELSE = {
+		else = {
 			AUS = {
 				848 = { set_state_flag = yalta_aus }
 				153 = { set_state_flag = yalta_aus }
@@ -10576,7 +10576,7 @@ country_event = {
 					id = germany.124 days = 1
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_subject = CZE
 				}
@@ -10745,7 +10745,7 @@ country_event = { #Overlod of CZE hads away states without consulting CZE
 
 		effect_tooltip = {
 			
-			IF = {
+			if = {
 				limit = {
 					controls_state = 69
 				}
@@ -10755,7 +10755,7 @@ country_event = { #Overlod of CZE hads away states without consulting CZE
 				}
 			}
 				
-			IF = {
+			if = {
 				limit = {
 					controls_state = 972
 				}	
@@ -10765,7 +10765,7 @@ country_event = { #Overlod of CZE hads away states without consulting CZE
 				}
 			}
 				
-			IF = {
+			if = {
 				limit = {
 					controls_state = 74
 				}
@@ -10935,7 +10935,7 @@ country_event = {
 		SOV = {
 			has_government = communism
 		}
-		IF = {
+		if = {
 			# If the GER tag is democratic, use this, otherwise go random
 			limit = {
 				GER = {
@@ -10948,7 +10948,7 @@ country_event = {
 				has_government = democratic 
 			}
 		}
-		ELSE = {
+		else = {
 			any_subject_country = {
 				original_tag = GER
 				has_government = democratic 
@@ -10978,7 +10978,7 @@ country_event = {
 				}
 			}
 			add_ideas = GER_western_trade_cooperation
-			IF = {
+			if = {
 				limit = {
 					ROOT = { is_faction_leader = yes }
 				}
@@ -11003,7 +11003,7 @@ country_event = {
 			
 		}
 		# Check if last german democratic puppet
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					any_country = {
@@ -11084,7 +11084,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					any_country = {
@@ -11153,7 +11153,7 @@ country_event = {
 					autonomy_state = autonomy_free
 				}
 			}
-			IF = {
+			if = {
 				limit = { has_government = communism }
 				set_cosmetic_tag = DDR
 			}

@@ -2261,7 +2261,7 @@ country_event = {
 	
 	immediate = {
 		# LOG = "[ROOT.GetLeader]'s [ROOT.GetName] got event" #TODO_TA Remove logging
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = global_unification_request_sent_flag
 			}
@@ -2349,7 +2349,7 @@ country_event = {
 		trigger = {
 			ROOT = { is_ai = yes }
 		}
-		IF = {
+		if = {
 			limit = {
 				any_other_country = {
 					NOT = { tag = ROOT }
@@ -2392,7 +2392,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			#log = "AI ROOT [ROOT.GetName] to annex"
 			clr_country_flag = yes_to_unification_flag 
 			clr_country_flag = unification_request_sent_flag

@@ -2737,7 +2737,7 @@ characters = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
@@ -2745,7 +2745,7 @@ characters = {
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}
@@ -2889,7 +2889,7 @@ characters = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
@@ -2949,7 +2949,7 @@ characters = {
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}
@@ -3013,7 +3013,7 @@ characters = {
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}
@@ -3967,7 +3967,7 @@ characters = {
 				}
 
 				available = {
-					IF = {
+					if = {
 						limit = {
 							has_dlc = "Man the Guns"
 						}

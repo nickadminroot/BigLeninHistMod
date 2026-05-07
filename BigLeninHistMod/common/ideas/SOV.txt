@@ -4410,7 +4410,7 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
@@ -4426,7 +4426,7 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_dlc = "No Compromise, No Surrender" }
 						OR = {
@@ -4438,7 +4438,7 @@ ideas = {
 						has_war_with = SOV
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI
@@ -4706,7 +4706,7 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
@@ -4721,7 +4721,7 @@ ideas = {
 				}
 			}
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI
@@ -4988,7 +4988,7 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
@@ -5004,7 +5004,7 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI

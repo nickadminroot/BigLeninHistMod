@@ -198,7 +198,7 @@ country_event = {
 			active = yes
 		}
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = CHI
 			}
@@ -214,7 +214,7 @@ country_event = {
 				}	
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = SOV
 				655 = {
@@ -230,7 +230,7 @@ country_event = {
 					type = coal
 					amount = 2
 				}	
-				IF = {
+				if = {
 					limit = {
 						infrastructure < 5
 					}
@@ -240,7 +240,7 @@ country_event = {
 						instant_build = yes
 					}	
 				}
-				IF = {
+				if = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
@@ -320,7 +320,7 @@ country_event = {
 				active = yes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						original_tag = CHI
@@ -337,7 +337,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						original_tag = SOV
@@ -355,7 +355,7 @@ country_event = {
 						type = coal
 						amount = 2
 					}	
-					IF = {
+					if = {
 						limit = {
 							infrastructure < 5
 						}
@@ -365,7 +365,7 @@ country_event = {
 							instant_build = yes
 						}	
 					}
-					IF = {
+					if = {
 						limit = {
 							free_building_slots = {
 								building = industrial_complex
@@ -831,7 +831,7 @@ country_event = {
 		effect_tooltip = {
 			FROM = { set_autonomy = { target = PHI autonomy_state = autonomy_free } }
 		}
-		IF = {
+		if = {
 			limit = {
 				JAP = {
 					is_faction_leader = yes

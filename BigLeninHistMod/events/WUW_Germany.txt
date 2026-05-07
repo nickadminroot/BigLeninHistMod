@@ -9522,16 +9522,6 @@ country_event = {
 		}		
 		
 		RKK = {
-			GEO_shalva_maglakelidze = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
@@ -11039,19 +11029,6 @@ country_event = {
 						exists = no
 					}
 				}
-				HES_philipp_of_hesse = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
 			}
 			else = {
 				GER_otto_strasser = {
@@ -11729,19 +11706,6 @@ country_event = {
 						exists = no
 					}
 				}
-				MEK_christian_louis = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
 			}
 			else = {
 				GER_rolf_carls = {
@@ -11820,34 +11784,8 @@ country_event = {
 						}
 					}
 				}
-				PRU_Óscar_benavides = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
 			}
 			else = {
-				CHL_jorge_gonzález_von_marées = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
@@ -12566,19 +12504,6 @@ country_event = {
 						}
 					}
 				}
-				SWI_robert_tobler = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
 			}
 			else = {
 				GER_walter_model = {
@@ -12783,19 +12708,6 @@ country_event = {
 							}
 						}
 					}
-				}
-				WUR_philipp_albrecht = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
 				}
 			}
 			else = {

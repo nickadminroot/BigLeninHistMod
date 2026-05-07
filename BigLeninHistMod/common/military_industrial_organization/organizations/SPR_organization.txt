@@ -103,7 +103,7 @@ SPR_hispano_aviacion_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SPR } }
 			}
@@ -217,7 +217,7 @@ SPR_hispano_suiza_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = SPR } }
 			}

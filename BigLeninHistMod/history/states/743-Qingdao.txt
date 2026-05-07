@@ -6,7 +6,7 @@ state = {
 	history = {
 		owner = CHI
 		add_core_of = CHI
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 			}

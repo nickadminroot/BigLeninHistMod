@@ -100,7 +100,7 @@ autonomy_state = {
 			}
 			has_completed_focus = SAF_abandon_westminster
 		}
-		IF = {
+		if = {
 			limit = {
 				original_tag = COG
 				has_dlc = "Gotterdammerung"			
@@ -135,7 +135,7 @@ autonomy_state = {
 	}
 
 	can_lose_level = {
-		IF = {
+		if = {
 			limit = {
 				OVERLORD = { original_tag = BEL } 
 				original_tag = COG

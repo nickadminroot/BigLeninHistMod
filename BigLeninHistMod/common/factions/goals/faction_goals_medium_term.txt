@@ -361,11 +361,11 @@ faction_goal_imperial_glory = {
 			1021 = { is_controlled_by_ROOT_or_ally = yes } # Singapore
 			118 = { is_controlled_by_ROOT_or_ally = yes } # Gibraltar
 			116 = { is_controlled_by_ROOT_or_ally = yes } # Malta
-			IF = {
+			if = {
 				limit = { 286 = { OWNER = { is_in_faction_with = ROOT } } }
 				286 = { is_controlled_by_ROOT_or_ally = yes } # Saigon if France joins
 			}
-			IF = {
+			if = {
 				limit = { 335 = { OWNER = { is_in_faction_with = ROOT } } }
 				335 = { is_controlled_by_ROOT_or_ally = yes } # East Indies
 			}
@@ -5490,7 +5490,7 @@ faction_goal_control_bosporus = {
 				instant_build = yes
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				347 = { is_controlled_by_ROOT_or_ally = yes }
 			}

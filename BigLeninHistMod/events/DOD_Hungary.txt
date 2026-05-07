@@ -742,28 +742,28 @@ country_event = {
 		}
 
 		#FRA block
-		IF = {
+		if = {
 			limit = {
 				tag = FRA
 			}
-			IF = {
+			if = {
 				limit = {
 					country_exists = ROM
 				}
 				ROM = { country_event = DOD_hungary.30 }
-				ELSE = {
-					IF = {
+				else = {
+					if = {
 						limit = {
 							country_exists = YUG
 						}
 						YUG = { country_event = DOD_hungary.30 }
-						ELSE = {
-							IF = {
+						else = {
+							if = {
 								limit = { 
 									country_exists = CZE
 								}
 								CZE = { country_event = DOD_hungary.30 }
-								ELSE = {
+								else = {
 									#No one left to object
 									HUN = { country_event = DOD_hungary.31 }					
 								}
@@ -776,22 +776,22 @@ country_event = {
 
 
 		#ROM block
-		IF = {
+		if = {
 			limit = {
 				tag = ROM
 			}
-			IF = {
+			if = {
 				limit = {
 					country_exists = YUG
 				}
 				YUG = { country_event = DOD_hungary.30 }
-				ELSE = {
-					IF = {
+				else = {
+					if = {
 						limit = { 
 							country_exists = CZE
 						}
 						CZE = { country_event = DOD_hungary.30 }
-						ELSE = {
+						else = {
 							#No one left to object
 							HUN = { country_event = DOD_hungary.31 }					
 						}
@@ -801,16 +801,16 @@ country_event = {
 		}
 
 		#YUG block
-		IF = {
+		if = {
 			limit = {
 				tag = YUG
 			}
-			IF = {
+			if = {
 				limit = {
 					country_exists = CZE
 				}
 				CZE = { country_event = DOD_hungary.30 }
-				ELSE = {					
+				else = {					
 					#No one left to object
 					HUN = { country_event = DOD_hungary.31 }					
 				}
@@ -818,7 +818,7 @@ country_event = {
 		}
 
 		#CZE
-		IF = {
+		if = {
 			limit = {
 				tag = CZE
 			}
@@ -867,7 +867,7 @@ country_event = {
 	option = { #cool
 		name = DOD_hungary.31.a
 		
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 				NOT = {
@@ -876,7 +876,7 @@ country_event = {
 			}
 			remove_ideas = HUN_treaty_of_triannon_aat
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				AND = {
 					NOT = {
@@ -888,11 +888,11 @@ country_event = {
 			remove_ideas = HUN_treaty_of_triannon
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_idea = HUN_treaty_of_triannon_wuw
@@ -906,55 +906,55 @@ country_event = {
 						has_idea = HUN_bled_agreement_wuw
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw
 					}
 					remove_ideas = HUN_treaty_of_triannon_wuw
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw
 					}
 					remove_ideas = HUN_treaty_of_triannon_aat_wuw
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_wuw_no_air_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
 					}
 					remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_bled_agreement_wuw
 					}
@@ -1229,7 +1229,7 @@ country_event = {
 
 	option = { #Excellent!
 		name = DOD_hungary.42.a
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 				NOT = {
@@ -1238,7 +1238,7 @@ country_event = {
 			}
 			remove_ideas = HUN_treaty_of_triannon_aat
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				AND = {
 					NOT = {
@@ -1250,7 +1250,7 @@ country_event = {
 			remove_ideas = HUN_treaty_of_triannon
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
@@ -3803,7 +3803,7 @@ country_event = {
 			}
 			add_state_claim = 103 #Dalmatia
 			add_state_claim = 105 #Montenegro
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_subject = ALB
@@ -4974,7 +4974,7 @@ country_event = {
 				factor = 0.25
 			}
 		}
-		IF = {
+		if = {
 			limit = { 
 				664 = { is_owned_by = CZE }
 			}
@@ -4982,7 +4982,7 @@ country_event = {
 				country_event = DOD_hungary.81
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				73 = {
 					is_owned_by = CZE
@@ -4995,7 +4995,7 @@ country_event = {
 		
 		SOV = { give_guarantee = CZE } 
 		HUN = { give_guarantee = CZE } 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_government = communism
@@ -5470,20 +5470,20 @@ country_event = {
 	option = {# 
 		name = DOD_hungary.142.a
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "Gotterdammerung"
 				}
 			}
-			IF = {
+			if = {
 				limit = { 
 					OR = {
 						has_idea = HUN_treaty_of_triannon 
 						has_idea = HUN_treaty_of_triannon_aat
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Arms Against Tyranny"
 					}
@@ -5492,14 +5492,14 @@ country_event = {
 						add_idea = Hun_treaty_of_triannon_3
 					}
 				}
-				ELSE = {
+				else = {
 					swap_ideas = {
 						remove_idea = HUN_treaty_of_triannon
 						add_idea = Hun_treaty_of_triannon_3
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = { has_idea = HUN_treaty_of_triannon_2 }
 				swap_ideas = {
 					remove_idea = HUN_treaty_of_triannon_2
@@ -5508,11 +5508,11 @@ country_event = {
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_idea = HUN_treaty_of_triannon_wuw
@@ -5525,7 +5525,7 @@ country_event = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw
 					}
@@ -5534,7 +5534,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}	
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw
 					}
@@ -5543,7 +5543,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 					}
@@ -5552,7 +5552,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 					}
@@ -5561,7 +5561,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
 					}
@@ -5570,7 +5570,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 					}
@@ -5579,7 +5579,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
 					}
@@ -5588,7 +5588,7 @@ country_event = {
 						add_idea = HUN_bled_agreement_wuw
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
 					}
@@ -5769,10 +5769,10 @@ country_event = {
 				factor = 10
 			}
 		}
-		IF = { limit = { has_global_flag = HUN_FRA_engaged} 
+		if = { limit = { has_global_flag = HUN_FRA_engaged} 
 			FRA = { country_event = { id = DOD_hungary.147 days = 1} }
 		}
-		IF = { limit = { NOT = { has_global_flag = HUN_FRA_engaged } }
+		if = { limit = { NOT = { has_global_flag = HUN_FRA_engaged } }
 			ROM = { country_event = { id = DOD_hungary.147 days = 1} }
 		}
 
@@ -5859,70 +5859,70 @@ country_event = {
 
 		add_threat = 5
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "Gotterdammerung"
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				remove_ideas = HUN_treaty_of_triannon_aat
 			}
-			ELSE = {
+			else = {
 				remove_ideas = HUN_treaty_of_triannon
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_wuw
 				}
 				remove_ideas = HUN_treaty_of_triannon_wuw
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_aat_wuw
 				}
 				remove_ideas = HUN_treaty_of_triannon_aat_wuw
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 				}
 				remove_ideas = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 				}
 				remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
 				}
 				remove_ideas = HUN_treaty_of_triannon_wuw_no_air_debuff
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 				}
 				remove_ideas = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
 				}
 				remove_ideas = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
 				}

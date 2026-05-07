@@ -1987,7 +1987,7 @@ characters={
 			}
 			on_add = {
 				owner = {
-					IF = {
+					if = {
 						limit = {
 							has_power_balance = {
 								id = ETH_centralization_balance

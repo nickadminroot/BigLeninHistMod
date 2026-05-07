@@ -1021,7 +1021,7 @@ country_event = {
 				CHI = { add_to_faction = PREV }
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				XIC = { 
 					has_completed_focus = XIC_invite_chiang_for_troop_inspections
@@ -1329,12 +1329,12 @@ country_event = {
 			type = annex_everything
 			target = event_target:CHI_xian_instigator
 		}
-		IF = {
+		if = {
 			limit = { 
 				has_dlc = "No Compromise, No Surrender"
 			}
 			retire_character = CHI_chiang_kaishek
-			IF = {
+			if = {
 				limit = {
 					CHI_wang_jingwei = {
 						is_country_leader = no
@@ -1499,7 +1499,7 @@ country_event = {
 				CHI = { add_to_faction = PREV }
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				XIC = { 
 					has_completed_focus = XIC_invite_chiang_for_troop_inspections
