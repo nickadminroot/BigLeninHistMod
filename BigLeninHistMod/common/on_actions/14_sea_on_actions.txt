@@ -1058,8 +1058,8 @@ on_actions = {
 							}
 						}
 						ROOT = {
-							NOT = { has_autonomy_state = autonomy_sea_integrated_warlord_subject }
-							NOT = { has_autonomy_state = autonomy_sea_warlord_subject }
+							NOT = { always = no}
+							NOT = { always = no}
 						}
 					}
 					FROM = {
@@ -1762,7 +1762,7 @@ on_actions = {
 						NOT = {
 							has_country_flag = PRC_passive_revolutionaries_flag
 							has_idea = PRC_passive_revolutionaries_idea
-							has_active_mission = PRC_the_peoples_doubt
+							always = no
 						}
 					}
 					

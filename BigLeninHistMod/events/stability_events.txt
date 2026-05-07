@@ -129,10 +129,7 @@ country_event = {
 					factor = 0
 					original_tag = DEN
 					OR = {
-						power_balance_value = {
-							id = DEN_balance_of_power
-							value < -0.59 
-						}
+						always = no
 						always = no
 					}
 				}

@@ -1092,7 +1092,7 @@ on_actions = {
 							original_tag = FIN 
 						}
 						NOT = {
-							has_autonomy_state = autonomy_aat_defense_council_member
+							always = no
 						}
 					}
 				}

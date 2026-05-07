@@ -21031,7 +21031,7 @@ GER_volkskommissariats_cat = {
 
 		target_trigger = {
 			FROM = {
-				has_autonomy_state = autonomy_volkskommissariat
+				always = no
 			}
 		}
 
@@ -21105,7 +21105,7 @@ GER_volkskommissariats_cat = {
 
 		target_trigger = {
 			FROM = {
-				has_autonomy_state = autonomy_volkskommissariat
+				always = no
 			}
 		}
 

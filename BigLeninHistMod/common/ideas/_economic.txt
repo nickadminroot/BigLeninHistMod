@@ -194,9 +194,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -326,9 +326,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_3
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -506,9 +506,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_4
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -704,9 +704,9 @@ ideas = {
 					}
 					NOT = {
 						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}

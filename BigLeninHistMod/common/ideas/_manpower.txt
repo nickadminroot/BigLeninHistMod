@@ -348,7 +348,7 @@ ideas = {
 					if = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
-							has_autonomy_state = autonomy_aat_defense_council_member
+							always = no
 							is_subject_of = SWE
 						}
 					}

@@ -15682,7 +15682,7 @@ war_measures = {
 				tooltip = CHI_holding_state_mission_trigger
 				CHI = {
 					NOT = {
-						has_active_mission = CHI_holding_state_mission
+						always = no
 					}
 				}
 			}
