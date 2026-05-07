@@ -14944,4 +14944,234 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_diplomatic_pressure_on_potential_allies
+		icon = GFX_goal_generic_political_pressure
+		x = -4
+		y = 2
+		relative_position_id = GER_loyalty_to_the_fuhrer
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			HUN = {
+				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
+			}
+			ROM = {
+				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
+			}
+			BUL = {
+				add_timed_idea = { idea = GER_fascist_pressure_minor days = 720 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_develop_hungarian_bauxite_deposits
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
+		x = -2
+		y = 1
+		relative_position_id = GER_diplomatic_pressure_on_potential_allies
+		cost = 2
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			HUN = {
+				43 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_resource = {
+						type = aluminium
+						amount = 20
+					}
+				}
+				155 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_resource = {
+						type = aluminium
+						amount = 20
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_expand_oil_extraction_in_ploesti
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
+		x = 0
+		y = 1
+		relative_position_id = GER_diplomatic_pressure_on_potential_allies
+		cost = 2
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			ROM = {
+				46 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+					add_resource = {
+						type = oil
+						amount = 15
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = GER_expand_oil_extraction_in_ploesti
+				bonus = 1
+				uses = 2
+				category = oil_processing
+			}
+		}
+	}
+
+	focus = {
+		id = GER_sofia_initiative
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
+		x = 2
+		y = 1
+		relative_position_id = GER_diplomatic_pressure_on_potential_allies
+		cost = 2
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			BUL = {
+				48 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 8
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_consolidate_management_of_minor_powers
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = GER_develop_hungarian_bauxite_deposits }
+		x = 0
+		y = 1
+		relative_position_id = GER_develop_hungarian_bauxite_deposits
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			GER = {
+				if = {
+					limit = {
+						NOT = {
+							HUN = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = HUN
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							ROM = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = ROM
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							BUL = {
+								is_subject = yes
+							}
+						}
+					}
+					set_autonomy = {
+						target = BUL
+						autonomy_state = autonomy_reichsprotectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+
+			HUN = {
+				set_cosmetic_tag = HUN_GER
+				add_ideas = GER_united_industry
+			}
+			ROM = {
+				set_cosmetic_tag = ROM_GER
+				add_ideas = GER_united_industry
+			}
+			BUL = {
+				set_cosmetic_tag = BUL_GER
+				add_ideas = GER_united_industry
+			}
+			GER = {
+				add_ideas = GER_united_industry
+			}
+
+			unlock_decision_category_tooltip = GER_united_industry_dec_cat
+		}
+	}
 }

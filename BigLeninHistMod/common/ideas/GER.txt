@@ -101,11 +101,114 @@ ideas = {
 			}
 
 			picture = generic_rocket_bonus
-	
+
 			modifier = {
 				production_speed_rocket_site_factor = 0.15
 			}
-	
+
+		}
+
+		GER_fascist_pressure_minor = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fascism_drift_bonus
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.2
+			}
+		}
+
+		GER_united_industry = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		GER_united_industry_military_exercises_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
+		GER_united_industry_radio_exchange_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_radio_concern
+			removal_cost = -1
+
+			modifier = {
+				coordination_bonus = 0.03
+			}
+		}
+
+		GER_united_industry_vienna_research_center_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		GER_united_industry_distributed_aircraft_industry_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_air_bonus
+			removal_cost = -1
+
+			modifier = {
+				aircraft_manufacturer_cost_factor = -0.05
+			}
 		}
 
 		rhineland_challenge_met = {
