@@ -1480,3 +1480,111 @@ check_allow_alternate_political_events = {
 		#
 	}
 }
+
+is_literally_china = {
+	OR = {
+		tag = CHI
+		tag = PRC
+		original_tag = CHI
+	}
+}
+
+is_independent_china_or_warlord = {
+	is_literally_china = yes
+	is_subject = no
+}
+
+WTT_not_china_leader_refused_to_give_up_national_leadership = {
+	has_country_flag = WTT_not_china_leader_refused_to_give_up_national_leadership
+}
+
+WTT_not_taking_over_national_leadership = {
+	has_country_flag = WTT_not_taking_over_national_leadership
+}
+
+has_soviet_tribute = {
+	has_country_flag = WTT_support_from_soviet
+}
+
+WTT_is_ROOT_current_leader_of_china = {
+	tag = event_target:WTT_current_china_leader
+}
+
+WTT_ROOT_is_not_current_leader_of_china = {
+	NOT = {
+		WTT_is_ROOT_current_leader_of_china = yes
+	}
+}
+
+WTT_should_show_state_decision = {
+	has_country_flag = wtt_political_struggle
+}
+
+WTT_show_build_support_decisions = {
+	has_country_flag = wtt_political_struggle
+}
+
+WTT_can_ROOT_select_state_support_decision_state = {
+	is_controlled_by = ROOT
+}
+
+WTT_can_select_state_remove_support_state = {
+	is_controlled_by = ROOT
+}
+
+controls_all_ethiopian_core_states = {
+	always = yes
+}
+
+is_state_japan_wants = {
+	always = yes
+}
+
+NOR_prep_his_mod_remove_trigger = {
+	always = yes
+}
+
+NOR_prep_fasc_mod_remove_trigger = {
+	always = yes
+}
+
+is_current_communist_china = {
+	is_literally_china = yes
+	has_government = communism
+}
+
+WTT_is_active_political_struggle_state = {
+	always = yes
+}
+
+ETH_is_horn_of_africa_original_tag = {
+	OR = {
+		original_tag = ETH
+		original_tag = SOM
+		original_tag = ERI
+	}
+}
+
+TUR_is_friend_for_bosphorus = {
+	always = yes
+}
+
+TUR_is_friend_for_dardanelles = {
+	always = yes
+}
+
+DEN_historical_ai = {
+	always = yes
+}
+
+DEN_rearming_ai = {
+	always = yes
+}
+
+DEN_royal_ai = {
+	always = yes
+}
+
+DEN_fascist_ai = {
+	always = yes
+}

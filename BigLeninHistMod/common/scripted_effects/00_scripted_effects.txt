@@ -4569,3 +4569,254 @@ apply_africa_control_modifiers = {
 		}
 	}
 }
+
+PHI_cobalt_sea_achievement = {
+	hidden_effect = {
+	}
+}
+
+PRC_soviet_tribute_level_up = {
+	add_to_variable = { PRC_soviet_tribute_level = 1 }
+}
+
+SMB_purchase_dreadnoughts_tt_gen = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_jap_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_usa_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_sov_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_ger_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_ita_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_eng_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+SMB_naval_fra_advisors_effect = {
+	hidden_effect = {
+	}
+}
+
+VEN_blockade_countries = {
+	add_to_array = {
+		array = global.ven_blockade_countries
+		value = ROOT
+	}
+}
+
+WTT_political_struggle_remove_current_country = {
+	clr_country_flag = wtt_political_struggle
+}
+
+WTT_random_support_chance_increase_for_ROOT_in_state = {
+	add_to_variable = { state_political_support_value = 1 }
+}
+
+WTT_recalculate_state_support_for_ROOT = {
+	hidden_effect = {
+	}
+}
+
+WTT_fire_add_support_status_events = {
+	hidden_effect = {
+	}
+}
+
+WTT_political_struggle_recalculate_support = {
+	hidden_effect = {
+	}
+}
+
+WTT_remove_opposition_state_support = {
+	hidden_effect = {
+	}
+}
+
+WTT_fire_remove_support_status_events = {
+	hidden_effect = {
+	}
+}
+
+POL_basic_form_commonwealth = {
+	hidden_effect = {
+		set_global_flag = form_commonwealth_flag
+	}
+}
+
+GRE_set_appropriate_cosmetic_tag = {
+	hidden_effect = {
+	}
+}
+
+TUR_set_appropriate_cosmetic_tag = {
+	hidden_effect = {
+	}
+}
+
+CZE_show_current_skoda_prioty_idea_stats_no_focus = {
+	hidden_effect = {
+	}
+}
+
+CZE_show_current_skoda_prioty_idea_stats_infantry_focus = {
+	hidden_effect = {
+	}
+}
+
+CZE_show_current_skoda_prioty_idea_stats_tank_focus = {
+	hidden_effect = {
+	}
+}
+
+CZE_show_current_skoda_prioty_idea_stats_plane_focus = {
+	hidden_effect = {
+	}
+}
+
+CZE_show_current_skoda_prioty_idea_stats_naval_focus = {
+	hidden_effect = {
+	}
+}
+
+CZE_update_skoda_tier = {
+	hidden_effect = {
+	}
+}
+
+play_peace_in_our_time_effect = {
+	hidden_effect = {
+	}
+}
+
+ETH_add_random_mil_factory_effect = {
+	hidden_effect = {
+	}
+}
+
+ETH_deescalate_the_war_effect = {
+	hidden_effect = {
+	}
+}
+
+
+DEN_available_candidates = {
+	hidden_effect = {
+	}
+}
+
+DEN_ruling_party_loses_popularity = {
+	hidden_effect = {
+	}
+}
+
+DEN_warhawk_is_removed_from_power = {
+	hidden_effect = {
+	}
+}
+
+DEN_socialdemokratiet_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_venstre_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_dove_is_removed_from_power = {
+	hidden_effect = {
+	}
+}
+
+DEN_konservative_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_limited_manpower = {
+	hidden_effect = {
+	}
+}
+
+SWE_is_denmark_mostly_occupied = {
+	hidden_effect = {
+	}
+}
+
+DEN_freedom_council_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_independence_war_effects = {
+	hidden_effect = {
+	}
+}
+
+DEN_drop_occupation_tag = {
+	hidden_effect = {
+	}
+}
+
+DEN_restore_manpower = {
+	hidden_effect = {
+	}
+}
+
+DEN_activate_bought_ships = {
+	hidden_effect = {
+	}
+}
+
+DEN_modify_overlord_relations_small = {
+	hidden_effect = {
+	}
+}
+
+DEN_modify_overlord_relations_big = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_low_decrease_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_very_low_increase_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_very_low_decrease_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_weapon_delivery_effect = {
+	hidden_effect = {
+	}
+}

@@ -11181,33 +11181,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 					end_civil_wars = no
 				}
 
-				IF = {
-					limit = {
-						PHI = {
-							NOT = {
-								has_country_leader = {
-									ruling_only = yes
-									character = PHI_jose_laurel
-								}	
-							}
-						}
-					}
-				    PHI = {  
-			            PHI_jose_laurel = {
-			                set_nationality = PSR
-			                # Transfers to breakaway
-			            }
-		        	}
-				}
-				ELSE = {
-				    PHI = {  
-			            PHI_artemio_ricarte = {
-			                set_nationality = PSR
-			                # Transfers to breakaway
-			            }
-		        	}
-				}
-
 				PSR = {
 					country_event = {
 						id = SEA_japan_foreign_policy.135

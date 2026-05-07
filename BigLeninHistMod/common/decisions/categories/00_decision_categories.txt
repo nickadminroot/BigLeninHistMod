@@ -616,6 +616,90 @@ generic_purchase_old_ships_category = {
 	visible_when_empty = no
 }
 
+ETH_second_italo_ethiopian_war_category = {
+	icon = GFX_decision_category_generic_civil_support
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 21
+}
+
+ETH_italian_occupation_category = {
+	icon = GFX_decision_category_generic_civil_support
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 20
+}
+
+improving_our_army_category = {
+	icon = GFX_decision_generic_tank
+	allowed = {
+		OR = {
+			original_tag = URG
+			original_tag = PAR
+			original_tag = BOL
+			original_tag = BRA
+			original_tag = ARG
+			original_tag = CHL
+		}
+	}
+	priority = 10
+}
+
+south_american_naval_arms_race_category = {
+	icon = GFX_decision_category_MTG_naval_treaties
+	allowed = {
+		OR = {
+			original_tag = URG
+			original_tag = PAR
+			original_tag = BOL
+			original_tag = BRA
+			original_tag = ARG
+			original_tag = CHL
+		}
+	}
+	priority = 8
+}
+
+JUNO_promote_immigration_cat = {
+	icon = generic_political_actions
+	allowed = {
+		OR = {
+			original_tag = ITA
+			original_tag = JAP
+			original_tag = POR
+			original_tag = GER
+			original_tag = SPR
+			original_tag = ENG
+			original_tag = FRA
+		}
+	}
+	priority = 6
+}
+
+CHI_border_clashes = {
+	icon = border_war
+	allowed = {
+		OR = {
+			original_tag = CHI
+			original_tag = PRC
+		}
+	}
+	priority = 50
+}
+
+CHI_political_power_struggle = {
+	icon = generic_nationalism
+	allowed = {
+		OR = {
+			original_tag = CHI
+			original_tag = PRC
+		}
+	}
+	priority = 49
+}
+
 generic_refit_civilian_ships_category = {
 	icon = GFX_decision_category_MTG_naval_treaties
 	picture = GFX_decision_cat_picture_generic_shipbuilding

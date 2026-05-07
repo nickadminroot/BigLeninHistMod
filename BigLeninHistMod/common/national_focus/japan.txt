@@ -6566,8 +6566,6 @@ focus_tree = {
 					}
 				}
 				MEN = {
-					MEN_jodbajab = { set_nationality = ROOT }
-					MEN_li_shouxin = { set_nationality = ROOT }
 				}
 			}
 

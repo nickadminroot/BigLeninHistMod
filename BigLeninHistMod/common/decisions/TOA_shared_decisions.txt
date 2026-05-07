@@ -54,12 +54,6 @@ political_actions = {
 		}
 		visible = {
 			has_completed_focus = PAR_put_estigarribia_on_a_pedestal
-			NOT = { 
-				has_country_leader = {
-					ruling_only = yes # default = yes
-					character = PAR_Jose_Felix_Estigarribia # recommended<bool>
-				}
-			}
 		}
 		cost = 75
 		complete_effect = {
@@ -76,16 +70,6 @@ political_actions = {
 				last_election = "1936.03.12"
 			}
 			retire_country_leader = yes
-			PAR_Jose_Felix_Estigarribia = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = 1950.1.1
-						traits = { SWI_militaristic_nationalist } 
-					}
-				}
-			}
 		}
 	}
 }
