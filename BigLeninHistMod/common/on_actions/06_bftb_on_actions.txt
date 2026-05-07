@@ -65,7 +65,6 @@ on_actions = {
 				}
 				TUR = { 
 					remove_ideas = TUR_the_antalya_naval_academy
-					ITA_ferdinando_umberto_filippo_adalberto = { set_nationality = ITA }
 				} 
 			}
 			if = {
@@ -95,35 +94,6 @@ on_actions = {
 			}
 		}
 
-		effect = { #Check for Turkish state modifiers for non-Turkish occupiers
-			if = {
-				limit = {
-					FROM = { original_tag = TUR }
-					ROOT = { NOT = { tag = TUR } }
-					FROM.FROM = { 
-						TUR_has_turkish_state_modifier = yes 
-					}
-				}
-				FROM.FROM = { 
-					TUR_remove_state_modifier_effect = yes
-				}
-			}
-		}
-		effect = { #Check for lost Turkish state modifiers
-			if = {
-				limit = {
-					FROM.FROM = { 
-						AND = { 
-							is_owned_and_controlled_by = TUR
-							TUR_has_former_turkish_state_modifier = yes
-						}
-					}
-				}
-				FROM.FROM = {
-					TUR_restore_dynamic_modifiers_effect = yes
-				}
-			}		
-		}
 		effect = { #Check for Macedonian state modifiers
 			if = {
 				limit = {
