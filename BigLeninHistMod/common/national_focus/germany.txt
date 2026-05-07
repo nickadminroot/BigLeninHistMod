@@ -4085,7 +4085,7 @@ focus_tree = {
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = GER_wunderwaffe }
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = GER_wunderwaffe
 		cost = 10
 		available = {
@@ -6157,8 +6157,8 @@ focus_tree = {
 		icon = GFX_focus_GER_amerikabomber
 		prerequisite = { focus = GER_wunderwaffe }
 
-		x = 4
-		y = 1
+		x = -4
+		y = 2
 		relative_position_id = GER_wunderwaffe
 		cost = 10
 
@@ -12257,7 +12257,7 @@ focus_tree = {
 		prerequisite = { focus = GER_wunderwaffe }
 
 		x = 2
-		y = 1
+		y = 2
 		relative_position_id = GER_wunderwaffe
 		cost = 10
 
@@ -12376,7 +12376,7 @@ focus_tree = {
 		prerequisite = { focus = GER_wunderwaffe }
 
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_wunderwaffe
 		cost = 10
 

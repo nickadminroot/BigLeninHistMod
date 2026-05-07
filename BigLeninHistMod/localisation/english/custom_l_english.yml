@@ -10,6 +10,8 @@
  ENG_iraq_under_control_desc:0 "Control of Iraq provides access to additional oil resources, increasing fuel production."
 STRATEGICREGION_299:0 "Western Egypt"
 STRATEGICREGION_300:0 "Southern Egypt"
+GER_wunderwaffe_branch_lock_flag:0 "WunderWaffe Branch Lock"
+GER_wunderwaffe_e50_unification_ready_flag:0 "E-50 Unification Ready"
  GER_wunderwaffe:0 "Start WunderWaffe Development"
  GER_wunderwaffe_desc:0 "Germany needs a decisive breakthrough. A separate research directorate is tasked with the most advanced weapons projects the Reich can fund."
  GER_wunderwaffe_me262:0 "Me-262"

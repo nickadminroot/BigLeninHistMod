@@ -10,6 +10,8 @@
  ENG_iraq_under_control_desc:0 "Контроль над Ираком обеспечивает доступ к дополнительным нефтяным ресурсам, увеличивая производство топлива."
 STRATEGICREGION_299:0 "Западный Египет"
 STRATEGICREGION_300:0 "Южный Египет"
+GER_wunderwaffe_branch_lock_flag:0 "Блокировка ветки WunderWaffe"
+GER_wunderwaffe_e50_unification_ready_flag:0 "Готовность унификации E-50"
  GER_wunderwaffe:0 "Начать разработку WunderWaffe"
  GER_wunderwaffe_desc:0 "Германии нужен решающий прорыв. Отдельное исследовательское подразделение займется самыми передовыми оружейными проектами Рейха."
  GER_wunderwaffe_me262:0 "Me-262"
