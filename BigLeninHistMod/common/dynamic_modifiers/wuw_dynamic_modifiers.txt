@@ -746,6 +746,7 @@ GER_airforce_modifier = { #Airforce NS
 	air_strategic_bomber_bombing_factor = GER_military_air_strategic_bomber_bombing_factor
 	air_range_factor = GER_military_air_range_factor
 	air_fuel_consumption_factor = GER_military_air_fuel_consumption_factor
+	air_weather_penalty = GER_military_air_weather_penalty
 }
 
 GER_airforce_communist_modifier = { #Communnist Airforce NS
@@ -1833,4 +1834,9 @@ sp_land_stronghold_network_collapse_workers_drafted = {
 	repair_speed_rail_way_factor = -0.5
 	local_resources_factor = -0.5
 	state_production_speed_buildings_factor = -0.5
+}
+
+BLHM_GER_last_effort_modifier = {
+	icon = GFX_modifiers_GER_socialist_movement
+	stability_weekly = BLHM_GER_last_effort_stability_weekly
 }

@@ -21195,6 +21195,77 @@ GER_volkskommissariats_cat = {
 	}
 }
 
+BLHM_GER_last_effort_cat = {
+	BLHM_GER_mobilize_volkssturm = {
+		icon = GFX_decision_generic_political_address
+		days_re_enable = 60
+
+		available = {
+			has_country_flag = GER_unlock_last_effort_volkssturm
+			has_war = yes
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_variable = BLHM_GER_last_effort_stability_weekly }
+				}
+				set_variable = { BLHM_GER_last_effort_stability_weekly = -0.001 }
+				add_dynamic_modifier = { modifier = BLHM_GER_last_effort_modifier }
+			}
+			else = {
+				add_to_variable = { BLHM_GER_last_effort_stability_weekly = -0.001 }
+			}
+
+			division_template = {
+				name = "Volkssturm Division"
+				division_names_group = GER_INF_01
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+				}
+			}
+
+			capital_scope = {
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+				create_unit = { division = "division_template = \"Volkssturm Division\" start_experience_factor = 0.05 start_equipment_factor = 0.25" owner = ROOT }
+			}
+		}
+	}
+}
+
 GER_spreading_the_red_flame_cat = {
 	GER_communist_propaganda_decision = {
 

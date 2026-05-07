@@ -636,3 +636,18 @@ GER_mediterranean_operations_cat = {
 		NOT = { has_country_flag = BLHM_GER_plan_scorpion_completed }
 	}
 }
+
+BLHM_GER_last_effort_cat = {
+	priority = 8
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		has_country_flag = GER_unlock_last_effort_volkssturm
+	}
+}

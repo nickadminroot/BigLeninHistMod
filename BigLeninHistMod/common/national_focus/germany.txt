@@ -3518,9 +3518,24 @@ focus_tree = {
 			}
 
 			GER_modify_army_modifier = yes
-			add_to_variable = { 
+			add_to_variable = {
 				GER_military_acclimatization_hot_climate_gain_factor = 0.1
 				tooltip = acclimatization_hot_climate_gain_factor_tt
+			}
+			add_to_variable = {
+				GER_military_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				GER_military_army_speed_factor = 0.07
+				tooltip = army_speed_factor_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			set_technology = {
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3892,7 +3907,6 @@ focus_tree = {
 	focus = {
 		id = GER_improve_the_logistics_system
 		icon = GFX_focus_generic_reinforcing_the_supply_network
-		mutually_exclusive = { focus = GER_defend_the_vaterland }
 		prerequisite = { focus = GER_panzergrenadier }
 
 		x = -1
@@ -3922,7 +3936,6 @@ focus_tree = {
 	focus = {
 		id = GER_defend_the_vaterland
 		icon = GFX_goal_generic_defence
-		mutually_exclusive = { focus = GER_improve_the_logistics_system }
 		prerequisite = { focus = GER_panzergrenadier }
 
 		x = 1
@@ -4083,10 +4096,10 @@ focus_tree = {
 	focus = {
 		id = GER_uranverein
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = GER_wunderwaffe }
-		x = -2
-		y = 2
-		relative_position_id = GER_wunderwaffe
+		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
+		x = -1
+		y = 1
+		relative_position_id = BLHM_GER_wunderwaffe_program
 		cost = 10
 		available = {
 			date > "1942.9.1"
@@ -4321,7 +4334,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_adopt_new_panzer_doctrine
-		cost = 10
+		cost = 5
 		available = {
 			has_tech = radio
 		}
@@ -4472,7 +4485,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_panzer_troops_school
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -5303,18 +5316,27 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = GER_dive_bombers
-		cost = 5
+		cost = 10
 		available = {
+			has_war_with = ENG
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_aerodynamic_research_institute
-				bonus = 0.5
-				uses = 1
-				category = rocketry
+			set_technology = {
+				experimental_rockets = 1
+				sp_rockets_rocket_bomber = 1
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					NOT = { is_special_project_completed = sp:sp_rockets_flying_bomb }
+				}
+				complete_special_project = {
+					project = sp_rockets_flying_bomb
+				}
 			}
 
 			add_breakthrough_progress = {
@@ -5359,34 +5381,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = GER_marinestosstrupp }
-					}
-					add_potential_special_forces_tree = yes
-				}
-				add_doctrine_cost_reduction = {
-					name = GER_fallschirmjager
-					cost_reduction = 0.25
-					uses = 2
-					category = cat_paratroopers_doctrine
-				}
-			}
 			add_tech_bonus = {
 				name = GER_fallschirmjager
 				bonus = 1
 				uses = 1
 				category = para_tech
 			}
+			add_tech_bonus = {
+				name = GER_fallschirmjager
+				ahead_reduction = 2
+				uses = 1
+				category = para_tech
+			}
+			set_technology = {
+				paratroopers = 1
+				paratroopers2 = 1
+			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_modify_army_modifier = yes
-			add_to_variable = { 
+			add_to_variable = {
 				GER_military_special_forces_cap = 0.05
 				tooltip = special_forces_cap_tt
 			}
@@ -5523,7 +5538,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -5551,9 +5566,13 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_modify_airforce_modifier = yes
-			add_to_variable = { 
+			add_to_variable = {
 				GER_military_air_manpower_requirement_factor = -0.1
 				tooltip = air_manpower_requirement_factor_tt
+			}
+			add_to_variable = {
+				GER_military_air_weather_penalty = -0.1
+				tooltip = air_weather_penalty_tt
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6155,11 +6174,11 @@ focus_tree = {
 	focus = {
 		id = GER_amerikabomber
 		icon = GFX_focus_GER_amerikabomber
-		prerequisite = { focus = GER_wunderwaffe }
+		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
-		x = -4
-		y = 2
-		relative_position_id = GER_wunderwaffe
+		x = 3
+		y = 1
+		relative_position_id = BLHM_GER_wunderwaffe_program
 		cost = 10
 
 		available = {
@@ -12588,17 +12607,43 @@ focus_tree = {
 				tooltip = production_speed_facility_factor_tt
 			}
 			add_ideas = GER_wunderwaffe_development_idea
+			set_country_flag = GER_unlock_last_effort_volkssturm
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_wunderwaffe_program
+		icon = GFX_focus_GER_wunderwaffe_inner_circle
+		prerequisite = { focus = GER_expand_kummersdorfs_capacity }
+		prerequisite = { focus = GER_rocketry_innovations }
+
+		x = 2
+		y = 2
+		relative_position_id = GER_expand_kummersdorfs_capacity
+		cost = 2
+		available = {
+			has_completed_focus = GER_wunderwaffe
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = {
+				GER_wunderwaffen_special_project_speed_factor = 0.05
+				tooltip = special_project_speed_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = GER_wunderwaffe_me262
 		icon = GFX_focus_generic_jet_planes
-		prerequisite = { focus = GER_wunderwaffe }
+		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
-		x = 2
-		y = 2
-		relative_position_id = GER_wunderwaffe
+		x = 1
+		y = 1
+		relative_position_id = BLHM_GER_wunderwaffe_program
 		cost = 10
 
 		available = {
@@ -12668,11 +12713,11 @@ focus_tree = {
 	focus = {
 		id = GER_wunderwaffe_rotte
 		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = GER_wunderwaffe_me262 }
+		prerequisite = { focus = GER_wunderwaffe_maus }
 
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = GER_wunderwaffe_me262
+		relative_position_id = GER_wunderwaffe_maus
 		cost = 10
 
 		available = {
@@ -12713,11 +12758,11 @@ focus_tree = {
 	focus = {
 		id = GER_wunderwaffe_maus
 		icon = GFX_focus_generic_heavy_tank
-		prerequisite = { focus = GER_wunderwaffe }
+		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = 0
 		y = 2
-		relative_position_id = GER_wunderwaffe
+		relative_position_id = BLHM_GER_wunderwaffe_program
 		cost = 10
 
 		available = {
@@ -12779,7 +12824,7 @@ focus_tree = {
 		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = GER_wunderwaffe_maus }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_wunderwaffe_maus
 		cost = 10
