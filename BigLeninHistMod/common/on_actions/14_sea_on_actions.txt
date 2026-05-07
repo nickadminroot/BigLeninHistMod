@@ -1821,7 +1821,6 @@ on_actions = {
 				ROOT = {
 					division_template = {
 						name = "Mínbīng" # Represents militia units
-						division_names_group = PRC_MIL_02
 						template_counter = 118
 
 						regiments = {
@@ -1960,7 +1959,6 @@ on_actions = {
 					FROM = { 
 						division_template = {
 							name = "Mínbīng" # Represents militia units
-							division_names_group = PRC_MIL_02
 							template_counter = 118
 
 							regiments = {
@@ -3842,83 +3840,11 @@ on_actions = {
     			}
 
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = XSM_ma_hongkui
-    					}
-    				}
-    				ROOT = {
-    					XSM_ma_hongkui = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = XSM_ma_buqing
-    					}
-    				}
-    				ROOT = {
-    					XSM_ma_buqing = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = XSM_ma_bufang
-    					}
-    				}
-    				ROOT = {
-    					XSM_ma_bufang = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = KUM_yulbars_khan
-    					}
-    				}
-    				ROOT = {
-    					KUM_yulbars_khan = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = KHM_ma_hushan
-    					}
-    				}
-    				ROOT = {
-    					KHM_ma_hushan = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = KHM_ma_zhancang
-    					}
-    				}
-    				ROOT = {
-    					KHM_ma_zhancang = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
     			if = {
     				limit = {
@@ -3933,135 +3859,15 @@ on_actions = {
     				}
     			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = SIC_yang_sen
-    					}
-    				}
-    				ROOT = {
-    					SIC_yang_sen = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = SIC_liu_wenhui
-    					}
-    				}
-    				ROOT = {
-    					SIC_liu_wenhui = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = YUN_lu_han
-    					}
-    				}
-    				ROOT = {
-    					YUN_lu_han = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = YUN_hu_ruoyu
-    					}
-    				}
-    				ROOT = {
-    					YUN_hu_ruoyu = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = GXC_li_zongren
-    					}
-    				}
-    				ROOT = {
-    					GXC_li_zongren = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = GXC_bai_chongxi
-    					}
-    				}
-    				ROOT = {
-    					GXC_bai_chongxi = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = GXC_chen_jitang
-    					}
-    				}
-    				ROOT = {
-    					GXC_chen_jitang = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = GND_yu_hanmou
-    					}
-    				}
-    				ROOT = {
-    					GND_yu_hanmou = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = MEN_jodbajab
-    					}
-    				}
-    				ROOT = {
-    					MEN_jodbajab = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = MEN_altanochir
-    					}
-    				}
-    				ROOT = {
-    					MEN_altanochir = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
     		}
 

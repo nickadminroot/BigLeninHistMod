@@ -131,3 +131,51 @@ MEX_INF_03 = {
 		30 = { "%da Brigada Roja" }
 	}
 }
+
+SPAN_INF_01 = {
+	name = "Mexican Infantry"
+
+	for_countries = { MEX }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%da Division de Infanteria"
+
+	ordered = {
+		1 = { "%da Division de Infanteria" }
+		2 = { "%da Division de Infanteria" }
+		3 = { "%da Division de Infanteria" }
+		4 = { "%da Division de Infanteria" }
+		5 = { "%da Division de Infanteria" }
+		6 = { "%da Division de Infanteria" }
+		7 = { "%da Division de Infanteria" }
+		8 = { "%da Division de Infanteria" }
+		9 = { "%da Division de Infanteria" }
+		10 = { "%da Division de Infanteria" }
+		11 = { "%da Division de Infanteria" }
+		12 = { "%da Division de Infanteria" }
+	}
+}
+
+SPAN_CAV_01 = {
+	name = "Mexican Cavalry"
+
+	for_countries = { MEX }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	fallback_name = "%da Division de Caballeria"
+
+	ordered = {
+		1 = { "%da Division de Caballeria" }
+		2 = { "%da Division de Caballeria" }
+		3 = { "%da Division de Caballeria" }
+		4 = { "%da Division de Caballeria" }
+		5 = { "%da Division de Caballeria" }
+		6 = { "%da Division de Caballeria" }
+	}
+}
