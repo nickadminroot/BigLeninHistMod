@@ -190,7 +190,7 @@ country_event = {
 	trigger = {
 		tag = event_target:WTT_current_china_leader
 		any_other_country = {
-			has_completed_focus = PRC_infiltration
+			always = no
 			has_government = communism
 		}
 	}
@@ -525,7 +525,7 @@ country_event = {
 			}
 		}
 		any_other_country = {
-			has_completed_focus = PRC_anti_japanese_expedition
+			always = no
 			has_government = communism
 			not = { is_in_faction_with = ROOT }
 		}		
@@ -899,7 +899,7 @@ country_event = {
 			}
 			modifier = {
 				PRC = {
-					has_completed_focus = PRC_social_democracy_focus
+					always = no
 				}
 				factor = 2 #Commies being nice to us
 			}
@@ -917,7 +917,7 @@ country_event = {
 			base = 75
 			modifier = {
 				PRC = {
-					has_completed_focus = PRC_focus_on_china #commies being mean to us!
+					always = no #commies being mean to us!
 				}
 				factor = 2
 			}
@@ -961,7 +961,7 @@ country_event = {
 				}
 				OR = {
 					PRC = {
-						has_completed_focus = PRC_the_unwilling_diarchy_focus
+						always = no
 						focus_progress = {
 							focus = PRC_the_unwilling_diarchy_focus
 							progress > 0
@@ -1024,7 +1024,7 @@ country_event = {
 		if = {
 			limit = {
 				XIC = { 
-					has_completed_focus = XIC_invite_chiang_for_troop_inspections
+					always = no
 				}
 			}
 			XIC = { 
@@ -1219,7 +1219,7 @@ country_event = {
 				}
 				OR = {
 					PRC = {
-						has_completed_focus = PRC_the_unwilling_diarchy_focus
+						always = no
 						focus_progress = {
 							focus = PRC_the_unwilling_diarchy_focus
 							progress > 0
@@ -1255,7 +1255,7 @@ country_event = {
 		name = wtt_xian_incident.7.e #no deals with anyone
 		trigger = { ## Only available for Unwilling Diarchy
 			PRC = {
-				has_completed_focus = PRC_the_unwilling_diarchy_focus
+				always = no
 				focus_progress = {
 					focus = PRC_the_unwilling_diarchy_focus
 					progress > 0
@@ -1358,7 +1358,7 @@ country_event = {
 			base = 70
 		}
 		trigger = {
-			NOT = { has_completed_focus = CHI_avoid_another_crisis }
+			NOT = { always = no }
 		}
 		PRC = { country_event = wtt_xian_incident.7 }
 	}
@@ -1502,7 +1502,7 @@ country_event = {
 		if = {
 			limit = {
 				XIC = { 
-					has_completed_focus = XIC_invite_chiang_for_troop_inspections
+					always = no
 				}
 			}
 			XIC = { 
@@ -1773,7 +1773,7 @@ country_event = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				PHI = {
-					has_completed_focus = PHI_appoint_macarthur
+					always = no
 				}
 			}
 		}
@@ -1806,7 +1806,7 @@ country_event = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				PHI = {
-					has_completed_focus = PHI_bring_in_eisenhower
+					always = no
 				}
 			}
 		}

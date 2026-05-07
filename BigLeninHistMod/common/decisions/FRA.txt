@@ -9,7 +9,7 @@ FRA_civil_unrest_category = {
 				has_stability > 0.25	
 				communism < 0.01
 				has_government = communism
-				has_completed_focus = FRA_form_the_popular_front
+				always = no
 				custom_trigger_tooltip = {
 					tooltip = french_communist_civil_war_intervention_tt 
 					AND = {
@@ -45,7 +45,7 @@ FRA_civil_unrest_category = {
 					}
 				}
 			}
-			not = { has_completed_focus = FRA_form_the_popular_front }
+			not = { always = no }
 			not = { has_global_flag = flag_french_communist_civil_war }
 		}
 
@@ -73,7 +73,7 @@ FRA_civil_unrest_category = {
 			OR = {
 				has_stability > 0.25	
 				has_government = fascism
-				has_completed_focus = FRA_destroy_the_counter_revolution
+				always = no
 				custom_trigger_tooltip = {
 					tooltip = french_communist_civil_war_intervention_tt 
 					AND = {
@@ -108,8 +108,8 @@ FRA_civil_unrest_category = {
 					}
 				}
 			}
-			has_completed_focus = FRA_form_the_popular_front
-			NOT = { has_completed_focus = FRA_destroy_the_counter_revolution }
+			always = no
+			NOT = { always = no }
 			not = { has_global_flag = flag_french_fascist_civil_war }
 		}
 
@@ -659,7 +659,7 @@ FRA_weapons_purchases_category = {
 		visible = {
 			OR = {
 				original_tag = FRA
-				has_completed_focus = PHI_aircraft_requisition
+				always = no
 			}
 			USA_can_sell_weapons_trigger = yes
 		}
@@ -727,7 +727,7 @@ FRA_weapons_purchases_category = {
 		visible = {
 			OR = {
 				original_tag = FRA
-				has_completed_focus = PHI_aircraft_requisition
+				always = no
 			}
 			USA_can_sell_weapons_trigger = yes
 		}
@@ -1326,7 +1326,7 @@ economy_decisions = {
 	FRA_reorganize_aviation_industry_north = {
 		available = {  }
 
-		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+		visible = { always = no }
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAN_formed
@@ -1381,7 +1381,7 @@ economy_decisions = {
 	FRA_reorganize_aviation_industry_west = {
 		available = {  }
 
-		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+		visible = { always = no }
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAO_formed
@@ -1434,7 +1434,7 @@ economy_decisions = {
 	FRA_reorganize_aviation_industry_center = {
 		available = {  }
 
-		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+		visible = { always = no }
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAC_formed
@@ -1483,7 +1483,7 @@ economy_decisions = {
 	FRA_reorganize_aviation_industry_south_east = {
 		available = {  }
 
-		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+		visible = { always = no }
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCASE_formed
@@ -1538,7 +1538,7 @@ economy_decisions = {
 	FRA_reorganize_aviation_industry_south_west = {
 		available = {  }
 
-		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+		visible = { always = no }
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCASO_formed
@@ -1594,7 +1594,7 @@ political_actions = {
 		available = { }
 
 		visible = { 
-			has_completed_focus = FRA_utilize_the_leagues 
+			always = no 
 			NOT = { has_government = fascism }
 		}
 
@@ -1623,7 +1623,7 @@ political_actions = {
 		available = { }
 
 		visible = { 
-			has_completed_focus = FRA_utilize_the_leagues 
+			always = no 
 			NOT = { has_government = fascism }
 		}
 		days_re_enable = 30

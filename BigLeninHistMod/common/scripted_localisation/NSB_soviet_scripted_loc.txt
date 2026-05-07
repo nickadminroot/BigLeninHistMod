@@ -1115,10 +1115,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_completed_focus = SOV_the_centre
-				has_completed_focus = SOV_the_left_opposition
+				always = no
 				AND = {
-					has_completed_focus = SOV_the_right_opposition
-					NOT = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+					always = no
+					NOT = { always = no }
 				}
 			}
 			NOT = { has_global_flag = spanish_civil_war }
@@ -1129,10 +1129,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_completed_focus = SOV_the_centre
-				has_completed_focus = SOV_the_left_opposition
+				always = no
 				AND = {
-					has_completed_focus = SOV_the_right_opposition
-					NOT = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+					always = no
+					NOT = { always = no }
 				}
 			}
 			has_global_flag = spanish_civil_war
@@ -1141,14 +1141,14 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_covert_support_for_spanish_poum
+			always = no
 			NOT = { has_global_flag = SPR_anarchist_uprising_flag }
 		}
 		localization_key = SOV_spanish_supported_faction_poum_pre
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_covert_support_for_spanish_poum
+			always = no
 			has_global_flag = SPR_anarchist_uprising_flag
 		}
 		localization_key = SOV_spanish_supported_faction_poum_post
@@ -1169,10 +1169,10 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				has_completed_focus = SOV_the_left_opposition
+				always = no
 				AND = {
-					has_completed_focus = SOV_the_right_opposition
-					NOT = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+					always = no
+					NOT = { always = no }
 				}
 			}
 		}
@@ -1180,7 +1180,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_covert_support_for_spanish_poum
+			always = no
 		}
 		localization_key = SOV_spanish_general_rovira
 	}
@@ -1207,21 +1207,21 @@ defined_text = {
 	name = GetAppropriateSupportedChineseFaction
 	text = {
 		trigger = {
-			has_completed_focus = SOV_the_gobi_gambit
+			always = no
 			country_exists = SIK
 		}
 		localization_key = SOV_intervention_in_china_sik
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_two_red_flags
+			always = no
 			country_exists = PRC
 		}
 		localization_key = SOV_intervention_in_china_prc
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_support_the_kuomintang
+			always = no
 			country_exists = CHI
 		}
 		localization_key = SOV_intervention_in_china_chi
@@ -2206,13 +2206,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_left_opposition_coup
+			always = no
 		}
 		localization_key = SOV_the_molotov_line_name_left
 	}
 	text = {
 		trigger = {
-			has_completed_focus = SOV_coup_detat
+			always = no
 		}
 		localization_key = SOV_the_molotov_line_name_right
 	}

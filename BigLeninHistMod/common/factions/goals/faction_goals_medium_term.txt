@@ -628,7 +628,7 @@ faction_goal_the_northern_mandate = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_the_northern_mandate }
+		FROM = { always = no }
 	}
 	ratio_progress = {
 		total_amount_collection = collection:the_northern_mandate_states
@@ -672,7 +672,7 @@ faction_goal_the_southern_mandate = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_the_southern_mandate }
+		FROM = { always = no }
 	}
 	ratio_progress = {
 		total_amount_collection = collection:the_southern_mandate_states
@@ -716,7 +716,7 @@ faction_goal_the_greater_game = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_the_greater_game }
+		FROM = { always = no }
 	}
 	ratio_progress = {
 		total_amount_collection = collection:the_greater_game_states
@@ -761,7 +761,7 @@ faction_goal_subjugate_the_faction = {
 	available = {
 		FROM = {
 			is_faction_leader = yes
-			has_completed_focus = CHI_from_many_to_one
+			always = no
 		}
 	}
 	completed = {
@@ -1069,8 +1069,8 @@ faction_goal_the_two_seas = {
 		modifier = {
 			add = 10
 			OR = {
-				has_completed_focus = POL_the_between_the_seas_concept
-				has_completed_focus = POL_sea_to_sea
+				always = no
+				always = no
 			}
 		}
 	}

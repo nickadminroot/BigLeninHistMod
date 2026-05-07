@@ -1520,14 +1520,14 @@ ideas = {
 			}
 
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 			on_remove = {
 				if = {
 					limit = {
 						NOT = {
 							has_idea = idea_RAJ_bose_hiding_afghanistan
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+							always = no
 						}
 					}
 					add_timed_idea = {
@@ -1697,7 +1697,7 @@ ideas = {
 					limit = {
 						NOT = {
 							has_idea = idea_RAJ_bose_hiding_ussr
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+							always = no
 						}
 					}
 					add_timed_idea = {
@@ -1720,7 +1720,7 @@ ideas = {
 			}
 
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 			on_add = {
 
@@ -1738,7 +1738,7 @@ ideas = {
 					limit = {
 						NOT = {
 							has_idea = idea_RAJ_bose_hiding_ger
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+							always = no
 						}
 					}
 					add_timed_idea = {
@@ -2151,14 +2151,14 @@ ideas = {
 			}
 
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 			on_remove = {
 				if = {
 					limit = {
 						NOT = {
 							has_idea = idea_RAJ_bose_submarine
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom 
+							always = no 
 
 						}
 					}
@@ -2198,7 +2198,7 @@ ideas = {
 				
 			}
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 
 			on_remove = {
@@ -2206,7 +2206,7 @@ ideas = {
 					limit = {
 						NOT = {
 							has_idea = idea_RAJ_bose_jap
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom 
+							always = no 
 						}
 					}
 					add_ideas = idea_RAJ_bose_jap
@@ -2231,7 +2231,7 @@ ideas = {
 			}
 
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 			on_add = {
 
@@ -2245,7 +2245,7 @@ ideas = {
 			}
 
 			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+				always = no
 			}
 
 			removal_cost = -1
@@ -3465,7 +3465,7 @@ ideas = {
 				original_tag = RAJ
 			}
 			available = {
-				has_completed_focus = RAJ_azad_hind_dlc_bank
+				always = no
 			}
 			visible = {
 				

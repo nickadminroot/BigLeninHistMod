@@ -1646,7 +1646,7 @@ country_event = { #Denmark Declares Independence
 			modifier = {
 				factor = 2
 				FROM = {
-					has_completed_focus = DEN_seek_independence
+					always = no
 				}
 			}
 		}
@@ -1674,7 +1674,7 @@ country_event = { #Denmark Declares Independence
 			modifier = {
 				factor = 5
 				FROM = {
-					has_completed_focus = DEN_pledge_allegiance
+					always = no
 				}
 			}
 			modifier = {
@@ -1762,7 +1762,7 @@ country_event = { #Danish Liberation War
 		
 		if = {
 			limit = {
-				has_completed_focus = DEN_form_the_danish_freedom_council
+				always = no
 			}
 			DEN_freedom_council_takes_over = yes
 		}
@@ -1834,7 +1834,7 @@ country_event = { #Denmark becomes independent peacefully
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = DEN_pledge_allegiance
+					always = no
 				}
 			}
 			if = {
@@ -2171,7 +2171,7 @@ country_event = { #Denmark is rejected
 		name = denmark_occupation_event.102.a
 		if = {
 			limit = {
-				has_completed_focus = DEN_pledge_allegiance
+				always = no
 			}
 			complete_national_focus = DEN_sanction_sabotages
 		}
@@ -3173,8 +3173,8 @@ country_event = { #The King rides
 		original_tag = DEN
 		is_subject = yes
 		OR = {
-			has_completed_focus = DEN_seek_independence
-			has_completed_focus = DEN_sanction_sabotages
+			always = no
+			always = no
 		}
 		NOT = { has_country_flag = DEN_exiled_royal_family }
 		has_character = DEN_christian_x
@@ -3761,7 +3761,7 @@ country_event = { #Denmark: Choose new country leader
 		}
 		if = {
 			limit = {
-				has_completed_focus = DEN_king_assumes_power
+				always = no
 			}
 			promote_character = DEN_knud_bach
 			set_party_name = {
@@ -4577,7 +4577,7 @@ country_event = { #Overlord: Denmark refuses to change government form
 				}
 				if = {
 					limit = {
-						has_completed_focus = DEN_king_assumes_power
+						always = no
 					}
 					promote_character = DEN_knud_bach
 					set_party_name = {
@@ -4679,7 +4679,7 @@ country_event = { #Denmark: Overlord tries to install its own government form
 			}
 			if = {
 				limit = {
-					has_completed_focus = DEN_king_assumes_power
+					always = no
 				}
 				promote_character = DEN_knud_bach
 				set_party_name = {
@@ -7686,14 +7686,14 @@ country_event = { #Denmark Demands Iceland's Annexation
 				FROM = {
 					has_government = neutrality
 				}
-				has_completed_focus = ICE_the_kingdom_of_iceland
+				always = no
 			}
 			modifier = {
 				factor = 5
 				FROM = {
 					has_government = neutrality
 				}
-				has_completed_focus = ICE_united_we_stand
+				always = no
 			}
 			modifier = {
 				factor = 0.5
@@ -7753,7 +7753,7 @@ country_event = { #Denmark Demands Iceland's Annexation
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ICE_not_our_king
+				always = no
 			}
 		}
 		ROOT = { end_puppet = FROM }
@@ -9943,7 +9943,7 @@ country_event = { #Denmark joins the Axis
 
 		if = {  #Having bypassed "Ask for Support" and not able to complete "Joint Military Program", send event
 			limit = {
-				NOT = { has_completed_focus = DEN_ask_for_support }
+				NOT = { always = no }
 			}
 			GER = {
 				country_event = { id =  denmark_fascist_event.20 days = 7 } 
@@ -10190,9 +10190,9 @@ country_event = { #Forts makes the people feels safe
 
 	trigger = {
 		original_tag = DEN
-		has_completed_focus = DEN_build_a_modern_dannevirke
-		has_completed_focus = DEN_refortify_tunestillingen
-		has_completed_focus = DEN_fortify_the_islands
+		always = no
+		always = no
+		always = no
 		has_war = no
 		has_civil_war = no
 	}

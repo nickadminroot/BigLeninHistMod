@@ -47,8 +47,8 @@ technology_sharing_group = {
 			OR = {
 				BEL = { 
 					OR = {
-						has_completed_focus = BEL_european_community 
-						has_completed_focus = BEL_the_council_of_europe
+						always = no 
+						always = no
 					}
 				}
 

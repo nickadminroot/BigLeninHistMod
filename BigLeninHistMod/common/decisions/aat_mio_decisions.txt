@@ -34,7 +34,7 @@ foreign_mio_decisions_category = {
 			}
 			else_if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -217,7 +217,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -368,7 +368,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -812,7 +812,7 @@ foreign_mio_decisions_category = {
 			}
 			else_if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1013,7 +1013,7 @@ foreign_mio_decisions_category = {
 			}
 			else_if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1115,7 +1115,7 @@ foreign_mio_decisions_category = {
 			}
 			else_if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1216,7 +1216,7 @@ foreign_mio_decisions_category = {
 			}
 			else_if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1594,7 +1594,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1653,7 +1653,7 @@ foreign_mio_decisions_category = {
 
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1713,7 +1713,7 @@ foreign_mio_decisions_category = {
 
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1773,7 +1773,7 @@ foreign_mio_decisions_category = {
 
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1833,7 +1833,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1892,7 +1892,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -1950,7 +1950,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2010,7 +2010,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2068,7 +2068,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2127,7 +2127,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2187,7 +2187,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2246,7 +2246,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 
@@ -2304,7 +2304,7 @@ foreign_mio_decisions_category = {
 			}
 			if = {
 				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
+				always = no
 			}
 			else = {
 				always = no 

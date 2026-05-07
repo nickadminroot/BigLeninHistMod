@@ -33,7 +33,7 @@ USA_marmon_herrington_organization = {
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_marmon_herrington_mio_flag
 				}
 			}
@@ -97,7 +97,7 @@ USA_chrysler_organization = {
 				FROM = { tag = NOR }
 			}
 			FROM = { 
-				has_completed_focus = NOR_invite_transnational_manufacturers
+				always = no
 			}
 		}
 	}
@@ -615,7 +615,7 @@ USA_newport_news_shipbuilding_organization = {
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_newport_news_shipbuilding_mio_flag
 				}
 			}
@@ -692,7 +692,7 @@ USA_north_american_aviation_organization = {
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_invited_north_american_aviation_mio_flag
 				}
 			}
@@ -1268,7 +1268,7 @@ USA_ford_motor_company_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_ford_motors
+				always = no
 			}
 		}
 		if = {
@@ -1278,7 +1278,7 @@ USA_ford_motor_company_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BRA_expand_fordlandia
+				always = no
 			}
 		}
 		else_if = {
@@ -1386,7 +1386,7 @@ USA_ford_motor_company_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = PHI_coastal_artillery
+				always = no
 			}
 		}
 

@@ -158,7 +158,7 @@ characters={
 						NOT = {
 							OR = {
 								has_government = communism
-								has_completed_focus = PER_islamic_revolution
+								always = no
 							}
 						}
 					}
@@ -321,14 +321,14 @@ characters={
 
 			visible = {
 				NOT = {
-					has_completed_focus = PER_the_pahlavi_imperium
-					has_completed_focus = PER_united_progressive_parties
-					has_completed_focus = PER_rally_behind_mosaddegh
+					always = no
+					always = no
+					always = no
 				}
 			}
 
 			available = {
-				has_completed_focus = PER_form_sumka
+				always = no
 			}
 
 			traits = {
@@ -362,7 +362,7 @@ characters={
 			}
 
 			available = {
-				has_completed_focus = PER_national_museum
+				always = no
 			}
 
 			traits = {
@@ -392,7 +392,7 @@ characters={
 			}
 
 			available = {
-				has_completed_focus = PER_women_vote
+				always = no
 				NOT = { has_government = fascism }
 			}
 
@@ -423,7 +423,7 @@ characters={
 			}
 
 			available = {
-				has_completed_focus = PER_women_vote
+				always = no
 				NOT = { has_government = fascism }
 			}
 
@@ -485,7 +485,7 @@ characters={
 			}
 
 			available = {
-				NOT = { has_completed_focus = PER_islamic_restoration }
+				NOT = { always = no }
 			}
 
 			traits = {
@@ -512,13 +512,13 @@ characters={
 
 			visible = {
 				NOT = {
-					has_completed_focus = PER_trial_fifty_three
+					always = no
 				}
 			}
 
 			available = {
 				NOT = {
-					has_completed_focus = PER_trial_fifty_three
+					always = no
 				}
 			}
 
@@ -750,7 +750,7 @@ characters={
 			}
 
 			available = {
-				NOT = { has_completed_focus = PER_islamic_restoration }
+				NOT = { always = no }
 			}
 
 			traits = {
@@ -843,7 +843,7 @@ characters={
 			}
 
 			available = {
-				has_completed_focus = PER_promise_clergy_power
+				always = no
 			}
 
 			traits = {
@@ -933,7 +933,7 @@ characters={
 			}
 
 			visible = {
-				has_completed_focus = PER_strengthen_the_tudeh
+				always = no
 			}
 
 			available = {
@@ -964,7 +964,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_completed_focus = PER_rally_the_reformers }
+				NOT = { always = no }
 			}
 
 			available = {
@@ -1326,7 +1326,7 @@ characters={
 			logistics_skill = 1
 			legacy_id=-1
 			visible = {
-				has_completed_focus = PER_united_progressive_parties
+				always = no
 				has_government = communism
 			}
 		}
@@ -1338,7 +1338,7 @@ characters={
 				original_tag = PER
 			}
 			available = {
-				has_completed_focus = PER_united_progressive_parties
+				always = no
 				has_government = communism
 			}
 			traits = {
@@ -1367,7 +1367,7 @@ characters={
 			logistics_skill = 2
 			legacy_id=-1
 			visible = {
-				has_completed_focus = PER_united_progressive_parties
+				always = no
 				has_government = communism
 			}
 		}
@@ -1481,7 +1481,7 @@ characters={
 
 			visible = {
 				owner = {
-					has_completed_focus = PER_royal_college_funding
+					always = no
 				}
 			}
 		}
@@ -1503,7 +1503,7 @@ characters={
 
 			visible = {
 				owner = {
-					has_completed_focus = PER_increase_faculty_staffing_budget
+					always = no
 				}
 			}
 		}

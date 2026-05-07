@@ -4137,7 +4137,7 @@ country_event = { #Germany makes us a volkskommissariat
 		if = {
 			limit = {
 				FROM = {
-					has_completed_focus = GER_instill_german_discipline
+					always = no
 				}
 
 				NOT = {
@@ -4151,7 +4151,7 @@ country_event = { #Germany makes us a volkskommissariat
 		if = {
 			limit = {
 				FROM = {
-					has_completed_focus = GER_integrate_subjects_economies
+					always = no
 				}
 
 				NOT = {
@@ -4186,7 +4186,7 @@ country_event = { #Germany wants us to be more communist, and might be plotting 
 		if = {
 			limit = {
 				FROM = {
-					has_completed_focus = GER_legacy_of_the_spartacus_league
+					always = no
 				}
 			}
 			custom_effect_tooltip = wuw_GER_diplomacy.72.a_tt
@@ -4287,7 +4287,7 @@ country_event = { #The Civil War broke out
 			if = {
 				limit = {
 					GER = {
-						has_completed_focus = GER_the_proletarian_legion
+						always = no
 						NOT = {
 							has_idea = GER_proletarian_legion_ns
 						}
@@ -4343,7 +4343,7 @@ country_event = { #The Civil War broke out
 			if = {
 				limit = {
 					GER = {
-						has_completed_focus = GER_the_proletarian_legion
+						always = no
 						NOT = {
 							has_idea = GER_proletarian_legion_ns
 						}
@@ -4492,7 +4492,7 @@ country_event = { #Germany insists Austria hold a referendum to join them
 				factor = 2
 				has_government = communism
 				FROM = {
-					has_completed_focus = GER_proletarian_dictatorship
+					always = no
 				}
 			}
 			modifier = {
@@ -4506,7 +4506,7 @@ country_event = { #Germany insists Austria hold a referendum to join them
 				factor = 3
 				has_government = democratic
 				FROM = {
-					has_completed_focus = GER_legacy_of_the_spartacus_league
+					always = no
 				}
 			}
 		}
@@ -9888,7 +9888,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -9997,7 +9997,7 @@ country_event = {
 				POL = {
 					NOT = {
 						AND = {
-							has_completed_focus = POL_restore_bermontians
+							always = no
 							exists = yes
 						}
 					}
@@ -10101,7 +10101,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -10182,7 +10182,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -10778,8 +10778,8 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
-								has_completed_focus = wuw_HUN_elect_a_fascist_king
+								always = no
+								always = no
 							}
 							exists = no
 						}
@@ -10817,8 +10817,8 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
-								has_completed_focus = wuw_HUN_elect_a_fascist_king
+								always = no
+								always = no
 							}
 							exists = no
 						}
@@ -10927,8 +10927,8 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
-								has_completed_focus = wuw_HUN_elect_a_fascist_king
+								always = no
+								always = no
 							}
 							exists = no
 						}
@@ -12045,7 +12045,7 @@ country_event = {
 						OR = {
 							exists = no
 							NOT = {
-								has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+								always = no
 							}
 						}
 					}
@@ -12106,7 +12106,7 @@ country_event = {
 						OR = {
 							exists = no
 							NOT = {
-								has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+								always = no
 							}
 						}
 					}
@@ -12220,7 +12220,7 @@ country_event = {
 						OR = {
 							exists = no
 							NOT = {
-								has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+								always = no
 							}
 						}
 					}
@@ -13003,7 +13003,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -13061,7 +13061,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -13172,7 +13172,7 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
+								always = no
 								exists = yes
 							}
 						}
@@ -13746,7 +13746,7 @@ country_event = { #Communist civil war starts
 			}
 			if = {
 				limit = {
-					NOT = { has_completed_focus = GER_reorganize_nationale_volksarmee }
+					NOT = { always = no }
 				}
 				PREV = {# Original country
 					GER_maximilian_von_weichs = { # Character
@@ -13779,7 +13779,7 @@ country_event = { #Communist civil war starts
 
 		if = { #Just to ensure that Communist generals stay Communist
 			limit = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 			GER_vincenz_muller = {
 				set_nationality = ROOT
@@ -13797,7 +13797,7 @@ country_event = { #Communist civil war starts
 
 		if = {
 			limit = {
-				has_completed_focus = GER_ressurect_the_red_front_fighters_league
+				always = no
 			}
 			every_core_state = {
 				limit = {
@@ -13960,7 +13960,7 @@ country_event = {
 		}
 		trigger = {
 			NOT = {
-				has_completed_focus = GER_start_the_proletarian_revolution
+				always = no
 			}
 		}
 		
@@ -15812,7 +15812,7 @@ country_event = {
 		if = {
 			limit = {
 				FROM = {
-					has_completed_focus = GER_secure_finland
+					always = no
 				}
 				ROOT = {
 					original_tag = FIN
@@ -15865,7 +15865,7 @@ country_event = { # FROM rejects our faction invitation - event for GER
 		if = {
 			limit = {
 				ROOT = {
-					has_completed_focus = GER_secure_finland
+					always = no
 				}
 				FROM = {
 					original_tag = FIN
@@ -18120,7 +18120,7 @@ country_event = {
 
 			ROOT = {
 				if = {
-					limit = { ROOT = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
+					limit = { ROOT = { always = no } }
 
 
 					AUS_wilhelm_gebauer = {
@@ -18223,7 +18223,7 @@ country_event = {
 		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 
 		if = {
-			limit = { AUS = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
+			limit = { AUS = { always = no } }
 
 			AUS = {
 				AUS_wilhelm_gebauer = {
@@ -18653,7 +18653,7 @@ country_event = {
 				limit = {
 					NOT = { 
 						OR = {
-							has_completed_focus = AUS_reinstate_the_imperial_council
+							always = no
 							has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
 						}
 					}
@@ -18672,7 +18672,7 @@ country_event = {
 				limit = {
 					has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
 					NOT = {
-						has_completed_focus = AUS_reinstate_the_imperial_council
+						always = no
 					}
 				}
 
@@ -18705,7 +18705,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = AUS_legacy_of_the_empire
+							always = no
 						}
 					}
 					if = {
@@ -20606,7 +20606,7 @@ country_event = {
 			ruling_only = yes
 			character = GER_august_von_mackensen
 		}
-		has_completed_focus = GER_oppose_hitler_ww
+		always = no
 		has_civil_war = no
 		NOT = {
 			OR = {

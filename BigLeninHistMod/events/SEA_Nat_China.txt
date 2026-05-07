@@ -31,7 +31,7 @@ country_event = {
 			modifier = {
 				factor = 15
 				FROM = {
-					has_completed_focus = CHI_utilize_the_albazinian_contact
+					always = no
 				}
 			}
 		}
@@ -584,10 +584,10 @@ country_event = { # Event for Chiang get's killed
 	picture = GFX_report_event_generic_rally
 	trigger = {
 		OR = {
-			has_completed_focus = CHI_prepare_for_a_change_in_leadership
-			has_completed_focus = CHI_strengthening_our_resolve
+			always = no
+			always = no
 			AND = {
-				has_completed_focus = CHI_denounce_feudalism
+				always = no
 				has_global_flag = early_united_front 	
 			}
 		}
@@ -610,7 +610,7 @@ country_event = { # Event for Chiang get's killed
 				has_country_flag = CHI_chiang_died_during_liangguang_incident_flag
 				OR = {
 					fascism > 0.3
-					has_completed_focus = CHI_reform_the_blue_shirts
+					always = no
 				}
 			}
 			create_wargoal = {
@@ -768,7 +768,7 @@ country_event = { # to FROM, China wants to remove 9 power treaty
 		if = {
 			limit = {
 				FROM = {
-					has_completed_focus = CHI_invoke_the_nine_powers
+					always = no
 					has_war_with = JAP 
 				}
 				ROOT = {
@@ -1577,22 +1577,22 @@ country_event = { # Event for pressing warlords to become subject
 		ai_chance = {
 			base = 1
 			modifier = {
-				has_completed_focus = CHI_opposition
+				always = no
 				add = 2
 			}
 
 			modifier = {
-				has_completed_focus = CHI_proclaim_rival_government
+				always = no
 				add = 4
 			}
 
 			modifier = {
-				has_completed_focus = CHI_cooperation_with_the_communists
+				always = no
 				add = 1
 			}
 
 			modifier = {
-				has_completed_focus = CHI_join_the_chinese_soviet
+				always = no
 				add = 2.5
 			}
 		}
@@ -1612,12 +1612,12 @@ country_event = { # Event for pressing warlords to become subject
 				factor = 0
 			}
 			modifier = {
-				has_completed_focus = CHI_cooperation_with_the_nationalists
+				always = no
 				add = 2
 			}
 
 			modifier = {
-				has_completed_focus = CHI_join_the_republican_government
+				always = no
 				add = 2
 			}
 
@@ -1736,7 +1736,7 @@ country_event = { # Warlord accepts event
 
 		if = {
 			limit = {
-				has_completed_focus = CHI_appoint_sympathetic_judges
+				always = no
 				FROM = { NOT = { has_idea = idea_CHI_sympathetic_judges } }
 			}
 			FROM = {
@@ -1746,7 +1746,7 @@ country_event = { # Warlord accepts event
 
 		if = {
 			limit = {
-				has_completed_focus = CHI_take_control_of_the_executive_yuan 
+				always = no 
 			}
 
 			every_subject_country = {
@@ -1897,7 +1897,7 @@ country_event = {
 	option = { # Chinese Action Committee 
 		name = SEA_china_democratic.1.a
 		trigger = {
-			has_completed_focus = CHI_revive_the_chinese_action_committee
+			always = no
 		}
 		ai_chance = {
 			base = 10
@@ -1908,7 +1908,7 @@ country_event = {
 				PRC = {
 					NOT = {
 						has_government = democratic
-						has_completed_focus = PRC_peaceful_reunification
+						always = no
 					}
 				}
 			}
@@ -1953,7 +1953,7 @@ country_event = {
 	option = { # Carsun Chang 
 		name = SEA_china_democratic.1.b
 		trigger = {
-			has_completed_focus = CHI_invite_carsun_chang
+			always = no
 		}
 		ai_chance = {
 			base = 10
@@ -1983,7 +1983,7 @@ country_event = {
 	option = { # Soong Ching Ling 
 		name = SEA_china_democratic.1.c
 		trigger = {
-			has_completed_focus = CHI_give_protection_of_civil_rights
+			always = no
 		}
 		ai_chance = {
 			base = 10
@@ -2018,7 +2018,7 @@ country_event = {
 	option = { # Zeng Qi (YCP)
 		name = SEA_china_democratic.1.d
 		trigger = {
-			has_completed_focus = CHI_ally_the_young_china_party
+			always = no
 		}
 		ai_chance = {
 			base = 10
@@ -2713,22 +2713,22 @@ country_event = { # Event for pressing warlords to become subject
 		ai_chance = {
 			base = 1
 			modifier = {
-				has_completed_focus = CHI_opposition
+				always = no
 				add = 2
 			}
 
 			modifier = {
-				has_completed_focus = CHI_proclaim_rival_government
+				always = no
 				add = 4
 			}
 
 			modifier = {
-				has_completed_focus = CHI_cooperation_with_the_communists
+				always = no
 				add = 1
 			}
 
 			modifier = {
-				has_completed_focus = CHI_join_the_chinese_soviet
+				always = no
 				add = 2.5
 			}
 		}
@@ -2766,12 +2766,12 @@ country_event = { # Event for pressing warlords to become subject
 			}
 
 			modifier = {
-				has_completed_focus = CHI_cooperation_with_the_nationalists
+				always = no
 				add = 2
 			}
 
 			modifier = {
-				has_completed_focus = CHI_join_the_republican_government
+				always = no
 				add = 2
 			}
 
@@ -2945,7 +2945,7 @@ country_event = { #China is losing against PRC
 	trigger = {
 		original_tag = CHI
 		is_subject = no
-		has_completed_focus = CHI_dang_guo
+		always = no
 		has_war_with = PRC
 		surrender_progress > 0.7
 		524 = { is_fully_controlled_by = ROOT}

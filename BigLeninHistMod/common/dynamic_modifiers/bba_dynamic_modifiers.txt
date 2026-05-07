@@ -1357,7 +1357,7 @@ ITA_mafia_on_the_rise_no_lar = {
 		ROOT = {
 			is_controlled_by = ITA
 			controller = {
-				has_completed_focus = ITA_cooperate_with_the_mafia
+				always = no
 			}
 		}
 	}
@@ -1375,7 +1375,7 @@ ITA_mafia_on_the_rise = {
 		ROOT = {
 			is_controlled_by = ITA
 			controller = {
-				has_completed_focus = ITA_cooperate_with_the_mafia
+				always = no
 			}
 		}
 	}

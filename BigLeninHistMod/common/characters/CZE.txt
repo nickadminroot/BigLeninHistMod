@@ -83,14 +83,14 @@
 					has_government = democratic
 					is_country_leader = no
 					NOT = {
-						has_completed_focus = CZE_topple_the_king
+						always = no
 					}
 				}
 				visible = {
 					is_country_leader = no
 					has_government = democratic
 					NOT = {
-						has_completed_focus = CZE_topple_the_king
+						always = no
 					}
 				}
 				traits  = {
@@ -213,12 +213,12 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_unify_the_fascist_parties
+				always = no
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CZE_petition_the_nobles
-					has_completed_focus = CZE_increase_funding_from_moscow
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -309,13 +309,13 @@
 				#has_completed_focus = CZE_align_nationalist_parties
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_align_slovak_catholics
-						has_completed_focus = CZE_coalition_building
+						always = no
+						always = no
 					}
 				}
 			}
 			available = {
-				has_completed_focus = CZE_align_nationalist_parties
+				always = no
 				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
@@ -361,7 +361,7 @@
 						limit = {
 							has_dlc = "Death or Dishonor"
 						}
-						has_completed_focus  = CZE_go_right 
+						always = no 
 					}
 					if  = {
 						limit = {
@@ -443,13 +443,13 @@
 					if = {
 						limit = {
 							NOT = {
-								has_completed_focus = CZE_contact_henlein
+								always = no
 							}
 						}
-						has_completed_focus = CZE_cooperate_with_the_sdp
+						always = no
 					}
 					else = {
-						has_completed_focus = CZE_contact_henlein
+						always = no
 					}
 				}
 				visible = {
@@ -488,7 +488,7 @@
 							has_dlc = "Peace For Our Time"
 						}
 					}
-					has_completed_focus  = CZE_go_left 
+					always = no 
 				}
 				# else_if = {	#replaced by more time-appropriate advisors
 				# 	limit = {
@@ -582,7 +582,7 @@
 					#CZE_SLO_is_not_its_own_thing = yes
 					NOT = {
 						OR = {
-							has_completed_focus = CZE_increase_funding_from_moscow
+							always = no
 							#has_completed_focus = CZE_align_nationalist_parties
 						}
 					}
@@ -611,8 +611,8 @@
 				logistics_skill=1
 				legacy_id=-1
 				visible = {
-					has_completed_focus = CZE_align_slovak_catholics
-					has_completed_focus = CZE_catholic_focus
+					always = no
+					always = no
 				}
 			}
 		}
@@ -915,7 +915,7 @@
 			available = {
 				has_government = democratic
 				NOT = {
-					has_completed_focus = CZE_topple_the_king
+					always = no
 				}
 			}
 			visible = {
@@ -1017,7 +1017,7 @@
 						limit  = {
 							has_dlc = "Death or Dishonor"
 						}
-						has_completed_focus = CZE_democratic_bastion 
+						always = no 
 					}
 					if  = {
 						limit  = {
@@ -1299,7 +1299,7 @@
 				NOT = {
 					OR = {
 						has_government = communism
-						has_completed_focus = CZE_force_the_industrialists_hand
+						always = no
 					}
 				}
 			}
@@ -1307,7 +1307,7 @@
 				NOT = {
 					OR = {
 						has_government = communism
-						has_completed_focus = CZE_force_the_industrialists_hand
+						always = no
 					}
 				}
 			}
@@ -1358,12 +1358,12 @@
 			}
 			available = {
 				has_government = democratic
-				has_completed_focus = CZE_coalition_building
+				always = no
 			}
 			visible = {
 				has_government = democratic
 				NOT = {
-					has_completed_focus = CZE_appeal_to_the_castle
+					always = no
 				}
 			}
 			traits = {
@@ -1391,16 +1391,16 @@
 			cost = 150
 			available = {
 				OR = {
-					has_completed_focus = CZE_appeal_to_the_castle
-					has_completed_focus = CZE_expand_prf_science_facilities
+					always = no
+					always = no
 				}
 				NOT = {
-					has_completed_focus = CZE_create_a_secret_police_branch
+					always = no
 				}
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CZE_create_a_secret_police_branch
+					always = no
 				}
 			}
 			on_add = {
@@ -1449,7 +1449,7 @@
 				#NOT = { 
 				#	has_government = communism
 				#}
-				has_completed_focus = CZE_devaluate_the_koruna
+				always = no
 			}
 			traits = {
 				CZE_minister_of_finance
@@ -1500,7 +1500,7 @@
 					original_tag = CZE
 				}
 				available = {
-					has_completed_focus = CZE_favor_czechs_1
+					always = no
 				}
 				traits = {
 					captain_of_industry 
@@ -1525,7 +1525,7 @@
 				}
 				available = {
 					is_subject = no
-					has_completed_focus = CZE_grow_ckd_secondary_facilities
+					always = no
 				}
 				research_bonus = {
 					industry = 0.15
@@ -1576,7 +1576,7 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_the_slovak_arrow
+				always = no
 			}
 			cost = 150
 			traits = {
@@ -1603,11 +1603,11 @@
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CZE_shrink_educational_disparities 
+					always = no 
 				}
 			}
 			available = {
-				has_completed_focus = CZE_expand_prf_science_facilities
+				always = no
 			}
 			traits = {
 				AUS_minister_of_education 
@@ -1629,10 +1629,10 @@
 				original_tag  = CZE
 			}
 			visible = {
-				has_completed_focus = CZE_shrink_educational_disparities 
+				always = no 
 			}
 			available = {
-				has_completed_focus = CZE_shrink_educational_disparities 
+				always = no 
 			}
 			traits = {
 				IRQ_minister_of_education
@@ -1655,16 +1655,16 @@
 			}
 			available = {
 				OR = {
-					has_completed_focus = CZE_reorient_the_broad_coalition
-					has_completed_focus = CZE_align_catholic_parties
+					always = no
+					always = no
 				}
 				
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_increase_funding_from_moscow
-						has_completed_focus = CZE_unify_the_fascist_parties
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1692,11 +1692,11 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_the_second_fortification_program
+				always = no
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CZE_redirect_the_fortification_councils_funds
+					always = no
 				}
 			}
 			traits = {
@@ -1772,7 +1772,7 @@
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				has_completed_focus = CZE_the_second_fortification_program
+				always = no
 			}
 		}
 	}
@@ -1797,15 +1797,15 @@
 					original_tag  = CZE
 				}
 				available = {
-					has_completed_focus = CZE_placate_benes_faction
+					always = no
 					has_government = democratic
 				}
 				visible = {
 					NOT = {
 						OR = {
-							has_completed_focus = CZE_appeal_to_the_castle
-							has_completed_focus = CZE_increase_funding_from_moscow
-							has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -1857,7 +1857,7 @@
 					original_tag = CZE
 				}
 				available = {
-					has_completed_focus = CZE_arms_exports_1
+					always = no
 				}
 				traits = {
 					war_industrialist 
@@ -1880,13 +1880,13 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_leverage_sokol
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_increase_funding_from_moscow
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1910,13 +1910,13 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_compromise_with_the_veteran_agrarian
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_increase_funding_from_moscow
-						has_completed_focus = CZE_petition_the_nobles
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1943,13 +1943,13 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_deepend_ties_with_the_trademans
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_petition_the_nobles
-						has_completed_focus = CZE_increase_funding_from_moscow
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1977,7 +1977,7 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_closer_ties_with_the_moderate_germany_parties
+				always = no
 				NOT = {
 					has_government = fascism
 				}
@@ -1985,9 +1985,9 @@
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_increase_funding_from_moscow
-						has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
+						always = no
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2020,14 +2020,14 @@
 				}
 				available = {
 					has_government = democratic
-					has_completed_focus = CZE_grow_the_anglo_czechoslovak_prague_credit_bank
+					always = no
 				}
 				visible = {
 					NOT = {
 						OR = {
-							has_completed_focus = CZE_appeal_to_the_castle
-							has_completed_focus = CZE_increase_funding_from_moscow
-							has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
+							always = no
+							always = no
+							always = no
 						}
 					}
 				}
@@ -2056,7 +2056,7 @@
 				}
 				available = {
 					has_government = democratic
-					has_completed_focus = CZE_trust_in_the_west
+					always = no
 				}
 				traits = {
 					financial_expert
@@ -2081,14 +2081,14 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_comprise_with_the_carpathians
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_placate_benes_faction
-						has_completed_focus = CZE_increase_funding_from_moscow
+						always = no
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2129,14 +2129,14 @@
 			}
 			#cost = 75
 			available = {
-				has_completed_focus = CZE_align_catholic_parties
+				always = no
 			}
 			visible = {
 				#has_completed_focus = CZE_align_catholic_parties
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_unify_the_fascist_parties
-						has_completed_focus = CZE_coalition_building
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2164,7 +2164,7 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_expand_the_communist_press
+				always = no
 				OR = {
 					has_government = democratic
 					has_government = communism
@@ -2173,9 +2173,9 @@
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_placate_benes_faction
-						has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
+						always = no
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2204,17 +2204,17 @@
 			available = {
 				has_government = communism
 				OR = {
-					has_completed_focus = CZE_gottwald_faction
-					has_completed_focus = CZE_kohler_faction
+					always = no
+					always = no
 				}
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_placate_benes_faction
-						has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-						has_completed_focus = CZE_zapotocky_faction
+						always = no
+						always = no
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2242,16 +2242,16 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_zapotocky_faction
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_appeal_to_the_castle
-						has_completed_focus = CZE_placate_benes_faction
-						has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-						has_completed_focus = CZE_gottwald_faction
-						has_completed_focus = CZE_kohler_faction
+						always = no
+						always = no
+						always = no
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2277,14 +2277,14 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_recruit_communist_exiles
+				always = no
 			}
 			visible = {
-				has_completed_focus = CZE_increase_funding_from_moscow
+				always = no
 				NOT = {
 					OR = {
-						has_completed_focus = CZE_gottwald_faction
-						has_completed_focus = CZE_zapotocky_faction
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2312,10 +2312,10 @@
 				original_tag  = CZE
 			}
 			available = {
-				has_completed_focus = CZE_fund_vladimir_mandl_research
+				always = no
 			}
 			visible = {
-				has_completed_focus = CZE_fund_vladimir_mandl_research
+				always = no
 			}
 			traits  = {
 				space_lawyer
@@ -2381,7 +2381,7 @@
 				}
 				available  = {
 					has_intelligence_agency  = yes 
-					has_completed_focus = CZE_department_two_expansion
+					always = no
 					NOT = {
 						has_idea = CZE_simon_drgac
 					}
@@ -2437,7 +2437,7 @@
 					original_tag  = CZE
 				}
 				available  = {
-					has_completed_focus = CZE_department_two_expansion
+					always = no
 				}
 				traits = {
 					bold_intelligence_officer_no_lar
@@ -2543,8 +2543,8 @@
 					NOT = {
 						has_dlc = "Peace For Our Time"
 					}
-					has_completed_focus = CZE_contact_the_czech_and_slovak_legion
-					has_completed_focus = CZE_fight_over_silesia
+					always = no
+					always = no
 				}
 			}
 		}
@@ -2571,7 +2571,7 @@
 					NOT = {
 						has_dlc = "Peace For Our Time"
 					}
-					has_completed_focus = CZE_recruit_ideologically_aligned_generals
+					always = no
 				}
 			}
 		}
@@ -2875,7 +2875,7 @@
 			logistics_skill=3
 			legacy_id=-1
 			visible = {
-				has_completed_focus = CZE_form_the_state_defense_guard
+				always = no
 			}
 		}
 	}
@@ -2897,7 +2897,7 @@
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				has_completed_focus = CZE_revert_1926_anti_military_laws #Also collaborationist
+				always = no #Also collaborationist
 			}
 		}
 		advisor={
@@ -2909,7 +2909,7 @@
 				original_tag = CZE
 			}
 			available = {
-				has_completed_focus = CZE_promote_moravec_writings
+				always = no
 			}
 			visible = {
 				has_dlc = "Peace For Our Time"
@@ -2964,7 +2964,7 @@
 				logistics_skill=1
 				legacy_id=-1
 				visible = {
-					has_completed_focus = CZE_elevate_slovak_officers
+					always = no
 					SLO = {
 						OR = {
 							exists = no
@@ -3068,7 +3068,7 @@
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				has_completed_focus = CZE_elevate_slovak_officers
+				always = no
 				SLO = {
 					OR = {
 						exists = no
@@ -3189,7 +3189,7 @@
 					limit = {
 						has_dlc = "Peace For Our Time"
 					}
-					has_completed_focus = CZE_trust_in_old_guard
+					always = no
 				}
 				if = {
 					limit = {
@@ -3197,7 +3197,7 @@
 							has_dlc = "Peace For Our Time"
 						}
 					}
-					has_completed_focus = CZE_air_is_our_sea
+					always = no
 				}
 			}
 			traits = {
@@ -3352,7 +3352,7 @@
 				original_tag = CZE
 			}
 			available = {
-				has_completed_focus = CZE_continue_armed_force_reform
+				always = no
 				has_government = democratic
 				is_subject = no
 				NOT = {
@@ -3409,7 +3409,7 @@
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				has_completed_focus = CZE_continue_armed_force_reform
+				always = no
 			}
 		}
 		advisor={
@@ -3419,7 +3419,7 @@
 				original_tag = CZE
 			}
 			available = {
-				has_completed_focus = CZE_continue_armed_force_reform
+				always = no
 			}
 			traits = {
 				army_chief_drill_2
@@ -3621,7 +3621,7 @@
 				logistics_skill=1
 				legacy_id=-1
 				visible = {
-					has_completed_focus = CZE_expand_the_river_monitor_fleet
+					always = no
 				}
 			}
 		}
@@ -3641,7 +3641,7 @@
 				original_tag = CZE
 			}
 			available = {
-				has_completed_focus = CZE_restart_naval_gun_production
+				always = no
 			}
 			traits = {
 				navy_chief_naval_gunnery_designer_2
@@ -3996,7 +3996,7 @@
 				original_tag = CZE
 			}
 			available = {
-				has_completed_focus = CZE_expand_the_aero_clubs
+				always = no
 			}
 			traits = {
 				air_chief_all_weather_2

@@ -122,7 +122,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = RAJ
-						has_completed_focus = RAJ_princely_autonomy
+						always = no
 					}
 
 					ROOT = {
@@ -137,7 +137,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = RAJ
-						has_completed_focus = RAJ_funnel_british_investments_into_princely_states
+						always = no
 					}
 
 					ROOT = {
@@ -164,9 +164,9 @@ on_actions = {
 					FROM = { original_tag = ENG }
 					NOT = {
 						OR = {
-							has_completed_focus = RAJ_red_in_the_shadows
-							has_completed_focus = RAJ_great_depression_price_controls
-							has_completed_focus = RAJ_forward_bloc
+							always = no
+							always = no
+							always = no
 							has_completed_focus = RAJ_his_majestys_loyal_government
 						}
 					}
@@ -254,12 +254,12 @@ on_actions = {
 					OR = {
 						FROM = { 
 							original_tag = RAJ
-							has_completed_focus = RAJ_jugantar 
+							always = no 
 						}
 
 						ROOT = { 
 							original_tag = RAJ
-							has_completed_focus = RAJ_jugantar 
+							always = no 
 						}
 					}
 
@@ -421,11 +421,11 @@ on_actions = {
 					OR = {
 						ROOT = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_revolt_of_the_princes
+							always = no
 						}
 						FROM = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_revolt_of_the_princes
+							always = no
 						}
 					}
 
@@ -953,7 +953,7 @@ on_actions = {
 			if = {
 				limit = {
 					THIS = { original_tag = RAJ }
-					THIS = { has_completed_focus = RAJ_war_taxes }
+					THIS = { always = no }
 				}
 				THIS = {
 					set_variable = {
@@ -1413,7 +1413,7 @@ on_actions = {
 					has_dlc = "Graveyard of Empires"
 					ROOT = {
 						original_tag = RAJ
-						has_completed_focus = RAJ_the_legacy_of_babur
+						always = no
 					}
 					FROM.FROM = {
 						NOT = {
@@ -1459,7 +1459,7 @@ on_actions = {
 			if = {
 				limit = {
 					ROOT = { 
-						has_completed_focus = RAJ_a_private_military 
+						always = no 
 						NOT = { 
 							is_in_array = {
 							 	array = pmc_recievers

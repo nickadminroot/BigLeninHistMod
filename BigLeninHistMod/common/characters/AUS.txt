@@ -116,7 +116,7 @@ characters = {
 			}
 
 			available = {
-				has_completed_focus = AUS_repeal_the_adelsaufhebungsgesetz
+				always = no
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
@@ -148,8 +148,8 @@ characters = {
 						has_government = neutrality
 					}
 					OR = {
-						has_completed_focus = AUS_heimwehr_support	
-						has_completed_focus = AUS_sturmscharen_support
+						always = no	
+						always = no
 					}
 					NOT = {
 						has_country_leader = {
@@ -565,13 +565,13 @@ characters = {
 			available = {
 				OR = {
 					has_government = fascism
-					has_completed_focus = AUS_pardon_political_exiles
+					always = no
 				}
 			}
 			visible = {
 				OR = {
 					has_government = fascism
-					has_completed_focus = AUS_pardon_political_exiles
+					always = no
 				}
 			}
 
@@ -609,11 +609,11 @@ characters = {
 				base = 1
 				modifier = {
 					factor = 10
-					has_completed_focus = AUS_reinstate_the_imperial_council
+					always = no
 				}
 				modifier = {
 					factor = 0
-					has_completed_focus = AUS_austromarxism_focus
+					always = no
 				}
 			}
 		}
@@ -691,15 +691,15 @@ characters = {
 			visible = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
+					always = no
 				}
 			}
 			available = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
+					always = no
 				}
 			}
 			
@@ -723,8 +723,8 @@ characters = {
 		navy_leader = {
 			visible = { 
 				OR = {
-					has_completed_focus = AUS_promote_admirals
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
+					always = no
 				}
 				NOT = {
 					original_tag = GER
@@ -757,15 +757,15 @@ characters = {
 			visible = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
+					always = no
 				}
 			}
 			available = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
+					always = no
 				}
 			}
 			traits = { 
@@ -798,12 +798,12 @@ characters = {
 					has_government = fascism
 				}
 				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
+					always = no
 				}
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
+					always = no
 				}
 			}
 
@@ -886,7 +886,7 @@ characters = {
 				AUS_ruthless_university_rector
 			}
 			available = {
-				has_completed_focus = AUS_recruiting_the_graduates
+				always = no
 				has_government = fascism
 			}
 
@@ -914,10 +914,10 @@ characters = {
 					has_government = democratic
 					has_government = communism
 				}
-				has_completed_focus = AUS_womens_education_initiative
+				always = no
 			}
 			visible = {
-				has_completed_focus = AUS_womens_education_initiative
+				always = no
 			}
 			traits = { 
 				ARG_socialist_feminist
@@ -946,7 +946,7 @@ characters = {
 				AUS_meticulous_lawyer
 			}
 			available = {
-				has_completed_focus = AUS_release_imprisoned_leaders
+				always = no
 			}
 
 			ai_will_do = {
@@ -974,12 +974,12 @@ characters = {
 			}
 			available = {
 				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
+					always = no
 				}
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
+					always = no
 				}
 			}
 			traits = { #this will be changed in an event
@@ -1006,10 +1006,10 @@ characters = {
 				original_tag = AUS
 			}
 			available = {
-				has_completed_focus = AUS_courting_the_princess_of_industry
+				always = no
 			}
 			visible = {
-				has_completed_focus = AUS_courting_the_princess_of_industry
+				always = no
 			}
 			traits = { 
 				AUS_resourceful_princess
@@ -1020,7 +1020,7 @@ characters = {
 				modifier = {
 					factor = 3
 					has_government = neutrality
-					has_completed_focus = AUS_reinstate_the_imperial_council
+					always = no
 				}
 			}
 		}
@@ -1041,10 +1041,10 @@ characters = {
 			}
 			available = {
 				has_government = communism
-				has_completed_focus = AUS_establish_rote_hilfe	
+				always = no	
 			}
 			visible = {
-				has_completed_focus = AUS_establish_rote_hilfe	
+				always = no	
 			}
 			traits = { 
 				AUS_the_red_helper
@@ -1071,10 +1071,10 @@ characters = {
 			}
 			available = {
 				has_government = communism
-				has_completed_focus = AUS_establish_rote_hilfe	
+				always = no	
 			}
 			visible = {
-				has_completed_focus = AUS_establish_rote_hilfe	
+				always = no	
 			}
 			traits = { 
 				AUS_communist_lawyer
@@ -1107,7 +1107,7 @@ characters = {
 				base = 1
 				modifier = {
 					factor = 0
-					has_completed_focus = AUS_totalitarian_safety
+					always = no
 				}
 			}
 		}
@@ -1149,7 +1149,7 @@ characters = {
 				original_tag = AUS
 			}
 			available = {
-				has_completed_focus = AUS_architechtual_advancements
+				always = no
 			}
 			traits = { 
 				AUS_reknowned_architecht
@@ -1175,9 +1175,9 @@ characters = {
 			}
 			available = {
 				OR = {
-					has_completed_focus = AUS_austromarxism_focus
+					always = no
 					AND = {
-						has_completed_focus = AUS_pardon_political_exiles
+						always = no
 						has_government = democratic
 						NOT = {
 							has_country_leader = {
@@ -1195,7 +1195,7 @@ characters = {
 				base = 2
 				modifier = {
 					factor = 5
-					has_completed_focus = AUS_austromarxism_focus
+					always = no
 				}
 			}
 		}
@@ -1560,12 +1560,12 @@ characters = {
 					AND = {
 						has_government = fascism
 						NOT = { 
-							has_completed_focus = AUS_clamp_down_on_dnsap 
-							has_completed_focus = AUS_rebuild_democratic_systems
-							has_completed_focus = AUS_ban_dnsap
+							always = no 
+							always = no
+							always = no
 						}
 					}
-					has_completed_focus = AUS_bring_generals_out_of_retirement
+					always = no
 				}
 				NOT = {
 					original_tag = GER
@@ -1645,8 +1645,8 @@ characters = {
 			visible = {
 				has_government = communism
 				OR = {
-					has_completed_focus = AUS_schutzbund_support
-					has_completed_focus = AUS_properly_trained_militias
+					always = no
+					always = no
 				}
 				NOT = { original_tag = GER }
 			}
@@ -1671,7 +1671,7 @@ characters = {
 			legacy_id = -1
 			visible = {
 				has_government = neutrality
-				has_completed_focus = AUS_eiserne_legion
+				always = no
 				NOT = {
 					original_tag = GER
 				}
@@ -1700,7 +1700,7 @@ characters = {
 				NOT = {
 					original_tag = GER
 				}
-				has_completed_focus = AUS_invite_spanish_refugees
+				always = no
 			}
 		}
 	}
@@ -1726,7 +1726,7 @@ characters = {
 			coordination_skill = 2
 			legacy_id = -1
 			visible = {
-				has_completed_focus = AUS_promote_admirals
+				always = no
 				NOT = {
 					original_tag = GER
 				}
@@ -1754,12 +1754,12 @@ characters = {
 				original_tag = AUS
 			}
 			available = {
-				has_completed_focus = AUS_follow_the_jansa_plan
+				always = no
 			}
 			visible = {
 				NOT = {
 					OR = {
-						has_completed_focus = AUS_establish_bohme_plan 
+						always = no 
 						original_tag = GER
 					}
 				}
@@ -1819,8 +1819,8 @@ characters = {
 			}
 			available = {
 				OR = {
-					has_completed_focus = AUS_bring_generals_out_of_retirement
-					has_completed_focus = GER_the_austrian_question
+					always = no
+					always = no
 				}
 				
 			}
@@ -1843,7 +1843,7 @@ characters = {
 			visible = {
 				OR = {
 					AND = {
-						has_completed_focus = AUS_bring_generals_out_of_retirement
+						always = no
 						original_tag = AUS
 					}
 					AND = {
@@ -1870,11 +1870,11 @@ characters = {
 					original_tag = AUS
 				}
 				available = {
-					has_completed_focus = AUS_establish_bohme_plan
+					always = no
 				}
 
 				visible = {
-					NOT = {has_completed_focus = AUS_follow_the_jansa_plan}
+					NOT = {always = no}
 				}
 				traits = {
 					army_chief_offensive_2
@@ -1886,8 +1886,8 @@ characters = {
 						factor = 10
 						original_tag = AUS
 						OR = {
-							has_completed_focus = AUS_demand_hungarian_submission
-							has_completed_focus = AUS_bring_hungary_back_into_the_fold
+							always = no
+							always = no
 						}
 						
 					}
@@ -2022,7 +2022,7 @@ characters = {
 				base = 1
 				modifier = {
 					factor = 0.1
-					NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
+					NOT = { always = no }
 				}
 			}
 		}
@@ -2054,7 +2054,7 @@ characters = {
 					base = 1
 					modifier = {
 						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -2084,7 +2084,7 @@ characters = {
 					base = 1
 					modifier = {
 						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -2117,7 +2117,7 @@ characters = {
 					base = 1
 					modifier = {
 						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -2683,8 +2683,8 @@ characters = {
 					has_government = democratic
 				}
 				OR = {
-					has_completed_focus = AUS_schutzbund_support
-					has_completed_focus = AUS_properly_trained_militias
+					always = no
+					always = no
 				}
 				
 			}
@@ -2742,8 +2742,8 @@ characters = {
 			visible = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
 					OR = {
-						has_completed_focus = AUS_royal_scientific_grants
-						has_completed_focus = AUS_recruiting_the_graduates
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2766,7 +2766,7 @@ characters = {
 
 			visible = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_recruiting_the_graduates
+					always = no
 				}
 			}
 		}
@@ -2788,7 +2788,7 @@ characters = {
 
 			visible = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_womens_education_initiative
+					always = no
 				}
 			}
 		}
@@ -2810,7 +2810,7 @@ characters = {
 
 			visible = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_recruiting_the_graduates
+					always = no
 				}
 			}
 		}
@@ -2832,7 +2832,7 @@ characters = {
 
 			visible = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_royal_scientific_grants
+					always = no
 				}
 			}
 		}

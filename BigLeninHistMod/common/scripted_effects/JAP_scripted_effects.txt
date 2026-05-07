@@ -464,7 +464,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 				original_tag = JAP
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					always = no
 				}
 			}
 			ROOT = {
@@ -497,7 +497,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 		limit = {
 			FROM = {
 				original_tag = JAP
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
+				always = no
 			}
 			ROOT = {
 				NOT = {
@@ -542,7 +542,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 				original_tag = JAP
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					always = no
 				}
 			}
 			FROM = {
@@ -579,7 +579,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 		limit = {
 			ROOT = {
 				original_tag = JAP
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
+				always = no
 			}
 			FROM = {
 				NOT = {
@@ -624,7 +624,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 			JAP = {
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					always = no
 				}
 			}
 			ROOT = {
@@ -659,7 +659,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 	if = {
 		limit = {
 			JAP = {
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
+				always = no
 			}
 			ROOT = {
 				NOT = {
@@ -704,7 +704,7 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 			ROOT = {
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					always = no
 				}
 			}
 			THIS = {
@@ -739,7 +739,7 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 	if = {
 		limit = {
 			ROOT = {
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
+				always = no
 			}
 			THIS = {
 				NOT = {
@@ -948,7 +948,7 @@ JAP_trigger_democratic_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_seek_yakuza_support
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_army_support = 0.2 }
 		clamp_variable = {
@@ -959,7 +959,7 @@ JAP_trigger_democratic_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_disillusioned_young_officers
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_army_support = 0.1 }
 		clamp_variable = {
@@ -998,7 +998,7 @@ JAP_trigger_democratic_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_the_navy_moderates
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_navy_support = 0.3 }
 		clamp_variable = {
@@ -1036,7 +1036,7 @@ JAP_trigger_democratic_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_the_navy_moderates
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_air_support = 0.1 }
 		clamp_variable = {
@@ -1534,7 +1534,7 @@ JAP_trigger_democratic_civil_war = {
 
     if = {
     	limit = {
-    		has_completed_focus = JAP_raise_support_within_the_proletarian_class
+    		always = no
     	}
     	add_ideas = JAP_strong_unions_idea
     }
@@ -1723,7 +1723,7 @@ JAP_trigger_communist_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_seek_yakuza_support
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_army_support = 0.2 }
 		clamp_variable = {
@@ -1734,7 +1734,7 @@ JAP_trigger_communist_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_disillusioned_young_officers
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_army_support = 0.1 }
 		clamp_variable = {
@@ -1773,7 +1773,7 @@ JAP_trigger_communist_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_the_navy_moderates
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_navy_support = 0.3 }
 		clamp_variable = {
@@ -1811,7 +1811,7 @@ JAP_trigger_communist_civil_war = {
 	}
 	if = {
 		limit = {  
-			has_completed_focus = JAP_sway_the_navy_moderates
+			always = no
 		}
 		add_to_variable = { ROOT.JAP_opposition_air_support = 0.1 }
 		clamp_variable = {
@@ -2501,7 +2501,7 @@ JAP_trigger_communist_civil_war = {
 
 	if = {
 		limit = {
-			has_completed_focus = JAP_raise_support_within_the_proletarian_class
+			always = no
 		}
 		add_ideas = JAP_strong_unions_idea
 	}

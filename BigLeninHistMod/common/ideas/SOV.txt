@@ -2889,7 +2889,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				has_completed_focus = SOV_the_fourth_international
+				always = no
 				SOV_is_left_opposition = yes
 			}
 
@@ -4416,7 +4416,7 @@ ideas = {
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Astrov
 							has_country_flag = SOV_accepted_OKMO
@@ -4433,7 +4433,7 @@ ideas = {
 							tag = MAN
 						}
 					}
-					has_completed_focus = CHI_hire_soviet_designer
+					always = no
 					NOT = {
 						has_war_with = SOV
 					}
@@ -4712,7 +4712,7 @@ ideas = {
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Morozov
 							has_country_flag = SOV_accepted_OKMO
@@ -4994,7 +4994,7 @@ ideas = {
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Morozov
 							has_country_flag = SOV_accepted_Astrov

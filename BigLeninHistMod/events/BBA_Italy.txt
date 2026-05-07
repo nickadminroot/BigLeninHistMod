@@ -135,8 +135,8 @@ country_event = {
 		trigger = {
 			OR = {
 				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 			}
 		}
 
@@ -213,8 +213,8 @@ country_event = {
 			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
 			NOT = {
 				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 			}
 		}
 
@@ -269,7 +269,7 @@ country_event = {
 
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_the_abyssinian_fiasco
@@ -292,8 +292,8 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 			}
 		}
 
@@ -341,7 +341,7 @@ country_event = {
 
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_struggle_in_ethiopia
@@ -932,8 +932,8 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_north_failed_flag }
 			}
 		}
@@ -952,8 +952,8 @@ country_event = {
 		trigger = {
 			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
 			}
 		}
@@ -973,7 +973,7 @@ country_event = {
 
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_the_abyssinian_fiasco
@@ -986,8 +986,8 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
 			}
 		}
@@ -1007,7 +1007,7 @@ country_event = {
 		
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_struggle_in_ethiopia
@@ -1043,8 +1043,8 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_south_failed_flag }
 			}
 		}
@@ -1063,8 +1063,8 @@ country_event = {
 		trigger = {
 			has_dlc = "By Blood Alone"  #Abyssinian Fiasco focus not available without BBA
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
 		}
@@ -1084,7 +1084,7 @@ country_event = {
 		
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_the_abyssinian_fiasco
@@ -1097,8 +1097,8 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
-				has_completed_focus = ITA_struggle_in_ethiopia
+				always = no
+				always = no
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
 		}
@@ -1118,7 +1118,7 @@ country_event = {
 		
 		if = {
 			limit = {
-				NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
+				NOT = { always = no }
 				NOT = { has_completed_focus = ITA_solid_progress }
 			}
 			complete_national_focus = ITA_struggle_in_ethiopia
@@ -3194,7 +3194,7 @@ country_event = {
 		original_tag = ITA
 		#date > 1940.01.01
 		NOT = {
-			has_completed_focus = ITA_italo_balbo_focus
+			always = no
 			focus_progress = {
 				focus = ITA_italo_balbo_focus
 				progress > 0
@@ -3291,7 +3291,7 @@ country_event = {
 
 	trigger = {
 		has_character = ITA_italo_balbo
-		NOT = { has_completed_focus = ITA_italo_balbo_focus }
+		NOT = { always = no }
 	}
 
 	# Sayonara Balbo
@@ -4839,8 +4839,8 @@ country_event = {
 		if = { #DEMOCRATIC Monarchy
 			limit = {
 				OR = {
-					has_completed_focus = ITA_christian_democracy
-					has_completed_focus = ITA_democratic_king
+					always = no
+					always = no
 				}
 			}
 			ITA_grand_council = {
@@ -4867,7 +4867,7 @@ country_event = {
 		}
 		else_if = { #MONARCHIST
 			limit = {
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
 			}
 			ITA_grand_council = {
 				set_character_name = ITA_grand_council_alt
@@ -5681,7 +5681,7 @@ country_event = {
 		}
 
 		trigger = {
-			has_completed_focus = ITA_liberate_gramsci
+			always = no
 		}
 
 		hidden_effect = {
@@ -7573,15 +7573,15 @@ country_event = {
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_united_anarchist_confederations
-							has_completed_focus = ITA_italia_libera
+							always = no
+							always = no
 						}
 					}
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_il_sol_dell_avvenire
-							has_completed_focus = ITA_peace_preservation
+							always = no
+							always = no
 						}
 					}
 					country_event = { id = BBA_italy_anti_colonialism_events.56 days = ITA_abolish_colonies_event_delay } #accepts
@@ -7637,15 +7637,15 @@ country_event = {
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_united_anarchist_confederations
-							has_completed_focus = ITA_italia_libera
+							always = no
+							always = no
 						}
 					}
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_il_sol_dell_avvenire
-							has_completed_focus = ITA_peace_preservation
+							always = no
+							always = no
 						}
 					}
 					country_event = { id = BBA_italy_anti_colonialism_events.58 days = ITA_abolish_colonies_event_delay } #accepts
@@ -7701,15 +7701,15 @@ country_event = {
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_united_anarchist_confederations
-							has_completed_focus = ITA_italia_libera
+							always = no
+							always = no
 						}
 					}
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_il_sol_dell_avvenire
-							has_completed_focus = ITA_peace_preservation
+							always = no
+							always = no
 						}
 					}
 					country_event = { id = BBA_italy_anti_colonialism_events.60 days = ITA_abolish_colonies_event_delay } #accepts
@@ -7765,15 +7765,15 @@ country_event = {
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_united_anarchist_confederations
-							has_completed_focus = ITA_italia_libera
+							always = no
+							always = no
 						}
 					}
 					modifier = {
 						add = 10
 						OR = {
-							has_completed_focus = ITA_il_sol_dell_avvenire
-							has_completed_focus = ITA_peace_preservation
+							always = no
+							always = no
 						}
 					}
 					country_event = { id = BBA_italy_anti_colonialism_events.62 days = ITA_abolish_colonies_event_delay } #accepts
@@ -10008,7 +10008,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
+					always = no
 				}
 			}
 			modifier = {
@@ -10295,7 +10295,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_franco_italian_pact
+					always = no
 				}
 			}
 			modifier = {
@@ -10478,7 +10478,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
+					always = no
 				}
 			}
 			modifier = {
@@ -10647,7 +10647,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_franco_italian_pact
+					always = no
 				}
 			}
 			modifier = {
@@ -10787,7 +10787,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
+					always = no
 				}
 			}
 			modifier = {
@@ -11852,7 +11852,7 @@ country_event = {
 			modifier = {
 				add = 25
 				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
+					always = no
 				}
 			}
 			modifier = {

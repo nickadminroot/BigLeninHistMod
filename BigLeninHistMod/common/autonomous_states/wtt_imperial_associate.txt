@@ -65,7 +65,7 @@ autonomy_state = {
 		if = {
 			limit = { original_tag = MAN }
 				OR = {
-					has_completed_focus = MAN_the_two_emperors
+					always = no
 					hidden_trigger = {
 						has_completed_focus = MAN_tsr_the_two_emperors
 					}

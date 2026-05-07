@@ -4309,9 +4309,9 @@ country_event = {
 			modifier = {
 				NOT = {
 					OR = {
-						has_completed_focus = AUS_great_austrian_economic_push
-						has_completed_focus = AUS_bring_phonix_insurance_from_the_ashes
-						has_completed_focus = AUS_apprentice_programmes
+						always = no
+						always = no
+						always = no
 					}
 				}
 				factor = 1.5
@@ -4355,7 +4355,7 @@ country_event = {
 				factor = 2
 			}
 			modifier = {
-				has_completed_focus = AUS_great_austrian_economic_push
+				always = no
 				factor = 2.5
 			}
 		}

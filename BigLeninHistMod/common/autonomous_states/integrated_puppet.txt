@@ -90,7 +90,7 @@ autonomy_state = {
 				has_dlc = "Gotterdammerung"			
 			}
 			NOT = {
-				has_completed_focus = CONGO_overseas_department_of_belgium
+				always = no
 			}
 		}
 	}
@@ -103,7 +103,7 @@ autonomy_state = {
 				original_tag = COG
 				has_dlc = "Gotterdammerung"			
 			}
-			has_completed_focus = CONGO_congo_free_state
+			always = no
 		}
 	}
 }

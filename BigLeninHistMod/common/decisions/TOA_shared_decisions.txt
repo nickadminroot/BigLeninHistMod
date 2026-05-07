@@ -17,10 +17,10 @@ political_actions = {
 		}
 
 		available = {
-			has_completed_focus = PAR_nazify_the_army
+			always = no
 		}
 		visible = {
-			has_completed_focus = PAR_nazify_the_army
+			always = no
 			NOT = { has_government = fascism }
 		}
 		cost = 35
@@ -50,10 +50,10 @@ political_actions = {
 		}
 
 		available = {
-			has_completed_focus = PAR_put_estigarribia_on_a_pedestal
+			always = no
 		}
 		visible = {
-			has_completed_focus = PAR_put_estigarribia_on_a_pedestal
+			always = no
 		}
 		cost = 75
 		complete_effect = {
@@ -98,7 +98,7 @@ improving_our_army_category = {
 		}
 
 		available = {
-			has_completed_focus = SMB_tank_warfare
+			always = no
 			NOT = {
 				has_country_flag = JUNO_already_specialized_in_tanks_dummy
 			} 
@@ -110,7 +110,7 @@ improving_our_army_category = {
 		custom_cost_text = decision_cost_CP_40	
 
 		visible = { 
-			has_completed_focus = SMB_tank_warfare
+			always = no
 			NOT = {
 				has_country_flag = JUNO_already_specialized_in_tanks
 			}
@@ -204,7 +204,7 @@ improving_our_army_category = {
 		}
  
 		available = {
-			has_completed_focus = SMB_tank_warfare
+			always = no
 			NOT = {
 				has_country_flag = JUNO_already_specialized_in_tanks_dummy
 			} 
@@ -216,7 +216,7 @@ improving_our_army_category = {
 		custom_cost_text = decision_cost_CP_40	
 
 		visible = { 
-			has_completed_focus = SMB_tank_warfare
+			always = no
 			NOT = {
 				has_country_flag = JUNO_already_specialized_in_tanks
 			}
@@ -310,7 +310,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = JAP
 				exists = yes
@@ -369,7 +369,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_japanese_advisors_removed
@@ -478,7 +478,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = USA
 				exists = yes
@@ -498,7 +498,7 @@ improving_our_army_category = {
 					original_tag = CHL
 				}
 				NOT = {
-					has_completed_focus = CHL_promote_broad_anti_americansim
+					always = no
 				}
 			}
 			custom_trigger_tooltip = {
@@ -544,7 +544,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_american_advisors_removed
@@ -648,7 +648,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = SOV
 				exists = yes
@@ -709,7 +709,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_soviet_advisors_removed
@@ -815,7 +815,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = GER
 				exists = yes
@@ -874,7 +874,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_german_advisors_removed
@@ -978,7 +978,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = ITA
 				exists = yes
@@ -1036,7 +1036,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_italian_advisors_removed
@@ -1141,7 +1141,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = ENG
 				exists = yes
@@ -1201,7 +1201,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_british_advisors_removed
@@ -1306,7 +1306,7 @@ improving_our_army_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = FRA
 				exists = yes
@@ -1365,7 +1365,7 @@ improving_our_army_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_french_advisors_removed
@@ -1520,8 +1520,8 @@ improving_our_army_category = {
 				}
 			}
 			OR = {
-				has_completed_focus = SMB_purchase_aircraft
-				has_completed_focus = AFG_purchase_aircraft
+				always = no
+				always = no
 			}
 
 			NOT = {
@@ -1934,7 +1934,7 @@ south_american_naval_arms_race_category = {
 		}
 	
 		available = {
-			has_completed_focus = SMB_naval_foreign_advisors
+			always = no
 			any_country = {
 				original_tag = JAP
 				exists = yes
@@ -1993,7 +1993,7 @@ south_american_naval_arms_race_category = {
 		}
 
 		visible = { 
-			has_completed_focus = SMB_naval_foreign_advisors
+			always = no
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_japanese_naval_advisors_removed
@@ -2091,7 +2091,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = USA
 					exists = yes
@@ -2111,7 +2111,7 @@ south_american_naval_arms_race_category = {
 						original_tag = CHL
 					}
 					NOT = {
-						has_completed_focus = CHL_promote_broad_anti_americansim
+						always = no
 					}
 				}
 				custom_trigger_tooltip = {
@@ -2157,7 +2157,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_american_naval_advisors_removed
@@ -2257,7 +2257,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = SOV
 					exists = yes
@@ -2318,7 +2318,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_soviet_naval_advisors_removed
@@ -2417,7 +2417,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = GER
 					exists = yes
@@ -2476,7 +2476,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_german_naval_advisors_removed
@@ -2575,7 +2575,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = ITA
 					exists = yes
@@ -2633,7 +2633,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_italian_naval_advisors_removed
@@ -2732,7 +2732,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = ENG
 					exists = yes
@@ -2792,7 +2792,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_british_naval_advisors_removed
@@ -2890,7 +2890,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			available = {
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				any_country = {
 					original_tag = FRA
 					exists = yes
@@ -2949,7 +2949,7 @@ south_american_naval_arms_race_category = {
 			}
 
 			visible = { 
-				has_completed_focus = SMB_naval_foreign_advisors
+				always = no
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_french_naval_advisors_removed

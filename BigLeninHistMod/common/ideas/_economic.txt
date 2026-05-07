@@ -38,7 +38,7 @@ ideas = {
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
 				else = {
@@ -84,7 +84,7 @@ ideas = {
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
 				else = {
@@ -182,7 +182,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.3
@@ -220,7 +220,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -279,13 +279,13 @@ ideas = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						OR = {
-							has_completed_focus = HUN_secret_rearmament
+							always = no
 							NOT = { has_idea = HUN_treaty_of_triannon_aat }
 						}
 					}
 					else = {
 						OR = {
-							has_completed_focus = HUN_secret_rearmament
+							always = no
 							NOT = { has_idea = HUN_treaty_of_triannon }
 						}
 					}
@@ -314,7 +314,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.5
@@ -365,7 +365,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -412,7 +412,7 @@ ideas = {
 					NOT = {
 						has_idea = war_economy
 					}
-					has_completed_focus = GUAY_coup_detat
+					always = no
 				}
    			}
 		}
@@ -494,7 +494,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.75
@@ -545,7 +545,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -620,7 +620,7 @@ ideas = {
 					}
 					NOT = { 
 						has_completed_focus = JAP_sea_national_defense_state 
-						has_completed_focus = JAP_prepare_for_the_final_war 
+						always = no 
 					}
 				}
 			}
@@ -692,7 +692,7 @@ ideas = {
 				
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.9
@@ -730,7 +730,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -845,14 +845,14 @@ ideas = {
 			visible = {
 				original_tag = JAP
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 				OR = {
@@ -1038,8 +1038,8 @@ ideas = {
 			allowed_to_remove = {
 				OR = {
 					has_war = yes
-					has_completed_focus = POL_integrate_gdansk_industries
-					has_completed_focus = POL_expand_gdynia_seaport
+					always = no
+					always = no
 					NOT = {
 						owns_state = 85
 						owns_state = 807
@@ -1102,7 +1102,7 @@ ideas = {
 						original_tag = PRC
 						has_dlc = "No Compromise, No Surrender"
 					}
-					NOT = { has_completed_focus = PRC_promote_paper_bills }
+					NOT = { always = no }
 				}
 			}
 
@@ -1187,7 +1187,7 @@ ideas = {
 						original_tag = PRC
 						has_dlc = "No Compromise, No Surrender"
 					}
-					NOT = { has_completed_focus = PRC_promote_paper_bills }
+					NOT = { always = no }
 				}
 			}
 
@@ -1567,7 +1567,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = RAJ
-				has_completed_focus = RAJ_special_economic_zones
+				always = no
 			}
 			available = {
 

@@ -28,7 +28,7 @@
  		}
  		else = {
  			FROM = {
- 				has_completed_focus = HUN_develop_tanks
+ 				always = no
  			}
  		}
  	}
@@ -54,7 +54,7 @@
  		}
  		else = {
  			FROM = {
- 				has_completed_focus = HUN_assault_gun_focus
+ 				always = no
  			}
  		}
  	}
@@ -153,7 +153,7 @@ HUN_ganz_danubius_organization = {
 					}
 				}
 			}
-			owner = { has_completed_focus = HUN_naval_warfare }
+			owner = { always = no }
 		}
 
 		if = {
@@ -183,7 +183,7 @@ HUN_obudai_hajogyar_organization = {
 					}
 				}
 			}
-			owner = { has_completed_focus = HUN_naval_warfare }
+			owner = { always = no }
 		}
 
 		if = {
@@ -224,7 +224,7 @@ HUN_mw_aircraft_organization = {
 		}
 		else = {
 			FROM = {
-				has_completed_focus = HUN_establish_the_air_force
+				always = no
 			}
 		}
 	}
@@ -314,7 +314,7 @@ HUN_danuvia_inf_organization = {
 		}
 		else = {
 			FROM = {
-				has_completed_focus = HUN_danuvia_submachine_guns
+				always = no
 			}
 		}
 	}

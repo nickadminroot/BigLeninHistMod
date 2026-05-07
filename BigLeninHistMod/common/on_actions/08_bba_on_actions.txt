@@ -183,7 +183,7 @@ on_actions = {
 			if = {
 				limit = {
 					original_tag = ETH
-					has_completed_focus = ETH_declare_for_italy
+					always = no
 					ITA = {
 						NOT = {
 							OR = {
@@ -204,7 +204,7 @@ on_actions = {
 			else_if = {
 				limit = {
 					original_tag = ETH
-					has_completed_focus = ETH_declare_for_italy
+					always = no
 					}
 				every_owned_state = { #TODO_TA Make an event out this?
 					limit = {
@@ -222,7 +222,7 @@ on_actions = {
 			if = {
 				limit = {
 					tag = RDS
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					OR = {
 						has_government = neutrality
 						has_government = democratic
@@ -265,7 +265,7 @@ on_actions = {
 				}
 				if = { #BALBO
 					limit = {
-						has_completed_focus = ITA_italo_balbo_focus
+						always = no
 					}
 					#BoP
 					set_power_balance = {
@@ -287,7 +287,7 @@ on_actions = {
 				}
 				else_if = { #GRANDI
 					limit = {
-						has_completed_focus = ITA_dino_grandi_focus
+						always = no
 					}
 					#BoP
 					set_power_balance = {
@@ -342,7 +342,7 @@ on_actions = {
 					}
 					NOT = {
 						AND = {
-							ETH = { has_completed_focus = ETH_declare_for_italy }
+							ETH = { always = no }
 							has_civil_war = yes
 						}
 					}
@@ -545,7 +545,7 @@ on_actions = {
 					FROM = {
 						original_tag = ETH
 						has_government = fascism
-						has_completed_focus = ETH_sway_the_warlords
+						always = no
 					}
 				}
 				set_variable = { FROM.ETH_haile_selassie_country = ROOT }
@@ -915,7 +915,7 @@ on_actions = {
 					}
 					ITA = {
 						OR = {
-							has_completed_focus = ITA_guarantee_austrian_independence
+							always = no
 							has_guaranteed = AUS
 							has_country_flag = AUS_got_ita_guarantee_flag
 						}
@@ -949,7 +949,7 @@ on_actions = {
 					}
 					ITA = {
 						OR = {
-							has_completed_focus = ITA_guarantee_austrian_independence
+							always = no
 							has_guaranteed = AUS
 							has_country_flag = AUS_got_ita_guarantee_flag
 						}
@@ -1137,7 +1137,7 @@ on_actions = {
 				limit = {
 					ROOT = {
 						original_tag = ITA
-						has_completed_focus = ITA_cooperatives_for_intensive_exploitation
+						always = no
 					}
 					FROM.FROM = {
 						is_on_continent = africa
@@ -1160,7 +1160,7 @@ on_actions = {
 					}
 					ROOT = {
 						original_tag = ITA
-						has_completed_focus = ITA_cooperate_with_the_mafia
+						always = no
 					}
 				}
 				FROM.FROM = {
@@ -1266,7 +1266,7 @@ on_actions = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					original_tag = ETH
-					has_completed_focus = ETH_rally_around_the_emperor
+					always = no
 					FROM = {
 						original_tag = ITA
 						OR = {
@@ -1365,13 +1365,13 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = ITA
-						has_completed_focus = ITA_the_italian_confederation
+						always = no
 					}
 				}
 				if = {
 					limit = {
 						FROM = {
-							has_completed_focus = ITA_planned_economy
+							always = no
 						}
 						NOT = { has_idea = ITA_italian_confederation_member_improved }
 					}
@@ -1407,13 +1407,13 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = ITA
-						has_completed_focus = ITA_the_italian_confederation
+						always = no
 					}
 				}
 				if = {
 					limit = {
 						FROM = {
-							has_completed_focus = ITA_planned_economy
+							always = no
 						}
 						NOT = { has_idea = ITA_italian_confederation_member_improved }
 					}
@@ -1509,7 +1509,7 @@ on_actions = {
 				limit = {
 					OWNER = {
 						original_tag = ETH
-						has_completed_focus = ETH_expand_the_officer_corps
+						always = no
 					}
 				}
 				if = {

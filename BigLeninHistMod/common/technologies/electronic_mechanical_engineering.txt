@@ -1684,7 +1684,7 @@ technologies = {
 
 			modifier = {
 				add = 50
-				has_completed_focus = PHI_weapons_of_war
+				always = no
 			}
 		}
 		

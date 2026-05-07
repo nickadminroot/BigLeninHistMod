@@ -68,7 +68,7 @@ autonomy_state = {
 		if = {
 			limit = { original_tag = MAN }
 			OR = {
-				has_completed_focus = MAN_obedience
+				always = no
 				has_completed_focus = MAN_tsr_obedience
 			}
 		}

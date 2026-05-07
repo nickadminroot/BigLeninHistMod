@@ -49,8 +49,8 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = MAN_tsr_the_question_of_leadership
-						has_completed_focus = MAN_tsr_question_the_emperors_authority
-						has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+						always = no
+						always = no
 					}
 				}
 			}
@@ -1015,12 +1015,12 @@ characters = {
 						has_dlc = "No Compromise, No Surrender"
 					}
 					OR = {
-						has_completed_focus = MAN_tsr_five_people_armies
-						has_completed_focus = MAN_tsr_ally_bandit_leaders
+						always = no
+						always = no
 					}
 				}
 				else = {
-					has_completed_focus = MAN_five_people_armies
+					always = no
 				}
 				not_already_hired_except_as = political_advisor
 			}
@@ -1043,12 +1043,12 @@ characters = {
 						has_dlc = "No Compromise, No Surrender"
 					}
 					OR = {
-						has_completed_focus = MAN_tsr_five_people_armies
-						has_completed_focus = MAN_tsr_ally_bandit_leaders
+						always = no
+						always = no
 					}
 				}
 				else = {
-					has_completed_focus = MAN_five_people_armies
+					always = no
 				}
 				not_already_hired_except_as = high_command
 			}

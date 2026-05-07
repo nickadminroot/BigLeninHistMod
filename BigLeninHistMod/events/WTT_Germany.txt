@@ -1946,7 +1946,7 @@ country_event = {
 		name = germany.61.b
 		trigger = {
 			NOT = { GER = { has_country_flag = germany_war_return_kaiser } }
-			NOT = { has_completed_focus = ENG_a_change_in_course }
+			NOT = { always = no }
 		}
 		ai_chance = { 
 			factor = 10
@@ -2001,7 +2001,7 @@ country_event = {
 		name = germany.61.c
 		trigger = {
 			GER = { has_country_flag = germany_war_return_kaiser }
-			NOT = { has_completed_focus = ENG_a_change_in_course }
+			NOT = { always = no }
 		}
 		ai_chance = { 
 			factor = 10
@@ -2065,7 +2065,7 @@ country_event = {
 	
 	option = {
 		name = germany.62.a
-		trigger = { NOT = { has_completed_focus = ENG_a_change_in_course } }
+		trigger = { NOT = { always = no } }
 		add_opinion_modifier = { target = GER modifier = protest_action }
 		GER = {
 			add_war_support = 0.1
@@ -2074,7 +2074,7 @@ country_event = {
 
 	option = {
 		name = germany.62.b
-		trigger = { has_completed_focus = ENG_a_change_in_course }
+		trigger = { always = no }
 	}
 }
 
@@ -2430,7 +2430,7 @@ country_event = {
 			event_target:WTT_current_china_leader = {
 				OR = {
 					has_idea = german_advisors 
-					has_completed_focus = CHI_give_falkenhausen_citizenship
+					always = no
 				}
 			}
 		}
@@ -2978,7 +2978,7 @@ country_event = {
 						factor = 100
 						has_dlc = "Trial of Allegiance"
 						ARG = {
-							has_completed_focus = ARG_work_with_the_nationalists
+							always = no
 						}
 					}
 
@@ -3017,7 +3017,7 @@ country_event = {
 					modifier = { 
 						has_dlc = "Trial of Allegiance"
 						tag = ARG
-						has_completed_focus = ARG_guardia_nacional
+						always = no
 						factor = 0
 					}
 				}
@@ -3025,7 +3025,7 @@ country_event = {
 					modifier = { 
 						has_dlc = "Trial of Allegiance"
 						tag = ARG
-						has_completed_focus = ARG_guardia_nacional
+						always = no
 						factor = 0
 					}
 					if = { 
@@ -3037,7 +3037,7 @@ country_event = {
 					modifier = {
 						has_dlc = "Gotterdammerung"
 						tag = AUS
-						has_completed_focus = AUS_repeal_the_may_constitution
+						always = no
 						factor = 0
 					}
 
@@ -3051,7 +3051,7 @@ country_event = {
 									has_government = neutrality
 								}
 								NOT = {
-									has_completed_focus = AUS_repeal_the_may_constitution
+									always = no
 								}
 							}
 						}
@@ -3217,7 +3217,7 @@ country_event = {
 					}
 				}
 				NOT = {
-					has_completed_focus = GER_brothers_in_arms
+					always = no
 				}
 			}
 		}

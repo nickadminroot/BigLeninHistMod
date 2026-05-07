@@ -23,8 +23,8 @@ MAN_war_preparations = {
 
 	visible = {
 		OR = {
-			has_completed_focus = MAN_assertiveness
-			has_completed_focus = MAN_tsr_assertiveness
+			always = no
+			always = no
 		}
 	}
 
@@ -41,7 +41,7 @@ MAN_china_matters = {
 	visible = {
 		OR = {
 			has_completed_focus = MAN_tsr_chinese_leadership
-			has_completed_focus = MAN_tsr_reclaim_the_empire
+			always = no
 		}
 	}
 
@@ -72,10 +72,10 @@ MAN_coring_decisions = {
 	visible = {
 		OR = {
 			has_completed_focus = MAN_tsr_claim_outer_manchuria
-			has_completed_focus = MAN_tsr_reclaim_our_lost_possessions
-			has_completed_focus = MAN_tsr_request_our_lost_territories
-			has_completed_focus = MAN_tsr_proclaim_the_republic_of_china
-			has_completed_focus = MAN_tsr_division_of_power
+			always = no
+			always = no
+			always = no
+			always = no
 		}
 	}
 
@@ -107,7 +107,7 @@ MAN_march_on_beijing_decisions = {
 	}
 
 	visible = {
-		has_completed_focus = MAN_tsr_the_new_beiyang_government
+		always = no
 	}
 
 }

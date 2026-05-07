@@ -107,17 +107,17 @@ political_actions = {
 			modifier = {
 				factor = 0 
 				tag = ICE
-				has_completed_focus = ICE_not_our_king
-				NOT = { has_completed_focus = ICE_break_with_the_crown }
+				always = no
+				NOT = { always = no }
 			}
 			modifier = {
 				factor = 0 
 				tag = GER
-				has_completed_focus = GER_oppose_hitler_ww
+				always = no
 				NOT = { 
 					OR = {
-						has_completed_focus = GER_the_peoples_victory 
-						has_completed_focus = GER_monarchist_sentiment 
+						always = no 
+						always = no 
 					}
 				}
 			}
@@ -561,7 +561,7 @@ propaganda_efforts = {
 				}
 				threat > 0.25
 				#has_tech = radio
-				has_completed_focus = BRA_radio_nacional
+				always = no
 			}
 			else = {
 				threat > 0.25
@@ -575,7 +575,7 @@ propaganda_efforts = {
 				}
 				threat > 0.25
 				#has_tech = radio
-				has_completed_focus = AFG_establish_radio_networks
+				always = no
 			}
 			else = {
 				threat > 0.25
@@ -1681,8 +1681,8 @@ war_measures = {
         				original_tag = PRC
         			}
         			NOT = { 
-        				has_completed_focus = PRC_holding_half_the_sky
-        				has_completed_focus = PRC_promote_womens_suffrage
+        				always = no
+        				always = no
         			}
         		}
 			}
@@ -1694,7 +1694,7 @@ war_measures = {
         			has_idea = tot_economic_mobilisation
 					has_idea = totaler_krieg_economy
 				}
-				NOT = { has_completed_focus = GER_womens_rights_and_equality }
+				NOT = { always = no }
 			}
 			else_if = {
 				limit = {
@@ -1704,7 +1704,7 @@ war_measures = {
 					has_idea = tot_economic_mobilisation
 					has_idea = national_defense_state
 				}
-				NOT = { has_completed_focus = JAP_democratic_women_in_the_workforce }
+				NOT = { always = no }
 			}
             OR = {
                 AND = {
@@ -1735,7 +1735,7 @@ war_measures = {
             	limit = {
             		original_tag = GER
             	}
-            	NOT = { has_completed_focus = GER_womens_rights_and_equality }
+            	NOT = { always = no }
             }
         }
         cost = 100
@@ -1751,7 +1751,7 @@ war_measures = {
         				NOT = { has_idea = tot_economic_mobilisation }
         				NOT = { has_idea = totaler_krieg_economy }
         			}
-        			has_completed_focus = GER_womens_rights_and_equality
+        			always = no
         		}
             }
             else_if = {

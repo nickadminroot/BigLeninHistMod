@@ -171,7 +171,7 @@ faction_goal_north_subjugated = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_tour_the_north }
+		FROM = { always = no }
 	}
 	completed = {
 		NXM = {
@@ -529,7 +529,7 @@ faction_goal_west_subjugated = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_tour_the_west }
+		FROM = { always = no }
 	}
 	completed = {
 		XSM = {
@@ -595,7 +595,7 @@ faction_goal_south_subjugated = {
 		}
 	}
 	available = {
-		FROM = { has_completed_focus = CHI_tour_the_south }
+		FROM = { always = no }
 	}
 	completed = {
 		GDC = {

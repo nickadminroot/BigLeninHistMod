@@ -331,7 +331,7 @@ defined_text = {
 	name = GetCoastalGarrisonsDecTooltipFromNavyBranch
 	text = {
 		trigger = {
-			has_completed_focus = FIN_defensive_preparations
+			always = no
 		}
 		localization_key = FIN_coastal_garrisons_unlocked
 	}
@@ -357,7 +357,7 @@ defined_text = {
 	name = GetMiningTheSeasDecTooltipFromNavyBranch
 	text = {
 		trigger = {
-			has_completed_focus = FIN_defensive_preparations
+			always = no
 		}
 		localization_key = FIN_mining_the_sea_unlocked
 	}
@@ -435,8 +435,8 @@ defined_text = {
 		trigger = {
 			is_in_faction = yes
 			OR = {
-				has_completed_focus = FIN_join_the_comintern
-				has_completed_focus = FIN_united_under_the_north_star
+				always = no
+				always = no
 				is_in_faction_with = SOV
 				is_faction_leader = yes
 			}
@@ -453,7 +453,7 @@ defined_text = {
 	name = GetBalticOrNordic
 	text = {
 		trigger = {
-			FIN = { has_completed_focus = FIN_keepers_of_the_north }
+			FIN = { always = no }
 		}
 		localization_key = AAT_finland_diplomacy_nordic
 	}

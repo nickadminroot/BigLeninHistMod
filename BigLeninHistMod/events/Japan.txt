@@ -21,7 +21,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
+					always = no
 				}
 			}
 			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
@@ -43,7 +43,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					CHI = {
@@ -60,8 +60,8 @@ country_event = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -104,7 +104,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					SHX = {
@@ -121,8 +121,8 @@ country_event = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -165,7 +165,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					SND = {
@@ -182,8 +182,8 @@ country_event = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -226,7 +226,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					HBC = {
@@ -243,8 +243,8 @@ country_event = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -288,7 +288,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
+							always = no
 						}
 					}
 					XIC = {
@@ -305,8 +305,8 @@ country_event = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
-							has_completed_focus = MAN_assertiveness
-							has_completed_focus = MAN_tsr_assertiveness
+							always = no
+							always = no
 						}
 					}
 				}
@@ -338,7 +338,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
+					always = no
 				}
 			}
 			

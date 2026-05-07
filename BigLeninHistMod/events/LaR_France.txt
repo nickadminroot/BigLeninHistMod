@@ -340,7 +340,7 @@ country_event = {
 		original_tag = FRA
 		NOT = {
 			has_completed_focus = FRA_ban_communism
-			has_completed_focus = FRA_ban_the_leagues
+			always = no
 		}
 		not = { has_idea = FRA_political_violence }
 		has_stability < 0.5
@@ -2939,7 +2939,7 @@ country_event = {
 		ai_chance = {
 			factor = 60
 			modifier = {
-				FRA = { has_completed_focus = FRA_form_the_popular_front }
+				FRA = { always = no }
 				factor = 0.2
 			}
 		}

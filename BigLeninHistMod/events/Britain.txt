@@ -239,7 +239,7 @@ country_event = {
 		has_war = yes
 		has_government = democratic
 		NOT = {
-			has_completed_focus = uk_scandinavian_focus
+			always = no
 		}
 		POL = { has_capitulated = yes }
 		OR = {

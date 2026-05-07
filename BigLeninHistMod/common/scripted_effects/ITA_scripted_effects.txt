@@ -186,8 +186,8 @@ ITA_missiolini_progress_in_ethiopia_success_effect = {
 	}
 	else_if = { #Second mission to succeed
 		limit = {
-			NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
-			NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
+			NOT = { always = no }
+			NOT = { always = no }
 		}
 		complete_national_focus = ITA_solid_progress
 	}
@@ -1819,7 +1819,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 			}
 			if = { #ALT-FASCIST/MONARCHIST BRANCH
 				limit = {
-					has_completed_focus = ITA_convene_the_grand_council
+					always = no
 				}
 				uncomplete_national_focus = {
 					focus = ITA_convene_the_grand_council
@@ -1837,7 +1837,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 			}
 			if = { #ETH-ITA war focus
 				limit = {
-					has_completed_focus = ITA_struggle_in_ethiopia
+					always = no
 				}
 				uncomplete_national_focus = {
 					focus = ITA_struggle_in_ethiopia
@@ -1857,7 +1857,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 		else = { #Going MONARCHIST
 			if = { #BALBO BRANCH
 				limit = {
-					has_completed_focus = ITA_italo_balbo_focus
+					always = no
 				}
 				uncomplete_national_focus = {
 					focus = ITA_italo_balbo_focus
@@ -1866,7 +1866,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 			}
 			else_if = { #GRANDI BRANCH
 				limit = {
-					has_completed_focus = ITA_dino_grandi_focus
+					always = no
 				}
 				uncomplete_national_focus = {
 					focus = ITA_dino_grandi_focus
@@ -1884,7 +1884,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 			}
 			if = { #ETH-ITA war focus
 				limit = {
-					has_completed_focus = ITA_the_abyssinian_fiasco
+					always = no
 				}
 				uncomplete_national_focus = {
 					focus = ITA_the_abyssinian_fiasco
@@ -2686,13 +2686,13 @@ ITA_set_special_characters_as_fascist_effect = {
 	#Promote appropriate Duce
 	if = {
 		limit = {
-			has_completed_focus = ITA_italo_balbo_focus
+			always = no
 		}
 		ITA_italo_balbo = { promote_character = yes }
 	}
 	else_if = {
 		limit = {
-			has_completed_focus = ITA_dino_grandi_focus
+			always = no
 		}
 		ITA_dino_grandi = { promote_character = yes }
 	}
@@ -2702,7 +2702,7 @@ ITA_set_special_characters_as_fascist_effect = {
 
 	if = {
 		limit = {
-			NOT = { has_completed_focus = ITA_italo_balbo_focus }
+			NOT = { always = no }
 		}
 		ITA_italo_balbo = {
 			if = {
@@ -2725,7 +2725,7 @@ ITA_set_special_characters_as_fascist_effect = {
 	}
 	if = {
 		limit = {
-			NOT = { has_completed_focus = ITA_dino_grandi_focus }
+			NOT = { always = no }
 		}
 		ITA_dino_grandi = {
 			if = {
@@ -2792,7 +2792,7 @@ ITA_set_special_characters_as_monarchist_effect = {
 
 	if = {
 		limit = {
-			NOT = { has_completed_focus = ITA_italo_balbo_focus }
+			NOT = { always = no }
 		}
 		ITA_italo_balbo = {
 			if = {
@@ -2815,7 +2815,7 @@ ITA_set_special_characters_as_monarchist_effect = {
 	}
 	if = {
 		limit = {
-			NOT = { has_completed_focus = ITA_dino_grandi_focus }
+			NOT = { always = no }
 		}
 		ITA_dino_grandi = {
 			if = {
@@ -2888,8 +2888,8 @@ ITA_civil_war_deal_with_militias = {
 	if = {
 		limit = {
 			OR = {
-				has_completed_focus = ITA_organize_strikes_in_the_north
-				has_completed_focus = ITA_the_southern_farmlands
+				always = no
+				always = no
 			}
 		}
 		capital_scope = {
@@ -2918,7 +2918,7 @@ ITA_start_anti_fascist_civil_war = { #The one triggered via focus
 
 	if = {
 		limit = {
-			has_completed_focus = ITA_organize_strikes_in_the_north
+			always = no
 		}
 		every_owned_state = {
 			limit = {
@@ -2937,7 +2937,7 @@ ITA_start_anti_fascist_civil_war = { #The one triggered via focus
 	}
 	else_if = {
 		limit = {
-			has_completed_focus = ITA_the_southern_farmlands
+			always = no
 		}
 		every_owned_state = {
 			limit = {
@@ -2995,7 +2995,7 @@ ITA_start_anti_fascist_civil_war = { #The one triggered via focus
 
 	if = {
 		limit = {
-			has_completed_focus = ITA_unite_the_opposition
+			always = no
 		}
 		start_civil_war = {
 			ideology = fascism
@@ -3098,7 +3098,7 @@ ITA_anti_fascist_civil_war_deal_with_fascist_side = {
 		#DAMAGE FROM ANTIFA FOCUSES
 		if = {
 			limit = {
-				ROOT = { has_completed_focus = ITA_organize_strikes_in_the_north }
+				ROOT = { always = no }
 			}
 			set_temp_variable = { temp_targets_index = 0 }
 			while_loop_effect = {
@@ -3168,7 +3168,7 @@ ITA_anti_fascist_civil_war_deal_with_fascist_side = {
 		}
 		else_if = {
 			limit = {
-				ROOT = { has_completed_focus = ITA_the_southern_farmlands }
+				ROOT = { always = no }
 			}
 			set_temp_variable = { temp_targets_index = 0 }
 			while_loop_effect = {
@@ -4565,7 +4565,7 @@ ITA_promote_umberto_to_country_leader = {
 	}
 	else_if = {
 		limit = {
-			has_completed_focus = ITA_democratic_king
+			always = no
 		}
 		add_country_leader_role = {
 			character =  ITA_prince_umberto

@@ -181,7 +181,7 @@ ITA_stresa_front = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_ratify_the_stresa_front
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -206,7 +206,7 @@ ITA_stresa_front_ENG_FRA = {
 	}
 	enable = {
 		ITA = {
-			has_completed_focus = ITA_ratify_the_stresa_front
+			always = no
 		}
 	}
 	abort = {
@@ -350,7 +350,7 @@ ITA_anti_uk_war_goals = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_war_with_the_uk
+		always = no
 		country_exists = ENG
 	}
 	abort = {
@@ -417,7 +417,7 @@ ITA_romania_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_potential_allies_in_the_balkans
+		always = no
 		country_exists = ROM
 	}
 	abort = {
@@ -441,7 +441,7 @@ ITA_bulgaria_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_potential_allies_in_the_balkans
+		always = no
 		country_exists = BUL
 	}
 	abort = {
@@ -465,7 +465,7 @@ ITA_yugoslavia_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_potential_allies_in_the_balkans
+		always = no
 		country_exists = YUG
 	}
 	abort = {
@@ -489,7 +489,7 @@ ITA_greece_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_befriend_greece
+		always = no
 		country_exists = GRE
 	}
 	abort = {
@@ -513,7 +513,7 @@ ITA_turkey_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_befriend_turkey
+		always = no
 		country_exists = TUR
 	}
 	abort = {
@@ -537,7 +537,7 @@ ITA_portugal_ally = {
 		original_tag = ITA
 	}
 	enable = {
-		has_completed_focus = ITA_befriend_portugal
+		always = no
 		country_exists = POR
 	}
 	abort = {
@@ -1473,7 +1473,7 @@ ITA_communists_downplay_ethiopian_theatre = {
 			ITA_is_communist_ai = yes
 			ITA_is_socialist_ai = yes
 		}
-		NOT = { has_completed_focus = ITA_defy_the_duce }
+		NOT = { always = no }
 	}
 	abort = {
 		NOT = { has_war_with = ETH }
@@ -1644,7 +1644,7 @@ ITA_prepare_british_invasion = {
 		NOT = {	has_war_with = ENG }
 		OR = {
 			focus_progress = { focus = ITA_war_with_the_uk progress > 0.1}
-			has_completed_focus = ITA_war_with_the_uk
+			always = no
 		}
 	}
 

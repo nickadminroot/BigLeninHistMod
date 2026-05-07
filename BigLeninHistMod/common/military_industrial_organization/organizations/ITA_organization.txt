@@ -60,7 +60,7 @@ ITA_fiat_organization = {
 		if = {
 			limit = { FROM = { original_tag = GRE } }
 			FROM = {
-				has_completed_focus = GRE_rapprochement_with_the_italians
+				always = no
 			}
 		}
 		if = {
@@ -87,7 +87,7 @@ ITA_fiat_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BRA_italian_trucks
+				always = no
 			}
 		}
 	}
@@ -791,7 +791,7 @@ ITA_fiat_aviazione_organization = {
 		if = {
 			limit = { FROM = { original_tag = BRA } }
 			FROM = { 
-				has_completed_focus = BRA_italian_aircraft
+				always = no
 			} 
 		}		
 	}
@@ -1114,7 +1114,7 @@ ITA_officine_meccaniche_organization = {
 	
 	available = {
 		FROM = {
-			has_completed_focus = ITA_new_ricostruzione_industriale
+			always = no
 		}
 	}
 
@@ -1169,7 +1169,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1198,7 +1198,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1225,7 +1225,7 @@ ITA_officine_meccaniche_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 			}
 		}
 
@@ -1455,7 +1455,7 @@ ITA_ansaldo_train_organization = {
 		
 		available = {
 			FROM = {
-				has_completed_focus = ITA_new_ricostruzione_industriale
+				always = no
 				has_completed_focus = ITA_strengthen_northern_industry
 			}
 		}

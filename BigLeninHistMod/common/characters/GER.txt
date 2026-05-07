@@ -67,7 +67,7 @@ characters = {
 			}
 			# He is meant to be quite hidden since he is an easter-egg for the most part
 			visible = {
-				has_completed_focus = GER_expatriate_the_communists_ww
+				always = no
 				has_country_flag = GER_strasserism_relevant_in_germany_flag
 			}
 			available = {
@@ -379,7 +379,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -447,13 +447,13 @@ characters = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_the_monarchy_compromise_ww
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
+					always = no
 				}
 			}
 			available = {
 				not_already_hired_except_as = army_chief
-				has_completed_focus = GER_prussian_artillery
+				always = no
 			}
 			traits = {
 				army_chief_army_high_command
@@ -547,9 +547,9 @@ characters = {
 				base = 8
 				modifier = {
 					factor = 0
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 					NOT = {
-						has_completed_focus = GER_the_peoples_victory
+						always = no
 					}
 				}
 			}
@@ -1082,7 +1082,7 @@ characters = {
 			legacy_id = -1
 
 			visible = {
-				has_completed_focus = GER_re_form_the_freikorps
+				always = no
 			}
 		}
 	}
@@ -1103,7 +1103,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 3
 			visible = {
-				has_completed_focus = GER_oppose_hitler_ww
+				always = no
 				NOT = {
 					has_government = communism
 				}
@@ -1294,7 +1294,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1315,7 +1315,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1336,7 +1336,7 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1855,7 +1855,7 @@ characters = {
 				always = no #MM: Part of Inner Circle.
 				has_government = fascism
 				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			traits = {
@@ -1881,7 +1881,7 @@ characters = {
 			visible = {
 				has_government = fascism
 				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			traits = {
@@ -2217,7 +2217,7 @@ characters = {
 				OR = {
 					has_completed_focus = GER_rocketry_innovations
 					has_completed_focus = GER_wunderwaffe
-					has_completed_focus = GER_glorious_mechanical_machinations
+					always = no
 				}
 			}
 			traits = {
@@ -2291,7 +2291,7 @@ characters = {
 					NOT = {
 						OR = {
 							has_completed_focus = GER_heed_von_neuraths_concerns
-							has_completed_focus = GER_oppose_hitler_ww
+							always = no
 						}
 					}
 				}
@@ -2335,7 +2335,7 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = GER_reorganize_the_wehrmacht
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 				}
 			}
@@ -2481,8 +2481,8 @@ characters = {
 				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 			}
@@ -2573,7 +2573,7 @@ characters = {
 				always = no #MM: Part of Inner Circle.
 				has_government = fascism
 				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			traits = {
@@ -2613,7 +2613,7 @@ characters = {
 				always = no #MM: Part of Inner Circle.
 				has_government = fascism
 				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			on_add = {
@@ -2655,7 +2655,7 @@ characters = {
 				always = no #MM: Part of Inner Circle.
 				has_government = fascism
 				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			ai_will_do = {
@@ -2833,7 +2833,7 @@ characters = {
 				}
 				visible = {
 					NOT = {
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 				}
 				available = {
@@ -2864,11 +2864,11 @@ characters = {
 				has_intelligence_agency = yes
 				NOT = { 
 					has_completed_focus = GER_reorganize_secret_services
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			visible = {
-				NOT = { has_completed_focus = GER_start_the_proletarian_revolution }
+				NOT = { always = no }
 			}
 			traits = {
 				head_of_the_abwehr
@@ -2905,10 +2905,10 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_oppose_hitler 
+					always = no 
 				}
 				else = {
-					has_completed_focus = GER_oppose_hitler_ww 
+					always = no 
 				}
 			}
 			traits = {
@@ -2946,7 +2946,7 @@ characters = {
 							has_completed_focus = GER_remilitarize_the_rhineland
 						}
 					}
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			available = {
@@ -2956,12 +2956,12 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_revive_the_kaiserreich 
+					always = no 
 				}
 				else = {
 					OR = {
-						has_completed_focus = GER_revive_the_kaiserreich_ww  
-						has_completed_focus = COG_invite_german_kasierist_exiles 
+						always = no  
+						always = no 
 					}
 				}
 			}
@@ -3004,7 +3004,7 @@ characters = {
 							has_completed_focus = GER_remilitarize_the_rhineland
 						}
 					}
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			available = {
@@ -3014,13 +3014,13 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_revive_the_kaiserreich 
+					always = no 
 				}
 				else = {
 					OR = {
-						has_completed_focus = GER_revive_the_kaiserreich_ww  
-						has_completed_focus = COG_invite_german_kasierist_exiles 
-						has_completed_focus = GER_strive_for_conservative_values 
+						always = no  
+						always = no 
+						always = no 
 					}
 				}
 			}
@@ -3053,9 +3053,9 @@ characters = {
 						has_government = fascism
 						has_completed_focus = GER_remilitarize_the_rhineland
 					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
+					always = no
+					always = no
 				}
 			}
 			available = {
@@ -3065,10 +3065,10 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					always = no 
 				}
 				else = {
-					has_completed_focus = GER_re_establish_free_elections_ww
+					always = no
 				}
 			}
 			traits = {
@@ -3099,9 +3099,9 @@ characters = {
 						has_government = fascism
 						has_completed_focus = GER_remilitarize_the_rhineland
 					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
+					always = no
+					always = no
 				}
 			}
 			available = {
@@ -3111,10 +3111,10 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					always = no 
 				}
 				else = {
-					has_completed_focus = GER_re_establish_free_elections_ww
+					always = no
 				}
 			}
 			traits = {
@@ -3151,9 +3151,9 @@ characters = {
 						has_government = fascism
 						has_completed_focus = GER_remilitarize_the_rhineland
 					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
+					always = no
+					always = no
 				}
 			}
 			available = {
@@ -3163,10 +3163,10 @@ characters = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					always = no 
 				}
 				else = {
-					has_completed_focus = GER_re_establish_free_elections_ww
+					always = no
 				}
 			}
 			traits = {
@@ -3285,7 +3285,7 @@ characters = {
 			legacy_id = -1
 
 			visible = {
-				has_completed_focus = GER_re_form_the_freikorps
+				always = no
 			}
 		}
 		advisor = {
@@ -3298,13 +3298,13 @@ characters = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_start_the_proletarian_revolution
-					has_completed_focus = GER_the_monarchy_compromise_ww
+					always = no
+					always = no
 				}
 			}
 			available = {
 				has_government = neutrality
-				has_completed_focus = GER_re_form_the_freikorps
+				always = no
 			}
 			traits = {
 				GER_freikorps_commander
@@ -3343,7 +3343,7 @@ characters = {
 						has_government = fascism
 						has_completed_focus = GER_remilitarize_the_rhineland
 					}
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			available = {
@@ -3377,11 +3377,11 @@ characters = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			available = {
-				has_completed_focus = GER_monarchist_sentiment
+				always = no
 			}
 			traits = {
 				GER_monarchist_jurist
@@ -3408,11 +3408,11 @@ characters = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 				}
 			}
 			available = {
-				has_completed_focus = GER_monarchist_sentiment
+				always = no
 			}
 			traits = {
 				GER_minister_of_agriculture
@@ -3527,7 +3527,7 @@ characters = {
 					NOT = {
 						OR = {
 							has_completed_focus = GER_remilitarize_the_rhineland
-							has_completed_focus = GER_monarchist_sentiment
+							always = no
 						}
 					}
 				}
@@ -3569,17 +3569,17 @@ characters = {
 						has_government = fascism
 						has_completed_focus = GER_remilitarize_the_rhineland
 					}
-					has_completed_focus = GER_revive_the_kaiserreich_ww
+					always = no
 				}
 			}
 			available = {
 				is_country_leader = no
 				OR = {
-					has_completed_focus = GER_start_the_proletarian_revolution
+					always = no
 					has_government = communism
 				}
 				NOT = {
-					has_completed_focus = GER_revive_the_kaiserreich_ww
+					always = no
 				}
 			}
 			traits = {
@@ -3612,12 +3612,12 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 			}
 			available = {
-				has_completed_focus = GER_formalize_the_intelligence_wing
+				always = no
 			}
 
 			traits = {
@@ -3650,12 +3650,12 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 			}
 			available = {
-				has_completed_focus = GER_legacy_of_the_spartacus_league
+				always = no
 			}
 
 			traits = {
@@ -3695,7 +3695,7 @@ characters = {
 							has_government = neutrality
 							has_government = democratic
 						}
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 			}
@@ -3740,7 +3740,7 @@ characters = {
 							has_government = neutrality
 							has_government = democratic
 						}
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 			}
@@ -3778,12 +3778,12 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 			}
 			available = {
-				has_completed_focus = GER_start_the_proletarian_revolution
+				always = no
 			}
 
 			traits = {

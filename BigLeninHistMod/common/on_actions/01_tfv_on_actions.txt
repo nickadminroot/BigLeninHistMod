@@ -12,7 +12,7 @@ on_actions = {
 						has_government = fascism
 					}
 					AST = {
-						has_completed_focus = AST_support_indonesian_uprising
+						always = no
 					}
 				}
 				AST = {

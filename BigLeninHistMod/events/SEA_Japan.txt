@@ -4436,7 +4436,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4530,7 +4530,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4620,7 +4620,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4737,7 +4737,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -4831,7 +4831,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -4921,7 +4921,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -9538,7 +9538,7 @@ country_event = {
 		
 		# So that you are going down a branch that actually has the specified focus 
 		OR = {
-			has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			always = no
 			has_completed_focus = JAP_sea_purge_the_kodoha_faction
 		}
 
@@ -10005,8 +10005,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
-					has_completed_focus = JAP_revoke_the_peace_preservation_law
+					always = no
+					always = no
 				}
 			}
 			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
@@ -10029,8 +10029,8 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					CHI = {
@@ -10048,8 +10048,8 @@ country_event = {
 						is_subject_of = ROOT
 						NOT = {
 							OR = {
-								has_completed_focus = MAN_assertiveness
-								has_completed_focus = MAN_tsr_assertiveness
+								always = no
+								always = no
 							}
 						}
 					}
@@ -10079,8 +10079,8 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					613 = {
@@ -11977,7 +11977,7 @@ country_event = {
 		has_civil_war = no
 		has_war = yes
 
-		has_completed_focus = JAP_crush_the_internal_factions
+		always = no
 
 		any_core_state = {
 			JAP_is_home_islands_state = yes
@@ -12039,7 +12039,7 @@ country_event = {
 
 		has_civil_war = no
 
-		has_completed_focus = JAP_mitsumasa_yonai_focus
+		always = no
 
 		JAP_army_faction_is_tier_4 = yes
 

@@ -101,7 +101,7 @@ USA_congress = {
 			}
 		}
 		visible = {
-			has_completed_focus = USA_empower_the_huac
+			always = no
 		}
 		cost = 10
 		ai_will_do = {
@@ -121,7 +121,7 @@ USA_congress = {
 		available = {
 			has_government = democratic
 		}
-		visible = { has_completed_focus = USA_ally_with_the_silver_shirts }
+		visible = { always = no }
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -168,7 +168,7 @@ USA_congress = {
 				check_variable = { representatives_support < representatives_total }
 			}
 		}
-		visible = { has_completed_focus = USA_income_tax_reform }
+		visible = { always = no }
 		cost = 0
 		ai_will_do = {
 			factor = 1
@@ -533,7 +533,7 @@ USA_congress = {
 				not = { is_core_of = ROOT }
 				is_claimed_by = ROOT
 			}
-			has_completed_focus = USA_reintegration
+			always = no
 		}
 		ai_will_do = {
 			factor = 1	
@@ -571,7 +571,7 @@ USA_congress = {
 
 		}
 		visible = {
-			has_completed_focus = USA_union_representation_act
+			always = no
 		}
 		days_re_enable = 180
 		cost = 50

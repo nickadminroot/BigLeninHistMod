@@ -279,7 +279,7 @@ form_nordic_league_category = {
 				original_tag = KAR
 				AND = {
 					original_tag = EST
-					has_completed_focus = EST_form_scandinavia
+					always = no
 				}
 			}
 			NOT = { has_country_flag = form_nordic_nation_flag }
@@ -1217,8 +1217,8 @@ form_austria_hungary_category = {
 		visible = {
 			tag = HUN
 			OR = {
-				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-				has_completed_focus = wuw_HUN_renovato_imperii
+				always = no
+				always = no
 			}
 			NOT = { has_global_flag = reintegrate_the_empire_flag }
 		}
@@ -1684,8 +1684,8 @@ form_baltic_federation_category = {
 			}
 			NOT = { has_global_flag = form_baltic_federation_flag }
 			NOT = { has_cosmetic_tag = LIVONIA }
-			NOT = { has_completed_focus = LIT_claim_livonia_monarchy }
-			NOT = { has_completed_focus = LIT_POL_union }
+			NOT = { always = no }
+			NOT = { always = no }
 		}
 
 		complete_effect = {
@@ -1933,7 +1933,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_balkans_flag }
-			has_completed_focus = TUR_reclaim_macedonia
+			always = no
 		}
 
 		complete_effect = {
@@ -2016,7 +2016,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_greece_flag }
-			has_completed_focus = TUR_reclaim_macedonia
+			always = no
 		}
 
 		complete_effect = {
@@ -2068,7 +2068,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_bosnia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2126,7 +2126,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_romania_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2190,8 +2190,8 @@ form_ottoman_empire_category = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_syria_flag }
 			OR = {
-				has_completed_focus = TUR_reclaiming_our_lost_empire
-				has_completed_focus = TUR_the_damascus_diktat
+				always = no
+				always = no
 			}
 		}
 
@@ -2247,7 +2247,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_levant_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2303,7 +2303,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_mesopotamia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2368,7 +2368,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_arabia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2442,7 +2442,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_yemen_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2503,7 +2503,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_egypt_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2565,7 +2565,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_libya_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2625,7 +2625,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_tunisia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2788,7 +2788,7 @@ form_european_union_category = {
 						ruling_only = yes
 					}
 					has_government = neutrality
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
 				}
 				AND = {
 					original_tag = AUS
@@ -2798,18 +2798,18 @@ form_european_union_category = {
 								character = HUN_otto_von_habsburg
 								ruling_only = yes
 							}
-							has_completed_focus = AUS_the_danubian_federation
+							always = no
 							is_faction_leader = yes
 						}	
 						AND = {
-							has_completed_focus = AUS_the_right_to_self_determination
+							always = no
 							has_government = democratic
 						}
 					}
 				}
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_european_confederation
+					always = no
 				}
 			}
 
@@ -5127,8 +5127,8 @@ form_roman_empire_category = {
 			NOT = { has_global_flag = form_roman_empire_flag }
 			ITA = {
 				OR = {
-					has_completed_focus = ITA_mare_nostrum_bba
-					has_completed_focus = ITA_the_catholic_dominion
+					always = no
+					always = no
 				}
 			}
 		}
@@ -7393,7 +7393,7 @@ form_byzantine_empire_category = {
 
 		available = {
 			is_subject = no
-			has_completed_focus = GRE_reviving_the_double_headed_eagle
+			always = no
 			# Greece
 			custom_trigger_tooltip = {
 				tooltip = form_country_greece_required_states_tt
@@ -7434,7 +7434,7 @@ form_byzantine_empire_category = {
 
 		visible = {
 			AND = { 
-				has_completed_focus = GRE_horror_and_fear
+				always = no
 				has_government = fascism
 			}
 			NOT = { has_global_flag = form_byzantine_empire_flag }
@@ -7614,7 +7614,7 @@ form_byzantine_empire_category = {
 		visible = {
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus" }
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 			NOT = { has_global_flag = triumph_for_the_balkans }
 		}
@@ -7755,7 +7755,7 @@ form_byzantine_empire_category = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
 				}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -7826,7 +7826,7 @@ form_byzantine_empire_category = {
 			NOT = { has_global_flag = triumph_for_middle_east }
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus"}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -7866,7 +7866,7 @@ form_byzantine_empire_category = {
 			is_subject = no
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus"}
-				has_completed_focus = GRE_reviving_the_double_headed_eagle
+				always = no
 			}
 			# French North Africa
 			controls_state = 458
@@ -7895,7 +7895,7 @@ form_byzantine_empire_category = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
 				}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -9175,12 +9175,12 @@ form_hre_category = {
 				OR = {
 					AND = {
 						original_tag = GER
-						has_completed_focus = GER_restore_the_holy_roman_empire
+						always = no
 					}
 					AND = {
 						original_tag = AUS
 						has_government = neutrality
-						has_completed_focus = AUS_legacy_of_the_empire
+						always = no
 						OR = {
 							has_country_leader = {
 								ruling_only = yes # default = yes
@@ -9702,7 +9702,7 @@ form_greater_german_state_category = {
 
 		visible = {
 			is_major = yes
-			has_completed_focus = GER_hegemony_over_europe
+			always = no
 			NOT = { has_global_flag = form_greater_proletarian_state_flag }
 		}
 
@@ -10943,7 +10943,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			# Greece
 			custom_trigger_tooltip = {
@@ -10991,14 +10991,14 @@ form_greater_greece_category = {
 			NOT = { has_global_flag = form_greater_greece_flag }
 			OR = { 
 				AND = {
-					has_completed_focus = GRE_the_modern_movement
+					always = no
 					has_country_leader = {
 						character = GRE_ioannis_metaxas
 						ruling_only = yes
 					}
 				}
 				AND = { 
-					has_completed_focus = GRE_resurrecting_the_megali_idea
+					always = no
 					NOT = { 
 						has_country_leader = {
 							character = GRE_georgios_kosmidis
@@ -11006,7 +11006,7 @@ form_greater_greece_category = {
 						}
 					}
 				}
-				has_completed_focus = GRE_prepare_for_the_great_anti_fascist_war
+				always = no
 			}
 		}
 
@@ -11098,7 +11098,7 @@ form_greater_greece_category = {
 			is_subject = no
 			AND = {
 				has_government = democratic
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 		}
 
@@ -11146,7 +11146,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 342
 			# Dodecanese
@@ -11194,7 +11194,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 805
 		}
@@ -11235,7 +11235,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 797
 		}
@@ -11279,7 +11279,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 797
 		}
@@ -11465,14 +11465,14 @@ form_macedonian_empire_category = {
 			original_tag = GRE
 			OR = {
 				AND = {
-					has_completed_focus = GRE_moulding_the_new_world_order
+					always = no
 					has_country_leader = {
 						character = GRE_george_mercouris
 						ruling_only = yes
 					}
 				}
 				AND = {
-					has_completed_focus = GRE_protectors_of_the_mediterranean
+					always = no
 					has_country_leader = {
 						character = GRE_king_george_ii
 						ruling_only = yes
@@ -11786,7 +11786,7 @@ form_turan_category = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_turanist_ambition
+			always = no
 			NOT = { has_global_flag = form_turan_flag }
 		}
 
@@ -11937,13 +11937,13 @@ form_turan_category = {
 			is_subject = no
 			AND = {
 				has_government = fascism
-				has_completed_focus = TUR_turanist_ambition
+				always = no
 				has_idea = TUR_nihal_atsiz
 			}
 		}
 
 		visible = {
-			has_completed_focus = TUR_turanist_ambition
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12009,7 +12009,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_subdue_the_magyars
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12094,7 +12094,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_cin_turkleri
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12187,7 +12187,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_crowning_ourselves_with_the_fin_ugor
+			always = no
 		}
 
 		fire_only_once = yes
@@ -13736,7 +13736,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_restore_the_empire_of_axum
+			always = no
 			NOT = { has_global_flag = form_axum_flag }
 		}
 
@@ -13831,7 +13831,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_the_one_true_heir_of_solomon
+			always = no
 			NOT = { has_global_flag = form_empire_of_solomon_flag }
 		}
 
@@ -13932,7 +13932,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_jah
+			always = no
 			NOT = { has_global_flag = form_empire_of_zion_flag }
 		}
 
@@ -14000,7 +14000,7 @@ form_east_africa_category = {
 				AND = {
 					has_dlc = "Gotterdammerung"
 					original_tag = COG # Congo
-					has_completed_focus = COG_unify_east_africa
+					always = no
 				}
 			}
 			NOT = { has_global_flag = form_east_africa_flag }
@@ -14322,7 +14322,7 @@ form_horn_of_africa_africa_category = {
 				limit = {
 					original_tag = ETH
 				}
-				has_completed_focus = ETH_develop_the_horn_of_africa
+				always = no
 			}
 			else_if = {
 				limit = {
@@ -14337,7 +14337,7 @@ form_horn_of_africa_africa_category = {
 						original_tag = GBA
 					}
 				}
-				has_completed_focus = HOA_proclaim_east-african_hegemony
+				always = no
 			}
 			OR = {
 				original_tag = ETH # Ethiopia
@@ -14363,7 +14363,7 @@ form_horn_of_africa_africa_category = {
 				limit = {
 					original_tag = ETH
 				}
-				has_completed_focus = ETH_develop_the_horn_of_africa
+				always = no
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -14394,7 +14394,7 @@ form_horn_of_africa_africa_category = {
 						original_tag = GBA
 					}
 				}
-				has_completed_focus = HOA_proclaim_east-african_hegemony
+				always = no
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -14983,12 +14983,12 @@ form_sweden_hungary_category = {
 			
 			NOT = { has_global_flag = sweden_hungary_formed_flag }
 
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 			
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_elect_a_democratic_king # They have a Swedish King
+			always = no # They have a Swedish King
 			has_country_flag = HUN_carl_wilhelm_took_absolute_control
 			custom_trigger_tooltip = {
 				tooltip = sweden_hungary_required_states

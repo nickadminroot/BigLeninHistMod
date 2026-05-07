@@ -133,7 +133,7 @@ country_event = {
 							id = DEN_balance_of_power
 							value < -0.59 
 						}
-						has_completed_focus = DEN_side_with_unions
+						always = no
 					}
 				}
 				add_ideas = strikes_1 

@@ -1202,7 +1202,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				has_completed_focus = SOV_curtailment_of_the_collective_farms 
+				always = no 
 			}
 		}
 		
@@ -2315,7 +2315,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = SOV_the_path_of_marxism_leninism
-				has_completed_focus = SOV_womens_fascist_movement
+				always = no
 			}
 		}
 		
@@ -6655,7 +6655,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_completed_focus = SOV_depoliticize_the_military
+			always = no
 		}
 		
 		search_filters = {}
@@ -8700,8 +8700,8 @@ focus_tree = {
 			has_civil_war = no
 			OR = {
 				has_completed_focus = SOV_the_centre
-				has_completed_focus = SOV_the_left_opposition
-				has_completed_focus = SOV_the_right_opposition
+				always = no
+				always = no
 			}
 			if = {
 				limit = {
@@ -8724,7 +8724,7 @@ focus_tree = {
 				else = {
 					if = {
 						limit = {
-							has_completed_focus = SOV_covert_support_for_spanish_poum
+							always = no
 						}
 						country_exists = SPC
 						NOT = { has_war_with = SPC }
@@ -8758,8 +8758,8 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
-					has_completed_focus = SOV_covert_support_for_spanish_poum
-					has_completed_focus = SOV_coup_detat
+					always = no
+					always = no
 					has_global_flag = SPR_anarchist_uprising_flag
 					country_exists = SPC
 					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }

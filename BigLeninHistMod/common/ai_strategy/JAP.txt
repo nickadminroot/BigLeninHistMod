@@ -374,7 +374,7 @@ northern_expansion = {
 	enable = {
 		OR = {
 			has_completed_focus = JAP_kantokuen
-			has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
+			always = no
 		}
 		country_exists = SOV
 	}
@@ -824,7 +824,7 @@ germany_ally = {
 		original_tag = JAP
 	}
 	enable = {
-		has_completed_focus = JAP_technological_exchange
+		always = no
 		country_exists = GER
 	}
 	abort = {

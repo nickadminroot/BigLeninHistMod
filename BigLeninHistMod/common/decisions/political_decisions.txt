@@ -19,7 +19,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -57,7 +57,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -308,7 +308,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -351,7 +351,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -478,7 +478,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -524,7 +524,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -592,7 +592,7 @@ fascism_on_the_rise = {
 			OR = {
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_expatriate_the_communists_ww
+					always = no
 					has_country_flag = GER_strasserism_relevant_in_germany_flag
 				}
 				check_has_focus_tree_to_switch_to_fascism = yes
@@ -1961,7 +1961,7 @@ political_actions = {
 					has_dlc = "Gotterdammerung"
 					original_tag = AUS
 				}
-				NOT = { has_completed_focus = AUS_reinstate_the_imperial_council }
+				NOT = { always = no }
 			}
 		}
 
@@ -1992,9 +1992,9 @@ political_actions = {
 					original_tag = AUS
 				}
 				OR = {
-					has_completed_focus = AUS_clamp_down_on_dnsap
-					has_completed_focus = AUS_ban_dnsap
-					has_completed_focus = AUS_rebuild_democratic_systems
+					always = no
+					always = no
+					always = no
 				}
 			}
 			else = {
@@ -2021,13 +2021,13 @@ political_actions = {
 				add = 10
 				tag = AUS
 				fascism > 0.45
-				GER = { has_completed_focus = GER_reestablish_free_elections }
+				GER = { always = no }
 			}
 			modifier = {
 				add = 10
 				tag = AUS
 				fascism > 0.45
-				has_completed_focus = liberty_ethos
+				always = no
 			}
 			modifier = {
 				add = 50
@@ -2049,7 +2049,7 @@ political_actions = {
 			modifier = {
 				add = 10
 				original_tag = ITA
-				has_completed_focus = ITA_convene_the_grand_council
+				always = no
 				OR = {
 					ITA_is_monarchist_ai = yes
 					ITA_is_christian_democracy_ai = yes
@@ -2058,7 +2058,7 @@ political_actions = {
 			modifier = {
 				add = 40
 				original_tag = ITA
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
 			}
 		}
     }
@@ -2268,7 +2268,7 @@ political_actions = {
 					has_dlc = "Gotterdammerung"
 					original_tag = AUS
 				}
-				NOT = { has_completed_focus = AUS_reinstate_the_imperial_council }
+				NOT = { always = no }
 			}
 		}
 
@@ -2631,7 +2631,7 @@ political_actions = {
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
-					has_completed_focus = TUR_privatize_the_anadolu_agency
+					always = no
 				}
 			}
 			if = {
@@ -2738,7 +2738,7 @@ political_actions = {
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
-					has_completed_focus = TUR_privatize_the_anadolu_agency
+					always = no
 				}
 			}
 			if = {
@@ -2794,21 +2794,21 @@ political_actions = {
 				add = 1
 				has_dlc = "No Compromise, No Surrender"
 				original_tag = CHI
-				NOT = { has_completed_focus = CHI_end_military_primacy }
+				NOT = { always = no }
 				fascism > 0.1
 			}
 			modifier = {
 				add = 1.5
 				has_dlc = "No Compromise, No Surrender"
 				original_tag = CHI
-				NOT = { has_completed_focus = CHI_end_military_primacy }
+				NOT = { always = no }
 				communism > 0.1
 			}
 			modifier = {
 				add = 2.5
 				has_dlc = "No Compromise, No Surrender"
 				original_tag = CHI
-				NOT = { has_completed_focus = CHI_end_military_primacy }
+				NOT = { always = no }
 				communism > 0.25
 			}
 		}

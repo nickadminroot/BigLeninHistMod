@@ -50,8 +50,8 @@ country_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					has_completed_focus = ENG_organize_the_blackshirts
-					has_completed_focus = ENG_concessions_to_the_trade_unions
+					always = no
+					always = no
 					has_completed_focus = ENG_steady_as_she_goes
 				}
 			}
@@ -68,11 +68,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_organize_the_blackshirts
+				always = no
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_concessions_to_the_trade_unions
+				always = no
 			}
 			modifier = {
 				factor = 0
@@ -127,8 +127,8 @@ country_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					has_completed_focus = ENG_organize_the_blackshirts
-					has_completed_focus = ENG_concessions_to_the_trade_unions
+					always = no
+					always = no
 					has_completed_focus = ENG_steady_as_she_goes
 				}
 			}
@@ -145,11 +145,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_organize_the_blackshirts
+				always = no
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_concessions_to_the_trade_unions
+				always = no
 			}
 			modifier = {
 				factor = 0
@@ -485,7 +485,7 @@ country_event = {
 				limit = {
 					RAJ = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
 					NOT ={
-						has_completed_focus = RAJ_great_depression_price_controls
+						always = no
 					}
 				}
 
@@ -1965,7 +1965,7 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		has_completed_focus = ENG_organize_the_blackshirts
+		always = no
 		NOT = { has_government = fascism }
 		has_stability < 0.5
 	}
@@ -5087,10 +5087,10 @@ country_event = {
 		NOT = { has_country_flag = RAJ_civil_war }
 		NOT = {
 			OR = {
-				ENG = { has_completed_focus = ENG_the_three_nation_solution }
+				ENG = { always = no }
 				AND = {
 					has_dlc = "Together for Victory"
-					has_completed_focus = RAJ_two_nation_theory
+					always = no
 				}
 			}
 		}
@@ -5780,7 +5780,7 @@ country_event = {
 		tag = PAK
 		NOT = { country_exists = BAN }
 		NOT = { has_country_flag = PAK_civil_war }
-		NOT = { ENG = { has_completed_focus = ENG_the_three_nation_solution } }
+		NOT = { ENG = { always = no } }
 		is_subject = no
 		has_war = no
 		has_dlc = "Man the Guns"
@@ -5998,14 +5998,14 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.8
-				SOV = { has_completed_focus = SOV_liberation_of_the_european_proletariat }
+				SOV = { always = no }
 			}
 			modifier = {
 				factor = 0
 				OR = {
 					SOV = {
 						focus_progress = { focus = SOV_the_southern_thrust progress > 0 }
-						has_completed_focus = SOV_the_southern_thrust
+						always = no
 					}
 					has_war_with = SOV
 				}

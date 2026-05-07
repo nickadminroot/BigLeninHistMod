@@ -211,7 +211,7 @@ JAP_mitsubishi_heavy_industries_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -577,7 +577,7 @@ JAP_yokosuka_naval_arsenal_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -989,7 +989,7 @@ JAP_maizuru_naval_arsenal_organization = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
@@ -1363,7 +1363,7 @@ JAP_mitsubishi_kobe_shipyard_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -1568,7 +1568,7 @@ JAP_mitsubishi_organization = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
@@ -1600,7 +1600,7 @@ JAP_mitsubishi_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -2340,7 +2340,7 @@ JAP_kokura_arsenal_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -2502,7 +2502,7 @@ JAP_nissan_organization = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 		if = {
 			limit = {
@@ -2540,7 +2540,7 @@ JAP_nissan_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no
@@ -2723,7 +2723,7 @@ JAP_tokyo_automobile_industries_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = PHI_align_with_japan
+				always = no
 				if = {
 					limit = {
 						always = no

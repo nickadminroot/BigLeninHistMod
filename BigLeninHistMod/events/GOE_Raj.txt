@@ -1300,7 +1300,7 @@ country_event = {
 
 		if = {
 			limit = {
-				FROM = { has_completed_focus = RAJ_great_depression_price_controls }
+				FROM = { always = no }
 			}
 			FROM = {	
 				uncomplete_national_focus = {
@@ -1356,7 +1356,7 @@ country_event = {
         }
         if = {
         	limit = {
-        		has_completed_focus = RAJ_look_to_the_future 
+        		always = no 
         	}
 
         	429 = {
@@ -1371,7 +1371,7 @@ country_event = {
         }
         else_if = {
         	limit = {
-        		has_completed_focus = RAJ_look_to_the_past
+        		always = no
         	}
         	988 = {
         		add_extra_state_shared_building_slots = 1
@@ -1575,7 +1575,7 @@ country_event = {  #Warn about garrison not being set, hidden event
 
 		if = {
 			limit = {
-				NOT = { has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom } #Invoke itself
+				NOT = { always = no } #Invoke itself
 			}
 
 			country_event = {
@@ -2167,7 +2167,7 @@ country_event = {
 		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				if = {
 					limit = { check_variable = { RAJ_war_support_increased < 51 } }
@@ -2230,7 +2230,7 @@ country_event = {
 		}
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -2301,7 +2301,7 @@ country_event = {
 		}
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -2331,7 +2331,7 @@ country_event = {
 		}
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -2391,7 +2391,7 @@ country_event = {
 		}
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -2428,7 +2428,7 @@ country_event = {
 		}
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -2441,7 +2441,7 @@ country_event = {
 		add_political_power = -40
 
 		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
+			limit = { always = no }
 			hidden_effect = {
 				add_war_support = 0.05
 			}
@@ -3687,7 +3687,7 @@ country_event = {
 				ROOT = {
 					original_tag = RAJ
 					NOT = {
-						has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
+						always = no
 						has_completed_focus = RAJ_a_secular_state
 					}
 				}
@@ -4909,8 +4909,8 @@ country_event = {
 				if = { #DO not send event if UK is already in a path where Churchill is useless
 					limit = {
 						NOT = {
-							has_completed_focus = ENG_organize_the_blackshirts
-							has_completed_focus = ENG_concessions_to_the_trade_unions
+							always = no
+							always = no
 						}
 					}
 					country_event = GOE_RAJ_loyalist.12
@@ -4946,8 +4946,8 @@ country_event = {
 				if = { #DO not send event if UK is already in a path where Churchill is useless
 					limit = {
 						NOT = {
-							has_completed_focus = ENG_organize_the_blackshirts
-							has_completed_focus = ENG_concessions_to_the_trade_unions
+							always = no
+							always = no
 						}
 					}
 					country_event = GOE_RAJ_loyalist.12

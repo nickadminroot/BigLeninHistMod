@@ -3747,10 +3747,10 @@ SOV_manage_spanish_generals_exiled_in_ussr_effect = {
 			SOV = {
 				has_country_flag = SOV_spanish_refugee_generals_welcome_flag
 				OR = {
-					has_completed_focus = SOV_the_left_opposition
+					always = no
 					AND = {
-						has_completed_focus = SOV_the_right_opposition
-						NOT = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+						always = no
+						NOT = { always = no }
 					}
 				}
 			}
@@ -3787,7 +3787,7 @@ SOV_manage_spanish_generals_exiled_in_ussr_effect = {
 			ROOT = { tag = SPC }
 			SOV = {
 				has_country_flag = SOV_spanish_refugee_generals_welcome_flag
-				has_completed_focus = SOV_covert_support_for_spanish_poum
+				always = no
 			}
 		}
 		ROOT = { SPR_jose_rovira = { set_nationality = SOV } }
@@ -7200,7 +7200,7 @@ SOV_set_up_right_opposition_militia = {
 		# More Peasant Militia if collectivization has been reversed
 		if = {
 			limit = {
-				ROOT = { has_completed_focus = SOV_reverse_the_collectivization_process }
+				ROOT = { always = no }
 				NOT = { has_state_category = enclave }
 				NOT = { has_state_category = wasteland }
 			}
@@ -8011,21 +8011,21 @@ SOV_start_civil_war = {
 		# Load the Focus Tree
 		load_focus_tree = { tree = soviet_focus keep_completed = yes }
 		if = {
-			limit = { has_completed_focus = SOV_the_left_opposition }
+			limit = { always = no }
 			uncomplete_national_focus = { # That was Trotzky's doing, not Stalin's
 				focus = SOV_the_left_opposition
 				uncomplete_children = yes
 			}
 		}
 		if = {
-			limit = { has_completed_focus = SOV_the_right_opposition }
+			limit = { always = no }
 			uncomplete_national_focus = { # Remove all traces of Bukharin's
 				focus = SOV_the_right_opposition
 				uncomplete_children = yes
 			}
 		}
 		if = {
-			limit = { has_completed_focus = SOV_beaten_but_not_defeated }
+			limit = { always = no }
 			uncomplete_national_focus = { # Remove all traces of exiles'
 				focus = SOV_beaten_but_not_defeated
 				uncomplete_children = yes
@@ -8325,7 +8325,7 @@ SOV_start_civil_war = {
 		# Add effects to SOS
 		if = {
 			limit = {
-				GER = { has_completed_focus = GER_anti_soviet_pact }
+				GER = { always = no }
 			}
 			SOS = { add_opinion_modifier = { target = GER modifier = worse_pact_against_us } }
 		}
@@ -8379,7 +8379,7 @@ SOV_left_opposition_civil_war_start = {
 	# Modify Stability
 	if = {
 		limit = {
-			has_completed_focus = SOV_gain_support_from_party_members
+			always = no
 		}
 		add_stability = 0.1
 	}
@@ -8403,7 +8403,7 @@ SOV_left_opposition_civil_war_start = {
 
 	# Check Foreign Funds
 	if = {
-		limit = { has_completed_focus = SOV_funds_for_the_cause }
+		limit = { always = no }
 		add_timed_idea = {
 			idea = SOV_foreign_funds_idea
 			days = 365
@@ -8427,14 +8427,14 @@ SOV_right_opposition_civil_war_start = {
 	# Modify Stability
 	if = {
 		limit = {
-			has_completed_focus = SOV_gain_support_from_party_members
+			always = no
 		}
 		add_stability = 0.1
 	}
 
 	# Reverse the collectivisation process
 	if = {
-		limit = { has_completed_focus = SOV_reverse_the_collectivization_process }
+		limit = { always = no }
 		add_timed_idea = {
 			idea = SOV_support_from_farmers
 			days = 365
@@ -8601,7 +8601,7 @@ SOV_exiles_civil_war_start = {
 	# Cavalry
 	if = {
 		limit = {
-			has_completed_focus = SOV_approach_semyonov
+			always = no
 		}
 		MAN = {
 			country_event = {

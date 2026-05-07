@@ -1769,7 +1769,7 @@ ideas = {
 					has_government = democratic
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_responsible_government }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -1822,7 +1822,7 @@ ideas = {
 					has_government = fascism
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -2353,7 +2353,7 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = HUN_naval_warfare
+					always = no
 				}
 				if = {
 					limit = {
@@ -2399,7 +2399,7 @@ ideas = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = HUN_naval_warfare
+					always = no
 				}
 				if = {
 					limit = {

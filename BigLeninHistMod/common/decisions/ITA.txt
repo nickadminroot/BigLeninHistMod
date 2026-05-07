@@ -2414,7 +2414,7 @@ ITA_balance_of_power_category = {
 				ruling_only = yes
 			}
 			OR = {
-				has_completed_focus = ITA_undermine_the_duce
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2473,7 +2473,7 @@ ITA_balance_of_power_category = {
 				ruling_only = yes
 			}
 			OR = {
-				has_completed_focus = ITA_undermine_the_duce
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2543,7 +2543,7 @@ ITA_balance_of_power_category = {
 				ruling_only = yes
 			}
 			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2611,7 +2611,7 @@ ITA_balance_of_power_category = {
 				ruling_only = yes
 			}
 			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2679,7 +2679,7 @@ ITA_balance_of_power_category = {
 				ruling_only = yes
 			}
 			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2743,9 +2743,9 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
+				always = no
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2850,8 +2850,8 @@ ITA_balance_of_power_category = {
 			original_tag = ITA
 			has_civil_war = no
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
+				always = no
+				always = no
 				has_completed_focus = ITA_culto_del_duce
 			}
 		}
@@ -2951,9 +2951,9 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
+				always = no
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3019,9 +3019,9 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
+				always = no
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3087,9 +3087,9 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
+				always = no
+				always = no
+				always = no
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3156,7 +3156,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_revoke_the_acerbo_law
+			always = no
 		}
 
 		available = {
@@ -3203,7 +3203,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_power_to_the_king
+			always = no
 		}
 
 		available = {
@@ -3250,13 +3250,13 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_power_to_the_king
-			NOT = { has_completed_focus = ITA_seek_papal_support }
+			always = no
+			NOT = { always = no }
 			NOT = { has_country_flag = ITA_expanded_lateran_treaty_flag }
 		}
 
 		available = {
-			NOT = { has_completed_focus = ITA_seek_papal_support }
+			NOT = { always = no }
 			NOT = { has_country_flag = ITA_expanded_lateran_treaty_flag }
 		}
 
@@ -3286,7 +3286,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_seek_papal_support
+			always = no
 			NOT = { has_country_flag = ITA_revoked_lateran_treaty_flag }
 		}
 
@@ -3323,7 +3323,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_strengthen_the_papacy
+			always = no
 		}
 
 		available = {
@@ -3356,14 +3356,14 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_seek_papal_support
-				has_completed_focus = ITA_disband_the_blackshirts
+				always = no
+				always = no
 			}
 		}
 
 		available = {
-			has_completed_focus = ITA_seek_papal_support
-			has_completed_focus = ITA_disband_the_blackshirts
+			always = no
+			always = no
 		}
 
 		cost = 70
@@ -3432,7 +3432,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_the_popular_front
+			always = no
 		}
 
 		available = {
@@ -3465,7 +3465,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_a_leader_steps_forward
+			always = no
 		}
 
 		available = {
@@ -3504,7 +3504,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_common_ground
+			always = no
 		}
 
 		available = {
@@ -3563,7 +3563,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_italian_socialism
+			always = no
 		}
 
 		available = {
@@ -3596,7 +3596,7 @@ ITA_balance_of_power_category = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_cooperate_with_the_mafia
+			always = no
 		}
 
 		available = {
@@ -4243,7 +4243,7 @@ ITA_colonial_management_dec_cat = {
 				factor = 3
 				OR = {
 					has_completed_focus = ITA_comandante_diavolo
-					has_completed_focus = ITA_irregulars
+					always = no
 				}
 			}
 		}
@@ -4528,7 +4528,7 @@ ITA_colonial_management_dec_cat = {
 				factor = 3
 				OR = {
 					has_completed_focus = ITA_strengthen_ascari_corps
-					has_completed_focus = ITA_ascari
+					always = no
 				}
 			}
 		}
@@ -4868,7 +4868,7 @@ ITA_colonial_management_dec_cat = {
 			modifier = {
 				factor = 0
 				ETH = {
-					has_completed_focus = ETH_declare_for_italy
+					always = no
 				}
 			}
 		}
@@ -5183,7 +5183,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_abolish_the_colonies
+			always = no
 		}
 
 		available = {
@@ -5506,7 +5506,7 @@ ITA_naval_cooperation_programs_dec_cat = {
 		target_root_trigger = {
 			original_tag = ITA
 			has_civil_war = no
-			has_completed_focus = ITA_corpo_di_truppe_volontarie #It's totally ok that the decision gets unlocked even if the focus gets bypassed
+			always = no #It's totally ok that the decision gets unlocked even if the focus gets bypassed
 			NOT = { has_country_flag = ITA_ceded_aquila_class_destroyers_flag } #To prevent visible trigger to check every tick after this happens
 			OR = {
 				has_global_flag = spanish_civil_war
@@ -5663,7 +5663,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = ITA_potential_allies_in_the_balkans
+			always = no
 			is_subject = no
 		}
 
@@ -5733,7 +5733,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = ITA_potential_allies_in_the_balkans
+			always = no
 		}
 
 		allowed = {
@@ -5894,7 +5894,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = ITA_potential_allies_in_the_balkans
+			always = no
 			is_subject = no
 		}
 
@@ -6719,7 +6719,7 @@ ITA_diplomacy_balkan_decision_category = {
 
 		available = {
 			ITA = {
-				has_completed_focus = ITA_befriend_greece
+				always = no
 			}
 			any_country = {
 				controls_state = 342
@@ -6781,7 +6781,7 @@ ITA_diplomacy_balkan_decision_category = {
 
 		available = {
 			
-			has_completed_focus = ITA_befriend_greece
+			always = no
 			is_faction_leader = yes
 			is_subject = no
 			controls_state = 164
@@ -6859,7 +6859,7 @@ ITA_diplomacy_balkan_decision_category = {
 
 		available = {
 			
-			has_completed_focus = ITA_befriend_turkey
+			always = no
 			is_faction_leader = yes
 			is_subject = no
 			controls_state = 164
@@ -7367,7 +7367,7 @@ political_actions = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_power_to_the_king
+			always = no
 			has_country_leader = {
 				character = ITA_vittorio_emanuele_iii
 				ruling_only = yes
@@ -7401,7 +7401,7 @@ ITA_italian_mafia_dec_cat = {
 			}
 			OR = {
 				NOT = { original_tag = ITA }
-				has_completed_focus = ITA_crush_the_mafia
+				always = no
 			}
 		}
 		state_target = yes

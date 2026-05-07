@@ -4069,7 +4069,7 @@ focus_tree = {
 						}
 						CHI = {
 							NOT = {
-								has_completed_focus = CHI_prepare_for_a_change_in_leadership
+								always = no
 							}
 						}
 					}
@@ -5775,7 +5775,7 @@ focus_tree = {
 						}
 						OR = {
 							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+							HOL = { NOT = { always = no } }
 						}
 					}
 				}
@@ -5838,7 +5838,7 @@ focus_tree = {
 						}
 						OR = {
 							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+							HOL = { NOT = { always = no } }
 						}
 					}
 				}

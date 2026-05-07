@@ -1146,14 +1146,14 @@ ideas = {
 			available = {
 				hidden_trigger = {
 					OR = {
-						has_completed_focus = MAN_mamc
+						always = no
 						has_completed_focus = MAN_tsr_mamc
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = MAN_mamc_tt
 					OR = {
-						has_completed_focus = MAN_mamc
+						always = no
 						has_completed_focus = MAN_tsr_mamc
 					}
 				}
@@ -1183,14 +1183,14 @@ ideas = {
 			available = {
 				hidden_trigger = {
 					OR = {
-						has_completed_focus = MAN_mamc
+						always = no
 						has_completed_focus = MAN_tsr_mamc
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = MAN_mamc_tt
 					OR = {
-						has_completed_focus = MAN_mamc
+						always = no
 						has_completed_focus = MAN_tsr_mamc
 					}
 				}
@@ -1218,7 +1218,7 @@ ideas = {
 			picture = generic_air_manufacturer_1
 
 			available = {
-				has_completed_focus = MAN_mamc
+				always = no
 			}
 
 			allowed = {
@@ -1283,14 +1283,14 @@ ideas = {
 			available = {
 			hidden_trigger = {
 				OR = {
-					has_completed_focus = MAN_expand_the_railways
+					always = no
 					has_completed_focus = MAN_tsr_expand_the_railways
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = MAN_expand_the_railways_tt
 				OR = {
-					has_completed_focus = MAN_expand_the_railways
+					always = no
 					has_completed_focus = MAN_tsr_expand_the_railways
 				}
 			}
@@ -1341,28 +1341,28 @@ ideas = {
 				OR = {
 					hidden_trigger = {
 						OR = {
-							has_completed_focus = MAN_obedience
+							always = no
 							has_completed_focus = MAN_tsr_obedience
 						}
 					}
 					custom_trigger_tooltip = {
 						tooltip = MAN_manchukuo_film_association_tt
 						OR = {
-							has_completed_focus = MAN_obedience
+							always = no
 							has_completed_focus = MAN_tsr_obedience
 						}
 					}
 					hidden_trigger = {
 						OR = {
-							has_completed_focus = MAN_reform_the_civil_service
-							has_completed_focus = MAN_tsr_reform_the_civil_service
+							always = no
+							always = no
 						}
 					}
 					custom_trigger_tooltip = {
 						tooltip = MAN_manchukuo_film_association_2_tt
 						OR = {
-							has_completed_focus = MAN_reform_the_civil_service
-							has_completed_focus = MAN_tsr_reform_the_civil_service
+							always = no
+							always = no
 						}
 					}
 				}

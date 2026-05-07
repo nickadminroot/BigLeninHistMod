@@ -268,7 +268,7 @@ ideas = {
 		NOR_flexible_officers_academy_spirit = {
 			ledger = army
 			visible = { 
-				has_completed_focus = NOR_officers_academy
+				always = no
 			}
 			available = { 
 			}
@@ -292,8 +292,8 @@ ideas = {
 			ledger = army
 			available = { 
 				NOT = {
-					has_completed_focus = CHI_close_whampoa
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
 				}
 			}
 			visible = { 
@@ -310,9 +310,9 @@ ideas = {
 			}
 			allowed_to_remove = {
 				OR = {
-					has_completed_focus = CHI_end_military_primacy
-					has_completed_focus = CHI_close_whampoa 
-					has_completed_focus = CHI_focus_on_meritocratic_principles
+					always = no
+					always = no 
+					always = no
 				}
 			}
 			ai_will_do = {
@@ -402,7 +402,7 @@ ideas = {
 						has_dlc = "Graveyard of Empires"
 					}
 					OR = {
-						has_completed_focus = AFG_reintroduce_war_elephants
+						always = no
 						has_doctrine = grand_battleplan
 						has_doctrine = mounted_infantry
 					}
@@ -836,7 +836,7 @@ ideas = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CZE_revive_the_czechoslovak_legion_dynamic
+					always = no
 				}
 			}
 			modifier = {

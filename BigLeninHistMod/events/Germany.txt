@@ -165,8 +165,8 @@ country_event = {
 				factor = 0
 				tag = JAP
 				OR = {
-					has_completed_focus = JAP_the_unthinkable_option
-					has_completed_focus = JAP_return_of_the_manchukuo_exiles
+					always = no
+					always = no
 				}
 			}
 			modifier = {
@@ -1965,7 +1965,7 @@ country_event = {
 				limit = {
 					ITA = {
 						OR = {
-							has_completed_focus = ITA_guarantee_austrian_independence
+							always = no
 							has_guaranteed = AUS
 						}
 					}
@@ -1988,9 +1988,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
-				NOT = { HUN = { has_completed_focus = HUN_protect_austria } }
-				NOT = { ITA = { has_completed_focus = ITA_guarantee_austrian_independence } }
-				NOT = { CZE = { has_completed_focus = CZE_assist_austria } }
+				NOT = { HUN = { always = no } }
+				NOT = { ITA = { always = no } }
+				NOT = { CZE = { always = no } }
 				NOT = {
 					strength_ratio = {
 						tag = GER
@@ -2017,7 +2017,7 @@ country_event = {
 				add = 100
 				HUN = {
 					OR = {
-						has_completed_focus = HUN_protect_austria
+						always = no
 						is_in_faction_with = AUS
 					}
 				}
@@ -2026,7 +2026,7 @@ country_event = {
 				add = 100
 				CZE = {
 					OR = {
-						has_completed_focus = CZE_assist_austria
+						always = no
 						is_in_faction_with = AUS
 					}
 				}
@@ -2035,7 +2035,7 @@ country_event = {
 				add = 100
 				ITA = {
 					OR = {
-						has_completed_focus = ITA_guarantee_austrian_independence
+						always = no
 						is_in_faction_with = AUS
 					}
 				}
@@ -2092,7 +2092,7 @@ country_event = {
 			limit = {
 				ITA = {
 					OR = {
-						has_completed_focus = ITA_guarantee_austrian_independence
+						always = no
 						has_guaranteed = AUS
 					}
 					
@@ -2254,19 +2254,19 @@ country_event = {
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.85
 				CZE = {
-					has_completed_focus = CZE_outreach_to_the_western_powers
+					always = no
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.60 #Was more worried about the fighter gap
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					always = no
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.45
 				CZE = {
-					has_completed_focus = CZE_demand_guarantees
+					always = no
 				}
 			}
 		}
@@ -2284,7 +2284,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = ENG_no_further_appeasement
+					always = no
 				}
 				add_political_power = -200
 			}
@@ -2371,7 +2371,7 @@ country_event = {
 						NOT = {
 							is_in_faction_with = CZE
 							CZE = {
-								has_completed_focus = CZE_supply_fighters_for_allies
+								always = no
 							}
 							has_war_with = GER
 						}
@@ -2382,19 +2382,19 @@ country_event = {
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.2
 				CZE = {
-					has_completed_focus = CZE_outreach_to_the_western_powers
+					always = no
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.4 #Was more worried about the fighter gap
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					always = no
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 3
 				CZE = {
-					has_completed_focus = CZE_demand_guarantees
+					always = no
 				}
 			}
 		}
@@ -2491,7 +2491,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { has_completed_focus = ENG_no_further_appeasement }
+					NOT = { always = no }
 				}
 				add_political_power = -200
 			}
@@ -2571,19 +2571,19 @@ country_event = {
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.85
 				CZE = {
-					has_completed_focus = CZE_outreach_to_the_western_powers
+					always = no
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.65
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					always = no
 				}
 			}
 			modifier = { #ROOT is less willing to accept the deal if Czech completed this focus
 				factor = 0.40
 				CZE = {
-					has_completed_focus = CZE_demand_guarantees
+					always = no
 				}
 			}
 		}
@@ -2699,7 +2699,7 @@ country_event = {
 						NOT = {
 							is_in_faction_with = CZE
 							CZE = {		#PfOT
-								has_completed_focus = CZE_supply_fighters_for_allies
+								always = no
 							}
 						}
 					}
@@ -2709,19 +2709,19 @@ country_event = {
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.2
 				CZE = {
-					has_completed_focus = CZE_outreach_to_the_western_powers
+					always = no
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 1.3
 				CZE = {
-					has_completed_focus = CZE_supply_fighters_for_allies
+					always = no
 				}
 			}
 			modifier = { #ROOT is more willing to support the Czechs if they completed this focus
 				factor = 5
 				CZE = {
-					has_completed_focus = CZE_demand_guarantees
+					always = no
 				}
 			}
 		}
@@ -2730,7 +2730,7 @@ country_event = {
 		if = {
 			limit = {
 				is_in_faction_with = CZE
-				has_completed_focus = FRA_strengthen_the_little_entente
+				always = no
 			}
 			add_political_power = -100
 		}
@@ -2868,7 +2868,7 @@ country_event = {
 				limit = {
 					CZE = {
 						is_faction_leader = yes
-						has_completed_focus = CZE_an_entente_of_our_own
+						always = no
 					}
 				}
 				CZE = { add_to_faction = ROOT }
@@ -2881,7 +2881,7 @@ country_event = {
 		}
 		
 		if = {
-			limit = { NOT = { has_completed_focus = FRA_strengthen_the_little_entente } }
+			limit = { NOT = { always = no } }
 			add_stability = 0.05
 		}
 	}
@@ -2937,7 +2937,7 @@ country_event = {
 			limit = {
 				is_in_faction_with = CZE
 				is_faction_leader = yes
-				has_completed_focus = FRA_strengthen_the_little_entente
+				always = no
 				NOT = { is_in_faction_with = ENG }
 			}
 			add_to_faction = ENG #Britain joins the little entente
@@ -3176,7 +3176,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = CZE_the_legacy_of_ottokar
+				always = no
 			}
 		}
 
@@ -3218,13 +3218,13 @@ country_event = {
 					AND = {
 						is_in_faction_with = AUS
 						AUS = {
-							has_completed_focus = AUS_the_danubian_federation
+							always = no
 						}
 					}
 					AND = {
 						is_in_faction_with = HUN
 						HUN = {
-							has_completed_focus = wuw_HUN_a_danubian_federation
+							always = no
 						}
 					}
 				}	
@@ -3618,7 +3618,7 @@ country_event = {
 				factor = 0.5
 				OR = {
 					POL = { #Germany's neighbors are banding together and feeling mighty strong
-						has_completed_focus = POL_coerce_czechoslovakia
+						always = no
 							OR = {
 								is_in_faction_with = CZE
 								has_guaranteed = CZE
@@ -3627,13 +3627,13 @@ country_event = {
 					AND = {
 						is_in_faction_with = AUS
 						AUS = {
-							has_completed_focus = AUS_the_danubian_federation
+							always = no
 						}
 					}
 					AND = {
 						is_in_faction_with = HUN
 						HUN = {
-							has_completed_focus = wuw_HUN_a_danubian_federation
+							always = no
 						}
 					}
 				}
@@ -3733,7 +3733,7 @@ country_event = {
 				add = 150 #Germany's neighbors are banding together and feeling mighty strong. This will increase the chance for players to have an impact on the outcome
 				OR = {
 					POL = { 
-						has_completed_focus = POL_coerce_czechoslovakia
+						always = no
 						OR = {
 							is_in_faction_with = CZE
 							has_guaranteed = CZE
@@ -3741,13 +3741,13 @@ country_event = {
 					}
 					AND = {
 						AUS = {
-							has_completed_focus = AUS_the_danubian_federation
+							always = no
 						}
 						is_in_faction_with = AUS
 					}
 					AND = {
 						HUN = {
-							has_completed_focus = wuw_HUN_a_danubian_federation
+							always = no
 						}
 						is_in_faction_with = HUN
 					}
@@ -5573,7 +5573,7 @@ country_event = {
 	option = { # Support France
 		name = germany.61.b
 		trigger = {
-			NOT = { has_completed_focus = ENG_a_change_in_course }
+			NOT = { always = no }
 		}
 		ai_chance = {
 			base = 10
@@ -5647,7 +5647,7 @@ country_event = {
 	option = {
 		name = germany.62.a
 		trigger = {
-			NOT = { has_completed_focus = ENG_a_change_in_course }
+			NOT = { always = no }
 		}
 
 		hidden_effect = {
@@ -5663,7 +5663,7 @@ country_event = {
 	option = {
 		name = germany.62.b
 		trigger = {
-			has_completed_focus = ENG_a_change_in_course
+			always = no
 		}
 
 		hidden_effect = {
@@ -7913,7 +7913,7 @@ country_event = {
 			OR = {
 				NOT = { FROM = { original_tag = POL } }
 				NOT = { original_tag = GER }
-				NOT = { has_completed_focus = GER_danzig_for_guarantees }
+				NOT = { always = no }
 			}
 		}
 	}
@@ -7922,7 +7922,7 @@ country_event = {
 		trigger = {
 			FROM = { original_tag = POL }
 			original_tag = GER
-			has_completed_focus = GER_danzig_for_guarantees
+			always = no
 		}
 	}
 	desc = {
@@ -7931,7 +7931,7 @@ country_event = {
 			OR = {
 				NOT = { FROM = { original_tag = POL } }
 				NOT = { original_tag = GER }
-				NOT = { has_completed_focus = GER_danzig_for_guarantees }
+				NOT = { always = no }
 			}
 		}
 	}
@@ -7940,7 +7940,7 @@ country_event = {
 		trigger = {
 			FROM = { original_tag = POL }
 			original_tag = GER
-			has_completed_focus = GER_danzig_for_guarantees
+			always = no
 		}
 	}
 	picture = GFX_report_event_soviet_tanks
@@ -7976,7 +7976,7 @@ country_event = {
 		trigger = {
 			NOT = { FROM = { original_tag = POL } }
 			NOT = { original_tag = GER }
-			NOT = { has_completed_focus = GER_danzig_for_guarantees }
+			NOT = { always = no }
 		}
 		ai_chance = {
 			base = 0
@@ -10513,14 +10513,14 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
+				FRA = { always = no }
 			}
 			modifier = {
 				factor = 0
 				POL = {
 					OR = {
-						has_completed_focus = POL_protect_czechozlovakia
-						has_completed_focus = POL_coerce_czechoslovakia
+						always = no
+						always = no
 					}
 				}
 				OR = {
