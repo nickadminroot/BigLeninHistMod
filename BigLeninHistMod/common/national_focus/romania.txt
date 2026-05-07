@@ -1233,7 +1233,7 @@ focus_tree = {
 				set_state_flag = ROM_invest_in_the_iar_AF1
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3316,7 +3316,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3464,7 +3464,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3657,7 +3657,7 @@ focus_tree = {
 
 		completion_reward = {			
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}

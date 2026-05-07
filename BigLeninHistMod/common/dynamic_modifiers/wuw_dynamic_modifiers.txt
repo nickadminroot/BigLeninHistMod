@@ -257,7 +257,7 @@ AUS_austromarxism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -286,7 +286,7 @@ AUS_austrostalinism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -315,7 +315,7 @@ AUS_austrotrotskyism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -1605,8 +1605,8 @@ COG_rwandan_separatism_modifier = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = RWA } # ROOT refers to the state on which the modifier is added
 			COG = {
-				has_completed_focus = COG_the_pro_german_mwami_focus
-				has_completed_focus = COG_the_umwami_of_rwanda_focus
+				always = no
+				always = no
 			}
 		}
 		
@@ -1627,7 +1627,7 @@ COG_burundian_separatism_modifier = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = BRD } # ROOT refers to the state on which the modifier is added
 			COG = {
-				has_completed_focus = COG_the_mwami_of_burundi_focus
+				always = no
 			}
 		}
 	}

@@ -2661,7 +2661,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						tag = JAP
 						is_in_faction_with = CHI
@@ -3581,14 +3581,14 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = JAP_getting_offshore_civ_flag
 					}
 					add_offsite_building = { type = industrial_complex level = -1 }
 					clr_country_flag = JAP_getting_offshore_civ_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						has_opinion_modifier = JAP_trading_partners
 					}
@@ -4065,7 +4065,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						communism > 0.39 # It needs to be 40% or higher
 						NOT = {
@@ -6282,7 +6282,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no
@@ -6357,7 +6357,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no
@@ -6852,7 +6852,7 @@ ideas = {
 			available = {
 				OR = {
 					has_completed_focus = JAP_found_the_great_japan_press_association
-					has_completed_focus = JAP_propagandize_the_nihon_shoki
+					always = no
 					#has_completed_focus = JAP_reform_the_education_system
 				}
 			}
@@ -6888,7 +6888,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no
@@ -6920,7 +6920,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no
@@ -6954,7 +6954,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no
@@ -7120,7 +7120,7 @@ ideas = {
 					limit = {
 						original_tag = PHI
 					}
-					has_completed_focus = PHI_align_with_japan
+					always = no
 					if = {	#Easter egg so dont always show the requirement
 						limit = {
 							always = no

@@ -76,7 +76,7 @@ AUS_dont_panic_train_divisions = {
 	}
 	enable = {
 		AUS_is_historical_ai = yes
-		has_completed_focus = AUS_disregard_the_treaties
+		always = no
 		NOT = {
 			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
 			has_game_rule = {
@@ -157,7 +157,7 @@ AUS_panic_befriend_guarantors_ITA = {
 		OR = {
 			has_war_with = ITA
 			is_guaranteed_by = ITA
-			has_completed_focus = AUS_reach_out_to_italy
+			always = no
 		}
 		
 	}
@@ -187,7 +187,7 @@ AUS_panic_befriend_guarantors_ENG = {
 	abort = {
 		has_war_with = ENG
 		is_guaranteed_by = ENG
-		has_completed_focus = AUS_approach_democratic_guarantors
+		always = no
 	}
 
 	ai_strategy = { 
@@ -215,7 +215,7 @@ AUS_panic_befriend_guarantors_FRA = {
 	abort = {
 		has_war_with = FRA
 		is_guaranteed_by = FRA
-		has_completed_focus = AUS_approach_democratic_guarantors
+		always = no
 	}
 
 	ai_strategy = { 
@@ -243,7 +243,7 @@ AUS_panic_befriend_guarantors_USA = {
 	abort = {
 		has_war_with = USA
 		is_guaranteed_by = USA
-		has_completed_focus = AUS_approach_democratic_guarantors
+		always = no
 	}
 
 	ai_strategy = { 

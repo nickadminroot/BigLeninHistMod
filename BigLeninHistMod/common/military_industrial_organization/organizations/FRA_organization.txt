@@ -27,24 +27,24 @@ FRA_renault_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}	
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -55,12 +55,12 @@ FRA_renault_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_renault_mio_flag
 				}
 			}
@@ -151,11 +151,11 @@ FRA_amx_organization = {
 		tag = FRA 
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = FRA } 
 			}
-			FROM = { has_completed_focus = FRA_form_the_state_arsenals }
+			FROM = { always = no }
 		}
 	}
 }
@@ -211,18 +211,18 @@ FRA_acf_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_acf_mio_flag
 				}
 			}
@@ -267,24 +267,24 @@ FRA_bloch_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -295,12 +295,12 @@ FRA_bloch_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_bloch_mio_flag
 				}
 			}
@@ -379,7 +379,7 @@ FRA_somua_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = POL }
 			}
@@ -391,7 +391,7 @@ FRA_somua_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
@@ -415,24 +415,24 @@ FRA_mas_organization = {
 	}
 	
 	visible = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = FRA } }
 			}
 			FROM = { NOT = { has_war_with = FRA } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}

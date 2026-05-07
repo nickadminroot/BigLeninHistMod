@@ -175,8 +175,8 @@ country_event = {
 				modifier = {
 					add = -10
 					OR = {
-						has_completed_focus = BUL_unify_the_bourgeois_movement
-						has_completed_focus = BUL_form_a_popular_bloc
+						always = no
+						always = no
 						has_completed_focus = BUL_freedom_of_press
 					}
 				}
@@ -260,8 +260,8 @@ country_event = {
 				modifier = {
 					add = -10
 					OR = {
-						has_completed_focus = BUL_democratic_principles
-						has_completed_focus = BUL_united_front_against_fascism
+						always = no
+						always = no
 						has_completed_focus = BUL_freedom_of_press
 					}
 				}
@@ -328,7 +328,7 @@ country_event = {
 				}
 				modifier = {
 					add = -10
-					has_completed_focus = BUL_appoint_communist_ministers
+					always = no
 				}
 				modifier = {
 					add = -30
@@ -2838,7 +2838,7 @@ country_event = {
 	desc = {
 		text = bftb_bulgaria_fatherland_front.1.desc_positive
 		trigger = {
-			has_completed_focus = BUL_the_fatherland_front
+			always = no
 		}
 	}
 
@@ -2846,7 +2846,7 @@ country_event = {
 	desc = {
 		text = bftb_bulgaria_fatherland_front.1.desc_negative
 		trigger = {
-			NOT = { has_completed_focus = BUL_the_fatherland_front }
+			NOT = { always = no }
 		}
 	}
 
@@ -2860,7 +2860,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = { 
-					NOT = { has_completed_focus = BUL_the_fatherland_front }
+					NOT = { always = no }
 				}
 				add_popularity = {
 					ideology = communism
@@ -2875,7 +2875,7 @@ country_event = {
 		name = bftb_bulgaria_fatherland_front.1.a
 
 		trigger = {
-			has_completed_focus = BUL_the_fatherland_front
+			always = no
 		}
 		add_political_power = 70
 		add_ideas = BUL_fatherland_front_positive
@@ -2885,7 +2885,7 @@ country_event = {
 		name = bftb_bulgaria_fatherland_front.1.b
 
 		trigger = {
-			NOT = { has_completed_focus = BUL_the_fatherland_front }
+			NOT = { always = no }
 		}
 		effect_tooltip = {
 			add_popularity = {
@@ -3083,19 +3083,19 @@ country_event = {
 				factor = 1.5
 				BUL = {
 					OR = {
-						has_completed_focus = BUL_treaty_of_perpetual_friendship
-						has_completed_focus = BUL_the_salonika_agreement
+						always = no
+						always = no
 					}
 				}
 			}
 			modifier = { #You approached us, we like that
 				factor = 1.5
-				BUL = {	has_completed_focus = BUL_approach_the_united_kingdom }
+				BUL = {	always = no }
 			}
 			modifier = { #You are becoming yet another capitalist country, we like that
 				factor = 1.5
 				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
+				BUL = {	always = no }
 			}
 			modifier = { #You think like us, we like that
 				factor = 5
@@ -3374,19 +3374,19 @@ country_event = {
 				factor = 1.5
 				BUL = {
 					OR = {
-						has_completed_focus = BUL_treaty_of_perpetual_friendship
-						has_completed_focus = BUL_the_salonika_agreement
+						always = no
+						always = no
 					}
 				}
 			}
 			modifier = { #You approached us, we like that
 				factor = 1.5
-				BUL = {	has_completed_focus = BUL_approach_the_united_kingdom }
+				BUL = {	always = no }
 			}
 			modifier = { #You are becoming yet another capitalist country, we like that
 				factor = 1.5
 				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
+				BUL = {	always = no }
 			}
 			modifier = { #You think like us, we like that
 				factor = 7
@@ -3469,19 +3469,19 @@ country_event = {
 				factor = 1.5
 				BUL = {
 					OR = {
-						has_completed_focus = BUL_treaty_of_perpetual_friendship
-						has_completed_focus = BUL_the_salonika_agreement
+						always = no
+						always = no
 					}
 				}
 			}
 			modifier = { #You approached us, we like that
 				factor = 1.5
-				BUL = {	has_completed_focus = BUL_approach_the_united_kingdom }
+				BUL = {	always = no }
 			}
 			modifier = { #You are becoming yet another capitalist country, we like that
 				factor = 1.5
 				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
+				BUL = {	always = no }
 			}
 			modifier = { #You think like us, we like that
 				factor = 1.5
@@ -4110,7 +4110,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				BUL = { has_completed_focus = BUL_approach_the_united_kingdom }
+				BUL = { always = no }
 			}
 			modifier = {
 				factor = 0
@@ -6684,7 +6684,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.7
-				BUL = { has_completed_focus = BUL_treaty_of_perpetual_friendship }
+				BUL = { always = no }
 			}
 			modifier = {
 				factor = 0

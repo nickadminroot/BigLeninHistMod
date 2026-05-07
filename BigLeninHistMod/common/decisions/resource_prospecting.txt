@@ -3695,7 +3695,7 @@ prospect_for_resources = {
 			controls_state = 889
 			num_of_civilian_factories_available_for_projects > 4
 			has_tech = excavation3
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						original_tag = BEL
@@ -3703,7 +3703,7 @@ prospect_for_resources = {
 					}
 					has_dlc = "Gotterdammerung"
 				}
-				has_completed_focus = CONGO_heat_resistant_cobalt
+				always = no
 			}
 		}
 		highlight_states = {
@@ -8164,7 +8164,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_oil_in_tripoli
+			always = no
 			448 = {
 				NOT = {
 					has_state_flag = {
@@ -8256,7 +8256,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_steel_in_tripoli
+			always = no
 			448 = {
 				NOT = {
 					has_state_flag = {
@@ -8683,7 +8683,7 @@ prospect_for_resources = {
 				}
 			}
 
-			has_completed_focus = SWE_deep_mining_complexes
+			always = no
 		}
 
 		fire_only_once = yes
@@ -8744,7 +8744,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = DEN_prospecting_new_sites
+			always = no
 			101 = {
 				NOT = {
 					has_state_flag = {
@@ -8848,7 +8848,7 @@ prospect_for_resources = {
 				limit = {
 					original_tag = PAR
 				}
-				has_completed_focus = GUAY_exploit_mineral_wealth
+				always = no
 			}
 			else = {
 				hidden_trigger = {
@@ -9084,7 +9084,7 @@ prospect_for_resources = {
 					has_state_flag = CHI_develop_hunan_tungsten_mines
 				}
 			}
-			has_completed_focus = CHI_tungsten_and_antimony_extraction
+			always = no
 		}
 
 		available = {
@@ -9155,7 +9155,7 @@ prospect_for_resources = {
 					has_state_flag = CHI_develop_jiangxi_tungsten_mines
 				}
 			}
-			has_completed_focus = CHI_tungsten_and_antimony_extraction
+			always = no
 		}
 
 		available = {
@@ -9228,7 +9228,7 @@ prospect_for_resources = {
 					original_tag = CHI
 					has_dlc = "No Compromise, No Surrender"
 				}
-				has_completed_focus = CHI_grow_the_coal_industry
+				always = no
 			}
 		}
 
@@ -9394,14 +9394,14 @@ prospect_for_resources = {
 			owns_state = 942
 			controls_state = 942
 			num_of_civilian_factories_available_for_projects > 4
-			IF = {
+			if = {
 				limit = {
 					original_tag = BRA
 					has_dlc = "Trial of Allegiance"
 				}
-				has_completed_focus = BRA_federal_development
+				always = no
 			}
-			ELSE = {
+			else = {
 				has_tech = excavation4
 			}
 		}

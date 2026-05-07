@@ -400,13 +400,13 @@ HUN_gyor_program_initiatives_category = {
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
 			has_completed_focus = wuw_HUN_quantity_over_quality
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
 				has_tech = basic_heavy_tank_chassis
 			}
-			ELSE = {
+			else = {
 				has_tech = basic_heavy_tank
 			}
 			has_country_flag = HUN_activated_huba_ii_flag
@@ -1274,7 +1274,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_south_slovakia_flag }
 			664 = {
@@ -1287,7 +1287,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			controls_state = 664
 		}
@@ -1305,7 +1305,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					664 = {
 						is_claimed_by = ROOT
@@ -1316,7 +1316,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					664 = {
 						NOT = {
@@ -1361,7 +1361,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_west_slovakia_flag }
 			70 = {
@@ -1374,7 +1374,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			controls_state = 70
 		}
@@ -1392,7 +1392,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					70 = {
 						is_claimed_by = ROOT
@@ -1403,7 +1403,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					70 = {
 						NOT = {
@@ -1448,7 +1448,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_east_slovakia_flag }
 			71 = {
@@ -1461,7 +1461,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			controls_state = 71
 		}
@@ -1479,7 +1479,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					71 = {
 						is_claimed_by = ROOT
@@ -1490,7 +1490,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					71 = {
 						NOT = {
@@ -1535,7 +1535,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_carpathia_flag }
 			73 = {
@@ -1548,7 +1548,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
+				always = no
 			}
 			controls_state = 73
 		}
@@ -1566,7 +1566,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					73 = {
 						is_claimed_by = ROOT
@@ -1577,7 +1577,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					73 = {
 						NOT = {
@@ -1622,7 +1622,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_north_transylvania_flag }
 			76 = {
@@ -1635,7 +1635,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			controls_state = 76
 		}
@@ -1653,7 +1653,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					76 = {
 						is_claimed_by = ROOT
@@ -1664,7 +1664,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					76 = {
 						NOT = {
@@ -1709,7 +1709,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_south_transylvania_flag }
 			84 = {
@@ -1722,7 +1722,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			controls_state = 84
 		}
@@ -1740,7 +1740,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					84 = {
 						is_claimed_by = ROOT
@@ -1751,7 +1751,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					84 = {
 						NOT = {
@@ -1796,7 +1796,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_crisana_flag }
 			83 = {
@@ -1809,7 +1809,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			controls_state = 83
 		}
@@ -1827,7 +1827,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					83 = {
 						is_claimed_by = ROOT
@@ -1838,7 +1838,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					83 = {
 						NOT = {
@@ -1883,7 +1883,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_banat_flag }
 			82 = {
@@ -1896,7 +1896,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
+				always = no
 			}
 			controls_state = 82
 		}
@@ -1914,7 +1914,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					82 = {
 						is_claimed_by = ROOT
@@ -1925,7 +1925,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					82 = {
 						NOT = {
@@ -1970,7 +1970,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_west_banat_flag }
 			764 = {
@@ -1983,7 +1983,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			controls_state = 764
 		}
@@ -2001,7 +2001,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					764 = {
 						is_claimed_by = ROOT
@@ -2012,7 +2012,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					764 = {
 						NOT = {
@@ -2057,7 +2057,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_vojvodina_flag }
 			45 = {
@@ -2070,7 +2070,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			controls_state = 45
 		}
@@ -2088,7 +2088,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						is_claimed_by = ROOT
@@ -2099,7 +2099,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					45 = {
 						NOT = {
@@ -2169,7 +2169,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						is_claimed_by = ROOT
@@ -2180,7 +2180,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						NOT = {
@@ -2243,12 +2243,12 @@ HUN_territorial_revision_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
+			always = no
 			NOT = { has_country_flag = HUN_created_ukrainian_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
+			always = no
 			UKR = {
 				exists = no
 			}
@@ -2578,7 +2578,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_croatia_flag }
 			109 = {
@@ -2591,7 +2591,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			controls_state = 109
 		}
@@ -2609,7 +2609,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					109 = {
 						is_claimed_by = ROOT
@@ -2620,7 +2620,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					109 = {
 						NOT = {
@@ -2665,7 +2665,7 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			NOT = { has_country_flag = HUN_reintigrated_dalmatia_flag }
 			103 = {
@@ -2678,7 +2678,7 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
+				always = no
 			}
 			controls_state = 103
 		}
@@ -2696,7 +2696,7 @@ HUN_territorial_revision_category = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					103 = {
 						is_claimed_by = ROOT
@@ -2707,7 +2707,7 @@ HUN_territorial_revision_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					103 = {
 						NOT = {
@@ -2744,7 +2744,7 @@ HUN_territorial_revision_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 		}
 
 		target_trigger = {
@@ -2776,7 +2776,7 @@ HUN_territorial_revision_category = {
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 			is_subject = no
 			OR = {
 				has_government = democratic
@@ -2825,7 +2825,7 @@ HUN_territorial_revision_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 		}
 
 		target_trigger = {
@@ -2857,7 +2857,7 @@ HUN_territorial_revision_category = {
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 			is_subject = no
 			OR = {
 				has_government = democratic
@@ -2907,7 +2907,7 @@ HUN_territorial_revision_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 		}
 
 		target_trigger = {
@@ -2939,7 +2939,7 @@ HUN_territorial_revision_category = {
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 			is_subject = no
 			OR = {
 				has_government = democratic
@@ -2988,7 +2988,7 @@ HUN_territorial_revision_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 		}
 
 		target_trigger = {
@@ -3020,7 +3020,7 @@ HUN_territorial_revision_category = {
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
+			always = no
 			is_subject = no
 			OR = {
 				has_government = democratic
@@ -3086,7 +3086,7 @@ HUN_the_empire_category = {
 
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_demand_austrian_restoration
+			always = no
 			NOT = { has_country_flag = HUN_reannexed_burgenland_flag }
 			975 = {
 				NOT = {
@@ -3096,7 +3096,7 @@ HUN_the_empire_category = {
 		} 
 
 		available = {
-			has_completed_focus = wuw_HUN_demand_austrian_restoration
+			always = no
 			OR = {
 				controls_state = 975
 				any_country = {
@@ -3124,7 +3124,7 @@ HUN_the_empire_category = {
 				transfer_state_to = ROOT
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						is_claimed_by = ROOT
@@ -3135,7 +3135,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					975 = {
 						NOT = {
@@ -3172,12 +3172,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_demand_austrian_restoration
+			always = no
 			NOT = { has_country_flag = HUN_created_austrian_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_demand_austrian_restoration
+			always = no
 			is_subject = no
 			OR = {
 				AUS = {
@@ -3264,12 +3264,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_demand_wiedist_restoration
+			always = no
 			NOT = { has_country_flag = HUN_created_wiedist_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_demand_wiedist_restoration
+			always = no
 			has_government = neutrality
 			is_subject = no
 			OR = {
@@ -3353,12 +3353,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_a_habsburg_poland
+			always = no
 			NOT = { has_country_flag = HUN_created_polish_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_a_habsburg_poland
+			always = no
 			has_government = neutrality
 			is_subject = no
 			AND = {
@@ -3414,7 +3414,7 @@ HUN_the_empire_category = {
 			POL = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = POL_KINGDOM
-				IF = {
+				if = {
 					limit = {
 						has_character = POL_karl_albrecht
 					}
@@ -3448,12 +3448,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_habsburg_ascension_in_spain
+			always = no
 			NOT = { has_country_flag = HUN_created_spanish_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_habsburg_ascension_in_spain
+			always = no
 			has_government = neutrality
 			is_subject = no
 			AND = {
@@ -3532,12 +3532,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_protect_czechoslovakia
+			always = no
 			NOT = { has_country_flag = HUN_created_bohemian_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_protect_czechoslovakia
+			always = no
 			is_subject = no
 			OR = {
 				CZE = {
@@ -3628,12 +3628,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_press_maximilians_and_the_iturbides_claims
+			always = no
 			NOT = { has_country_flag = HUN_created_mexican_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_press_maximilians_and_the_iturbides_claims
+			always = no
 			has_government = neutrality
 			is_subject = no
 			OR = {
@@ -3690,7 +3690,7 @@ HUN_the_empire_category = {
 				}	
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					MEX = {
 						NOT = {
@@ -3726,12 +3726,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_the_triple_kingdom
+			always = no
 			NOT = { has_country_flag = HUN_created_croatian_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_the_triple_kingdom
+			always = no
 			has_government = neutrality
 			is_subject = no
 			OR = {
@@ -3806,7 +3806,7 @@ HUN_the_empire_category = {
 				}	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					CRO = {
 						NOT = {
@@ -3819,7 +3819,7 @@ HUN_the_empire_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					102 = {
 						NOT = {
@@ -3832,7 +3832,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					853 = {
 						NOT = {
@@ -3845,7 +3845,7 @@ HUN_the_empire_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					AUS = {
 						is_subject_of = ROOT
@@ -3884,12 +3884,12 @@ HUN_the_empire_category = {
 	
 		visible = { 
 			original_tag = HUN
-			has_completed_focus = wuw_HUN_restore_the_lombardo_venetian_kingdom
+			always = no
 			NOT = { has_country_flag = HUN_created_lombardo_venetian_habsburg_monarchy }
 		} 
 	
 		available = {
-			has_completed_focus = wuw_HUN_restore_the_lombardo_venetian_kingdom
+			always = no
 			has_government = neutrality
 			is_subject = no
 			OR = {
@@ -3956,7 +3956,7 @@ HUN_the_empire_category = {
 				drop_cosmetic_tag = yes	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					LBV = {
 						NOT = {
@@ -3998,7 +3998,7 @@ HUN_the_empire_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_renovato_imperii
+			always = no
 		}
 
 		available = {
@@ -4068,7 +4068,7 @@ political_actions = {
 		
 			original_tag = HUN
 			
-			has_completed_focus = wuw_HUN_elect_a_fascist_king
+			always = no
 
 			NOT = { has_country_flag = HUN_integrated_mecklenburg_flag }
 
@@ -4082,7 +4082,7 @@ political_actions = {
 
 		available = {
 			
-			has_completed_focus = wuw_HUN_elect_a_fascist_king
+			always = no
 			
 			controls_state = 61
 		}
@@ -4100,7 +4100,7 @@ political_actions = {
 
 		remove_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					61 = {
 						is_claimed_by = ROOT
@@ -4111,7 +4111,7 @@ political_actions = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					61 = {
 						NOT = {
@@ -4150,7 +4150,7 @@ political_actions = {
 		
 			original_tag = HUN
 			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 
 			NOT = { has_country_flag = HUN_carl_wilhelm_took_absolute_control }
 
@@ -4158,7 +4158,7 @@ political_actions = {
 
 		available = {
 			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 
 			is_subject = no
 			
@@ -4236,7 +4236,7 @@ political_actions = {
 		
 			original_tag = HUN
 			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 
 			has_country_flag = HUN_carl_wilhelm_took_absolute_control
 
@@ -4250,7 +4250,7 @@ political_actions = {
 
 		available = {
 			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 
 			is_subject = no
 			
@@ -4364,7 +4364,7 @@ HUN_balkan_pact_category = {
 		}
 
 		visible = {
-			has_completed_focus = wuw_HUN_the_balkan_pact
+			always = no
 		}
 
 		available = {
@@ -4434,7 +4434,7 @@ HUN_balkan_pact_category = {
 		
 			original_tag = HUN
 			
-			has_completed_focus = wuw_HUN_the_balkan_pact
+			always = no
 
 			NOT = { has_country_flag = HUN_asked_to_annex_ROM }
 
@@ -4442,7 +4442,7 @@ HUN_balkan_pact_category = {
 
 		available = {
 			
-			has_completed_focus = wuw_HUN_the_balkan_pact
+			always = no
 
 			is_subject = no
 			
@@ -4560,7 +4560,7 @@ HUN_fascist_movements_category = {
 			        }
 			    }
 
-			    IF = {
+			    if = {
 			    	limit = {
 			    		PREV = {
 			    			has_idea = HUN_the_volksbund_idea
@@ -4573,7 +4573,7 @@ HUN_fascist_movements_category = {
 
 			    custom_effect_tooltip = generic_skip_one_line_tt
 
-			    IF = {
+			    if = {
 			    	limit = {
 			    		PREV = {
 			    			NOT = {
@@ -4633,7 +4633,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_the_volksbund_idea
 				}
@@ -4666,8 +4666,8 @@ HUN_fascist_movements_category = {
 		available = {
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				has_global_flag = arrow_cross_insurgency_happened
@@ -4678,8 +4678,8 @@ HUN_fascist_movements_category = {
 			tag = HUN
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				OR = {
@@ -4729,7 +4729,7 @@ HUN_fascist_movements_category = {
 
 			NOT = { has_government = fascism }
 
-			has_completed_focus = wuw_HUN_elect_a_democratic_king 
+			always = no 
 			
 			NOT = { 
 				has_global_flag = arrow_cross_insurgency_happened
@@ -4745,7 +4745,7 @@ HUN_fascist_movements_category = {
 
 			NOT = { has_government = fascism }
 			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 			
 			NOT = { 
 				OR = {
@@ -4775,7 +4775,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						exists = yes
@@ -4796,7 +4796,7 @@ HUN_fascist_movements_category = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = HUN_the_volksbund_idea
 				}
@@ -4828,8 +4828,8 @@ HUN_fascist_movements_category = {
 		available = {
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				has_global_flag = arrow_cross_insurgency_happened
@@ -4840,8 +4840,8 @@ HUN_fascist_movements_category = {
 			tag = HUN
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				OR = {
@@ -4905,8 +4905,8 @@ HUN_fascist_movements_category = {
 		available = {
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				has_global_flag = arrow_cross_insurgency_happened
@@ -4920,8 +4920,8 @@ HUN_fascist_movements_category = {
 			tag = HUN
 			NOT = { has_government = fascism }
 			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				always = no
+				always = no
 			}
 			NOT = { 
 				OR = {
@@ -4988,8 +4988,8 @@ political_actions = {
 			has_government = communism
 
 			OR = {
-				has_completed_focus = wuw_HUN_join_the_comintern
-				has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
+				always = no
+				always = no
 			}
 
 		}
@@ -5153,7 +5153,7 @@ political_actions = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						OR = {
@@ -5172,7 +5172,7 @@ political_actions = {
 					activate_advisor = GER_hermann_goring_king_of_hun
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					GER = {
 						has_government = fascism
@@ -5225,7 +5225,7 @@ HUN_the_danubian_federation_category = {
 			original_tag = HUN
 		}
 		visible = {
-			has_completed_focus = wuw_HUN_a_danubian_federation
+			always = no
 		}
 		available = {
 			is_subject = no
@@ -5284,7 +5284,7 @@ HUN_balkan_union_category = {
 		}
 
 		visible = {
-			has_completed_focus = HUN_balkan_ambitions
+			always = no
 			
 			NOT = { has_global_flag = balkan_union_formed_flag }
 		}

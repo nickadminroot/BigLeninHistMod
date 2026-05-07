@@ -898,7 +898,7 @@ GER_italy_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_form_rome_berlin_axis
+		always = no
 		country_exists = ITA
 	}
 	abort = {
@@ -1060,7 +1060,7 @@ GER_japan_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_befriend_japan
+		always = no
 		country_exists = JAP
 	}
 	abort = {
@@ -1085,8 +1085,8 @@ GER_china_ally = {
 	}
 	enable = {
 		OR = {
-			has_completed_focus = GER_befriend_china
-			has_completed_focus = GER_closer_sino_germanic_relations
+			always = no
+			always = no
 		}
 		country_exists = CHI
 	}
@@ -1111,7 +1111,7 @@ GER_turkey_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_befriend_turkey
+		always = no
 		country_exists = TUR
 	}
 	abort = {
@@ -1136,7 +1136,7 @@ GER_spain_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_alliance_with_spain
+		always = no
 		country_exists = SPR
 		SPR = { has_government = fascism } # TODO Find way to detect dynamic revolter tag
 	}
@@ -1162,7 +1162,7 @@ GER_spain_ally_la_resistance = {
 		has_dlc = "La Resistance"
 	}
 	enable = {
-		has_completed_focus = GER_alliance_with_spain
+		always = no
 		country_exists = SPA
 	}
 	abort = {
@@ -1189,7 +1189,7 @@ GER_denmark_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_utilize_the_nordliche_gesellschaft
+		always = no
 		country_exists = DEN
 	}
 	abort = {
@@ -1213,7 +1213,7 @@ GER_sweden_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_utilize_the_nordliche_gesellschaft
+		always = no
 		country_exists = SWE
 	}
 	abort = {
@@ -1237,7 +1237,7 @@ GER_dutch_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_influence_the_benelux
+		always = no
 		country_exists = HOL
 	}
 	abort = {
@@ -1261,7 +1261,7 @@ GER_norway_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_utilize_the_nordliche_gesellschaft
+		always = no
 		country_exists = NOR
 	}
 	abort = {
@@ -1287,7 +1287,7 @@ GER_anschluss_rejected = {
 	enable = {
 		OR = {
 			has_completed_focus = GER_anschluss
-			has_completed_focus = GER_the_austrian_question
+			always = no
 		}
 		country_exists = AUS
 	}
@@ -1678,8 +1678,8 @@ GER_naval_role_ratios_maximum_kaiser = {
 	}
 	enable = {
 		OR = {
-			has_completed_focus = GER_rebuild_the_high_seas_fleet_ww
-			has_completed_focus = GER_rebuild_the_high_seas_fleet
+			always = no
+			always = no
 		}
 	}
 	abort_when_not_enabled = yes
@@ -2986,7 +2986,7 @@ GER_no_no_definitely_not_planning_to_invade_norway = {
 	abort = {
 		OR = {
 			has_completed_focus = GER_operation_weserubung  # already at war so no need to prepare anymore
-			has_completed_focus = GER_utilize_the_nordliche_gesellschaft  # decided to befriend them instead
+			always = no  # decided to befriend them instead
 			date > 1940.9.1  # just for safety, if things really go south
 		}
 	}
@@ -4650,7 +4650,7 @@ GER_sweden_joined_our_pact_so_we_are_kinda_happy = {
 		original_tag = GER
 	}
 	enable = {
-		SWE = { has_completed_focus = SWE_join_the_anti_soviet_pact }
+		SWE = { always = no }
 	}
 
 	abort = {
@@ -4680,7 +4680,7 @@ GER_dont_DOW_benelux = { #Don't try to bypass Around the Maginot!
 	abort = {
 		OR = {
 			has_completed_focus = GER_around_maginot
-			has_completed_focus = GER_oppose_hitler_ww
+			always = no
 			has_war_with = HOL
 			has_war_with = BEL
 			has_war_with = LUX
@@ -4954,19 +4954,19 @@ GER_why_would_i_ally_you_i_want_to_annex_you = { #Pfot, making sure czech's don'
 		is_faction_leader = yes
 		is_neighbor_of = CZE
 		NOT = {
-			has_completed_focus = GER_befriend_czechoslovakia
+			always = no
 		}
 		CZE = { #I owe you an apology, I wasn't familiar with your game
 			exists = yes
 			NOT = {
 				OR = {
 					#DoD focuses
-					has_completed_focus = CZE_german_puppet
-					has_completed_focus = CZE_german_minor_ally
-					has_completed_focus = CZE_german_ally
+					always = no
+					always = no
+					always = no
 					#Pfot focuses
-					has_completed_focus = CZE_work_with_germany
-					has_completed_focus = CZE_complete_capitulation
+					always = no
+					always = no
 					
 				}
 			}

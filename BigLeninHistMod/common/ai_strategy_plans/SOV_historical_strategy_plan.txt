@@ -29,7 +29,7 @@ SOV_historical_plan = {
 				GER = {
 					OR = {
 						has_completed_focus = GER_heed_von_neuraths_concerns
-						has_completed_focus = GER_monarchist_sentiment
+						always = no
 					}
 				}
 				has_game_rule = {

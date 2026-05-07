@@ -8,7 +8,7 @@ RAJ_population_decisions = {
 		
 		visible = { 
 			ROOT = {
-				has_completed_focus = RAJ_administrative_oversight
+				always = no
 				check_variable = { RAJ_agrarian_society_value < 0 } 
 			} 
 			FROM = {
@@ -65,13 +65,13 @@ RAJ_population_decisions = {
 			FROM = {
 				set_state_flag = RAJ_industrialized_this_state
 				if = {
-					limit = { ROOT = { has_completed_focus = RAJ_workforce_integration } }
+					limit = { ROOT = { always = no } }
 					add_dynamic_modifier = {
 						modifier = RAJ_industrialized_personnel
 					}
 				}
 				if = {
-					limit = { ROOT = { has_completed_focus = RAJ_land_clearance } }
+					limit = { ROOT = { always = no } }
 					add_extra_state_shared_building_slots = 1
 				}
 			}

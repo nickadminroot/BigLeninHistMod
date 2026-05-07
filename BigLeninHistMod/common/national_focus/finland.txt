@@ -932,7 +932,7 @@ focus_tree = {
 				name = FIN_northern_defense_front_faction
 				icon = GFX_faction_logo_generic_8
 			}
-			IF = {
+			if = {
 				limit = { has_dlc = "Arms Against Tyranny" } 
 				complete_national_focus = NORDIC_form_joint_alliance
 			}

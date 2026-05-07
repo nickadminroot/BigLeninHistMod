@@ -596,7 +596,7 @@
 				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
-			IF = {
+			if = {
 				limit = {
 					VIN = {
 						is_subject_of = ROOT
@@ -609,7 +609,7 @@
 					}	
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					CAM = {
 						is_subject_of = ROOT
@@ -622,7 +622,7 @@
 					}	
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					LAO = {
 						is_subject_of = ROOT
@@ -688,7 +688,7 @@
 				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
-			IF = {
+			if = {
 				limit = {
 					SYR = {
 						is_subject_of = ROOT
@@ -701,7 +701,7 @@
 					}	
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					LEB = {
 						is_subject_of = ROOT
@@ -1223,13 +1223,13 @@
 
 		completion_reward = {
 			add_ideas = FRA_infantry_tanks_bonus
-			IF = {
+			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				mio:FRA_renault_organization = {
 					add_mio_funds = 2000
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = FRA_hotchkiss
 			}
@@ -1575,7 +1575,7 @@
 				uses = 2
 				category = land_doctrine
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1584,7 +1584,7 @@
 					add_mio_research_bonus = 0.02
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = FRA_AMX
 			}

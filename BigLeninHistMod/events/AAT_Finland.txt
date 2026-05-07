@@ -666,7 +666,7 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					FROM = { is_faction_leader = yes }
 				}
@@ -729,11 +729,11 @@ country_event = {
 	option = {
 		name = AAT_finland_diplomacy.02.a
 
-		IF = { #Bring unit leaders if NSB is active (otherwise is just generic people)
+		if = { #Bring unit leaders if NSB is active (otherwise is just generic people)
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			IF = { #Filter out ANti-Bolshevik generals if Finland is communist
+			if = { #Filter out ANti-Bolshevik generals if Finland is communist
 				limit = {
 					has_government = communism
 				}
@@ -743,7 +743,7 @@ country_event = {
 							NOT = { has_trait = BALTIC_anti_bolshevik }
 						}
 						hidden_effect = {
-							IF = {
+							if = {
 								limit = {
 									is_field_marshal = yes
 								}
@@ -755,11 +755,11 @@ country_event = {
 					every_core_state = { add_core_of = ROOT }
 				}
 			}
-			ELSE = {
+			else = {
 				FROM = {
 					every_unit_leader = {
 						hidden_effect = {
-							IF = {
+							if = {
 								limit = {
 									is_field_marshal = yes
 								}
@@ -794,13 +794,13 @@ country_event = {
 	option = {
 		name = AAT_finland_diplomacy.03.a
 
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes
 			}
 			add_to_faction = FROM
 		}
-		ELSE = {
+		else = {
 			faction_leader = {
 				add_to_faction = FROM
 			}
@@ -1565,14 +1565,14 @@ country_event = {
 	option = {
 		name = AAT_finland_diplomacy.15.a
 
-		IF = { #Bring unit leaders if NSB is active (otherwise is just generic people)
+		if = { #Bring unit leaders if NSB is active (otherwise is just generic people)
 			limit = {
 				has_dlc = "No Step Back"
 			}
 			FROM = {
 				every_unit_leader = {
 					hidden_effect = {
-						IF = {
+						if = {
 							limit = {
 								is_field_marshal = yes
 							}
@@ -1975,7 +1975,7 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						any_controlled_state = {
@@ -1993,7 +1993,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					any_controlled_state = {
 						is_claimed_by = FROM
@@ -2034,7 +2034,7 @@ country_event = {
 				}
 			}
 
-			IF = { #REPRESENT PETSAMO NAVAL BASE BY A NAVAL BASE IN KOLA
+			if = { #REPRESENT PETSAMO NAVAL BASE BY A NAVAL BASE IN KOLA
 				limit = {
 					has_full_control_of_state = 213 #KOLA
 				}
@@ -2149,7 +2149,7 @@ country_event = {
 	option = {
 		name = AAT_finland_diplomacy.21.a
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					any_controlled_state = {
@@ -2167,7 +2167,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				any_controlled_state = {
 					is_claimed_by = FROM
@@ -2215,7 +2215,7 @@ country_event = {
 		}
 
 		FROM = {
-			IF = { #REPRESENT PETSAMO NAVAL BASE BY A NAVAL BASE IN KOLA
+			if = { #REPRESENT PETSAMO NAVAL BASE BY A NAVAL BASE IN KOLA
 				limit = {
 					has_full_control_of_state = 213 #KOLA
 				}
@@ -2745,7 +2745,7 @@ country_event = {
 
 		effect_tooltip = {
 			white_peace = FROM
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						is_faction_leader = yes
@@ -2758,7 +2758,7 @@ country_event = {
 					ROOT = { white_peace = PREV }
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						is_subject = yes
@@ -2769,7 +2769,7 @@ country_event = {
 						ROOT = { white_peace = PREV }
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = {
 							any_allied_country = {
@@ -2837,7 +2837,7 @@ country_event = {
 		name = AAT_finland_winter_war.04.a
 		
 		white_peace = FROM
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes
 			}
@@ -2848,14 +2848,14 @@ country_event = {
 				white_peace = FROM
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				is_subject = yes
 			}
 			overlord = {
 				white_peace = FROM
 			}
-			IF = {
+			if = {
 				limit = {
 					any_allied_country = {
 						has_war_with = FROM
@@ -2938,7 +2938,7 @@ country_event = {
 
 		effect_tooltip = {
 			white_peace = FROM
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						is_faction_leader = yes
@@ -2951,7 +2951,7 @@ country_event = {
 					ROOT = { white_peace = PREV }
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						is_subject = yes
@@ -2962,7 +2962,7 @@ country_event = {
 						ROOT = { white_peace = PREV }
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = {
 							any_allied_country = {
@@ -2990,21 +2990,21 @@ country_event = {
 			}
 
 			#MURMANSK
-			IF = {
+			if = {
 				limit = {
 					213 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 				}
 				FROM = { transfer_state = 213 }
 			}
 			#ONEGA
-			IF = {
+			if = {
 				limit = {
 					215 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 				}
 				FROM = { transfer_state = 215 }
 			}
 			#OLONETS
-			IF = {
+			if = {
 				limit = {
 					216 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 				}
@@ -3053,7 +3053,7 @@ country_event = {
 		name = AAT_finland_winter_war.07.a
 		
 		white_peace = FROM
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes
 			}
@@ -3064,14 +3064,14 @@ country_event = {
 				white_peace = FROM
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				is_subject = yes
 			}
 			overlord = {
 				white_peace = FROM
 			}
-			IF = {
+			if = {
 				limit = {
 					any_allied_country = {
 						has_war_with = FROM
@@ -3105,21 +3105,21 @@ country_event = {
 		}
 
 		#MURMANSK
-		IF = {
+		if = {
 			limit = {
 				213 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 			}
 			transfer_state = 213
 		}
 		#ONEGA
-		IF = {
+		if = {
 			limit = {
 				215 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 			}
 			transfer_state = 215
 		}
 		#OLONETS
-		IF = {
+		if = {
 			limit = {
 				216 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 			}
@@ -3218,7 +3218,7 @@ country_event = {
 			give_guarantee = FROM
 
 			FROM = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Step Back"
 					}
@@ -3228,14 +3228,14 @@ country_event = {
 						producer = ROOT
 					}
 				}
-				ELSE = {
+				else = {
 					add_equipment_to_stockpile = { 
 						type = light_tank_equipment_1
 						amount = 50
 						producer = ROOT
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "By Blood Alone"
 					}
@@ -3245,7 +3245,7 @@ country_event = {
 						producer = ROOT
 					}
 				}
-				ELSE = {
+				else = {
 					add_equipment_to_stockpile = { 
 						type = fighter_equipment_1
 						amount = 50
@@ -3382,7 +3382,7 @@ country_event = {
 		name = AAT_finland_continuation_war.02.a
 		
 		ROOT = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
@@ -3392,14 +3392,14 @@ country_event = {
 					producer = FROM
 				}
 			}
-			ELSE = {
+			else = {
 				add_equipment_to_stockpile = { 
 					type = light_tank_equipment_1
 					amount = 50
 					producer = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
@@ -3409,7 +3409,7 @@ country_event = {
 					producer = FROM
 				}
 			}
-			ELSE = {
+			else = {
 				add_equipment_to_stockpile = { 
 					type = fighter_equipment_1
 					amount = 50
@@ -3495,7 +3495,7 @@ country_event = {
 			clr_country_flag = FIN_pact_for_continuation_war_flag
 
 			#Reset AI strats added previously	
-			IF = {
+			if = {
 				limit = {
 					original_tag = FIN
 				}
@@ -3515,7 +3515,7 @@ country_event = {
 					value = 100
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = GER
 				}
@@ -3665,7 +3665,7 @@ country_event = {
 
 		### TRANSFER STATES ###
 		#KARJALA
-		IF = {
+		if = {
 			limit = {	
 				146 = {
 					is_owned_by = FROM
@@ -3675,7 +3675,7 @@ country_event = {
 		}
 
 		#SALLA
-		IF = {
+		if = {
 			limit = {
 				147 = {
 					is_owned_by = FROM
@@ -3685,7 +3685,7 @@ country_event = {
 		}
 
 		#PETSAMO
-		IF = {
+		if = {
 			limit = {
 				722 = {	
 					is_owned_by = FROM
@@ -3747,7 +3747,7 @@ country_event = {
 		hidden_effect = {
 			news_event = { id = aat_news.120 hours = 12 }
 
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						666 = {
@@ -3870,7 +3870,7 @@ country_event = {
 	option = {
 		name = AAT_finland_continuation_war.10.a
 
-		IF = {
+		if = {
 			limit = {
 				GER = {
 					has_military_access_to = ROOT
@@ -4091,7 +4091,7 @@ country_event = {
 			white_peace = FROM
 		}
 
-		IF = {
+		if = {
 			limit = {
 				GER = {
 					has_military_access_to = FIN
@@ -4136,7 +4136,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FIN = {
 					has_idea = FIN_the_lone_wolf
@@ -4506,7 +4506,7 @@ country_event = {
 		name = AAT_finland_kinship_war.02.a
 		
 		#ONEGA
-		IF = {
+		if = {
 			limit = {
 				215 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4539,7 +4539,7 @@ country_event = {
 			}
 		}
 		#OLONETS
-		IF = {
+		if = {
 			limit = {
 				216 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4569,7 +4569,7 @@ country_event = {
 		}
 
 		#KARJALA
-		IF = {
+		if = {
 			limit = {
 				146 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4594,7 +4594,7 @@ country_event = {
 		}
 
 		#SALLA
-		IF = {
+		if = {
 			limit = {
 				147 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4623,7 +4623,7 @@ country_event = {
 
 		hidden_effect = {
 			KAR = {
-				IF = {
+				if = {
 					limit = {
 						owns_state = 215
 					}
@@ -4678,7 +4678,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_government = fascism
 				}
@@ -4694,7 +4694,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				KAR = {
 					set_politics = { 
 						ruling_party = neutrality
@@ -4709,15 +4709,6 @@ country_event = {
 			}
 			KAR = {
 				# Add extra country leader trait to the possible leaders (fascist & non-aligned)
-				KAR_ukki_vainamoinen = {
-					add_country_leader_trait = {
-					 	ideology = fascism_ideology
-					 	trait = veteran_guerrilla_fighter
-					 }
-				}
-				KAR_jalmari_takkinen = {
-					add_country_leader_trait = veteran_guerrilla_fighter
-				}
 
 				add_opinion_modifier = {
 					target = ROOT
@@ -4727,7 +4718,7 @@ country_event = {
 		}
 		set_country_flag = FIN_full_support_for_karelia_flag #Used for the effect tooltip in the Soviet event
 		KAR = {
-			IF = {
+			if = {
 				limit = {
 					any_other_country = {
 						original_tag = SOV
@@ -4748,7 +4739,7 @@ country_event = {
 						}
 					}
 					ROOT = {
-						IF = {
+						if = {
 							limit = {
 								NOT = { has_war_with = PREV }
 							}
@@ -4767,13 +4758,13 @@ country_event = {
 					country_event = NSB_soviet_nationalist.001
 				}
 			}
-			ELSE = {
+			else = {
 				declare_war_on = {
 					target = SOV
 					type = independence_wargoal
 				}
 
-				IF = {
+				if = {
 					limit = {
 						ROOT = { NOT = { has_war_with = SOV } }
 					}
@@ -4790,7 +4781,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { #Send Karelian Uprising event if Finland has triggered the Karelian Uprising
+			if = { #Send Karelian Uprising event if Finland has triggered the Karelian Uprising
 				limit = {
 					SOV = { NOT = { has_country_flag = KAR_uprising_flag } }
 				}
@@ -4804,7 +4795,7 @@ country_event = {
 		name = AAT_finland_kinship_war.02.b
 
 		#ONEGA
-		IF = {
+		if = {
 			limit = {
 				215 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4838,7 +4829,7 @@ country_event = {
 		}
 
 		#OLONETS
-		IF = {
+		if = {
 			limit = {
 				216 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4868,7 +4859,7 @@ country_event = {
 		}
 
 		#KARJALA
-		IF = {
+		if = {
 			limit = {
 				146 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4893,7 +4884,7 @@ country_event = {
 		}
 
 		#SALLA
-		IF = {
+		if = {
 			limit = {
 				147 = {
 					has_dynamic_modifier = { modifier = FIN_anti_soviet_sentiment }
@@ -4919,7 +4910,7 @@ country_event = {
 
 		hidden_effect = {	
 			KAR = {
-				IF = {
+				if = {
 					limit = {
 						owns_state = 215
 					}
@@ -4974,7 +4965,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_government = fascism
 				}
@@ -4990,7 +4981,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				KAR = {
 					set_politics = { 
 						ruling_party = neutrality
@@ -5005,15 +4996,6 @@ country_event = {
 			}
 			KAR = {
 				# Add extra country leader trait to the possible leaders (fascist & non-aligned)
-				KAR_ukki_vainamoinen = {
-					add_country_leader_trait = {
-					 	ideology = fascism_ideology
-					 	trait = veteran_guerrilla_fighter
-					 }
-				}
-				KAR_jalmari_takkinen = {
-					add_country_leader_trait = veteran_guerrilla_fighter
-				}
 
 				add_opinion_modifier = {
 					target = ROOT
@@ -5023,7 +5005,7 @@ country_event = {
 		}
 
 		KAR = {
-			IF = {
+			if = {
 				limit = {
 					any_other_country = {
 						original_tag = SOV
@@ -5051,7 +5033,7 @@ country_event = {
 					country_event = NSB_soviet_nationalist.001
 				}
 			}
-			ELSE = {
+			else = {
 				declare_war_on = {
 					target = SOV
 					type = independence_wargoal
@@ -5064,7 +5046,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { #Send Karelian Uprising event if Finland has triggered the Karelian Uprising
+			if = { #Send Karelian Uprising event if Finland has triggered the Karelian Uprising
 				limit = {
 					SOV = { NOT = { has_country_flag = KAR_uprising_flag } }
 				}
@@ -5093,32 +5075,32 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 215}
 				}
 				KAR = { transfer_state = 215 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 216}
 				}
 				KAR = { transfer_state = 216 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 146}
 				}
 				KAR = { transfer_state = 146 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 147}
 				}
 				KAR = { transfer_state = 147 }
 			}
 
-			IF = { #FULL FINNISH SUPPORT
+			if = { #FULL FINNISH SUPPORT
 				limit = {
 					FROM = {
 						has_country_flag = FIN_full_support_for_karelia_flag
@@ -5133,7 +5115,7 @@ country_event = {
 						type = independence_wargoal
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = { has_country_flag = FIN_joining_war_against_sov_flag }
 					}
@@ -5146,7 +5128,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = { #UNOFFICIAL FINNISH SUPPORT
+			else = { #UNOFFICIAL FINNISH SUPPORT
 				effect_tooltip = {
 					KAR = {
 						declare_war_on = {
@@ -5160,14 +5142,14 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_civil_war = yes
 					NOT = {
 						has_country_leader_ideology = stalinism
 					}
 				}
-				IF = { #FULL FINNISH SUPPORT
+				if = { #FULL FINNISH SUPPORT
 					limit = {
 						FROM = {
 							has_country_flag = FIN_full_support_for_karelia_flag
@@ -5179,7 +5161,7 @@ country_event = {
 							type = independence_wargoal
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							FROM = { has_country_flag = FIN_joining_war_against_sov_flag }
 						}
@@ -5192,7 +5174,7 @@ country_event = {
 						}
 					}
 				}
-				ELSE = { #UNOFFICIAL FINNISH SUPPORT
+				else = { #UNOFFICIAL FINNISH SUPPORT
 					effect_tooltip = {
 						KAR = {
 							declare_war_on = {
@@ -5211,13 +5193,13 @@ country_event = {
 		#Clean flags
 		hidden_effect = {
 			FROM = {
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = FIN_joining_war_against_sov_flag
 					}
 					clr_country_flag = FIN_joining_war_against_sov_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = FIN_full_support_for_karelia_flag
 					}
@@ -5242,32 +5224,32 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 215}
 				}
 				KAR = { transfer_state = 215 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 216}
 				}
 				KAR = { transfer_state = 216 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 146}
 				}
 				KAR = { transfer_state = 146 }
 			}
-			IF = {
+			if = {
 				limit = {
 					KAR = { owns_state = 147}
 				}
 				KAR = { transfer_state = 147 }
 			}
 
-			IF = { #FULL FINNISH SUPPORT
+			if = { #FULL FINNISH SUPPORT
 				limit = {
 					FROM = {
 						has_country_flag = FIN_full_support_for_karelia_flag
@@ -5282,7 +5264,7 @@ country_event = {
 						type = independence_wargoal
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = { has_country_flag = FIN_joining_war_against_sov_flag }
 					}
@@ -5295,7 +5277,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = { #UNOFFICIAL FINNISH SUPPORT
+			else = { #UNOFFICIAL FINNISH SUPPORT
 				effect_tooltip = {
 					KAR = {
 						declare_war_on = {
@@ -5313,13 +5295,13 @@ country_event = {
 		#Clean flags
 		hidden_effect = {
 			FROM = {
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = FIN_joining_war_against_sov_flag
 					}
 					clr_country_flag = FIN_joining_war_against_sov_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						has_country_flag = FIN_full_support_for_karelia_flag
 					}
@@ -5609,7 +5591,7 @@ country_event = {
 			base = 50
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				NOT = {
@@ -5621,7 +5603,7 @@ country_event = {
 			add_manpower = -100
 			add_war_support = -0.01
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				NOT = {
@@ -5633,7 +5615,7 @@ country_event = {
 			add_manpower = -250
 			add_war_support = -0.01
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				FIN = {
@@ -5643,7 +5625,7 @@ country_event = {
 			add_manpower = -200
 			add_war_support = -0.02
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				FIN = {
@@ -5696,7 +5678,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				NOT = {
@@ -5708,7 +5690,7 @@ country_event = {
 			add_manpower = -100
 			add_war_support = -0.01
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				NOT = {
@@ -5720,7 +5702,7 @@ country_event = {
 			add_manpower = -250
 			add_war_support = -0.01
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				FIN = {
@@ -5730,7 +5712,7 @@ country_event = {
 			add_manpower = -200
 			add_war_support = -0.02
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				FIN = {
@@ -6254,7 +6236,7 @@ country_event = {
 			base = 100
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				NOT = {
@@ -6266,7 +6248,7 @@ country_event = {
 			add_manpower = -300
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				NOT = {
@@ -6278,7 +6260,7 @@ country_event = {
 			add_manpower = -350
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				FIN = {
@@ -6288,7 +6270,7 @@ country_event = {
 			add_manpower = -320
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				FIN = {
@@ -6361,7 +6343,7 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				NOT = {
@@ -6373,7 +6355,7 @@ country_event = {
 			add_manpower = -300
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				NOT = {
@@ -6385,7 +6367,7 @@ country_event = {
 			add_manpower = -350
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				FIN = {
@@ -6395,7 +6377,7 @@ country_event = {
 			add_manpower = -320
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				FIN = {
@@ -6468,7 +6450,7 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				NOT = {
@@ -6480,7 +6462,7 @@ country_event = {
 			add_manpower = -300
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				NOT = {
@@ -6492,7 +6474,7 @@ country_event = {
 			add_manpower = -350
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active
 				FIN = {
@@ -6502,7 +6484,7 @@ country_event = {
 			add_manpower = -320
 			add_war_support = -0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = FIN_snipers_active_with_extra_arms
 				FIN = {

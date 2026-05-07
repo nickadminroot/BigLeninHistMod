@@ -12,7 +12,7 @@ on_actions = {
 						has_government = fascism
 					}
 					AST = {
-						has_completed_focus = AST_support_indonesian_uprising
+						always = no
 					}
 				}
 				AST = {
@@ -553,7 +553,7 @@ on_actions = {
 
 		# Making sure Quebec City becomes the Capital of Quebec
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						tag = QUE
@@ -581,7 +581,7 @@ on_actions = {
 
 		# Making sure Quebec City becomes the Capital of Quebec
 	    effect = {
-	    	IF = {
+	    	if = {
 	    		limit = {
 	    			ROOT = {
 	    				tag = QUE

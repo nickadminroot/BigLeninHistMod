@@ -281,7 +281,7 @@ on_actions = {
 			SWE_on_freed_cross_we_bear = yes
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 					ROOT = { original_tag = DEN }
@@ -331,7 +331,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = DEN
 					has_dlc = "Arms Against Tyranny"
@@ -367,7 +367,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 					ROOT = { original_tag = DEN }
@@ -449,7 +449,7 @@ on_actions = {
 					}
 					else_if = {
 						limit = {
-							has_completed_focus = FIN_suomalainen_sosialismi
+							always = no
 						}
 						uncomplete_national_focus = {
 							focus = FIN_suomalainen_sosialismi
@@ -460,19 +460,19 @@ on_actions = {
 
 					if = {
 						limit = {
-							NOT = { has_completed_focus = FIN_right_wing_policies }
+							NOT = { always = no }
 						}
 						unlock_national_focus = FIN_right_wing_policies
 					}
 					if = {
 						limit = {
-							NOT = { has_completed_focus = FIN_prepare_a_military_coup }
+							NOT = { always = no }
 						}
 						unlock_national_focus = FIN_prepare_a_military_coup
 					}
 					if = {
 						limit = {
-							NOT = { has_completed_focus = FIN_a_fascist_regime }
+							NOT = { always = no }
 						}
 						unlock_national_focus = FIN_a_fascist_regime
 					}
@@ -482,7 +482,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = NOR
@@ -490,7 +490,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						has_template = "Våpenfolket"
@@ -503,7 +503,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						has_template = "Folkets Hær"
@@ -548,7 +548,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_global_flag = SOV_winter_war_flag }
 					FROM = { tag = FIN }
@@ -595,7 +595,7 @@ on_actions = {
 					}
 					has_dlc = "Arms Against Tyranny"
 					SWE = { 
-						has_completed_focus = SWE_allow_landsverk_to_operate 
+						always = no 
 						NOT = { has_country_flag = SWE_landsberg_sabotage }
 					}
 				}
@@ -622,7 +622,7 @@ on_actions = {
 					OR = {
 						FROM = { original_tag = SWE }
 						ROOT = { original_tag = SWE }
-						SWE = { has_completed_focus = SWE_the_narvik_solution }
+						SWE = { always = no }
 					}
 				}
 				if = {
@@ -671,7 +671,7 @@ on_actions = {
 					ICE = {
 						NOT = { has_country_flag = declared_independence_flag }
 						is_subject_of = FROM
-						has_completed_focus = ICE_declare_absolute_neutrality
+						always = no
 					}
 				}
 				set_variable = { ICE.overlord_attacker = ROOT}
@@ -690,7 +690,7 @@ on_actions = {
 			if = { 
 				limit = {
 					SWE = { 
-						has_completed_focus =  SWE_train_the_sheltered
+						always = no
 						NOT = { has_country_flag = SWE_has_activated_train_the_sheltered }
 						is_eligible_for_train_the_sheltered = yes
 					}
@@ -888,8 +888,8 @@ on_actions = {
 					set_variable = { NOR_cw_fascist_attacker = ROOT }
 					if = { # Norway has chosen Fascist branch
 						limit = {
-							has_completed_focus = NOR_lurk_in_the_shadows
-							NOT = { has_completed_focus = NOR_nasjonal_samling }
+							always = no
+							NOT = { always = no }
 
 						}
 						country_event = { 
@@ -1021,14 +1021,14 @@ on_actions = {
 					OR = {
 						ROOT = {
 							OR = {
-								has_completed_focus = GER_oppose_hitler
-								has_completed_focus = GER_oppose_hitler_ww
+								always = no
+								always = no
 							}
 						}
 						FROM = {
 							OR = {
-								has_completed_focus = GER_oppose_hitler
-								has_completed_focus = GER_oppose_hitler_ww
+								always = no
+								always = no
 							}
 						}
 					}
@@ -1061,7 +1061,7 @@ on_actions = {
 					}
 
 					SWE = { 
-						has_completed_focus = SWE_the_narvik_solution 
+						always = no 
 						NOT = { has_country_flag = SWE_has_sent_return_narvik_event }
 					}
 					NOR = {  
@@ -1081,7 +1081,7 @@ on_actions = {
 				limit = {
 					ROOT  = {
 						original_tag = SWE
-						has_completed_focus = SWE_the_nordic_defense_council		
+						always = no		
 					}
 					FROM = {
 						is_subject_of = ROOT
@@ -1092,7 +1092,7 @@ on_actions = {
 							original_tag = FIN 
 						}
 						NOT = {
-							has_autonomy_state = autonomy_aat_defense_council_member
+							always = no
 						}
 					}
 				}
@@ -1122,7 +1122,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 					DEN = {
@@ -1295,7 +1295,7 @@ on_actions = {
 					has_dlc = "Arms Against Tyranny"
 					ROOT = {
 						original_tag = FIN
-						has_completed_focus = FIN_preserve_sapmi
+						always = no
 						OR = {
 							has_government = democratic
 							has_government = communism
@@ -1324,7 +1324,7 @@ on_actions = {
 						ROOT = {
 							NOT = {
 								original_Tag = FIN
-								has_completed_focus = FIN_confederated_finno_russian_republics
+								always = no
 							}
 						}
 					}
@@ -1336,7 +1336,7 @@ on_actions = {
 					limit = {
 						ROOT = {
 							original_tag = FIN
-							has_completed_focus = FIN_confederated_finno_russian_republics
+							always = no
 						}
 						FROM.FROM = {
 							is_core_of = SOV
@@ -1355,7 +1355,7 @@ on_actions = {
 				limit = {
 					ROOT = { 
 						original_tag = SWE 
-						has_completed_focus = SWE_join_allies_for_colonies
+						always = no
 					}
 				}
 
@@ -1618,7 +1618,7 @@ on_actions = {
 			if = {
 				limit = {
 					SWE = {
-						has_completed_focus = SWE_finlands_cause_is_ours
+						always = no
 						has_idea = SWE_gateway_to_peace
 					}
 					FROM.FROM = {
@@ -1707,7 +1707,7 @@ on_actions = {
 						original_tag = NOR 
 						NOT = { has_government = fascism }
 						surrender_progress > 0.45
-						has_completed_focus = NOR_continue_nygaardsvold_government 
+						always = no 
 						has_country_flag = NOR_delayed_quislings_coup
 						has_civil_war = no 
 					}
@@ -1727,7 +1727,7 @@ on_actions = {
 				limit = {
 					ROOT = {
 						original_tag = SWE
-						has_completed_focus = SWE_universal_basic_income
+						always = no
 					}
 					FROM.FROM = {
 						NOT = { has_state_flag = SWE_been_taken_by_communist_sweden_once }
@@ -1793,7 +1793,7 @@ on_actions = {
 
 				set_global_flag = achievement_den_has_never_been_puppeted
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 					original_tag = SWE
@@ -1810,15 +1810,6 @@ on_actions = {
 				}
 				ROOT = {
 					retire_country_leader = yes
-					SWE_sven_linderot = {
-						add_country_leader_role = {
-							country_leader = {
-								ideology = stalinism
-								expire="1965.1.1.1"
-							}
-							promote_leader = yes
-						}
-					}
 					set_politics = {
 						ruling_party = communism
 						elections_allowed = no
@@ -1936,7 +1927,7 @@ on_actions = {
 	#ROOT is subject FROM is previous overlord
 	on_subject_free = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ICE
 					has_dlc = "Arms Against Tyranny"
@@ -1950,7 +1941,7 @@ on_actions = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = SWE
 					has_dlc = "Arms Against Tyranny"
@@ -1962,7 +1953,7 @@ on_actions = {
 					clr_country_flag = SWE_is_reichsprotectorate_flag
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = DEN
 					has_dlc = "Arms Against Tyranny"
@@ -2002,7 +1993,7 @@ on_actions = {
 			ROOT = {
 				if = {
 					limit = {
-						has_completed_focus = NOR_building_an_independent_norway
+						always = no
 						NOT = { 
 							has_dynamic_modifier = { modifier = NOR_independent_norway_dmod }
 						}
@@ -2032,7 +2023,7 @@ on_actions = {
 					ROOT = {
 						original_tag = DEN
 						has_country_flag = DEN_has_occupation_flag
-						NOT = { has_completed_focus = DEN_declare_independence }
+						NOT = { always = no }
 					}
 				}
 				DEN_puppet_on_action_effects = yes
@@ -2044,11 +2035,11 @@ on_actions = {
 	on_ruling_party_change = {
 	# temp var old_ideology_token is available for effects
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = SWE
 					has_government = fascism
-					has_completed_focus = SWE_revoke_anti_militia_laws
+					always = no
 				}
 				every_core_state = {
 					limit = {
@@ -2298,7 +2289,7 @@ on_actions = {
 					}
 					if = {
 						limit = {
-							has_completed_focus = NOR_vote_of_no_confidence
+							always = no
 						}
 						set_cosmetic_tag = NOR_alt_democratic
 					}
@@ -2319,13 +2310,13 @@ on_actions = {
 					}
 					if = {
 						limit = {
-							has_completed_focus = NOR_compromise_with_the_nkp 
+							always = no 
 						}
 						set_cosmetic_tag = NOR_SOV_communism
 					}
 					else_if = {
 						limit = {
-							has_completed_focus = NOR_prosecute_the_nkp
+							always = no
 						}
 						set_cosmetic_tag = NOR_trotsky_communism
 					}
@@ -2345,7 +2336,7 @@ on_actions = {
 					}
 					if = {
 						limit = {
-							has_completed_focus = NOR_reviving_the_norgesveldet
+							always = no
 						}
 						set_cosmetic_tag = NOR_norgesveldet_fascism
 					}

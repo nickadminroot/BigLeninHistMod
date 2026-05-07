@@ -2032,7 +2032,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						any_state = {
@@ -5530,7 +5530,7 @@ focus_tree = {
 			add_state_claim = 660
 			add_state_claim = 539
 			add_state_claim = 772
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = FRA
@@ -6869,7 +6869,7 @@ focus_tree = {
 			if = {
 				limit = {
 					FRA = {
-						has_completed_focus = FRA_the_legitimate_heir
+						always = no
 					}
 				}
 				FRA = { country_event = { id = lar_spain.42 hours = 6 random_hours = 6 } }
@@ -10857,7 +10857,7 @@ focus_tree = {
 					any_country = {
 						original_tag = SOV
 						has_government = communism
-						NOT = { has_completed_focus = SOV_the_right_opposition }
+						NOT = { always = no }
 					}
 				}
 				hidden_effect = {
@@ -10865,7 +10865,7 @@ focus_tree = {
 						limit = {
 							original_tag = SOV
 							has_government = communism
-							NOT = { has_completed_focus = SOV_the_right_opposition }
+							NOT = { always = no }
 						}
 						ROOT = {
 							create_wargoal = {

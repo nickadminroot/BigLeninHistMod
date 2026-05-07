@@ -8162,7 +8162,7 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				tag = USA
-				NOT = { has_completed_focus = USA_america_first }
+				NOT = { always = no }
 				factor = 0
 			}
 		}
@@ -8177,7 +8177,7 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				tag = HUN
-				NOT = { has_completed_focus = HUN_invite_the_habsburg_prince }
+				NOT = { always = no }
 				factor = 0
 			}
 		}

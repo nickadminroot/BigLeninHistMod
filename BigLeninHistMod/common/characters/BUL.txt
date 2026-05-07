@@ -443,7 +443,7 @@ characters = {
 			}
 			available = {
 				NOT = {
-					has_completed_focus = BUL_oppose_the_royal_dictatorship
+					always = no
 				}
 				NOT = {
 					has_government = communism
@@ -1653,7 +1653,7 @@ characters = {
 					original_tag = BUL
 				}
 				available = {
-					has_completed_focus = BUL_democratic_principles 
+					always = no 
 				}
 				traits = {
 					compassionate_gentleman 
@@ -1707,7 +1707,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_democratic_principles 
+				always = no 
 			}
 			traits = {
 				industry_reformer 
@@ -1742,7 +1742,7 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = BUL_limited_womens_suffrage 
-					has_completed_focus = BUL_full_voting_rights_for_women 
+					always = no 
 				}
 			}
 			traits = {
@@ -1828,7 +1828,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_appoint_communist_ministers 
+				always = no 
 			}
 			traits = {
 				captain_of_industry 
@@ -1889,7 +1889,7 @@ characters = {
 			}
 			available = {
 				NOT = {
-					has_completed_focus = BUL_oppose_the_royal_dictatorship 
+					always = no 
 				}
 			}
 			traits = {
@@ -2009,7 +2009,7 @@ characters = {
 				}
 				available = {
 					NOT = {
-						has_completed_focus = BUL_oppose_the_royal_dictatorship 
+						always = no 
 					}
 				}
 				traits = {

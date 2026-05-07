@@ -13,7 +13,7 @@ ability = {
 			is_border_war = no
 			OWNER = {
 				OR = {
-					has_completed_focus = JAP_warrior_spirit
+					always = no
 					has_completed_focus = SPA_cultivate_fanaticism
 				}
 			}
@@ -66,7 +66,7 @@ ability = {
 			is_border_war = no
 			OWNER = {
 				OR = {
-					has_completed_focus = JAP_indoctrination_in_the_military_academy
+					always = no
 					has_completed_focus = JAP_issue_the_senjinkun_military_code
 				}
 			}
@@ -117,7 +117,7 @@ ability = {
 		allowed = {
 			is_border_war = no
 			OWNER = {
-				has_completed_focus = JAP_the_art_of_warfare
+				always = no
 			}
 		}
 		

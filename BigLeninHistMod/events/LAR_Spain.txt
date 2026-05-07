@@ -243,7 +243,7 @@ country_event = {
 						}
 						SPR_manuel_azana = { set_nationality = SPD }
 					}
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_country_leader = {
@@ -252,7 +252,7 @@ country_event = {
 								}
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								NOT = {
 									can_be_country_leader = SPR_manuel_azana
@@ -268,7 +268,7 @@ country_event = {
 								promote_leader = yes
 							}
 						}
-						ELSE = {
+						else = {
 							promote_character = {
 							    character = SPR_manuel_azana
 							    ideology = conservatism
@@ -2537,7 +2537,7 @@ country_event = {
 				SPD = {
 					retire_ideology_leader = fascism
 					retire_ideology_leader = neutrality
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_country_leader = {
@@ -2546,7 +2546,7 @@ country_event = {
 								}
 							}
 						}
-						IF = {
+						if = {
 							limit = {
 								NOT = {
 									can_be_country_leader = SPR_manuel_azana
@@ -2562,7 +2562,7 @@ country_event = {
 								promote_leader = yes
 							}
 						}
-						ELSE = {
+						else = {
 							promote_character = {
 							    character = SPR_manuel_azana
 							    ideology = conservatism
@@ -6905,7 +6905,7 @@ country_event = {
 				}
 				if = { #If Right Opposition is still under Stalin's rule, volunteers come back
 					limit = {
-						SOV = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+						SOV = { always = no }
 						SPD = {
 							has_volunteers_amount_from = {
 								tag = SOV
@@ -7564,8 +7564,8 @@ country_event = {
 				limit = {
 					has_completed_focus = SPR_the_anti_fascist_workers_revolution
 					SOV = {
-						has_completed_focus = SOV_covert_support_for_spanish_poum
-						has_completed_focus = SOV_coup_detat
+						always = no
+						always = no
 					}
 				}
 				every_other_country = { #Exclude SOV
@@ -8236,7 +8236,7 @@ country_event = {
 					}
 					SPR_manuel_azana = { set_nationality = SPD }
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_country_leader = {
@@ -8245,7 +8245,7 @@ country_event = {
 							}
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								can_be_country_leader = SPR_manuel_azana
@@ -8261,7 +8261,7 @@ country_event = {
 							promote_leader = yes
 						}
 					}
-					ELSE = {
+					else = {
 						promote_character = {
 						    character = SPR_manuel_azana
 						    ideology = conservatism
@@ -8848,11 +8848,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_popular_front
+				always = no
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_strict_neutrality_in_the_spanish_civil_war
+				always = no
 			}
 		}
 		add_manpower = -20000
@@ -8883,11 +8883,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				has_completed_focus = POR_support_the_spanish_nationalists
+				always = no
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_send_assistance
+				always = no
 			}
 			modifier = {
 				factor = 0
@@ -8952,7 +8952,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_popular_front
+				always = no
 			}
 		}
 		custom_effect_tooltip = SPA_the_iberian_pact_tt
@@ -9012,7 +9012,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				has_completed_focus = POR_support_the_spanish_nationalists
+				always = no
 			}
 			modifier = {
 				factor = 0
@@ -9023,7 +9023,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_support_the_spanish_nationalists
+				always = no
 				is_historical_focus_on = yes
 			}
 		}
@@ -9970,7 +9970,7 @@ country_event = {
 			base = 95
 			modifier = {
 				factor = 0.1
-				has_completed_focus = POR_the_royal_iberian_alliance
+				always = no
 			}
 			modifier = {
 				factor = 0.8

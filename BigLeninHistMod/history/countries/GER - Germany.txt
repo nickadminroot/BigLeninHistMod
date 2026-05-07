@@ -424,12 +424,12 @@ set_variable = { GER_industrialist_prevailed = 0 } #For allowing only one Indust
 # Starting Stats of various kinds
 set_research_slots = 5
 set_convoys = 200
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
 	set_stability = 0.7 # Was 0.75, but get 5% from the Reichstag
-	ELSE = {
+	else = {
 		set_stability = 0.75
 	}
 }
@@ -660,7 +660,7 @@ set_war_support = 0.3
 		state = 56
 	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Step Back"
 		}

@@ -655,7 +655,7 @@ characters={
 				smooth_talking_charmer 
 			}
 			available = {
-				has_completed_focus = AST_never_another_gallipoli 
+				always = no 
 			}
 		}		
 	}
@@ -746,7 +746,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_support_the_centre_party 
+					always = no 
 				}
 				if = {
 					limit = {
@@ -789,7 +789,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_empower_the_workers 
+					always = no 
 				}
 				if = {
 					limit = {
@@ -833,7 +833,7 @@ characters={
 						has_dlc = "Together for Victory"
 					}
 					or = {
-						has_completed_focus = AST_protect_the_homeland 
+						always = no 
 						has_completed_focus = AST_support_the_policy_of_appeasement 
 					}
 				}

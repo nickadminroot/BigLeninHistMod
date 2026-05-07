@@ -1316,7 +1316,7 @@ operation_boost_resistance = { ### 8 2/40
 			if = {
 				limit = {
 					ROOT = {
-						has_completed_focus = SWI_export_saboteurs
+						always = no
 					}
 				}
 				add_resistance_target = {
@@ -1365,7 +1365,7 @@ operation_boost_resistance = { ### 8 2/40
 			if = {
 				limit = {
 					ROOT = {
-						has_completed_focus = SWI_export_saboteurs
+						always = no
 					}
 				}
 				add_resistance_target = {

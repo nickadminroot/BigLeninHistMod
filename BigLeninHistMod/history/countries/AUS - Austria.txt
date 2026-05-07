@@ -1,11 +1,11 @@
 ﻿capital = 4 # Vienna
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
 	set_oob = "AUS_ww_1936"
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -43,7 +43,7 @@ every_owned_state = {
 }
 
 
-IF = {
+if = {
 	limit = { 
 		has_dlc = "Gotterdammerung"
 	}
@@ -195,7 +195,7 @@ IF = {
 		nationalities = { AUS GER YUG }
 	}
 
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -247,20 +247,20 @@ set_technology = {
 	gw_artillery = 1
 }
 
-IF = {
+if = {
 	limit = { has_dlc = "No Step Back" }
 	set_technology = {
 		gwtank_chassis = 1
 	}
 
-	ELSE = {
+	else = {
 		set_technology = {
 			gwtank = 1
 		}
 	}
 }
 
-IF = {
+if = {
 	limit = { has_dlc = "La Resistance" }
 		set_technology = {
 			armored_car1 = 1

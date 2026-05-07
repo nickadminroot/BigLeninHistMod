@@ -558,7 +558,7 @@ demobilization = {
 			has_war = no
 			NOT = {
 				original_tag = SWE
-				SWE = { has_completed_focus = SWE_totalforsvar }
+				SWE = { always = no }
 			}
 		}
 		icon = revolt
@@ -695,7 +695,7 @@ demobilization = {
 			if = {
 				limit = { original_tag = GRE }
 				NOT = {
-					has_completed_focus = GRE_request_communist_support
+					always = no
 				}
 			}
 
@@ -746,7 +746,7 @@ demobilization = {
 					original_tag = GRE
 				}
 				NOT = {
-					has_completed_focus = GRE_request_communist_support
+					always = no
 				}
 			}
 		}
@@ -756,7 +756,7 @@ demobilization = {
 					original_tag = GRE
 				}
 				NOT = {
-					has_completed_focus = GRE_request_communist_support #put here in lieu of a cancel trigger
+					always = no #put here in lieu of a cancel trigger
 				}
 			}		
 		}

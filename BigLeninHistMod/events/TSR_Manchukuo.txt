@@ -579,7 +579,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				MON = {
 					exists = yes
@@ -593,14 +593,14 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			330 = { transfer_state_to = FROM }
 			820 = { transfer_state_to = FROM }
 			818 = { transfer_state_to = FROM }
 			817 = { transfer_state_to = FROM }
 			819 = { transfer_state_to = FROM }
 		}
-		IF = {
+		if = {
 			limit = {
 				TAN = {
 					exists = yes
@@ -614,7 +614,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			329 = { transfer_state_to = FROM }
 		}
 		FROM = {
@@ -739,7 +739,7 @@ country_event = {
 		657 = { transfer_state_to = FROM }
 		409 = { transfer_state_to = FROM }
 		408 = { transfer_state_to = FROM }
-		IF = {
+		if = {
 			limit = {
 				MON = {
 					exists = yes
@@ -753,14 +753,14 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			330 = { transfer_state_to = FROM }
 			820 = { transfer_state_to = FROM }
 			818 = { transfer_state_to = FROM }
 			817 = { transfer_state_to = FROM }
 			819 = { transfer_state_to = FROM }
 		}
-		IF = {
+		if = {
 			limit = {
 				TAN = {
 					exists = yes
@@ -774,7 +774,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = { 
+		else = { 
 			329 = { transfer_state_to = FROM }
 		}
 

@@ -334,7 +334,7 @@ technologies = {
 				}
 				ITA_add_improved_light_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_the_toldi
@@ -724,7 +724,7 @@ technologies = {
 				}
 				ITA_add_improved_medium_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_the_turan
@@ -750,7 +750,7 @@ technologies = {
 					#icon = "GFX_ITA_basic_medium_tank_medium"
 				}
 			}
-			IF = { #Hungarian templates
+			if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_assault_gun_focus
@@ -877,7 +877,7 @@ technologies = {
 				}
 				ITA_add_advanced_medium_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_the_turan
@@ -903,7 +903,7 @@ technologies = {
 					#icon = "GFX_ITA_basic_medium_tank_medium"
 				}
 			}
-			IF = { #Hungarian templates
+			if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_assault_gun_focus
@@ -1335,19 +1335,19 @@ technologies = {
 				}
 				else_if = {
 					limit = {
-						has_completed_focus = ITA_modern_musculus
+						always = no
 					}
 					ITA_add_modern_musculus_sh_tank_template_and_production = yes
 				}
 				else_if = {
 					limit = {
-						has_completed_focus = ITA_a_time_for_war
+						always = no
 					}
 					ITA_add_hand_of_god_sh_tank_template_and_production = yes
 				}
 			}
 
-			IF = { #Japanese templates
+			if = { #Japanese templates
 				limit = {
 					original_tag = JAP
 					has_completed_focus = JAP_the_ultimate_tank

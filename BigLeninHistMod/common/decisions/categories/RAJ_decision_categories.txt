@@ -20,7 +20,7 @@ RAJ_population_decisions = {
 			has_completed_focus = RAJ_rural_development_plan
 		}
 		else = {
-			has_completed_focus = RAJ_administrative_oversight
+			always = no
 		}
 	}
 

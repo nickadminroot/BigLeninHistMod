@@ -157,7 +157,7 @@ characters = {
 				}
 				available  = {
 					has_intelligence_agency  = yes 
-					has_completed_focus  = CHI_bureau_of_investigation_and_statistics
+					always = no
 				}
 				idea_token = CHI_dai_li
 				traits  = {
@@ -183,7 +183,7 @@ characters = {
 					}
 				}
 				available  = {
-					has_completed_focus = CHI_bureau_of_investigation_and_statistics
+					always = no
 				}
 				idea_token = CHI_dai_li
 				traits  = {
@@ -360,7 +360,7 @@ characters = {
 			}
 			corps_commander = {
 				visible = {
-					has_completed_focus = CHI_burma_campaign
+					always = no
 				}
 	
 				traits={ trait_cautious armor_officer }
@@ -409,7 +409,7 @@ characters = {
 			}
 			corps_commander ={
 				visible = {
-					has_completed_focus = CHI_organise_the_200th_division
+					always = no
 				}
 				traits={ career_officer trait_reckless armor_officer }
 				skill=3
@@ -755,7 +755,7 @@ characters = {
 		}
 		corps_commander={
 			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
+				always = no
 			}
 			skill=3
 			attack_skill=3
@@ -776,7 +776,7 @@ characters = {
 		}
 		corps_commander={
 			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
+				always = no
 			}
 			skill=3
 			attack_skill=3
@@ -800,7 +800,7 @@ characters = {
 		}
 		corps_commander={
 			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
+				always = no
 			}
 			skill=3
 			attack_skill=3
@@ -922,7 +922,7 @@ characters = {
 			coordination_skill = 2
 			#legacy_id = 27
 			visible = {
-				has_completed_focus = CHI_promote_admiral
+				always = no
 			}
 		}
 	}
@@ -1119,7 +1119,7 @@ characters = {
 				original_tag = CHI
 			}
 			available = {
-				has_completed_focus = CHI_officialize_the_rocaf
+				always = no
 			}
 			traits = {
 				air_warfare_theorist
@@ -1290,7 +1290,7 @@ characters = {
 			logistics_skill = 3
 			traits = { organizer }
 			visible = {
-				has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
+				always = no
 			}
 		}
 	}
@@ -1310,12 +1310,12 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_dang_guo
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
 				}
 			}
 			available = {
-				has_completed_focus = CHI_an_alternative_rooted_in_tradition
+				always = no
 			}
 			traits = {
 				army_chief_organizational_2
@@ -1342,12 +1342,12 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_dang_guo
-					has_completed_focus = CHI_strengthening_our_resolve
+					always = no
+					always = no
 				}
 			}
 			available = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
+				always = no
 			}
 			traits = {
 				army_chief_defensive_2
@@ -1742,7 +1742,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_mao_renfeng
 			available  = {
-				has_completed_focus = CHI_empower_the_bureau_of_investigation_and_statistics
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -1751,7 +1751,7 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_end_military_primacy
+					always = no
 				}
 			}
 			traits  = {
@@ -1782,14 +1782,14 @@ characters = {
 
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_prepare_for_a_change_in_leadership
-					has_completed_focus = CHI_denounce_feudalism
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
+					always = no
 				}
 			}
 
 			available  = {
-				has_completed_focus = CHI_revive_the_western_hills_group
+				always = no
 			}
 			
 			cost = 100
@@ -1827,13 +1827,13 @@ characters = {
 
 				visible = {
 					NOT = {
-						has_completed_focus = CHI_strengthening_our_resolve
-						has_completed_focus = CHI_end_military_primacy
+						always = no
+						always = no
 					}
 				}
 
 				available = {
-					has_completed_focus = CHI_draw_support_from_the_big_families
+					always = no
 				}
 			}
 		}
@@ -1892,7 +1892,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_random_prince_of_terror
 			available  = {
-				has_completed_focus  = CHI_bureau_of_investigation_and_statistics 
+				always = no 
 			}
 			visible  = {
 				has_focus_tree  = china_nationalist_focus
@@ -1979,13 +1979,13 @@ characters = {
 				}
 				visible = {
 					NOT = {
-						has_completed_focus = CHI_end_military_primacy
+						always = no
 					}
 				}
 				available = {
 					OR = {
-						has_completed_focus = CHI_co_opt_the_koh_hsin_movement
-						has_completed_focus = CHI_denounce_feudalism
+						always = no
+						always = no
 					}
 				}
 				traits  = {
@@ -2049,14 +2049,14 @@ characters = {
 
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_end_military_primacy
+					always = no
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = CHI_draw_support_from_the_big_families
-					has_completed_focus = CHI_co_opt_the_koh_hsin_movement
+					always = no
+					always = no
 				}
 			}
 		}
@@ -2074,12 +2074,12 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_du_yuesheng
 			available  = {
-				has_completed_focus = CHI_reinforce_connections_with_shanghai_elites
-				NOT = { has_completed_focus = CHI_reshuffle_the_green_gang }
+				always = no
+				NOT = { always = no }
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_end_military_primacy
+					always = no
 				}
 			}
 			allowed  = {
@@ -2104,11 +2104,11 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_huang_jinrong
 			available  = {
-				has_completed_focus = CHI_reshuffle_the_green_gang
+				always = no
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_end_military_primacy
+					always = no
 				}
 			}
 			allowed  = {
@@ -2135,7 +2135,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_chu_minying
 			visible  = {
-				has_completed_focus = CHI_look_for_allies
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2159,7 +2159,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_mei_siping
 			visible  = {
-				has_completed_focus = CHI_look_for_allies
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2183,7 +2183,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_zhou_fohai
 			visible  = {
-				has_completed_focus = CHI_look_for_allies
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2209,7 +2209,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_hu_hanmin
 			available  = {
-				has_completed_focus = CHI_mend_the_rift_with_hu
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2217,8 +2217,8 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_dang_guo
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -2243,7 +2243,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_zou_lu
 			available  = {
-				has_completed_focus = CHI_revive_the_western_hills_group
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2251,8 +2251,8 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_dang_guo
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -2273,7 +2273,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_ju_zheng
 			available  = {
-				has_completed_focus = CHI_revive_the_western_hills_group
+				always = no
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2282,8 +2282,8 @@ characters = {
 			cost = 100
 			visible = {
 				NOT = {
-					has_completed_focus = CHI_dang_guo
-					has_completed_focus = CHI_end_military_primacy
+					always = no
+					always = no
 				}
 			}
 			traits  = {
@@ -2311,7 +2311,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available  = {
-				has_completed_focus = CHI_rural_reconstruction_movement_sea
+				always = no
 			}
 			traits  = {
 				education_reformer
@@ -2336,7 +2336,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available = {
-				has_completed_focus = CHI_rural_reconstruction_movement_sea
+				always = no
 			}
 			traits  = {
 				constitutional_philosopher
@@ -2360,7 +2360,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available  = {
-				has_completed_focus = CHI_ally_the_young_china_party
+				always = no
 			}
 			traits  = {
 				CHI_the_third_force_trait 
@@ -2408,7 +2408,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available  = {
-				has_completed_focus = CHI_utilize_the_albazinian_contact
+				always = no
 			}
 			traits  = {
 				CHI_chinese_orthodox_chruch_bishop_trait
@@ -2432,7 +2432,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available  = {
-				has_completed_focus = CHI_accelerate_the_tutelage
+				always = no
 			}
 			traits  = {
 				CHI_kuomintang_liberal
@@ -2483,14 +2483,14 @@ characters = {
 
 			visible  = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
 
 			available = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
@@ -2520,14 +2520,14 @@ characters = {
 
 			visible  = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
 			
 			available = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
@@ -2556,14 +2556,14 @@ characters = {
 
 			visible  = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
 			
 			available = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
@@ -2592,14 +2592,14 @@ characters = {
 
 			visible  = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
 
 			available = {
 				NOT = { 
-					has_completed_focus = CHI_arrest_the_seven_gentlemen 
+					always = no 
 					has_government = fascism
 				}
 			}
@@ -2627,7 +2627,7 @@ characters = {
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available = {
-				has_completed_focus = CHI_invite_carsun_chang
+				always = no
 			}
 			traits  = {
 				finance_graduate 
@@ -2763,12 +2763,12 @@ characters = {
 				specialization_nuclear = 2
 			}
 			visible = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}
 					owner = {
-						has_completed_focus = CHI_expand_the_chinese_academy_of_sciences
+						always = no
 					}
 				}
 			}
@@ -2828,7 +2828,7 @@ characters = {
 			}
 			visible = {
 				owner = {
-					has_completed_focus = CHI_VTOL_experiments
+					always = no
 				}
 			}
 		}
@@ -2917,7 +2917,7 @@ characters = {
 					}
 				}
 				available = {
-					has_completed_focus = CHI_give_falkenhausen_citizenship
+					always = no
 					NOT = { has_global_flag = falkenhausen_recalled }
 				}
 				idea_token = CHI_alexander_von_falkenhausen
@@ -2934,7 +2934,7 @@ characters = {
 				planning_skill = 3
 				logistics_skill = 3
 				traits = { infantry_officer }
-				visible = { has_completed_focus = CHI_give_falkenhausen_citizenship }
+				visible = { always = no }
 			}
 		}
 	}
@@ -2960,9 +2960,9 @@ characters = {
 				}
 				available = {
 					OR = {
-						has_completed_focus = CHI_scout_for_air_experts
-						has_completed_focus = CHI_sea_hire_chennault
-						has_completed_focus = CHI_aeronautical_expertise
+						always = no
+						always = no
+						always = no
 					}	
 					not_already_hired_except_as = air_chief
 
@@ -2981,8 +2981,8 @@ characters = {
 				cost = 25
 				available = {
 					OR = {
-						has_completed_focus = CHI_aeronautical_expertise
-						has_completed_focus = CHI_scout_for_air_experts
+						always = no
+						always = no
 					}
 					not_already_hired_except_as = theorist
 					NOT = { has_war_with = USA }
@@ -3014,7 +3014,7 @@ characters = {
 					}
 				}
 				available = {
-					has_completed_focus = CHI_hire_chennault
+					always = no
 					NOT = { 
 						has_idea = CHI_claire_lee_chennault_theorist
 					}
@@ -3036,7 +3036,7 @@ characters = {
 					}
 				}
 				available = {
-					has_completed_focus = CHI_hire_chennault
+					always = no
 					NOT = { 
 						has_idea = CHI_claire_lee_chennault_air_chief
 					}
@@ -3092,11 +3092,11 @@ characters = {
 				slot = political_advisor
 				visible = {
 					NOT = {
-						has_completed_focus = CHI_end_military_primacy
+						always = no
 					}
 				}
 				available  = {
-					has_completed_focus = CHI_draw_support_from_the_big_families
+					always = no
 				}
 				idea_token = CHI_t_v_soong
 				traits  = {
@@ -3124,7 +3124,7 @@ characters = {
 					}
 				}
 				available  = {
-					has_completed_focus  = CHI_financial_policy 
+					always = no 
 				}
 				idea_token = CHI_t_v_soong
 				traits  = {
@@ -3152,7 +3152,7 @@ characters = {
 					}
 				}
 				available  = {
-					has_completed_focus = CHI_sea_legislative_yuan
+					always = no
 				}
 				idea_token = CHI_kwong_jiang
 				traits  = {
@@ -3173,7 +3173,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				available  = {
-					has_completed_focus  = CHI_legislative_yuan 
+					always = no 
 					if  = {
 						limit  = {
 							has_dlc = "Man the Guns"

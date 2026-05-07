@@ -294,7 +294,7 @@ country_event = {
 					limit = { NOT = { has_war_with = new_occupied_country } }
 					
 					### BBA ETHIOPIA 
-					IF = { 
+					if = { 
 						limit = {
 							has_dlc = "By Blood Alone"
 							ETH = { has_country_flag = ETH_anti_colonialism_flag } # Ethiopia is on anti-colonialism run
@@ -339,7 +339,7 @@ country_event = {
 					}
 
 					### END BBA ETHIOPIA 
-					ELSE = {
+					else = {
 						declare_war_on = { target = new_occupied_country type = annex_everything 
 						}
 					}

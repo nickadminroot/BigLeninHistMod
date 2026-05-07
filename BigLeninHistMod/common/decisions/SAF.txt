@@ -6,7 +6,7 @@ SAF_anti_colonialist_crusade = {
 
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 540
@@ -25,7 +25,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.60 }
@@ -39,7 +39,7 @@ SAF_anti_colonialist_crusade = {
 
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 544
@@ -58,7 +58,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.61 }
@@ -72,7 +72,7 @@ SAF_anti_colonialist_crusade = {
 
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 295
@@ -94,7 +94,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.62 }
@@ -108,7 +108,7 @@ SAF_anti_colonialist_crusade = {
 
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 545
@@ -125,7 +125,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.63 }
@@ -139,7 +139,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 547
@@ -159,7 +159,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.64 }
@@ -173,7 +173,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 543
@@ -192,7 +192,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.65 }
@@ -206,7 +206,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 542
@@ -223,7 +223,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.66 }
@@ -237,7 +237,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 771
@@ -255,7 +255,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.67 }
@@ -269,7 +269,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 770
@@ -286,7 +286,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.68 }
@@ -300,7 +300,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 546
@@ -317,7 +317,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.69 }
@@ -331,7 +331,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 548
@@ -348,7 +348,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.70 }
@@ -362,7 +362,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 549
@@ -386,7 +386,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.71 }
@@ -400,7 +400,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 552
@@ -423,7 +423,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.72 }
@@ -437,7 +437,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 550
@@ -454,7 +454,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.73 }
@@ -468,7 +468,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 271
@@ -485,7 +485,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.74 }
@@ -499,7 +499,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 268
@@ -516,7 +516,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.75 }
@@ -530,7 +530,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 269
@@ -548,7 +548,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.76 }
@@ -562,7 +562,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 768
@@ -579,7 +579,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.77 }
@@ -593,7 +593,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 769
@@ -610,7 +610,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.78 }
@@ -624,7 +624,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 772
@@ -641,7 +641,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.79 }
@@ -655,7 +655,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 539
@@ -672,7 +672,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.80 }
@@ -686,7 +686,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 297
@@ -703,7 +703,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.81 }
@@ -717,7 +717,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 773
@@ -734,7 +734,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.82 }
@@ -748,7 +748,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 660
@@ -765,7 +765,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.83 }
@@ -779,7 +779,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 774
@@ -797,7 +797,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.84 }
@@ -811,7 +811,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 558
@@ -831,7 +831,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.85 }
@@ -845,7 +845,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 781
@@ -863,7 +863,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.86 }
@@ -877,7 +877,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 776
@@ -894,7 +894,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.87 }
@@ -908,7 +908,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 777
@@ -925,7 +925,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.88 }
@@ -939,7 +939,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 274
@@ -956,7 +956,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.89 }
@@ -970,7 +970,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 779
@@ -987,7 +987,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.90 }
@@ -1001,7 +1001,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 778
@@ -1018,7 +1018,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.91 }
@@ -1032,7 +1032,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 556
@@ -1050,7 +1050,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.92 }
@@ -1064,7 +1064,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 700
@@ -1081,7 +1081,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.93 }
@@ -1095,7 +1095,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 780
@@ -1112,7 +1112,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.94 }
@@ -1126,7 +1126,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 296
@@ -1143,7 +1143,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.95 }
@@ -1157,7 +1157,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 272
@@ -1174,7 +1174,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.96 }
@@ -1188,7 +1188,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 701
@@ -1205,7 +1205,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.97 }
@@ -1219,7 +1219,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 298
@@ -1236,7 +1236,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.98 }
@@ -1250,7 +1250,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 557
@@ -1268,7 +1268,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.99 }
@@ -1282,7 +1282,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 699
@@ -1299,7 +1299,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.100 }
@@ -1313,7 +1313,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 459
@@ -1333,7 +1333,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.101 }
@@ -1347,7 +1347,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 290
@@ -1367,7 +1367,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.102 }
@@ -1381,7 +1381,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 458
@@ -1399,7 +1399,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.103 }
@@ -1413,7 +1413,7 @@ SAF_anti_colonialist_crusade = {
 	
 		available = {
 			tag = SAF
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 			AND = {
 				SAF = {
 					controls_state = 448
@@ -1437,7 +1437,7 @@ SAF_anti_colonialist_crusade = {
 		}
 		days_remove = 180
 		visible = {
-			has_completed_focus = SAF_anti_colonialist_crusade
+			always = no
 		}
 		remove_effect = {
 			country_event = { id = tfv_south_africa.104 }

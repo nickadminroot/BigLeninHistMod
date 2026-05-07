@@ -97,7 +97,7 @@ focus_tree = {
 			activate_mission = JAP_kwantung_army_impatience
 				
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -321,7 +321,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = JAP_collapsing_government_idea
 				}
@@ -444,7 +444,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = no
 				}
@@ -453,7 +453,7 @@ focus_tree = {
 				custom_effect_tooltip = JAP_new_order_in_east_asia_tt
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -473,7 +473,7 @@ focus_tree = {
 				add_ideas = JAP_new_order_in_east_asia_idea
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -573,12 +573,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
 				add_ideas = JAP_tokko_idea_lar
-				IF = {
+				if = {
 					limit = {
 						has_intelligence_agency = no
 					}
@@ -586,7 +586,7 @@ focus_tree = {
 					create_intelligence_agency = yes
 				}
 			}
-			ELSE = {
+			else = {
 				add_ideas = JAP_tokko_idea_no_lar
 			}
 
@@ -638,7 +638,7 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_crackdown_on_foreign_agents_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -720,13 +720,13 @@ focus_tree = {
 		}
 
 		available = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
 				has_idea = JAP_tokko_idea_lar
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					NOT = {
 						has_dlc = "La Resistance"
@@ -748,7 +748,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -758,7 +758,7 @@ focus_tree = {
 				}	
 				#custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				swap_ideas = {
 					remove_idea = JAP_tokko_idea_no_lar
 					add_idea = JAP_tokko_idea_no_lar_2
@@ -869,7 +869,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			IF = {
+			if = {
 				limit = {
 					532 = { #Nagoya/Tokai
 						is_fully_controlled_by = ROOT
@@ -886,7 +886,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				random_core_state = {
 					limit = {
 						can_construct_building = air_facility
@@ -1063,7 +1063,7 @@ focus_tree = {
 			add_to_variable = { JAP_showa_statism_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_government = fascism
@@ -1455,7 +1455,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -1473,7 +1473,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -1510,7 +1510,7 @@ focus_tree = {
 			add_to_variable = { JAP_showa_statism_fascism_drift = 0.05 tooltip = fascism_drift_tt }
 			add_to_variable = { JAP_showa_statism_stability_factor = 0.05 tooltip = stability_factor_tt }
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = RNG
 				}
@@ -1533,7 +1533,7 @@ focus_tree = {
 			show_ideas_tooltip = JAP_koichi_kido
 				
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_completed_focus = JAP_empower_the_thought_police
 						JAP_civilian_government_faction_is_at_least_influential = yes
@@ -1949,7 +1949,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					is_in_faction = no
 				}
@@ -1957,12 +1957,12 @@ focus_tree = {
 				create_faction_from_template = faction_template_geacps_faction
 				
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					is_faction_leader = yes 
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}
@@ -1982,7 +1982,7 @@ focus_tree = {
 				}
 				set_faction_name = JAP_greater_east_asian_co_prosperity_sphere
 			}
-			ELSE_IF = { # If member of a faction but not faction leader
+			else_if = { # If member of a faction but not faction leader
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -2106,7 +2106,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						has_idea = JAP_MAN_joint_economic_block_idea
@@ -2753,7 +2753,7 @@ focus_tree = {
 
 			add_to_variable = { JAP_navy_naval_coordination = 0.05 tooltip = naval_coordination_tt }
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_rule = can_use_kamikaze_pilots
@@ -3080,14 +3080,14 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_country_flag = has_taken_the_war_propaganda_film_industry_decision
 				}
 				custom_effect_tooltip = JAP_fund_propaganda_films_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = JAP_fund_propaganda_films_2_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -3159,35 +3159,35 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_cosmetic_tag = JAP_army_dominant
 				}
 				set_cosmetic_tag = JAP_greater_army_dominant_fascism
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_cosmetic_tag = JAP_navy_dominant
 				}
 				set_cosmetic_tag = JAP_greater_navy_dominant_fascism
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_cosmetic_tag = JAP_emperor_dominant
 				}
 				set_cosmetic_tag = JAP_greater_emperor_dominant_fascism
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_cosmetic_tag = JAP_tohokai_rule
 				}
 				set_cosmetic_tag = JAP_greater_tohokai_rule
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				# For tooltip pruposes before heading down the tree 
 				effect_tooltip = {
 					set_cosmetic_tag = JAP_greater_army_dominant_fascism
@@ -3537,7 +3537,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_political_power = 25
 
-			IF = {
+			if = {
 				limit = {
 					CHI = {
 						exists = yes
@@ -3679,7 +3679,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					609 = {
 						air_base < 9
@@ -3694,7 +3694,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					609 = {
 						air_base < 10
@@ -3710,7 +3710,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					609 = {
 						free_building_slots = {
@@ -3731,14 +3731,14 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_active_mission = JAP_kwantung_army_impatience
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						CHI = { #if CHI owns one of these states, they get the event
 							OR = {
@@ -3757,7 +3757,7 @@ focus_tree = {
 						}	
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						PRC = { #only fires the event for PRC if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
 							AND = {
@@ -3774,7 +3774,7 @@ focus_tree = {
 						}	
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						SHX = { #only fires the event for SHX if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
 							AND = {
@@ -3791,7 +3791,7 @@ focus_tree = {
 						}	
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						SND = { #only fires the event for SND if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
 							AND = {
@@ -3809,7 +3809,7 @@ focus_tree = {
 						}	
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						XIC = { #only fires the event for XIC if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
 							AND = {
@@ -3827,7 +3827,7 @@ focus_tree = {
 						}	
 					}
 				}
-				ELSE = {
+				else = {
 					608 = {
 						OWNER = {
 							country_event = {
@@ -3841,7 +3841,7 @@ focus_tree = {
 				add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
 
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_active_mission = JAP_kwantung_army_impatience
 				}
@@ -3926,7 +3926,7 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_strategic_offensives_tt
 
-			IF = {
+			if = {
 				limit = {
 					USA = {
 						has_war = no
@@ -4061,7 +4061,7 @@ focus_tree = {
 					inherit_technology = CHI 
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						NOT = {
@@ -4069,7 +4069,7 @@ focus_tree = {
 						}
 						CHI = {
 							NOT = {
-								has_completed_focus = CHI_prepare_for_a_change_in_leadership
+								always = no
 							}
 						}
 					}
@@ -4102,7 +4102,7 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_reorganized_national_government_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -4110,7 +4110,7 @@ focus_tree = {
 				JAP_create_yoshio_kodama_operative = yes
 			}
 
-			IF = {
+			if = {
 				limit = {
 					USA = {
 						has_war = no
@@ -4359,7 +4359,7 @@ focus_tree = {
 			}
 			effect_tooltip = {
 				USA = {
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_war_with = JAP
@@ -4367,7 +4367,7 @@ focus_tree = {
 						}
 						add_war_support = -0.05
 					}
-					ELSE = {
+					else = {
 						add_timed_idea = {
 							idea = JAP_pro_japanese_sentiments_for_usa_idea
 							days = 180
@@ -4376,7 +4376,7 @@ focus_tree = {
 				}
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -4385,7 +4385,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					USA = {
 						NOT = {
@@ -4488,7 +4488,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
@@ -4714,7 +4714,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = { is_special_project_completed = sp:sp_air_radar }
 				}
@@ -4748,7 +4748,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					684 = {
@@ -4877,7 +4877,7 @@ focus_tree = {
 				days = 425
 			}	
 
-			IF = {
+			if = {
 				limit = {
 					AST = {
 						exists = yes
@@ -4896,7 +4896,7 @@ focus_tree = {
 					expire = 0
 				}	
 			}
-			IF = {
+			if = {
 				limit = {
 					NZL = {
 						exists = yes
@@ -4915,7 +4915,7 @@ focus_tree = {
 					expire = 0
 				}	
 			}
-			IF = {
+			if = {
 				limit = {
 					PNG = {
 						exists = yes
@@ -4980,7 +4980,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_war_with = AST
@@ -5000,7 +5000,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_war_with = NZL
@@ -5090,7 +5090,7 @@ focus_tree = {
 					type = aluminium
 					amount = 12
 				}
-				IF = {
+				if = {
 					limit = {
 						infrastructure < 5
 					}
@@ -5102,7 +5102,7 @@ focus_tree = {
 				}
 			}
 			333 = {
-				IF = {
+				if = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
@@ -5121,7 +5121,7 @@ focus_tree = {
 				}
 			}
 			672 = {
-				IF = {
+				if = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
@@ -5140,7 +5140,7 @@ focus_tree = {
 				}
 			}
 			334 = {
-				IF = {
+				if = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
@@ -5455,7 +5455,7 @@ focus_tree = {
 
 		completion_reward = {
 				
-			IF = {
+			if = {
 				limit = {
 					FRA = {
 						OR = {
@@ -5479,7 +5479,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					VIC = {
 						OR = {
@@ -5504,7 +5504,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					any_state = {
 						OR = {
@@ -5740,7 +5740,7 @@ focus_tree = {
 
 		completion_reward = {
 				
-			IF = {
+			if = {
 				limit = {
 					PHI = {
 						exists = yes
@@ -5762,20 +5762,20 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					country_exists = INS
 					NOT = { 
 						has_wargoal_against = INS 
 						has_war_with = INS
 					}
-					IF = {
+					if = {
 						limit = {
 							INS = { is_subject_of = HOL }
 						}
 						OR = {
 							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+							HOL = { NOT = { always = no } }
 						}
 					}
 				}
@@ -5790,7 +5790,7 @@ focus_tree = {
 					value = 200
 				}
 
-				IF = {
+				if = {
 					limit = {
 						INS = {
 							any_core_state = {
@@ -5818,7 +5818,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					INS = { exists = no }
 					335 = {
@@ -5828,7 +5828,7 @@ focus_tree = {
 							}
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							335 = {
 								CONTROLLER = {
@@ -5838,7 +5838,7 @@ focus_tree = {
 						}
 						OR = {
 							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+							HOL = { NOT = { always = no } }
 						}
 					}
 				}
@@ -5860,7 +5860,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = MAL }
 					NOT = { has_war_with = MAL }
@@ -5877,7 +5877,7 @@ focus_tree = {
 					value = 200
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MAL = { exists = no }
 					336 = {
@@ -5906,7 +5906,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						671 = {
@@ -5933,7 +5933,7 @@ focus_tree = {
 					generator = { 671 670 286 741 }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = WPG }
 					NOT = { has_war_with = WPG }
@@ -5950,7 +5950,7 @@ focus_tree = {
 					value = 200
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = SNG }
 					NOT = { has_war_with = SNG }
@@ -5967,7 +5967,7 @@ focus_tree = {
 					value = 200
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = SAR }
 					NOT = { has_war_with = SAR }
@@ -5984,7 +5984,7 @@ focus_tree = {
 					value = 200
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = SAB }
 					NOT = { has_war_with = SAB }
@@ -6001,7 +6001,7 @@ focus_tree = {
 					value = 200
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_wargoal_against = BRN }
 					NOT = { has_war_with = BRN }
@@ -6089,7 +6089,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					721 = {
 						is_owned_by = TML
@@ -6101,7 +6101,7 @@ focus_tree = {
 					expire = 0
 				}	
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					721 = {
 						is_owned_by = POR
@@ -6288,7 +6288,7 @@ focus_tree = {
 				}
 			} 
 
-			IF = {
+			if = {
 				limit = {
 					has_active_mission = JAP_kwantung_army_impatience
 				}
@@ -6310,7 +6310,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					609 = {
 						is_fully_controlled_by = ROOT
@@ -6349,7 +6349,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
@@ -6357,7 +6357,7 @@ focus_tree = {
 				}
 				MAN = {
 					610 = {
-						IF = {
+						if = {
 							limit = { 
 								is_controlled_by = PREV 
 								any_province_building_level = {
@@ -6378,7 +6378,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					610 = {
 						is_fully_controlled_by = ROOT
@@ -6401,7 +6401,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						is_subject_of = ROOT
@@ -6409,7 +6409,7 @@ focus_tree = {
 				}
 				MEN = {
 					611 = {
-						IF = {
+						if = {
 							limit = { 
 								is_controlled_by = PREV 
 								any_province_building_level = {
@@ -6436,7 +6436,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					611 = {
 						is_fully_controlled_by = ROOT
@@ -6518,7 +6518,7 @@ focus_tree = {
 			add_ideas = JAP_mongolian_independence_army_reestablished_idea
 			custom_effect_tooltip = JAP_a_mongol_volunteer_army_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						MAN = {
 							is_ally_with = ROOT
@@ -6528,7 +6528,7 @@ focus_tree = {
 						add_ideas = JAP_mongolian_independence_army_reestablished_idea
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						MEN = {
 							is_ally_with = ROOT
@@ -6542,7 +6542,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 				
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						exists = no
@@ -6556,7 +6556,7 @@ focus_tree = {
 					MAN_urzhin_garmaev = { set_nationality = ROOT }
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					MEN = {
 						exists = no
@@ -6882,7 +6882,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					714 = {
 						free_building_slots = {
@@ -6953,7 +6953,7 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -6961,7 +6961,7 @@ focus_tree = {
 					has_completed_focus = JAP_imperial_rule_assistance_association
 				}
 			}
-			ELSE = {
+			else = {
 				OR = {
 					has_completed_focus = JAP_imperial_rule_assistance_association
 				}
@@ -7016,7 +7016,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					always = yes
 				}
@@ -7070,7 +7070,7 @@ focus_tree = {
 				add_claim_by = ROOT
 			}
 
-			IF = {
+			if = {
 				limit = {
 					always = no
 				}
@@ -7121,7 +7121,7 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -7129,7 +7129,7 @@ focus_tree = {
 					has_completed_focus = JAP_imperial_rule_assistance_association
 				}
 			}
-			ELSE = {
+			else = {
 				OR = {
 					has_completed_focus = JAP_imperial_rule_assistance_association
 				}
@@ -7227,7 +7227,7 @@ focus_tree = {
 				add_claim_by = ROOT
 			}
 
-			IF = {
+			if = {
 				limit = {
 					always = no
 				}
@@ -7287,7 +7287,7 @@ focus_tree = {
 		completion_reward = {
 				
 			657 = {
-				IF = {
+				if = {
 					limit = { 
 						state_is_fully_controlled_by_ROOT_or_subject  = yes 
 						infrastructure < 5
@@ -7300,7 +7300,7 @@ focus_tree = {
 				}
 			}
 			408 = {
-				IF = {
+				if = {
 					limit = { 
 						state_is_fully_controlled_by_ROOT_or_subject  = yes
 						infrastructure < 5
@@ -7313,7 +7313,7 @@ focus_tree = {
 				}
 			}
 			560 = {
-				IF = {
+				if = {
 					limit = { 
 						state_is_fully_controlled_by_ROOT_or_subject  = yes
 						infrastructure < 5
@@ -7326,7 +7326,7 @@ focus_tree = {
 				}
 			}
 			409 = {
-				IF = {
+				if = {
 					limit = { 
 						state_is_fully_controlled_by_ROOT_or_subject  = yes
 						infrastructure < 5
@@ -7343,7 +7343,7 @@ focus_tree = {
 					type = aluminium
 					amount = 8
 				}
-				IF = {
+				if = {
 					limit = {
 						infrastructure < 5
 					}
@@ -7695,7 +7695,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -7993,7 +7993,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						JAP_zaibatsu_faction_is_at_least_influential = yes
@@ -8002,11 +8002,11 @@ focus_tree = {
 				custom_effect_tooltip = JAP_fund_the_riken_institute_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					JAP_zaibatsu_faction_is_at_least_influential = yes
 				}
-				IF = {
+				if = {
 					limit = {
 						282 = { # Saitama/Kanto
 							is_fully_controlled_by = ROOT
@@ -8024,7 +8024,7 @@ focus_tree = {
 					}
 					custom_effect_tooltip = generic_skip_one_line_tt
 				}
-				ELSE = {
+				else = {
 					random_core_state = {
 						limit = {
 							can_construct_building = nuclear_facility
@@ -8865,7 +8865,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm }
 				}
@@ -8882,7 +8882,7 @@ focus_tree = {
 				add_to_variable = { JAP_industry_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt }
 				add_to_variable = { JAP_industry_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm }
 				}
@@ -9124,7 +9124,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = MAN
 				}
@@ -9140,7 +9140,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					716 = { #Liaotung
 						state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -9155,7 +9155,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					has_subject = MAN
 				}
@@ -9179,7 +9179,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				random_controlled_state = {
 					limit = {
 						is_core_of = MAN
@@ -9364,7 +9364,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					328 = { #Kirin
 						infrastructure < 5
@@ -9379,12 +9379,12 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = MAN
 				}
 				MAN = {
-					IF = {
+					if = {
 						limit = {
 							controls_state = 328
 							controls_state = 715
@@ -9400,7 +9400,7 @@ focus_tree = {
 							path = { 11808 }
 						}
 					}
-					ELSE_IF = {
+					else_if = {
 						limit = {
 							controls_state = 328
 							controls_state = 717
@@ -9412,7 +9412,7 @@ focus_tree = {
 							path = { 11893 6964 9897 }
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							controls_state = 716
 						}
@@ -9423,7 +9423,7 @@ focus_tree = {
 							path = { 11771 987 9781 11764 964 3783 6851 1150 }
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							controls_state = 716
 							controls_state = 610
@@ -9434,8 +9434,8 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
-				IF = {
+			else = {
+				if = {
 					limit = {
 						controls_state = 716
 					}
@@ -9446,7 +9446,7 @@ focus_tree = {
 						path = { 11771 987 9781 11764 964 3783 6851 1150 }
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						controls_state = 716
 						controls_state = 610
@@ -9556,7 +9556,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						exists = yes
@@ -9624,7 +9624,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = FOR
 				}
@@ -9753,7 +9753,7 @@ focus_tree = {
 				add_dynamic_modifier = { modifier = JAP_regional_development }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = PLU
 				}
@@ -9890,7 +9890,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_idea = oriental_development_company
 				}
@@ -9899,7 +9899,7 @@ focus_tree = {
 					add_idea = oriental_development_company_upgraded
 				}
 			}
-			ELSE = {
+			else = {
 				effect_tooltip = {
 					swap_ideas = {
 						remove_idea = oriental_development_company
@@ -9952,7 +9952,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					has_subject = KOR
 				}
@@ -9968,7 +9968,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
-			IF = {
+			if = {
 				limit = {
 					has_subject = KOR
 				}
@@ -9992,7 +9992,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				every_controlled_state = {
 					limit = {
 						is_core_of = KOR
@@ -10059,7 +10059,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = KOR
 				}
@@ -10073,7 +10073,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				every_controlled_state = {
 					limit = {
 						is_core_of = KOR
@@ -10131,7 +10131,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					KOR = {
 						exists = yes
@@ -10206,7 +10206,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = KOR
 				}
@@ -10216,7 +10216,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					527 = {
 						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
@@ -10245,7 +10245,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						527 = {
 							free_building_slots = {
@@ -10266,7 +10266,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			IF = {
+			if = {
 				limit = {
 					1028 = {
 						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
@@ -10293,7 +10293,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						1028 = {
 							free_building_slots = {
@@ -10355,7 +10355,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_subject = KOR
 				}
@@ -10370,12 +10370,12 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				add_manpower = 30000
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					525 = {
 						free_building_slots = {
@@ -10562,7 +10562,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -10658,7 +10658,7 @@ focus_tree = {
 			add_to_variable = { JAP_army_motorized_attack_factor = 0.05 tooltip = motorized_attack_factor_tt }
 			add_to_variable = { JAP_army_mechanized_attack_factor = 0.05 tooltip = mechanized_attack_factor_tt }
 
-			IF = {
+			if = {
 				limit = {
 					has_character = JAP_hisaichi_terauchi
 					JAP_hisaichi_terauchi = {
@@ -10768,7 +10768,7 @@ focus_tree = {
 				value = 0.5
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -10821,7 +10821,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -10873,13 +10873,13 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
 				has_tech = basic_heavy_tank_chassis
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_tech = basic_heavy_tank
 				}
@@ -10912,7 +10912,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_idea = JAP_japanese_armor_doctrine
 				}
@@ -10922,7 +10922,7 @@ focus_tree = {
 				}	
 				#custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = JAP_japanese_armor_doctrine_2
 				}
@@ -10938,12 +10938,12 @@ focus_tree = {
 			add_to_variable = { JAP_army_motorized_attack_factor = 0.05 tooltip = motorized_attack_factor_tt }
 			add_to_variable = { JAP_army_mechanized_attack_factor = 0.05 tooltip = mechanized_attack_factor_tt }
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
 
-				IF = {
+				if = {
 					limit = {
 						has_tech = super_heavy_tank_chassis
 					}
@@ -10971,7 +10971,7 @@ focus_tree = {
 						icon = "GFX_JAP_improved_heavy_tank_medium" 
 					}
 				}
-				ELSE = {
+				else = {
 					custom_effect_tooltip = JAP_the_ultimate_tank_tt
 					effect_tooltip = {
 						#O-I
@@ -11003,7 +11003,7 @@ focus_tree = {
 
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -11052,7 +11052,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -11144,7 +11144,7 @@ focus_tree = {
 			JAP_add_or_modify_imperial_army = yes
 			add_to_variable = { JAP_army_army_infantry_attack_factor = 0.05 tooltip = army_infantry_attack_factor_tt }
 
-			IF = {
+			if = {
 				limit = {
 					has_character = JAP_shunroku_hata
 					JAP_shunroku_hata = {
@@ -11202,7 +11202,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -11231,7 +11231,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						JAP_army_faction_is_at_least_influential = yes
@@ -11242,7 +11242,7 @@ focus_tree = {
 					add_to_variable = { JAP_army_army_infantry_attack_factor = 0.1 tooltip = army_infantry_attack_factor_tt }
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					JAP_army_faction_is_at_least_influential = yes
 				}
@@ -11290,7 +11290,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -11319,7 +11319,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						JAP_army_faction_is_at_least_influential = yes
@@ -11330,7 +11330,7 @@ focus_tree = {
 					add_to_variable = { JAP_army_army_army_artillery_attack_factor = 0.1 tooltip = army_artillery_attack_factor_tt }
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					JAP_army_faction_is_at_least_influential = yes
 				}
@@ -11392,7 +11392,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -11447,7 +11447,7 @@ focus_tree = {
 		completion_reward = {
 			
 			714 = {
-				IF = {
+				if = {
 					limit = {
 						any_province_building_level = {
 							province = {
@@ -11464,7 +11464,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						air_base < 7
 					}
@@ -11632,7 +11632,7 @@ focus_tree = {
 				uses = 1
 				category = mountaineers_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -11703,7 +11703,7 @@ focus_tree = {
 				uses = 1
 				category = rangers_tech_cat
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -11716,7 +11716,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_character = JAP_masakazu_kawabe
 					JAP_masakazu_kawabe = {
@@ -11786,7 +11786,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						JAP_army_faction_is_at_least_influential = yes
@@ -11795,11 +11795,11 @@ focus_tree = {
 				custom_effect_tooltip = JAP_army_weapons_administration_headquarters_tt
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					JAP_army_faction_is_at_least_influential = yes
 				}
-				IF = {
+				if = {
 					limit = {
 						534 = { # Nagano/Koshintetsu 
 							is_fully_controlled_by = ROOT
@@ -11817,7 +11817,7 @@ focus_tree = {
 					}
 					custom_effect_tooltip = generic_skip_one_line_tt
 				}
-				ELSE = {
+				else = {
 					random_core_state = {
 						limit = {
 							can_construct_building = land_facility
@@ -11877,7 +11877,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_tech = railway_gun }
 				}
@@ -11889,7 +11889,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -11899,7 +11899,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = JAP_end_the_interservice_rivalry
@@ -12035,7 +12035,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_completed_focus = JAP_f_go_nuclear_project}
 				}
@@ -12050,7 +12050,7 @@ focus_tree = {
 					value = 0.15
 				}
 			}
-			ELSE = {
+			else = {
 				add_tech_bonus = {
 					name = JAP_ni_go_nuclear_project
 					bonus = 1
@@ -12106,7 +12106,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					282 = {
 						is_fully_controlled_by = ROOT
@@ -12126,7 +12126,7 @@ focus_tree = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				random_core_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
@@ -12194,7 +12194,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12221,7 +12221,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
@@ -12229,7 +12229,7 @@ focus_tree = {
 				}
 				set_technology = { cv_fighter2 = 1 } 
 			}
-			ELSE = {
+			else = {
 				create_equipment_variant = {
 					name = "A6M Zero-Sen"
 					type = cv_small_plane_airframe_2
@@ -12300,7 +12300,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12309,7 +12309,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = mitsubishi
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -12320,7 +12320,7 @@ focus_tree = {
 				CHARACTER = JAP_jiro_horikoshi
 			}
 
-			IF = {
+			if = {
 				limit = {
 					531 = {
 						is_controlled_by = ROOT
@@ -12392,7 +12392,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12480,7 +12480,7 @@ focus_tree = {
 				type = fighter_unique
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -12585,7 +12585,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12647,7 +12647,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12738,7 +12738,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -12755,7 +12755,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
@@ -12764,7 +12764,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				
 				JAP_add_or_modify_advanced_weapon_projects = yes
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_special_project_completed = sp_air_intercontinental_bomber }
 					}
@@ -12773,7 +12773,7 @@ focus_tree = {
 						tooltip = sp_air_intercontinental_bomber_speed_factor_tt
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_special_project_completed = sp_air_mothership_aircraft }
 					}
@@ -12785,7 +12785,7 @@ focus_tree = {
 				add_to_variable = { JAP_advanced_weapons_production_speed_air_facility_factor = 0.1 tooltip = production_speed_air_facility_factor_tt }
 				
 			}
-			ELSE = {
+			else = {
 				add_tech_bonus = {
 					name = JAP_project_z_bomber_project
 					bonus = 1
@@ -12911,7 +12911,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = JAP_army_and_naval_air_services_dm }
 				}
@@ -12925,7 +12925,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				remove_ideas = JAP_separate_air_services
 			}
-			ELSE = {
+			else = {
 				JAP_add_or_modify_army_and_naval_air_services = yes
 				add_to_variable = { JAP_airforce_air_wing_xp_loss_when_killed_factor = -0.15 tooltip = air_wing_xp_loss_when_killed_factor_tt }
 				add_to_variable = { JAP_airforce_air_untrained_pilots_penalty_factor = -0.15 tooltip = air_untrained_pilots_penalty_factor_tt }
@@ -12947,7 +12947,7 @@ focus_tree = {
 				type = fighter_genius
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -13047,7 +13047,7 @@ focus_tree = {
 			add_to_variable = { JAP_army_air_superiority_bonus_in_combat = 0.1 tooltip = air_superiority_bonus_in_combat_tt }
 			add_to_variable = { JAP_army_coordination_bonus = 0.05 tooltip = coordination_bonus_tt }
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 					has_dlc = "La Resistance"
@@ -13109,7 +13109,7 @@ focus_tree = {
 
 			add_ideas = JAP_the_divine_wind_idea
 			
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_rule = can_use_kamikaze_pilots
@@ -13234,14 +13234,14 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
 				}
 				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
 				hidden_effect = { set_technology = { suicide_craft = 1 } }
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
 				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
 			}
@@ -13333,7 +13333,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -13343,7 +13343,7 @@ focus_tree = {
 					add_mio_size = 2
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = kure_naval_arsenal
 			}
@@ -13476,11 +13476,11 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			524 = { #Taiwan
-				IF = {
+				if = {
 					limit = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
-					IF = {
+					if = {
 						limit = {
 							air_base < 7
 						}
@@ -13490,7 +13490,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							naval_supply_hub < 1
 						}
@@ -13512,7 +13512,7 @@ focus_tree = {
 				uses = 1
 				category = marine_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}		
@@ -13586,7 +13586,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -13672,7 +13672,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -13780,7 +13780,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -13875,7 +13875,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -14272,7 +14272,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = JAP_focus_on_aircraft_carriers
@@ -14282,7 +14282,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = JAP_naval_armaments_program_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_completed_focus = JAP_focus_on_aircraft_carriers
 				}
@@ -14350,7 +14350,7 @@ focus_tree = {
 					industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_completed_focus = JAP_balanced_naval_approach
 				}
@@ -14446,7 +14446,7 @@ focus_tree = {
 					}
 				#}
 			}
-			ELSE = {
+			else = {
 				create_equipment_variant = {
 					name = "Yamato Class"
 					type = ship_hull_super_heavy_1
@@ -14668,7 +14668,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -14927,7 +14927,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_completed_focus = JAP_ni_go_nuclear_project }
 				}
@@ -14942,7 +14942,7 @@ focus_tree = {
 					value = 0.15
 				}
 			}
-			ELSE = {
+			else = {
 				add_tech_bonus = {
 					name = JAP_f_go_nuclear_project
 					bonus = 1

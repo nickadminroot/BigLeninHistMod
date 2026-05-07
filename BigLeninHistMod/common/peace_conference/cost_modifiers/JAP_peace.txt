@@ -10,9 +10,9 @@ peace_action_modifiers = {
             FROM.FROM = {
                 original_tag = JAP
                 OR = {
-                    has_completed_focus = JAP_spiritual_mobilization
+                    always = no
                     has_completed_focus = JAP_issue_the_shinmin_no_michi_manifesto
-                    has_completed_focus = JAP_embrace_kokutai
+                    always = no
                 }
             }
             FROM.FROM.FROM = {

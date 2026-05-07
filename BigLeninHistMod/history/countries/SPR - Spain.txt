@@ -75,7 +75,7 @@ if = {
 	set_technology = { camelry = 1 }
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}

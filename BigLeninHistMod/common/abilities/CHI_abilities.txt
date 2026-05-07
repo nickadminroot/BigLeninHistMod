@@ -13,10 +13,10 @@ ability = {
 			is_border_war = no
 			OWNER = {				
 				OR = {
-					has_completed_focus = CHI_dare_to_die_corps
+					always = no
 					has_completed_focus = JAP_advance_one_hundred_million_fireballs
-					has_completed_focus = JAP_tennoheika_banzai
-					has_completed_focus = CHI_sea_dare_to_die_corps
+					always = no
+					always = no
 				}
 			}
 		}
@@ -70,7 +70,7 @@ ability = {
 			is_leading_army_group = no
 			is_border_war = no
 			OWNER = {
-				has_completed_focus = CHI_know_thy_enemy
+				always = no
 			}
 		}
 		
