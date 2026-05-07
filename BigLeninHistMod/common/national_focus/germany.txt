@@ -8010,9 +8010,9 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
 
-		x = 33
+		x = 30
 		y = 0
-		relative_position_id = GER_prioritize_economic_growth
+		relative_position_id = GER_the_four_year_plan
 
 		cost = 5
 
@@ -15446,6 +15446,165 @@ focus_tree = {
 			}
 
 			unlock_decision_category_tooltip = GER_united_industry_dec_cat
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_invest_in_italian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+
+		x = 10
+		y = 0
+		relative_position_id = GER_the_four_year_plan
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = { country_exists = ITA }
+				ITA = {
+					add_timed_idea = { idea = BLHM_ITA_german_industrial_aid days = 720 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_libyan_industry
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = BLHM_GER_invest_in_italian_industry }
+
+		x = 0
+		y = 1
+		relative_position_id = BLHM_GER_invest_in_italian_industry
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {
+			448 = {
+				add_resource = {
+					type = oil
+					amount = 40
+				}
+				add_resource = {
+					type = rubber
+					amount = 40
+				}
+			}
+
+			add_timed_idea = { idea = BLHM_GER_investments_in_libya days = 60 }
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_spanish_african_bases
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = BLHM_GER_libyan_industry }
+
+		x = -1
+		y = 1
+		relative_position_id = BLHM_GER_libyan_industry
+		cost = 2
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = SPR }
+				SPR = { give_military_access = ROOT }
+			}
+			if = {
+				limit = { country_exists = SPA }
+				SPA = { give_military_access = ROOT }
+			}
+			if = {
+				limit = { country_exists = SPB }
+				SPB = { give_military_access = ROOT }
+			}
+			if = {
+				limit = { country_exists = SPC }
+				SPC = { give_military_access = ROOT }
+			}
+			if = {
+				limit = { country_exists = SPD }
+				SPD = { give_military_access = ROOT }
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_prepare_east_african_sabotage
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = BLHM_GER_libyan_industry }
+
+		x = 1
+		y = 1
+		relative_position_id = BLHM_GER_libyan_industry
+		cost = 2
+
+		available = {
+			NOT = { has_war_with = ENG }
+			NOT = { has_war_with = FRA }
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			set_country_flag = BLHM_GER_prepared_plan_scorpion
+			custom_effect_tooltip = BLHM_GER_prepare_east_african_sabotage_tt
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_mediterranean_exercises
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = BLHM_GER_spanish_african_bases }
+		prerequisite = { focus = BLHM_GER_prepare_east_african_sabotage }
+
+		x = 1
+		y = 1
+		relative_position_id = BLHM_GER_spanish_african_bases
+		cost = 5
+
+		available = {
+			has_war = no
+			ITA = { has_war = no }
+			if = {
+				limit = { country_exists = SPR }
+				SPR = { has_war = no }
+			}
+			if = {
+				limit = { country_exists = SPA }
+				SPA = { has_war = no }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = ITA }
+				ITA = { add_ideas = BLHM_GER_german_army_training }
+			}
+			if = {
+				limit = { country_exists = SPR }
+				SPR = { add_ideas = BLHM_GER_german_army_training }
+			}
+			if = {
+				limit = { country_exists = SPA }
+				SPA = { add_ideas = BLHM_GER_german_army_training }
+			}
 		}
 	}
 }

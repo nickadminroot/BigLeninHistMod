@@ -1,0 +1,48 @@
+ideas = {
+	country = {
+		BLHM_ITA_german_industrial_aid = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_industry
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		BLHM_GER_investments_in_libya = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_construct_civ_factory
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		BLHM_GER_german_army_training = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_army
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				attrition = -0.10
+			}
+		}
+	}
+}

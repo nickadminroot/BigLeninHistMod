@@ -82,6 +82,62 @@ debug_decisions = {
 	}
 }
 
+GER_mediterranean_operations_cat = {
+	BLHM_GER_plan_scorpion = {
+		icon = generic_operation
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = BLHM_GER_prepared_plan_scorpion
+			NOT = { has_country_flag = BLHM_GER_plan_scorpion_completed }
+		}
+
+		available = {
+			ITA = { has_war = yes }
+			OR = {
+				has_war_with = ENG
+				has_war_with = FRA
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = BLHM_GER_plan_scorpion_completed
+			custom_effect_tooltip = BLHM_GER_plan_scorpion_effect_tt
+
+			457 = {
+				damage_building = { type = rail_way damage = 999 }
+				damage_building = { type = supply_node damage = 999 }
+				damage_building = { type = naval_base damage = 999 }
+			}
+			456 = {
+				damage_building = { type = rail_way damage = 999 }
+				damage_building = { type = supply_node damage = 999 }
+				damage_building = { type = naval_base damage = 999 }
+			}
+			551 = {
+				damage_building = { type = rail_way damage = 999 }
+				damage_building = { type = supply_node damage = 999 }
+				damage_building = { type = naval_base damage = 999 }
+			}
+			883 = {
+				damage_building = { type = rail_way damage = 999 }
+				damage_building = { type = supply_node damage = 999 }
+				damage_building = { type = naval_base damage = 999 }
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
 
 
 
