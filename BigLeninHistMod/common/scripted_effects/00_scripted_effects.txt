@@ -4820,3 +4820,387 @@ DEN_weapon_delivery_effect = {
 	hidden_effect = {
 	}
 }
+
+DEN_communists_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_bondepartiet_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_fascists_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_erik_scavenius_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_create_the_plenipotentiary = {
+	hidden_effect = {
+	}
+}
+
+DEN_install_a_plenipotentiary = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_medium_decrease_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_low_increase_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_the_king_takes_over = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_high_decrease_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_bop_occupation_medium_increase_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_trade_deal_effects = {
+	hidden_effect = {
+	}
+}
+
+DEN_non_aggression_pact_effect = {
+	hidden_effect = {
+	}
+}
+
+DEN_guarantee_tech_sharing = {
+	hidden_effect = {
+	}
+}
+
+DEN_sell_territory_for_guarantees = {
+	hidden_effect = {
+	}
+}
+
+DEN_alliance_tech_sharing = {
+	hidden_effect = {
+	}
+}
+
+DEN_icelandic_territory_wargoals = {
+	hidden_effect = {
+	}
+}
+
+DEN_swedish_territory_wargoals = {
+	hidden_effect = {
+	}
+}
+
+DEN_finnish_territory_wargoals = {
+	hidden_effect = {
+	}
+}
+
+DEN_norwegian_territory_wargoals = {
+	hidden_effect = {
+	}
+}
+
+DEN_improve_industrial_capabilities_NS = {
+	hidden_effect = {
+	}
+}
+
+BEL_create_jozef_raskin_operative = {
+	hidden_effect = {
+	}
+}
+
+CZE_create_paul_thummel_operative = {
+	hidden_effect = {
+	}
+}
+
+GRE_political_instability_update_effect = {
+	hidden_effect = {
+	}
+}
+
+ETH_set_up_lon_arms_resolution_effect = {
+	hidden_effect = {
+	}
+}
+
+NOR_character_flag_setup_for_cw = {
+	hidden_effect = {
+	}
+}
+
+KOR_pak_hon_yong = {
+	hidden_effect = {
+	}
+}
+
+PRC_SOV_lend_lease_strategy = {
+	hidden_effect = {
+	}
+}
+
+PRC_USA_lend_lease_strategy = {
+	hidden_effect = {
+	}
+}
+
+CHI_kill_chiang_for_new_leader = {
+	hidden_effect = {
+	}
+}
+
+CHI_reduce_nine_power_malus = {
+	hidden_effect = {
+	}
+}
+
+play_no_invincible_armies_effect = {
+	hidden_effect = {
+	}
+}
+
+SOV_can_help_against_ENG = {
+	hidden_effect = {
+	}
+}
+
+ROOT_will_help_RAJ = {
+	hidden_effect = {
+	}
+}
+
+GER_can_help_against_ENG = {
+	hidden_effect = {
+	}
+}
+
+PAR_rafael_franco = {
+	hidden_effect = {
+	}
+}
+
+PAR_Jose_Felix_Estigarribia = {
+	hidden_effect = {
+	}
+}
+
+BOL_german_busch_beccera = {
+	hidden_effect = {
+	}
+}
+
+PHI_jose_laurel = {
+	hidden_effect = {
+	}
+}
+
+PHI_recall_macarthur_for_leadership = {
+	hidden_effect = {
+	}
+}
+
+play_arsenal_of_democracy_effect = {
+	hidden_effect = {
+	}
+}
+
+AFG_create_puppet_army = { hidden_effect = { } }
+BLR_radislau_astrouski = { hidden_effect = { } }
+BOL_indigenous_council = { hidden_effect = { } }
+BRA_indigenous_council = { hidden_effect = { } }
+BRA_plinio_salgado = { hidden_effect = { } }
+CHI_song_zheyuan = { hidden_effect = { } }
+CHI_sun_tongxuan = { hidden_effect = { } }
+CHI_unity_level_down = { hidden_effect = { } }
+CHI_unity_level_up = { hidden_effect = { } }
+CHL_jorge_gonzález_von_marées = { hidden_effect = { } }
+CRO_ante_pavelic = { hidden_effect = { } }
+CRO_duro_jakcin = { hidden_effect = { } }
+CZE_get_rid_of_the_auto_blok = { hidden_effect = { } }
+DEN_puppet_on_action_effects = { hidden_effect = { } }
+ETH_transfer_promised_states = { hidden_effect = { } }
+GEO_shalva_maglakelidze = { hidden_effect = { } }
+GER_hans_von_luck = { hidden_effect = { } }
+GER_wilhelm_ritter_von_thoma = { hidden_effect = { } }
+GND_yu_hanmou = { hidden_effect = { } }
+GXC_bai_chongxi = { hidden_effect = { } }
+GXC_chen_jitang = { hidden_effect = { } }
+GXC_li_zongren = { hidden_effect = { } }
+HES_philipp_of_hesse = { hidden_effect = { } }
+ITA_ferdinando_umberto_filippo_adalberto = { hidden_effect = { } }
+KHM_ma_hushan = { hidden_effect = { } }
+KHM_ma_zhancang = { hidden_effect = { } }
+KUM_yulbars_khan = { hidden_effect = { } }
+MEK_christian_louis = { hidden_effect = { } }
+MEN_altanochir = { hidden_effect = { } }
+MNT_blazo_dukanovic = { hidden_effect = { } }
+NORDIC_add_to_nordic_alliance = { hidden_effect = { } }
+NORDIC_add_to_war_array = { hidden_effect = { } }
+NORDIC_cooperation_initial_setup = { hidden_effect = { } }
+NOR_reset_prep_system = { hidden_effect = { } }
+PHI_check_japanese_ideology_and_adapt = { hidden_effect = { } }
+PHI_refresh_ruling_ideology_drift = { hidden_effect = { } }
+PHI_update_war_flag = { hidden_effect = { } }
+POL_remove_danzig_effect = { hidden_effect = { } }
+POL_sanation_left_opposition_remove = { hidden_effect = { } }
+POL_sanation_right_opposition_remove = { hidden_effect = { } }
+PRC_decrease_asian_democratic_union_modfier_strength = { hidden_effect = { } }
+PRC_increase_asian_democratic_union_modfier_strength = { hidden_effect = { } }
+PRC_soviet_tribute_clear_all = { hidden_effect = { } }
+PRU_Óscar_benavides = { hidden_effect = { } }
+SAX_george_of_saxony = { hidden_effect = { } }
+SHX_wang_jingguo = { hidden_effect = { } }
+SIC_liu_wenhui = { hidden_effect = { } }
+SIC_yang_sen = { hidden_effect = { } }
+SND_han_fuju = { hidden_effect = { } }
+SUR_guianan_indigenous_council = { hidden_effect = { } }
+SWE_calc_refugee_from_war = { hidden_effect = { } }
+SWE_is_finland_mostly_occupied = { hidden_effect = { } }
+SWE_is_ice_mostly_occupied = { hidden_effect = { } }
+SWE_is_norway_mostly_occupied = { hidden_effect = { } }
+SWE_on_freed_cross_we_bear = { hidden_effect = { } }
+SWE_reduce_or_remove_ball_bearing_food_trade_modifier = { hidden_effect = { } }
+SWE_sven_linderot = { hidden_effect = { } }
+SWE_update_iron_ore_calc = { hidden_effect = { } }
+SWI_bba = { hidden_effect = { } }
+SWI_find_best_democratic_ally = { hidden_effect = { } }
+SWI_find_biggest_fascist_neighbor = { hidden_effect = { } }
+SWI_find_democratic_planes_seller = { hidden_effect = { } }
+SWI_has_any_spirit_of_helvetia = { hidden_effect = { } }
+SWI_make_helvetia_peace = { hidden_effect = { } }
+SWI_make_helvetia_war = { hidden_effect = { } }
+SWI_on_action_puppet_selection = { hidden_effect = { } }
+SWI_robert_tobler = { hidden_effect = { } }
+SWI_seize_gold = { hidden_effect = { } }
+SWI_update_neighbor_opinion_balance = { hidden_effect = { } }
+TUR_has_former_turkish_state_modifier = { hidden_effect = { } }
+TUR_has_turkish_state_modifier = { hidden_effect = { } }
+TUR_remove_state_modifier_effect = { hidden_effect = { } }
+TUR_restore_dynamic_modifiers_effect = { hidden_effect = { } }
+UKR_mykhailo_omelianovych_pavlenko = { hidden_effect = { } }
+USA_add_monroe_doctrine_to_target = { hidden_effect = { } }
+WUR_philipp_albrecht = { hidden_effect = { } }
+XSM_ma_bufang = { hidden_effect = { } }
+XSM_ma_buqing = { hidden_effect = { } }
+XSM_ma_hongkui = { hidden_effect = { } }
+YUN_hu_ruoyu = { hidden_effect = { } }
+YUN_lu_han = { hidden_effect = { } }
+play_day_of_infamy_effect = { hidden_effect = { } }
+play_guns_are_silent_effect = { hidden_effect = { } }
+play_i_have_returned_effect = { hidden_effect = { } }
+play_order_of_the_day_effect = { hidden_effect = { } }
+play_war_with_germany_effect = { hidden_effect = { } }
+remove_perkonkrust_effect = { hidden_effect = { } }
+remove_vaps_effect = { hidden_effect = { } }
+
+CHL_anarchic_society_level_down = {
+	hidden_effect = {
+	}
+}
+
+CHL_anarchic_society_level_up = {
+	hidden_effect = {
+	}
+}
+
+CHI_set_ally_strat_on_current_leader = {
+	hidden_effect = {
+	}
+}
+
+play_victory_parade_effect = {
+	hidden_effect = {
+	}
+}
+
+GEO_ioseb_jughashvili = {
+	hidden_effect = {
+	}
+}
+
+KAR_ukki_vainamoinen = {
+	hidden_effect = {
+	}
+}
+
+KAR_jalmari_takkinen = {
+	hidden_effect = {
+	}
+}
+
+MEN_prince_demchugdongrub = {
+	hidden_effect = {
+	}
+}
+
+TIB_thubten_kunpela = {
+	hidden_effect = {
+	}
+}
+
+BRM_ba_maw = {
+	hidden_effect = {
+	}
+}
+
+BRM_myat_phaya_lat = {
+	hidden_effect = {
+	}
+}
+
+ETH_haile_selassie_gugsa = {
+	hidden_effect = {
+	}
+}
+
+ETH_abba_jofir = {
+	hidden_effect = {
+	}
+}
+
+ETH_hailu_tekle_haymanot = {
+	hidden_effect = {
+	}
+}
+
+ETH_seyoum_mengesha = {
+	hidden_effect = {
+	}
+}
+
+ETH_get_ships_from_country = {
+	hidden_effect = {
+	}
+}
+
+SMB_get_dreadnoughts_from_country = {
+	hidden_effect = {
+	}
+}
+
+MEN_jodbajab = {
+	hidden_effect = {
+	}
+}

@@ -1588,3 +1588,75 @@ DEN_royal_ai = {
 DEN_fascist_ai = {
 	always = yes
 }
+
+DEN_aat = {
+	always = yes
+}
+
+NOR_aat = {
+	always = yes
+}
+
+NORDIC_is_nordic = {
+	always = yes
+}
+
+SOV_can_help_against_ENG = {
+	always = yes
+}
+
+ROOT_will_help_RAJ = {
+	always = yes
+}
+
+GER_can_help_against_ENG = {
+	always = yes
+}
+
+congress_medium_support_trigger = {
+	always = yes
+}
+
+congress_low_support_trigger = {
+	always = yes
+}
+
+has_any_PRC_infiltration_flag = {
+	always = no
+}
+
+ROOT_any_state_infiltration_detected = {
+	always = no
+}
+
+ROOT_any_anti_JAP_state_infiltration_detected = {
+	always = no
+}
+
+is_baltic_country = {
+	always = yes
+}
+
+is_eligible_for_train_the_sheltered = {
+	always = yes
+}
+
+is_yug_cosmetic_tag = {
+	always = yes
+}
+
+warlord_rule_all_parties = {
+	always = yes
+}
+
+WTT_is_potential_political_struggle_state = {
+	always = yes
+}
+
+WTT_make_ROOT_majority_1_point_over_next = {
+	always = yes
+}
+
+WTT_restart_political_struggle = {
+	always = yes
+}
