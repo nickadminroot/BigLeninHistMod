@@ -52,7 +52,6 @@ on_actions = {
 					}
 				}
 				TUR = {
-					GER_wilhelm_ritter_von_thoma = { set_nationality = GER }
 				} 
 			}
 			if = {

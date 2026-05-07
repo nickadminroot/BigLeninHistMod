@@ -3827,18 +3827,6 @@ on_actions = {
     				}
     			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = CHI_sun_tongxuan
-    					}
-    				}
-    				ROOT = {
-    					CHI_sun_tongxuan = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
     			if = {
     				limit = {
@@ -3853,18 +3841,6 @@ on_actions = {
     				}
     			}
 
-    			if = {
-    				limit = {
-    					ROOT = {
-    						has_character = SHX_wang_jingguo
-    					}
-    				}
-    				ROOT = {
-    					SHX_wang_jingguo = {
-    						set_nationality = FROM
-    					}
-    				}
-    			}
 
     			if = {
     				limit = {
