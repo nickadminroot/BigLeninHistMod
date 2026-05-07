@@ -7,15 +7,15 @@ GER_update_research_slots_ai = {
 	set_variable = { GER_ai_puppet_count = 0 }
 	if = {
 		limit = { has_country_flag = GER_romania_puppeted }
-		change_variable = { GER_ai_puppet_count = 1 }
+		add_to_variable = { GER_ai_puppet_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = GER_bulgaria_puppeted }
-		change_variable = { GER_ai_puppet_count = 1 }
+		add_to_variable = { GER_ai_puppet_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = GER_hungary_puppeted }
-		change_variable = { GER_ai_puppet_count = 1 }
+		add_to_variable = { GER_ai_puppet_count = 1 }
 	}
 	set_variable = { GER_ai_new_bonus = GER_ai_puppet_count }
 	divide_variable = { GER_ai_new_bonus = 2 }
@@ -43,23 +43,23 @@ ENG_update_research_slots_ai = {
 	set_variable = { ENG_ai_annex_count = 0 }
 	if = {
 		limit = { has_country_flag = ENG_canada_annexed }
-		change_variable = { ENG_ai_annex_count = 1 }
+		add_to_variable = { ENG_ai_annex_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = ENG_australia_annexed }
-		change_variable = { ENG_ai_annex_count = 1 }
+		add_to_variable = { ENG_ai_annex_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = ENG_newzealand_annexed }
-		change_variable = { ENG_ai_annex_count = 1 }
+		add_to_variable = { ENG_ai_annex_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = ENG_southafrica_annexed }
-		change_variable = { ENG_ai_annex_count = 1 }
+		add_to_variable = { ENG_ai_annex_count = 1 }
 	}
 	if = {
 		limit = { has_country_flag = ENG_india_annexed }
-		change_variable = { ENG_ai_annex_count = 1 }
+		add_to_variable = { ENG_ai_annex_count = 1 }
 	}
 	set_variable = { ENG_ai_new_bonus = ENG_ai_annex_count }
 	divide_variable = { ENG_ai_new_bonus = 2 }

@@ -439,6 +439,7 @@ country_event = {
 
 
 #Purchase old ships generic decision events (Moved from BBA file)
+add_namespace = generic_purchase_ships_events
 
 # FROM wants to purcahse old ships
 country_event = {
