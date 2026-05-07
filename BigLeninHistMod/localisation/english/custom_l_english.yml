@@ -60,6 +60,8 @@
  BLHM_GER_mobilize_volkssturm_desc:0 "Call up emergency Volkssturm formations. Every mobilization deepens the strain on national stability."
  BLHM_GER_last_effort_modifier:0 "Last Effort"
  BLHM_GER_last_effort_modifier_desc:0 "Emergency mobilization keeps more men in the field, but the country pays for it week after week."
+ BLHM_GER_high_naval_expenses_modifier:0 "High Naval Expenses"
+ BLHM_GER_high_naval_expenses_modifier_desc:0 "Rapid naval expansion diverts material, factories, and construction capacity away from the wider war economy."
  GER_noveyshie_tankovye_razrabotki_idea:0 "Latest Tank Developments"
  GER_noveyshie_tankovye_razrabotki_idea_desc:0 "The new tank standard improves future output, but it makes modern chassis significantly more expensive to produce."
  GER_heavy_water_supplies_stable:0 "Heavy Water Supplies Stable"

@@ -1840,3 +1840,10 @@ BLHM_GER_last_effort_modifier = {
 	icon = GFX_modifiers_GER_socialist_movement
 	stability_weekly = BLHM_GER_last_effort_stability_weekly
 }
+
+BLHM_GER_high_naval_expenses_modifier = {
+	icon = GFX_goal_generic_construct_naval_dockyard
+	industrial_capacity_factory = -0.07
+	consumer_goods_factor = 0.05
+	production_speed_buildings_factor = -0.05
+}

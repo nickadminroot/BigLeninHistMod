@@ -6029,7 +6029,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_torpedobomber
-		cost = 10
+		cost = 2
 		available = {
 		}
 
@@ -6272,15 +6272,15 @@ focus_tree = {
 					is_coastal = yes
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 3
 						include_locked = yes
 					}
 				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -6365,10 +6365,10 @@ focus_tree = {
 					}
 				}
 				56 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -6384,10 +6384,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -6408,8 +6408,45 @@ focus_tree = {
 				category = cv_tech
 			}
 
+
+			set_technology = { basic_ship_hull_heavy = 1 }
+			set_technology = { improved_ship_hull_heavy = 1 }
+			create_equipment_variant = {
+				name = "1940 Heavy Ship"
+				name_group = GER_BB_HISTORICAL
+				type = ship_hull_heavy_3
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = dp_ship_secondaries_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = dp_ship_secondaries_3
+					mid_2_custom_slot = dp_ship_secondaries_3
+					mid_3_custom_slot = dp_ship_secondaries_3
+					rear_1_custom_slot = dp_ship_secondaries_3
+				}
+			}
+			create_ship = {
+				type = ship_hull_heavy_3
+				equipment_variant = "1940 Heavy Ship"
+				creator = ROOT
+			}
+			create_ship = {
+				type = ship_hull_heavy_3
+				equipment_variant = "1940 Heavy Ship"
+				creator = ROOT
+			}
+
+			add_dynamic_modifier = { modifier = BLHM_GER_high_naval_expenses_modifier days = 720 }
+
 			if = {
-				limit = { 
+				limit = {
+					always = no
 					has_dlc = "Man the Guns"
 					is_special_project_completed = sp:sp_air_radar
 					has_tech = improved_heavy_battery
@@ -6418,7 +6455,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Bismarck"				
 					name_group = GER_BB_HISTORICAL
-					type = ship_hull_heavy_2
+					type = ship_hull_heavy_3
 					modules = {
 						fixed_ship_battery_slot = ship_heavy_battery_3
 						fixed_ship_anti_air_slot = ship_anti_air_1
@@ -6436,7 +6473,7 @@ focus_tree = {
 				}
 				add_equipment_production = {
 					equipment = {
-						type = ship_hull_heavy_2
+						type = ship_hull_heavy_3
 						creator = "GER"
 						version_name = "Bismarck"
 					}
@@ -6448,7 +6485,7 @@ focus_tree = {
 				}
 				add_equipment_production = {
 					equipment = {
-						type = ship_hull_heavy_2
+						type = ship_hull_heavy_3
 						creator = "GER"
 						version_name = "Bismarck"
 					}
@@ -6461,6 +6498,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
+					always = no
 					has_dlc = "Man the Guns"
 					is_special_project_completed = sp:sp_air_radar
 					NOT = {
@@ -6514,6 +6552,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
+					always = no
 					has_dlc = "Man the Guns"
 					has_tech = improved_heavy_battery
 					NOT = {
@@ -6567,6 +6606,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
+					always = no
 					has_dlc = "Man the Guns"
 					NOT = {
 						is_special_project_completed = sp:sp_air_radar
@@ -6666,17 +6706,7 @@ focus_tree = {
 		relative_position_id = GER_expand_kriegsmarinewerft
 		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				NOT = { has_completed_focus = GER_high_seas_fleet }
-				has_tech = early_ship_hull_carrier
-			}
-			else = {
-				NOT = { has_completed_focus = GER_high_seas_fleet }
-				has_tech = early_carrier
-			}
+			NOT = { has_completed_focus = GER_high_seas_fleet }
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
@@ -6730,13 +6760,44 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { 
+				limit = {
 					has_dlc = "Man the Guns"
 				}
+				set_technology = { basic_ship_hull_carrier = 1 }
+				set_technology = { improved_ship_hull_carrier = 1 }
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_carrier_variants_tt
-				if = { 
+				create_equipment_variant = {
+					name = "1936 Carrier"
+					name_group = GER_CV_HISTORICAL
+					type = ship_hull_carrier_2
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_3
+						fixed_ship_secondaries_slot = dp_ship_secondaries_3
+						front_1_custom_slot = ship_deck_space
+						mid_1_custom_slot = ship_deck_space
+						mid_2_custom_slot = ship_deck_space
+						fixed_ship_armor_slot = ship_armor_cruiser_4
+					}
+				}
+				create_ship = {
+					type = ship_hull_carrier_2
+					equipment_variant = "1936 Carrier"
+					creator = ROOT
+				}
+				create_ship = {
+					type = ship_hull_carrier_2
+					equipment_variant = "1936 Carrier"
+					creator = ROOT
+				}
+				if = {
 					limit = {
+						always = no
 						NOT = {
 							has_tech = basic_ship_hull_carrier
 							has_tech = improved_ship_hull_carrier
@@ -6768,8 +6829,9 @@ focus_tree = {
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
 				}
-				if = { 
+				if = {
 					limit = {
+						always = no
 						has_tech = basic_ship_hull_carrier
 						NOT = {
 							has_tech = improved_ship_hull_carrier
@@ -6802,8 +6864,9 @@ focus_tree = {
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
 				}
-				if = { 
+				if = {
 					limit = {
+						always = no
 						has_tech = improved_ship_hull_carrier
 					}
 					create_equipment_variant = {
@@ -6833,6 +6896,24 @@ focus_tree = {
 						amount = 1
 						industrial_manufacturer = mio:GER_deutsche_werke_organization
 					}
+				}
+			}
+			else = {
+				set_technology = { basic_carrier = 1 }
+				create_equipment_variant = {
+					name = "1936 Carrier"
+					type = carrier_2
+					obsolete = yes
+				}
+				create_ship = {
+					type = carrier_2
+					equipment_variant = "1936 Carrier"
+					creator = ROOT
+				}
+				create_ship = {
+					type = carrier_2
+					equipment_variant = "1936 Carrier"
+					creator = ROOT
 				}
 			}
 
@@ -6881,7 +6962,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 10
+		cost = 5
 		available = {
 			if = {
 				limit = {
@@ -6941,7 +7022,8 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { 
+				limit = {
+					always = no
 					has_dlc = "Man the Guns"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -7216,6 +7298,7 @@ focus_tree = {
 		id = GER_atlantic_naval_bases
 		icon = GFX_focus_generic_atlantic_coast
 		prerequisite = { focus = GER_re_establish_the_seekriegsleitung }
+		allow_branch = { always = no }
 
 		x = 1
 		y = 1
@@ -7307,6 +7390,7 @@ focus_tree = {
 		id = GER_atlantic_naval_dominance
 		icon = GFX_focus_generic_north_atlantic_fleet
 		prerequisite = { focus = GER_marinestosstrupp focus = GER_atlantic_naval_bases}
+		allow_branch = { always = no }
 
 		x = 1
 		y = 1
@@ -7711,7 +7795,6 @@ focus_tree = {
 		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_unrestricted_convoy_raiding }
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
@@ -7974,9 +8057,9 @@ focus_tree = {
 		prerequisite = { focus = GER_high_seas_fleet }
 		prerequisite = { focus = GER_unrestricted_convoy_raiding }
 		
-		x = 0
+		x = -4
 		y = 1
-		relative_position_id = GER_atlantic_naval_dominance
+		relative_position_id = GER_unrestricted_convoy_raiding
 
 		cost = 5
 		available = {
