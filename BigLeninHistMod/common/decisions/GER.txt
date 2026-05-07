@@ -22714,11 +22714,8 @@ GER_united_industry_dec_cat = {
 		cost = 50
 		days_remove = 70
 
-		modifier = {
-			army_attack_factor = 0.05
-		}
-
 		remove_effect = {
+			add_ideas = GER_united_industry_military_exercises_idea
 			set_country_flag = GER_united_industry_military_exercises_done_flag
 		}
 
@@ -22744,11 +22741,8 @@ GER_united_industry_dec_cat = {
 		cost = 50
 		days_remove = 30
 
-		modifier = {
-			coordination_bonus = 0.03
-		}
-
 		remove_effect = {
+			add_ideas = GER_united_industry_radio_exchange_idea
 			set_country_flag = GER_united_industry_radio_exchange_done_flag
 		}
 
@@ -22780,11 +22774,8 @@ GER_united_industry_dec_cat = {
 		cost = 50
 		days_remove = 60
 
-		modifier = {
-			research_speed_factor = 0.05
-		}
-
 		remove_effect = {
+			add_ideas = GER_united_industry_vienna_research_center_idea
 			4 = {
 				add_building_construction = {
 					type = nuclear_reactor
@@ -22817,11 +22808,8 @@ GER_united_industry_dec_cat = {
 		cost = 100
 		days_remove = 90
 
-		modifier = {
-			aircraft_manufacturer_cost_factor = -0.05
-		}
-
 		remove_effect = {
+			add_ideas = GER_united_industry_distributed_aircraft_industry_idea
 			set_country_flag = GER_united_industry_distributed_aircraft_industry_done_flag
 		}
 
