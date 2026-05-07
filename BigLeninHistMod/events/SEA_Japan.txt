@@ -3336,231 +3336,6 @@ country_event = {
 
 }
 
-# [FROM.GetAdjective] Pressure for Submission - event for MON
-country_event = {
-	id = SEA_japan_foreign_policy.57
-	title = SEA_japan_foreign_policy.57.t
-	desc = SEA_japan_foreign_policy.57.desc
-	picture = GFX_report_event_japanese_officers
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# We can't fight them
-	option = { 
-		name = SEA_japan_foreign_policy.57.a
-		ai_chance = {
-			base = 100
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-		}
-
-		FROM = {
-			puppet = {
-				target = ROOT
-				end_wars = yes
-			}	 
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}		
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.2
-		}	
-		add_manpower = 3000
-		army_experience = 50
-		add_political_power = 100
-
-		IF = {
-			limit = {
-				has_country_flag = MON_jonjurjab_arrived_in_the_country_flag
-			}
-			add_country_leader_role = {
-				character = MAN_jonjurjab
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-			add_country_leader_role = {
-				character = MAN_jonjurjab
-				promote_leader = yes
-				country_leader = {
-					ideology = emperor_fascism
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				has_country_flag = MON_jodbajab_arrived_in_the_country_flag
-			}
-			add_country_leader_role = {
-				character = MEN_jodbajab
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-			add_country_leader_role = {
-				character = MEN_jodbajab
-				promote_leader = yes
-				country_leader = {
-					ideology = emperor_fascism
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-		}
-
-		JAP_setup_faction_wide_aoe_effects_from = yes
-
-	}
-
-	# We must protect the revolution!
-	option = { 
-		name = SEA_japan_foreign_policy.57.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				is_in_faction_with = SOV
-			}
-			modifier = {
-				add = 10
-				is_historical_focus_on = yes 
-			}
-		}
-
-		custom_effect_tooltip = MON_japan_starts_a_popular_civil_war_tt
-
-		hidden_effect = {
-			IF = {
-				limit = {
-					has_country_flag = MON_jonjurjab_arrived_in_the_country_flag
-				}
-
-				start_civil_war = {
-				    ideology = fascism
-				    size = 0.7
-				    keep_all_characters = yes
-				    states = all
-				    states_filter = {
-				        OR = {
-				        	state = 819
-				        	state = 817
-				        	state = 818
-				        }
-				        is_controlled_by = ROOT
-				    }
-
-			    	PREV = {  # Original country
-			            MAN_jonjurjab = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
-		        	}
-		        	IF = {
-		        		limit = {
-		        			PREV.PREV = {
-		        				NOT = {
-		        					has_country_leader = {
-		        						ruling_only = yes
-		        						character = MAN_jonjurjab
-		        					}
-		        				}
-		        				has_civil_war = yes
-		        			}
-		        		}
-		        		PREV.PREV = {
-		        			add_country_leader_role = {
-		        				character = MAN_jonjurjab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = japan_militarism_ideology
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        			add_country_leader_role = {
-		        				character = MAN_jonjurjab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = emperor_fascism
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        		}
-		        	}
-
-		        	PREV.PREV = {
-		        		FROM = {
-		        			puppet = {
-		        				target = PREV
-		        				end_wars = no
-		        				end_civil_wars = no
-		        			}	 
-		        		}
-		        	}
-
-		        }
-
-			}
-			ELSE_IF = {
-				limit = {
-					has_country_flag = MON_jodbajab_arrived_in_the_country_flag
-				}
-
-				start_civil_war = {
-				    ideology = fascism
-				    size = 0.7
-				    keep_all_characters = yes
-				    states = all
-				    states_filter = {
-				        OR = {
-				        	state = 819
-				        	state = 817
-				        	state = 818
-				        }
-				        is_controlled_by = ROOT
-				    }
-
-			    	PREV = {  # Original country
-			            MEN_jodbajab = { # Character
-		        		FROM = {
-		        			puppet = {
-		        				target = PREV
-		        				end_wars = no
-		        				end_civil_wars = no
-		        			}	 
-		        		}
-		        	}
-
-		        }
-
-			}
-
-		}
-
-	}
-
-}
-
-
 # [FROM.GetNameDefCap] Hands over Chinese States - event for RNG
 country_event = {
 	id = SEA_japan_foreign_policy.58
@@ -3778,6 +3553,39 @@ country_event = {
 				    set_country_flag = BRM_japanese_burma_flag
 				    PREV = {  # Original country
 			            BRM_ba_maw = { # Character
+			                set_nationality = PREV.PREV
+			                # Transfers to breakaway
+			            }
+		        	}
+		        	IF = {
+		        		limit = {
+		        			PREV.PREV = {
+		        				NOT = {
+		        					has_country_leader = {
+		        						ruling_only = yes
+		        						character = BRM_ba_maw
+		        					}
+		        				}
+		        			}
+		        		}
+		        		PREV.PREV = {
+		        			add_country_leader_role = {
+		        				character = BRM_ba_maw
+		        				promote_leader = yes
+		        				country_leader = {
+		        					ideology = japan_militarism_ideology
+		        					expire = "1952.1.1.1"
+		        					traits = { mon_dynasty_descendant } 
+		        				}
+		        			}
+		        			promote_character = {
+		        				character = BRM_ba_maw 
+		        				ideology = fascism_ideology 
+		        			}	
+		        		}
+		        	}
+				}
+
 				random_country = {
 					limit = {
 						has_country_flag = BRM_japanese_burma_flag
@@ -3834,6 +3642,39 @@ country_event = {
 				    }
 				    keep_all_characters = yes
 				    set_country_flag = BRM_japanese_burma_flag
+				    PREV = {  # Original country
+			            BRM_ba_maw = { # Character
+			                set_nationality = PREV.PREV
+			                # Transfers to breakaway
+			            }
+		        	}
+		        	IF = {
+		        		limit = {
+		        			PREV.PREV = {
+		        				NOT = {
+		        					has_country_leader = {
+		        						ruling_only = yes
+		        						character = BRM_ba_maw
+		        					}
+		        				}
+		        			}
+		        		}
+		        		PREV.PREV = {
+		        			add_country_leader_role = {
+		        				character = BRM_ba_maw
+		        				promote_leader = yes
+		        				country_leader = {
+		        					ideology = japan_militarism_ideology
+		        					expire = "1952.1.1.1"
+		        					traits = { mon_dynasty_descendant } 
+		        				}
+		        			}
+		        			promote_character = {
+		        				character = BRM_ba_maw 
+		        				ideology = fascism_ideology 
+		        			}	
+		        		}
+		        	}
 				}
 				random_country = {
 					limit = {
