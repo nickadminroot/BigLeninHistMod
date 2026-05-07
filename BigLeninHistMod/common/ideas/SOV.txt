@@ -2038,11 +2038,7 @@ ideas = {
 			}
 		}
 
-###  ##   ##  ##  ###  ## ###     ### ###  ###  ##   ##
-#   #  # #   #  #  #  #    #       #  #  # #   #  # #   {~._.~}
-##  ####  #  #     #   #   #       #  #  # ##  ####  #   ( Y )
-#   #  #   # #  #  #    #  #       #  #  # #   #  #   # ()~*~()
-#   #  # ##   ##  ### ##   #      ### ###  ### #  # ##  (_)-(_)
+
 		SOV_fascist_womens_movement_idea = {
 
 			picture = SOV_fascist_womens_movement
@@ -2084,26 +2080,7 @@ ideas = {
 			}
 		}
 
-#		SOV_organize_wreckers_idea = {
-#
-#			picture = SOV_organize_wreckers
-#
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				industrial_capacity_factory = -0.2
-#				industrial_capacity_dockyard = -0.2
-#				production_speed_buildings_factor = -0.2
-#			}
-#		}
+
 
 		SOV_aristocratic_investments_idea = {
 
@@ -3315,13 +3292,7 @@ ideas = {
 
 
 
-##     ## #### ########  ########  ######## ##    ##    #### ########  ########    ###     ######
-##     ##  ##  ##     ## ##     ## ##       ###   ##     ##  ##     ## ##         ## ##   ##    ##
-##     ##  ##  ##     ## ##     ## ##       ####  ##     ##  ##     ## ##        ##   ##  ##
-#########  ##  ##     ## ##     ## ######   ## ## ##     ##  ##     ## ######   ##     ##  ######
-##     ##  ##  ##     ## ##     ## ##       ##  ####     ##  ##     ## ##       #########       ##
-##     ##  ##  ##     ## ##     ## ##       ##   ###     ##  ##     ## ##       ##     ## ##    ##
-##     ## #### ########  ########  ######## ##    ##    #### ########  ######## ##     ##  ######
+
 
 
 
@@ -3788,6 +3759,33 @@ ideas = {
 
 
 	country = {
+
+		SOV_no_step_back = {
+			name = SOV_no_step_back
+
+			picture = generic_war_economy
+
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+
+		SOV_bagration = {
+			name = SOV_bagration
+
+			picture = generic_major_war
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_speed_factor = 0.1
+				army_defence_factor = 0.15
+			}
+		}
 
 		comintern_influence = { #Apparently not used
 
@@ -10284,31 +10282,6 @@ ideas = {
 			}
 		}
 
-		SOV_no_step_back = {
-			name = SOV_no_step_back
-
-			picture = generic_war_economy
-
-			removal_cost = -1
-
-			modifier = {
-				defense = -0.1
-				army_org_factor = 0.1
-			}
-		}
-
-		SOV_bagration = {
-			name = SOV_bagration
-
-			picture = generic_major_war
-
-			removal_cost = -1
-
-			modifier = {
-				attack = 0.15
-				max_speed = 0.1
-				defense = 0.15
-			}
-		}
+	}
 
 }

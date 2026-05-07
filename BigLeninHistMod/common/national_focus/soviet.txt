@@ -9350,28 +9350,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_template = "Novobrantsy" }
-				}
-				division_template = {
-					name = "Novobrantsy"
 
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 3 y = 0 }
-						infantry = { x = 3 y = 1 }
-					}
-				}
+			division_template = {
+				name = "Novobrantsy"
+				is_locked = yes
 
-				set_division_template_lock = {
-					division_template = "Novobrantsy"
-					is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
 				}
 			}
 
@@ -9434,7 +9426,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 
 		completion_reward = {
-			add_idea = SOV_no_step_back
+			add_ideas = SOV_no_step_back
 
 			if = {
 				limit = {
