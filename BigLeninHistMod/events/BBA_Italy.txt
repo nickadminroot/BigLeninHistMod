@@ -395,7 +395,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = { #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY AND NOT TOO MANY MISSIONS ACTIVE, GO AHEAD
+			if = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY AND NOT TOO MANY MISSIONS ACTIVE, GO AHEAD
 				limit = {
 					ITA_missiolinis_cd_ready = yes
 					ITA_missiolinis_can_have_a_new_mission = yes
@@ -1210,7 +1210,7 @@ unit_leader_event = {
 	fire_only_once = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		has_global_flag = second_italo_ethiopian_war_flag
 	}
 
@@ -1308,7 +1308,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = { #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+			if = { #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 				limit = {
 					ITA_missiolinis_cd_ready = yes
 				}
@@ -1361,7 +1361,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -1455,7 +1455,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -1549,7 +1549,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -1635,7 +1635,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -1761,7 +1761,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -1881,7 +1881,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2060,7 +2060,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2363,7 +2363,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2554,7 +2554,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2646,7 +2646,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2738,7 +2738,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2830,7 +2830,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -2921,7 +2921,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -3041,7 +3041,7 @@ unit_leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		ITA_missiolinis_cd_ready = yes #IF NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
+		ITA_missiolinis_cd_ready = yes #if NO OTHER MISSIOLINI HAS BEEN ACTIVATED RECENTLY, GO AHEAD
 		ITA_missiolinis_system_available = yes
 	}
 
@@ -10032,7 +10032,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.5.a
 		
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Together for Victory"
 			}
@@ -10045,7 +10045,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "Together for Victory"
@@ -10795,7 +10795,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				ENG = {
 					NOT = {
@@ -10812,7 +10812,7 @@ country_event = {
 		}
 
 		
-		IF = {
+		if = {
 			limit = {
 				FRA = {
 					NOT = {
@@ -10831,7 +10831,7 @@ country_event = {
 		add_stability = -0.1
 		add_war_support = -0.05
 
-		IF = {
+		if = {
 			limit = {#Checks if ENG is hosting exiled ETH or if an ally does
 				ITA_hosting_exiled_ethiopia = yes
 				ITA = { #ITA must be at war with ETH
@@ -11149,7 +11149,7 @@ country_event = {
 		802 = {
 			remove_core_of = YUG
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					802 = {
@@ -11161,7 +11161,7 @@ country_event = {
 				transfer_state = 802
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					802 = {
@@ -11222,7 +11222,7 @@ country_event = {
 		HUN = {
 			give_guarantee = ITA
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					45 = {
@@ -11234,7 +11234,7 @@ country_event = {
 				add_claim_by = HUN
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				45 = {
 					is_claimed_by = ITA
@@ -11244,7 +11244,7 @@ country_event = {
 				remove_claim_by = ITA
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					45 = {
@@ -11260,7 +11260,7 @@ country_event = {
 				transfer_state = 45
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				any_country = {
 					is_subject_of = ITA
@@ -12305,7 +12305,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 				ENG = {
@@ -12321,7 +12321,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 				FRA = {
@@ -12336,7 +12336,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 				ENG = {
@@ -12351,7 +12351,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 				FRA = {
@@ -12368,7 +12368,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 				ENG = {
@@ -12383,7 +12383,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_balkans
 			}
@@ -12464,7 +12464,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 			}
@@ -12477,7 +12477,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 			}
@@ -12489,7 +12489,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 			}
@@ -12501,7 +12501,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 			}
@@ -12514,7 +12514,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 			}
@@ -12526,7 +12526,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_balkans
 			}
@@ -12654,7 +12654,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_interaction_events.39.a 
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_british_somalia
 			}
@@ -12663,7 +12663,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_french_somaliland
 			}
@@ -12672,7 +12672,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_socotra
 			}
@@ -12681,7 +12681,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_tunisia
 			}
@@ -12690,7 +12690,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = ITA_will_get_malta
 			}

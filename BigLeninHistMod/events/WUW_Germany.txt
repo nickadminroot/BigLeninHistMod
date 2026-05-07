@@ -502,7 +502,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = fascism
@@ -513,7 +513,7 @@ country_event = {
 				days = 730
 			}
 		}		
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = democratic
@@ -524,7 +524,7 @@ country_event = {
 				days = 730
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = neutrality
@@ -593,7 +593,7 @@ country_event = { #FROM has foiled our influencing efforts
 
 		effect_tooltip = {
 			FROM = {
-				IF = {
+				if = {
 					limit = {
 						ROOT = {
 							has_government = fascism
@@ -603,7 +603,7 @@ country_event = { #FROM has foiled our influencing efforts
 						idea = fascist_influence
 					}
 				}		
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						ROOT = {
 							has_government = democratic
@@ -613,7 +613,7 @@ country_event = { #FROM has foiled our influencing efforts
 						idea = democratic_influence
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						ROOT = {
 							has_government = neutrality
@@ -808,7 +808,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				684 = {
 					is_fully_controlled_by = ROOT
@@ -820,7 +820,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				647 = {
 					is_fully_controlled_by = ROOT
@@ -832,7 +832,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				646 = {
 					is_fully_controlled_by = ROOT
@@ -844,7 +844,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				633 = {
 					is_fully_controlled_by = ROOT
@@ -856,7 +856,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				743 = {
 					is_fully_controlled_by = ROOT
@@ -868,7 +868,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				979 = {
 					is_fully_controlled_by = ROOT
@@ -880,7 +880,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				737 = {
 					is_fully_controlled_by = ROOT
@@ -892,7 +892,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				726 = {
 					is_fully_controlled_by = ROOT
@@ -904,7 +904,7 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				725 = {
 					is_fully_controlled_by = ROOT
@@ -916,19 +916,19 @@ country_event = { #FROM wants their old colonies back (ROOT is Japan)
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				634 = {
 					is_fully_controlled_by = ROOT
 				}
 			}
 
-			634 = { #Solomon Islands (IF Bougainville is ever added, this should be that isntead)
+			634 = { #Solomon Islands (if Bougainville is ever added, this should be that isntead)
 				transfer_state_to = FROM
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -999,7 +999,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 		name = wuw_GER_diplomacy.24.a
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					684 = {
 						is_fully_controlled_by = ROOT
@@ -1011,7 +1011,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					647 = {
 						is_fully_controlled_by = ROOT
@@ -1023,7 +1023,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					646 = {
 						is_fully_controlled_by = ROOT
@@ -1035,7 +1035,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					633 = {
 						is_fully_controlled_by = ROOT
@@ -1047,7 +1047,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					743 = {
 						is_fully_controlled_by = ROOT
@@ -1059,7 +1059,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					979 = {
 						is_fully_controlled_by = ROOT
@@ -1071,7 +1071,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					737 = {
 						is_fully_controlled_by = ROOT
@@ -1083,7 +1083,7 @@ country_event = { #Japanese transfer of old colonies to Germany
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -1542,7 +1542,7 @@ country_event = { #FROM request control of state
 
 		effect_tooltip = {
 
-			IF = {
+			if = {
 				limit = {
 					333 = {
 						is_fully_controlled_by = ROOT
@@ -1553,7 +1553,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					334 = {
 						is_fully_controlled_by = ROOT
@@ -1564,7 +1564,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					335 = {
 						is_fully_controlled_by = ROOT
@@ -1575,7 +1575,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					336 = {
 						is_fully_controlled_by = ROOT
@@ -1586,7 +1586,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					667 = {
 						is_fully_controlled_by = ROOT
@@ -1597,7 +1597,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					668 = {
 						is_fully_controlled_by = ROOT
@@ -1608,7 +1608,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					672 = {
 						is_fully_controlled_by = ROOT
@@ -1619,7 +1619,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					673 = {
 						is_fully_controlled_by = ROOT
@@ -1630,7 +1630,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					721 = {
 						is_fully_controlled_by = ROOT
@@ -1641,7 +1641,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					738 = {
 						is_fully_controlled_by = ROOT
@@ -1652,7 +1652,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					684 = {
 						is_fully_controlled_by = ROOT
@@ -1663,7 +1663,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					647 = {
 						is_fully_controlled_by = ROOT
@@ -1674,7 +1674,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					646 = {
 						is_fully_controlled_by = ROOT
@@ -1685,7 +1685,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					633 = {
 						is_fully_controlled_by = ROOT
@@ -1696,7 +1696,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					979 = {
 						is_fully_controlled_by = ROOT
@@ -1707,7 +1707,7 @@ country_event = { #FROM request control of state
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					737 = {
 						is_fully_controlled_by = ROOT
@@ -1756,7 +1756,7 @@ country_event = { #FROM request control of state
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					333 = {
 						is_fully_controlled_by = ROOT
@@ -1767,7 +1767,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					334 = {
 						is_fully_controlled_by = ROOT
@@ -1778,7 +1778,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					335 = {
 						is_fully_controlled_by = ROOT
@@ -1789,7 +1789,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					336 = {
 						is_fully_controlled_by = ROOT
@@ -1800,7 +1800,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					667 = {
 						is_fully_controlled_by = ROOT
@@ -1811,7 +1811,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					668 = {
 						is_fully_controlled_by = ROOT
@@ -1822,7 +1822,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					672 = {
 						is_fully_controlled_by = ROOT
@@ -1833,7 +1833,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					673 = {
 						is_fully_controlled_by = ROOT
@@ -1844,7 +1844,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					721 = {
 						is_fully_controlled_by = ROOT
@@ -1855,7 +1855,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					738 = {
 						is_fully_controlled_by = ROOT
@@ -1866,7 +1866,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					684 = {
 						is_fully_controlled_by = ROOT
@@ -1877,7 +1877,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					647 = {
 						is_fully_controlled_by = ROOT
@@ -1888,7 +1888,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					646 = {
 						is_fully_controlled_by = ROOT
@@ -1899,7 +1899,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					633 = {
 						is_fully_controlled_by = ROOT
@@ -1910,7 +1910,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					979 = {
 						is_fully_controlled_by = ROOT
@@ -1921,7 +1921,7 @@ country_event = { #FROM request control of state
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					737 = {
 						is_fully_controlled_by = ROOT
@@ -1964,7 +1964,7 @@ country_event = { #FROM denies control of state
 	option = { #scheisse!
 		name = wuw_GER_diplomacy.36.a
 
-		IF = {
+		if = {
 			limit = {
 				333 = {
 					is_fully_controlled_by = FROM
@@ -1975,7 +1975,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				334 = {
 					is_fully_controlled_by = FROM
@@ -1986,7 +1986,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				335 = {
 					is_fully_controlled_by = FROM
@@ -1997,7 +1997,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				336 = {
 					is_fully_controlled_by = FROM
@@ -2008,7 +2008,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				667 = {
 					is_fully_controlled_by = FROM
@@ -2019,7 +2019,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				668 = {
 					is_fully_controlled_by = FROM
@@ -2030,7 +2030,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				672 = {
 					is_fully_controlled_by = FROM
@@ -2041,7 +2041,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				673 = {
 					is_fully_controlled_by = FROM
@@ -2052,7 +2052,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				721 = {
 					is_fully_controlled_by = FROM
@@ -2063,7 +2063,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				738 = {
 					is_fully_controlled_by = FROM
@@ -2074,7 +2074,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				684 = {
 					is_fully_controlled_by = FROM
@@ -2085,7 +2085,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				647 = {
 					is_fully_controlled_by = FROM
@@ -2096,7 +2096,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				646 = {
 					is_fully_controlled_by = FROM
@@ -2107,7 +2107,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				633 = {
 					is_fully_controlled_by = FROM
@@ -2118,7 +2118,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				979 = {
 					is_fully_controlled_by = FROM
@@ -2129,7 +2129,7 @@ country_event = { #FROM denies control of state
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				737 = {
 					is_fully_controlled_by = FROM
@@ -2154,7 +2154,7 @@ country_event = { #FROM accepts giving control of state
 	option = { #wunderbar
 		name = wuw_GER_diplomacy.37.a
 
-		IF = {
+		if = {
 			limit = {
 				333 = {
 					is_fully_controlled_by = FROM
@@ -2165,7 +2165,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				334 = {
 					is_fully_controlled_by = FROM
@@ -2176,7 +2176,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				335 = {
 					is_fully_controlled_by = FROM
@@ -2187,7 +2187,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				336 = {
 					is_fully_controlled_by = FROM
@@ -2198,7 +2198,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				667 = {
 					is_fully_controlled_by = FROM
@@ -2209,7 +2209,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				668 = {
 					is_fully_controlled_by = FROM
@@ -2220,7 +2220,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				672 = {
 					is_fully_controlled_by = FROM
@@ -2231,7 +2231,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				673 = {
 					is_fully_controlled_by = FROM
@@ -2242,7 +2242,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				721 = {
 					is_fully_controlled_by = FROM
@@ -2253,7 +2253,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				738 = {
 					is_fully_controlled_by = FROM
@@ -2264,7 +2264,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				684 = {
 					is_fully_controlled_by = FROM
@@ -2275,7 +2275,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				647 = {
 					is_fully_controlled_by = FROM
@@ -2286,7 +2286,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				646 = {
 					is_fully_controlled_by = FROM
@@ -2297,7 +2297,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				633 = {
 					is_fully_controlled_by = FROM
@@ -2308,7 +2308,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				979 = {
 					is_fully_controlled_by = FROM
@@ -2319,7 +2319,7 @@ country_event = { #FROM accepts giving control of state
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				737 = {
 					is_fully_controlled_by = FROM
@@ -2345,7 +2345,7 @@ country_event = { #FROM requests their old colonies back
 		name = wuw_GER_diplomacy.38.a
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						541 = {
@@ -2362,7 +2362,7 @@ country_event = { #FROM requests their old colonies back
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						546 = {
@@ -2379,7 +2379,7 @@ country_event = { #FROM requests their old colonies back
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						777 = {
@@ -2396,7 +2396,7 @@ country_event = { #FROM requests their old colonies back
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						893 = {
@@ -2413,7 +2413,7 @@ country_event = { #FROM requests their old colonies back
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						894 = {
@@ -2430,7 +2430,7 @@ country_event = { #FROM requests their old colonies back
 					transfer_state_to = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						895 = {
@@ -2460,7 +2460,7 @@ country_event = { #FROM requests their old colonies back
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						541 = {
@@ -2477,7 +2477,7 @@ country_event = { #FROM requests their old colonies back
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						546 = {
@@ -2494,7 +2494,7 @@ country_event = { #FROM requests their old colonies back
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						777 = {
@@ -2511,7 +2511,7 @@ country_event = { #FROM requests their old colonies back
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						893 = {
@@ -2528,7 +2528,7 @@ country_event = { #FROM requests their old colonies back
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						894 = {
@@ -2545,7 +2545,7 @@ country_event = { #FROM requests their old colonies back
 					add_claim_by = FROM
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						895 = {
@@ -2577,7 +2577,7 @@ country_event = { #FROM gives the colonies back
 	option = { #Fine
 		name = wuw_GER_diplomacy.39.a
 
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					541 = {
@@ -2594,7 +2594,7 @@ country_event = { #FROM gives the colonies back
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					546 = {
@@ -2611,7 +2611,7 @@ country_event = { #FROM gives the colonies back
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					777 = {
@@ -2628,7 +2628,7 @@ country_event = { #FROM gives the colonies back
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					893 = {
@@ -2645,7 +2645,7 @@ country_event = { #FROM gives the colonies back
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					894 = {
@@ -2662,7 +2662,7 @@ country_event = { #FROM gives the colonies back
 				transfer_state_to = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					895 = {
@@ -2693,7 +2693,7 @@ country_event = { #FROM does not give the colonies back
 	option = { #Fine, we'll take them!
 		name = wuw_GER_diplomacy.40.a
 
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					541 = {
@@ -2711,7 +2711,7 @@ country_event = { #FROM does not give the colonies back
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					546 = {
@@ -2728,7 +2728,7 @@ country_event = { #FROM does not give the colonies back
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					777 = {
@@ -2745,7 +2745,7 @@ country_event = { #FROM does not give the colonies back
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					893 = {
@@ -2762,7 +2762,7 @@ country_event = { #FROM does not give the colonies back
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					894 = {
@@ -2779,7 +2779,7 @@ country_event = { #FROM does not give the colonies back
 				add_claim_by = ROOT
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					895 = {
@@ -3461,7 +3461,7 @@ country_event = {
 			}
 		}
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = LIT
 					owns_state = 188
@@ -3475,7 +3475,7 @@ country_event = {
 					add_core_of = FROM
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = LIT
 					NOT = {
@@ -3488,7 +3488,7 @@ country_event = {
 					give_guarantee = ROOT
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = LAT
@@ -3544,7 +3544,7 @@ country_event = {
 	option = { # It's all coming together!
 		name = wuw_GER_diplomacy.65.a		
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_idea = anti_soviet_pact
@@ -3554,7 +3554,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = LIT
@@ -3570,7 +3570,7 @@ country_event = {
 				add_core_of = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = LIT
@@ -3589,7 +3589,7 @@ country_event = {
 				days = 180
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = LAT
@@ -3605,7 +3605,7 @@ country_event = {
 				days = 180
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = EST
@@ -3706,11 +3706,11 @@ country_event = {
 			}
 		}
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = BEL
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = {
 							is_faction_leader = no
@@ -3738,11 +3738,11 @@ country_event = {
 				}
 				
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = HOL
 				}
-				IF = {
+				if = {
 					limit = {
 						FROM = {
 							is_faction_leader = no
@@ -3785,7 +3785,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = BEL
 				}
@@ -3794,7 +3794,7 @@ country_event = {
 					set_country_flag = GER_bel_accepted_backdoor_negotiations_flag
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = HOL
 				}
@@ -3836,7 +3836,7 @@ country_event = {
 		custom_effect_tooltip = warning_they_may_instead_apporach_our_neighbor_tt
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = BEL
 				}
@@ -3844,7 +3844,7 @@ country_event = {
 					set_country_flag = GER_bel_responded_to_backdoor_negotiations_flag
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = HOL
 				}
@@ -3877,13 +3877,13 @@ country_event = {
 			base = 100
 		}		
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = HOL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = no
 				}
@@ -3906,13 +3906,13 @@ country_event = {
 				generator = { 980 34 }
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = BEL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = no
 				}
@@ -3947,13 +3947,13 @@ country_event = {
 			base = 0
 		}		
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = HOL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = no
 				}
@@ -3970,13 +3970,13 @@ country_event = {
 			add_state_claim = 34
 			add_to_faction = FROM	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = BEL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = no
 				}
@@ -4054,7 +4054,7 @@ country_event = {
 			popularity = 0.1
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = democratic
@@ -4065,7 +4065,7 @@ country_event = {
 				days = 180
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = neutrality
@@ -4134,7 +4134,7 @@ country_event = { #Germany makes us a volkskommissariat
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_completed_focus = GER_instill_german_discipline
@@ -4148,7 +4148,7 @@ country_event = { #Germany makes us a volkskommissariat
 			add_ideas = GER_volkskommissariat_military
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_completed_focus = GER_integrate_subjects_economies
@@ -4284,7 +4284,7 @@ country_event = { #The Civil War broke out
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						has_completed_focus = GER_the_proletarian_legion
@@ -4340,7 +4340,7 @@ country_event = { #The Civil War broke out
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					GER = {
 						has_completed_focus = GER_the_proletarian_legion
@@ -4690,14 +4690,14 @@ country_event = { #Germany offers trade deal
 			base = 10
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				is_subject_of = FROM
 			}
 
 			add_ideas = GER_proletarian_solidarity_subject_ns
 		}
-		ELSE = {
+		else = {
 			add_ideas = GER_proletarian_solidarity_ns
 		}
 	}
@@ -4726,14 +4726,14 @@ country_event = { #Germany demands integration
 	option = { #whelp
 		name = wuw_GER_diplomacy.85.a
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					original_tag = CZE
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					SOV = {
 						has_government = communism
@@ -4761,7 +4761,7 @@ country_event = { #Germany demands integration
 				custom_effect_tooltip = GAME_OVER_TT
 
 			
-					IF = {
+					if = {
 						limit = {
 							FROM = {
 								original_tag = GER
@@ -4778,7 +4778,7 @@ country_event = { #Germany demands integration
 				
 			}
 
-			ELSE = {
+			else = {
 				FROM = {
 					annex_country = {
 						target = ROOT
@@ -4790,14 +4790,14 @@ country_event = { #Germany demands integration
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					original_tag = POL
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					SOV = {
 						has_government = communism 
@@ -4832,7 +4832,7 @@ country_event = { #Germany demands integration
 				custom_effect_tooltip = GAME_OVER_TT
 			}
 
-			ELSE = {
+			else = {
 				FROM = {
 					annex_country = {
 						target = ROOT
@@ -4844,7 +4844,7 @@ country_event = { #Germany demands integration
 			}
 		}
 
-		ELSE = {
+		else = {
 			FROM = {
 				annex_country = {
 					target = ROOT
@@ -4860,7 +4860,7 @@ country_event = { #Germany demands integration
 	option = { # no!
 		name = wuw_GER_diplomacy.85.b
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					is_in_faction_with = FROM
@@ -4893,7 +4893,7 @@ country_event = { #FROM.FROM hands over territories in ROOT's Sphere of influenc
 		name = wuw_GER_diplomacy.86.a
 
 		
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					has_country_flag = SOV_got_slo_from_ger
@@ -4907,7 +4907,7 @@ country_event = { #FROM.FROM hands over territories in ROOT's Sphere of influenc
 			}
 			clr_country_flag = SOV_got_slo_from_ger
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					has_country_flag = SOV_got_east_pol_from_ger
@@ -4940,7 +4940,7 @@ country_event = { #After War SOV/GER asked to honour the sphere of influences
 		ai_chance = {
 			base = 10
 		} 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					original_tag = GER
@@ -4955,7 +4955,7 @@ country_event = { #After War SOV/GER asked to honour the sphere of influences
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					original_tag = SOV
@@ -4991,13 +4991,13 @@ country_event = { #After War SOV/GER hands over states to GER/SOV
 	option = { #As they should.
 		name = wuw_GER_diplomacy.88.a
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = GER
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						has_country_flag = capitulated_POL_flag
@@ -5013,7 +5013,7 @@ country_event = { #After War SOV/GER hands over states to GER/SOV
 				transfer_state = 97
 			}
 
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						has_country_flag = capitulated_CZE_flag
@@ -5027,13 +5027,13 @@ country_event = { #After War SOV/GER hands over states to GER/SOV
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = SOV
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						has_country_flag = capitulated_POL_flag
@@ -5052,7 +5052,7 @@ country_event = { #After War SOV/GER hands over states to GER/SOV
 				transfer_state = 762
 			}
 
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						has_country_flag = capitulated_CZE_flag
@@ -5589,7 +5589,7 @@ country_event = { #SOV asked about resources for industry
 			base = 10
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { has_country_flag = GER_requests_oil_flag }}
 
 			FROM.FROM = {
@@ -5600,7 +5600,7 @@ country_event = { #SOV asked about resources for industry
 
 				set_state_flag = GER_trades_for_oil_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -5616,7 +5616,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -5648,7 +5648,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -5662,7 +5662,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = GER_industrial_relocation_resources_modify_tt
 				}
 
@@ -5681,7 +5681,7 @@ country_event = { #SOV asked about resources for industry
 			
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = { FROM = { has_country_flag = GER_requests_tungsten_flag }}
 
 			FROM.FROM = {
@@ -5692,7 +5692,7 @@ country_event = { #SOV asked about resources for industry
 
 				set_state_flag = GER_trades_for_tungsten_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -5708,7 +5708,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -5740,7 +5740,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -5754,7 +5754,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = GER_industrial_relocation_resources_modify_tt
 				}
 				
@@ -5772,7 +5772,7 @@ country_event = { #SOV asked about resources for industry
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = { FROM = { has_country_flag = GER_requests_chromium_flag }}
 
 			FROM.FROM = {
@@ -5783,7 +5783,7 @@ country_event = { #SOV asked about resources for industry
 
 				set_state_flag = GER_trades_for_chromium_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -5799,7 +5799,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -5831,7 +5831,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -5845,7 +5845,7 @@ country_event = { #SOV asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = GER_industrial_relocation_resources_modify_tt
 				}
 				
@@ -5877,17 +5877,17 @@ country_event = { #SOV asked about resources for industry
 		}
 
 		FROM = {
-			IF = {
+			if = {
 				limit = { has_country_flag = GER_requests_oil_flag }
 
 				clr_country_flag = GER_requests_oil_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = GER_requests_tungsten_flag }
 
 				clr_country_flag = GER_requests_tungsten_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = GER_requests_chromium_flag }
 
 				clr_country_flag = GER_requests_chromium_flag
@@ -5909,17 +5909,17 @@ country_event = { #SOV asked about resources for industry
 		}
 
 		FROM = {
-			IF = {
+			if = {
 				limit = { has_country_flag = GER_requests_oil_flag }
 
 				clr_country_flag = GER_requests_oil_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = GER_requests_tungsten_flag }
 
 				clr_country_flag = GER_requests_tungsten_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = GER_requests_chromium_flag }
 
 				clr_country_flag = GER_requests_chromium_flag
@@ -6017,7 +6017,7 @@ country_event = {
 				target = FROM
 				modifier = GER_align_romania
 			}	
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						has_government = fascism
@@ -6025,7 +6025,7 @@ country_event = {
 				}
 				add_ideas = GER_align_romania
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						has_government = neutrality
@@ -6033,7 +6033,7 @@ country_event = {
 				}
 				add_ideas = GER_align_romania_unaligned
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						has_government = democratic
@@ -6286,7 +6286,7 @@ country_event = {
 		}
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						has_government = democratic
@@ -6296,7 +6296,7 @@ country_event = {
 					add_to_faction = ROOT
 				}
 			}
-			ELSE = {
+			else = {
 				FROM = { puppet = ROOT }
 			}
 
@@ -6692,7 +6692,7 @@ country_event = {
 			FROM = {
 				give_guarantee = ROOT
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = FRA
 				}
@@ -6744,7 +6744,7 @@ country_event = {
 		FROM = {
 			give_guarantee = ROOT
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = FRA
@@ -6757,7 +6757,7 @@ country_event = {
 				add_to_tech_sharing_group = ger_fra_research 
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = ENG
@@ -6996,7 +6996,7 @@ country_event = {
 			}
 		}	
 
-		IF = {
+		if = {
 			limit = {
 				295 = {
 					OWNER = {
@@ -7119,7 +7119,7 @@ country_event = {
 				}
 			}
 		}	
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				OR = {
 					295 = {
@@ -7240,7 +7240,7 @@ country_event = {
 				days = 1
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				COG = {
 					exists = no
@@ -7278,7 +7278,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				COG = {
 					exists = yes
@@ -7381,7 +7381,7 @@ country_event = {
 			}
 			
 			
-			IF = {
+			if = {
 				limit = {
 					COG = {
 						exists = yes
@@ -7400,7 +7400,7 @@ country_event = {
 					}
 				}	
 			}
-			IF = {
+			if = {
 				limit = {
 					any_state = {
 						OR = {
@@ -7462,7 +7462,7 @@ country_event = {
 			add_claim_by = ROOT
 		}
 
-		IF = {
+		if = {
 			limit = {
 				COG = {
 					exists = yes
@@ -7474,7 +7474,7 @@ country_event = {
 				target = COG
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				BEL = {
 					owns_state = 295
@@ -7599,7 +7599,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = ENG
 			}
@@ -7614,7 +7614,7 @@ country_event = {
 				transfer_state_to = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = GER
 			}
@@ -7658,7 +7658,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = ENG
 			}
@@ -7672,7 +7672,7 @@ country_event = {
 				add_claim_by = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = GER
 			}
@@ -7691,7 +7691,7 @@ country_event = {
 			}
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				COG = {
 					exists = yes
@@ -7702,7 +7702,7 @@ country_event = {
 				target = COG
 			}	
 		}
-		IF = {
+		if = {
 			limit = {
 				any_state = {
 					OR = {
@@ -7761,7 +7761,7 @@ country_event = {
 			base = 100
 		}	
 		
-		IF = {
+		if = {
 			limit = {
 				original_tag = ENG
 			}
@@ -7775,7 +7775,7 @@ country_event = {
 				add_claim_by = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = GER
 			}
@@ -7794,7 +7794,7 @@ country_event = {
 			}
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				COG = {
 					exists = yes
@@ -7818,7 +7818,7 @@ country_event = {
 			base = 100
 		}	
 		
-		IF = {
+		if = {
 			limit = {
 				original_tag = ENG
 			}
@@ -7832,7 +7832,7 @@ country_event = {
 				transfer_state_to = ROOT
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = GER
 			}
@@ -7867,7 +7867,7 @@ country_event = {
 
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					COG = {
 						is_subject_of = ROOT
@@ -7883,7 +7883,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					COG = {
 						has_cosmetic_tag = COG_belgian_congo
@@ -7907,7 +7907,7 @@ country_event = {
 				
 			}
 
-			IF = {
+			if = {
 				limit = {
 					COG = {
 						has_idea = BEL_albert_de_vleeschauwer
@@ -8106,7 +8106,7 @@ country_event = {
 
 		custom_effect_tooltip =  generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				NZL = {
 					is_subject_of = FROM
@@ -8152,7 +8152,7 @@ country_event = {
 
 		custom_effect_tooltip =  generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				AST = {
 					is_subject_of = FROM
@@ -8198,7 +8198,7 @@ country_event = {
 		
 		custom_effect_tooltip =  generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				SAF = {
 					is_subject_of = FROM
@@ -8574,7 +8574,7 @@ country_event = {
 			days = 365
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -8620,7 +8620,7 @@ country_event = {
 			base = 98
 		}	
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = GER_chi_ger_trade_ns
 			}
@@ -8629,7 +8629,7 @@ country_event = {
 				add_idea = GER_chi_ger_trade_ns_2
 			}	
 		}
-		ELSE = {
+		else = {
 			add_ideas = GER_chi_ger_trade_ns_2
 		}
 		
@@ -8832,7 +8832,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					BEL = {
 						NOT = {
@@ -8863,7 +8863,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					BEL = {
 						NOT = {
@@ -8928,7 +8928,7 @@ country_event = {
 	immediate = {
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					AUS = {
 						exists = no
@@ -8941,7 +8941,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					AUS = {
 						exists = yes
@@ -8955,7 +8955,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					HOL = {
 						NOT = {
@@ -8983,7 +8983,7 @@ country_event = {
 		}	
 
 		RKN = {
-			IF = {
+			if = {
 				limit = {
 					AUS = {
 						exists = no
@@ -9004,7 +9004,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					AUS = {
 						exists = yes
@@ -9030,7 +9030,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					HOL = {
 						NOT = {
@@ -9077,7 +9077,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					AUS = {
 						exists = no
@@ -9090,7 +9090,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					AUS = {
 						exists = yes
@@ -9123,7 +9123,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOR = {
 						NOT = {
@@ -9141,7 +9141,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					NOR = {
 						NOT = {
@@ -9189,7 +9189,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					NOR = {
 						NOT = {
@@ -9256,7 +9256,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					UKR = {
 						exists = no
@@ -9285,7 +9285,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					UKR = {
 						exists = no
@@ -9320,15 +9320,14 @@ country_event = {
 		}		
 		
 		RKU = {
-			UKR_mykhailo_omelianovych_pavlenko = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
+			add_country_leader_role = {
+				character = UKR_mykhailo_omelianovych_pavlenko
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = 1960.1.1
+					traits = { GER_reichskommissar_trait }
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
@@ -9352,7 +9351,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					BLR = {
 						OR = {
@@ -9389,7 +9388,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					BLR = {
 						NOT = {
@@ -9428,15 +9427,14 @@ country_event = {
 		}		
 		
 		RKO = {
-			BLR_radislau_astrouski = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = "1965.3.1"
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
+			add_country_leader_role = {
+				character = BLR_radislau_astrouski
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.3.1"
+					traits = { GER_reichskommissar_trait }
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
@@ -9460,7 +9458,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					GEO = {
 						exists = no
@@ -9489,7 +9487,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					GEO = {
 						exists = no
@@ -9556,7 +9554,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						NOT = {
@@ -9571,7 +9569,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						NOT = {
@@ -9597,7 +9595,7 @@ country_event = {
 			base = 15
 		}	
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					NOT = {
@@ -9619,7 +9617,7 @@ country_event = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = GER_german_controlled_reichskommissariat
 			}
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					ROOT = {
 						NOT = {
@@ -9635,7 +9633,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					NOT = {
@@ -9680,7 +9678,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					ROOT = {
 						NOT = {
@@ -9695,7 +9693,7 @@ country_event = {
 					}
 				}
 			}
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					ROOT = {
 						NOT = {
@@ -9730,7 +9728,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					SOV = {
 						NOT = {
@@ -9761,7 +9759,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					SOV = {
 						NOT = {
@@ -9895,7 +9893,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -9913,7 +9911,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				ROOT = {
 					set_nationality = {
 					    target_country = RKL
@@ -10004,7 +10002,7 @@ country_event = {
 			autonomy_state = autonomy_integrated_puppet 
 		}
 
-		IF = {
+		if = {
 			limit = {
 				POL = {
 					NOT = {
@@ -10030,7 +10028,7 @@ country_event = {
 				add_ideas = GER_german_controlled_reichskommissariat
 			}
 		}
-		ELSE = {
+		else = {
 			RKL = {
 				GER_friedrich_paulus = {
 					add_country_leader_role = {
@@ -10108,7 +10106,7 @@ country_event = {
 				}	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -10189,7 +10187,7 @@ country_event = {
 				}	
 			}
 
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -10348,7 +10346,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -10379,7 +10377,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					POL = {
 						NOT = {
@@ -10453,7 +10451,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					CZE = {
 						NOT = {
@@ -10472,7 +10470,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_completed_focus = GER_reorganize_the_wehrmacht
 				}
@@ -10483,7 +10481,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_completed_focus = GER_heed_von_neuraths_concerns
 				}
@@ -10507,7 +10505,7 @@ country_event = {
 
 		RKH = {
 			add_ideas = GER_reichsprotectorate_idea
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						has_completed_focus = GER_reorganize_the_wehrmacht
@@ -10524,7 +10522,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					ROOT = {
 						has_completed_focus = GER_heed_von_neuraths_concerns
@@ -10544,7 +10542,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					CZE = {
 						NOT = {
@@ -10607,7 +10605,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					has_completed_focus = GER_reorganize_the_wehrmacht
 				}
@@ -10618,7 +10616,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			else_if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					has_completed_focus = GER_heed_von_neuraths_concerns
 				}
@@ -10649,7 +10647,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					SPR = {
 						NOT = {
@@ -10688,7 +10686,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					SPR = {
 						NOT = {
@@ -10765,7 +10763,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			# Local Guy
-			IF = {
+			if = {
 				limit = {
 					CRO = {
 						OR = {
@@ -10785,7 +10783,7 @@ country_event = {
 			}
 
 			# German Guy
-			IF = {
+			if = {
 				limit = {
 					HUN = {
 						OR = {
@@ -10804,7 +10802,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RKC
@@ -10824,7 +10822,7 @@ country_event = {
 		}	
 
 		RKC = {
-			IF = {
+			if = {
 				limit = {
 					HUN = {
 						OR = {
@@ -10851,7 +10849,7 @@ country_event = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE = {
+			else = {
 				GER_georghans_reinhardt = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -10871,7 +10869,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					CRO = {
 						OR = {
@@ -10916,25 +10914,25 @@ country_event = {
 		}		
 		
 		RKC = {
-			CRO_ante_pavelic = {
-				remove_country_leader_role = {
+			remove_country_leader_role = {
+				character = CRO_ante_pavelic
+				ideology = nazism
+			}
+			add_country_leader_role = {
+				character = CRO_ante_pavelic
+				promote_leader = yes
+				country_leader = {
 					ideology = nazism
+					expire = 1960.1.1
+					traits = { GER_reichskommissar_trait }
 				}
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					HUN = {
 						OR = {
@@ -10953,7 +10951,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RKC = {
 					set_nationality = {
 					    target_country = GER
@@ -10982,7 +10980,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			# Local Guy
-			IF = {
+			if = {
 				limit = {
 					ENG = {
 						OR = {
@@ -11002,7 +11000,7 @@ country_event = {
 			}
 
 			# German Guy
-			IF = {
+			if = {
 				limit = {
 					HES = {
 						exists = no
@@ -11015,7 +11013,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RGB
@@ -11035,7 +11033,7 @@ country_event = {
 		}	
 
 		RGB = {
-			IF = {
+			if = {
 				limit = {
 					HES = {
 						exists = no
@@ -11055,7 +11053,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_otto_strasser = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -11075,7 +11073,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					ENG = {
 						OR = {
@@ -11138,7 +11136,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					HES = {
 						exists = no
@@ -11151,7 +11149,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RGB = {
 					set_nationality = {
 					    target_country = GER
@@ -11403,7 +11401,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					SAF = {
 						NOT = {
@@ -11437,7 +11435,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					SAF = {
 						NOT = {
@@ -11523,7 +11521,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					BRA = {
 						NOT = {
@@ -11572,7 +11570,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = { # The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					SAF = {
 						NOT = {
@@ -11617,18 +11615,18 @@ country_event = {
 		}		
 		
 		RKV = {
-			BRA_plinio_salgado = {
-				remove_country_leader_role = {
+			remove_country_leader_role = {
+				character = BRA_plinio_salgado
+				ideology = nazism
+			}
+			add_country_leader_role = {
+				character = BRA_plinio_salgado
+				promote_leader = yes
+				country_leader = {
 					ideology = nazism
-				}	
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
+					expire = 1960.1.1
+					traits = { GER_reichskommissar_trait }
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
@@ -11664,7 +11662,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					MEK = {
 						exists = no
@@ -11677,7 +11675,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RAN
@@ -11686,7 +11684,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					PRU = {
 						NOT = {
@@ -11704,7 +11702,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				CHL = {
 					set_nationality = {
 					    target_country = RAN
@@ -11725,7 +11723,7 @@ country_event = {
 		}	
 
 		RAN = {
-			IF = {
+			if = {
 				limit = {
 					MEK = {
 						exists = no
@@ -11745,7 +11743,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_rolf_carls = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -11765,8 +11763,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					PRU = {
 						NOT = {
@@ -11784,7 +11782,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RAN = {
 					set_nationality = {
 					    target_country = CHL
@@ -11811,7 +11809,7 @@ country_event = {
 		}		
 		
 		RAN = {
-			IF = {
+			if = {
 				limit = {
 					PRU = {
 						NOT = {
@@ -11836,7 +11834,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				CHL_jorge_gonzález_von_marées = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -11857,7 +11855,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					MEK = {
 						exists = no
@@ -11870,7 +11868,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RAN = {
 					set_nationality = {
 					    target_country = GER
@@ -11900,7 +11898,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					SAX = {
 						exists = no
@@ -11913,7 +11911,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RCO
@@ -11922,7 +11920,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					MEX = {
 						NOT = {
@@ -11953,39 +11951,39 @@ country_event = {
 		}	
 
 		RCO = {
-			IF = {
+			if = {
 				limit = {
 					SAX = {
 						exists = no
 					}
 				}
-				SAX_george_of_saxony = {
-					remove_country_leader_role = {
+				remove_country_leader_role = {
+					character = SAX_george_of_saxony
+					ideology = nazism
+				}
+				add_country_leader_role = {
+					character = SAX_george_of_saxony
+					promote_leader = yes
+					country_leader = {
 						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
+						expire = 1960.1.1
+						traits = { GER_reichskommissar_trait }
+					}
 				}
 			}
-			ELSE = {
-				GER_gunther_lutjens = {
-					remove_country_leader_role = {
+			else = {
+				remove_country_leader_role = {
+					character = GER_gunther_lutjens
+					ideology = nazism
+				}
+				add_country_leader_role = {
+					character = GER_gunther_lutjens
+					promote_leader = yes
+					country_leader = {
 						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
+						expire = 1960.1.1
+						traits = { GER_reichskommissar_trait }
+					}
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -11993,8 +11991,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					MEX = {
 						NOT = {
@@ -12059,7 +12057,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					SAX = {
 						exists = no
@@ -12072,7 +12070,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RCO = {
 					set_nationality = {
 					    target_country = GER
@@ -12103,7 +12101,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					HUN = {
 						OR = {
@@ -12124,7 +12122,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RUS
@@ -12133,7 +12131,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					USA = {
 						NOT = {
@@ -12164,7 +12162,7 @@ country_event = {
 		}	
 
 		RUS = {
-			IF = {
+			if = {
 				limit = {
 					HUN = {
 						OR = {
@@ -12192,7 +12190,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_alfred_jodl = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -12212,8 +12210,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					USA = {
 						NOT = {
@@ -12278,7 +12276,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					HUN = {
 						OR = {
@@ -12299,7 +12297,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RUS = {
 					set_nationality = {
 					    target_country = GER
@@ -12497,7 +12495,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					SWI = {
@@ -12516,7 +12514,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RAR
@@ -12525,7 +12523,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					IRQ = {
 						NOT = {
@@ -12556,7 +12554,7 @@ country_event = {
 		}	
 
 		RAR = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					SWI = {
@@ -12582,7 +12580,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_walter_model = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -12602,8 +12600,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					IRQ = {
 						NOT = {
@@ -12668,7 +12666,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					SWI = {
@@ -12687,7 +12685,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RAR = {
 					set_nationality = {
 					    target_country = GER
@@ -12717,7 +12715,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					WUR = {
 						NOT = {
@@ -12735,7 +12733,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				GER = {
 					set_nationality = {
 					    target_country = RHD
@@ -12744,7 +12742,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					RAJ = {
 						NOT = {
@@ -12775,7 +12773,7 @@ country_event = {
 		}	
 
 		RHD = {
-			IF = {
+			if = {
 				limit = {
 					WUR = {
 						NOT = {
@@ -12800,7 +12798,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_alfred_saalwachter = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -12820,8 +12818,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					RAJ = {
 						NOT = {
@@ -12886,7 +12884,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					WUR = {
 						NOT = {
@@ -12904,7 +12902,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RHD = {
 					set_nationality = {
 					    target_country = GER
@@ -12942,7 +12940,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					CHI = {
 						NOT = {
@@ -12993,8 +12991,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					CHI = {
 						NOT = {
@@ -13088,7 +13086,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -13106,7 +13104,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				ROOT = {
 					set_nationality = {
 					    target_country = RAA
@@ -13115,7 +13113,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					AST = {
 						NOT = {
@@ -13146,7 +13144,7 @@ country_event = {
 		}	
 
 		RAA = {
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -13171,7 +13169,7 @@ country_event = {
 					}	
 				}
 			}
-			ELSE = {
+			else = {
 				GER_werner_von_fritsch = {
 					remove_country_leader_role = {
 						ideology = nazism
@@ -13191,8 +13189,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
+			# The if is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
+			if = {
 				limit = {
 					AST = {
 						NOT = {
@@ -13257,7 +13255,7 @@ country_event = {
 
 		hidden_effect = {
 			
-			IF = {
+			if = {
 				limit = {
 					POL = {
 						NOT = {
@@ -13275,7 +13273,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				RAA = {
 					set_nationality = {
 					    target_country = GER
@@ -13491,7 +13489,7 @@ country_event = {
 			base = 80
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = GER_bismarckjugend_idea
 			}
@@ -13499,7 +13497,7 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = 0.05
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = GER_eiserne_front_idea
 			}
@@ -13515,7 +13513,7 @@ country_event = {
 			base = 20
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = GER_bismarckjugend_idea
 			}
@@ -13524,7 +13522,7 @@ country_event = {
 				add_idea = GER_weakened_bismarckjugend_idea
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = GER_eiserne_front_idea
 			}
@@ -13557,7 +13555,7 @@ country_event = {
 					hours = 12
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = GER
@@ -13568,7 +13566,7 @@ country_event = {
 					transfer_state_to = SIL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = GER
@@ -13579,7 +13577,7 @@ country_event = {
 					transfer_state_to = SIL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = GER
@@ -13590,7 +13588,7 @@ country_event = {
 					transfer_state_to = SIL
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = GER
@@ -13744,7 +13742,7 @@ country_event = { #Communist civil war starts
 		}
 
 		hidden_effect = { 
-			IF = {
+			if = {
 				limit = {
 					61 = {
 						has_dynamic_modifier = {
@@ -13757,7 +13755,7 @@ country_event = { #Communist civil war starts
 					state = 61
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					60 = {
 						has_dynamic_modifier = {
@@ -13770,7 +13768,7 @@ country_event = { #Communist civil war starts
 					state = 60
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					65 = {
 						has_dynamic_modifier = {
@@ -14060,7 +14058,7 @@ country_event = {
 		add_war_support = -0.05
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_government = neutrality
@@ -14358,7 +14356,7 @@ country_event = {
 			base = 30
 		}
 
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
@@ -14371,7 +14369,7 @@ country_event = {
 				tooltip = consumer_goods_factor_tt
 			}
 		}
-		ELSE = {
+		else = {
 			add_political_power = 50
 		}
 
@@ -15095,7 +15093,7 @@ country_event = { #GER pressure country to drop the monroe doctrine
 
 		set_country_flag = monroe_country_in_opposition_flag
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					is_in_faction = yes
@@ -15175,7 +15173,7 @@ country_event = { #GER or USA tries to sway our ideology
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = fascism
@@ -15187,7 +15185,7 @@ country_event = { #GER or USA tries to sway our ideology
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = communism
@@ -15199,7 +15197,7 @@ country_event = { #GER or USA tries to sway our ideology
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = democratic
@@ -15412,7 +15410,7 @@ country_event = { #USA informs Monroe country that the doctrine will still stand
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				is_in_array = {
 					array = global.monroe_countries_not_in_support
@@ -15649,14 +15647,14 @@ country_event = { #Event for GER and USA if they enter war while the Monroe Doct
 	option = { #WAAAAAAAR
 		name = wuw_GER_monroe.12.a
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = GER
 			}
 			clr_country_flag = GER_destabilize_monroe_flag
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = USA
 			}
@@ -15721,7 +15719,7 @@ news_event = { #The Monroe Doctrine is dead
 
 		trigger = { original_tag = GER }
 
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = GER_destabilize_monroe_flag
 			}
@@ -15736,7 +15734,7 @@ news_event = { #The Monroe Doctrine is dead
 
 		trigger = { original_tag = USA }
 
-		IF = { #this should never happen but just to be safe
+		if = { #this should never happen but just to be safe
 			limit = {
 				has_country_flag = USA_save_monroe_flag
 			}
@@ -16001,7 +15999,7 @@ country_event = {
 				target = FROM
 				modifier = SOV_sent_us_weapons
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -16223,11 +16221,11 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = GER_wishes_to_annex_lithuania_flag
 			}
-			IF = {
+			if = {
 				limit = {
 					188 = {
 						NOT = {
@@ -16280,11 +16278,11 @@ country_event = {
 				GER_reduce_mefo_bills_penalty = yes
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = GER_wishes_to_puppet_lithuania_flag
 			}
-			IF = {
+			if = {
 				limit = {
 					188 = {
 						NOT = {
@@ -16297,7 +16295,7 @@ country_event = {
 				}
 			}
 			puppet = FROM
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -16337,7 +16335,7 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = GER_wishes_to_annex_lithuania_flag
 			}
@@ -16346,7 +16344,7 @@ country_event = {
 				target = FROM
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_global_flag = GER_wishes_to_puppet_lithuania_flag
 			}
@@ -16410,13 +16408,13 @@ country_event = {
 				popularity = 0.1
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_completed_focus = FIN_greater_finland
 				}
 				set_cosmetic_tag = FIN_greater_kingdom_of_finland
 			}
-			ELSE = {
+			else = {
 				set_cosmetic_tag = FIN_kingdom_of_finland
 			}
 			
@@ -16491,13 +16489,13 @@ country_event = {
 				popularity = 0.1
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_completed_focus = FIN_greater_finland
 				}
 				set_cosmetic_tag = FIN_greater_kingdom_of_finland
 			}
-			ELSE = {
+			else = {
 				set_cosmetic_tag = FIN_kingdom_of_finland
 			}
 		} 
@@ -16780,14 +16778,14 @@ country_event = {
 				id = wuw_GER_realpolitik.19
 				days = 1 
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = ROOT
 					is_faction_leader = yes
 				}
 				remove_from_faction = ROOT
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = ROOT
 					is_faction_leader = no
@@ -16802,7 +16800,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_guaranteed = LIT
 				is_guaranteed_by = LIT
@@ -16891,7 +16889,7 @@ country_event = {
 
 		GER_seize_gold_reserves_from_polish_states_peacufully = yes
 
-		IF = {
+		if = {
 			limit = {
 				ENG = {
 					NOT = {
@@ -16904,7 +16902,7 @@ country_event = {
 				add_war_support = -0.05 #dodged a bullet there
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FRA = {
 					NOT = {
@@ -16935,7 +16933,7 @@ country_event = {
 			base = 95
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					is_subject = yes
@@ -16955,7 +16953,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_non_aggression_pact_with = ROOT
@@ -17128,14 +17126,14 @@ country_event = {
 				id = wuw_GER_realpolitik.22
 				days = 1 
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = ROOT
 					is_faction_leader = yes
 				}
 				remove_from_faction = ROOT
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = ROOT
 					is_faction_leader = no
@@ -17150,7 +17148,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_guaranteed = LIT
 				is_guaranteed_by = LIT
@@ -17235,7 +17233,7 @@ country_event = {
 
 		GER_seize_gold_reserves_from_polish_states_peacufully = yes
 
-		IF = {
+		if = {
 			limit = {
 				ENG = {
 					NOT = {
@@ -17248,7 +17246,7 @@ country_event = {
 				add_war_support = -0.02 #dodged a bullet there
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				FRA = {
 					NOT = {
@@ -17276,7 +17274,7 @@ country_event = {
 	option = {
 		name = wuw_GER_realpolitik.22.a
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					is_subject = yes
@@ -17296,7 +17294,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_non_aggression_pact_with = ROOT
@@ -17421,7 +17419,7 @@ country_event = {
 		GER_setup_faction_wide_aoe_effects_from = yes
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = neutrality
@@ -17560,7 +17558,7 @@ country_event = { # FROM accepts our faction invitation - event for GER
 				add_to_faction = FROM
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -18209,7 +18207,7 @@ country_event = {
 			}
 
 			ROOT = {
-				IF = {
+				if = {
 					limit = { ROOT = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
 
 
@@ -18312,7 +18310,7 @@ country_event = {
 		GER_seize_gold_reserves_in_europe_peacefully = yes
 		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 
-		IF = {
+		if = {
 			limit = { AUS = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
 
 			AUS = {
@@ -18732,14 +18730,14 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = neutrality
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { 
 						OR = {
@@ -18758,7 +18756,7 @@ country_event = {
 				set_global_flag = AUS_otto_von_habsburg_has_joined_austria_flag
 			}
 
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
 					NOT = {
@@ -18792,13 +18790,13 @@ country_event = {
 			}
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_completed_focus = AUS_legacy_of_the_empire
 						}
 					}
-					IF = {
+					if = {
 						limit = {
 							has_country_leader = {
 								ruling_only = yes # default = yes
@@ -18811,7 +18809,7 @@ country_event = {
 						}
 					}
 
-					ELSE = {
+					else = {
 						add_dynamic_modifier = {
 							modifier = AUS_austrian_monarchy_restored
 						}
@@ -18822,7 +18820,7 @@ country_event = {
 					add_to_variable = { AUS_habsburg_monarchy_restored_war_support_factor = 0.05 tooltip = war_support_factor_tt }
 
 
-					IF = {
+					if = {
 						limit = {
 							HUN = {
 								exists = yes
@@ -18836,7 +18834,7 @@ country_event = {
 						}		
 					}
 
-					IF = {
+					if = {
 						limit = {
 							CZE = {
 								exists = yes
@@ -18850,7 +18848,7 @@ country_event = {
 						}		
 					}
 
-					IF = {
+					if = {
 						limit = {
 							YUG = {
 								exists = yes
@@ -18864,7 +18862,7 @@ country_event = {
 						}		
 					}
 
-					IF = {
+					if = {
 						limit = {
 							ROM = {
 								exists = yes
@@ -18880,7 +18878,7 @@ country_event = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						is_in_faction_with = ROOT
@@ -18891,14 +18889,14 @@ country_event = {
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_government = democratic
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_dynamic_modifier = {
@@ -19159,7 +19157,7 @@ country_event = {
 			base = 100
 		}
 
-		IF = {
+		if = {
 			limit = {
 				CZE = {
 					is_subject = no
@@ -19173,7 +19171,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			CZE = {
 				OVERLORD = {
 					# [GER.GetNameDefCap] Demands Czechoslovak Lands
@@ -19290,7 +19288,7 @@ country_event = {
 			base = 90
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				original_tag = CZE
 			}
@@ -19302,7 +19300,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			CZE = { # Our Overlord Surrenders us to [GER.GetNameDef]
 				country_event = { 
 					id = wuw_GER_realpolitik.49
@@ -19428,7 +19426,7 @@ country_event = {
 
 		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 
-		IF = {
+		if = {
 			limit = {
 				POL = {
 					OR = {
@@ -19440,7 +19438,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = HUN
 				}
@@ -19460,7 +19458,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					is_in_faction_with = AUS
 				}
@@ -19490,7 +19488,7 @@ country_event = {
 					}
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_in_faction_with = HUN
 				}
@@ -19510,7 +19508,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					is_in_faction_with = AUS
 				}
@@ -19665,7 +19663,7 @@ country_event = {
 			}
 		} 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						is_in_faction_with = AUS
@@ -19685,7 +19683,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						is_in_faction_with = HUN
@@ -19754,7 +19752,7 @@ country_event = {
 	option = { 
 		name = wuw_GER_realpolitik.52.a
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					is_in_faction_with = AUS
@@ -19774,7 +19772,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					is_in_faction_with = HUN
@@ -19794,7 +19792,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			FROM = {
 				every_controlled_state = {
 					limit = {
@@ -19909,7 +19907,7 @@ country_event = {
 			}
 		} 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					FROM = {
 						is_in_faction_with = AUS
@@ -19931,7 +19929,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					FROM = {
 						is_in_faction_with = HUN
@@ -20002,7 +20000,7 @@ country_event = {
 	option = { 
 		name = wuw_GER_realpolitik.55.a
 
-		IF = {
+		if = {
 			limit = {
 				ROOT = {
 					is_in_faction_with = AUS
@@ -20024,7 +20022,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				ROOT = {
 					is_in_faction_with = HUN
@@ -20046,7 +20044,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			FROM = {
 				every_controlled_state = {
 					limit = {
@@ -21108,7 +21106,7 @@ country_event = {
 			FROM = {
 				puppet = ROOT
 			}
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						has_idea = HUN_power_to_the_regent_idea
@@ -21116,7 +21114,7 @@ country_event = {
 				}
 				remove_ideas = HUN_power_to_the_regent_idea
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					ROOT = {
 						has_idea = HUN_more_power_to_the_regent_idea
@@ -21164,7 +21162,7 @@ country_event = {
 		    end_wars = no
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_idea = HUN_power_to_the_regent_idea
@@ -21174,7 +21172,7 @@ country_event = {
 				remove_ideas = HUN_power_to_the_regent_idea
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					has_idea = HUN_more_power_to_the_regent_idea
@@ -21400,13 +21398,13 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = HUN_power_to_the_regent_idea
 			}
 			remove_ideas = HUN_power_to_the_regent_idea
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_idea = HUN_more_power_to_the_regent_idea
 			}

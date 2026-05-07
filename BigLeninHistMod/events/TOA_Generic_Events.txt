@@ -417,7 +417,7 @@ country_event = {
 		ai_chance = {  
 			base = 55
 		} 
-		IF = {
+		if = {
 			limit = {
 				original_tag = CHL
 			}
@@ -425,7 +425,7 @@ country_event = {
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = BRA
 			}
@@ -433,7 +433,7 @@ country_event = {
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor =  0.1 tooltip = army_artillery_defence_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = ARG
 			}
@@ -441,7 +441,7 @@ country_event = {
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = PAR
 			}
@@ -449,7 +449,7 @@ country_event = {
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = URG
 			}
@@ -457,7 +457,7 @@ country_event = {
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
 		}
-		ELSE = {
+		else = {
 			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
 			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
@@ -470,42 +470,42 @@ country_event = {
 		ai_chance = {  
 			base = 30
 		} 
-		IF = {
+		if = {
 			limit = {
 				original_tag = CHL
 			}
 			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = BRA
 			}
 			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = ARG
 			}
 			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = PAR
 			}
 			custom_effect_tooltip = PAR_modify_paraguayan_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = URG
 			}
 			custom_effect_tooltip = URG_modify_uruguayan_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
-		ELSE = {
+		else = {
 			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_production_speed_anti_air_building_factor = 0.15 tooltip = production_speed_anti_air_building_factor_tt }
 		}
@@ -666,7 +666,8 @@ country_event = {
 
 		add_manpower = 120000
 
-		PAR_rafael_franco = {
+		add_country_leader_role = {
+			character = PAR_rafael_franco
 			promote_leader = yes
 		}
 
@@ -809,7 +810,7 @@ country_event = {
 					original_tag = PAR
 					has_government = communism		
 				}
-				PAR_rafael_franco = { set_nationality = PREV } 
+				set_nationality = PREV
 				add_country_leader_role = {		
 					character =  PAR_rafael_franco # optional if inside character scope
 					promote_leader = yes
@@ -822,7 +823,7 @@ country_event = {
 			}
 
 			hidden_effect = {
-				PAR_Jose_Felix_Estigarribia = { set_nationality = ROOT } 
+				set_nationality = ROOT
 				set_country_flag = PAR_is_going_democratic
 			}
 
@@ -935,9 +936,10 @@ country_event = {
 			popularity = 0.15
 		}
 
-		BOL_german_busch_beccera = {
-			promote_leader = yes
-		}
+			add_country_leader_role = {
+				character = BOL_german_busch_beccera
+				promote_leader = yes
+			}
 
 		add_manpower = 500
 
@@ -1084,7 +1086,7 @@ country_event = {
 			CHL_anarchic_society_level_down = yes
 		}
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = CHL
 			}
@@ -1116,7 +1118,7 @@ country_event = {
 
 		add_command_power = 25
 
-		IF = {
+		if = {
 			limit = {
 				original_tag = CHL
 			}
@@ -1203,7 +1205,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_completed_focus = CHL_endorse_the_constitution
@@ -1213,7 +1215,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_policies_of_arturo_alessandri
@@ -1222,7 +1224,7 @@ country_event = {
 				unlock_national_focus = CHL_policies_of_arturo_alessandri
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_inflation_control_by_the_central_bank
@@ -1280,7 +1282,7 @@ country_event = {
 			
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_completed_focus = CHL_endorse_the_constitution
@@ -1290,7 +1292,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_policies_of_arturo_alessandri
@@ -1299,7 +1301,7 @@ country_event = {
 				unlock_national_focus = CHL_policies_of_arturo_alessandri
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_inflation_control_by_the_central_bank
@@ -1328,7 +1330,7 @@ country_event = {
 		}
 		retire_character = CHL_arturo_alessandri
 
-		IF = {
+		if = {
 			limit = {
 				has_completed_focus = CHL_prop_up_gustavo_ross
 			}
@@ -1364,7 +1366,7 @@ country_event = {
 			
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_completed_focus = CHL_endorse_the_constitution
@@ -1374,7 +1376,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_policies_of_arturo_alessandri
@@ -1383,7 +1385,7 @@ country_event = {
 				unlock_national_focus = CHL_policies_of_arturo_alessandri
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_inflation_control_by_the_central_bank
@@ -1452,7 +1454,7 @@ country_event = {
 			
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_completed_focus = CHL_endorse_the_constitution
@@ -1462,7 +1464,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_policies_of_arturo_alessandri
@@ -1471,7 +1473,7 @@ country_event = {
 				unlock_national_focus = CHL_policies_of_arturo_alessandri
 			}
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_completed_focus = CHL_inflation_control_by_the_central_bank
@@ -2044,7 +2046,7 @@ country_event = { #Peru offers peace for the state they claim
 				white_peace = PRU
 			}
 	
-			IF = {
+			if = {
 				limit = {
 					490 = {
 						is_core_of = ECU
@@ -2135,7 +2137,7 @@ country_event = { #FROM accepts
 			white_peace = PRU
 		}
 
-		IF = {
+		if = {
 			limit = {
 				490 = {
 					is_core_of = ECU
@@ -2198,7 +2200,7 @@ country_event = { #Peru requests a white peace in return for Loreto
 				remove_ideas = PRU_amazonian_war
 			}
 
-			IF = {
+			if = {
 				limit = {
 					490 = {
 						is_core_of = PRU
@@ -2209,7 +2211,7 @@ country_event = { #Peru requests a white peace in return for Loreto
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_war_with = ECU
 				}
@@ -2298,7 +2300,7 @@ country_event = { #From accepts
 			}
 			remove_ideas = PRU_amazonian_war
 		}
-		IF = {
+		if = {
 			limit = {
 				490 = {
 					is_core_of = PRU
@@ -2308,7 +2310,7 @@ country_event = { #From accepts
 				remove_core_of = PRU
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				has_war_with = ECU
 			}
@@ -2379,13 +2381,13 @@ country_event = { #FROM has gone communist, should we embargo/remove protection?
 			}
 		}
 		add_war_support = 0.1
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
 			send_embargo = FROM 
 		}
-		ELSE = {
+		else = {
 			add_opinion_modifier = {
 				target = FROM # target of the relation
 				modifier = USA_embargoed_us
@@ -2494,7 +2496,7 @@ country_event = { #FROM has CW against communists, should we support the democra
 				value = 200
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				has_idea = undisturbed_isolation
 			}
@@ -2981,7 +2983,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = PAR_revenge_flag
 			}
