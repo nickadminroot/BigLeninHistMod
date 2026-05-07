@@ -7981,9 +7981,9 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
 
-		x = 33
+		x = 30
 		y = 0
-		relative_position_id = GER_prioritize_economic_growth
+		relative_position_id = GER_the_four_year_plan
 
 		cost = 5
 
@@ -14609,9 +14609,9 @@ focus_tree = {
 		id = BLHM_GER_invest_in_italian_industry
 		icon = GFX_goal_generic_construct_civ_factory
 
-		x = 8
+		x = 10
 		y = 0
-		relative_position_id = GER_construct_the_reichsautobahn
+		relative_position_id = GER_the_four_year_plan
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
