@@ -604,3 +604,19 @@ GER_uncertain_future_cat = {
 		has_civil_war = no
 	}
 }
+
+GER_mediterranean_operations_cat = {
+	icon = generic_operation
+
+	allowed = {
+		original_tag = GER
+	}
+
+	priority = 7
+	visible_when_empty = no
+
+	visible = {
+		has_completed_focus = BLHM_GER_prepare_east_african_sabotage
+		NOT = { has_country_flag = BLHM_GER_plan_scorpion_completed }
+	}
+}
