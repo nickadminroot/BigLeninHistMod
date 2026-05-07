@@ -9336,9 +9336,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+focus = {
 		id = SOV_mobilization_first_wave
-		icon = GFX_goal_generic_war_populace
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 10
 		y = 15
 		cost = 10
@@ -9382,7 +9382,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_mobilization_second_wave
-		icon = GFX_goal_generic_war_populace
+		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = SOV_mobilization_first_wave }
 		x = 0
 		y = 1
@@ -9441,7 +9441,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_operation_bagration
-		icon = GFX_goal_generic_offensive
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = SOV_order_227 }
 		x = 0
 		y = 1
