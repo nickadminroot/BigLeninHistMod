@@ -41,7 +41,7 @@ German_historical = {
 			}
 			any_country_with_original_tag = {
 				original_tag_to_check = HUN
-				has_completed_focus = HUN_invite_the_habsburg_prince
+				always = no
 			}
 			AND = {
 				OR = {
@@ -55,15 +55,15 @@ German_historical = {
 						is_in_faction = yes
 						AND = { #An alt history Czech whose considered a major is VERY dangerous
 							is_major = yes
-							has_completed_focus = CZE_appeal_to_the_castle
+							always = no
 						}
 						AND = { #An alt history Czech whose considered a major is VERY dangerous
 							is_major = yes
-							has_completed_focus = CZE_form_a_federation
+							always = no
 						}
 						AND = { #An alt history Czech whose considered a major is VERY dangerous
 							is_major = yes
-							has_completed_focus = CZE_expand_the_communist_press
+							always = no
 						}
 					}
 					NOT = {
@@ -75,10 +75,10 @@ German_historical = {
 			any_country_with_original_tag = {
 				original_tag_to_check = FRA
 				OR = {
-					has_completed_focus = FRA_utilize_the_leagues
-					has_completed_focus = FRA_invite_communist_ministers
-					has_completed_focus = FRA_leftist_rhetoric
-					has_completed_focus = FRA_right_wing_rhetoric
+					always = no
+					always = no
+					always = no
+					always = no
 				}
 			}
 			any_country_with_original_tag = {

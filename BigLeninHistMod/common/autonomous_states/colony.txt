@@ -83,7 +83,7 @@ autonomy_state = {
 				original_tag = RAJ
 				NOT = { has_focus_tree = indian_focus_goe	}			
 			}
-			has_completed_focus = RAJ_cripps_mission
+			always = no
 		}
 		#trigger here
 	}

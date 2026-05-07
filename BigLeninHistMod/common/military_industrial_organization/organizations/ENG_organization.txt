@@ -31,22 +31,22 @@ ENG_vickers_armstrong_eng_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				OR = { 
 					FROM = { original_tag = BUL }
@@ -60,7 +60,7 @@ ENG_vickers_armstrong_eng_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = {
 				OR = {
@@ -156,7 +156,7 @@ ENG_vauxhall_organization = {
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { original_tag = POL }
 			}
@@ -164,23 +164,23 @@ ENG_vauxhall_organization = {
 				has_country_flag = POL_vauxhall_motors
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	
 	}
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				OR = { 
 					FROM = { original_tag = BUL }
@@ -194,7 +194,7 @@ ENG_vauxhall_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = {
 				OR = {
@@ -205,12 +205,12 @@ ENG_vauxhall_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_vauxhall_mio_flag
 				}
 			}
@@ -301,18 +301,18 @@ ENG_cammell_laird_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_cammell_laird_mio_flag
 				}
 			}
@@ -380,14 +380,14 @@ ENG_yarrow_shipbuilders_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -427,22 +427,22 @@ ENG_john_brown_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT  = { original_tag = ENG } }
 			}
@@ -586,7 +586,7 @@ ENG_de_havilland_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
@@ -598,7 +598,7 @@ ENG_de_havilland_organization = {
 				FROM = { tag = NOR }
 			}
 			FROM = {
-				has_completed_focus = NOR_invite_transnational_manufacturers
+				always = no
 			}
 		}
 	}
@@ -623,22 +623,22 @@ ENG_fairey_aviation_organization = {
 	}
 
 	visible = {
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
@@ -655,7 +655,7 @@ ENG_fairey_aviation_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = { original_tag = ETH }
 			}
@@ -682,18 +682,18 @@ ENG_avro_organization = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BRA } }
 			custom_trigger_tooltip = {
 				tooltip = has_invited_mio_tt
 				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
+					always = no
 					has_country_flag = has_avro_mio_flag
 				}
 			}
@@ -736,7 +736,7 @@ ENG_rsaf_enfield_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
@@ -754,7 +754,7 @@ ENG_rsaf_enfield_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_british_designers
+				always = no
 			}
 		}
 	}
@@ -816,7 +816,7 @@ ENG_vauxhall_automotive_organization = {
 	}
 	
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { original_tag = POL }
 			}
@@ -824,22 +824,22 @@ ENG_vauxhall_automotive_organization = {
 				has_country_flag = POL_vauxhall_motors
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+			FROM = { always = no }
 		}	
 	}
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = {
 				OR = { 
 					FROM = { original_tag = BUL }
@@ -853,7 +853,7 @@ ENG_vauxhall_automotive_organization = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } }
 			FROM = {
 				OR = {
@@ -864,7 +864,7 @@ ENG_vauxhall_automotive_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ROM } }
 			FROM = { has_country_flag = ENG_mot_chosen }
 		}	
@@ -896,7 +896,7 @@ ENG_royal_arsenal_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
@@ -914,7 +914,7 @@ ENG_royal_arsenal_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = BALTIC_british_designers
+				always = no
 			}
 		}
 	}
@@ -957,14 +957,14 @@ ENG_crossley_motors_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { tag = HUN }
 			}

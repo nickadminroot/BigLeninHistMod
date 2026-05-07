@@ -42,7 +42,7 @@ hispaniola_category = {
 		complete_effect = {
 			set_cosmetic_tag = hispaniola 
 			
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						319 = {
@@ -53,7 +53,7 @@ hispaniola_category = {
 				319 = { add_core_of = ROOT }
 			}
 			
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						318 = {
@@ -162,7 +162,7 @@ peru_bolivia_category = {
 		complete_effect = {
 			set_cosmetic_tag = peru_bolivian_confederation 
 			
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						491 = {
@@ -173,7 +173,7 @@ peru_bolivia_category = {
 				491 = { add_core_of = ROOT }
 			}
 			
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						303 = {
@@ -184,7 +184,7 @@ peru_bolivia_category = {
 				303 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						494 = {
@@ -195,7 +195,7 @@ peru_bolivia_category = {
 				494 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						492 = {
@@ -206,7 +206,7 @@ peru_bolivia_category = {
 				492 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						487 = {
@@ -217,7 +217,7 @@ peru_bolivia_category = {
 				487 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						302 = {
@@ -228,7 +228,7 @@ peru_bolivia_category = {
 				302 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						490 = {
@@ -239,7 +239,7 @@ peru_bolivia_category = {
 				490 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						688 = {
@@ -250,7 +250,7 @@ peru_bolivia_category = {
 				688 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						506 = {
@@ -261,7 +261,7 @@ peru_bolivia_category = {
 				506 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						947 = {
@@ -272,7 +272,7 @@ peru_bolivia_category = {
 				947 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						957 = {
@@ -283,7 +283,7 @@ peru_bolivia_category = {
 				957 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						959 = {
@@ -294,7 +294,7 @@ peru_bolivia_category = {
 				959 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						951 = {
@@ -305,7 +305,7 @@ peru_bolivia_category = {
 				951 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						940 = {
@@ -316,7 +316,7 @@ peru_bolivia_category = {
 				940 = { add_core_of = ROOT }
 			}
 
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						942 = {
@@ -389,7 +389,7 @@ guianas_category = {
 			set_cosmetic_tag = united_guiana 
 			
 			# Suriname
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						309 = {
@@ -404,7 +404,7 @@ guianas_category = {
 			}
 			
 			# French Guyana
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						310 = {
@@ -419,7 +419,7 @@ guianas_category = {
 			}
 
 			# British Guyana
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						687 = {
@@ -434,7 +434,7 @@ guianas_category = {
 			}
 
 			# Bolivar
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						488 = {
@@ -446,7 +446,7 @@ guianas_category = {
 			}
 
 			# Amapa
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						939 = {
@@ -458,7 +458,7 @@ guianas_category = {
 			}
 
 			# Rio Branco
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						969 = {
@@ -471,7 +471,7 @@ guianas_category = {
 
 			hidden_effect = {
 				# Guianan Rainforest
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							968 = {

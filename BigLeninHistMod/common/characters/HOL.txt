@@ -102,7 +102,7 @@ characters={
 						limit  = {
 							has_dlc = "Man the Guns"
 						}
-						has_completed_focus  = HOL_unity_through_democracy 
+						always = no 
 					}
 					if  = {
 						limit  = {
@@ -161,7 +161,7 @@ characters={
 							has_dlc = "Man the Guns"
 						}
 						not = {
-							has_completed_focus = HOL_appoint_new_supreme_commander
+							always = no
 						}
 					}
 				}
@@ -512,7 +512,7 @@ characters={
 						limit = {
 							has_dlc = "Man the Guns"
 						}
-						has_completed_focus = HOL_appoint_new_supreme_commander
+						always = no
 					}
 				}
 				traits = {
@@ -588,7 +588,7 @@ characters={
 						limit  = {
 							has_dlc = "Man the Guns"
 						}
-						has_completed_focus  = HOL_legacy_of_the_de_zeven_provincien_mutiny 
+						always = no 
 					}
 					if  = {
 						limit  = {
@@ -706,7 +706,7 @@ characters={
 					OR = {
 						AND = {
 							has_government  = communism 
-							has_completed_focus  = HOL_decolonization 
+							always = no 
 						}
 					}
 				}
@@ -774,7 +774,7 @@ characters={
 					has_dlc = "Man the Guns"
 				}
 				available  = {
-					has_completed_focus  = HOL_the_only_man_in_the_dutch_government 
+					always = no 
 				}
 				traits  = {
 					adventurous_daredevil 
@@ -820,7 +820,7 @@ characters={
 						limit  = {
 							has_dlc = "Man the Guns"
 						}
-						has_completed_focus  = HOL_volk_en_vaderland 
+						always = no 
 					}
 					if  = {
 						limit  = {

@@ -5,7 +5,7 @@ state = {
 	state_category = rural
 	history = {
 		owner = BEL
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}

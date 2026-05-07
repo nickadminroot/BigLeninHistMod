@@ -101,7 +101,7 @@ if = {
 	}
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}

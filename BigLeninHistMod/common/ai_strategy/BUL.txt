@@ -551,7 +551,7 @@ BUL_address_internal_affairs_first = {
 	enable = {
 		OR = {
 			has_completed_focus = BUL_power_to_the_tsar
-			has_completed_focus = BUL_oppose_the_royal_dictatorship
+			always = no
 		}
 	}
 	abort = {

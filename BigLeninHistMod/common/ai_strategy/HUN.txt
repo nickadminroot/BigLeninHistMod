@@ -883,11 +883,11 @@ germany_kaiser = {
 		original_tag = HUN
 	}
 	enable = {
-		has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
+		always = no
 		GER = {
 			OR = {
-				has_completed_focus = GER_oppose_hitler_ww
-				has_completed_focus = GER_oppose_hitler
+				always = no
+				always = no
 			}
 			has_government = neutrality
 		}
@@ -923,12 +923,12 @@ germany_hungary_kaiser = {
 	}
 	enable = {
 		OR = {
-			has_completed_focus = GER_oppose_hitler_ww
-			has_completed_focus = GER_oppose_hitler
+			always = no
+			always = no
 		}
 		has_government = neutrality
 		HUN = {
-			has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
+			always = no
 		}
 	}
 	abort = {

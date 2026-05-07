@@ -183,7 +183,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -217,7 +217,7 @@ focus_tree = {
 				set_state_flag = CAN_national_housing_act_IC
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -1661,7 +1661,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -1678,7 +1678,7 @@ focus_tree = {
 					value = 0.25
 				}
 			}
-			ELSE = {
+			else = {
 				add_breakthrough_progress = {
 					specialization = specialization_nuclear
 					value = 0.75
@@ -3294,7 +3294,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3353,7 +3353,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3570,7 +3570,7 @@ focus_tree = {
 				uses = 1
 				category = ca_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
@@ -3621,7 +3621,7 @@ focus_tree = {
 				uses = 1
 				category = ca_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}

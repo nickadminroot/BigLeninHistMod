@@ -773,7 +773,7 @@ indian_railways_increase_bonus = {
 
         if = {
             limit = {
-                has_completed_focus = RAJ_orchestrate_train_robberies
+                always = no
             }
              custom_effect_tooltip = RAJ_modify_indian_railways_tt  
             if = {

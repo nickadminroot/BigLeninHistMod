@@ -11,7 +11,7 @@ ability = { #slightly buffed Last Stand
 			is_leading_army_group = no
 			is_border_war = no
 			OWNER = {
-				has_completed_focus = PHI_utang_na_loob
+				always = no
 			}
 		}
 		

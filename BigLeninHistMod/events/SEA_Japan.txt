@@ -49,7 +49,7 @@ country_event = {
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_fail_historically_tt
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_korekiyo_protected_flag
@@ -58,7 +58,7 @@ country_event = {
 			retire_character = JAP_takahashi_korekiyo
 			set_country_flag = JAP_takahashi_korekiyo_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_watanabe_protected_flag
@@ -67,7 +67,7 @@ country_event = {
 			retire_character = JAP_jotaro_watanabe
 			set_country_flag = JAP_jotaro_watanabe_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				OR = {
@@ -114,7 +114,7 @@ country_event = {
 		retire_character = JAP_jotaro_watanabe
 		set_country_flag = JAP_jotaro_watanabe_was_killed
 		
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -124,11 +124,11 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 			}
-			IF = {
+			if = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
@@ -155,7 +155,7 @@ country_event = {
 			#	
 			#}
 		}
-		ELSE = {
+		else = {
 			complete_national_focus = JAP_support_the_kodoha_faction
 		}
 
@@ -196,7 +196,7 @@ country_event = {
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_korekiyo_protected_flag
@@ -205,7 +205,7 @@ country_event = {
 			retire_character = JAP_takahashi_korekiyo
 			set_country_flag = JAP_takahashi_korekiyo_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_watanabe_protected_flag
@@ -214,7 +214,7 @@ country_event = {
 			retire_character = JAP_jotaro_watanabe
 			set_country_flag = JAP_jotaro_watanabe_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				OR = {
 					has_country_flag = JAP_watanabe_protected_flag
@@ -290,7 +290,7 @@ country_event = {
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_korekiyo_protected_flag
@@ -299,7 +299,7 @@ country_event = {
 			retire_character = JAP_takahashi_korekiyo
 			set_country_flag = JAP_takahashi_korekiyo_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_watanabe_protected_flag
@@ -342,7 +342,7 @@ country_event = {
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_korekiyo_protected_flag
@@ -351,7 +351,7 @@ country_event = {
 			retire_character = JAP_takahashi_korekiyo
 			set_country_flag = JAP_takahashi_korekiyo_was_killed
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_flag = JAP_watanabe_protected_flag
@@ -406,7 +406,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					has_government = neutrality
@@ -519,7 +519,7 @@ country_event = {
 			end_civil_wars = no
 		}
 
-			IF = {
+			if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -1421,7 +1421,7 @@ country_event = {
 
 		add_to_faction = FROM
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					original_tag = BHU
@@ -1440,7 +1440,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = NEP
@@ -1459,7 +1459,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				FROM = {
 					original_tag = AFG
@@ -1526,7 +1526,7 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					OR = {
@@ -1626,7 +1626,7 @@ country_event = {
 			base = 100
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				original_tag = TIB
 			}
@@ -1635,7 +1635,7 @@ country_event = {
 				days = 176
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				original_tag = MON
 			}
@@ -1759,20 +1759,10 @@ country_event = {
 			base = 0
 		}
 
-			start_civil_war = {
-				ideology = fascism
-				ruling_party = ROOT
-				size = 0.6
-				keep_all_characters = yes 
-				PREV = {  # Original country
-		            TIB_thubten_kunpela = { # Character
-		                set_nationality = PREV.PREV
-		                # Transfers to breakaway
-		            }
-		        }
-		}
 
 	}
+
+}
 
 # [FROM.GetNameDefCap] Supports Pan-Mongol Claims - event for MEN
 country_event = {
@@ -1883,7 +1873,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					621 = {
 						is_controlled_by_ROOT_or_subject = yes
@@ -1893,7 +1883,7 @@ country_event = {
 					set_state_flag = MEN_occupied_state_suiyuan_campaign
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					746 = {
 						is_controlled_by_ROOT_or_subject = yes
@@ -1903,7 +1893,7 @@ country_event = {
 					set_state_flag = MEN_occupied_state_suiyuan_campaign
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					621 = {
 						is_controlled_by_ROOT_or_subject = yes
@@ -1927,7 +1917,7 @@ country_event = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					621 = {
 						is_controlled_by_ROOT_or_subject = yes
@@ -1953,7 +1943,7 @@ country_event = {
 				add_political_power = 100
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					621 = {
 						NOT = {
@@ -1995,7 +1985,7 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					SHX = {
 						exists = yes
@@ -2019,7 +2009,7 @@ country_event = {
 		name = SEA_japan_foreign_policy.29.a
 
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					621 = {
 						has_state_flag = MEN_occupied_state_suiyuan_campaign
@@ -2043,7 +2033,7 @@ country_event = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					621 = {
 						has_state_flag = MEN_occupied_state_suiyuan_campaign
@@ -2069,7 +2059,7 @@ country_event = {
 				add_political_power = 100
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					621 = {
 						NOT = {
@@ -2111,7 +2101,7 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					SHX = {
 						exists = yes
@@ -2219,7 +2209,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				XIC = {
 					exists = yes
@@ -2294,7 +2284,7 @@ country_event = {
 
 		add_political_power = 50
 
-		IF = {
+		if = {
 			limit = {
 				has_active_mission = JAP_kwantung_army_impatience
 			}
@@ -2358,7 +2348,7 @@ country_event = {
 	option = { 
 		name = SEA_japan_foreign_policy.35.a
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_war_with = FROM
@@ -2366,7 +2356,7 @@ country_event = {
 			}
 			add_war_support = -0.05
 		}
-		ELSE = {
+		else = {
 			add_timed_idea = {
 				idea = JAP_pro_japanese_sentiments_for_usa_idea
 				days = 180
@@ -2659,7 +2649,7 @@ country_event = {
 		# It lies within our best interest
 		name = SEA_japan_foreign_policy.42.a
 
-		IF = {
+		if = {
 			limit = {
 				is_faction_leader = yes
 			}
@@ -2772,7 +2762,7 @@ country_event = {
 			}	
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_active_mission = JAP_kwantung_army_impatience
 			}
@@ -2810,7 +2800,7 @@ country_event = {
 		# Nothing can be done about it
 		name = SEA_japan_foreign_policy.44.a
 		
-		IF = {
+		if = {
 			limit = {
 				has_active_mission = JAP_kwantung_army_impatience
 			}
@@ -2986,7 +2976,7 @@ country_event = { # [FROM.GetNameDefCap] Develops our Industries - event for cou
 				level = 2
 				instant_build = yes
 			}	
-			IF = {
+			if = {
 				limit = {
 					infrastructure < 5
 				}
@@ -3494,7 +3484,7 @@ country_event = {
 			set_state_controller_to = ROOT
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_cosmetic_tag = BRM_british
 			}
@@ -3517,11 +3507,11 @@ country_event = {
 	option = { 
 		name = SEA_japan_foreign_policy.60.a	
 
-		IF = {
+		if = {
 			limit = {
 				has_capitulated = no
 			}
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_government = democratic
@@ -3552,12 +3542,8 @@ country_event = {
 				    keep_all_characters = yes
 				    set_country_flag = BRM_japanese_burma_flag
 				    PREV = {  # Original country
-			            BRM_ba_maw = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
 		        	}
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -3615,7 +3601,7 @@ country_event = {
 				}
 				
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -3643,12 +3629,8 @@ country_event = {
 				    keep_all_characters = yes
 				    set_country_flag = BRM_japanese_burma_flag
 				    PREV = {  # Original country
-			            BRM_ba_maw = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
 		        	}
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -3704,7 +3686,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				start_civil_war = {
 				    ideology = neutrality
 				    size = 0.7
@@ -3729,12 +3711,8 @@ country_event = {
 				    keep_all_characters = yes
 				    set_country_flag = BRM_japanese_burma_flag
 				    PREV = {  # Original country
-			            BRM_myat_phaya_lat = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
 		        	}
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -3791,7 +3769,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			set_global_flag = BRM_has_capped_flag 
 			every_core_state = {
 				limit = {
@@ -3805,11 +3783,11 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = BRM_has_capped_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						OR = {
 							has_government = democratic
@@ -3840,12 +3818,8 @@ country_event = {
 					    keep_all_characters = yes
 					    set_country_flag = BRM_japanese_burma_flag
 					    PREV = {  # Original country
-				            BRM_ba_maw = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
 			        	}
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -3903,7 +3877,7 @@ country_event = {
 					}
 					
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_government = neutrality
 					}
@@ -3931,12 +3905,8 @@ country_event = {
 					    keep_all_characters = yes
 					    set_country_flag = BRM_japanese_burma_flag
 					    PREV = {  # Original country
-				            BRM_ba_maw = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
 			        	}
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -3992,7 +3962,7 @@ country_event = {
 						}
 					}
 				}
-				ELSE = {
+				else = {
 					start_civil_war = {
 					    ideology = neutrality
 					    size = 0.7
@@ -4017,12 +3987,8 @@ country_event = {
 					    keep_all_characters = yes
 					    set_country_flag = BRM_japanese_burma_flag
 					    PREV = {  # Original country
-				            BRM_myat_phaya_lat = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
 			        	}
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -4419,7 +4385,7 @@ country_event = {
 			set_state_controller_to = ROOT
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_cosmetic_tag = RAJ_UK
 			}
@@ -4442,12 +4408,12 @@ country_event = {
 	option = { 
 		name = SEA_japan_foreign_policy.67.a	
 
-		IF = {
+		if = {
 			limit = {
 				has_capitulated = no
 			}
 
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_government = democratic
@@ -4466,11 +4432,11 @@ country_event = {
 				    }
 				    keep_all_characters = yes
 				    set_country_flag = RAJ_japanese_azad_hind_state_flag
-				    IF = {
+				    if = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4482,7 +4448,7 @@ country_event = {
 	    	        	}
 				    }
 				   	
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -4544,7 +4510,7 @@ country_event = {
 				}
 				
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_government = neutrality
 				}
@@ -4560,11 +4526,11 @@ country_event = {
 				    }
 				    keep_all_characters = yes
 				    set_country_flag = RAJ_japanese_azad_hind_state_flag
-				    IF = {
+				    if = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4576,7 +4542,7 @@ country_event = {
 	    	        	}
 				    }
 				   	
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -4637,7 +4603,7 @@ country_event = {
 					}
 				}
 			}
-			ELSE = {
+			else = {
 				start_civil_war = {
 				    ideology = neutrality
 				    size = 0.7
@@ -4650,11 +4616,11 @@ country_event = {
 				    }
 				    keep_all_characters = yes
 				    set_country_flag = RAJ_japanese_azad_hind_state_flag
-				    IF = {
+				    if = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4666,7 +4632,7 @@ country_event = {
 	    	        	}
 				    }
 				   	
-		        	IF = {
+			if = {
 		        		limit = {
 		        			PREV.PREV = {
 		        				NOT = {
@@ -4729,7 +4695,7 @@ country_event = {
 			}
 
 		}
-		ELSE = {
+		else = {
 			set_global_flag = RAJ_has_capped_flag 
 			every_core_state = {
 				limit = {
@@ -4744,11 +4710,11 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = RAJ_has_capped_flag
 				}
-				IF = {
+				if = {
 					limit = {
 						OR = {
 							has_government = democratic
@@ -4767,11 +4733,11 @@ country_event = {
 					    }
 					    keep_all_characters = yes
 					    set_country_flag = RAJ_japanese_azad_hind_state_flag
-					    IF = {
+					    if = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -4783,7 +4749,7 @@ country_event = {
 		    	        	}
 					    }
 					   	
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -4845,7 +4811,7 @@ country_event = {
 					}
 					
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						has_government = neutrality
 					}
@@ -4861,11 +4827,11 @@ country_event = {
 					    }
 					    keep_all_characters = yes
 					    set_country_flag = RAJ_japanese_azad_hind_state_flag
-					    IF = {
+					    if = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -4877,7 +4843,7 @@ country_event = {
 		    	        	}
 					    }
 					   	
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -4938,7 +4904,7 @@ country_event = {
 						}
 					}
 				}
-				ELSE = {
+				else = {
 					start_civil_war = {
 					    ideology = neutrality
 					    size = 0.7
@@ -4951,11 +4917,11 @@ country_event = {
 					    }
 					    keep_all_characters = yes
 					    set_country_flag = RAJ_japanese_azad_hind_state_flag
-					    IF = {
+					    if = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -4967,7 +4933,7 @@ country_event = {
 		    	        	}
 					    }
 					   	
-			        	IF = {
+				if = {
 			        		limit = {
 			        			PREV.PREV = {
 			        				NOT = {
@@ -5128,164 +5094,6 @@ country_event = {
 	}
 }
 
-# Japan Establishes the Second Philippine Republic - event for PHI
-country_event = { 
-	id = SEA_japan_foreign_policy.69
-	title = SEA_japan_foreign_policy.69.t
-	desc = SEA_japan_foreign_policy.69.desc 
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	# Fight them back, destroy any traitors!
-	option = { 
-		name = SEA_japan_foreign_policy.69.a	
-
-		IF = {
-			limit = {
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-			start_civil_war = {
-			    ideology = JAP
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-			random_country = {
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 0
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-			
-		}
-		ELSE_IF = {
-			limit = {
-				has_government = neutrality
-			}
-			start_civil_war = {
-			    ideology = fascism
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-		                set_nationality = PREV.PREV
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 2
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-		}
-		ELSE = {
-			start_civil_war = {
-			    ideology = neutrality
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-		                set_nationality = PREV.PREV
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 2
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-		}
-		
-
-	}
-
-	
-}
 
 # Japan Demands our Conditional Surrender - event for SOV
 country_event = { 
@@ -5423,7 +5231,7 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					is_faction_leader = yes
 				}
@@ -5533,7 +5341,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				FROM = {
 					is_faction_leader = yes
@@ -6183,7 +5991,7 @@ country_event = { #FROM asked about resources for industry
 			base = 10
 		}
 
-		IF = {
+		if = {
 			limit = { FROM = { has_country_flag = JAP_requests_oil_flag }}
 
 			FROM.FROM = {
@@ -6194,7 +6002,7 @@ country_event = { #FROM asked about resources for industry
 
 				set_state_flag = JAP_trades_for_oil_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -6210,7 +6018,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -6242,7 +6050,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -6256,7 +6064,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = JAP_industrial_relocation_resources_modify_tt
 				}
 
@@ -6275,7 +6083,7 @@ country_event = { #FROM asked about resources for industry
 			
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = { FROM = { has_country_flag = JAP_requests_tungsten_flag }}
 
 			FROM.FROM = {
@@ -6286,7 +6094,7 @@ country_event = { #FROM asked about resources for industry
 
 				set_state_flag = JAP_trades_for_tungsten_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -6302,7 +6110,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -6334,7 +6142,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -6348,7 +6156,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = JAP_industrial_relocation_resources_modify_tt
 				}
 				
@@ -6366,7 +6174,7 @@ country_event = { #FROM asked about resources for industry
 			}
 		}
 
-		ELSE_IF = {
+		else_if = {
 			limit = { FROM = { has_country_flag = JAP_requests_chromium_flag }}
 
 			FROM.FROM = {
@@ -6377,7 +6185,7 @@ country_event = { #FROM asked about resources for industry
 
 				set_state_flag = JAP_trades_for_chromium_here_flag
 
-				IF = {
+				if = {
 					limit = { 
 						free_building_slots = {
 							building = industrial_complex
@@ -6393,7 +6201,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					ROOT = {
 						random_core_state = {
 							limit = {
@@ -6425,7 +6233,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -6439,7 +6247,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 
-				ELSE = {
+				else = {
 					custom_effect_tooltip = JAP_industrial_relocation_resources_modify_tt
 				}
 				
@@ -6454,7 +6262,7 @@ country_event = { #FROM asked about resources for industry
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { FROM = { has_country_flag = JAP_requests_rubber_flag }}
 
 				FROM.FROM = {
@@ -6465,7 +6273,7 @@ country_event = { #FROM asked about resources for industry
 
 					set_state_flag = JAP_trades_for_rubber_here_flag
 
-					IF = {
+					if = {
 						limit = { 
 							free_building_slots = {
 								building = industrial_complex
@@ -6481,7 +6289,7 @@ country_event = { #FROM asked about resources for industry
 						}
 					}
 
-					ELSE = {
+					else = {
 						ROOT = {
 							random_core_state = {
 								limit = {
@@ -6513,7 +6321,7 @@ country_event = { #FROM asked about resources for industry
 						}
 					}
 
-					IF = {
+					if = {
 						limit = {
 							NOT = {
 								has_dynamic_modifier = {
@@ -6527,7 +6335,7 @@ country_event = { #FROM asked about resources for industry
 						}
 					}
 
-					ELSE = {
+					else = {
 						custom_effect_tooltip = JAP_industrial_relocation_resources_modify_tt
 					}
 					
@@ -6560,17 +6368,17 @@ country_event = { #FROM asked about resources for industry
 		}
 
 		FROM = {
-			IF = {
+			if = {
 				limit = { has_country_flag = JAP_requests_oil_flag }
 
 				clr_country_flag = JAP_requests_oil_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = JAP_requests_tungsten_flag }
 
 				clr_country_flag = JAP_requests_tungsten_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = { has_country_flag = JAP_requests_chromium_flag }
 
 				clr_country_flag = JAP_requests_chromium_flag
@@ -8380,11 +8188,6 @@ country_event = {
 			    is_controlled_by = ROOT
 			}
 			PREV = {  # Original country
-				KOR_pak_hon_yong = { # Character
-				    ideology = communism
-				    long_name = KOR_communism_namro_party_long
-				    name = KOR_communism_namro_party
-				}
 				add_popularity = {
 					ideology = communism
 					popularity = 0.4
@@ -8592,7 +8395,7 @@ country_event = { # Proclamation of the Second Philippine Republic - event for P
 	option = { # Prosperity is within sight!
 		name = SEA_japan_foreign_policy.135.a	
 		    
-    	IF = {
+	if = {
     		limit = {
     			ROOT = {
     				NOT = {
@@ -8633,7 +8436,7 @@ country_event = { # Proclamation of the Second Philippine Republic - event for P
     			}
     		}
     	}
-    	ELSE_IF = {
+	else_if = {
     		limit = {
     			ROOT = {
     				NOT = {
@@ -8698,7 +8501,7 @@ country_event = {
 
 		add_war_support = 0.05
 
-		IF = {
+		if = {
 			limit = {
 				has_country_flag = JAP_inflicted_loss_nr_3
 			}
@@ -8710,7 +8513,7 @@ country_event = {
 				}	
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_country_flag = JAP_inflicted_loss_nr_2
 			}
@@ -8722,7 +8525,7 @@ country_event = {
 				}	
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				has_country_flag = JAP_inflicted_loss_nr_1
 			}
@@ -9003,7 +8806,7 @@ country_event = {
 			base = 100
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_intelligence_agency = yes
 				has_done_agency_upgrade = upgrade_form_department
@@ -9188,7 +8991,7 @@ country_event = {
 			base = 45
 		}
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					divisions_in_state = {
@@ -9219,7 +9022,7 @@ country_event = {
 			    }
 			}
 		}
-		ELSE = {
+		else = {
 			country_event = {
 				id = SEA_japan_popup_events.6
 				days = 7
@@ -9622,7 +9425,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.13.a
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_government = neutrality
@@ -9676,7 +9479,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.14.a
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 				NOT = {
@@ -9735,7 +9538,7 @@ country_event = {
 		
 		# So that you are going down a branch that actually has the specified focus 
 		OR = {
-			has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			always = no
 			has_completed_focus = JAP_sea_purge_the_kodoha_faction
 		}
 
@@ -9878,7 +9681,7 @@ country_event = {
 			}
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_country_leader = {
@@ -9902,7 +9705,7 @@ country_event = {
 				name = JAP_unity_cabinet_party
 			}	
 		}
-		ELSE = {
+		else = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -10170,7 +9973,7 @@ country_event = {
 		FROM = {
 			set_truce = { target = ROOT days = 180 }
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 613 }
 					}
@@ -10199,11 +10002,11 @@ country_event = {
 
 		add_war_support = 0.05
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
-					has_completed_focus = JAP_revoke_the_peace_preservation_law
+					always = no
+					always = no
 				}
 			}
 			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
@@ -10211,7 +10014,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				CHI = {
 					exists = yes
@@ -10223,11 +10026,11 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					CHI = {
@@ -10239,14 +10042,14 @@ country_event = {
 				target = CHI
 				type = annex_everything
 			}
-			IF = {
+			if = {
 				limit = {
 					MAN = {
 						is_subject_of = ROOT
 						NOT = {
 							OR = {
-								has_completed_focus = MAN_assertiveness
-								has_completed_focus = MAN_tsr_assertiveness
+								always = no
+								always = no
 							}
 						}
 					}
@@ -10261,7 +10064,7 @@ country_event = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				613 = {
 					OWNER = {
@@ -10273,11 +10076,11 @@ country_event = {
 			}
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					613 = {
@@ -10326,7 +10129,7 @@ country_event = {
 		#	country_event = { days = 5 id = news.2 }
 		#}
 
-		IF = {
+		if = {
 			limit = {
 				613 = {
 					is_controlled_by = FROM
@@ -10371,7 +10174,7 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = JAP
@@ -10580,7 +10383,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = MAN_kwantung_veto 
 			}
@@ -10603,7 +10406,7 @@ country_event = {
 
 		hidden_effect = {
 			set_country_flag = MAN_kwantung_army_took_control_flag
-			IF = {
+			if = {
 				limit = {
 					609 = {
 						OWNER = {
@@ -10634,7 +10437,7 @@ country_event = {
 			base = 0 
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				has_idea = MAN_kwantung_veto 
 			}
@@ -10698,7 +10501,7 @@ country_event = {
 
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				536 = {
 					NOT = {
@@ -10709,7 +10512,7 @@ country_event = {
 				}
 			}
 			536 = {
-				IF = {
+				if = {
 					limit = {
 						has_dynamic_modifier = {
 							modifier = JAP_state_under_army_control
@@ -10719,7 +10522,7 @@ country_event = {
 						modifier = JAP_state_under_army_control
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -10759,7 +10562,7 @@ country_event = {
 
 		}
 		
-		IF = {
+		if = {
 			limit = {
 				530 = {
 					NOT = {
@@ -10770,7 +10573,7 @@ country_event = {
 				}
 			}
 			530 = {
-				IF = {
+				if = {
 					limit = {
 						has_dynamic_modifier = {
 							modifier = JAP_state_under_army_control
@@ -10780,7 +10583,7 @@ country_event = {
 						modifier = JAP_state_under_army_control
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -10821,7 +10624,7 @@ country_event = {
 		}
 		
 
-		IF = {
+		if = {
 			limit = {
 				1018 = {
 					NOT = {
@@ -10832,7 +10635,7 @@ country_event = {
 				}
 			}
 			1018 = {
-				IF = {
+				if = {
 					limit = {
 						has_dynamic_modifier = {
 							modifier = JAP_state_under_army_control
@@ -10842,7 +10645,7 @@ country_event = {
 						modifier = JAP_state_under_army_control
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_dynamic_modifier = {
@@ -10918,7 +10721,7 @@ country_event = {
 				}
 			}	
 
-			IF = {
+			if = {
 				limit = {
 					any_country = {
 						original_tag = JAP
@@ -11689,7 +11492,7 @@ country_event = {
 			base = 75 
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
@@ -11702,7 +11505,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			add_opinion_modifier = {
 				target = JAP 
 				modifier = embargo
@@ -11767,7 +11570,7 @@ country_event = {
 		name = SEA_japan_popup_events.41.a
 		
 		effect_tooltip = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
@@ -11775,7 +11578,7 @@ country_event = {
 					send_embargo = ROOT
 				}
 			}
-			ELSE = {
+			else = {
 				FROM = {
 					add_opinion_modifier = {
 						target = ROOT 
@@ -11919,7 +11722,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				has_idea = korechika_anami
 			}
@@ -12174,7 +11977,7 @@ country_event = {
 		has_civil_war = no
 		has_war = yes
 
-		has_completed_focus = JAP_crush_the_internal_factions
+		always = no
 
 		any_core_state = {
 			JAP_is_home_islands_state = yes
@@ -12236,7 +12039,7 @@ country_event = {
 
 		has_civil_war = no
 
-		has_completed_focus = JAP_mitsumasa_yonai_focus
+		always = no
 
 		JAP_army_faction_is_tier_4 = yes
 
@@ -12485,7 +12288,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "La Resistance"
@@ -12496,7 +12299,7 @@ country_event = {
 				days = 180
 			}	
 		}
-		ELSE = {
+		else = {
 			add_timed_idea = {
 				idea = JAP_increased_national_security_lar
 				days = 180
@@ -12701,7 +12504,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_dlc = "La Resistance"
@@ -12712,7 +12515,7 @@ country_event = {
 				days = 180
 			}	
 		}
-		ELSE = {
+		else = {
 			add_timed_idea = {
 				idea = JAP_increased_national_security_lar
 				days = 180
@@ -13022,7 +12825,7 @@ country_event = {
 		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
 
 		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
-		IF = { 
+		if = {
 			limit = {
 				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
 			}
@@ -13056,7 +12859,7 @@ country_event = {
 		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
 
 		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
-		IF = { 
+		if = {
 			limit = {
 				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
 			}
@@ -13083,7 +12886,7 @@ country_event = {
 		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision }
 
 		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
-		IF = { 
+		if = {
 			limit = {
 				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
 			}
@@ -13117,7 +12920,7 @@ country_event = {
 		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
 
 		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
-		IF = { 
+		if = {
 			limit = {
 				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
 			}
@@ -13144,45 +12947,45 @@ country_event = { #The Army FAILED to meet their demands
 	option = { 
 		name = SEA_imperial_influence_events.00.b #Very Intentional 
 
-		IF = {
+		if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 1 }
 			}
 			army_experience = -10
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 2 }
 			}
 			army_experience = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 3 }
 			}
 			army_experience = -20
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 4 }
 			}
 			army_experience = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 5 }
 			}
 			army_experience = -25
 			add_command_power = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 6 }
 			}
 			army_experience = -25
 			add_command_power = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_army_faction_demand_failure = 7 }
 			}
@@ -13252,37 +13055,37 @@ country_event = { #Change Conscription Laws
 		activate_mission = JAP_army_faction_demands_conscription_law_change
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_idea = disarmed_nation
 				}
 				set_country_flag = JAP_in_on_disarmed_nation_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = volunteer_only
 				}
 				set_country_flag = JAP_in_on_volunteer_only_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = limited_conscription
 				}
 				set_country_flag = JAP_in_on_limited_conscription_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = extensive_conscription
 				}
 				set_country_flag = JAP_in_on_extensive_conscription_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = service_by_requirement
 				}
 				set_country_flag = JAP_in_on_service_by_requirement_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = all_adults_serve
 				}
@@ -13307,7 +13110,7 @@ country_event = { #Field more men
 		activate_mission = JAP_army_faction_demands_larger_army
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_army_manpower = {
 						size < 550000
@@ -13315,7 +13118,7 @@ country_event = { #Field more men
 				}
 				set_country_flag = JAP_has_less_than_600k_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_army_manpower = {
 						size < 650000
@@ -13323,7 +13126,7 @@ country_event = { #Field more men
 				}
 				set_country_flag = JAP_has_less_than_750k_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_army_manpower = {
 						size < 900000
@@ -13331,7 +13134,7 @@ country_event = { #Field more men
 				}
 				set_country_flag = JAP_has_less_than_1mil_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_army_manpower = {
 						size < 1300000
@@ -13339,7 +13142,7 @@ country_event = { #Field more men
 				}
 				set_country_flag = JAP_has_less_than_1_and_a_half_mil_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_army_manpower = {
 						size < 1900000
@@ -13414,45 +13217,45 @@ country_event = { #The Navy FAILED to meet their demands
 	option = { 
 		name = SEA_imperial_influence_events.00.b #Very Intentional 
 
-		IF = {
+		if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 1 }
 			}
 			navy_experience = -10
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 2 }
 			}
 			navy_experience = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 3 }
 			}
 			navy_experience = -20
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 4 }
 			}
 			navy_experience = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 5 }
 			}
 			navy_experience = -25
 			add_command_power = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 6 }
 			}
 			navy_experience = -25
 			add_command_power = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_naval_faction_demand_failure = 7 }
 			}
@@ -13522,37 +13325,37 @@ country_event = { #Change Conscription Laws
 		activate_mission = JAP_naval_faction_demands_conscription_law_change
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_idea = disarmed_nation
 				}
 				set_country_flag = JAP_in_on_disarmed_nation_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = volunteer_only
 				}
 				set_country_flag = JAP_in_on_volunteer_only_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = limited_conscription
 				}
 				set_country_flag = JAP_in_on_limited_conscription_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = extensive_conscription
 				}
 				set_country_flag = JAP_in_on_extensive_conscription_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = service_by_requirement
 				}
 				set_country_flag = JAP_in_on_service_by_requirement_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = all_adults_serve
 				}
@@ -13631,45 +13434,45 @@ country_event = {
 			JAP_faction_demand_add_to_failed_missions = yes
 		}
 
-		IF = {
+		if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 1 }
 			}
 			add_political_power = -10
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 2 }
 			}
 			add_political_power = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 3 }
 			}
 			add_political_power = -20
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 4 }
 			}
 			add_political_power = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 5 }
 			}
 			add_political_power = -25
 			add_stability = -0.02
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 6 }
 			}
 			add_political_power = -25
 			add_stability = -0.03
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_zaibatsu_faction_demand_failure = 7 }
 			}
@@ -13730,7 +13533,7 @@ country_event = { #Change Economy Laws
 		activate_mission = JAP_zaibatsu_faction_demands_economy_law_change
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						has_idea = tot_economic_mobilisation
@@ -13739,19 +13542,19 @@ country_event = { #Change Economy Laws
 				}
 				set_country_flag = JAP_in_on_total_economic_mobilization_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = war_economy
 				}
 				set_country_flag = JAP_in_on_war_economy_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = partial_economic_mobilisation
 				}
 				set_country_flag = JAP_in_on_partial_economic_mobilisation_flag
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = low_economic_mobilisation
 				}
@@ -13797,7 +13600,7 @@ country_event = {
 			JAP_faction_demand_add_to_failed_missions = yes
 		}
 
-		IF = {
+		if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 1 }
 			}
@@ -13806,7 +13609,7 @@ country_event = {
 				popularity = -0.02
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 2 }
 			}
@@ -13815,7 +13618,7 @@ country_event = {
 				popularity = -0.03
 			}	
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 3 }
 			}
@@ -13825,7 +13628,7 @@ country_event = {
 			}	
 			add_political_power = -15
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 4 }
 			}
@@ -13835,7 +13638,7 @@ country_event = {
 			}	
 			add_political_power = -25
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 5 }
 			}
@@ -13846,7 +13649,7 @@ country_event = {
 			add_political_power = -25
 			add_stability = -0.01
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 6 }
 			}
@@ -13857,7 +13660,7 @@ country_event = {
 			add_political_power = -25
 			add_stability = -0.03
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = {
 				check_variable = { JAP_government_faction_demand_failure = 7 }
 			}
@@ -13903,19 +13706,19 @@ country_event = { #Change Trade Laws
 		activate_mission = JAP_government_faction_demands_trade_law_change
 
 		hidden_effect = {
-			IF = {
+			if = {
 				limit = {
 					has_idea = closed_economy
 				}
 				set_country_flag = JAP_is_on_closed_economy_flag 
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = limited_exports
 				}
 				set_country_flag = JAP_is_on_limited_exports_flag 
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					has_idea = export_focus
 				}
@@ -14294,7 +14097,7 @@ country_event = {
 			base = 100
 		}
 
-		IF = {
+		if = {
 			limit = {
 				MAN = {
 					is_subject = no 
@@ -14307,7 +14110,7 @@ country_event = {
 				}
 			}
 		}
-		ELSE = {
+		else = {
 			MAN = {
 				OVERLORD = {
 					country_event = {
@@ -14580,4 +14383,3 @@ country_event = {
 
 	}
 }
-

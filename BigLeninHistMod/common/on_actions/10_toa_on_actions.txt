@@ -12,7 +12,7 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						has_completed_focus = GUAY_the_permanent_leader
+						always = no
 						NOT = { has_country_leader_with_trait = JUNO_the_permanent_leader }
 					}
 
@@ -21,7 +21,7 @@ on_actions = {
 
 				if = {
 					limit = {
-						has_completed_focus = GUAY_cult_of_personality
+						always = no
 						NOT = { has_country_leader_with_trait = JUNO_cult_of_personality }
 					}
 
@@ -31,7 +31,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_dlc = "Trial of Allegiance" }
 					original_tag = URG
@@ -72,7 +72,7 @@ on_actions = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					BRA = {
-						has_completed_focus = BRA_expand_fordlandia
+						always = no
 						NOT = {	
 							OR = {
 								has_government = communism 
@@ -173,7 +173,7 @@ on_actions = {
 
 		# Make sure that Uruguay get's their cosmetic tag if it applies
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					URG = {
 						NOT = {
@@ -190,7 +190,7 @@ on_actions = {
 		}	
 		# Make sure that Uruguay drops their cosmetic tag if it applies
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					URG = {
 						has_cosmetic_tag = URG_german
@@ -205,7 +205,7 @@ on_actions = {
 
 		# Make sure that Bolivia get's their araucanian cosmetic tag if it applies
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					BOL = {
 						NOT = {
@@ -214,7 +214,7 @@ on_actions = {
 						is_subject = yes
 						is_subject_of = CHL
 						CHL = {
-							has_completed_focus = CHL_crown_antoine_as_sovereign_king
+							always = no
 						}
 					}
 				}
@@ -225,7 +225,7 @@ on_actions = {
 		}	
 		# Make sure that Bolivia drops their araucanian cosmetic tag if it applies
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					BOL = {
 						has_cosmetic_tag = BOL_orelia
@@ -242,7 +242,7 @@ on_actions = {
 	on_puppet = { #ROOT = nation being puppeted, FROM = overlord
 		effect = {
 
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = URG
@@ -260,7 +260,7 @@ on_actions = {
 
 		# Make sure that Bolivia get's their araucanian cosmetic tag if it applies
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = BOL
@@ -269,7 +269,7 @@ on_actions = {
 						original_tag = CHL
 					}
 					CHL = {
-						has_completed_focus = CHL_crown_antoine_as_sovereign_king
+						always = no
 					}
 				}
 				ROOT = {
@@ -284,7 +284,7 @@ on_actions = {
 	on_release_as_puppet = { # ROOT is the nation being released, FROM is the overlord.
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = BOL
@@ -293,7 +293,7 @@ on_actions = {
 						original_tag = CHL
 					}
 					CHL = {
-						has_completed_focus = CHL_crown_antoine_as_sovereign_king
+						always = no
 					}
 				}
 				ROOT = {
@@ -303,7 +303,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = URG
@@ -319,7 +319,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						tag = WLA
@@ -335,7 +335,7 @@ on_actions = {
 	#ROOT is subject FROM is previous overlord
 	on_subject_free = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = URG
@@ -350,7 +350,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = BOL
@@ -412,7 +412,7 @@ on_actions = {
 	on_declare_war = {
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					ROOT = {
@@ -431,7 +431,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					ROOT = {
@@ -450,7 +450,7 @@ on_actions = {
 		}
 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						NOT = { has_idea = SMB_organization_of_american_states_member }
@@ -475,7 +475,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						has_idea = SMB_organization_of_american_states_member
@@ -506,7 +506,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						tag = PAR
@@ -539,7 +539,7 @@ on_actions = {
 	#FROM = defending side
 	on_declare_war = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						FROM = {
@@ -574,7 +574,7 @@ on_actions = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = {
 							has_government = communism
@@ -590,7 +590,7 @@ on_actions = {
 						}
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						FROM = {
 							has_government = communism
@@ -609,7 +609,7 @@ on_actions = {
 			}
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						OR = {
@@ -639,7 +639,7 @@ on_actions = {
 					}
 				}
 				# Both countries are in Americas
-				IF = {
+				if = {
 					limit = {
 						ROOT = {
 							has_idea = USA_monroe_doctrine_idea
@@ -648,7 +648,7 @@ on_actions = {
 					# Do Nothing for now, may add more content here in future!
 				}
 				# Only defender is in Americas
-				ELSE = {
+				else = {
 					FROM = {
 						USA = {
 							set_variable = { monroe_defender = PREV }
@@ -669,7 +669,7 @@ on_actions = {
 			USA_add_monroe_doctrine_to_target = yes
 		}
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						tag = WLA
@@ -691,7 +691,7 @@ on_actions = {
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
 					ROOT = {

@@ -337,7 +337,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					has_intelligence_agency = no
 				}
@@ -703,7 +703,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_idea = ENG_prepare_for_the_inevitable_idea
@@ -712,7 +712,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = wartime_industry_focus
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				swap_ideas = {
 					remove_idea = ENG_prepare_for_the_inevitable_idea
@@ -798,7 +798,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = ENG_vickers_experimental_facility_focus_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						126 = {
 							is_fully_controlled_by = ROOT
@@ -2041,7 +2041,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_concessions_to_the_trade_unions
+				always = no
 			}
 		}	
 
@@ -2125,7 +2125,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			447 = {
-				IF = {
+				if = {
 					limit = {
 						447 = {
 							free_building_slots = {
@@ -2143,7 +2143,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						447 = {
 							free_building_slots = {
@@ -2161,7 +2161,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						447 = {
 							free_building_slots = {
@@ -2196,7 +2196,7 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			118 = {
-				IF = {
+				if = {
 					limit = {
 						118 = {
 							free_building_slots = {
@@ -2214,7 +2214,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						118 = {
 							free_building_slots = {
@@ -2232,7 +2232,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						118 = {
 							free_building_slots = {
@@ -2249,7 +2249,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						118 = {
 							free_building_slots = {
@@ -2424,7 +2424,7 @@ focus_tree = {
 
 		completion_reward = {
 			447 = {
-				IF = {
+				if = {
 					limit = {
 						447 = {
 							free_building_slots = {
@@ -2443,7 +2443,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						447 = {
 							free_building_slots = {
@@ -2459,7 +2459,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						free_building_slots = {
 							building = bunker
@@ -2476,7 +2476,7 @@ focus_tree = {
 					}
 				}
 				
-				IF = {
+				if = {
 					limit = {
 						free_building_slots = {
 							building = anti_air_building
@@ -3224,7 +3224,7 @@ focus_tree = {
 			336 = {
 				add_extra_state_shared_building_slots = 1
 
-				IF = {
+				if = {
 					limit = {
 						336 = {
 							free_building_slots = {
@@ -3302,7 +3302,7 @@ focus_tree = {
 			336 = {
 				add_extra_state_shared_building_slots = 1
 
-				IF = {
+				if = {
 					limit = {
 						336 = {
 							free_building_slots = {
@@ -3320,7 +3320,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						336 = {
 							free_building_slots = {
@@ -3448,7 +3448,7 @@ focus_tree = {
 			326 = {
 				add_extra_state_shared_building_slots = 1
 
-				IF = {
+				if = {
 					limit = {
 						326 = {
 							free_building_slots = {
@@ -3512,7 +3512,7 @@ focus_tree = {
 			326 = {
 				add_extra_state_shared_building_slots = 1
 
-				IF = {
+				if = {
 					limit = {
 						326 = {
 							free_building_slots = {
@@ -3531,7 +3531,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						326 = {
 							free_building_slots = {
@@ -3591,7 +3591,7 @@ focus_tree = {
 		completion_reward = {
 			326 = {
 
-				IF = {
+				if = {
 					limit = {
 						326 = {
 							free_building_slots = {
@@ -3608,7 +3608,7 @@ focus_tree = {
 					}
 				}
 
-				IF = {
+				if = {
 					limit = {
 						326 = {
 							free_building_slots = {
@@ -5612,7 +5612,7 @@ focus_tree = {
 						is_controlled_by = ROOT 
 					}
 
-					IF = {
+					if = {
 						limit = {
 							free_building_slots = {
 								building = coastal_bunker
@@ -5630,7 +5630,7 @@ focus_tree = {
 					}
 					
 
-					IF = {
+					if = {
 						limit = {
 							free_building_slots = {
 								building = coastal_bunker
@@ -5765,7 +5765,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Graveyard of Empires"
 				}
@@ -5788,7 +5788,7 @@ focus_tree = {
 					custom_effect_tooltip = PER_preemptive_invasion_of_iran_tt
 				}
 			}
-			ELSE = {
+			else = {
 				create_wargoal = {
 					type = take_state_focus
 					target = PER
@@ -5909,7 +5909,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }	
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_idea = wartime_industry_focus
@@ -5917,7 +5917,7 @@ focus_tree = {
 				}
 				add_ideas = ENG_prepare_for_the_inevitable_idea
 			}
-			ELSE = {
+			else = {
 				swap_ideas = {
 					remove_idea = wartime_industry_focus
 					add_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea

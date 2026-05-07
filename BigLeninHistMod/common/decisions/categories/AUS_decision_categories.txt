@@ -33,7 +33,7 @@ AUS_supporting_italy_in_ethiopia_category = {
 	}
 
 	visible = {
-		has_completed_focus = AUS_supporting_italy_in_ethiopia_focus
+		always = no
 	}
 }
 
@@ -68,8 +68,8 @@ AUS_subjugating_the_lands_of_old_category = {
 
 	visible = {
 		OR = {
-			has_completed_focus = AUS_demand_hungarian_submission
-			has_completed_focus = AUS_bring_hungary_back_into_the_fold
+			always = no
+			always = no
 		}
 	}
 
@@ -93,8 +93,8 @@ AUS_the_danubian_federation_category = {
 	}
 
 	visible = {
-		has_completed_focus = AUS_invite_danubian_countries
-		NOT = { has_completed_focus = AUS_via_danube_to_europe }
+		always = no
+		NOT = { always = no }
 	}
 }
 
@@ -111,7 +111,7 @@ AUS_danubian_communism_category = {
 	}
 
 	visible = {
-		has_completed_focus = AUS_spur_the_communist_resistance
+		always = no
 	}
 }
 
@@ -128,8 +128,8 @@ AUS_reintegrating_the_empire_category = {
 
 	visible = {
 		OR = {
-			has_completed_focus = AUS_extend_italian_claims
-			has_completed_focus = AUS_reclaim_habsburg
+			always = no
+			always = no
 		}
 		
 	}

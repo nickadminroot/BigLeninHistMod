@@ -56,7 +56,7 @@ defined_text = {
 	text = {
 		trigger = {
 			
-			has_completed_focus = AUS_schutzbund_support
+			always = no
 		}
 
 		localization_key = AUS_militia_is_schutzbund
@@ -64,7 +64,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_sturmscharen_support
+			always = no
 		}
 
 		localization_key = AUS_militia_is_sturmscharen
@@ -72,7 +72,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_heimwehr_support
+			always = no
 		}
 
 		localization_key = AUS_militia_is_heimwehr
@@ -80,9 +80,9 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = {
-				has_completed_focus = AUS_schutzbund_support
-				has_completed_focus = AUS_sturmscharen_support
-				has_completed_focus = AUS_heimwehr_support
+				always = no
+				always = no
+				always = no
 			}
 		}
 
@@ -200,7 +200,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
+			always = no		
 		}
 
 		localization_key = AUS_seeks_a_deal_title_56
@@ -208,7 +208,7 @@ defined_text = {
 
 	text = {
 		trigger = { 
-			has_completed_focus = AUS_renew_claims_in_italy
+			always = no
 		}
 
 		localization_key = AUS_makes_demands_title_56
@@ -220,7 +220,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
+			always = no		
 		}
 
 		localization_key = AUS_seeks_a_deal_desc_56
@@ -228,7 +228,7 @@ defined_text = {
 
 	text = {
 		trigger = { 
-			has_completed_focus = AUS_renew_claims_in_italy
+			always = no
 		}
 
 		localization_key = AUS_makes_demands_desc_56
@@ -240,7 +240,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
+			always = no		
 		}
 
 		localization_key = AUS_seeks_a_deal_title_57
@@ -248,7 +248,7 @@ defined_text = {
 
 	text = {
 		trigger = { 
-			has_completed_focus = AUS_renew_claims_in_italy
+			always = no
 		}
 
 		localization_key = AUS_makes_demands_title_57
@@ -260,7 +260,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
+			always = no		
 		}
 
 		localization_key = AUS_seeks_a_deal_desc_57
@@ -268,7 +268,7 @@ defined_text = {
 
 	text = {
 		trigger = { 
-			has_completed_focus = AUS_renew_claims_in_italy
+			always = no
 		}
 
 		localization_key = AUS_makes_demands_desc_57
@@ -305,7 +305,7 @@ defined_text = {
 					has_country_flag = AUS_this_country_agreed_to_air_partnership
 				}
 			}
-			has_completed_focus = AUS_seek_international_partners
+			always = no
 		}
 
 		localization_key = AUS_has_no_air_partners
@@ -385,7 +385,7 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_completed_focus = AUS_legacy_of_the_empire
+			always = no
 		}
 
 		localization_key = AUS_army_is_landwehr
@@ -394,7 +394,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = {
-				has_completed_focus = AUS_legacy_of_the_empire
+				always = no
 			}
 		}
 

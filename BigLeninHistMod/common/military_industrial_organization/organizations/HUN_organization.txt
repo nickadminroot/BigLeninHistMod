@@ -18,7 +18,7 @@
  	}
  	
  	available = {
- 		IF = {
+ 		if = {
  			limit = {
  				has_dlc = "Gotterdammerung"
  			}
@@ -26,9 +26,9 @@
  				has_completed_focus = wuw_HUN_the_turan
  			}
  		}
- 		ELSE = {
+ 		else = {
  			FROM = {
- 				has_completed_focus = HUN_develop_tanks
+ 				always = no
  			}
  		}
  	}
@@ -44,7 +44,7 @@
  	}
  	
  	available = {
- 		IF = {
+ 		if = {
  			limit = {
  				has_dlc = "Gotterdammerung"
  			}
@@ -52,9 +52,9 @@
  				has_completed_focus = wuw_HUN_establish_the_mavag_army_division
  			}
  		}
- 		ELSE = {
+ 		else = {
  			FROM = {
- 				has_completed_focus = HUN_assault_gun_focus
+ 				always = no
  			}
  		}
  	}
@@ -70,7 +70,7 @@
  	}
 
  	visible = {
- 		IF = {
+ 		if = {
  			limit = {
  				FROM = {
  					original_tag = HUN
@@ -84,7 +84,7 @@
  	
  	available = {
  		# When in a Foreign MIO, countries need to be at peace with original country
- 		IF = {
+ 		if = {
  			limit = {
  				FROM = { NOT = { original_tag = ITA } }
  			}
@@ -103,7 +103,7 @@
  	}
 
  	visible = {
- 		IF = {
+ 		if = {
  			limit = {
  				FROM = {
  					original_tag = HUN
@@ -117,7 +117,7 @@
  	
  	available = {
  		# When in a Foreign MIO, countries need to be at peace with original country
- 		IF = {
+ 		if = {
  			limit = {
  				FROM = { NOT = { original_tag = GER } }
  			}
@@ -144,7 +144,7 @@ HUN_ganz_danubius_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	available = {
-		IF = {
+		if = {
 			limit = { 
 				AND = {
 					has_dlc = "Death or Dishonor" 
@@ -153,10 +153,10 @@ HUN_ganz_danubius_organization = {
 					}
 				}
 			}
-			owner = { has_completed_focus = HUN_naval_warfare }
+			owner = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				has_dlc = "Gotterdammerung"
 			}
@@ -174,7 +174,7 @@ HUN_obudai_hajogyar_organization = {
 		has_dlc = "Gotterdammerung"
 	}
 	available = {
-		IF = {
+		if = {
 			limit = { 
 				AND = {
 					has_dlc = "Death or Dishonor" 
@@ -183,10 +183,10 @@ HUN_obudai_hajogyar_organization = {
 					}
 				}
 			}
-			owner = { has_completed_focus = HUN_naval_warfare }
+			owner = { always = no }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				has_dlc = "Gotterdammerung"
 			}
@@ -214,7 +214,7 @@ HUN_mw_aircraft_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
@@ -222,9 +222,9 @@ HUN_mw_aircraft_organization = {
 				has_completed_focus = wuw_HUN_the_matyasfold_fighter_factory
 			}
 		}
-		ELSE = {
+		else = {
 			FROM = {
-				has_completed_focus = HUN_establish_the_air_force
+				always = no
 			}
 		}
 	}
@@ -304,7 +304,7 @@ HUN_danuvia_inf_organization = {
 	}
 
 	available = {
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
@@ -312,9 +312,9 @@ HUN_danuvia_inf_organization = {
 				has_completed_focus = wuw_HUN_danuvia_submachine_guns
 			}
 		}
-		ELSE = {
+		else = {
 			FROM = {
-				has_completed_focus = HUN_danuvia_submachine_guns
+				always = no
 			}
 		}
 	}

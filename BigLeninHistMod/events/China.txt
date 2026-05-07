@@ -99,37 +99,37 @@ country_event = {
 
 			set_truce = { target = ROOT days = 180 }
 			effect_tooltip = {
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 608 }
 					}
 					transfer_state = 608
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 597 }
 					}
 					transfer_state = 597
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 1038 }
 					}
 					transfer_state = 1038
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 614 }
 					}
 					transfer_state = 614
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 743 }
 					}
 					transfer_state = 743
 				}
-				IF = {
+				if = {
 					limit = {
 						ROOT = { controls_state = 1039 }
 						JAP = {
@@ -140,7 +140,7 @@ country_event = {
 						transfer_state = 1039
 					}
 				}
-				ELSE_IF = {
+				else_if = {
 					limit = {
 						ROOT = { controls_state = 1039 }
 						JAP = {

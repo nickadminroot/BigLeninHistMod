@@ -3,7 +3,7 @@ on_actions = {
 	on_startup = {
 		# Launch Ethipoian BoP events
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					date < 1939.1.1
 				}
@@ -47,7 +47,7 @@ on_actions = {
 		}
 		effect = {
 			# League of Nations Members
-			IF = {
+			if = {
 				limit = {
 					date < 1939.1.1 # don't bother with LoN after 1939
 				}
@@ -128,7 +128,7 @@ on_actions = {
 	on_monthly = {
 		# re-unification event for same tag
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_global_flag = global_unification_request_sent_flag } # one per month should be enough
 					is_subject = no
@@ -175,28 +175,15 @@ on_actions = {
 				}
 			}
 		}
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes
-				}
-				SWI = {
-
-					SWI_find_democratic_planes_seller = yes
-					SWI_find_biggest_fascist_neighbor = yes
-					SWI_update_neighbor_opinion_balance = yes
-				}
-			}
 		}
-	}
 
 	on_civil_war_end = { # ROOT is civil war winner, FROM gets annexed.
 		# End of Collaborationalist Civil War
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
-					has_completed_focus = ETH_declare_for_italy
+					always = no
 					ITA = {
 						NOT = {
 							OR = {
@@ -217,7 +204,7 @@ on_actions = {
 			else_if = {
 				limit = {
 					original_tag = ETH
-					has_completed_focus = ETH_declare_for_italy
+					always = no
 					}
 				every_owned_state = { #TODO_TA Make an event out this?
 					limit = {
@@ -235,7 +222,7 @@ on_actions = {
 			if = {
 				limit = {
 					tag = RDS
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					OR = {
 						has_government = neutrality
 						has_government = democratic
@@ -278,7 +265,7 @@ on_actions = {
 				}
 				if = { #BALBO
 					limit = {
-						has_completed_focus = ITA_italo_balbo_focus
+						always = no
 					}
 					#BoP
 					set_power_balance = {
@@ -300,7 +287,7 @@ on_actions = {
 				}
 				else_if = { #GRANDI
 					limit = {
-						has_completed_focus = ITA_dino_grandi_focus
+						always = no
 					}
 					#BoP
 					set_power_balance = {
@@ -346,7 +333,7 @@ on_actions = {
 	on_peace = {
 		effect = {
 			# The 2nd Italo Ethiopian war is over if either participant has peace
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = second_italo_ethiopian_war_flag
 					OR = {
@@ -355,14 +342,14 @@ on_actions = {
 					}
 					NOT = {
 						AND = {
-							ETH = { has_completed_focus = ETH_declare_for_italy }
+							ETH = { always = no }
 							has_civil_war = yes
 						}
 					}
 				}
 				ITA_end_the_italo_ethiopian_war = yes
 			}
-			IF = {
+			if = {
 				limit = {
 					tag = ETH
 					NOT = { has_global_flag = ethiopia_recognized_flag }
@@ -370,7 +357,7 @@ on_actions = {
 				set_global_flag = ethiopia_recognized_flag
 			}
 			# Ethiopia switch law
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_idea = ETH_chitet_law
@@ -386,7 +373,7 @@ on_actions = {
 			}
 
 			# Delete extra units
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_template = "Congolese Mercenaries"
@@ -396,7 +383,7 @@ on_actions = {
 					disband = no
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_template = "Arab Mercenaries"
@@ -406,7 +393,7 @@ on_actions = {
 					disband = no
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_template = "International brigade"
@@ -417,7 +404,7 @@ on_actions = {
 				}
 			}
 			# End of Independence War
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_template = "Resistance Fighters"
@@ -427,35 +414,13 @@ on_actions = {
 					disband = no
 				}
 			}
-			if = { #For when Switzerland wants to go back to the Good Old Times
-				limit = {
-					SWI_bba = yes
-					has_idea = SWI_old_switzerland_idea
-				}
-				add_ideas = {
-					SWI_swiss_neutrality
-					SWI_citizen_militia_1
-				}
-				remove_ideas = { SWI_old_switzerland_idea }
-				retire_character = SWI_henri_guisan
-			}
-
-
-		}
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes
-				}
-				SWI_make_helvetia_peace = yes
 			}
 		}
-	}
 	#ROOT = country that joined a war
 	#on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first
 	on_war = { 
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_idea = ETH_chitet_law_peace_time
@@ -495,36 +460,12 @@ on_actions = {
 				}
 			}
 		}
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes
-					SWI_has_any_spirit_of_helvetia = yes
-				}
-				SWI_make_helvetia_war = yes
-			}
 		}
-
-	}
 	#ROOT = attacking side
 	#FROM = defending side
 	#fired when two countries end up at war with each other ()
-	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes 
-					has_dynamic_modifier = { modifier = SWI_swiss_gold_market}
-				}
-				every_enemy_country = {
-					limit = {
-						has_dynamic_modifier = { modifier = SWI_gold_trade_with_switzerland }
-					}
-					SWI_seize_gold = yes 
-				}
-			}
-		}	
-	}
+		on_war_relation_added = {
+		}
 
 	#ROOT = attacking side
 	#FROM = defending side
@@ -532,7 +473,7 @@ on_actions = {
 	on_declare_war = {
    	# Disable LoN if more members go to war with each other
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_global_flag = LoN_disbanded_flag }
 					FROM = {
@@ -556,7 +497,7 @@ on_actions = {
 	on_capitulation = {
 		effect = {
 			# The 2nd Italo Ethiopian war is also considered over if one side capitulates
-			IF = {
+			if = {
 				limit = {
 					has_global_flag = second_italo_ethiopian_war_flag
 					OR = {
@@ -567,7 +508,7 @@ on_actions = {
 				ITA_end_the_italo_ethiopian_war = yes
 			}
 			# Haile Selassie Will set up a government in the appropriate country if he has left the country already
-			IF = {
+			if = {
 				limit = {
 					tag = ETH
 					has_country_flag = ETH_selassie_left_flag
@@ -595,7 +536,7 @@ on_actions = {
 				clr_country_flag = ETH_selassie_left_flag # He's now the government in exile, not personally left the country, so no need for this flag anymore.
 			}
 			# Ethiopian civil war capitulation
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						original_tag = ETH
@@ -604,7 +545,7 @@ on_actions = {
 					FROM = {
 						original_tag = ETH
 						has_government = fascism
-						has_completed_focus = ETH_sway_the_warlords
+						always = no
 					}
 				}
 				set_variable = { FROM.ETH_haile_selassie_country = ROOT }
@@ -617,7 +558,7 @@ on_actions = {
 				}
 			}
 			# Italy capitulates to Ethiopian host with liberate wargoal
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						tag = ITA
@@ -700,7 +641,7 @@ on_actions = {
 	#ROOT is subject FROM is previous overlord
 	on_subject_free = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = AOI
 				}
@@ -716,13 +657,13 @@ on_actions = {
 	on_daily_ITA = {
 		# war escalation effects
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					is_tutorial = no
 					has_global_flag = second_italo_ethiopian_war_flag
 				}
 				# Italian Public Concerned
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_pulic_concerned_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 3 }
@@ -735,7 +676,7 @@ on_actions = {
 					}
 				}
 				# Army of Africa Disheartened
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_army_of_africa_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 4 }
@@ -748,7 +689,7 @@ on_actions = {
 					}
 				}
 				# Unrest in the Colonies
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_unrest_in_the_colonies_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 5 }
@@ -761,7 +702,7 @@ on_actions = {
 					}
 				}
 				# Italian Public Questions War Effort
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_war_effort_questioned_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 6 }
@@ -774,7 +715,7 @@ on_actions = {
 					}
 				}
 				# Mass Desertions
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_mass_desertions_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 7 }
@@ -787,7 +728,7 @@ on_actions = {
 					}
 				}
 				# Uproar in the Colonies
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_country_flag = ITA_uproar_colonies_flag }
 						check_variable = { ETH.ETH_war_escalation_level > 9 }
@@ -806,7 +747,7 @@ on_actions = {
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					OR = {
 						check_variable = { ETH.host_nation = ROOT }
@@ -824,7 +765,7 @@ on_actions = {
 		}
 		# Drop AOI cosmetic tag to set correct flag
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = AOI
 					NOT = {
@@ -935,7 +876,7 @@ on_actions = {
   	#ROOT is country declaring war
 	on_declare_war = {
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = {
 						NOT = { has_dynamic_modifier = {modifier = african_union_defense_agreement_modifier} }
@@ -974,7 +915,7 @@ on_actions = {
 					}
 					ITA = {
 						OR = {
-							has_completed_focus = ITA_guarantee_austrian_independence
+							always = no
 							has_guaranteed = AUS
 							has_country_flag = AUS_got_ita_guarantee_flag
 						}
@@ -1008,7 +949,7 @@ on_actions = {
 					}
 					ITA = {
 						OR = {
-							has_completed_focus = ITA_guarantee_austrian_independence
+							always = no
 							has_guaranteed = AUS
 							has_country_flag = AUS_got_ita_guarantee_flag
 						}
@@ -1196,7 +1137,7 @@ on_actions = {
 				limit = {
 					ROOT = {
 						original_tag = ITA
-						has_completed_focus = ITA_cooperatives_for_intensive_exploitation
+						always = no
 					}
 					FROM.FROM = {
 						is_on_continent = africa
@@ -1219,7 +1160,7 @@ on_actions = {
 					}
 					ROOT = {
 						original_tag = ITA
-						has_completed_focus = ITA_cooperate_with_the_mafia
+						always = no
 					}
 				}
 				FROM.FROM = {
@@ -1321,11 +1262,11 @@ on_actions = {
 	}
 	on_puppet = { #ROOT = nation being puppeted, FROM = overlord
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					original_tag = ETH
-					has_completed_focus = ETH_rally_around_the_emperor
+					always = no
 					FROM = {
 						original_tag = ITA
 						OR = {
@@ -1354,7 +1295,7 @@ on_actions = {
 
 		# In case of historical split of N and S Korea try to locate the correct leaders
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = KOR
 					has_government = democratic
@@ -1385,7 +1326,7 @@ on_actions = {
 				retire_country_leader = yes
 
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = KOR
 					has_government = communism
@@ -1424,13 +1365,13 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = ITA
-						has_completed_focus = ITA_the_italian_confederation
+						always = no
 					}
 				}
 				if = {
 					limit = {
 						FROM = {
-							has_completed_focus = ITA_planned_economy
+							always = no
 						}
 						NOT = { has_idea = ITA_italian_confederation_member_improved }
 					}
@@ -1466,13 +1407,13 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = ITA
-						has_completed_focus = ITA_the_italian_confederation
+						always = no
 					}
 				}
 				if = {
 					limit = {
 						FROM = {
-							has_completed_focus = ITA_planned_economy
+							always = no
 						}
 						NOT = { has_idea = ITA_italian_confederation_member_improved }
 					}
@@ -1516,7 +1457,7 @@ on_actions = {
 	on_government_change = {
 		effect = {
 			#Change BoP when changing gov
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 					has_government = communism
@@ -1527,7 +1468,7 @@ on_actions = {
 					right_side = ETH_communist_side
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					original_tag = ETH
 					NOT = { has_government = communism }
@@ -1564,11 +1505,11 @@ on_actions = {
 	#on_unit_leader_promote_from_ranks_green
 	on_unit_leader_promote_from_ranks_green = { # This uses the UNIT LEADER sub scope of a character, FROM == country
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					OWNER = {
 						original_tag = ETH
-						has_completed_focus = ETH_expand_the_officer_corps
+						always = no
 					}
 				}
 				if = {
@@ -1587,7 +1528,7 @@ on_actions = {
 	on_exile_government_reinstated = {
 		effect = {
 			FROM = {
-				IF = {
+				if = {
 					limit = {
 						ROOT = {
 							tag = ETH
@@ -1606,7 +1547,7 @@ on_actions = {
 
 		# Give promised states to Ethiopia
 		effect = {
-			IF = {
+			if = {
 				limit = {
 					ROOT = { tag = ETH }
 				}
@@ -1637,6 +1578,5 @@ on_actions = {
 		}
 	}
 }
-
 
 

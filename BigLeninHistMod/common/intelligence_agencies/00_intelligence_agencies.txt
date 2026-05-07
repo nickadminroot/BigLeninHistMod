@@ -76,7 +76,7 @@ intelligence_agency = {
 	default = { 
 		tag = JAP 
 		NOT = {
-			has_completed_focus = JAP_establish_the_gunbatsu
+			always = no
 		}
 	}
 	available = { original_tag = JAP }
@@ -89,7 +89,7 @@ intelligence_agency = {
 	
 	default = { 
 		tag = JAP 
-		has_completed_focus = JAP_establish_the_gunbatsu
+		always = no
 	}
 	available = { 
 		original_tag = JAP 
@@ -203,7 +203,7 @@ intelligence_agency = {
 	default = { 
 		tag = PRC 
 		NOT = {
-			has_completed_focus = PRC_leadership_of_mao
+			always = no
 		}
 	}
 	available = { original_tag = PRC }
@@ -216,7 +216,7 @@ intelligence_agency = {
 	
 	default = { 
 		tag = PRC 
-		has_completed_focus = PRC_leadership_of_mao
+		always = no
 	}
 	available = { original_tag = PRC }
 }
@@ -455,7 +455,7 @@ intelligence_agency = {
 		NOT = {
 			has_government = fascism
 		}
-		has_completed_focus = SWI_buero_ha
+		always = no
 	}
 	
 	default = { 		
@@ -463,7 +463,7 @@ intelligence_agency = {
 		NOT = {
 			has_government = fascism
 		}
-		has_completed_focus = SWI_buero_ha
+		always = no
 	} 
 }
 
@@ -474,13 +474,13 @@ intelligence_agency = {
 	
 	available = { 
 		tag = SWI
-		has_completed_focus = SWI_federal_police
+		always = no
 
 	}
 	
 	default = { 		
 		tag = SWI
-		has_completed_focus = SWI_federal_police
+		always = no
 	} 
 }
 
@@ -528,7 +528,7 @@ intelligence_agency = {
 	default = { 
 		tag = HUN 
 		NOT = { has_government = communism }
-		NOT = { has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen }
+		NOT = { always = no }
 	} 
 	available = { 
 		original_tag = HUN 
@@ -558,11 +558,11 @@ intelligence_agency = {
 	
 	default = { 
 		tag = HUN
-		has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+		always = no
 	} 
 	available = { 
 		original_tag = HUN
-		has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+		always = no
 	}
 }
 

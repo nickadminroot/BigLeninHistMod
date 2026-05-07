@@ -1769,7 +1769,7 @@ ideas = {
 					has_government = democratic
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_responsible_government }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -1822,7 +1822,7 @@ ideas = {
 					has_government = fascism
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
+						NOT = { always = no }
 					}
 				}
 			}
@@ -2346,16 +2346,16 @@ ideas = {
 			picture = HUN_ganz_danubius
 
 			available = {
-				IF = {
+				if = {
 					limit = { 
 						has_dlc = "Death or Dishonor" 
 						NOT = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = HUN_naval_warfare
+					always = no
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}
@@ -2392,16 +2392,16 @@ ideas = {
 			picture = HUN_obudai_hajogyar
 
 			available = {
-				IF = {
+				if = {
 					limit = { 
 						has_dlc = "Death or Dishonor" 
 						NOT = {
 							has_dlc = "Gotterdammerung"
 						}
 					}
-					has_completed_focus = HUN_naval_warfare
+					always = no
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "Gotterdammerung"
 					}

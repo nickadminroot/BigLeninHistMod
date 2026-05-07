@@ -245,7 +245,7 @@ coastal_defence_fleet = {
 
     # EFFECTS
 	effect = {
-		IF = {
+		if = {
 			limit = {
 				NOT = {
 					has_tech = coastal_defense_ships

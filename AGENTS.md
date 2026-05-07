@@ -16,12 +16,12 @@ Agents should modify shipped game/mod content only in `./BigLeninHistMod/` and i
 
 ## Local Smoke Test
 
-Use `scripts/hoi4-smoke.sh` to launch the locally installed HOI4 binary with this mod enabled in an isolated Paradox user-data directory, then fail if `logs/error.log` contains serious startup/load errors.
+Use `scripts/hoi4-smoke.py` to launch the locally installed HOI4 binary with this mod enabled in an isolated Paradox user-data directory, then fail if `logs/error.log` contains startup/load errors.
 
 Run from the repository root:
 
 ```bash
-bash scripts/hoi4-smoke.sh
+python3 scripts/hoi4-smoke.py
 ```
 
 Configuration:
@@ -30,10 +30,11 @@ Configuration:
 - `SMOKE_TAG` - Start country tag. Defaults to `GER`.
 - `PDX_SMOKE_HOME` - Use a fixed isolated temp/user-data root for debugging. When set, data is retained.
 - `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
-- `SMOKE_MAX_MATCH_LINES` - Maximum matching log-context lines to print on failure. Defaults to `200`.
-- `SMOKE_IGNORED_ERROR_FILES_PATTERN` - Extended regex for error-log source files to ignore in smoke output and failure counting. Defaults to `common/units/infantry[.]txt|common/decisions/USA[.]txt`.
+- `SMOKE_MAX_ERROR_ENTRIES` - Maximum parsed error entries to print on failure. Defaults to `40`.
+- `SMOKE_MAX_ENTRY_LINES` - Maximum lines to print for each error entry. Defaults to `8`.
+- `SMOKE_INCLUDE_PATTERN` - Optional regex to limit which `error.log` entries are treated as failures. When unset, every parsed `error.log` entry is treated as actionable unless its source file is hardcoded as ignored.
 
-The script seeds the isolated user-data directory from the normal profile's DLC state (`dlc_load.json`, `dlc_signature`, and `game_data.json` when present), then writes a temporary `mod/BigLeninHistMod.mod` and enables only this mod. If the installed game directory has an executable `cream.sh`, the script launches through it to match the local normal DLC-enabled start path; otherwise it launches `run_hoi4` directly. Timestamped CreamAPI `[info]` console lines are filtered from smoke output. It does not modify normal Paradox launcher state.
+The script seeds the isolated user-data directory from the normal profile's DLC state (`dlc_load.json`, `dlc_signature`, and `game_data.json` when present), then writes a temporary `mod/BigLeninHistMod.mod` and enables only this mod. If the installed game directory has an executable `cream.sh`, the script launches through it to match the local normal DLC-enabled start path; otherwise it launches `run_hoi4` directly. Launch stdout/stderr is captured to `hoi4-launch.log` inside the smoke temp directory instead of being printed by default, so agent-facing output stays concise. Entries sourced from `common/units/infantry.txt` and `common/decisions/USA.txt` are hardcoded as ignored. It does not modify normal Paradox launcher state.
 
 ---
 

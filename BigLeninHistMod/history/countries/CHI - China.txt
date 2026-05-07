@@ -1,6 +1,6 @@
 ﻿capital = 1035 # Nanjing
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
 	}
@@ -89,7 +89,7 @@ if = {
 }
 
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
 	}
@@ -146,7 +146,7 @@ IF = {
 	recruit_character = CHI_zhang_lan # Needs to be able to be transferred to PRC as well
 	recruit_character = CHI_symeon_du
 	recruit_character = CHI_zhu_jiahua
-	ELSE = { 
+	else = { 
 		recruit_character = CHI_zhang_xueliang 
 		recruit_character = CHI_gu_zhutong # Sent to Sichuan
 		recruit_character = CHI_fu_zuoyi # Sent to Shaanxi
@@ -250,7 +250,7 @@ if = {
 	}
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
@@ -346,7 +346,7 @@ IF = {
 1044 = { #Wuwei    
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
 	}
@@ -378,7 +378,7 @@ IF = {
 		modifier = CHI_nine_power_treaty_sea
 	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Step Back"
 		}
@@ -589,7 +589,7 @@ IF = {
 
 	### END ###
 
-	ELSE = {
+	else = {
 		set_popularities = {
 			neutrality = 100
 		}
@@ -701,7 +701,7 @@ set_convoys = 40
 	
 	set_global_flag = CHI_xian_fired #Don't trigger the Xi'an Incident again
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Compromise, No Surrender"
 		}

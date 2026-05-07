@@ -279,7 +279,7 @@ form_nordic_league_category = {
 				original_tag = KAR
 				AND = {
 					original_tag = EST
-					has_completed_focus = EST_form_scandinavia
+					always = no
 				}
 			}
 			NOT = { has_country_flag = form_nordic_nation_flag }
@@ -450,7 +450,7 @@ form_nordic_league_category = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					933 = {
 						NOT = {
@@ -465,7 +465,7 @@ form_nordic_league_category = {
 				933 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					213 = {
 						NOT = {
@@ -480,7 +480,7 @@ form_nordic_league_category = {
 				213 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					215 = {
 						NOT = {
@@ -495,7 +495,7 @@ form_nordic_league_category = {
 				215 = { add_claim_by = ROOT }
 			}
 
-			IF = {
+			if = {
 				limit = {
 					216 = {
 						NOT = {
@@ -1083,7 +1083,7 @@ form_austria_hungary_category = {
 			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { tag = AUS }
 					}
@@ -1217,8 +1217,8 @@ form_austria_hungary_category = {
 		visible = {
 			tag = HUN
 			OR = {
-				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-				has_completed_focus = wuw_HUN_renovato_imperii
+				always = no
+				always = no
 			}
 			NOT = { has_global_flag = reintegrate_the_empire_flag }
 		}
@@ -1684,8 +1684,8 @@ form_baltic_federation_category = {
 			}
 			NOT = { has_global_flag = form_baltic_federation_flag }
 			NOT = { has_cosmetic_tag = LIVONIA }
-			NOT = { has_completed_focus = LIT_claim_livonia_monarchy }
-			NOT = { has_completed_focus = LIT_POL_union }
+			NOT = { always = no }
+			NOT = { always = no }
 		}
 
 		complete_effect = {
@@ -1933,7 +1933,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_balkans_flag }
-			has_completed_focus = TUR_reclaim_macedonia
+			always = no
 		}
 
 		complete_effect = {
@@ -2016,7 +2016,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_greece_flag }
-			has_completed_focus = TUR_reclaim_macedonia
+			always = no
 		}
 
 		complete_effect = {
@@ -2068,7 +2068,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_bosnia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2126,7 +2126,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_romania_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2190,8 +2190,8 @@ form_ottoman_empire_category = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_syria_flag }
 			OR = {
-				has_completed_focus = TUR_reclaiming_our_lost_empire
-				has_completed_focus = TUR_the_damascus_diktat
+				always = no
+				always = no
 			}
 		}
 
@@ -2247,7 +2247,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_levant_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2303,7 +2303,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_mesopotamia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2368,7 +2368,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_arabia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2442,7 +2442,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_yemen_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2503,7 +2503,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_egypt_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2565,7 +2565,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_libya_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2625,7 +2625,7 @@ form_ottoman_empire_category = {
 		visible = {
 			original_tag = TUR
 			NOT = { has_global_flag = ottoman_tunisia_flag }
-			has_completed_focus = TUR_reclaiming_our_lost_empire
+			always = no
 		}
 
 		complete_effect = {
@@ -2788,7 +2788,7 @@ form_european_union_category = {
 						ruling_only = yes
 					}
 					has_government = neutrality
-					has_completed_focus = wuw_HUN_renovato_imperii
+					always = no
 				}
 				AND = {
 					original_tag = AUS
@@ -2798,18 +2798,18 @@ form_european_union_category = {
 								character = HUN_otto_von_habsburg
 								ruling_only = yes
 							}
-							has_completed_focus = AUS_the_danubian_federation
+							always = no
 							is_faction_leader = yes
 						}	
 						AND = {
-							has_completed_focus = AUS_the_right_to_self_determination
+							always = no
 							has_government = democratic
 						}
 					}
 				}
 				AND = {
 					original_tag = GER
-					has_completed_focus = GER_european_confederation
+					always = no
 				}
 			}
 
@@ -2924,13 +2924,13 @@ form_european_union_category = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { original_tag = ENG }
 				}
 				set_cosmetic_tag = EUR_UNIFIED
 			}
-			ELSE = {
+			else = {
 				set_cosmetic_tag = ENG_imperial_federation_unified #Europe-a-Nation
 			}
 
@@ -5127,8 +5127,8 @@ form_roman_empire_category = {
 			NOT = { has_global_flag = form_roman_empire_flag }
 			ITA = {
 				OR = {
-					has_completed_focus = ITA_mare_nostrum_bba
-					has_completed_focus = ITA_the_catholic_dominion
+					always = no
+					always = no
 				}
 			}
 		}
@@ -6821,7 +6821,7 @@ form_roman_empire_category = {
 			hidden_effect = { 
 				set_global_flag = the_bosporan_kingdom_flag
 
-				IF = {
+				if = {
 					limit = {
 						ITA = {
 							has_government = fascism
@@ -6836,7 +6836,7 @@ form_roman_empire_category = {
 						}
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						ITA = {
 							has_government = neutrality
@@ -7393,7 +7393,7 @@ form_byzantine_empire_category = {
 
 		available = {
 			is_subject = no
-			has_completed_focus = GRE_reviving_the_double_headed_eagle
+			always = no
 			# Greece
 			custom_trigger_tooltip = {
 				tooltip = form_country_greece_required_states_tt
@@ -7434,7 +7434,7 @@ form_byzantine_empire_category = {
 
 		visible = {
 			AND = { 
-				has_completed_focus = GRE_horror_and_fear
+				always = no
 				has_government = fascism
 			}
 			NOT = { has_global_flag = form_byzantine_empire_flag }
@@ -7614,7 +7614,7 @@ form_byzantine_empire_category = {
 		visible = {
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus" }
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 			NOT = { has_global_flag = triumph_for_the_balkans }
 		}
@@ -7755,7 +7755,7 @@ form_byzantine_empire_category = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
 				}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -7826,7 +7826,7 @@ form_byzantine_empire_category = {
 			NOT = { has_global_flag = triumph_for_middle_east }
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus"}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -7866,7 +7866,7 @@ form_byzantine_empire_category = {
 			is_subject = no
 			if = {
 				limit = { has_dlc = "Battle for the Bosporus"}
-				has_completed_focus = GRE_reviving_the_double_headed_eagle
+				always = no
 			}
 			# French North Africa
 			controls_state = 458
@@ -7895,7 +7895,7 @@ form_byzantine_empire_category = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
 				}
-				has_completed_focus = GRE_byzantine_themata
+				always = no
 			}
 		}
 
@@ -8780,7 +8780,7 @@ form_maphilindo_category = {
 
 		complete_effect = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8861,7 +8861,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8919,7 +8919,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -8985,7 +8985,7 @@ form_maphilindo_category = {
 					}
 				}
 				set_global_flag = PHI_ASEAN_flag
-				IF = {
+				if = {
 					limit = {
 						NOT = {
 							has_cosmetic_tag = PHI_hispanic_empire_tag
@@ -9168,19 +9168,19 @@ form_hre_category = {
 		}
 
 		visible = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
 				OR = {
 					AND = {
 						original_tag = GER
-						has_completed_focus = GER_restore_the_holy_roman_empire
+						always = no
 					}
 					AND = {
 						original_tag = AUS
 						has_government = neutrality
-						has_completed_focus = AUS_legacy_of_the_empire
+						always = no
 						OR = {
 							has_country_leader = {
 								ruling_only = yes # default = yes
@@ -9194,7 +9194,7 @@ form_hre_category = {
 					}
 				}
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					NOT = {
 						has_dlc = "Gotterdammerung"
@@ -9702,7 +9702,7 @@ form_greater_german_state_category = {
 
 		visible = {
 			is_major = yes
-			has_completed_focus = GER_hegemony_over_europe
+			always = no
 			NOT = { has_global_flag = form_greater_proletarian_state_flag }
 		}
 
@@ -10943,7 +10943,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			# Greece
 			custom_trigger_tooltip = {
@@ -10991,14 +10991,14 @@ form_greater_greece_category = {
 			NOT = { has_global_flag = form_greater_greece_flag }
 			OR = { 
 				AND = {
-					has_completed_focus = GRE_the_modern_movement
+					always = no
 					has_country_leader = {
 						character = GRE_ioannis_metaxas
 						ruling_only = yes
 					}
 				}
 				AND = { 
-					has_completed_focus = GRE_resurrecting_the_megali_idea
+					always = no
 					NOT = { 
 						has_country_leader = {
 							character = GRE_georgios_kosmidis
@@ -11006,7 +11006,7 @@ form_greater_greece_category = {
 						}
 					}
 				}
-				has_completed_focus = GRE_prepare_for_the_great_anti_fascist_war
+				always = no
 			}
 		}
 
@@ -11098,7 +11098,7 @@ form_greater_greece_category = {
 			is_subject = no
 			AND = {
 				has_government = democratic
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 		}
 
@@ -11146,7 +11146,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 342
 			# Dodecanese
@@ -11194,7 +11194,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 805
 		}
@@ -11235,7 +11235,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 797
 		}
@@ -11279,7 +11279,7 @@ form_greater_greece_category = {
 				limit = {
 					has_government = democratic
 				}
-				has_completed_focus = GRE_nenikikamen
+				always = no
 			}
 			controls_state = 797
 		}
@@ -11465,14 +11465,14 @@ form_macedonian_empire_category = {
 			original_tag = GRE
 			OR = {
 				AND = {
-					has_completed_focus = GRE_moulding_the_new_world_order
+					always = no
 					has_country_leader = {
 						character = GRE_george_mercouris
 						ruling_only = yes
 					}
 				}
 				AND = {
-					has_completed_focus = GRE_protectors_of_the_mediterranean
+					always = no
 					has_country_leader = {
 						character = GRE_king_george_ii
 						ruling_only = yes
@@ -11786,7 +11786,7 @@ form_turan_category = {
 
 		visible = {
 			original_tag = TUR
-			has_completed_focus = TUR_turanist_ambition
+			always = no
 			NOT = { has_global_flag = form_turan_flag }
 		}
 
@@ -11937,13 +11937,13 @@ form_turan_category = {
 			is_subject = no
 			AND = {
 				has_government = fascism
-				has_completed_focus = TUR_turanist_ambition
+				always = no
 				has_idea = TUR_nihal_atsiz
 			}
 		}
 
 		visible = {
-			has_completed_focus = TUR_turanist_ambition
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12009,7 +12009,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_subdue_the_magyars
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12094,7 +12094,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_cin_turkleri
+			always = no
 		}
 
 		fire_only_once = yes
@@ -12187,7 +12187,7 @@ form_turan_category = {
 		}
 
 		visible = {
-			has_completed_focus = TUR_crowning_ourselves_with_the_fin_ugor
+			always = no
 		}
 
 		fire_only_once = yes
@@ -13736,7 +13736,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_restore_the_empire_of_axum
+			always = no
 			NOT = { has_global_flag = form_axum_flag }
 		}
 
@@ -13831,7 +13831,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_the_one_true_heir_of_solomon
+			always = no
 			NOT = { has_global_flag = form_empire_of_solomon_flag }
 		}
 
@@ -13932,7 +13932,7 @@ form_ethiopian_empire_category  = {
 		}
 
 		visible = {
-			has_completed_focus = ETH_jah
+			always = no
 			NOT = { has_global_flag = form_empire_of_zion_flag }
 		}
 
@@ -14000,7 +14000,7 @@ form_east_africa_category = {
 				AND = {
 					has_dlc = "Gotterdammerung"
 					original_tag = COG # Congo
-					has_completed_focus = COG_unify_east_africa
+					always = no
 				}
 			}
 			NOT = { has_global_flag = form_east_africa_flag }
@@ -14318,13 +14318,13 @@ form_horn_of_africa_africa_category = {
 		}
 
 		visible = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 				}
-				has_completed_focus = ETH_develop_the_horn_of_africa
+				always = no
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = AFA
@@ -14337,7 +14337,7 @@ form_horn_of_africa_africa_category = {
 						original_tag = GBA
 					}
 				}
-				has_completed_focus = HOA_proclaim_east-african_hegemony
+				always = no
 			}
 			OR = {
 				original_tag = ETH # Ethiopia
@@ -14359,11 +14359,11 @@ form_horn_of_africa_africa_category = {
 		}
 
 		available = {
-			IF = {
+			if = {
 				limit = {
 					original_tag = ETH
 				}
-				has_completed_focus = ETH_develop_the_horn_of_africa
+				always = no
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -14381,7 +14381,7 @@ form_horn_of_africa_africa_category = {
 				controls_state = 559 # Somaliland
 				controls_state = 844 # Jubaland
 			}
-			ELSE_IF = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = AFA
@@ -14394,7 +14394,7 @@ form_horn_of_africa_africa_category = {
 						original_tag = GBA
 					}
 				}
-				has_completed_focus = HOA_proclaim_east-african_hegemony
+				always = no
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -14412,7 +14412,7 @@ form_horn_of_africa_africa_category = {
 				controls_state = 559 # Somaliland
 				controls_state = 844 # Jubaland
 			}
-			ELSE = {
+			else = {
 				controls_state = 842 # Tigray
 				controls_state = 843 # Wello
 				controls_state = 908 # Afar
@@ -14983,12 +14983,12 @@ form_sweden_hungary_category = {
 			
 			NOT = { has_global_flag = sweden_hungary_formed_flag }
 
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
+			always = no
 			
 		}
 
 		available = {
-			has_completed_focus = wuw_HUN_elect_a_democratic_king # They have a Swedish King
+			always = no # They have a Swedish King
 			has_country_flag = HUN_carl_wilhelm_took_absolute_control
 			custom_trigger_tooltip = {
 				tooltip = sweden_hungary_required_states
@@ -15302,7 +15302,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Dominican Republic
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						319 = {
@@ -15314,7 +15314,7 @@ antilles_category = {
 			}
 			
 			# Haiti
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						318 = {
@@ -15326,7 +15326,7 @@ antilles_category = {
 			}
 
 			# Cuba
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						315 = {
@@ -15338,7 +15338,7 @@ antilles_category = {
 			}
 
 			# Jamaica
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						689 = {
@@ -15350,7 +15350,7 @@ antilles_category = {
 			}
 
 			# Northern Bahamas
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						690 = {
@@ -15362,7 +15362,7 @@ antilles_category = {
 			}
 
 			# Southern Bahamas
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						693 = {
@@ -15374,7 +15374,7 @@ antilles_category = {
 			}
 
 			# Puerto Rico
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						686 = {
@@ -15386,7 +15386,7 @@ antilles_category = {
 			}
 
 			# French Caribbean
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						694 = {
@@ -15398,7 +15398,7 @@ antilles_category = {
 			}
 
 			# Leeward Islands
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						308 = {
@@ -15410,7 +15410,7 @@ antilles_category = {
 			}
 
 			# Windward Islands
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						692 = {
@@ -15484,7 +15484,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Curacao
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						695 = {
@@ -15552,7 +15552,7 @@ antilles_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Tobago
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						691 = {
@@ -15725,7 +15725,7 @@ latin_africa_category = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			# Leopoldville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						295 = {
@@ -15737,7 +15737,7 @@ latin_africa_category = {
 			}
 			
 			# Coquilhatville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						538 = {
@@ -15749,7 +15749,7 @@ latin_africa_category = {
 			}
 
 			# Lusambo
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						888 = {
@@ -15761,7 +15761,7 @@ latin_africa_category = {
 			}
 
 			# Elizabethville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						889 = {
@@ -15773,7 +15773,7 @@ latin_africa_category = {
 			}
 
 			# Costermanville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						890 = {
@@ -15785,7 +15785,7 @@ latin_africa_category = {
 			}
 
 			# Stanleyville
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						718 = {
@@ -15797,7 +15797,7 @@ latin_africa_category = {
 			}
 
 			# Rwanda
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						768 = {
@@ -15809,7 +15809,7 @@ latin_africa_category = {
 			}
 
 			# Burundi
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						769 = {
@@ -15821,7 +15821,7 @@ latin_africa_category = {
 			}
 
 			# North Angola
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						796 = {
@@ -15833,7 +15833,7 @@ latin_africa_category = {
 			}
 
 			# Luanda
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						540 = {
@@ -15845,7 +15845,7 @@ latin_africa_category = {
 			}
 
 			# South West Angola
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						892 = {
@@ -15857,7 +15857,7 @@ latin_africa_category = {
 			}
 
 			# Zambesi
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						891 = {
@@ -15869,7 +15869,7 @@ latin_africa_category = {
 			}
 
 			# Middle Congo
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						772 = {
@@ -15881,7 +15881,7 @@ latin_africa_category = {
 			}
 
 			# Gabon
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						539 = {
@@ -15893,7 +15893,7 @@ latin_africa_category = {
 			}
 
 			# Equatorial Guinea
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						297 = {
@@ -15905,7 +15905,7 @@ latin_africa_category = {
 			}
 
 			# Sao Tome
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						705 = {
@@ -15917,7 +15917,7 @@ latin_africa_category = {
 			}
 
 			# Cameroon
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						773 = {
@@ -15929,7 +15929,7 @@ latin_africa_category = {
 			}
 
 			# Equatorial Africa
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						660 = {
@@ -15941,7 +15941,7 @@ latin_africa_category = {
 			}
 
 			# Chad
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						774 = {
@@ -15953,7 +15953,7 @@ latin_africa_category = {
 			}
 
 			# B.E.T
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						775 = {
@@ -16170,7 +16170,7 @@ germany_formable_category = {
 			custom_effect_tooltip = declare_germany_reunified_decision_tt 
 			hidden_effect = {
 				# Brandenburg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							64 = {
@@ -16182,7 +16182,7 @@ germany_formable_category = {
 				}
 
 				# Vorpommern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							62 = {
@@ -16194,7 +16194,7 @@ germany_formable_category = {
 				}
 
 				# Mecklenburg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							61 = {
@@ -16206,7 +16206,7 @@ germany_formable_category = {
 				}
 
 				# Sachsen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							65 = {
@@ -16218,7 +16218,7 @@ germany_formable_category = {
 				}
 
 				# Holstein
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							58 = {
@@ -16230,7 +16230,7 @@ germany_formable_category = {
 				}
 
 				# Schleswig
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							909 = {
@@ -16242,7 +16242,7 @@ germany_formable_category = {
 				}
 
 				# Hannover
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							59 = {
@@ -16254,7 +16254,7 @@ germany_formable_category = {
 				}
 
 				# Thüringen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							60 = {
@@ -16266,7 +16266,7 @@ germany_formable_category = {
 				}
 
 				# Weser-Ems
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							56 = {
@@ -16278,7 +16278,7 @@ germany_formable_category = {
 				}
 
 				# Westfalen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							57 = {
@@ -16290,7 +16290,7 @@ germany_formable_category = {
 				}
 
 				# Hessen
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							55 = {
@@ -16302,7 +16302,7 @@ germany_formable_category = {
 				}
 
 				# Rhineland
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							51 = {
@@ -16314,7 +16314,7 @@ germany_formable_category = {
 				}
 
 				# Moselland
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							42 = {
@@ -16326,7 +16326,7 @@ germany_formable_category = {
 				}
 
 				# Baden
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							978 = {
@@ -16338,7 +16338,7 @@ germany_formable_category = {
 				}
 
 				# Württemberg
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							50 = {
@@ -16350,7 +16350,7 @@ germany_formable_category = {
 				}
 
 				# Franken
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							54 = {
@@ -16362,7 +16362,7 @@ germany_formable_category = {
 				}
 
 				# Oberbayern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							52 = {
@@ -16374,7 +16374,7 @@ germany_formable_category = {
 				}
 
 				# Niederbayern
-				IF =  {
+				if =  {
 					limit = {
 						NOT = {
 							53 = {
@@ -16482,7 +16482,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Luxemburg
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						8 = {
@@ -16589,7 +16589,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Alsace-Lorraine
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						28 = {
@@ -16691,7 +16691,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# South Jutland
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						912 = {
@@ -16810,7 +16810,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Ermland-Masuren
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						5 = {
@@ -16822,7 +16822,7 @@ germany_formable_category = {
 			}
 
 			# Königsberg
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						763 = {
@@ -16834,7 +16834,7 @@ germany_formable_category = {
 			}
 
 			# Memel
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						188 = {
@@ -16950,7 +16950,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Lower Silesia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						66 = {
@@ -16962,7 +16962,7 @@ germany_formable_category = {
 			}
 
 			# Upper Silesia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						67 = {
@@ -16974,7 +16974,7 @@ germany_formable_category = {
 			}
 
 			# Katowice
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						762 = {
@@ -17109,7 +17109,7 @@ germany_formable_category = {
 		complete_effect = {
 			
 			# Posen
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						86 = {
@@ -17121,7 +17121,7 @@ germany_formable_category = {
 			}
 
 			# Ostmark
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						68 = {
@@ -17133,7 +17133,7 @@ germany_formable_category = {
 			}
 
 			# Hinterpommern
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						63 = {
@@ -17145,7 +17145,7 @@ germany_formable_category = {
 			}
 
 			# Gdynia
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						807 = {
@@ -17157,7 +17157,7 @@ germany_formable_category = {
 			}
 
 			# Danzig
-			IF =  {
+			if =  {
 				limit = {
 					NOT = {
 						85 = {

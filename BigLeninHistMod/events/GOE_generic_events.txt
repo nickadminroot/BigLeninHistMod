@@ -24,13 +24,13 @@ country_event = {
 				end_puppet = ROOT
 			}
 			drop_cosmetic_tag = yes
-			IF = {
+			if = {
 				limit = {
 					original_tag = SYR
 				}
 				set_cosmetic_tag = SYR_vichy
 			}
-			IF = {
+			if = {
 				limit = {
 					original_tag = LEB
 				}

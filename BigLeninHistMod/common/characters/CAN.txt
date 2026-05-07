@@ -684,7 +684,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = CAN_swastika_clubs 
+					always = no 
 				}
 				if = {
 					limit = {
@@ -729,7 +729,7 @@ characters={
 					}
 					OR = {
 						has_completed_focus = CAN_strengthen_the_commonwealth_ties 
-						has_completed_focus = CAN_permanent_joint_defense_board 
+						always = no 
 					}
 				}
 				if = {
@@ -773,7 +773,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = CAN_burn_the_royal_portraits 
+					always = no 
 				}
 				if = {
 					limit = {

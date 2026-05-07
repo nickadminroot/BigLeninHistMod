@@ -1646,7 +1646,7 @@ country_event = { #Denmark Declares Independence
 			modifier = {
 				factor = 2
 				FROM = {
-					has_completed_focus = DEN_seek_independence
+					always = no
 				}
 			}
 		}
@@ -1674,7 +1674,7 @@ country_event = { #Denmark Declares Independence
 			modifier = {
 				factor = 5
 				FROM = {
-					has_completed_focus = DEN_pledge_allegiance
+					always = no
 				}
 			}
 			modifier = {
@@ -1762,7 +1762,7 @@ country_event = { #Danish Liberation War
 		
 		if = {
 			limit = {
-				has_completed_focus = DEN_form_the_danish_freedom_council
+				always = no
 			}
 			DEN_freedom_council_takes_over = yes
 		}
@@ -1834,10 +1834,10 @@ country_event = { #Denmark becomes independent peacefully
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = DEN_pledge_allegiance
+					always = no
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					FROM = { is_in_faction_with = ROOT }
 				}
@@ -2060,19 +2060,13 @@ country_event = { #Denmark asks overlord to join faction
 			modifier = {
 				factor = 1.5
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value < 0
-					}
+					always = no
 				}
 			}
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value < -0.3
-					}
+					always = no
 				}
 			}
 		}
@@ -2171,7 +2165,7 @@ country_event = { #Denmark is rejected
 		name = denmark_occupation_event.102.a
 		if = {
 			limit = {
-				has_completed_focus = DEN_pledge_allegiance
+				always = no
 			}
 			complete_national_focus = DEN_sanction_sabotages
 		}
@@ -2209,19 +2203,13 @@ country_event = { #Denmark pledges allegiance
 			modifier = {
 				factor = 1.5
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value < 0
-					}
+					always = no
 				}
 			}
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value < -0.3
-					}
+					always = no
 				}
 			}
 		}
@@ -3173,8 +3161,8 @@ country_event = { #The King rides
 		original_tag = DEN
 		is_subject = yes
 		OR = {
-			has_completed_focus = DEN_seek_independence
-			has_completed_focus = DEN_sanction_sabotages
+			always = no
+			always = no
 		}
 		NOT = { has_country_flag = DEN_exiled_royal_family }
 		has_character = DEN_christian_x
@@ -3256,10 +3244,7 @@ country_event = { #Denmark: Telegram Crisis Begins
 			}
 		}
 		OR = {
-			power_balance_value = {
-				id = DEN_occupation_balance
-				value > 0.29
-			}
+			always = no
 			OVERLORD = {
 				has_opinion = {
 				    target = DEN
@@ -3325,10 +3310,7 @@ country_event = { #Denmark: Telegram Crisis Begins
 		if = {
 			limit = {
 				OR = {
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.3
-					}
+					always = no
 					OVERLORD = {
 						has_opinion = {
 						    target = DEN
@@ -3379,10 +3361,7 @@ country_event = { #Denmark: Telegram Crisis Begins
 			modifier = {
 				factor = 10
 				ROOT = {
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.89
-					}
+					always = no
 				}
 			}
 		}		
@@ -3553,10 +3532,7 @@ country_event = { #Overlord: Denmark is being a shitty subject
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -3707,10 +3683,7 @@ country_event = { #Denmark: Overlord demands another country leader
 			modifier = {
 				factor = 10
 				ROOT = {
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.89
-					}
+					always = no
 				}
 			}
 		}
@@ -3761,7 +3734,7 @@ country_event = { #Denmark: Choose new country leader
 		}
 		if = {
 			limit = {
-				has_completed_focus = DEN_king_assumes_power
+				always = no
 			}
 			promote_character = DEN_knud_bach
 			set_party_name = {
@@ -4008,10 +3981,7 @@ country_event = { #Overlord: Denmark refuses to change leader
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -4084,10 +4054,7 @@ country_event = { #Overlord: Denmark refuses to change leader
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -4104,10 +4071,7 @@ country_event = { #Overlord: Denmark refuses to change leader
 		}		
 		trigger = {
 			FROM = {
-				power_balance_value = {
-					id = DEN_occupation_balance
-					value < -0.6
-				}
+				always = no
 			}
 			ROOT = {
 				has_opinion = {
@@ -4520,10 +4484,7 @@ country_event = { #Overlord: Denmark refuses to change government form
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -4577,7 +4538,7 @@ country_event = { #Overlord: Denmark refuses to change government form
 				}
 				if = {
 					limit = {
-						has_completed_focus = DEN_king_assumes_power
+						always = no
 					}
 					promote_character = DEN_knud_bach
 					set_party_name = {
@@ -4679,7 +4640,7 @@ country_event = { #Denmark: Overlord tries to install its own government form
 			}
 			if = {
 				limit = {
-					has_completed_focus = DEN_king_assumes_power
+					always = no
 				}
 				promote_character = DEN_knud_bach
 				set_party_name = {
@@ -5163,10 +5124,7 @@ country_event = { #Overlord: Denmark won't send weapons
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -5352,10 +5310,7 @@ country_event = { #Overlord: Denmark refuses to send troops
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -5544,10 +5499,7 @@ country_event = { #Overlord: Denmark refused to appoint our country leader
 			modifier = {
 				factor = 2
 				FROM = { 
-					power_balance_value = {
-						id = DEN_occupation_balance
-						value > 0.6
-					}
+					always = no
 				}
 			}
 			modifier = {
@@ -5766,17 +5718,11 @@ country_event = { #Denmark: Overlord tries to annex the rest of Denmark
 			}
 			modifier = {
 				factor = 2
-				power_balance_value = {
-					id = DEN_occupation_balance
-					value < -0.3
-				}
+				always = no
 			}
 			modifier = {
 				factor = 2
-				power_balance_value = {
-					id = DEN_occupation_balance
-					value < -0.6
-				}
+				always = no
 			}
 			modifier = {
 				factor = 2
@@ -5812,17 +5758,11 @@ country_event = { #Denmark: Overlord tries to annex the rest of Denmark
 			}
 			modifier = {
 				factor = 1.5
-				power_balance_value = {
-					id = DEN_occupation_balance
-					value > 0.3
-				}
+				always = no
 			}
 			modifier = {
 				factor = 1.5
-				power_balance_value = {
-					id = DEN_occupation_balance
-					value > 0.6
-				}
+				always = no
 			}
 		}
 
@@ -7059,7 +6999,7 @@ country_event = { #Denmark joins the alliance
 			FROM = { add_to_faction = ROOT }
 		}
 		else = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -7068,7 +7008,7 @@ country_event = { #Denmark joins the alliance
 				add_faction_initiative = 1
 				add_to_faction = FROM
 			}
-			ELSE = {
+			else = {
 				set_rule = { can_create_factions = yes }
 				create_faction = DEN_nordic_cooperation_alliance
 				add_to_faction = FROM
@@ -7686,14 +7626,14 @@ country_event = { #Denmark Demands Iceland's Annexation
 				FROM = {
 					has_government = neutrality
 				}
-				has_completed_focus = ICE_the_kingdom_of_iceland
+				always = no
 			}
 			modifier = {
 				factor = 5
 				FROM = {
 					has_government = neutrality
 				}
-				has_completed_focus = ICE_united_we_stand
+				always = no
 			}
 			modifier = {
 				factor = 0.5
@@ -7753,7 +7693,7 @@ country_event = { #Denmark Demands Iceland's Annexation
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ICE_not_our_king
+				always = no
 			}
 		}
 		ROOT = { end_puppet = FROM }
@@ -9943,7 +9883,7 @@ country_event = { #Denmark joins the Axis
 
 		if = {  #Having bypassed "Ask for Support" and not able to complete "Joint Military Program", send event
 			limit = {
-				NOT = { has_completed_focus = DEN_ask_for_support }
+				NOT = { always = no }
 			}
 			GER = {
 				country_event = { id =  denmark_fascist_event.20 days = 7 } 
@@ -10190,9 +10130,9 @@ country_event = { #Forts makes the people feels safe
 
 	trigger = {
 		original_tag = DEN
-		has_completed_focus = DEN_build_a_modern_dannevirke
-		has_completed_focus = DEN_refortify_tunestillingen
-		has_completed_focus = DEN_fortify_the_islands
+		always = no
+		always = no
+		always = no
 		has_war = no
 		has_civil_war = no
 	}
@@ -10492,10 +10432,7 @@ country_event = { #Play Well
 		is_subject = no
 		has_war = no
 		has_civil_war = no
-		power_balance_value = {
-			id = DEN_balance_of_power
-			value < -0.9
-		}
+		always = no
 	}
 
 	mean_time_to_happen = {
