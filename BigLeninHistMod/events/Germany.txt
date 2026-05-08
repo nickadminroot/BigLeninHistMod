@@ -5429,29 +5429,7 @@ country_event = {
 	option = { # This means war!
 		name = germany.60.a
 		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 20
-				strength_ratio = {
-					tag = GER
-					ratio > 0.7
-				}
-				NOT = { has_idea = FRA_disjointed_government }
-			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				NOT = {
-					strength_ratio = { tag = GER ratio > 10 }
-				}
-			}
-			modifier = {
-				factor = 10
-				strength_ratio = { 
-					tag = GER 
-					ratio > 10 
-				}
-			}
+			base = 0
 		}
 
 		add_political_power = -150
@@ -5576,7 +5554,7 @@ country_event = {
 			NOT = { always = no }
 		}
 		ai_chance = {
-			base = 10
+			base = 0
 			modifier = {
 				factor = 10
 				strength_ratio = {
