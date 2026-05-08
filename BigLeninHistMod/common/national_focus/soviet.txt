@@ -9217,7 +9217,6 @@ focus = {
 			}
 
 			set_country_flag = SOV_mobilization_first_wave_completed
-			custom_effect_tooltip = SOV_mobilization_first_wave_tt
 		}
 	}
 
@@ -9247,7 +9246,6 @@ focus = {
 			}
 
 			set_country_flag = SOV_mobilization_second_wave_completed
-			custom_effect_tooltip = SOV_mobilization_second_wave_tt
 		}
 	}
 
@@ -9276,7 +9274,6 @@ focus = {
 				remove_decision = SOV_order_227
 			}
 
-			custom_effect_tooltip = SOV_order_227_added_tt
 		}
 	}
 
@@ -9302,7 +9299,6 @@ focus = {
 				days = 90
 			}
 
-			custom_effect_tooltip = SOV_operation_bagration_tt
 		}
 	}
 

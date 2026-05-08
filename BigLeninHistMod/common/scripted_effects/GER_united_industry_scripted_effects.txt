@@ -57,8 +57,11 @@ GER_united_industry_distributed_aircraft_industry_country_effect = {
 }
 
 GER_united_industry_distributed_aircraft_industry_bloc_effect = {
-	GER = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
-	HUN = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
-	ROM = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
-	BUL = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+	hidden_effect = {	
+		GER = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+		HUN = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+		ROM = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+		BUL = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+	}
+	
 }

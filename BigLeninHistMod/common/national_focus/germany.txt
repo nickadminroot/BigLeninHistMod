@@ -12846,15 +12846,16 @@ focus_tree = {
 	focus = {
 		id = GER_wunderwaffe_rotte
 		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = GER_wunderwaffe_maus }
+		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
-		x = 1
+		x = -3
 		y = 1
-		relative_position_id = GER_wunderwaffe_maus
+		relative_position_id = BLHM_GER_wunderwaffe_program
 		cost = 10
 
 		available = {
 			date > "1942.9.1"
+			NOT = { has_country_flag = GER_wunderwaffe_branch_lock_flag }
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -12957,7 +12958,7 @@ focus_tree = {
 		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = GER_wunderwaffe_maus }
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = GER_wunderwaffe_maus
 		cost = 10
@@ -12975,11 +12976,8 @@ focus_tree = {
 
 			add_ideas = GER_noveyshie_tankovye_razrabotki_idea
 
-			add_tech_bonus = {
-				name = GER_wunderwaffe_e50
-				bonus = 1
-				uses = 1
-				category = cat_medium_armor
+			set_technology = {
+				main_battle_tank_chassis = 1
 			}
 
 			GER_add_or_modify_wunderwaffen = yes

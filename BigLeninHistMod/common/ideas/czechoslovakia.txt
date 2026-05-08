@@ -1,1 +1,29 @@
-ideas = { }
+ideas = { 
+	country = {
+	CZE_integrate_czech_manufacturers_GER_idea_aat = { #For GER_integrate_czech_manufacturers 
+			picture = ARG_rapid_militarization
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				9 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				tank_manufacturer_cost_factor = -0.05
+				military_industrial_organization_funds_gain = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+	}
+	}
+}
