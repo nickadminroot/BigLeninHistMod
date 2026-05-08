@@ -1717,7 +1717,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -1899,7 +1899,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -1976,7 +1976,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2075,7 +2075,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2178,7 +2178,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -6295,7 +6295,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 2
 		available = {
 			OR = {
 				NOT = { has_completed_focus = GER_trade_interdiction }
@@ -6350,7 +6350,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_plan_z
-		cost = 5
+		cost = 2
 		available = {
 			#NOT = { has_completed_focus = GER_high_seas_fleet }
 		}
@@ -6704,7 +6704,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_completed_focus = GER_high_seas_fleet }
 		}
@@ -6962,7 +6962,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 5
+		cost = 2
 		available = {
 			if = {
 				limit = {
@@ -7139,7 +7139,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_construct_aircraft_carriers
-		cost = 5
+		cost = 2
 		available = {
 		}
 
@@ -8723,6 +8723,7 @@ focus_tree = {
 		icon = GFX_focus_GER_strafbataillon
 
 		prerequisite = { focus = GER_army_indoctrination }
+		allow_branch = { always = no }
 
 		x = 0
 		y = 1
@@ -8904,7 +8905,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_army_indoctrination
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 			has_tech = advanced_machine_tools
@@ -8994,9 +8995,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			custom_effect_tooltip = GER_SS_recruitment_tt
+			set_technology = {
+				BLHM_GER_ss_police_tech = 1
+				popup = no
+			}
+			custom_effect_tooltip = BLHM_GER_ss_police_unlocked_tt
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = { always = no }
+
+				custom_effect_tooltip = GER_SS_recruitment_tt
+
+				custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
@@ -9117,6 +9127,7 @@ focus_tree = {
 						}
 					}
 				}
+			}
 			}
 		}
 	}
@@ -9665,6 +9676,7 @@ focus_tree = {
 		id = GER_support_a_coup_in_liechtenstein
 		icon = GFX_focus_generic_liechtenstein_coa
 		prerequisite = { focus = GER_anschluss }
+		allow_branch = { always = no }
 
 		x = 6
 		y = 1
@@ -9870,10 +9882,10 @@ focus_tree = {
 		icon = GFX_focus_GER_danzig_or_war
 		alternate_icon = GFX_focus_GER_danzig_or_war_historical
 
-		prerequisite = { focus = GER_reassert_eastern_claims }
+		prerequisite = { focus = GER_treaty_with_the_ussr }
 		x = 0
 		y = 1
-		relative_position_id = GER_reassert_eastern_claims
+		relative_position_id = GER_treaty_with_the_ussr
 		cost = 3
 
 		will_lead_to_war_with = POL
@@ -10221,6 +10233,43 @@ focus_tree = {
 						state = 141 #Stockholm
 					}
 				}
+		}
+	}
+
+	focus = {
+		id = BLHM_GER_develop_portuguese_mining
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_demands_to_sweden }
+
+		x = 1
+		y = 0
+		relative_position_id = GER_demands_to_sweden
+		cost = 5
+
+		available = {
+			country_exists = POR
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		complete_tooltip = {
+			custom_effect_tooltip = BLHM_GER_develop_portuguese_mining_tt
+		}
+
+		completion_reward = {
+			POR = {
+				set_technology = {
+					excavation1 = 1
+					excavation2 = 1
+					excavation3 = 1
+					excavation4 = 1
+					excavation5 = 1
+				}
+			}
+			add_timed_idea = {
+				idea = BLHM_GER_portuguese_mining_investments
+				days = 60
+			}
 		}
 	}
 
@@ -11499,10 +11548,10 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
-		x = -1
+		prerequisite = { focus = GER_reassert_eastern_claims }
+		x = 0
 		y = 1
-		relative_position_id = GER_reorganize_the_wehrmacht
+		relative_position_id = GER_reassert_eastern_claims
 		cost = 5
 		
 		available = {
@@ -11558,7 +11607,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_molotov_ribbentrop_pact
-		cost = 10
+		cost = 5
 		
 		bypass = { 
 			OR = {
@@ -15350,9 +15399,10 @@ focus_tree = {
 	focus = {
 		id = GER_diplomatic_pressure_on_potential_allies
 		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = GER_anschluss }
 		x = -4
-		y = 2
-		relative_position_id = GER_loyalty_to_the_fuhrer
+		y = 1
+		relative_position_id = GER_anschluss
 		cost = 5
 
 		available = {
@@ -15580,10 +15630,11 @@ focus_tree = {
 	focus = {
 		id = BLHM_GER_invest_in_italian_industry
 		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_anschluss }
 
-		x = 10
-		y = 0
-		relative_position_id = GER_the_four_year_plan
+		x = -6
+		y = 1
+		relative_position_id = GER_anschluss
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }

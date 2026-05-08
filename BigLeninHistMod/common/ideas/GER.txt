@@ -1231,10 +1231,27 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SOV
-				breakthrough_bonus_against = 0.15
-				defense_bonus_against = 0.05
+				breakthrough_bonus_against = 0.075
+				defense_bonus_against = 0.025
 			}
 
+		}
+
+		BLHM_GER_portuguese_mining_investments = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			picture = generic_consumer_goods
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
 		}
 
 		GER_alpine_warfare_idea = {
