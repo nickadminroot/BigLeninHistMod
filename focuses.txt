@@ -1,0 +1,50 @@
+  |---|---|---|
+  | BLHM_GER_develop_portuguese_mining | Develop Portuguese Mining | Our war machine demands ever greater quantities of resources, and the current output of our partners is
+  not enough. The high command has proposed expanding the deposits in Portugal to secure more tungsten for our tanks. |
+  | BLHM_GER_invest_in_italian_industry | Invest in Italian Industry | Italy is too industrially weak to be a reliable ally. We must help it move onto a war footing as quickly
+  as possible. |
+  | BLHM_GER_libyan_industry | Libyan Industry | Prospecting and developing Libya's resource-rich deposits will provide additional materials for the war machine. |
+  | BLHM_GER_mediterranean_exercises | Mediterranean Exercises | The command has decided that fighting on several fronts requires better preparation of our allies for the
+  coming war. |
+  | BLHM_GER_prepare_east_african_sabotage | Prepare Sabotage in East Africa | Germany will prepare disruptions against enemy supply routes to be better positioned for the
+  African campaign. |
+  | BLHM_GER_spanish_african_bases | Treaty with Spain for African Bases | Disrupting enemy trade routes effectively requires deep logistics. Spain's neutral status works in
+  our favor: the Allies cannot attack their bases, while Germany can use them to repair the fleet. |
+  | BLHM_GER_wunderwaffe_program | Wunderwaffe | The tank and rocket programs are ready to feed a dedicated wonder weapons branch. |
+  | GER_consolidate_management_of_minor_powers | Consolidate Management of Minor Powers | Hungary, Romania, and Bulgaria are folded into a single industrial and political
+  framework under German leadership. |
+  | GER_develop_hungarian_bauxite_deposits | Develop Hungarian Bauxite Deposits | Hungary's bauxite reserves can be expanded and organized for German industrial use. |
+  | GER_diplomatic_pressure_on_potential_allies | Diplomatic Pressure on Potential Allies | Germany needs reliable partners on the road to continental dominance, and ideology
+  is part of the bargain. |
+  | GER_east_front_continue_offensive | Continue the Offensive | We cannot allow the enemy to regroup. The success of the entire Blitzkrieg is at stake. The offensive must
+  continue, no matter the cost! |
+  | GER_east_front_defensive_tactics | Study Defensive Tactics | Enemy offensive operations are growing exponentially. We must turn to the experience of the Great War, dig in,
+  and exhaust the enemy. |
+  | GER_east_front_destroy_partisans | Destroy Partisan Detachments | The command has decided that one of the chief enemies Germany has ignored for too long is the partisans.
+  It is time to deal with them directly! |
+  | GER_east_front_final_blow | Final Blow | Germany has concentrated on the Eastern Front. We must make the final push to victory. |
+  | GER_east_front_fortify_lines | Fortify the Lines | It would be rash not to prepare for winter. Germany must not repeat Napoleon's mistakes; we must plan carefully and wait
+  out the winter in warmth. |
+  | GER_east_front_prepare_long_war | Prepare for a Long War | Operation Barbarossa has failed, but Germany must not give up. We must restore morale, rebuild the economy, and
+  continue the war. |
+  | GER_east_front_prepare_second_winter | Prepare for the Second Winter | The experience of 1941 showed that winter requires thorough preparation, or Germany risks losing
+  more men to the cold than to the frontline. |
+  | GER_east_front_summer_campaign | Summer Campaign | The Reich's war machine is stronger than ever. We failed to break the enemy in 1941, but this summer fortune will surely
+  be on our side. |
+  | GER_east_front_supply_routes | Improve Supply Routes | The front line is badly overstretched. Fuel and equipment barely reach the forward edge. We must improve supply so
+  the troops can keep fighting. |
+  | GER_east_front_victory_or_death | Victory or Death | Either we win, or Germany ceases to exist. |
+  | GER_east_front_win_before_winter | Win Before Winter | We must not stop for a single day on the road to victory. It is closer than ever! |
+  | GER_expand_oil_extraction_in_ploesti | Expand Oil Extraction in Ploesti | German influence over Romanian industry can unlock a larger and steadier flow of oil toward the
+  Reich. |
+  | GER_integrate_czech_manufacturers | Missing English localization | Missing English localization |
+  | GER_sofia_initiative | Sofia Initiative | Bulgaria must remain firmly inside Germany's sphere of influence as the crisis deepens. |
+  | GER_wunderwaffe_e50 | E-50 | Tank production must be unified if Germany is to maximize the number of vehicles rolling off the line each month. |
+  | GER_wunderwaffe_e50_unification | E-50 Unification | Standardization removes duplication and restores industrial efficiency. |
+  | GER_wunderwaffe_maus | Maus | Germany will dominate the battlefield with a new class of super-heavy tanks. |
+  | GER_wunderwaffe_me262 | Me-262 | Germany will dominate the skies with a new generation of jet aircraft. |
+  | GER_wunderwaffe_rotte | Rotte | A land cruiser once sounds absurd, but the command staff sees the potential in such a machine. |
+  | SOV_mobilization_first_wave | First Wave of Mobilization | We need to mobilize reserves in order to effectively counter the enemy. |
+  | SOV_mobilization_second_wave | Second Wave of Mobilization | We need to mobilize reserves in order to effectively counter the enemy. |
+  | SOV_operation_bagration | Operation Bagration | Time to drive the enemy from our lands! |
+  | SOV_order_227 | Order 227 | The Leader ordered us not to retreat, and we had no intention of doing so, but now it is written in stone. |
