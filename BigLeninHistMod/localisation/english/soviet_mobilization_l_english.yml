@@ -23,11 +23,27 @@
  SOV_bagration: "Bagration"
  SOV_bagration_desc: "Massive Soviet operation to liberate Belarus."
 
- # Custom Tooltips
- SOV_reserve_mobilization_ns_tt: "Reserve Mobilization: Mobilization Speed §G+5%%§!, Conscription §G+3%%§!"
- SOV_deep_reserve_mobilization_ns_tt: "Deep Reserve Mobilization: Training Time §G-10%%§!, Organization Regain §G+5%%§!"
- SOV_war_economy_production_speed_tt: "§G+5%§! Construction Military Factory Speed"
- SOV_mobilization_first_wave_tt: "170 infantry divisions created: Novobrantsy"
- SOV_mobilization_second_wave_tt: "170 infantry divisions created: Novobrantsy"
- SOV_order_227_added_tt: "Added national spirit 'Not One Step Back'. Removed decision 'Order 227'."
- SOV_operation_bagration_tt: "Received national spirit 'Bagration' for 90 days."
+  # Custom Tooltips
+  SOV_reserve_mobilization_ns_tt: "Reserve Mobilization: Mobilization Speed §G+5%%§!, Conscription §G+3%%§!"
+  SOV_deep_reserve_mobilization_ns_tt: "Deep Reserve Mobilization: Training Time §G-10%%§!, Organization Regain §G+5%%§!"
+  SOV_war_economy_production_speed_tt: "§G+5%§! Construction Military Factory Speed"
+  SOV_mobilization_first_wave_tt: "170 infantry divisions created: Novobrantsy"
+  SOV_mobilization_second_wave_tt: "170 infantry divisions created: Novobrantsy"
+  SOV_order_227_added_tt: "Added national spirit 'Not One Step Back'. Removed decision 'Order 227'."
+  SOV_operation_bagration_tt: "Received national spirit 'Bagration' for 90 days."
+  SOV_optimize_production_lines_ns_tt: "§G+5%§! Factory Efficiency Gain, §G+5%§! Starting Efficiency, §G+5%§! Factory Output. Tank Cost §G-2%§!, Tank Reliability §G+5%§!"
+  SOV_shift_to_armaments_production_ns_tt: "§G+15%§! Military Factory Construction Speed. Civilian Factory Construction Speed bonus removed."
+  SOV_superior_war_machines_ns_tt: "Tank Designer Cost §G-25%§!. Tank School replaced with Reorganized Tank Production (§G-5%§! Medium/Heavy Tank Cost, §R-7%§! Tank Reliability)"
+  SOV_national_specialists_tt: "§G+5%§! Factory Output, §G+5%§! Production Efficiency Growth, §G-50%§! Industrial Concern Cost"
+
+  # Idea Names
+  SOV_synthetic_rubber_industry: "Synthetic Rubber Industry"
+  SOV_optimized_tank_buff: "Optimized Tank Production"
+  SOV_soviet_tank_school: "Soviet Tank School"
+  SOV_reorganized_tank_production: "Reorganized Tank Production"
+
+  # While Loop Tooltips
+  SOV_heavy_industry_tt: "Constructs §G5§! Industrial Complexes in controlled states with available building slots."
+  SOV_synthetic_rubber_tt: "Builds §G2§! Synthetic Refineries in Voronezh, §G2§! in Tula, and up to §G6§! additional Refineries across controlled states."
+  SOV_eastern_development_tt: "Constructs up to §G4§! Industrial Complexes in controlled states with available building slots."
+  SOV_urals_development_tt: "Constructs up to §G4§! Industrial Complexes in controlled states with available building slots."

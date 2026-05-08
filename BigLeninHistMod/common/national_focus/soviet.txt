@@ -206,22 +206,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			IF = {
+			set_temp_variable = { SOV_heavy_industry_counter = 0 }
+			while_loop_effect = {
 				limit = {
-					any_owned_state = {
-						is_controlled_by = ROOT 
-						industrial_complex > 0
+					check_variable = { SOV_heavy_industry_counter = 4 compare = less_than }
+					any_controlled_state = {
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
 							include_locked = yes
 						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
 					}
 				}
-				random_owned_controlled_state = {
+				random_controlled_state = {
 					limit = {
-						industrial_complex > 0
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
@@ -234,84 +232,10 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
+				add_to_temp_variable = { SOV_heavy_industry_counter = 1 }
 			}
-			ELSE = {
-				random_owned_controlled_state = {
-					limit = {
-						# industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-			IF = {
-				limit = {
-					check_variable = { num_owned_states > 1}
-					any_owned_state = {
-						is_controlled_by = ROOT 
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					check_variable = { num_owned_states > 1 }
-				}
-				random_owned_controlled_state = {
-					limit = {
-						# industrial_complex > 0
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = SOV_finish_five_year_plan_2IC
-				}
-			}
+			custom_effect_tooltip = SOV_heavy_industry_tt
 		}
 	}
 
@@ -480,7 +404,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
-				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
+				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
 			}
 			if = {
 				limit = {
@@ -794,8 +718,9 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 } #Add efficiency gain
 			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.05 } #Add efficiency start
-			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.02 } #Add small output bonus
+			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.05 } #Add output bonus
 			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt
+			add_ideas = SOV_optimized_tank_buff
 
 			add_tech_bonus = {
 				name = SOV_optimize_production_lines
@@ -814,7 +739,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -919,8 +844,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_tech = rubber_processing
-			
 			
 			has_full_control_of_state = 219 #MOSCOW
 			OR = {
@@ -932,7 +855,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			# ADD SYNTHETICS IN HISTORICAL STATES (VORONEZH AND TULA)
+			# BUILD SYNTHETIC REFINERIES IN HISTORICAL STATES (VORONEZH AND TULA)
 			if = {
 				limit = {
 					has_full_control_of_state = 260 #VORONEZH
@@ -973,6 +896,41 @@ focus_tree = {
 					path = { 6380 6414 9348 6290 6396 6262 }
 				}
 			}
+			# BUILD ADDITIONAL REFINERIES ACROSS THE COUNTRY
+			set_temp_variable = { SOV_synthetic_rubber_counter = 0 }
+			while_loop_effect = {
+				limit = {
+					check_variable = { SOV_synthetic_rubber_counter = 6 compare = less_than }
+					any_controlled_state = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_synthetic_rubber_counter = 1 }
+			}
+			custom_effect_tooltip = SOV_synthetic_rubber_tt
+			add_ideas = SOV_synthetic_rubber_industry
+			set_technology = { rubber_processing = 1 }
 			add_tech_bonus = {
 				name = SOV_synthetic_rubber
 				bonus = 0.75
@@ -1475,12 +1433,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_temp_variable = { SOV_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
-			if = {
+			set_temp_variable = { SOV_eastern_dev_counter = 0 }
+			while_loop_effect = {
 				limit = {
-					408 = { #VLADIVOSTOK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
+					check_variable = { SOV_eastern_dev_counter = 4 compare = less_than }
+					any_controlled_state = {
+						NOT = { has_state_flag = SOV_eastern_dev_flag }
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
@@ -1488,40 +1446,16 @@ focus_tree = {
 						}
 					}
 				}
-				408 = { #VLADIVOSTOK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Irkutsk replaces Vladivostok if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					566 = { #IRKUTSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
+				random_controlled_state = {
+					limit = {
+						NOT = { has_state_flag = SOV_eastern_dev_flag }
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
 							include_locked = yes
 						}
 					}
-				}
-				566 = { #IRKUTSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					set_state_flag = SOV_eastern_dev_flag
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -1529,62 +1463,9 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				add_to_temp_variable = { SOV_eastern_dev_counter = 1 }
 			}
-
-			if = {
-				limit = {
-					409 = { #KHABAROVSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				409 = { #KHABAROVSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Ulan Ude replaces Khabarovsk if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					564 = { #ULAN UDE
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				564 = { #ULAN UDE
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+			custom_effect_tooltip = SOV_eastern_development_tt
 		}
 	}
 
@@ -1668,12 +1549,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_temp_variable = { SOV_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
-			if = {
+			set_temp_variable = { SOV_urals_dev_counter = 0 }
+			while_loop_effect = {
 				limit = {
-					572 = { #CHELYABISNK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
+					check_variable = { SOV_urals_dev_counter = 4 compare = less_than }
+					any_controlled_state = {
+						NOT = { has_state_flag = SOV_urals_dev_flag }
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
@@ -1681,40 +1562,16 @@ focus_tree = {
 						}
 					}
 				}
-				572 = { #CHELYABISNK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Magnitogorsk replaces Chelyabinsk if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					582 = { #MAGNITOGORSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
+				random_controlled_state = {
+					limit = {
+						NOT = { has_state_flag = SOV_urals_dev_flag }
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
 							include_locked = yes
 						}
 					}
-				}
-				582 = { #MAGNITOGORSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+					set_state_flag = SOV_urals_dev_flag
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -1722,62 +1579,9 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				add_to_temp_variable = { SOV_urals_dev_counter = 1 }
 			}
-
-			if = {
-				limit = {
-					573 = { #ZLATOUST
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				573 = { #ZLATOUST
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Sverdlovsk replaces Zlatoust if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					653 = { #SVERDLOVSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				653 = { #SVERDLOVSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+			custom_effect_tooltip = SOV_urals_development_tt
 		}
 	}
 
@@ -1790,7 +1594,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -4211,6 +4015,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
+			has_war_with = GER
 			if = {
 				limit = {
 					has_dlc = "No Step Back"
@@ -4226,6 +4031,8 @@ focus_tree = {
 
 		completion_reward = {
 			set_variable = { SOV_defense_industry_tank_manufacturer_cost_factor = -0.25 }
+			remove_ideas = SOV_soviet_tank_school
+			add_ideas = SOV_reorganized_tank_production
 			custom_effect_tooltip = SOV_superior_war_machines_ns_tt
 
 			add_tech_bonus = {
