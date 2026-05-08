@@ -4,8 +4,8 @@ state={
 	manpower = 469136
 	state_category = town
 	resources = {
-		rubber = 30 #was 150 # was: 300
-		oil = 30 #initial distribution
+		rubber = 2 #was 150 # was: 300
+		oil = 2 #initial distribution
 	}
 	history={
 		owner = ITA

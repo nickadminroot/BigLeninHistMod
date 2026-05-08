@@ -257,7 +257,7 @@ AUS_austromarxism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -286,7 +286,7 @@ AUS_austrostalinism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -315,7 +315,7 @@ AUS_austrotrotskyism = {
 	max_planning_factor = AUS_austromarxism_max_planning_factor
 	remove_trigger = {
 		AND = {
-			has_completed_focus = AUS_revolution
+			always = no
 			NOT = {
 				has_government = communism
 			}
@@ -746,6 +746,7 @@ GER_airforce_modifier = { #Airforce NS
 	air_strategic_bomber_bombing_factor = GER_military_air_strategic_bomber_bombing_factor
 	air_range_factor = GER_military_air_range_factor
 	air_fuel_consumption_factor = GER_military_air_fuel_consumption_factor
+	air_weather_penalty = GER_military_air_weather_penalty
 }
 
 GER_airforce_communist_modifier = { #Communnist Airforce NS
@@ -1605,8 +1606,8 @@ COG_rwandan_separatism_modifier = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = RWA } # ROOT refers to the state on which the modifier is added
 			COG = {
-				has_completed_focus = COG_the_pro_german_mwami_focus
-				has_completed_focus = COG_the_umwami_of_rwanda_focus
+				always = no
+				always = no
 			}
 		}
 		
@@ -1627,7 +1628,7 @@ COG_burundian_separatism_modifier = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = BRD } # ROOT refers to the state on which the modifier is added
 			COG = {
-				has_completed_focus = COG_the_mwami_of_burundi_focus
+				always = no
 			}
 		}
 	}
@@ -1833,4 +1834,16 @@ sp_land_stronghold_network_collapse_workers_drafted = {
 	repair_speed_rail_way_factor = -0.5
 	local_resources_factor = -0.5
 	state_production_speed_buildings_factor = -0.5
+}
+
+BLHM_GER_last_effort_modifier = {
+	icon = GFX_modifiers_GER_socialist_movement
+	stability_weekly = BLHM_GER_last_effort_stability_weekly
+}
+
+BLHM_GER_high_naval_expenses_modifier = {
+	icon = GFX_goal_generic_construct_naval_dockyard
+	industrial_capacity_factory = -0.07
+	consumer_goods_factor = 0.05
+	production_speed_buildings_factor = -0.05
 }

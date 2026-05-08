@@ -82,7 +82,7 @@ recruit_character = CAN_r_b_bennett
 recruit_character = CAN_louis_st_laurent
 recruit_character = CAN_lindsay_gordon
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Trial of Allegiance"
 	}

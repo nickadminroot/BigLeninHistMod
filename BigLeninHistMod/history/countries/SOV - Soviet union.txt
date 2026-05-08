@@ -890,7 +890,7 @@ add_ideas = {
 	}
 
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Step Back"
 		}

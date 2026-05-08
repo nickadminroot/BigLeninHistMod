@@ -627,7 +627,7 @@
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = { has_tech = basic_train }
 				}

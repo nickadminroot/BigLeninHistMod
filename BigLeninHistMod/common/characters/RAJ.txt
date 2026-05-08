@@ -45,7 +45,7 @@ characters={
 					original_tag = RAJ
 				}
 				visible = {
-					NOT = { has_completed_focus = RAJ_incorporation_of_the_east_india_company }
+					NOT = { always = no }
 					has_completed_focus = RAJ_mahatma
 				}
 				available = {
@@ -81,7 +81,7 @@ characters={
 						limit = {
 							has_dlc = "Together for Victory"
 						}
-						has_completed_focus = RAJ_all_india_forward_bloc 
+						always = no 
 					}
 					if = {
 						limit = {
@@ -128,7 +128,7 @@ characters={
 					OR = {
 						has_country_flag = has_swayed_bose_to_communism
 						ROOT = { 
-							has_completed_focus = RAJ_forward_bloc 
+							always = no 
 							NOT = { has_country_flag = has_arrested_bose }
 						}
 					}
@@ -144,7 +144,7 @@ characters={
 					OR = {
 						has_country_flag = has_swayed_bose_to_communism
 						ROOT = { 
-							has_completed_focus = RAJ_forward_bloc 
+							always = no 
 							NOT = { has_country_flag = has_arrested_bose }
 						}
 					}
@@ -154,7 +154,7 @@ characters={
 					OR = {
 						has_country_flag = has_swayed_bose_to_communism
 						AND = {
-							has_completed_focus = RAJ_forward_bloc 
+							always = no 
 							NOT = { has_country_flag = has_arrested_bose }
 						}
 					}
@@ -333,10 +333,10 @@ characters={
 			visible = {
 				OR = {
 					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 					}
 					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 						has_completed_focus = RAJ_keep_british_generals
 					}
 				}
@@ -363,10 +363,10 @@ characters={
 			visible = {
 				OR = {
 					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 					}
 					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 						has_completed_focus = RAJ_keep_british_generals
 					}
 				}
@@ -394,10 +394,10 @@ characters={
 			visible = {
 				OR = {
 					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 					}
 					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 						has_completed_focus = RAJ_keep_british_generals
 					}
 				}
@@ -425,10 +425,10 @@ characters={
 			visible = {
 				OR = {
 					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 					}
 					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 						has_completed_focus = RAJ_keep_british_generals
 					}
 				}
@@ -455,10 +455,10 @@ characters={
 			visible = {
 				OR = {
 					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 					}
 					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
+						always = no
 						has_completed_focus = RAJ_keep_british_generals
 					}
 				}
@@ -556,7 +556,7 @@ characters={
 			planning_skill=1
 			logistics_skill=4
 
-			visible = {  has_completed_focus = RAJ_azad_hind_dlc }
+			visible = {  always = no }
 		}
 
 		advisor={
@@ -565,8 +565,8 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
-			visible = {   has_completed_focus = RAJ_azad_hind_dlc } 
-			available = { has_completed_focus = RAJ_azad_hind_dlc }
+			visible = {   always = no } 
+			available = { always = no }
 			traits = {
 				governor_of_the_andaman_islands 
 			}
@@ -596,7 +596,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 		}
 	
 	}
@@ -623,7 +623,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 		}
 
 		advisor={
@@ -633,10 +633,10 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 			available = {
 
-				has_completed_focus = RAJ_azad_hind_dlc
+				always = no
 				
 			}
 			traits = {
@@ -965,9 +965,9 @@ characters={
 				}
 
 				available = {
-					has_completed_focus = RAJ_seek_domestic_allies
+					always = no
 				}
-				visible = { has_completed_focus = RAJ_seek_domestic_allies }
+				visible = { always = no }
 			}
 		}
 	}
@@ -1199,7 +1199,7 @@ characters={
 					original_tag = AFG
 					AND = {
 						original_tag = RAJ
-						has_completed_focus = RAJ_the_mughal_uprising
+						always = no
 					}
 				}
 			}
@@ -1221,7 +1221,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
+					always = no
 				}
 			}
 		}
@@ -1248,7 +1248,7 @@ characters={
 					original_tag = AFG
 					AND = {
 						original_tag = RAJ
-						has_completed_focus = RAJ_the_mughal_uprising
+						always = no
 					}
 				}
 			}
@@ -1270,7 +1270,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
+					always = no
 				}
 			}
 		}
@@ -1314,7 +1314,7 @@ characters={
 			logistics_skill=3
 			visible = {
 				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
+					always = no
 				}	
 			}
 		}
@@ -1632,7 +1632,7 @@ characters={
 							has_dlc = "Graveyard of Empires"
 						}
 					}
-					has_completed_focus = RAJ_indian_national_congress 
+					always = no 
 				}
 				else = {
 					has_completed_focus = RAJ_a_congress_resurgent
@@ -1678,7 +1678,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
+					always = no 
 				}
 				if = {
 					limit = {
@@ -1716,10 +1716,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				has_completed_focus = RAJ_seek_domestic_allies
+				always = no
 			}
 
-			visible = { has_completed_focus = RAJ_seek_domestic_allies }
+			visible = { always = no }
 			traits = {
 				social_agitator
 			}
@@ -1744,10 +1744,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				has_completed_focus = RAJ_seek_domestic_allies
+				always = no
 			}
 
-			visible = { has_completed_focus = RAJ_seek_domestic_allies }
+			visible = { always = no }
 			traits = {
 				revolutionary_barrister
 			}
@@ -1851,7 +1851,7 @@ characters={
 				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
-				NOT = { has_completed_focus = RAJ_incorporation_of_the_east_india_company }
+				NOT = { always = no }
 			}
 			available = {
 			}
@@ -1911,10 +1911,10 @@ characters={
 				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
-				has_completed_focus = RAJ_seek_japanese_support
+				always = no
 			}
 			available = {
-				has_completed_focus = RAJ_seek_japanese_support
+				always = no
 			}
 			traits = {
 				exiled_dissident 
@@ -2062,7 +2062,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2123,7 +2123,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2184,7 +2184,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2245,7 +2245,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2363,7 +2363,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2424,7 +2424,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2485,7 +2485,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2546,7 +2546,7 @@ characters={
 						}
 						AND = {
 							original_tag = RAJ
-							has_completed_focus = RAJ_mughal_court
+							always = no
 						}
 					}
 				}
@@ -2581,7 +2581,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_lobby_parliment
+				always = no
 			}
 			traits = {
 				RAJ_conservationalist
@@ -2605,7 +2605,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_rally_the_indian_left
+				always = no
 			}
 			traits = {
 				RAJ_freedom_fighter
@@ -2629,7 +2629,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_rally_the_indian_left
+				always = no
 			}
 			traits = {
 				RAJ_trade_union_leader
@@ -2652,7 +2652,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_rally_the_indian_left
+				always = no
 			}
 			traits = {
 				RAJ_founder_of_the_csp
@@ -2675,7 +2675,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_rally_the_indian_left
+				always = no
 			}
 			traits = {
 				RAJ_union_leader
@@ -2699,7 +2699,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_rally_the_indian_left
+				always = no
 			}
 			traits = {
 				RAJ_social_reformer
@@ -2855,7 +2855,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				army_infantry_2
@@ -2881,7 +2881,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				army_logistics_1
@@ -2907,7 +2907,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				army_commando_2
@@ -2933,7 +2933,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				army_cavalry_2
@@ -2959,7 +2959,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				army_regrouping_2
@@ -2983,7 +2983,7 @@ RAJ_GOE_william_rhodes_davis= {
 			idea_token = RAJ_GOE_mughal_theorist
 			ledger = army
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			allowed = {
 				original_tag = RAJ
@@ -3006,7 +3006,7 @@ RAJ_GOE_william_rhodes_davis= {
 			slot = navy_chief
 			idea_token = RAJ_GOE_mughal_navy_guy
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			allowed = {
 				original_tag = RAJ
@@ -3030,7 +3030,7 @@ RAJ_GOE_william_rhodes_davis= {
 		advisor={
 			slot = air_chief
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			idea_token = RAJ_GOE_mughal_air_guy
 			allowed = {
@@ -3084,7 +3084,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				captain_of_industry 
@@ -3106,7 +3106,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				war_industrialist 
@@ -3128,7 +3128,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				silent_workhorse 
@@ -3150,7 +3150,7 @@ RAJ_GOE_william_rhodes_davis= {
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_the_mughal_uprising
+				always = no
 			}
 			traits = {
 				backroom_backstabber 

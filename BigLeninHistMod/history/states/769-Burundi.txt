@@ -5,7 +5,7 @@ state = {
 	manpower = 2145731
 	history = {
 		owner = BEL
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}

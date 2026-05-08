@@ -9,7 +9,7 @@ peace_action_modifiers = {
         enable = {
             ROOT = {
                 original_tag = DEN
-                has_completed_focus = DEN_secure_danish_freedom
+                always = no
                 OR = {
                     has_government = fascism
                     has_government = communism
@@ -35,7 +35,7 @@ peace_action_modifiers = {
         enable = {
             ROOT = {
                 original_tag = DEN
-                has_completed_focus = DEN_secure_danish_freedom
+                always = no
             }
             FROM.FROM.FROM = {
                 has_state_flag = DEN_buffert_zone_state_flag
@@ -50,7 +50,7 @@ peace_action_modifiers = {
         enable = {
             ROOT = {
                 original_tag = DEN
-                 has_completed_focus = DEN_secure_danish_freedom  
+                 always = no  
             }
             FROM.FROM = {
                 original_tag = var:DEN.DEN_overlord_nation
@@ -65,7 +65,7 @@ peace_action_modifiers = {
         enable = {
             ROOT = {
                 original_tag = DEN
-                has_completed_focus = DEN_avenging_1864
+                always = no
             }
             FROM.FROM.FROM = {
                 has_state_flag = DEN_southern_baltic_sea_state_flag

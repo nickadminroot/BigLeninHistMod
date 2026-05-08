@@ -169,12 +169,12 @@ GER_austro_hungarian_empire = {
 		OR = {
 			GER = { 
 				OR = {
-					has_completed_focus = GER_rekindle_imperial_sentiment 
-					has_completed_focus = GER_rekindle_imperial_sentiment_ww 
+					always = no 
+					always = no 
 				}
 			}
 			TUR = {
-				has_completed_focus = TUR_press_the_austro_hungarian_claim
+				always = no
 			}
 		}
 	}
@@ -221,7 +221,7 @@ GER_middle_eastern_trade_cat = {
 	priority = 7
 
 	visible = {
-		has_completed_focus = GER_influence_the_middle_east
+		always = no
 	}
 }
 
@@ -237,11 +237,11 @@ GER_influence_countries_cat = {
 
 	visible = {
 		OR = {
-			has_completed_focus = GER_influence_the_baltics
-			has_completed_focus = GER_influence_the_benelux
-			has_completed_focus = GER_influence_the_middle_east
-			has_completed_focus = GER_german_hegemony_in_the_middle_east
-			has_completed_focus = GER_sway_the_balkans
+			always = no
+			always = no
+			always = no
+			always = no
+			always = no
 		}
 	}
 }
@@ -258,11 +258,11 @@ GER_invite_to_faction_cat = {
 
 	visible = {
 		OR = {
-			has_completed_focus = GER_influence_the_baltics
-			has_completed_focus = GER_influence_the_benelux
-			has_completed_focus = GER_influence_the_middle_east
-			has_completed_focus = GER_german_hegemony_in_the_middle_east
-			has_completed_focus = GER_sway_the_balkans
+			always = no
+			always = no
+			always = no
+			always = no
+			always = no
 		}
 	}
 }
@@ -306,7 +306,7 @@ GER_south_east_asian_natural_wealth_cat = {
 	priority = 6
 
 	visible = {
-		has_completed_focus = GER_south_east_asian_natural_wealth
+		always = no
 	}
 }
 
@@ -321,9 +321,9 @@ GER_a_fourth_silesian_uprising_cat = {
 	priority = 150
 
 	visible = {
-		has_completed_focus = GER_oppose_hitler_ww
+		always = no
 		NOT = {
-			has_completed_focus = GER_tend_to_the_future_of_germany
+			always = no
 		}
 	}
 }
@@ -339,7 +339,7 @@ GER_waning_patience_within_the_kriegsmarine_cat = {
 	priority = 100
 
 	visible = {
-		has_completed_focus = GER_oppose_hitler_ww
+		always = no
 		has_country_flag = GER_promised_erich_raeder_a_great_navy_flag
 	}
 }
@@ -355,7 +355,7 @@ GER_rebuild_the_nation_cat = {
 	priority = 6
 
 	visible = {
-		has_completed_focus = GER_revitalize_the_nation
+		always = no
 	}
 }
 
@@ -371,10 +371,10 @@ GER_weltpolitik_cat = {
 
 	visible = {
 		OR = {
-			has_completed_focus = GER_weltpolitik
-			has_completed_focus = GER_mittelafrika
-			has_completed_focus = GER_negotiate_old_colonies_in_the_east
-			has_completed_focus = GER_ally_chiang_kai_shek
+			always = no
+			always = no
+			always = no
+			always = no
 		}
 	}
 
@@ -414,7 +414,7 @@ GER_realpolitik_cat = {
 	priority = 9
 
 	visible = {
-		has_completed_focus = GER_realpolitik
+		always = no
 	}
 }
 
@@ -429,7 +429,7 @@ GER_mitteleuropa_allied_trade_cat = {
 	priority = 6
 
 	visible = {
-		has_completed_focus = GER_trade_agreements
+		always = no
 	}
 }
 
@@ -444,7 +444,7 @@ GER_mitteleuropa_economic_integration_cat = {
 	priority = 4
 
 	visible = {
-		has_completed_focus = GER_integrated_economies
+		always = no
 	}
 }
 
@@ -523,7 +523,7 @@ GER_volkskommissariats_cat = {
 	visible = {
 		is_subject = no
 		has_government = communism
-		has_completed_focus = GER_establish_volkskommissariats
+		always = no
 	}
 
 }
@@ -543,7 +543,7 @@ GER_spreading_the_red_flame_cat = {
 	visible = {
 		is_subject = no
 		has_government = communism
-		has_completed_focus = GER_spark_the_flame_of_revolution
+		always = no
 	}
 }
 
@@ -559,7 +559,7 @@ GER_industrial_relocation_cat = {
 	visible = {
 		is_subject = no
 		NOT = { has_war_with = SOV }
-		has_completed_focus = GER_factories_for_resources
+		always = no
 		NOT = { has_country_flag = GER_SOV_no_industrial_relocation_flag }
 	}
 	
@@ -577,7 +577,7 @@ GER_anti_colonialism_category = {
 
 	visible = {
 		has_dlc = "Gotterdammerung"
-		has_completed_focus = GER_root_out_imperialism
+		always = no
 	}
 
 	on_map_area = {
@@ -617,5 +617,37 @@ GER_united_industry_dec_cat = {
 
 	visible = {
 		has_completed_focus = GER_consolidate_management_of_minor_powers
+	}
+}
+
+
+GER_mediterranean_operations_cat = {
+	icon = generic_operation
+
+	allowed = {
+		original_tag = GER
+	}
+
+	priority = 7
+	visible_when_empty = no
+
+	visible = {
+		has_completed_focus = BLHM_GER_prepare_east_african_sabotage
+		NOT = { has_country_flag = BLHM_GER_plan_scorpion_completed }
+	}
+}
+
+BLHM_GER_last_effort_cat = {
+	priority = 8
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		has_country_flag = GER_unlock_last_effort_volkssturm
 	}
 }

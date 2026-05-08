@@ -143,6 +143,74 @@ ideas = {
 			}
 		}
 
+		GER_united_industry_military_exercises_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
+		GER_united_industry_radio_exchange_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_radio_concern
+			removal_cost = -1
+
+			modifier = {
+				coordination_bonus = 0.03
+			}
+		}
+
+		GER_united_industry_vienna_research_center_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		GER_united_industry_distributed_aircraft_industry_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_air_bonus
+			removal_cost = -1
+
+			modifier = {
+				aircraft_manufacturer_cost_factor = -0.05
+			}
+		}
+
 		rhineland_challenge_met = {
 			
 			allowed = {
@@ -1163,10 +1231,27 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SOV
-				breakthrough_bonus_against = 0.15
-				defense_bonus_against = 0.05
+				breakthrough_bonus_against = 0.075
+				defense_bonus_against = 0.025
 			}
 
+		}
+
+		BLHM_GER_portuguese_mining_investments = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			picture = generic_consumer_goods
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
 		}
 
 		GER_alpine_warfare_idea = {
@@ -3880,7 +3965,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						is_subject = no
 						communism > 0.39 # It needs to be 40% or higher
@@ -3909,7 +3994,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						is_subject = no
 					}
@@ -3937,7 +4022,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						is_subject = no
 					}
@@ -3965,7 +4050,7 @@ ideas = {
 			}
 
 			on_remove = {
-				IF = {
+				if = {
 					limit = {
 						is_subject = no
 					}
@@ -4388,6 +4473,143 @@ ideas = {
 				army_infantry_attack_factor = 0.05
 			}
 		}
+
+		GER_east_front_blitzkrieg_triumph = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_strength_factor = -0.20
+				army_speed_factor = 0.10
+				army_org_factor = -0.05
+				army_org_regain = -0.10
+			}
+		}
+
+		GER_east_front_winter_preparation = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+
+			modifier = {
+				attrition = -0.03
+				acclimatization_cold_climate_gain_factor = -0.20
+				army_defence_factor = 0.30
+				max_dig_in_factor = 0.10
+				max_dig_in = 5
+			}
+		}
+
+		GER_east_front_summer_offensive = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_attack_factor = 0.10
+				supply_node_range = 0.10
+				army_speed_factor = 0.10
+				attrition = -0.15
+				army_defence_factor = -0.05
+				army_org_factor = 0.15
+			}
+		}
+
+		GER_east_front_victory_at_any_cost = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_org_factor = 0.10
+				army_defence_factor = -0.05
+				attrition = 0.10
+			}
+		}
+
+		GER_east_front_war_with_ussr = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+		}
+
+		GER_east_front_failed_blitzkrieg = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20
+				army_org_factor = -0.10
+				attrition = 0.10
+				supply_node_range = -0.15
+				war_support_factor = -0.20
+				stability_factor = -0.15
+			}
+		}
+
+		GER_east_front_long_war_recovery = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+				army_attack_factor = 0.15
+				army_org_factor = 0.05
+				attrition = -0.05
+				supply_node_range = 0.08
+			}
+		}
+
+		GER_east_front_defensive_tactics_recovery = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+
+			modifier = {
+				army_defence_factor = 0.20
+			}
+		}
+
+		GER_east_front_supply_routes_recovery = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				supply_node_range = 0.10
+				attrition = -0.07
+			}
+		}
+
+		GER_east_front_anti_partisan_recovery = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.25
+			}
+		}
+
+		GER_east_front_victory_or_death_recovery = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_attack_factor = 0.10
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+
 	}
 
 
@@ -5787,7 +6009,7 @@ ideas = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_employ_philipp_holzmann
-					has_completed_focus = GER_revitalize_the_nation
+					always = no
 				}
 			}
 			
@@ -5819,7 +6041,7 @@ ideas = {
 						has_completed_focus = GER_employ_philipp_holzmann
 						NOT = { has_completed_focus = GER_plenipotentiary_of_armaments }
 					}
-					has_completed_focus = GER_revitalize_the_nation
+					always = no
 				}
 			}
 			
@@ -5959,8 +6181,8 @@ ideas = {
 				NOT = { 
 					OR = {
 						has_completed_focus = GER_prioritize_the_four_year_plan 
-						has_completed_focus = GER_prepare_for_the_next_naval_blockade 
-						has_completed_focus = GER_effectivize_the_volkswerke 
+						always = no 
+						always = no 
 					}
 				}
 			}
@@ -5994,8 +6216,8 @@ ideas = {
 			visible = {	
 				OR = {
 					has_completed_focus = GER_prioritize_the_four_year_plan
-					has_completed_focus = GER_prepare_for_the_next_naval_blockade
-					has_completed_focus = GER_effectivize_the_volkswerke
+					always = no
+					always = no
 				}
 				NOT = {
 					has_completed_focus = GER_plenipotentiary_of_the_four_year_plan
@@ -6592,6 +6814,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+
 	}
 
 

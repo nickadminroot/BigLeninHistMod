@@ -14,7 +14,7 @@ state = {
 			infrastructure = 2
 		}
 		1938.10.25 = {
-		IF = {
+		if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender" 
 				}

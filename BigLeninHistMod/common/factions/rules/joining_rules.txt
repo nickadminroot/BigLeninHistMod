@@ -28,7 +28,7 @@ joining_rule_non_fascist = {
 		NOT = {
 			has_government = fascism
 		}
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -55,7 +55,7 @@ joining_rule_non_democratic = {
 		NOT = {
 			has_government = democratic 
 		}
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -79,7 +79,7 @@ joining_rule_non_communist = {
 		}
 	}
 	available = {
-		IF = {
+		if = {
 			limit = {
 				has_faction_template = faction_template_allies
 			}
@@ -92,13 +92,13 @@ joining_rule_non_communist = {
 		}
 	}
 	can_remove = {
-		IF = {
+		if = {
 			limit = {
 				ROOT = { original_tag = JAP }
 			}
 			always = no 
 		}
-		ELSE = {
+		else = {
 			always = yes 
 		}
 		
@@ -107,7 +107,7 @@ joining_rule_non_communist = {
 		NOT = {
 			has_government = communism 
 		}
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -124,7 +124,7 @@ joining_rule_fascist_only = {
 	}
 	trigger = {
 		has_government = fascism
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -144,7 +144,7 @@ joining_rule_democratic_non_aligned = {
 			has_government = democratic
 			has_government = neutrality
 		}
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -171,7 +171,7 @@ joining_rule_communist_only = {
 	}
 	trigger = {
 		has_government = communism
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -191,7 +191,7 @@ joining_rule_support_percentage = {
 			value > 0.3
 			leader = FROM
 		}
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}
@@ -208,7 +208,7 @@ joining_rule_puppets_only = {
 	}
 	trigger = {
 		ROOT = { is_subject_of = FROM }
-		IF = {
+		if = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
 		}

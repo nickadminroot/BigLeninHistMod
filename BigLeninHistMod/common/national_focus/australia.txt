@@ -3658,7 +3658,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -3668,7 +3668,7 @@ focus_tree = {
 					add_mio_size = 2
 				}
 			}
-			ELSE = {
+			else = {
 				add_ideas = AST_commonwealth_aircraft_corporation 
 			}
 		}

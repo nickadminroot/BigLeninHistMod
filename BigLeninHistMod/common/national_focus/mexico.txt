@@ -1937,7 +1937,7 @@ focus_tree = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = {
 					has_character = MEX_leon_trotsky
 					has_global_flag = trotsky_exile_mexico	
@@ -6419,7 +6419,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6429,7 +6429,7 @@ focus_tree = {
 					add_mio_funds = 500
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MEX_astimar_gulf
 			}
@@ -6498,7 +6498,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6508,7 +6508,7 @@ focus_tree = {
 					add_mio_funds = 500
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MEX_astimar_pacific
 			}
@@ -6835,7 +6835,7 @@ focus_tree = {
 				value = 0.5
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6845,7 +6845,7 @@ focus_tree = {
 					add_mio_funds = 500
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MEX_tga
 			}
@@ -6901,7 +6901,7 @@ focus_tree = {
 				value = 0.25
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
@@ -6911,7 +6911,7 @@ focus_tree = {
 					add_mio_funds = 500
 				}
 			}
-			ELSE = {
+			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = MEX_tnca
 			}

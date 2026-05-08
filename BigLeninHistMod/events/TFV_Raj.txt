@@ -774,7 +774,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_dlc = "Graveyard of Empires" }
-		has_completed_focus = RAJ_quit_india_movement
+		always = no
 		is_puppet = yes
 	}
 	
@@ -809,7 +809,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_dlc = "Graveyard of Empires" }
-		has_completed_focus = RAJ_quit_india_movement
+		always = no
 		is_puppet = yes
 	}
 	
@@ -843,7 +843,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_completed_focus = RAJ_quit_india_movement
+		always = no
 		is_puppet = yes
 	}
 	

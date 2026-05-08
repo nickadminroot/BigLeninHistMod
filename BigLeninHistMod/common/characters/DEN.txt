@@ -113,14 +113,14 @@ characters={
 									ruling_only = yes
 									character = DEN_frits_clausen
 								}
-								has_completed_focus = DEN_ask_for_support
+								always = no
 							}
 							AND = {
 								has_country_leader = {
 									ruling_only = yes
 									character = DEN_cay_lembcke
 								}
-								has_completed_focus = DEN_seize_power
+								always = no
 							}
 						}
 					}
@@ -274,14 +274,14 @@ characters={
 								ruling_only = yes
 								character = DEN_frits_clausen
 							}
-							has_completed_focus = DEN_ask_for_support
+							always = no
 						}
 						AND = {
 							has_country_leader = {
 								ruling_only = yes
 								character = DEN_cay_lembcke
 							}
-							has_completed_focus = DEN_seize_power
+							always = no
 						}
 					}
 				}
@@ -577,7 +577,7 @@ characters={
 					#Already checked for DLC in the instance
 				}
 				available = {
-					has_completed_focus = DEN_sign_forsvarsforliget
+					always = no
 				}
 				traits = {
 					army_chief_drill_2
@@ -667,8 +667,8 @@ characters={
 				}
 				available = {
 					OR = {
-						has_completed_focus = DEN_haeren_reorganization
-						has_completed_focus = DEN_collaboration_government 
+						always = no
+						always = no 
 					}
 				}
 				traits = {
@@ -773,7 +773,7 @@ characters={
 			legacy_id = -1
 			visible = { 
 				OR = {
-					has_completed_focus = DEN_strengthen_the_officer_corp
+					always = no
 					AND = {
 						is_subject = yes
 						OVERLORD = {
@@ -782,7 +782,7 @@ characters={
 								has_government = neutrality
 							}
 						}
-						has_completed_focus = DEN_contribute_to_the_war
+						always = no
 					}
 				}
 			}
@@ -824,7 +824,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = -1
-			visible = { has_completed_focus = DEN_seek_independence }
+			visible = { always = no }
 		}
 	}
 
@@ -888,7 +888,7 @@ characters={
 				legacy_id = -1
 				visible = { 
 					OR = {
-						has_completed_focus = DEN_strengthen_the_officer_corp
+						always = no
 						AND = {
 							is_subject = yes
 							OVERLORD = {
@@ -897,7 +897,7 @@ characters={
 									has_government = neutrality
 								}
 							}
-							has_completed_focus = DEN_contribute_to_the_war
+							always = no
 						}
 					}
 				}
@@ -1016,8 +1016,8 @@ characters={
 				}
 				available = {
 					OR = {
-						has_completed_focus = DEN_expand_ubadsvabnet
-						has_completed_focus = DEN_collaboration_government 
+						always = no
+						always = no 
 					}
 				}
 				traits = {
@@ -1253,7 +1253,7 @@ characters={
 				base = 1.000
 			}
 			available = { 
-				has_completed_focus = DEN_konge_og_faedreland 
+				always = no 
 			}
 
 			visible = {
@@ -1294,7 +1294,7 @@ characters={
 				base = 1.000
 			}
 			available = { 
-				has_completed_focus = DEN_konge_og_faedreland 
+				always = no 
 			}
 			visible = {
 				NOT = { has_character = DEN_christian_x }
@@ -1665,7 +1665,7 @@ characters={
 			}
 			available = {
 				is_subject = no
-				NOT = { has_completed_focus = DEN_start_the_rearmament }
+				NOT = { always = no }
 				NOT = { DEN_christmas_moller = { is_hired_as_advisor = yes }}
 			}
 			traits = {
@@ -1713,7 +1713,7 @@ characters={
 			available = {
 				is_country_leader = no
 				NOT = { has_character_flag = DEN_political_agitator_flag }
-				NOT = { has_completed_focus = DEN_policy_of_disarmament }
+				NOT = { always = no }
 				NOT = { DEN_peter_rochegune_munch = { is_hired_as_advisor = yes }}
 			}
 			traits = {
@@ -2021,7 +2021,7 @@ characters={
 				has_dlc = "Arms Against Tyranny"
 			}
 			available = {
-				has_completed_focus = DEN_fortify_our_borders
+				always = no
 			}
 			traits  = {
 				forsvarsminister 
@@ -2065,7 +2065,7 @@ characters={
 				has_dlc = "Arms Against Tyranny"
 			}
 			available = {
-				has_completed_focus = DEN_kanslergadeforliget
+				always = no
 			}
 			traits = {
 				welfare_architect 
@@ -2111,7 +2111,7 @@ characters={
 			available = {
 				is_country_leader = no
 				OR = {
-					has_completed_focus = DEN_strengthen_the_officer_corp
+					always = no
 					has_government = fascism
 				}	
 				NOT = {
@@ -2153,7 +2153,7 @@ characters={
 				has_dlc = "La Resistance"
 			}
 			available = {
-				has_completed_focus = DEN_sikkerhedspolitiet
+				always = no
 			}
 			traits = {
 				head_of_intelligence	 
@@ -2247,7 +2247,7 @@ characters={
 
 			visible = {
 				owner = {
-					has_completed_focus = DEN_expand_institut_for_teoretisk_fysik
+					always = no
 				}
 			}
 		}

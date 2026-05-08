@@ -1,6 +1,6 @@
 ﻿capital = 6 # Brussels
 
-IF = {
+if = {
 	limit = { 
 		has_dlc = "Gotterdammerung"
 		has_dlc = "La Resistance"
@@ -12,7 +12,7 @@ IF = {
 		BEL_chasseurs_ardennais_ncns = 1 
 	}
 	set_oob = "BEL_WW_1936_lar_ncns"	
-	ELSE_IF = {
+	else_if = {
 		limit = { 
 			has_dlc = "Gotterdammerung"
 			has_dlc = "No Compromise, No Surrender"
@@ -23,7 +23,7 @@ IF = {
 		}
 		set_oob = "BEL_WW_1936_ncns"
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = { 
 			has_dlc = "Gotterdammerung"
 			has_dlc = "La Resistance"
@@ -34,7 +34,7 @@ IF = {
 		}
 		set_oob = "BEL_WW_1936_lar"
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dlc = "Gotterdammerung"
 			NOT = {
@@ -46,7 +46,7 @@ IF = {
 			BEL_chasseurs_ardennais = 1 
 		}
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -105,7 +105,7 @@ set_technology = {
 
 set_grand_doctrine = grand_battleplan
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
@@ -170,7 +170,7 @@ if = {
 
 # Scars of WW1
 
-IF = {
+if = {
 	limit = { has_dlc = "Gotterdammerung" }
 
 	add_dynamic_modifier = {
@@ -304,7 +304,7 @@ set_variable = { BEL_rexist_legion_army_infantry_defence_factor = 0 }
 set_variable = { BEL_rexist_legion_conscription_factor = 0 }
 set_variable = { BEL_rexist_legion_land_night_attack = 0 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
@@ -384,7 +384,7 @@ if = {
 }
 
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -395,7 +395,7 @@ IF = {
 	}
 }
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Step Back"
 		has_dlc = "Gotterdammerung"
@@ -419,7 +419,7 @@ IF = {
 		}
 	}
 
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			has_dlc = "No Step Back"
 			NOT = { has_dlc = "Gotterdammerung" }
@@ -456,7 +456,7 @@ IF = {
 
 	#generic focuses
 
-	IF = {
+	if = {
 		limit = { 
 			has_dlc = "Gotterdammerung"
 		}
@@ -501,7 +501,7 @@ IF = {
 		}
 	}
 
-	IF = { #Adding Pierlot as per Adriaan Martens Crisis!
+	if = { #Adding Pierlot as per Adriaan Martens Crisis!
 		limit = {
 			has_dlc = "Gotterdammerung"
 		}
@@ -522,13 +522,13 @@ IF = {
 		}
 	}
 
-	IF = {
+	if = {
 		limit = { 
 			has_dlc = "Gotterdammerung"
 		}
 		set_oob = "BEL_WW_1939"
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -642,7 +642,7 @@ set_popularities = {
 set_convoys = 80
 set_stability = 0.75
 
-IF = {
+if = {
 	limit = { 
 		has_dlc = "Gotterdammerung" 
 		NOT = {
@@ -654,7 +654,7 @@ IF = {
 		BEL_chasseurs_ardennais_ns
 	}
 }
-IF = {
+if = {
 	limit = { 
 		has_dlc = "Gotterdammerung" 
 		has_dlc = "No Compromise, No Surrender"

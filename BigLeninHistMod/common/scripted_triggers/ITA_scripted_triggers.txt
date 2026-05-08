@@ -174,7 +174,7 @@ ITA_has_disbanded_blackshirts = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = ITA_has_disbanded_blackshirts_tt
-			has_completed_focus = ITA_disband_the_blackshirts
+			always = no
 		}
 	}
 	else = {
@@ -190,9 +190,9 @@ ITA_government_is_really_fascist = {
 			has_dlc = "By Blood Alone"
 		}
 		NOT = {
-			has_completed_focus = ITA_defy_the_duce
-			has_completed_focus = ITA_disband_the_blackshirts
-			has_completed_focus = ITA_crush_opposition
+			always = no
+			always = no
+			always = no
 			has_government = communism
 		}
 	}
@@ -208,7 +208,7 @@ ITA_government_is_somewhat_fascist = {
 		}
 		OR = {
 			has_government = fascism
-			has_completed_focus = ITA_utilize_the_blackshirts
+			always = no
 		}
 	}
 	else = {
@@ -225,8 +225,8 @@ ITA_is_going_antifascist_in_bba = {
 			has_dlc = "By Blood Alone"
 		}
 		OR = {
-			has_completed_focus = ITA_unite_the_opposition
-			has_completed_focus = ITA_defy_the_duce
+			always = no
+			always = no
 		}
 	}
 }
@@ -234,7 +234,7 @@ ITA_is_going_antifascist_in_bba = {
 ITA_is_in_liberation_war = {
 	custom_trigger_tooltip = {
 		tooltip = ITA_is_in_liberation_war_tt
-		has_completed_focus = ITA_the_italian_liberation_war
+		always = no
 	}
 }
 
@@ -398,7 +398,7 @@ ITA_has_rejected_monarchy = { # Used to change NS names from Regio/a to somethin
 		has_government = communism
 		AND = {
 			has_government = democratic
-			has_completed_focus = ITA_the_italian_republic
+			always = no
 		}
 		has_completed_focus = ITA_capo_supremo
 		tag = RSI
@@ -516,8 +516,8 @@ ITA_is_kinda_fascist = {
 				AND = {
 					has_government = democratic
 					OR = {
-						has_completed_focus = ITA_christian_democracy
-						has_completed_focus = ITA_democratic_king
+						always = no
+						always = no
 					}
 				}
 			}
@@ -538,8 +538,8 @@ ITA_is_anti_fascist = {
 				AND = {
 					has_government = democratic
 					OR = {
-						has_completed_focus = ITA_christian_democracy
-						has_completed_focus = ITA_democratic_king
+						always = no
+						always = no
 					}
 				}
 			}
@@ -654,7 +654,7 @@ ITA_is_italian_tag_for_music = {
 ITA_is_appropriate_cw_side_for_character_split = {
 	if = { #BoP CW
 		limit = {
-			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = { always = no }
 		}
 		#FASCIST
 		if = {

@@ -823,7 +823,7 @@ country_event = {
 			}
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_global_flag = not_all_newf_owned
 			}

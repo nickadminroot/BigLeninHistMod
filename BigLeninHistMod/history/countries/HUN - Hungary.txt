@@ -1,11 +1,11 @@
 ﻿capital = 43 # Budapest (Northern Hungary)
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
 	set_oob = "HUN_wuw_1936"
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -15,7 +15,7 @@ IF = {
 	}
 }
 
-IF = {
+if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "HUN_1936_air_bba"
 		set_technology = {
@@ -24,7 +24,7 @@ IF = {
 			early_bombs = 1
 			aa_lmg = 1
 		}
-	ELSE = {
+	else = {
 		set_air_oob = "HUN_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
@@ -42,12 +42,12 @@ if = {
 	}
 }
 
-IF = {
+if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_technology = {
 			mtg_transport = 1
 		}
-	ELSE = {
+	else = {
 		set_technology = {
 			transport = 1
 		}
@@ -56,7 +56,7 @@ IF = {
 
 ### SETUP THE CORRECT POLITICAL PARTIES ###
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -70,7 +70,7 @@ IF = {
 set_research_slots = 4
 
 ### SETUP STABILITY AND WAR SUPPORT ###
-IF = {
+if = {
 	limit = {
 		NOT = {
 			has_dlc = "Gotterdammerung"
@@ -78,7 +78,7 @@ IF = {
 	}
 	set_stability = 0.7
 	set_war_support = 0.6
-	ELSE = {
+	else = {
 		set_stability = 0.3
 		set_war_support = 0.4
 	}
@@ -96,7 +96,7 @@ set_technology = {
 	basic_train = 1
 }
 
-IF = {
+if = {
 	limit = {
 		NOT = {
 			has_dlc = "No Step Back"
@@ -106,7 +106,7 @@ IF = {
 		gwtank = 1
 	}
 }
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
@@ -116,7 +116,7 @@ IF = {
 }
 
 ### SETUP NATIONAL SPIRITS NO WW ###
-IF = {
+if = {
 	limit = {
 		AND = {
 			has_dlc = "Death or Dishonor"
@@ -128,11 +128,11 @@ IF = {
 	add_ideas = {
 		disarmed_nation
 	}
-	IF = {
+	if = {
 		limit = { has_dlc = "Arms Against Tyranny" }
 		add_ideas = { HUN_treaty_of_triannon_aat }
 	}
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 		}
@@ -141,7 +141,7 @@ IF = {
 }
 
 ### SETUP HUNGARO-GERMAN RELATIONS AND NATIONAL SPIRITS ###
-IF = {
+if = {
 	limit = {
 		AND = {
 			has_dlc = "Death or Dishonor"
@@ -180,7 +180,7 @@ IF = {
 		}	
 	}
 
-	IF = {
+	if = {
 		limit = { has_dlc = "Arms Against Tyranny" }
 		add_ideas = { HUN_treaty_of_triannon_aat_wuw }
 		add_relation_rule_override = { 
@@ -191,7 +191,7 @@ IF = {
 		give_market_access = GER
 	}
 
-	IF = {
+	if = {
 		limit = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 		}
@@ -204,7 +204,7 @@ IF = {
 set_variable = { HUN_academy_of_sciences_research_speed_factor = 0.03 }
 
 ### PLANE VARIANTS ###
-IF = {
+if = {
 	limit = {
 		has_dlc = "By Blood Alone"
 	}
@@ -229,7 +229,7 @@ IF = {
 }
 
 ### TANK VARIANTS ###
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
@@ -262,7 +262,7 @@ IF = {
 
 ### AH DYNAMIC MODIFIERS ###
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -346,7 +346,7 @@ set_popularities = {
 }
 
 # RECRUITING HUNGARIAN CHARACTERS
-IF = {
+if = {
 	limit = {
 		NOT = {
 			has_dlc = "Gotterdammerung"
@@ -386,7 +386,7 @@ IF = {
 	recruit_character = HUN_franz_friedrich
 	recruit_character = HUN_franz_anton_bach
 }
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -476,7 +476,7 @@ recruit_character = HUN_laszlo_varga
 
 
 # HIRES THE STARTING PM
-IF = {
+if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -498,7 +498,7 @@ add_breakthrough_progress = {
 1939.1.1 = {
 
 	# WITHOUT THE WW DLC
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "Gotterdammerung"
@@ -517,13 +517,13 @@ add_breakthrough_progress = {
 			communism = 3
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			remove_ideas = HUN_treaty_of_triannon_aat
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}
@@ -533,7 +533,7 @@ add_breakthrough_progress = {
 		add_political_power = 1198
 		add_command_power = 100
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Death or Dishonor"
 			}
@@ -570,7 +570,7 @@ add_breakthrough_progress = {
 	}
 
 	# WITH THE WW DLC
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Gotterdammerung"
 		}
@@ -588,13 +588,13 @@ add_breakthrough_progress = {
 			communism = 0
 		}
 
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			remove_ideas = HUN_treaty_of_triannon_aat_wuw
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}
@@ -721,7 +721,7 @@ set_grand_doctrine = new_strategic_destruction
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "La Resistance"
 		}
@@ -732,7 +732,7 @@ set_grand_doctrine = new_strategic_destruction
 		create_intelligence_agency = yes
 	}
 
-	IF = {
+	if = {
 		limit = { has_dlc = "By Blood Alone" }
 			set_air_oob = "HUN_1939_air_bba"
 			set_technology = {
@@ -744,7 +744,7 @@ set_grand_doctrine = new_strategic_destruction
 				early_bombs = 1
 				aa_lmg = 1
 			}	
-		ELSE = {
+		else = {
 			set_air_oob = "HUN_1939_air_legacy"
 			set_technology = {
 				fighter1 = 1
@@ -764,7 +764,7 @@ set_grand_doctrine = new_strategic_destruction
 	}
 }
 
-	IF = {
+	if = {
 		limit = {
 			NOT = {
 				has_dlc = "No Step Back"
@@ -777,7 +777,7 @@ set_grand_doctrine = new_strategic_destruction
 		set_oob = "HUN_1939"
 	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "No Step Back"
 		}

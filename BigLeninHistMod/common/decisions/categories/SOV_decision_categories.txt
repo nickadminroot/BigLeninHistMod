@@ -106,7 +106,7 @@ SOV_soviet_aid_to_poum_decision_category = { #Dec cat for aiding the POUM
 	}
 
 	visible = {
-		has_completed_focus = SOV_covert_support_for_spanish_poum
+		always = no
 		NOT = { has_global_flag = scw_over }
 		NOT = {
 			AND = {
@@ -206,8 +206,8 @@ SOV_diplomacy_middle_east_decision_category = {
 
 	visible = {
 		OR = {
-			has_completed_focus = SOV_support_afghan_ideology
-			has_completed_focus = SOV_the_khakimov_proposal
+			always = no
+			always = no
 		}
 		OR = {
 			country_exists = IRQ
@@ -231,7 +231,7 @@ SOV_diplomacy_asia_decision_category = {
 	visible = {
 		OR = {
 			AND = {
-				has_completed_focus = SOV_the_threat_from_the_land_of_the_rising_sun
+				always = no
 				any_country = {
 					OR = {
 						SOV_is_free_chinese_tag = yes
@@ -240,7 +240,7 @@ SOV_diplomacy_asia_decision_category = {
 				}
 			}
 			AND = {
-				has_completed_focus = SOV_reconcile_japan
+				always = no
 				any_country = {
 					OR = {
 						AND = {
@@ -396,7 +396,7 @@ SOV_permanent_revolution_dec_cat = {
 	}
 
 	visible = {
-		has_completed_focus = SOV_the_permanent_revolution
+		always = no
 	}
 }
 
@@ -410,7 +410,7 @@ SOV_panslavic_nationalism = {
 	}
 
 	visible = {
-		has_completed_focus = SOV_panslavic_nationalism
+		always = no
 	}
 }
 

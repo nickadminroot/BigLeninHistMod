@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  GER_fascist_pressure_minor:0 "Diplomatic Pressure on Potential Allies"
  GER_fascist_pressure_minor_desc:0 "A wave of German diplomatic pressure keeps Hungary, Bulgaria, and Romania closer to the fascist orbit."
  GER_united_industry:0 "United Industry"
@@ -26,6 +26,14 @@ l_english:
  GER_united_industry_vienna_research_center_desc:0 "Vienna can become the scientific hub of the new industrial arrangement."
  GER_united_industry_distributed_aircraft_industry:0 "Distributed Aircraft Industry"
  GER_united_industry_distributed_aircraft_industry_desc:0 "A dispersed production network keeps aircraft manufacturing cheaper and harder to disrupt."
+ GER_united_industry_military_exercises_idea:0 "Joint Military Exercises"
+ GER_united_industry_military_exercises_idea_desc:0 "Permanent staff routines and shared drill standards keep the bloc's armies prepared."
+ GER_united_industry_radio_exchange_idea:0 "Unified Troop Radio Exchange"
+ GER_united_industry_radio_exchange_idea_desc:0 "Standardized radio procedures improve coordination across the alliance."
+ GER_united_industry_vienna_research_center_idea:0 "Vienna Research Center"
+ GER_united_industry_vienna_research_center_idea_desc:0 "The Vienna research hub coordinates specialist knowledge across the united industry."
+ GER_united_industry_distributed_aircraft_industry_idea:0 "Distributed Aircraft Industry"
+ GER_united_industry_distributed_aircraft_industry_idea_desc:0 "A dispersed production network lowers long-term aircraft industrial costs."
  GER_united_industry_civilian_industry:0 "Develop Civilian Industry"
  GER_united_industry_civilian_industry_desc:0 "Investment expands civilian industrial capacity across the bloc."
  GER_united_industry_military_industry:0 "Develop Military Industry"

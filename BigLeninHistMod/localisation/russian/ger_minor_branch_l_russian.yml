@@ -1,4 +1,4 @@
-l_russian:
+﻿l_russian:
  GER_fascist_pressure_minor:0 "Дипломатическое давление на потенциальных союзников"
  GER_fascist_pressure_minor_desc:0 "Волна немецкого дипломатического давления удерживает Венгрию, Болгарию и Румынию в орбите фашизма."
  GER_united_industry:0 "Объединенная промышленность"
@@ -26,6 +26,14 @@ l_russian:
  GER_united_industry_vienna_research_center_desc:0 "Вена может стать научным центром нового промышленного устройства."
  GER_united_industry_distributed_aircraft_industry:0 "Рассредоточенная авиационная промышленность"
  GER_united_industry_distributed_aircraft_industry_desc:0 "Распределенная сеть производства снижает стоимость выпуска самолетов и усложняет ее срыв."
+ GER_united_industry_military_exercises_idea:0 "Совместные военные учения"
+ GER_united_industry_military_exercises_idea_desc:0 "Постоянные штабные процедуры и единые стандарты учений поддерживают армии блока в готовности."
+ GER_united_industry_radio_exchange_idea:0 "Единая система радио-обмена войск"
+ GER_united_industry_radio_exchange_idea_desc:0 "Стандартизированные радиопроцедуры улучшают координацию внутри блока."
+ GER_united_industry_vienna_research_center_idea:0 "Венский исследовательский центр"
+ GER_united_industry_vienna_research_center_idea_desc:0 "Исследовательский центр в Вене координирует знания специалистов объединенной промышленности."
+ GER_united_industry_distributed_aircraft_industry_idea:0 "Рассредоточенная авиационная промышленность"
+ GER_united_industry_distributed_aircraft_industry_idea_desc:0 "Распределенная сеть производства надолго снижает промышленные издержки авиации."
  GER_united_industry_civilian_industry:0 "Развитие гражданской промышленности"
  GER_united_industry_civilian_industry_desc:0 "Инвестиции расширяют гражданские промышленные мощности по всему блоку."
  GER_united_industry_military_industry:0 "Развитие военной промышленности"

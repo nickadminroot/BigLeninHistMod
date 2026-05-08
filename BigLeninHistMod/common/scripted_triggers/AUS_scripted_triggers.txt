@@ -137,7 +137,7 @@ AUS_danubian_communism_bypass = {
 
 		AND = {
 			
-			IF = {
+			if = {
 				limit = { HUN = { exists = yes } }
 
 				HUN = { 
@@ -150,7 +150,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { CZE = { exists = yes } }
 
 				CZE = { 
@@ -163,7 +163,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { YUG = { exists = yes } }
 
 				YUG = { 
@@ -176,7 +176,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { ROM = { exists = yes } }
 
 				ROM = { 
@@ -189,7 +189,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { BUL = { exists = yes } }
 
 				BUL = { 
@@ -202,7 +202,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { SLO = { exists = yes } }
 
 				SLO = { 
@@ -215,7 +215,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { TRA = { exists = yes } }
 
 				TRA = { 
@@ -228,7 +228,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { CRO = { exists = yes } }
 
 				CRO = { 
@@ -241,7 +241,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { LBV = { exists = yes } }
 
 				LBV = { 
@@ -254,7 +254,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { SIL = { exists = yes } }
 
 				SIL = { 
@@ -267,7 +267,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { MNT = { exists = yes } }
 
 				MNT = { 
@@ -280,7 +280,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { BOS = { exists = yes } }
 
 				BOS = { 
@@ -293,7 +293,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { SLV = { exists = yes } }
 
 				SLV = { 
@@ -306,7 +306,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { FRA = { exists = yes } }
 
 				FRA = { 
@@ -319,7 +319,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { TUR = { exists = yes } }
 
 				TUR = { 
@@ -332,7 +332,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { GRE = { exists = yes } }
 
 				GRE = { 
@@ -345,7 +345,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { HOL = { exists = yes } }
 
 				HOL = { 
@@ -358,7 +358,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { LUX = { exists = yes } }
 
 				LUX = { 
@@ -371,7 +371,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { BEL = { exists = yes } }
 
 				BEL = { 
@@ -384,7 +384,7 @@ AUS_danubian_communism_bypass = {
 				}
 			}
 
-			IF = {
+			if = {
 				limit = { MAC = { exists = yes } }
 
 				MAC = { 

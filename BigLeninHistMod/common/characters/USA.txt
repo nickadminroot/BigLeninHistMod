@@ -535,7 +535,7 @@ characters={
 			visible = {
 				if = { 
 					limit = { has_dlc = "No Compromise, No Surrender" } 
-					has_completed_focus = PHI_subordinate_philippine_department
+					always = no
 				}
 			}
 			skill=1
@@ -1279,7 +1279,7 @@ characters={
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_send_lindbergh_to_germany
+				always = no
 			}
 			visible = {
 				has_dlc = "Man the Guns"
@@ -1487,7 +1487,7 @@ characters={
 						has_completed_focus  = USA_reach_out_to_the_ware_group
 					}
 					AND = {
-						USA = { has_completed_focus = USA_america_first }
+						USA = { always = no }
 					}
 				}
 			}
@@ -1534,7 +1534,7 @@ characters={
 						has_completed_focus  = USA_reach_out_to_the_ware_group
 					}
 					AND = {
-						USA = { has_completed_focus = USA_america_first }
+						USA = { always = no }
 					}
 				}
 			}
@@ -1574,7 +1574,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 				}
 			}
 			visible  = {
@@ -1615,7 +1615,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 				}
 			}
 			visible  = {
@@ -1693,7 +1693,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 					NOT  = {
 						focus_progress  = {
 							focus  = USA_neutrality_act
@@ -1785,7 +1785,7 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				has_completed_focus  = USA_empower_the_huac
+				always = no
 			}
 			traits  = {
 				anti_communist_crusader

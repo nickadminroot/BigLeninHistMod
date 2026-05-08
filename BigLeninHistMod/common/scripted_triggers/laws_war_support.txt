@@ -5,7 +5,7 @@ has_unsupported_economic_law = {
 			hidden_trigger = {
 				NOT = { 
 					original_tag = SWE
-					has_completed_focus = SWE_totalforsvar
+					always = no
 				}
 			}
 		}
@@ -18,7 +18,7 @@ has_unsupported_economic_law = {
 			hidden_trigger = {
 				NOT = { 
 					original_tag = SWE
-					has_completed_focus = SWE_totalforsvar
+					always = no
 				}
 			}
 		}
@@ -31,7 +31,7 @@ has_unsupported_economic_law = {
 			hidden_trigger = {
 				NOT = { 
 					original_tag = SWE
-					has_completed_focus = SWE_totalforsvar
+					always = no
 				}
 			}
 		}
@@ -44,7 +44,7 @@ has_unsupported_economic_law = {
 			hidden_trigger = {
 				NOT = { 
 					original_tag = SWE
-					has_completed_focus = SWE_totalforsvar
+					always = no
 				}
 			}
 		}

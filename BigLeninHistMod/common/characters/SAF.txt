@@ -161,7 +161,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = SAF_support_the_afrikaner_broederbond 
+					always = no 
 				}
 				if = {
 					limit = {
@@ -521,7 +521,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = SAF_empower_the_workers 
+					always = no 
 				}
 				if = {
 					limit = {

@@ -2866,7 +2866,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				has_completed_focus = SOV_the_fourth_international
+				always = no
 				SOV_is_left_opposition = yes
 			}
 
@@ -4557,13 +4557,13 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Astrov
 							has_country_flag = SOV_accepted_OKMO
@@ -4573,19 +4573,19 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { has_dlc = "No Compromise, No Surrender" }
 						OR = {
 							tag = MAN
 						}
 					}
-					has_completed_focus = CHI_hire_soviet_designer
+					always = no
 					NOT = {
 						has_war_with = SOV
 					}
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI
@@ -4853,13 +4853,13 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Morozov
 							has_country_flag = SOV_accepted_OKMO
@@ -4868,7 +4868,7 @@ ideas = {
 				}
 			}
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI
@@ -5135,13 +5135,13 @@ ideas = {
 					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
 					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
 				}
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 						FROM = { original_tag = CHI }
 					}
 					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
+						always = no 
 						NOT = {
 							has_country_flag = SOV_accepted_Morozov
 							has_country_flag = SOV_accepted_Astrov
@@ -5151,7 +5151,7 @@ ideas = {
 			}
 
 			available = {
-				IF = {
+				if = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender" 
 						original_tag = CHI

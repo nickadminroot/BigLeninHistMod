@@ -1156,11 +1156,11 @@ focus_tree = {
 		}
 
 		bypass = {
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				has_completed_focus = SOV_curtailment_of_the_collective_farms 
+				always = no 
 			}
 		}
 		
@@ -1275,7 +1275,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -1711,7 +1711,7 @@ focus_tree = {
 		completion_reward = {
 
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = {
 						has_country_leader = {
 							ruling_only = yes
@@ -1723,7 +1723,7 @@ focus_tree = {
 						name = SOV_stalingrad_hydro_station
 					}
 				}
-				ELSE = {
+				else = {
 					set_province_name = {
 						id = 3555
 						name = SOV_volgograd_hydro_station
@@ -1933,7 +1933,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = SOV_modernize_aircraft_facilities_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						260 = {
 							is_fully_controlled_by = ROOT
@@ -2119,7 +2119,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = SOV_the_path_of_marxism_leninism
-				has_completed_focus = SOV_womens_fascist_movement
+				always = no
 			}
 		}
 		
@@ -3524,13 +3524,13 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				add_ideas = cruiser_submarine_specialization_mtg
 			}
-			ELSE = {
+			else = {
 				add_ideas = cruiser_submarine_specialization
 			}
 		}
@@ -4722,7 +4722,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						has_tech = atomic_research
@@ -4740,7 +4740,7 @@ focus_tree = {
 					value = 0.5
 				}
 			}
-			ELSE = {
+			else = {
 				add_breakthrough_progress = {
 					specialization = specialization_nuclear
 					value = 0.8
@@ -4751,7 +4751,7 @@ focus_tree = {
 
 			custom_effect_tooltip = SOV_soviet_atomic_bomb_project_tt
 			hidden_effect = {
-				IF = {
+				if = {
 					limit = { 
 						588 = {
 							is_fully_controlled_by = ROOT
@@ -6503,7 +6503,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_completed_focus = SOV_depoliticize_the_military
+			always = no
 		}
 		
 		search_filters = {}
@@ -6742,7 +6742,7 @@ focus_tree = {
 
 			SOV_paranoia_low_decrease_effect = yes
 
-			IF = {
+			if = {
 				limit ={
 					is_faction_leader = yes 
 				}
@@ -8503,7 +8503,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 
-			IF = {
+			if = {
 				limit = { 
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes
@@ -8539,8 +8539,8 @@ focus_tree = {
 			has_civil_war = no
 			OR = {
 				has_completed_focus = SOV_the_centre
-				has_completed_focus = SOV_the_left_opposition
-				has_completed_focus = SOV_the_right_opposition
+				always = no
+				always = no
 			}
 			if = {
 				limit = {
@@ -8563,7 +8563,7 @@ focus_tree = {
 				else = {
 					if = {
 						limit = {
-							has_completed_focus = SOV_covert_support_for_spanish_poum
+							always = no
 						}
 						country_exists = SPC
 						NOT = { has_war_with = SPC }
@@ -8597,8 +8597,8 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
-					has_completed_focus = SOV_covert_support_for_spanish_poum
-					has_completed_focus = SOV_coup_detat
+					always = no
+					always = no
 					has_global_flag = SPR_anarchist_uprising_flag
 					country_exists = SPC
 					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
@@ -8680,7 +8680,7 @@ focus_tree = {
 
 			add_political_power = 35
 
-			IF = {
+			if = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 					is_faction_leader = yes
