@@ -9177,7 +9177,7 @@ focus_tree = {
 
 focus = {
 		id = SOV_mobilization_first_wave
-		icon = GFX_focus_SOV_mobilization_plan
+		icon = GFX_focus_custom_SOV_mobilization_first_wave
 		prerequisite = { focus = SOV_military_reorganization }
 		relative_position_id = SOV_military_reorganization
 		x = -2
@@ -9222,7 +9222,7 @@ focus = {
 
 	focus = {
 		id = SOV_mobilization_second_wave
-		icon = GFX_focus_generic_full_social_mobilization
+		icon = GFX_focus_custom_SOV_mobilization_second_wave
 		prerequisite = { focus = SOV_mobilization_first_wave }
 		x = 0
 		y = 1
@@ -9251,7 +9251,7 @@ focus = {
 
 	focus = {
 		id = SOV_order_227
-		icon = GFX_focus_SOV_penal_battalions
+		icon = GFX_focus_custom_SOV_order_227
 		prerequisite = { focus = SOV_mobilization_second_wave }
 		x = 0
 		y = 1
@@ -9279,7 +9279,7 @@ focus = {
 
 	focus = {
 		id = SOV_operation_bagration
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_custom_SOV_operation_bagration
 		prerequisite = { focus = SOV_order_227 }
 		x = 0
 		y = 1

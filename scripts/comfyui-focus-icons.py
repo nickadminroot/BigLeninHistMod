@@ -125,6 +125,50 @@ def dds_to_png(dds_path: Path, png_path: Path) -> bool:
         return False
 
 
+def extract_alpha_from_dds(dds_path: Path, alpha_path: Path) -> bool:
+    """Extract alpha channel from vanilla DDS as grayscale PNG mask."""
+    try:
+        result = subprocess.run(
+            ["magick", str(dds_path), "-alpha", "extract", str(alpha_path)],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if result.returncode != 0:
+            print(f"  [WARN] Alpha extraction failed: {result.stderr.strip()}")
+            return False
+        return True
+    except (subprocess.TimeoutExpired, FileNotFoundError) as e:
+        print(f"  [ERROR] Alpha extraction failed: {e}")
+        return False
+
+
+def apply_alpha_channel(png_path: Path, alpha_path: Path, output_path: Path) -> bool:
+    """Composite alpha channel onto PNG image."""
+    try:
+        result = subprocess.run(
+            [
+                "magick",
+                str(png_path),
+                str(alpha_path),
+                "-alpha", "off",
+                "-compose", "copy_opacity",
+                "-composite",
+                str(output_path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if result.returncode != 0:
+            print(f"  [WARN] Alpha compositing failed: {result.stderr.strip()}")
+            return False
+        return True
+    except (subprocess.TimeoutExpired, FileNotFoundError) as e:
+        print(f"  [ERROR] Alpha compositing failed: {e}")
+        return False
+
+
 def png_to_dds(png_path: Path, dds_path: Path) -> bool:
     """Convert PNG to DDS (ARGB8888) using ImageMagick."""
     try:
@@ -269,9 +313,14 @@ def process_single_icon(
 
     temp_png_input = TEMP_DIR / f"{dds_stem}_input.png"
     temp_png_output = TEMP_DIR / f"{dds_stem}_output.png"
+    temp_alpha_mask = TEMP_DIR / f"{dds_stem}_alpha.png"
+    temp_png_with_alpha = TEMP_DIR / f"{dds_stem}_output_alpha.png"
 
     if not dds_to_png(vanilla_dds, temp_png_input):
         return None
+
+    if not extract_alpha_from_dds(vanilla_dds, temp_alpha_mask):
+        print(f"  [WARN] Could not extract alpha, proceeding without transparency")
 
     if dry_run:
         print(f"  [DRY-RUN] Would send to ComfyUI: {temp_png_input}")
@@ -295,7 +344,14 @@ def process_single_icon(
         return None
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    if not png_to_dds(temp_png_output, output_dds):
+
+    png_for_dds = temp_png_output
+    if temp_alpha_mask.exists():
+        if apply_alpha_channel(temp_png_output, temp_alpha_mask, temp_png_with_alpha):
+            png_for_dds = temp_png_with_alpha
+            print(f"  [ALPHA] Applied transparency mask from vanilla")
+
+    if not png_to_dds(png_for_dds, output_dds):
         return None
 
     print(f"  [OK] Generated: {output_dds}")
@@ -315,7 +371,7 @@ def main():
     parser.add_argument("--prompt", type=str, default="", help="Override prompt for all icons")
     parser.add_argument("--denoise", type=float, default=0.5, help="Denoise strength (0.0-1.0)")
     parser.add_argument("--seed", type=int, default=0, help="Random seed (0=random)")
-    parser.add_argument("--skip-existing", action="store_true", default=True, help="Skip already generated icons")
+    parser.add_argument("--no-skip-existing", action="store_true", default=False, help="Regenerate all icons even if they exist")
     parser.add_argument("--comfyui-url", type=str, default="", help="ComfyUI API URL (default: http://127.0.0.1:8188)")
     args = parser.parse_args()
 
@@ -374,7 +430,7 @@ def main():
         gfx_name = sprite["gfx_name"]
         print(f"\n[{i}/{len(sprites)}] {gfx_name}")
 
-        if args.skip_existing:
+        if not args.no_skip_existing:
             icon_filename = Path(sprite["texturefile"]).name
             output_dds = OUTPUT_DIR / icon_filename
             if output_dds.exists():

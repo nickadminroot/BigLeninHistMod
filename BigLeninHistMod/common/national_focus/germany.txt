@@ -9324,7 +9324,7 @@ focus_tree = {
 	#Peace For Our Time#
 	focus = { #All related content and local will be in Czech related files and local locations
 		id = GER_integrate_czech_manufacturers
-		icon = GFX_focus_PER_czech_tanks
+		icon = GFX_focus_custom_GER_integrate_czech_manufacturers
 		prerequisite = { focus = GER_fate_of_czechoslovakia }
 
 		x = 0
@@ -10239,7 +10239,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_develop_portuguese_mining
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_custom_BLHM_GER_develop_portuguese_mining
 		prerequisite = { focus = GER_demands_to_sweden }
 
 		x = 1
@@ -11205,7 +11205,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_win_before_winter
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_custom_GER_east_front_win_before_winter
 		prerequisite = { focus = GER_war_with_the_ussr }
 		mutually_exclusive = { focus = GER_east_front_fortify_lines }
 		x = -1
@@ -11239,7 +11239,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_fortify_lines
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_custom_GER_east_front_fortify_lines
 		prerequisite = { focus = GER_war_with_the_ussr }
 		mutually_exclusive = { focus = GER_east_front_win_before_winter }
 		x = 1
@@ -11273,7 +11273,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_summer_campaign
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_custom_GER_east_front_summer_campaign
 		prerequisite = { focus = GER_east_front_win_before_winter focus = GER_east_front_fortify_lines }
 		x = 1
 		y = 1
@@ -11312,7 +11312,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_prepare_second_winter
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_custom_GER_east_front_prepare_second_winter
 		prerequisite = { focus = GER_east_front_summer_campaign }
 		mutually_exclusive = { focus = GER_east_front_continue_offensive }
 		x = -1
@@ -11346,7 +11346,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_continue_offensive
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_custom_GER_east_front_continue_offensive
 		prerequisite = { focus = GER_east_front_summer_campaign }
 		mutually_exclusive = { focus = GER_east_front_prepare_second_winter }
 		x = 1
@@ -11380,7 +11380,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_final_blow
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_custom_GER_east_front_final_blow
 		prerequisite = { focus = GER_east_front_prepare_second_winter focus = GER_east_front_continue_offensive }
 		x = 1
 		y = 1
@@ -11419,7 +11419,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_prepare_long_war
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_custom_GER_east_front_prepare_long_war
 		prerequisite = { focus = GER_east_front_final_blow }
 		x = 0
 		y = 1
@@ -11445,7 +11445,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_defensive_tactics
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_custom_GER_east_front_defensive_tactics
 		prerequisite = { focus = GER_east_front_prepare_long_war }
 		x = -2
 		y = 1
@@ -11469,7 +11469,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_supply_routes
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_custom_GER_east_front_supply_routes
 		prerequisite = { focus = GER_east_front_prepare_long_war }
 		x = 0
 		y = 1
@@ -11493,7 +11493,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_destroy_partisans
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_custom_GER_east_front_destroy_partisans
 		prerequisite = { focus = GER_east_front_prepare_long_war }
 		x = 2
 		y = 1
@@ -11517,7 +11517,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_east_front_victory_or_death
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_custom_GER_east_front_victory_or_death
 		prerequisite = { focus = GER_east_front_defensive_tactics }
 		prerequisite = { focus = GER_east_front_supply_routes }
 		prerequisite = { focus = GER_east_front_destroy_partisans }
@@ -12746,7 +12746,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_wunderwaffe_program
-		icon = GFX_focus_GER_wunderwaffe_inner_circle
+		icon = GFX_focus_custom_BLHM_GER_wunderwaffe_program
 		prerequisite = { focus = GER_expand_kummersdorfs_capacity }
 		prerequisite = { focus = GER_rocketry_innovations }
 
@@ -12771,7 +12771,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_me262
-		icon = GFX_focus_generic_jet_planes
+		icon = GFX_focus_custom_GER_wunderwaffe_me262
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = 1
@@ -12845,7 +12845,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_rotte
-		icon = GFX_focus_generic_army_tanks2
+		icon = GFX_focus_custom_GER_wunderwaffe_rotte
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = -3
@@ -12891,7 +12891,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_maus
-		icon = GFX_focus_generic_heavy_tank
+		icon = GFX_focus_custom_GER_wunderwaffe_maus
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = 0
@@ -12955,7 +12955,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_e50
-		icon = GFX_focus_generic_army_tanks2
+		icon = GFX_focus_custom_GER_wunderwaffe_e50
 		prerequisite = { focus = GER_wunderwaffe_maus }
 
 		x = 0
@@ -12990,7 +12990,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_e50_unification
-		icon = GFX_focus_generic_army_tanks2
+		icon = GFX_focus_custom_GER_wunderwaffe_e50_unification
 		prerequisite = { focus = GER_wunderwaffe_e50 }
 
 		x = 0
@@ -15397,7 +15397,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_diplomatic_pressure_on_potential_allies
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_custom_GER_diplomatic_pressure_on_potential_allies
 		prerequisite = { focus = GER_anschluss }
 		x = -4
 		y = 4
@@ -15425,7 +15425,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_develop_hungarian_bauxite_deposits
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_custom_GER_develop_hungarian_bauxite_deposits
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
 		x = -2
 		y = 1
@@ -15473,7 +15473,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_expand_oil_extraction_in_ploesti
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_focus_custom_GER_expand_oil_extraction_in_ploesti
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
 		x = 0
 		y = 1
@@ -15516,7 +15516,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_sofia_initiative
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_custom_GER_sofia_initiative
 		prerequisite = { focus = GER_diplomatic_pressure_on_potential_allies }
 		x = 2
 		y = 1
@@ -15544,7 +15544,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_consolidate_management_of_minor_powers
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_custom_GER_consolidate_management_of_minor_powers
 		prerequisite = { focus = GER_develop_hungarian_bauxite_deposits }
 		prerequisite = { focus = GER_expand_oil_extraction_in_ploesti }
 		prerequisite = { focus = GER_sofia_initiative }
@@ -15625,7 +15625,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_invest_in_italian_industry
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_custom_BLHM_GER_invest_in_italian_industry
 		prerequisite = { focus = GER_anschluss }
 
 		x = -7
@@ -15656,7 +15656,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_libyan_industry
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_focus_custom_BLHM_GER_libyan_industry
 		prerequisite = { focus = BLHM_GER_invest_in_italian_industry }
 
 		x = 0
@@ -15684,7 +15684,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_spanish_african_bases
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_custom_BLHM_GER_spanish_african_bases
 		prerequisite = { focus = BLHM_GER_libyan_industry }
 
 		x = -1
@@ -15720,7 +15720,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_prepare_east_african_sabotage
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_custom_BLHM_GER_prepare_east_african_sabotage
 		prerequisite = { focus = BLHM_GER_libyan_industry }
 
 		x = 1
@@ -15743,7 +15743,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_GER_mediterranean_exercises
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_focus_custom_BLHM_GER_mediterranean_exercises
 		prerequisite = { focus = BLHM_GER_spanish_african_bases }
 		prerequisite = { focus = BLHM_GER_prepare_east_african_sabotage }
 
