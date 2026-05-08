@@ -8525,6 +8525,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			add_political_power = 100
+			add_named_threat = { threat = 10 name = GER_anschluss }
 			if = {
 				limit = { 
 					OR = {
