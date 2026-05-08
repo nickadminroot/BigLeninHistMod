@@ -9282,7 +9282,7 @@ focus = {
 
 	focus = {
 		id = SOV_operation_bagration
-		icon = GFX_goal_generic_offensive
+		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SOV_order_227 }
 		x = 0
 		y = 1
