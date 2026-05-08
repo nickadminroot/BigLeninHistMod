@@ -1,0 +1,64 @@
+GER_united_industry_initialize_country_effect = {
+	set_variable = { GER_united_industry_production_speed_industrial_complex_factor = 0 }
+	set_variable = { GER_united_industry_production_speed_arms_factory_factor = 0 }
+	set_variable = { GER_united_industry_army_attack_factor = 0 }
+	set_variable = { GER_united_industry_coordination_bonus = 0 }
+	set_variable = { GER_united_industry_research_speed_factor = 0 }
+	add_dynamic_modifier = { modifier = GER_united_industry_dynamic_modifier }
+	force_update_dynamic_modifier = yes
+}
+
+GER_united_industry_initialize_bloc_effect = {
+	GER = { GER_united_industry_initialize_country_effect = yes }
+	HUN = { GER_united_industry_initialize_country_effect = yes }
+	ROM = { GER_united_industry_initialize_country_effect = yes }
+	BUL = { GER_united_industry_initialize_country_effect = yes }
+}
+
+GER_united_industry_military_exercises_country_effect = {
+	add_to_variable = { GER_united_industry_army_attack_factor = 0.05 }
+	force_update_dynamic_modifier = yes
+}
+
+GER_united_industry_military_exercises_bloc_effect = {
+	GER = { GER_united_industry_military_exercises_country_effect = yes }
+	HUN = { GER_united_industry_military_exercises_country_effect = yes }
+	ROM = { GER_united_industry_military_exercises_country_effect = yes }
+	BUL = { GER_united_industry_military_exercises_country_effect = yes }
+}
+
+GER_united_industry_radio_exchange_country_effect = {
+	add_to_variable = { GER_united_industry_coordination_bonus = 0.03 }
+	force_update_dynamic_modifier = yes
+}
+
+GER_united_industry_radio_exchange_bloc_effect = {
+	GER = { GER_united_industry_radio_exchange_country_effect = yes }
+	HUN = { GER_united_industry_radio_exchange_country_effect = yes }
+	ROM = { GER_united_industry_radio_exchange_country_effect = yes }
+	BUL = { GER_united_industry_radio_exchange_country_effect = yes }
+}
+
+GER_united_industry_vienna_research_center_country_effect = {
+	add_to_variable = { GER_united_industry_research_speed_factor = 0.05 }
+	force_update_dynamic_modifier = yes
+}
+
+GER_united_industry_vienna_research_center_bloc_effect = {
+	GER = { GER_united_industry_vienna_research_center_country_effect = yes }
+	HUN = { GER_united_industry_vienna_research_center_country_effect = yes }
+	ROM = { GER_united_industry_vienna_research_center_country_effect = yes }
+	BUL = { GER_united_industry_vienna_research_center_country_effect = yes }
+}
+
+GER_united_industry_distributed_aircraft_industry_country_effect = {
+	add_ideas = GER_united_industry_aircraft_cost_hidden_idea
+	force_update_dynamic_modifier = yes
+}
+
+GER_united_industry_distributed_aircraft_industry_bloc_effect = {
+	GER = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+	HUN = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+	ROM = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+	BUL = { GER_united_industry_distributed_aircraft_industry_country_effect = yes }
+}

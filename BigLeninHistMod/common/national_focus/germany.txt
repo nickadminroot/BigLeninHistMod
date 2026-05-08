@@ -9325,9 +9325,9 @@ focus_tree = {
 	focus = { #All related content and local will be in Czech related files and local locations
 		id = GER_integrate_czech_manufacturers
 		icon = GFX_focus_PER_czech_tanks
-		prerequisite = { focus = GER_integrate_czechoslovakia  focus = GER_fate_of_czechoslovakia }
+		prerequisite = { focus = GER_fate_of_czechoslovakia }
 
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = GER_fate_of_czechoslovakia
 		cost = 5
@@ -15612,19 +15612,14 @@ focus_tree = {
 
 			HUN = {
 				set_cosmetic_tag = HUN_GER
-				add_ideas = GER_united_industry
 			}
 			ROM = {
 				set_cosmetic_tag = ROM_GER
-				add_ideas = GER_united_industry
 			}
 			BUL = {
 				set_cosmetic_tag = BUL_GER
-				add_ideas = GER_united_industry
 			}
-			GER = {
-				add_ideas = GER_united_industry
-			}
+			GER_united_industry_initialize_bloc_effect = yes
 
 			unlock_decision_category_tooltip = GER_united_industry_dec_cat
 		}

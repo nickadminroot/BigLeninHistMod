@@ -1,0 +1,34 @@
+ideas = {
+	hidden_ideas = {
+		GER_united_industry_aircraft_cost_hidden_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				mio_cat_eq_all_medium_plane = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				mio_cat_eq_all_large_plane = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+
+			modifier = {
+				custom_modifier_tooltip = GER_united_industry_aircraft_cost_hidden_tt
+			}
+		}
+	}
+}

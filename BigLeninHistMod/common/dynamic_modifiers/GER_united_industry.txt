@@ -1,0 +1,10 @@
+GER_united_industry_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_production_bonus
+
+	production_speed_industrial_complex_factor = GER_united_industry_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = GER_united_industry_production_speed_arms_factory_factor
+	army_attack_factor = GER_united_industry_army_attack_factor
+	coordination_bonus = GER_united_industry_coordination_bonus
+	research_speed_factor = GER_united_industry_research_speed_factor
+}
