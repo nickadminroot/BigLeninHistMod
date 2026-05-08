@@ -10,5 +10,13 @@
         "/home/nickadminroot/.local/share/Paradox Interactive/Hearts of Iron IV/mod/BigLeninHistMod/BigLeninHistMod"
       ]
     }
+  },
+  "permission": {
+    "*": "allow",
+    "bash": {
+      "rm -rf *": "ask",
+      "sudo *": "ask",
+      "git push *": "ask"
+    }
   }
 }
