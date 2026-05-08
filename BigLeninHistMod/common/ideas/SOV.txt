@@ -3912,7 +3912,7 @@ ideas = {
 		SOV_no_step_back = {
 			name = SOV_no_step_back
 
-			picture = generic_war_economy
+			picture = GFX_idea_tenacious_defense_spirit
 
 			removal_cost = -1
 
@@ -3925,7 +3925,7 @@ ideas = {
 		SOV_bagration = {
 			name = SOV_bagration
 
-			picture = generic_major_war
+			picture = GFX_idea_bold_attack_spirit
 
 			removal_cost = -1
 
