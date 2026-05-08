@@ -1,12 +1,17 @@
-l_english:
+﻿l_english:
 
  # Focus Names
+ SOV_reserve_mobilization: "Reserve Mobilization"
+ SOV_deep_reserve_mobilization: "Deep Reserve Mobilization"
  SOV_mobilization_first_wave: "First Wave of Mobilization"
  SOV_mobilization_second_wave: "Second Wave of Mobilization"
  SOV_order_227: "Order 227"
  SOV_operation_bagration: "Operation Bagration"
+ SOV_superior_war_machines: "Reorganization of Tank Production"
 
  # Focus Descriptions
+ SOV_reserve_mobilization_desc: "We must mobilize our reserves to strengthen the army against the enemy."
+ SOV_deep_reserve_mobilization_desc: "We must deepen mobilization efforts to fully utilize the country's human resources."
  SOV_mobilization_first_wave_desc: "We need to mobilize reserves in order to effectively counter the enemy."
  SOV_mobilization_second_wave_desc: "We need to mobilize reserves in order to effectively counter the enemy."
  SOV_order_227_desc: "The Leader ordered us not to retreat, and we had no intention of doing so, but now it is written in stone."
@@ -19,6 +24,9 @@ l_english:
  SOV_bagration_desc: "Massive Soviet operation to liberate Belarus."
 
  # Custom Tooltips
+ SOV_reserve_mobilization_ns_tt: "Reserve Mobilization: Mobilization Speed §G+5%%§!, Conscription §G+3%%§!"
+ SOV_deep_reserve_mobilization_ns_tt: "Deep Reserve Mobilization: Training Time §G-10%%§!, Organization Regain §G+5%%§!"
+ SOV_war_economy_production_speed_tt: "§G+5%§! Construction Military Factory Speed"
  SOV_mobilization_first_wave_tt: "170 infantry divisions created: Novobrantsy"
  SOV_mobilization_second_wave_tt: "170 infantry divisions created: Novobrantsy"
  SOV_order_227_added_tt: "Added national spirit 'Not One Step Back'. Removed decision 'Order 227'."

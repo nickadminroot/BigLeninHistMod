@@ -1,12 +1,17 @@
 ﻿l_russian:
 
  # Focus Names
+ SOV_reserve_mobilization: "Мобилизация резервов"
+ SOV_deep_reserve_mobilization: "Углубленная мобилизация резервов"
  SOV_mobilization_first_wave: "Первая волна мобилизации"
  SOV_mobilization_second_wave: "Вторая волна мобилизации"
  SOV_order_227: "Приказ 227"
  SOV_operation_bagration: "Операция Багратион"
+ SOV_superior_war_machines: "Реорганизация танкового производства"
 
  # Focus Descriptions
+ SOV_reserve_mobilization_desc: "Мы должны провести мобилизацию резервов, чтобы усилить нашу армию перед лицом врага."
+ SOV_deep_reserve_mobilization_desc: "Необходимо углубить мобилизационные мероприятия для полного использования людских ресурсов страны."
  SOV_mobilization_first_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
  SOV_mobilization_second_wave_desc: "Нам необходимо мобилизовать резервы для того, чтобы эффективно противостоять противнику."
  SOV_order_227_desc: "Вождь велел не отступать, мы и не собирались, но теперь это зафиксировано на бумаге."
@@ -19,6 +24,9 @@
  SOV_bagration_desc: "Массированная советская операция по освобождению Белоруссии."
 
  # Custom Tooltips
+ SOV_reserve_mobilization_ns_tt: "Мобилизация резервов: скорость мобилизации §G+5%%§!, призыв §G+3%%§!"
+ SOV_deep_reserve_mobilization_ns_tt: "Углубленная мобилизация: время обучения §G-10%%§!, восстановление организации §G+5%%§!"
+ SOV_war_economy_production_speed_tt: "§G+5%§! к скорости строительства военных заводов"
  SOV_mobilization_first_wave_tt: "Создано 170 пехотных дивизий: Новобранцы"
  SOV_mobilization_second_wave_tt: "Создано 170 пехотных дивизий: Новобранцы"
  SOV_order_227_added_tt: "Добавлен национальный дух 'Ни шагу назад'. Удалено решение 'Приказ 227'."
