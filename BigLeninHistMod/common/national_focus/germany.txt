@@ -8485,7 +8485,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
 
-		x = 7
+		x = 11
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 10
@@ -8945,7 +8945,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_ger_reichskommisariats_historical
 		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 
-		x = 17
+		x = 19
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 5
@@ -10242,7 +10242,7 @@ focus_tree = {
 		prerequisite = { focus = GER_demands_to_sweden }
 
 		x = 1
-		y = 0
+		y = 1
 		relative_position_id = GER_demands_to_sweden
 		cost = 5
 
@@ -10902,7 +10902,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = GER_anschluss }
 
-		x = 8
+		x = 6
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -15401,7 +15401,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = GER_anschluss }
 		x = -4
-		y = 1
+		y = 4
 		relative_position_id = GER_anschluss
 		cost = 5
 
@@ -15547,9 +15547,11 @@ focus_tree = {
 		id = GER_consolidate_management_of_minor_powers
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = GER_develop_hungarian_bauxite_deposits }
+		prerequisite = { focus = GER_expand_oil_extraction_in_ploesti }
+		prerequisite = { focus = GER_sofia_initiative }
 		x = 0
 		y = 1
-		relative_position_id = GER_develop_hungarian_bauxite_deposits
+		relative_position_id = GER_expand_oil_extraction_in_ploesti
 		cost = 5
 
 		available = {
@@ -15632,7 +15634,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = GER_anschluss }
 
-		x = -6
+		x = -7
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
