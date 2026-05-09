@@ -209,3 +209,93 @@ Useful console commands for testing (press `~` in-game):
 - `add_manpower` - Add manpower
 
 See `vanilla/documentation/console_commands_documentation.md` for full list.
+
+---
+
+## Generating Focus Icons
+
+### Single Icon Generation
+
+Use `scripts/generate-single-focus-icon.py` to generate a custom focus icon via ComfyUI (Z-Image GGUF model). The script handles the full pipeline: generation, background removal, transparent margin cropping, alpha hole filling, DDS conversion, and .gfx registration.
+
+**Prerequisites:**
+- ComfyUI running on `http://127.0.0.1:8188`
+- `rembg` Python package installed (`pip install rembg`)
+- Z-Image GGUF model available in ComfyUI (`z-image-Q8_0.gguf`)
+
+**Usage:**
+
+```bash
+python3 scripts/generate-single-focus-icon.py \
+  --sprite-name "GFX_focus_custom_MY_FOCUS_ID" \
+  --desc "A Soviet T-34 tank breaking through a shattered defensive line, artillery flashes in the background, red banner rising behind the tank"
+```
+
+**Arguments:**
+| Argument | Required | Description |
+|----------|----------|-------------|
+| `--sprite-name` | Yes | GFX sprite name. Must start with `GFX_focus_custom_`. The part after this prefix becomes the DDS filename. |
+| `--desc` | Yes | Description of the central image/object. Be specific — name concrete objects, not abstract concepts. |
+| `--seed` | No | Random seed (0=random). Use a fixed seed to reproduce results. |
+| `--steps` | No | Sampler steps (default: 35). |
+| `--cfg` | No | CFG scale (default: 4.0). |
+| `--ai-size` | No | Generation resolution (default: 512). Use 1024 for higher quality. |
+| `--force` | No | Regenerate even if DDS already exists. |
+
+**What the script does:**
+1. Generates a 512x512 (or 1024x1024) image via ComfyUI using Z-Image GGUF
+2. Removes background with `rembg`
+3. Crops transparent margins at full resolution (preserves detail)
+4. Fills internal alpha holes (prevents cutouts inside the icon)
+5. Downsizes to 100x88 and converts to DDS (ARGB8888, no compression)
+6. Appends a `SpriteType` entry to `BigLeninHistMod/interface/custom_focus_icons.gfx`
+
+**Writing good descriptions:**
+
+Each description should describe **ONE concrete visual object** — not abstract concepts. The model generates better results when given specific, visualizable subjects.
+
+| Bad (abstract) | Good (concrete) |
+|----------------|-----------------|
+| "preparation for winter, equipment, snow" | "a steel M35 helmet covered in thick snow and icicles hanging from the brim" |
+| "final blow, artillery attack, battle" | "a 150mm howitzer firing, muzzle flash and powder smoke" |
+| "victory or death, decisive attack" | "a military banner with an Iron Cross, fabric tearing in the wind" |
+| "supply routes, logistics" | "a long freight train with tanker cars crossing a railway bridge" |
+
+**Description template:**
+```
+[Theme name]. Central image: [concrete object 1], [concrete object 2], [background element].
+```
+
+Example:
+```
+Operation Bagration. Central image: a Soviet T-34 tank breaking through a shattered enemy defensive line, with a torn front-line map beneath it, artillery flashes in the background, and a red banner rising behind the tank.
+```
+
+**After generation:**
+- The DDS file is saved to `BigLeninHistMod/gfx/interface/goals/focus_custom_{ID}.dds`
+- The .gfx entry is appended to `BigLeninHistMod/interface/custom_focus_icons.gfx`
+- Reference the icon in a focus definition: `icon = GFX_focus_custom_MY_FOCUS_ID`
+
+### Batch Icon Generation
+
+For generating many icons at once, use `scripts/generate-zimage-focus-icons.py`. It reads focus IDs from `focuses.txt` and generates icons for all pending ones.
+
+```bash
+# Check what's already generated vs pending
+python3 scripts/generate-zimage-focus-icons.py --list-done
+python3 scripts/generate-zimage-focus-icons.py --list-pending
+
+# Generate a batch of 5 icons
+python3 scripts/generate-zimage-focus-icons.py --batch-size 5
+
+# Continue from a specific position
+python3 scripts/generate-zimage-focus-icons.py --batch-start 10 --batch-size 5
+
+# Regenerate specific icons with new descriptions
+python3 scripts/generate-zimage-focus-icons.py --force --ids "FOCUS_ID_1,FOCUS_ID_2"
+
+# Rebuild .gfx from all existing DDS files
+python3 scripts/generate-zimage-focus-icons.py --build-gfx
+```
+
+Each icon takes ~4 minutes to generate. Run in batches of 5-10 to avoid timeouts.
