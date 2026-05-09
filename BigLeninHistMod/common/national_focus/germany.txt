@@ -9324,7 +9324,7 @@ focus_tree = {
 	#Peace For Our Time#
 	focus = { #All related content and local will be in Czech related files and local locations
 		id = GER_integrate_czech_manufacturers
-		icon = GFX_focus_custom_GER_integrate_czech_manufacturers
+		icon = GFX_focus_PER_czech_tanks
 		prerequisite = { focus = GER_fate_of_czechoslovakia }
 
 		x = 0
@@ -12771,7 +12771,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_me262
-		icon = GFX_focus_custom_GER_wunderwaffe_me262
+		icon = GFX_focus_generic_jet_planes
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = 1
@@ -12845,7 +12845,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_rotte
-		icon = GFX_focus_custom_GER_wunderwaffe_rotte
+		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = -3
@@ -12891,7 +12891,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_maus
-		icon = GFX_focus_custom_GER_wunderwaffe_maus
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
 
 		x = 0
@@ -12955,7 +12955,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_wunderwaffe_e50
-		icon = GFX_focus_custom_GER_wunderwaffe_e50
+		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = GER_wunderwaffe_maus }
 
 		x = 0
