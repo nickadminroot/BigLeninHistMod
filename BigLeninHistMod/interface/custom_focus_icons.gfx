@@ -11,4 +11,34 @@ spriteTypes = {
         texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_invest_in_italian_industry_512.dds"
     }
 
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_GER_libyan_industry"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_libyan_industry_512.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_GER_mediterranean_exercises"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_mediterranean_exercises_512.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_GER_prepare_east_african_sabotage"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_prepare_east_african_sabotage_512.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_GER_spanish_african_bases"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_spanish_african_bases_512.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_GER_wunderwaffe_program"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_GER_wunderwaffe_program_512.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_GER_consolidate_management_of_minor_powers"
+        texturefile = "gfx/interface/goals/focus_custom_GER_consolidate_management_of_minor_powers_512.dds"
+    }
+
 }

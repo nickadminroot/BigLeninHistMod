@@ -630,7 +630,7 @@ def generate_gfx_file(sprites: list[dict], output_path: Path):
 
 def main():
     parser = argparse.ArgumentParser(description="Z-Image Focus Icon Generator")
-    parser.add_argument("--limit", type=int, default=3, help="Max focuses to process (default 3)")
+    parser.add_argument("--limit", type=int, default=0, help="Max focuses to process (0=all pending)")
     parser.add_argument("--filter", type=str, default="", help="Filter by focus ID substring")
     parser.add_argument("--dry-run", action="store_true", help="Skip ComfyUI")
     parser.add_argument("--seed", type=int, default=0, help="Random seed (0=random)")
@@ -644,6 +644,11 @@ def main():
     parser.add_argument("--negative-prompt", type=str, default="", help="Override negative prompt")
     parser.add_argument("--ids", type=str, default="", help="Comma-separated focus IDs")
     parser.add_argument("--variant-suffix", type=str, default="", help="Suffix for variant files")
+    parser.add_argument("--batch-start", type=int, default=0, help="Start index for batch processing (0-based)")
+    parser.add_argument("--batch-size", type=int, default=0, help="Max icons to process in this batch (0=all pending)")
+    parser.add_argument("--list-pending", action="store_true", help="List pending icons and exit")
+    parser.add_argument("--list-done", action="store_true", help="List already generated icons and exit")
+    parser.add_argument("--build-gfx", action="store_true", help="Scan all DDS files and rebuild .gfx, then exit")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -679,6 +684,70 @@ def main():
         focus_ids = [f for f in focus_ids if f in wanted]
         print(f"  After explicit IDs: {len(focus_ids)}")
 
+    # Pre-scan: check which icons already exist
+    print(f"\n  Scanning for existing icons...")
+    already_done = []
+    pending = []
+    for fid in focus_ids:
+        dds_name = f"focus_custom_{fid}.dds"
+        if args.variant_suffix:
+            dds_name = f"focus_custom_{fid}{args.variant_suffix}.dds"
+        # Also check without suffix in case variant was dropped
+        alt_name = f"focus_custom_{fid}.dds"
+        if (OUTPUT_DIR / dds_name).exists() and not args.force:
+            already_done.append(fid)
+        elif dds_name != alt_name and (OUTPUT_DIR / alt_name).exists() and not args.force:
+            already_done.append(fid)
+        else:
+            pending.append(fid)
+    print(f"  Already generated: {len(already_done)}")
+    print(f"  Pending:           {len(pending)}")
+
+    # Apply batch range to pending list
+    if args.batch_start > 0:
+        pending = pending[args.batch_start:]
+        print(f"  After batch-start={args.batch_start}: {len(pending)} pending")
+
+    if args.batch_size > 0:
+        pending = pending[:args.batch_size]
+        print(f"  After batch-size={args.batch_size}: {len(pending)} to process")
+
+    focus_ids = pending
+
+    if not focus_ids:
+        print(f"\n  Nothing to do! All {len(already_done)} icons are already generated.")
+        print(f"  Use --force to regenerate or --batch-start/--batch-size for partial runs.")
+        return
+
+    if args.list_pending:
+        print(f"\n  Pending icons ({len(pending)}):")
+        for fid in pending:
+            print(f"    {fid}")
+        return
+    if args.list_done:
+        print(f"\n  Already generated ({len(already_done)}):")
+        for fid in already_done:
+            print(f"    {fid}")
+        return
+
+    if args.build_gfx:
+        print(f"\n  Scanning OUTPUT_DIR for all DDS files...")
+        sprites = []
+        for dds_file in sorted(OUTPUT_DIR.glob("focus_custom_*.dds")):
+            stem = dds_file.stem
+            # Extract focus ID from filename: focus_custom_{fid} or focus_custom_{fid}_suffix
+            match = re.match(r"focus_custom_(.+?)(?:_\d+)?$", stem)
+            if match:
+                fid = match.group(1)
+                gfx_name = f"GFX_focus_custom_{fid}"
+                sprites.append({"gfx_name": gfx_name, "texturefile": f"gfx/interface/goals/{dds_file.name}"})
+        if sprites:
+            generate_gfx_file(sprites, OUTPUT_GFX)
+            print(f"  Total icons in .gfx: {len(sprites)}")
+        else:
+            print(f"  No DDS files found in {OUTPUT_DIR}")
+        return
+
     if not args.dry_run:
         print(f"\n[2/5] Checking ComfyUI at {COMFYUI_URL}...")
         if not comfyui_is_running():
@@ -706,7 +775,8 @@ def main():
         print(f"  Output: {new_dds_name}")
 
         if output_dds.exists() and not args.force:
-            print(f"  [SKIP] Already exists")
+            size = output_dds.stat().st_size
+            print(f"  [SKIP] Already exists ({size} bytes)")
             generated.append({"gfx_name": new_gfx, "texturefile": f"gfx/interface/goals/{new_dds_name}"})
             continue
 
@@ -815,8 +885,20 @@ def main():
 
     print(f"\n{'=' * 60}")
     print(f"Done!")
-    print(f"  Generated: {len(generated)}")
-    print(f"  Total:     {len(focus_ids)}")
+    new_in_run = len(generated)
+    if args.dry_run:
+        print(f"  Dry-run:             {len(focus_ids)} icons would be generated")
+    else:
+        failed_in_run = len(focus_ids) - new_in_run
+        print(f"  Generated this run:  {new_in_run}")
+        print(f"  Failed this run:     {failed_in_run}")
+    print(f"  Skipped (existed):   {len(already_done)}")
+    total_all = len(already_done) + len(pending)
+    total_after = len(already_done) + new_in_run
+    print(f"  Total complete:      {total_after} / {total_all}")
+    remaining = total_all - total_after
+    if remaining > 0 and not args.dry_run:
+        print(f"  Remaining:           {remaining} (run again to continue)")
     if generated:
         print(f"  Output:    {OUTPUT_DIR}")
         print(f"  Previews:  {PREVIEW_DIR}")
