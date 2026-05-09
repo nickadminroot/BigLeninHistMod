@@ -170,20 +170,24 @@ FOCUS_DESCRIPTIONS = {
         "ведущий и ведомый, тактическая схема воздушного боя"
     ),
     "SOV_mobilization_first_wave": (
-        "толпа советских призывников в будёновках с винтовками Мосина, "
-        "красные знамёна, здание военкомата на фоне"
+        "First Wave of Mobilization. Central image: a small group of Soviet Red Army reservists "
+        "in 1940s greatcoats and steel helmets standing before a mobilization order and a red military banner, "
+        "with a rifle, field pack, and red star in the foreground"
     ),
     "SOV_mobilization_second_wave": (
-        "железнодорожный эшелон с солдатами в теплушках, "
-        "красные звёзды на вагонах, паровоз тянет состав"
+        "Second Wave of Mobilization. Central image: a mass column of Soviet soldiers marching forward, "
+        "with an officer in the foreground holding a clipboard and mobilization lists, "
+        "railway troop trains and barracks silhouettes behind them"
     ),
     "SOV_operation_bagration": (
-        "залп реактивных миномётов Катюша, ракеты взлетают, "
-        "танки Т-34 идут в атаку на фоне, дым и огонь"
+        "Operation Bagration. Central image: a Soviet T-34 tank breaking through a shattered enemy "
+        "defensive line, with a torn front-line map beneath it, artillery flashes in the background, "
+        "and a red banner rising behind the tank"
     ),
     "SOV_order_227": (
-        "советский солдат с винтовкой стоит насмерть, "
-        "красное знамя развевается за ним, надпись НИ ШАГУ НАЗАД"
+        "Order 227. Central image: a severe stone tablet or heavy metal military order engraved with "
+        "abstract marks, bearing a red Soviet star at the top, with crossed Mosin rifles and a steel helmet "
+        "behind it; below, a trench line with barbed wire and anti-retreat symbolism"
     ),
 }
 
