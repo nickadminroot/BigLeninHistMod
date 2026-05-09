@@ -9060,7 +9060,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					171 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9181,7 +9180,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					790 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9328,7 +9326,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					174 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9449,7 +9446,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					791 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9570,7 +9566,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					176 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9712,7 +9707,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					792 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -9859,7 +9853,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					172 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10001,7 +9994,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					166 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10149,7 +10141,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					794 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10275,7 +10266,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					165 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10401,7 +10391,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					788 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10522,7 +10511,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					41 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10648,7 +10636,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					793 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10774,7 +10761,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					167 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -10900,7 +10886,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					170 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -11021,7 +11006,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					175 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -11147,7 +11131,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					168 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -11273,7 +11256,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					169 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -11394,7 +11376,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					789 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 
@@ -11515,7 +11496,6 @@ SPR_civil_war_offensives = {
 					has_completed_focus = SPR_take_the_initiative
 					173 = { is_controlled_by = SPA }
 				}
-				add_timed_idea = { idea = SPR_anti_nationalist_offensive days = 30 }
 			}
 		}
 

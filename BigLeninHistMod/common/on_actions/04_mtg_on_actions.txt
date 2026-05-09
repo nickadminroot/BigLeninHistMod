@@ -2925,19 +2925,11 @@ on_actions = {
 					original_tag = HOL
 					has_idea = HOL_de_crisisjaren_4
 				}
-				swap_ideas = {
-					remove_idea = HOL_de_crisisjaren_4
-					add_idea = HOL_de_crisisjaren_1
-				}
 			}
 			if = {
 				limit = {
 					original_tag = HOL
 					has_idea = HOL_de_crisisjaren_3
-				}
-				swap_ideas = {
-					remove_idea = HOL_de_crisisjaren_3
-					add_idea = HOL_de_crisisjaren_1
 				}
 			}
 			if = {
@@ -2945,19 +2937,11 @@ on_actions = {
 					original_tag = HOL
 					has_idea = HOL_de_crisisjaren_2
 				}
-				swap_ideas = {
-					remove_idea = HOL_de_crisisjaren_2
-					add_idea = HOL_de_crisisjaren_1
-				}
 			}
 			if = { # Only possible if Abandon the Gold Standard hasn't been taken yet, this can be taken later so should be reduced to level 2 rather than 1
 				limit = {
 					original_tag = HOL
 					has_idea = HOL_de_crisisjaren_5
-				}
-				swap_ideas = {
-					remove_idea = HOL_de_crisisjaren_5
-					add_idea = HOL_de_crisisjaren_2
 				}
 			}
 			if = {

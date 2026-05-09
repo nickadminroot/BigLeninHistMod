@@ -938,15 +938,12 @@ focus_tree = {
 
 		completion_reward = {
 			GER = {
-				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
+add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
 			}
 			ITA = {
-				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
+add_ai_strategy = { type = send_lend_lease_desire id = SPA value = 200 }
 			}
-			add_timed_idea = { idea = SPR_equipment_shipments_spain days = 730 }
-		}
+}
 	}
 
 	focus = {
@@ -7228,11 +7225,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPR_anarchist_society_1
-				add_idea = SPR_anarchist_society_2
-			}
-		}
+}
 	}
 
 	focus = {
@@ -7256,54 +7249,30 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_2
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_2
-					add_idea = SPR_anarchist_society_3
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_5
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_5
-					add_idea = SPR_anarchist_society_6
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_8
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_8
-					add_idea = SPR_anarchist_society_9
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_11
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_11
-					add_idea = SPR_anarchist_society_12
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_13
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_13
-					add_idea = SPR_anarchist_society_14
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_2
-						add_idea = SPR_anarchist_society_3
-					}
-				}
+}
 			}
 		}
 	}
@@ -7331,54 +7300,30 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_3
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_3
-					add_idea = SPR_anarchist_society_4
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_6
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_6
-					add_idea = SPR_anarchist_society_7
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_9
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_9
-					add_idea = SPR_anarchist_society_10
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_12
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_12
-					add_idea = SPR_anarchist_society_15
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_14
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_14
-					add_idea = SPR_anarchist_society_16
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_3
-						add_idea = SPR_anarchist_society_4
-					}
-				}
+}
 			}
 		}
 	}
@@ -7401,11 +7346,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
-			swap_ideas = {
-				remove_idea = SPR_disbanded_army_1
-				add_idea = SPR_disbanded_army_2
-			}
-		}
+}
 	}
 
 	focus = {
@@ -7482,63 +7423,35 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_2
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_2
-					add_idea = SPR_anarchist_society_5
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_5
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_5
-					add_idea = SPR_anarchist_society_8
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_3
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_3
-					add_idea = SPR_anarchist_society_6
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_6
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_6
-					add_idea = SPR_anarchist_society_9
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_4
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_4
-					add_idea = SPR_anarchist_society_7
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_7
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_7
-					add_idea = SPR_anarchist_society_10
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_2
-						add_idea = SPR_anarchist_society_5
-					}
-				}
+}
 			}
 		}
 	}
@@ -7565,63 +7478,35 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_5
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_5
-					add_idea = SPR_anarchist_society_11
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_8
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_8
-					add_idea = SPR_anarchist_society_13
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_6
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_6
-					add_idea = SPR_anarchist_society_12
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_9
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_9
-					add_idea = SPR_anarchist_society_14
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_7
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_7
-					add_idea = SPR_anarchist_society_15
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_10
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_10
-					add_idea = SPR_anarchist_society_16
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_5
-						add_idea = SPR_anarchist_society_11
-					}
-				}
+}
 			}
 		}
 	}
@@ -7670,90 +7555,50 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_2
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_2
-					add_idea = SPR_anarchist_society_5
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_5
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_5
-					add_idea = SPR_anarchist_society_8
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_3
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_3
-					add_idea = SPR_anarchist_society_6
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_6
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_6
-					add_idea = SPR_anarchist_society_9
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_4
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_4
-					add_idea = SPR_anarchist_society_7
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_7
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_7
-					add_idea = SPR_anarchist_society_10
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_15
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_15
-					add_idea = SPR_anarchist_society_16
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_17
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_17
-					add_idea = SPR_anarchist_society_18
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_18
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_18
-					add_idea = SPR_anarchist_society_19
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_2
-						add_idea = SPR_anarchist_society_5
-					}
-				}
+}
 			}
 		}
 	}
@@ -7828,8 +7673,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { idea = SPR_seized_gold_reserves  days = 730 }
-			set_global_flag = SPR_gold_reserves_flag
+set_global_flag = SPR_gold_reserves_flag
 		}
 	}
 
@@ -8005,11 +7849,10 @@ focus_tree = {
 				limit = {
 					NOT = { has_global_flag = spanish_civil_war }
 				}
-				effect_tooltip = { add_timed_idea = { idea = SPR_masters_of_our_own_fate_tooltip days = 60 } }
+				effect_tooltip = { }
 			}
 			else = {
-				add_timed_idea = { idea = SPR_masters_of_our_own_fate days = 60 }
-			}
+}
 			if = {
 				limit = {
 					has_completed_focus = SPR_regional_defense_council_of_aragon
@@ -8071,27 +7914,15 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_15
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_15
-					add_idea = SPR_anarchist_society_17
-				}
-			}
+}
 			if = {
 				limit = {
 					has_idea = SPR_anarchist_society_16
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_16
-					add_idea = SPR_anarchist_society_18
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_15
-						add_idea = SPR_anarchist_society_17
-					}
-				}
+}
 			}
 			every_owned_state = {
 				limit = {
@@ -8339,11 +8170,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = SPR_torchbearers_of_tomorrow
-			swap_ideas = {
-				remove_idea = SPR_the_threats_abound_1
-				add_idea = SPR_the_threats_abound_2
-			}
-		}
+}
 	}
 
 	focus = {
@@ -8776,27 +8603,15 @@ focus_tree = {
 				limit = {
 					has_idea = SPR_anarchist_society_17
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_17
-					add_idea = SPR_anarchist_society_18
-				}
-			}
+}
 			else_if = {
 				limit = {
 					has_idea = SPR_anarchist_society_18
 				}
-				swap_ideas = {
-					remove_idea = SPR_anarchist_society_18
-					add_idea = SPR_anarchist_society_19
-				}
-			}
+}
 			else = {
 				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPR_anarchist_society_17
-						add_idea = SPR_anarchist_society_18
-					}
-				}
+}
 			}
 			remove_ideas = SPA_recovering_from_civil_war
 			add_tech_bonus = {
@@ -8854,11 +8669,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			swap_ideas = {
-				remove_idea = SPR_the_threats_abound_2
-				add_idea = SPR_the_threats_abound_3
-			}
-		}
+}
 	}
 
 	focus = {
@@ -9055,8 +8866,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_timed_idea = { idea = SPR_fortify_the_iron_ring days = 730 }
-			792 = {
+792 = {
 				add_building_construction = {
 					type = bunker
 					province = {
@@ -9091,11 +8901,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
-			swap_ideas = {
-				remove_idea = SPR_disbanded_army_1
-				add_idea = SPR_disbanded_army_2
-			}
-		}
+}
 	}
 
 	focus = {
@@ -9295,8 +9101,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { idea = SPR_appropriate_church_riches days = 730 }
-		}
+}
 	}
 
 	focus = {
@@ -9371,8 +9176,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_war_support = 0.05
-			add_timed_idea = { idea = SPR_popular_front_1 days = 730 }
-		}
+}
 	}
 
 	focus = {
@@ -9425,12 +9229,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = remove_political_advisor
 			show_ideas_tooltip = SPR_jesus_hernandez_tomas
-			add_timed_idea = { idea = SPR_crush_the_revolution days = 60 }
-			swap_ideas = {
-				remove_idea = SPR_popular_front_1
-				add_idea = SPR_popular_front_2
-			}
-			custom_effect_tooltip = SPR_crush_the_revolution_tt
+custom_effect_tooltip = SPR_crush_the_revolution_tt
 			if = {
 				limit = {
 					NOT = { has_war_with = SPC }
@@ -9512,8 +9311,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { idea = SPR_collective_recovery_efforts days = 730 }
-			every_state = {
+every_state = {
 				limit	= {
 					is_core_of = ROOT
 					is_in_home_area = yes
@@ -10045,11 +9843,9 @@ focus_tree = {
 			    popularity = 0.05
 			}
 			SOV = {
-				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 200 }
+add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 200 }
 			}
-			add_timed_idea = { idea = SPR_equipment_shipments_spain days = 730 }
-			random_owned_controlled_state = {
+random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -10168,8 +9964,7 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = SPR_soviet_industrial_aid days = 730 }
-			random_owned_controlled_state = {
+random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -10262,8 +10057,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { idea = SPR_soviet_recovery_aid days = 1095 }
-			if = {
+if = {
 				limit = {
 					has_idea = SPA_recovering_from_civil_war_3
 				}
@@ -10357,11 +10151,7 @@ focus_tree = {
 					}
 				}
 			}
-			swap_ideas = {
-				remove_idea = SPR_class_war_1
-				add_idea = SPR_class_war_2
-			}
-			every_owned_state = {
+every_owned_state = {
 				limit = {
 					OR = {
 						state = 165
@@ -10391,11 +10181,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPR_class_war_2
-				add_idea = SPR_class_war_3
-			}
-		}
+}
 	}
 
 	focus = {
@@ -10998,11 +10784,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = SPR_an_army_of_all_classes_1
-				add_idea = SPR_an_army_of_all_classes_2
-			}
-			every_owned_state = {
+every_owned_state = {
 				limit = {
 					OR = {
 						state = 165
@@ -11489,8 +11271,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_timed_idea = { idea = SPR_the_five_year_plan days = 1825 }
-			if = {
+if = {
 				limit = {
 					has_idea = SPA_recovering_from_civil_war_3
 				}
@@ -11765,8 +11546,7 @@ focus_tree = {
 			effect_tooltip = {
 				add_war_support = 0.15
 				FRA = {
-					add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-					add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
 				}
 			}
 			custom_effect_tooltip = SPR_petition_for_french_aid_tt
@@ -12101,8 +11881,7 @@ focus_tree = {
 			    popularity = -0.1
 			}
 			remove_ideas = SPR_popular_front_2
-			add_timed_idea = { idea = SPR_oppose_the_communists days = 730 }
-			remove_country_leader_trait = figurehead_president
+remove_country_leader_trait = figurehead_president
 			add_country_leader_trait = great_survivor
 		}
 	}
@@ -12182,8 +11961,7 @@ focus_tree = {
 			remove_ideas = SPR_soviet_recovery_aid
 			remove_ideas = SPR_provide_for_the_people
 			remove_ideas = SPR_the_five_year_plan
-			add_timed_idea = { idea = SPR_subvert_soviet_control days = 1095 }
-			custom_effect_tooltip = SPR_subvert_soviet_control_tt
+custom_effect_tooltip = SPR_subvert_soviet_control_tt
 		}
 	}
 
@@ -12263,8 +12041,7 @@ focus_tree = {
 						exists = yes
 						has_capitulated = no
 					}
-					add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-				}
+}
 			}
 			custom_effect_tooltip = SPR_those_who_would_not_help_us_tt
 			every_other_country = {
@@ -12451,8 +12228,7 @@ focus_tree = {
 
 		completion_reward = {
 			effect_tooltip = {
-				add_timed_idea = { idea = SPR_deal_with_the_devil days = 730 }
-			}
+}
 			custom_effect_tooltip = SPR_deal_with_the_devil_tt
 			GER = { country_event = { id = lar_spain.74 hours = 6 random_hours = 6 } }
 		}
@@ -12627,11 +12403,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPR_popular_front_2
-				add_idea = SPR_popular_front_3
-			}
-		}
+}
 	}
 
 	focus = {
@@ -12655,11 +12427,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = communism
 			}
-			swap_ideas = {
-				remove_idea = SPR_popular_front_3
-				add_idea = SPR_popular_front_4
-			}
-			unlock_national_focus = SPR_red_bulwark_in_the_west
+unlock_national_focus = SPR_red_bulwark_in_the_west
 			unlock_national_focus = SPR_increase_arms_production
 			custom_effect_tooltip = SPR_communists_in_the_government_tt
 			# Stalinist
@@ -12913,11 +12681,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			swap_ideas = {
-				remove_idea = SPR_professional_military_1
-				add_idea = SPR_professional_military_2
-			}
-		}
+}
 	}
 
 	focus = {

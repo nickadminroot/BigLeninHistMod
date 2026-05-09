@@ -2465,7 +2465,6 @@ country_event = {
 				teleport_railway_guns_to_deploy_province = ROOT
 				teleport_railway_guns_to_deploy_province = SPD
 				SPD = {
-					add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 					add_ideas = SPR_disbanded_army_1
 					set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 				}
@@ -4500,7 +4499,6 @@ country_event = {
 				teleport_railway_guns_to_deploy_province = SPA
 				set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 				SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
-				add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 				add_ideas = SPR_disbanded_army_1
 				set_global_flag = spanish_civil_war
 				country_event = { id = lar_spain.6 days = 7 }
@@ -4693,7 +4691,6 @@ country_event = {
 			add_ideas = SPR_disbanded_army_1
 		}
 		effect_tooltip = {
-			add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
@@ -4739,7 +4736,6 @@ country_event = {
 			add_ideas = SPR_disbanded_army_1
 		}
 		effect_tooltip = {
-			add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
@@ -4795,7 +4791,6 @@ country_event = {
 			add_ideas = SPR_disbanded_army_1
 		}
 		effect_tooltip = {
-			add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
@@ -7382,7 +7377,6 @@ country_event = {
 				}
 				unlock_national_focus = SPR_seize_the_gold_reserves
 				unlock_national_focus = SPR_masters_of_our_own_fate
-				add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			}
 
 			## SPD triggers Anarchist Uprising ##
@@ -8294,7 +8288,6 @@ country_event = {
 				complete_national_focus = SPR_the_future_of_the_republic
 				complete_national_focus = SPR_reaffirm_the_popular_front_strategy
 				unlock_national_focus = SPR_crush_the_revolution
-				add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			}
 
 			## SPC triggers Anarchist Uprising ##
@@ -10379,7 +10372,6 @@ country_event = {
 			base = 50
 		}
 		add_political_power = -25
-		add_timed_idea = { idea = SPR_seized_spanish_gold_reserves days = 365 }
 		hidden_effect = {
 			SPD = {
 				country_event = { id = lar_spain.54 }
@@ -10443,7 +10435,6 @@ country_event = {
 	
 	option = { # Dangit
 		name = lar_spain.55.a
-		add_timed_idea = { idea = SPR_seized_spanish_gold_reserves_spain days = 365 }
 	}
 }
 
@@ -10755,7 +10746,6 @@ country_event = {
 			ideology = communism
 			popularity = 0.1
 		}
-		add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
 		add_opinion_modifier = { target = FROM modifier = SPA_spanish_civil_war_commitments }
 		FROM = {
 			add_war_support = 0.15
@@ -10914,7 +10904,6 @@ country_event = {
 		ai_chance = {
 			base = 75
 		}
-		add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
 		add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 100 }
 		hidden_effect = {
 			FROM = {
@@ -11076,7 +11065,6 @@ country_event = {
 		army_experience = -25
 		effect_tooltip = {
 			FROM = {
-				add_timed_idea = { idea = SPR_deal_with_the_devil days = 730 }
 			}
 		}
 		hidden_effect = {
@@ -11118,7 +11106,6 @@ country_event = {
 	
 	option = { # Ok
 		name = lar_spain.75.a
-		add_timed_idea = { idea = SPR_deal_with_the_devil days = 730 }
 	}
 }
 

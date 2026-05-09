@@ -1042,10 +1042,6 @@ country_event = { #Political Opposition
 			has_government = communism
 		}
 		set_country_flag = DEN_opposition_propaganda_flag
-		add_timed_idea = {
-			idea = DEN_fascist_propaganda_ns
-			days = 180
-		}
 	}
 
 	option = { #commie lies!
@@ -1057,10 +1053,6 @@ country_event = { #Political Opposition
 			has_government = fascism
 		}
 		set_country_flag = DEN_opposition_propaganda_flag
-		add_timed_idea = {
-			idea = DEN_communist_propaganda_ns
-			days = 180
-		}
 	}
 }
 
@@ -1083,10 +1075,6 @@ country_event = { #Political Opposition
 
 	option = { #Damn Royalists!
 		name = denmark_political_events.11.a
-		add_timed_idea = {
-			idea = DEN_monarchist_discontent_ns
-			days = 365
-		}
 	}
 }
 
@@ -1407,13 +1395,6 @@ country_event = { #Denmark becomes a puppet
 			}
 		}
 
-		set_power_balance = { #New BoP for DEN
-			id = DEN_occupation_balance
-			left_side = DEN_annexation_side
-			right_side = DEN_autonomy_side	
-			set_value = 0.2
-		}
-			
 		hidden_effect = {
 			set_popularities = { #Denmark keeps it government form
 				democratic = DEN_democratic_popularity
@@ -1880,13 +1861,6 @@ country_event = { #Denmark becomes independent peacefully
 				}
 				remove_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier_improved }
 			}
-		}
-
-		set_power_balance = {
-			id = DEN_balance_of_power
-			left_side = DEN_welfare_side
-			right_side = DEN_warfare_side
-			set_value = 0
 		}
 
 		if = {
@@ -4706,12 +4680,6 @@ country_event = { #Denmark: Overlord tries to install its own government form
 
 		DEN_activate_bought_ships = yes #Denmark receives the Destroyers it bought
 
-		set_power_balance = {
-			id = DEN_balance_of_power
-			left_side = DEN_welfare_side
-			right_side = DEN_warfare_side
-			set_value = 0.3
-		}
 	}
 }
 
@@ -5981,10 +5949,6 @@ country_event = { #ENG/GER wants to increase trade
 		effect_tooltip = {
 			ROOT = { add_offsite_building = { type = industrial_complex level = 1 }}
 			FROM = {
-				swap_ideas = {
-					remove_idea = DEN_danish_produce_export_ns
-					add_idea = DEN_danish_produce_export_ns_improved
-				}
 			}
 		}
 		custom_effect_tooltip = war_will_cancel_deal_tt
@@ -6018,10 +5982,6 @@ country_event = { #DEN accepted to increase trade
 	option = { #Yaaaas
 		name = denmark_trade_deal.2.a #deliberate
 		ROOT = {
-			swap_ideas = {
-				remove_idea = DEN_danish_produce_export_ns
-				add_idea = DEN_danish_produce_export_ns_improved
-			}
 			set_country_flag = has_danish_produce_improved_flag
 		}
 		FROM = { add_offsite_building = { type = industrial_complex level = 1 }}
@@ -7964,10 +7924,6 @@ country_event = { #Denmark is refused Swedish Puppet
 		    type = annex_everything
 		    target = SWE
 		}
-		add_timed_idea = {
-		    idea = DEN_securing_sweden_ns
-		    days = 365
-		}
 	}
 }
 country_event = { #Denmark Demands Sweden from Norway
@@ -8079,10 +8035,6 @@ country_event = { #Denmark is refused Swedish Puppet
 		create_wargoal = {
 		    type = annex_everything
 		    target = SWE
-		}
-		add_timed_idea = {
-		    idea = DEN_securing_sweden_ns
-		    days = 365
 		}
 	}
 }
@@ -8202,10 +8154,6 @@ country_event = { #Denmark is refused Norwegian puppet
 		    type = annex_everything
 		    target = NOR
 		}
-		add_timed_idea = {
-		    idea = DEN_securing_norway_ns
-		    days = 365
-		}
 	}
 }
 country_event = { #Denmark Demands Norway from Sweden
@@ -8317,10 +8265,6 @@ country_event = { #Denmark is refused Norwegian Puppet
 		create_wargoal = {
 		    type = annex_everything
 		    target = NOR
-		}
-		add_timed_idea = {
-		    idea = DEN_securing_norway_ns
-		    days = 365
 		}
 	}
 }
@@ -9550,18 +9494,10 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 			limit = {
 				FROM = { has_government = neutrality }
 			}
-			add_timed_idea = {
-				idea = DEN_foreign_influence_neutrality_ns
-				days = 365
-			}
 		}
 		else_if = {
 			limit = {
 				FROM = { has_government = fascism }
-			}
-			add_timed_idea = {
-				idea = DEN_foreign_influence_fascism_ns
-				days = 365
 			}
 		}
 	}
