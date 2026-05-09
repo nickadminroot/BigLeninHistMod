@@ -26,7 +26,7 @@ import uuid
 from collections import deque
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 
 COMFYUI_URL = "http://127.0.0.1:8188"
@@ -39,6 +39,7 @@ VANILLA_GOALS_DIR = MOD_ROOT / "vanilla" / "gfx" / "interface" / "goals"
 OUTPUT_DIR = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "goals"
 OUTPUT_GFX = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_focus_icons.gfx"
 TEMP_DIR = Path("/tmp/comfyui-focus-icons")
+PREVIEW_DIR = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "goals" / "_previews"
 
 HOI4_ICON_WIDTH = 100
 HOI4_ICON_HEIGHT = 88
@@ -121,9 +122,21 @@ ORIGINAL_GFX_BY_FOCUS = {
 }
 
 SPECIFIC_FOCUS_PROMPTS = {
-    "BLHM_GER_develop_portuguese_mining": "tungsten mining focus icon, mine tunnel entrance, ore cart with bright metal ore, pickaxe, industrial resource extraction",
-    "BLHM_GER_mediterranean_exercises": "Mediterranean military exercises focus icon, warship and aircraft silhouettes, naval and air coordination, training maneuvers",
-    "GER_east_front_prepare_long_war": "Eastern Front long war preparation focus icon, winter supply planning, map table, military logistics, determined army command",
+    "BLHM_GER_develop_portuguese_mining": (
+        "tungsten mining Hearts of Iron IV national focus icon, painted WW2 strategy game emblem, "
+        "Portuguese mountain mine tunnel, ore cart full of bright tungsten crystals, crossed pickaxe and drill, "
+        "industrial laurel trim, centered single subject, bold readable silhouette, metallic grey and brass palette, no text"
+    ),
+    "BLHM_GER_mediterranean_exercises": (
+        "Mediterranean naval air exercises Hearts of Iron IV national focus icon, painted WW2 strategy game emblem, "
+        "1930s warship bow cutting through blue sea waves, propeller dive bomber overhead, crossed signal flags, "
+        "sunlit southern sea training badge, centered single subject, clear naval aviation silhouette, steel blue red and gold palette, no text"
+    ),
+    "GER_east_front_prepare_long_war": (
+        "Eastern Front long war preparation Hearts of Iron IV national focus icon, painted WW2 strategy game emblem, "
+        "winter operations map table, snow covered supply truck, red route arrows, fuel drum and ammunition crates, "
+        "frosted military logistics badge, centered single subject, bleak red white and field grey palette, no text"
+    ),
 }
 
 
@@ -268,6 +281,22 @@ def prepare_input_png(dds_path: Path, png_path: Path, approach: str) -> bool:
         return False
 
 
+def remove_background_rembg(src_path: Path, dst_path: Path) -> bool:
+    """Use rembg when installed; caller falls back to the selected alpha strategy."""
+    try:
+        from rembg import remove
+    except Exception:
+        return False
+
+    try:
+        img = Image.open(src_path).convert("RGBA")
+        out = remove(img)
+        out.save(dst_path)
+        return True
+    except Exception:
+        return False
+
+
 def png_to_dds(png_path: Path, dds_path: Path) -> bool:
     try:
         result = subprocess.run(
@@ -330,6 +359,101 @@ def fill_internal_alpha_holes(src_path: Path, dst_path: Path) -> bool:
         return True
     except Exception:
         return False
+
+
+def alpha_report(image_path: Path) -> dict:
+    img = Image.open(image_path).convert("RGBA").resize(
+        (HOI4_ICON_WIDTH, HOI4_ICON_HEIGHT), Image.Resampling.LANCZOS
+    )
+    w, h = img.size
+    alpha = img.getchannel("A")
+    values = list(alpha.getdata())
+    transparent = {i for i, a in enumerate(values) if a < 128}
+    corners = [alpha.getpixel((0, 0)), alpha.getpixel((w - 1, 0)), alpha.getpixel((0, h - 1)), alpha.getpixel((w - 1, h - 1))]
+
+    queue = deque()
+    edge = set()
+    for x in range(w):
+        for y in (0, h - 1):
+            idx = y * w + x
+            if idx in transparent:
+                queue.append((x, y))
+                edge.add(idx)
+    for y in range(h):
+        for x in (0, w - 1):
+            idx = y * w + x
+            if idx in transparent and idx not in edge:
+                queue.append((x, y))
+                edge.add(idx)
+
+    while queue:
+        x, y = queue.popleft()
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if 0 <= nx < w and 0 <= ny < h:
+                idx = ny * w + nx
+                if idx in transparent and idx not in edge:
+                    edge.add(idx)
+                    queue.append((nx, ny))
+
+    return {
+        "has_alpha": min(values) < 255,
+        "transparent_corners": all(a < 128 for a in corners),
+        "transparent_pixels": len(transparent),
+        "internal_holes": len(transparent - edge),
+    }
+
+
+def make_preview(src_path: Path, preview_path: Path) -> bool:
+    try:
+        icon = Image.open(src_path).convert("RGBA").resize(
+            (HOI4_ICON_WIDTH, HOI4_ICON_HEIGHT), Image.Resampling.LANCZOS
+        )
+        scale = 4
+        cell = 8
+        bg = Image.new("RGBA", icon.size, (44, 47, 50, 255))
+        draw = ImageDraw.Draw(bg)
+        for y in range(0, icon.height, cell):
+            for x in range(0, icon.width, cell):
+                if (x // cell + y // cell) % 2 == 0:
+                    draw.rectangle((x, y, x + cell - 1, y + cell - 1), fill=(92, 96, 101, 255))
+        bg.alpha_composite(icon)
+        preview = bg.resize((icon.width * scale, icon.height * scale), Image.Resampling.NEAREST)
+        preview_path.parent.mkdir(parents=True, exist_ok=True)
+        preview.save(preview_path)
+        return True
+    except Exception:
+        return False
+
+
+def enable_lora(workflow: dict, lora_name: str, strength: float) -> None:
+    workflow["13"] = {
+        "class_type": "LoraLoader",
+        "inputs": {
+            "model": ["4", 0],
+            "clip": ["4", 1],
+            "lora_name": lora_name,
+            "strength_model": strength,
+            "strength_clip": strength,
+        },
+    }
+    workflow["3"]["inputs"]["model"] = ["13", 0]
+    workflow["6"]["inputs"]["clip"] = ["13", 1]
+    workflow["7"]["inputs"]["clip"] = ["13", 1]
+
+
+def enable_text2img(workflow: dict, width: int, height: int) -> None:
+    workflow.pop("10", None)
+    workflow.pop("11", None)
+    workflow.pop("12", None)
+    workflow["14"] = {
+        "class_type": "EmptyLatentImage",
+        "inputs": {
+            "width": width,
+            "height": height,
+            "batch_size": 1,
+        },
+    }
+    workflow["3"]["inputs"]["latent_image"] = ["14", 0]
 
 
 def png_to_dds_no_resize(png_path: Path, dds_path: Path) -> bool:
@@ -508,15 +632,21 @@ def main():
     parser.add_argument("--filter", type=str, default="", help="Filter by focus ID substring")
     parser.add_argument("--dry-run", action="store_true", help="Skip ComfyUI, just parse")
     parser.add_argument("--prompt", type=str, default="", help="Override prompt for all")
-    parser.add_argument("--denoise", type=float, default=0.5, help="Denoise strength")
+    parser.add_argument("--denoise", type=float, default=0.35, help="Denoise strength")
     parser.add_argument("--seed", type=int, default=0, help="Random seed")
     parser.add_argument("--ids", type=str, default="", help="Comma-separated focus IDs to process")
     parser.add_argument("--force", action="store_true", help="Regenerate existing output files")
     parser.add_argument(
         "--approach",
-        choices=["vanilla-alpha", "chroma-green", "chroma-magenta", "opaque"],
-        default="chroma-magenta",
-        help="Transparency strategy. Chroma approaches generate on a key background, then remove it.",
+        choices=["vanilla-alpha", "rembg", "chroma-green", "chroma-magenta", "opaque"],
+        default="vanilla-alpha",
+        help="Transparency strategy. Chroma is kept only for experiments because it can leave colored edge aura.",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["experiment", "production"],
+        default="experiment",
+        help="Experiment mode writes candidate DDS/preview files only. Production mode may rewrite .gfx/update scripts.",
     )
     parser.add_argument("--variant-suffix", type=str, default="", help="Append suffix before .dds for test variants")
     parser.add_argument("--steps", type=int, default=32, help="Sampler steps")
@@ -524,6 +654,17 @@ def main():
     parser.add_argument("--sampler", type=str, default="dpmpp_2m", help="ComfyUI sampler_name")
     parser.add_argument("--scheduler", type=str, default="karras", help="ComfyUI scheduler")
     parser.add_argument("--ai-size", type=int, default=768, help="ComfyUI working size")
+    parser.add_argument("--checkpoint", type=str, default="", help="Override ComfyUI checkpoint name")
+    parser.add_argument("--lora", type=str, default="", help="Optional ComfyUI LoRA filename")
+    parser.add_argument("--lora-strength", type=float, default=0.8, help="LoRA model/CLIP strength")
+    parser.add_argument("--lora-trigger", type=str, default="", help="Optional trigger text prepended to prompts")
+    parser.add_argument("--negative-prompt", type=str, default="", help="Override negative prompt")
+    parser.add_argument(
+        "--generation-mode",
+        choices=["img2img", "text2img"],
+        default="img2img",
+        help="Use vanilla/current icons as img2img structure, or generate from an empty latent for more creativity.",
+    )
     parser.add_argument(
         "--source",
         choices=["current", "original"],
@@ -532,12 +673,18 @@ def main():
     )
     args = parser.parse_args()
 
+    if args.mode == "production" and args.variant_suffix:
+        parser.error("--variant-suffix is only valid in --mode experiment")
+    if args.mode == "production" and args.approach in CHROMA_COLORS:
+        parser.error("chroma-key approaches are experiment-only; use vanilla-alpha or rembg for production")
+
     print("=" * 60)
     print("Custom Focus Icon Generator (focuses.txt)")
     print("=" * 60)
 
     TEMP_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
     workflow_template = json.loads(WORKFLOW_PATH.read_text())
     workflow_template["3"]["inputs"]["denoise"] = args.denoise
@@ -547,6 +694,14 @@ def main():
     workflow_template["3"]["inputs"]["scheduler"] = args.scheduler
     workflow_template["12"]["inputs"]["width"] = args.ai_size
     workflow_template["12"]["inputs"]["height"] = args.ai_size
+    if args.checkpoint:
+        workflow_template["4"]["inputs"]["ckpt_name"] = args.checkpoint
+    if args.lora:
+        enable_lora(workflow_template, args.lora, args.lora_strength)
+    if args.generation_mode == "text2img":
+        enable_text2img(workflow_template, args.ai_size, args.ai_size)
+    if args.negative_prompt:
+        workflow_template["7"]["inputs"]["text"] = args.negative_prompt
     if args.seed:
         workflow_template["3"]["inputs"]["seed"] = args.seed
 
@@ -583,6 +738,8 @@ def main():
         print("  OK!")
 
     print(f"\n[4/5] Generating custom icons...")
+    print(f"  Mode: {args.mode}")
+    print(f"  Alpha approach: {args.approach}")
     generated = []
     updates = []
     failed = 0
@@ -599,6 +756,8 @@ def main():
         new_dds_name = custom_dds_filename(fid)
         if args.variant_suffix:
             new_dds_name = f"{Path(new_dds_name).stem}{args.variant_suffix}.dds"
+        elif args.mode == "experiment":
+            new_dds_name = f"{Path(new_dds_name).stem}__candidate.dds"
         output_dds = OUTPUT_DIR / new_dds_name
 
         print(f"\n[{i}/{len(focus_ids)}] {fid}")
@@ -618,6 +777,8 @@ def main():
             continue
 
         prompt = prompt_for_approach(args.prompt or generate_prompt(fid), args.approach)
+        if args.lora_trigger:
+            prompt = f"{args.lora_trigger}, {prompt}"
         print(f"  [PROMPT] {prompt[:70]}...")
 
         temp_png_input = TEMP_DIR / f"{fid}_input.png"
@@ -625,12 +786,12 @@ def main():
         temp_alpha = TEMP_DIR / f"{fid}_alpha.png"
         temp_out_alpha = TEMP_DIR / f"{fid}_out_alpha.png"
 
-        if not prepare_input_png(source_dds, temp_png_input, args.approach):
+        if args.generation_mode == "img2img" and not prepare_input_png(source_dds, temp_png_input, args.approach):
             print(f"  [ERROR] DDS→PNG failed")
             failed += 1
             continue
 
-        if args.approach == "vanilla-alpha":
+        if args.generation_mode == "img2img" and args.approach == "vanilla-alpha":
             extract_alpha(source_dds, temp_alpha)
 
         if args.dry_run:
@@ -639,7 +800,8 @@ def main():
 
         workflow = json.loads(json.dumps(workflow_template))
         workflow["6"]["inputs"]["text"] = prompt
-        workflow["10"]["inputs"]["image"] = str(temp_png_input)
+        if args.generation_mode == "img2img":
+            workflow["10"]["inputs"]["image"] = str(temp_png_input)
 
         prompt_id = comfyui_queue_prompt(workflow)
         if not prompt_id:
@@ -660,7 +822,13 @@ def main():
             continue
 
         png_for_dds = temp_png_output
-        if args.approach in CHROMA_COLORS:
+        if args.approach == "rembg":
+            if remove_background_rembg(temp_png_output, temp_out_alpha):
+                png_for_dds = temp_out_alpha
+                print(f"  [ALPHA] Removed background with rembg")
+            else:
+                print(f"  [WARN] rembg unavailable or failed; output will remain opaque")
+        elif args.approach in CHROMA_COLORS:
             if remove_chroma_background(temp_png_output, temp_out_alpha, args.approach):
                 png_for_dds = temp_out_alpha
                 print(f"  [ALPHA] Removed edge-connected chroma background")
@@ -671,7 +839,7 @@ def main():
                 png_for_dds = temp_out_alpha
                 print(f"  [ALPHA] Transparency applied")
 
-        if args.approach in CHROMA_COLORS:
+        if args.approach in CHROMA_COLORS or args.approach == "rembg":
             temp_final_alpha = TEMP_DIR / f"{fid}_final_alpha.png"
             if fill_internal_alpha_holes(png_for_dds, temp_final_alpha):
                 png_for_dds = temp_final_alpha
@@ -687,6 +855,20 @@ def main():
             failed += 1
             continue
 
+        preview_png = PREVIEW_DIR / f"{Path(new_dds_name).stem}_checker.png"
+        make_preview(output_dds, preview_png)
+        try:
+            report = alpha_report(output_dds)
+            print(
+                "  [CHECK] alpha={has_alpha} corners={transparent_corners} "
+                "holes={internal_holes} transparent={transparent_pixels}".format(**report)
+            )
+            if not report["has_alpha"] or not report["transparent_corners"] or report["internal_holes"]:
+                print(f"  [WARN] Candidate failed one or more alpha checks")
+        except Exception as exc:
+            print(f"  [WARN] Alpha check failed: {exc}")
+        if preview_png.exists():
+            print(f"  [PREVIEW] {preview_png}")
         print(f"  [OK] {output_dds}")
         generated.append({"gfx_name": new_gfx, "texturefile": f"gfx/interface/goals/{new_dds_name}"})
         updates.append({
@@ -697,11 +879,11 @@ def main():
         })
 
     print(f"\n[5/5] Generating output files...")
-    if generated and not args.variant_suffix:
+    if generated and args.mode == "production":
         generate_gfx_file(generated, OUTPUT_GFX)
     elif generated:
-        print("  [VARIANT] Test variant files generated; leaving .gfx and focus references unchanged")
-    if updates and not args.dry_run and not args.variant_suffix:
+        print("  [EXPERIMENT] Candidate files generated; leaving .gfx and focus references unchanged")
+    if updates and not args.dry_run and args.mode == "production":
         update_script = MOD_ROOT / "scripts" / "update-focus-icons.py"
         generate_update_script(updates, update_script)
 
@@ -710,9 +892,12 @@ def main():
     print(f"  Generated: {len(generated)}")
     print(f"  Failed:    {failed}")
     print(f"  Total:     {len(focus_ids)}")
-    if updates:
+    if updates and args.mode == "production":
         print(f"\n  To apply icon changes to national focus files:")
         print(f"    python3 scripts/update-focus-icons.py")
+    elif generated:
+        print(f"\n  Review previews in:")
+        print(f"    {PREVIEW_DIR}")
     print(f"{'=' * 60}")
 
 
