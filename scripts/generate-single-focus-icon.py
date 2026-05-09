@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
-Generate a single custom focus icon and register it in custom_focus_icons.gfx.
+Generate a single custom focus or idea icon and register it in the appropriate .gfx file.
 
 Usage:
-    python3 scripts/generate-single-focus-icon.py --sprite-name GFX_focus_custom_MY_FOCUS --desc "description of the icon"
+    python3 scripts/generate-single-focus-icon.py --focus --sprite-name GFX_focus_custom_MY_FOCUS --desc "description"
+    python3 scripts/generate-single-focus-icon.py --idea  --sprite-name GFX_idea_custom_MY_IDEA   --desc "description"
 
 The script:
-  1. Generates an image via ComfyUI (Z-Image GGUF)
-  2. Removes background with rembg
-  3. Crops transparent margins at full resolution
-  4. Fills internal alpha holes
-  5. Downsizes to 100x88 and converts to DDS
-  6. Appends a SpriteType entry to custom_focus_icons.gfx
+   1. Generates an image via ComfyUI (Z-Image GGUF)
+   2. Removes background with rembg
+   3. Crops transparent margins at full resolution
+   4. Fills internal alpha holes
+   5. Downsizes to DDS (100x88 for focus, 65x67 for idea) and converts to DDS
+   6. Appends a SpriteType entry to the appropriate .gfx file
 """
 
 import argparse
@@ -32,11 +33,15 @@ from PIL import Image
 COMFYUI_URL = "http://127.0.0.1:8188"
 MOD_ROOT = Path(__file__).parent.parent
 OUTPUT_DIR = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "goals"
+OUTPUT_DIR_IDEAS = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "ideas"
 OUTPUT_GFX = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_focus_icons.gfx"
+OUTPUT_GFX_IDEAS = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_idea_icons.gfx"
 TEMP_DIR = Path("/tmp/zimage-single-icon")
 
-HOI4_ICON_WIDTH = 100
-HOI4_ICON_HEIGHT = 88
+HOI4_FOCUS_WIDTH = 100
+HOI4_FOCUS_HEIGHT = 88
+HOI4_IDEA_WIDTH = 65
+HOI4_IDEA_HEIGHT = 67
 
 NEGATIVE_PROMPT = (
     "text, letters, numbers, readable inscriptions, logo, watermark, "
@@ -61,6 +66,25 @@ def make_prompt(desc: str) -> str:
         f"Composition: symmetrical emblem, central object large and readable at small size, "
         f"decorative frame with laurels, dark nearly black background, slight grain, "
         f"old military decoration feeling. No text, no letters, no numbers, no UI, no caption. "
+        f"IMPORTANT: background must be perfectly flat, uniform, solid dark grey "
+        f"with no gradients, no textures, no patterns, no vignetting, no edge darkening."
+    )
+
+
+def make_idea_prompt(desc: str) -> str:
+    return (
+        f"Create a square national idea icon in the style of a dark World War II "
+        f"grand strategy game. {desc}. "
+        f"The icon should look like a military badge or emblem: central symbol "
+        f"alone on a dark background, no decorative frame, no medallion, no laurel branches, "
+        f"no ornate border — just the symbol itself with clean edges. "
+        f"Style: realistic illustrated game icon, 1930s–1940s wartime aesthetic, "
+        f"dark bronze, steel, muted gold, red enamel, patina, scratched metal, "
+        f"dramatic lighting, high contrast, dense shadows. "
+        f"Composition: centered symbol, large and readable at small size, "
+        f"no frame, no border, no decorative elements around it, "
+        f"dark nearly black background, slight grain, "
+        f"old military badge feeling. No text, no letters, no numbers, no UI, no caption. "
         f"IMPORTANT: background must be perfectly flat, uniform, solid dark grey "
         f"with no gradients, no textures, no patterns, no vignetting, no edge darkening."
     )
@@ -295,14 +319,14 @@ def fill_internal_alpha_holes(src_path: Path, dst_path: Path) -> bool:
         return False
 
 
-def png_to_dds(png_path: Path, dds_path: Path) -> bool:
-    print(f"  [DDS] Converting to {HOI4_ICON_WIDTH}x{HOI4_ICON_HEIGHT} DDS...")
+def png_to_dds(png_path: Path, dds_path: Path, width: int = 100, height: int = 88) -> bool:
+    print(f"  [DDS] Converting to {width}x{height} DDS...")
     try:
         result = subprocess.run(
             [
                 "magick",
                 str(png_path),
-                "-resize", f"{HOI4_ICON_WIDTH}x{HOI4_ICON_HEIGHT}!",
+                "-resize", f"{width}x{height}!",
                 "-type", "TrueColorAlpha",
                 "-define", "dds:compression=none",
                 str(dds_path),
@@ -343,9 +367,11 @@ def append_gfx_entry(sprite_name: str, texture_file: str, output_path: Path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a single focus icon")
-    parser.add_argument("--sprite-name", required=True, help="GFX sprite name, e.g. GFX_focus_custom_MY_FOCUS")
+    parser = argparse.ArgumentParser(description="Generate a single focus or idea icon")
+    parser.add_argument("--sprite-name", required=True, help="GFX sprite name, e.g. GFX_focus_custom_MY_FOCUS or GFX_idea_custom_MY_IDEA")
     parser.add_argument("--desc", required=True, help="Description of the central image/object")
+    parser.add_argument("--focus", action="store_true", help="Generate a focus icon (default)")
+    parser.add_argument("--idea", action="store_true", help="Generate an idea icon (no frame/laurels)")
     parser.add_argument("--seed", type=int, default=0, help="Random seed (0=random)")
     parser.add_argument("--steps", type=int, default=35, help="Sampler steps")
     parser.add_argument("--cfg", type=float, default=4.0, help="CFG scale")
@@ -357,18 +383,40 @@ def main():
     parser.add_argument("--force", action="store_true", help="Regenerate if DDS exists")
     args = parser.parse_args()
 
-    # Derive DDS filename from sprite name
-    # GFX_focus_custom_XYZ -> focus_custom_XYZ.dds
-    match = re.match(r"GFX_focus_custom_(.+)", args.sprite_name)
-    if not match:
-        print(f"[ERROR] Sprite name must start with GFX_focus_custom_")
-        sys.exit(1)
-    focus_id = match.group(1)
-    dds_filename = f"focus_custom_{focus_id}.dds"
-    output_dds = OUTPUT_DIR / dds_filename
+    # Derive DDS filename from sprite name based on mode
+    if args.idea:
+        match = re.match(r"GFX_idea_custom_(.+)", args.sprite_name)
+        if not match:
+            print(f"[ERROR] For --idea, sprite name must start with GFX_idea_custom_")
+            sys.exit(1)
+        icon_id = match.group(1)
+        dds_filename = f"idea_custom_{icon_id}.dds"
+        prompt_fn = make_idea_prompt
+        output_gfx = OUTPUT_GFX_IDEAS
+        output_dir = OUTPUT_DIR_IDEAS
+        icon_type = "idea"
+        texture_prefix = "gfx/interface/ideas"
+        dds_width = HOI4_IDEA_WIDTH
+        dds_height = HOI4_IDEA_HEIGHT
+    else:
+        match = re.match(r"GFX_focus_custom_(.+)", args.sprite_name)
+        if not match:
+            print(f"[ERROR] For --focus, sprite name must start with GFX_focus_custom_")
+            sys.exit(1)
+        icon_id = match.group(1)
+        dds_filename = f"focus_custom_{icon_id}.dds"
+        prompt_fn = make_prompt
+        output_gfx = OUTPUT_GFX
+        output_dir = OUTPUT_DIR
+        icon_type = "focus"
+        texture_prefix = "gfx/interface/goals"
+        dds_width = HOI4_FOCUS_WIDTH
+        dds_height = HOI4_FOCUS_HEIGHT
+
+    output_dds = output_dir / dds_filename
 
     print("=" * 60)
-    print(f"Single Focus Icon Generator")
+    print(f"Single {icon_type.title()} Icon Generator")
     print(f"  Sprite: {args.sprite_name}")
     print(f"  DDS:    {dds_filename}")
     print("=" * 60)
@@ -379,11 +427,11 @@ def main():
         return
 
     TEMP_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     neg_prompt = args.negative_prompt or NEGATIVE_PROMPT
-    prompt = make_prompt(args.desc)
-    print(f"\n  [PROMPT] {prompt[:80]}...")
+    prompt = prompt_fn(args.desc)
+    print(f"\n  [PROMPT] {prompt}")
 
     # Check ComfyUI
     print(f"\n  [CHECK] ComfyUI at {COMFYUI_URL}...")
@@ -433,13 +481,13 @@ def main():
     if fill_internal_alpha_holes(png_current, temp_filled):
         png_current = temp_filled
 
-    if not png_to_dds(png_current, output_dds):
+    if not png_to_dds(png_current, output_dds, dds_width, dds_height):
         sys.exit(1)
 
     # Register in .gfx (skip only if regenerating an existing icon)
     if not existed_before:
-        texture_path = f"gfx/interface/goals/{dds_filename}"
-        append_gfx_entry(args.sprite_name, texture_path, OUTPUT_GFX)
+        texture_path = f"{texture_prefix}/{dds_filename}"
+        append_gfx_entry(args.sprite_name, texture_path, output_gfx)
 
     print(f"\n{'=' * 60}")
     print(f"Done! Icon saved to {output_dds}")

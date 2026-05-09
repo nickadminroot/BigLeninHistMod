@@ -1,0 +1,7 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_idea_custom_SOV_soviet_tank_school"
+        texturefile = "gfx/interface/ideas/idea_custom_SOV_soviet_tank_school.dds"
+    }
+
+}

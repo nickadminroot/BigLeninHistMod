@@ -212,29 +212,41 @@ See `vanilla/documentation/console_commands_documentation.md` for full list.
 
 ---
 
-## Generating Focus Icons
+## Generating Icons
 
 ### Single Icon Generation
 
-Use `scripts/generate-single-focus-icon.py` to generate a custom focus icon via ComfyUI (Z-Image GGUF model). The script handles the full pipeline: generation, background removal, transparent margin cropping, alpha hole filling, DDS conversion, and .gfx registration.
+Use `scripts/generate-single-focus-icon.py` to generate a custom focus or idea icon via ComfyUI (Z-Image GGUF model). The script handles the full pipeline: generation, background removal, transparent margin cropping, alpha hole filling, DDS conversion, and .gfx registration.
 
 **Prerequisites:**
 - ComfyUI running on `http://127.0.0.1:8188`
 - `rembg` Python package installed (`pip install rembg`)
 - Z-Image GGUF model available in ComfyUI (`z-image-Q8_0.gguf`)
 
-**Usage:**
+**Usage — Focus icon (with medal frame, laurel branches):**
 
 ```bash
 python3 scripts/generate-single-focus-icon.py \
+  --focus \
   --sprite-name "GFX_focus_custom_MY_FOCUS_ID" \
   --desc "A Soviet T-34 tank breaking through a shattered defensive line, artillery flashes in the background, red banner rising behind the tank"
+```
+
+**Usage — Idea icon (no frame, no laurels, just the symbol):**
+
+```bash
+python3 scripts/generate-single-focus-icon.py \
+  --idea \
+  --sprite-name "GFX_idea_custom_MY_IDEA_ID" \
+  --desc "A steel M35 helmet covered in thick snow and icicles hanging from the brim"
 ```
 
 **Arguments:**
 | Argument | Required | Description |
 |----------|----------|-------------|
-| `--sprite-name` | Yes | GFX sprite name. Must start with `GFX_focus_custom_`. The part after this prefix becomes the DDS filename. |
+| `--focus` | No | Generate a focus icon with medal frame and laurel branches (default). |
+| `--idea` | No | Generate an idea icon — no frame, no medallion, no laurels. |
+| `--sprite-name` | Yes | GFX sprite name. For `--focus` must start with `GFX_focus_custom_`; for `--idea` must start with `GFX_idea_custom_`. |
 | `--desc` | Yes | Description of the central image/object. Be specific — name concrete objects, not abstract concepts. |
 | `--seed` | No | Random seed (0=random). Use a fixed seed to reproduce results. |
 | `--steps` | No | Sampler steps (default: 35). |
@@ -247,8 +259,8 @@ python3 scripts/generate-single-focus-icon.py \
 2. Removes background with `rembg`
 3. Crops transparent margins at full resolution (preserves detail)
 4. Fills internal alpha holes (prevents cutouts inside the icon)
-5. Downsizes to 100x88 and converts to DDS (ARGB8888, no compression)
-6. Appends a `SpriteType` entry to `BigLeninHistMod/interface/custom_focus_icons.gfx`
+5. Downsizes to DDS — 100x88 for focus icons, 65x67 for idea icons (ARGB8888, no compression)
+6. Appends a `SpriteType` entry to `BigLeninHistMod/interface/custom_focus_icons.gfx` (for `--focus`) or `BigLeninHistMod/interface/custom_idea_icons.gfx` (for `--idea`)
 
 **Writing good descriptions:**
 
@@ -272,9 +284,10 @@ Operation Bagration. Central image: a Soviet T-34 tank breaking through a shatte
 ```
 
 **After generation:**
-- The DDS file is saved to `BigLeninHistMod/gfx/interface/goals/focus_custom_{ID}.dds`
-- The .gfx entry is appended to `BigLeninHistMod/interface/custom_focus_icons.gfx`
-- Reference the icon in a focus definition: `icon = GFX_focus_custom_MY_FOCUS_ID`
+- Focus DDS: `BigLeninHistMod/gfx/interface/goals/focus_custom_{ID}.dds`, registered in `custom_focus_icons.gfx`
+- Idea DDS: `BigLeninHistMod/gfx/interface/ideas/idea_custom_{ID}.dds`, registered in `custom_idea_icons.gfx`
+- Reference in focus: `icon = GFX_focus_custom_MY_FOCUS_ID`
+- Reference in idea: `picture = custom_MY_IDEA_ID` (engine auto-prepends `GFX_idea_`)
 
 ### Batch Icon Generation
 

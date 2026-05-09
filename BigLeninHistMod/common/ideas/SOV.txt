@@ -3356,7 +3356,7 @@ ideas = {
 		SOV_soviet_tank_school = {
 			name = SOV_soviet_tank_school
 
-			picture = generic_tank_manufacturer_1
+			picture = custom_SOV_soviet_tank_school
 
 			removal_cost = -1
 
