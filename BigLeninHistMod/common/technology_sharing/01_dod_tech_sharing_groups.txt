@@ -64,20 +64,7 @@ technology_sharing_group = {
     }
 }
 
-technology_sharing_group = {
-	id = ROM_joint_allied_staff_college_tech_group
-	name = ROM_joint_allied_staff_college
-	desc = ROM_joint_allied_staff_college_desc
-	picture = GFX_technology_sharing_default
-    
-	research_sharing_per_country_bonus = 0.1 
 
-	categories = { land_doctrine naval_doctrine air_doctrine }
-
-    available = {
-    	ROM = { is_in_faction_with = ENG }
-    	ENG = { is_faction_leader = yes }
-    }
 }
 
 technology_sharing_group = {

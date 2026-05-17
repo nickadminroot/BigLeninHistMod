@@ -294,3 +294,46 @@ Mod files should mirror the structure of `vanilla/common/`:
 6. **Use flags for state tracking**: Instead of variables, use `set_country_flag` / `has_country_flag` for persistent state.
 
 7. **Check documentation**: The `vanilla/documentation/` folder contains detailed info on triggers, effects, modifiers, and scripting features.
+
+### Focus Cost Calculation
+**CRITICAL**: In HOI4, `cost = 1` = 7 days. Always divide the desired days by 7:
+- 35 days → `cost = 5`
+- 14 days → `cost = 2`
+- 70 days → `cost = 10`
+- Never put raw day values in `cost`.
+
+### Equipment Bonuses in Ideas
+Use `equipment_bonus` blocks for per-equipment stat changes, not `modifier` blocks:
+```pdx
+# Correct:
+equipment_bonus = {
+    light_tank_chassis = {
+        build_cost_ic = -0.1
+        instant = yes
+    }
+    infantry_anti_tank_equipment = {
+        hard_attack = 0.2
+        ap_attack = 0.2
+        instant = yes
+    }
+}
+
+# Wrong - these modifiers do not exist:
+modifier = {
+    production_speed_light_tank_factor = 0.1
+    anti_tank_attack_factor = 0.2
+}
+```
+Common equipment keys: `light_tank_chassis`, `medium_tank_chassis`, `heavy_tank_chassis`, `infantry_anti_tank_equipment`, `small_plane_airframe`, `ship_hull_cruiser`. Always check existing ideas files for reference.
+
+### Valid Country Modifiers for Special Forces
+These modifiers exist and work as flat country/idea modifiers:
+- `special_forces_attack_factor` — special forces attack bonus
+- `special_forces_defence_factor` — special forces defence bonus
+- `special_forces_cap` / `special_forces_cap_flat` — special forces capacity (% / flat)
+- `special_forces_min` — minimum special forces ratio
+- `special_forces_out_of_supply_factor` — supply consumption reduction
+- `special_forces_training_time_factor` — training time
+- `experience_loss_factor` — experience loss reduction
+
+**Do NOT use** flat `forest_*`, `hill_*`, `mountain_*`, `desert_*` terrain modifiers — HOI4 does not support those as country-level modifiers. Terrain bonuses are applied per-battalion in technology definitions (e.g. `ranger_battalion = { forest = { attack = 0.1 defence = 0.1 movement = 0.05 } }`).
