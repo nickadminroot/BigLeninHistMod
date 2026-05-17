@@ -62,6 +62,84 @@ Important Windows behavior: the current Windows HOI4 binary writes logs to the n
 
 ---
 
+## MCP Server (HOI4 Map Tools)
+
+The MCP server at `scripts/mcp/mapMcpServer.js` provides 43 tools for HOI4 modding via the Model Context Protocol. The server code and its dependencies (`mapDataLoader.js`, `clausewitzMcp.js`, `imageToMap.js`) are checked into the repository. Run `npm install` in `scripts/mcp/` after cloning to install dependencies (`@modelcontextprotocol/sdk`, `sharp`).
+
+### GUI Tools (6)
+
+| Tool | Description |
+|---|---|
+| `hoi4-mcp_gui_create_scripted_gui` | Generate scripted GUI definition file with window_name, visible trigger, effect/property blocks |
+| `hoi4-mcp_gui_generate_gfx` | Generate .gfx spriteType entries for DDS textures from a directory |
+| `hoi4-mcp_gui_get_sprites` | Search and list all sprite definitions across the mod |
+| `hoi4-mcp_gui_parse_gfx` | Parse a .gfx file — return all spriteTypes with names, textures, animations |
+| `hoi4-mcp_gui_parse_gui` | Parse a .gui file — return element tree with positions, sizes, sprites |
+| `hoi4-mcp_gui_validate` | Validate GUI/GFX: sprite references exist, textures on disk |
+
+### Localization Tools (5)
+
+| Tool | Description |
+|---|---|
+| `hoi4-mcp_loc_bulk_set` | Bulk-write localization key-value pairs (for events, focuses, decisions) |
+| `hoi4-mcp_loc_get` | Get a localization key's value in all available languages |
+| `hoi4-mcp_loc_search` | Search localization keys and values by pattern |
+| `hoi4-mcp_loc_set` | Write/update a single localization key-value pair |
+| `hoi4-mcp_loc_validate` | Validate localization: missing keys, unused keys, language gaps |
+
+### Map Tools (26)
+
+| Tool | Description |
+|---|---|
+| `hoi4-mcp_map_bulk_edit` | Perform multiple map edit operations in one call (with backup) |
+| `hoi4-mcp_map_create_backup` | Create a manual backup of all map files |
+| `hoi4-mcp_map_create_state` | Create a new state from province list (auto-removes from old states) |
+| `hoi4-mcp_map_edit_province` | Edit province properties: type, terrain, coastal, continent |
+| `hoi4-mcp_map_edit_railway` | Add/remove/update railway level |
+| `hoi4-mcp_map_edit_state` | Edit state properties: owner, manpower, category, resources, buildings, cores |
+| `hoi4-mcp_map_edit_strategic_region` | Edit strategic region: name, provinces, naval terrain |
+| `hoi4-mcp_map_edit_supply_node` | Add or remove supply hub |
+| `hoi4-mcp_map_edit_victory_point` | Add/update/remove victory point (VP = 0 removes) |
+| `hoi4-mcp_map_generate_from_image` | Generate full HOI4 map from image (provinces.bmp, definition.csv, states, etc.) |
+| `hoi4-mcp_map_get_adjacencies` | Get provinces adjacent to a given province (with border pixels) |
+| `hoi4-mcp_map_get_countries` | List all countries with TAG and color; detailed info per country |
+| `hoi4-mcp_map_get_province` | Full province info: RGB, type, terrain, coastal, continent, VP, etc. |
+| `hoi4-mcp_map_get_state` | Full state data: name, owner, manpower, category, provinces, resources, cores |
+| `hoi4-mcp_map_get_strategic_region` | Strategic region data: name, provinces, naval terrain, center |
+| `hoi4-mcp_map_get_summary` | High-level map statistics: dimensions, province/state/region counts |
+| `hoi4-mcp_map_get_supply_network` | Railways and supply hubs (filterable by state/province/bbox) |
+| `hoi4-mcp_map_get_terrain_info` | Available terrain types and their distribution |
+| `hoi4-mcp_map_preview_image_regions` | Preview image-to-province splitting WITHOUT generating files |
+| `hoi4-mcp_map_render_ascii` | ASCII-art visualization of a map area (states/provinces/terrain) |
+| `hoi4-mcp_map_render_minimap` | Full minimap at low resolution with highlighted areas |
+| `hoi4-mcp_map_render_snapshot` | Render PNG of a map area (political/terrain/manpower/industry/VP) with zoom, labels, railways |
+| `hoi4-mcp_map_render_state_view` | Focused render of one state with provinces, neighbors, railways, details |
+| `hoi4-mcp_map_search_provinces` | Search provinces by criteria (type, terrain, coastal, continent, state, VP, adjacency) |
+| `hoi4-mcp_map_search_states` | Search states by criteria (owner, category, resources, manpower, cores, VP) |
+| `hoi4-mcp_map_transfer_provinces` | Move provinces between states (with backup) |
+| `hoi4-mcp_map_validate` | Validate map: orphan provinces, missing data, disconnected railways |
+
+### Script Tools (7)
+
+| Tool | Description |
+|---|---|
+| `hoi4-mcp_script_get_definitions` | Find all definitions of a given type (event/focus/decision/idea/technology/character) |
+| `hoi4-mcp_script_get_references` | Find all references to an identifier across all .txt files |
+| `hoi4-mcp_script_get_scope_context` | Determine scope context (country/state/character) at a given line |
+| `hoi4-mcp_script_lookup_effect` | Look up effect/trigger/modifier: scope, parameters, description, syntax, examples |
+| `hoi4-mcp_script_parse_file` | Parse a .txt file into structured AST (blocks, key-value, comments) |
+| `hoi4-mcp_script_search` | Regex search across all mod files (like grep) |
+| `hoi4-mcp_script_validate_file` | Validate Clausewitz script syntax: brackets, undefined refs, missing loc |
+
+### Mod Tools (2)
+
+| Tool | Description |
+|---|---|
+| `hoi4-mcp_mod_get_file` | Read any mod file with line numbers and range support |
+| `hoi4-mcp_mod_get_structure` | Get project structure: file counts by category, lines of code, file sizes |
+
+---
+
 ## HOI4 Modding Key Concepts
 
 ### Triggers
