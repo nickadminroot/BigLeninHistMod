@@ -747,7 +747,7 @@ ideas = {
 			allowed_civil_war = {
 			}
 			modifier = {
-				army_experience_gain = 0.1
+				experience_gain_army = 0.1
 			}
 		}
 
@@ -809,7 +809,7 @@ ideas = {
 			allowed_civil_war = {
 			}
 			equipment_bonus = {
-				infantry_anti_tank_equipment = {
+				anti_tank_equipment = {
 					hard_attack = 0.2
 					ap_attack = 0.2
 					instant = yes
