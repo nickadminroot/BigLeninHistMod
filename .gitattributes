@@ -1,0 +1,9 @@
+* text=auto
+*.dds binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.dds binary
+*.wav binary
+*.ogg binary
