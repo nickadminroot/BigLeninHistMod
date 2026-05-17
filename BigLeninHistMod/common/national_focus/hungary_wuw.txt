@@ -238,7 +238,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -350,7 +350,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -396,7 +396,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -594,7 +594,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_outlaw_the_party_of_national_will
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -803,7 +803,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_the_hungarian_life_and_renewal_party
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -864,7 +864,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_undermine_the_admiral
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -919,7 +919,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_undermine_the_admiral
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1118,7 +1118,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_ideas = HUN_turul_association_idea
+			add_ideas = HUN_turul_association_idea_updated
 
 		}
 	}
@@ -1132,7 +1132,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_the_turul_association
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1170,7 +1170,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_government_of_national_unity
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -1192,52 +1192,9 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_stability = -0.05
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
+			add_offsite_building = {
+				type = arms_factory
+				level = 4
 			}
 
 		}
@@ -1252,7 +1209,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_government_of_national_unity
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1286,7 +1243,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_roman_catholic_state
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 15
@@ -1345,7 +1302,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = HUN_heirs_of_the_huns_idea
+			add_ideas = HUN_heirs_of_the_huns_idea_updated
 		}
 	}
 
@@ -1443,7 +1400,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_heirs_of_the_huns
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1601,7 +1558,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = wuw_HUN_act_of_defense
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1741,89 +1698,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_our_ancestral_lands
-		icon = GFX_focus_usa_focus_on_asia
-		prerequisite = { focus = wuw_HUN_strengthen_the_turani_vadaszok }
-		prerequisite = { focus = wuw_HUN_wherever_the_cross_points }
-		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_strengthen_the_turani_vadaszok
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			has_government = fascism
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_stability = -0.15
-			add_war_support = 0.05
-
-			every_state = {
-				limit = {
-					NOT = {
-						OR = {
-							is_core_of = ROOT
-							is_owned_by = ROOT
-							is_claimed_by = ROOT
-						}
-					}
-					OR = {
-						region = 27
-						region = 26
-						region = 130
-						region = 135
-						region = 137
-						region = 134
-						region = 129
-						region = 267
-						region = 40
-						region = 264
-						region = 263
-						region = 278
-						region = 13
-						region = 277
-						region = 265
-						region = 12
-						region = 276
-						region = 191
-						region = 270
-						region = 269
-						region = 268
-						region = 136
-						region = 261
-						region = 138
-						region = 14
-						region = 151
-						region = 262
-						region = 147
-						region = 149
-						region = 260
-						region = 259
-						region = 28
-					}
-				}
-				add_claim_by = ROOT
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_reaffirm_territorial_claims
@@ -2011,35 +1885,15 @@ focus_tree = {
 				}
 			}
 
-			if = {
-				limit = {
-					country_exists = CZE
-					664 = { is_owned_by = CZE }
-				}
-				strength_ratio = { tag = CZE ratio > 0.75 }
-			}
-			if = {
-				limit = {
-					country_exists = SLO
-					664 = { is_owned_by = SLO }
-				}
-				strength_ratio = { tag = SLO ratio > 0.75 }
-			}
-
-			has_army_manpower = { size > 120000 }
+			
 
 		}
 
-		bypass = {
+				bypass = {
 
 			OR = {
 				owns_state = 664
 				controls_state = 664
-				664 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
 			}
 
 		}
@@ -2052,61 +1906,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = HUN_demands_tt
-			if = {
-				limit = {
-					CZE = {
-						exists = yes
-						owns_state = 664
-					}
-				}
-				if = {
-					limit = {
-						CZE = { is_subject = yes }
-					}
-					create_wargoal = {
-						type = take_state_focus
-						target = CZE
-						expire = 0
-						generator = { 664 }
-					}
-					else = {
-						CZE = { country_event = DOD_hungary.80 }
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					SLO = {
-						exists = yes
-						owns_state = 664
-					}
-				}
-				SLO = { country_event = DOD_hungary.80 }
-			}
-			else_if = {
-				limit = {
-					664 = {
-						NOT = {
-							OR = {
-								is_owned_by = SLO
-								is_owned_by = CZE
-								is_owned_by = ROOT
-							}
-						}
-					}
-				}
-				random_country = {
-					limit = {
-						owns_state = 664
-					}
-					country_event = {
-						id = WW_hungary.7
-						days = 2
-						random_days = 3
-					}
-				}
-			}
+			transfer_state = 664
 
 		}
 	}
@@ -2162,7 +1962,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -2319,7 +2119,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_transylvania
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -2443,7 +2243,7 @@ focus_tree = {
 
 		will_lead_to_war_with = AUS
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -2508,138 +2308,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_claim_overlordship_over_slovakia
-		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = wuw_HUN_demand_southern_slovakia }
-		mutually_exclusive = { focus = wuw_HUN_demand_the_return_of_slovakia }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_demand_southern_slovakia
-
-		will_lead_to_war_with = SLO
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-			is_subject = no
-
-			OR = {
-				SLO = {
-					exists = yes
-					NOT = { is_puppet_of = ROOT }
-				}
-				any_other_country = {
-					owns_state = 70
-					owns_state = 71
-					#owns_state = 72
-					owns_state = 73
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			if = {
-				limit = { country_exists = SLO }
-				strength_ratio = { tag = SLO ratio > 0.75 }
-				NOT = { has_war_with = SLO }
-			}
-			has_army_manpower = { size > 175000 }
-
-		}
-
-		bypass = {
-
-			OR = {
-				SLO = {
-					exists = yes
-					is_subject_of = ROOT
-				}
-				AND = {
-					owns_state = 70
-					owns_state = 71
-					#owns_state = 72
-					owns_state = 73
-				}
-			}
-
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			custom_effect_tooltip = HUN_demands_tt
-			if = {
-				limit = {
-					70 = {
-						controller = {
-							NOT = {
-								has_war_with = ROOT
-							}
-						}
-					}
-					SLO = { exists = no }
-					any_other_country = {
-						NOT = {
-							owns_state = 70
-							owns_state = 71
-							owns_state = 72
-							owns_state = 73
-						}
-					}
-				}
-				70 = {
-					controller = {
-						country_event = { id = DOD_hungary.100 hours = 5 }
-					}
-				}
-			}
-			if = {
-				limit = {
-					SLO = {
-						exists = yes
-						is_puppet = no
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
-			}
-			if = {
-				limit = {
-					SLO = {
-						exists = yes
-						is_puppet = yes
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				SLO = { OVERLORD = { country_event = { id = DOD_hungary.107 hours = 4 } } }
-			}
-			hidden_effect = {
-				news_event = { id = news.309 hours = 8 }
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_demand_the_return_of_slovakia
 		icon = GFX_focus_generic_attack_slovakia
 		prerequisite = { focus = wuw_HUN_demand_southern_slovakia }
-		mutually_exclusive = { focus = wuw_HUN_claim_overlordship_over_slovakia }
+		#mutually_exclusive = { focus = wuw_HUN_claim_overlordship_over_slovakia }
 		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_demand_southern_slovakia
@@ -2647,7 +2321,7 @@ focus_tree = {
 		will_lead_to_war_with = SLO
 		will_lead_to_war_with = CZE
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -2657,19 +2331,29 @@ focus_tree = {
 
 			is_subject = no
 
-			any_other_country = {
-				OR = {
-					owns_state = 70
-					owns_state = 71
-					#owns_state = 72
-					owns_state = 73
+			OR = {
+				AND = {
+					GER = {
+						exists = yes
+					}
+					any_other_country = {
+						OR = {
+							owns_state = 70
+							owns_state = 71
+							owns_state = 73
+						}
+						is_subject_of = GER
+					}
 				}
-				NOT = {
-					has_war_with = ROOT
+				GER = {
+					exists = yes
+					OR = {
+						owns_state = 70
+						owns_state = 71
+						owns_state = 73
+					}
 				}
 			}
-
-			has_army_manpower = { size > 180000 }
 
 		}
 
@@ -2678,7 +2362,6 @@ focus_tree = {
 			AND = {
 				owns_state = 70
 				owns_state = 71
-				#owns_state = 72
 				owns_state = 73
 			}
 
@@ -2692,54 +2375,18 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
+			every_state = {
 				limit = {
-					SLO = {
-						exists = yes
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-						is_ai = yes
+					OR = {
+						state = 70
+						state = 71
+						state = 73
+					}
+					NOT = {
+						is_owned_by = ROOT
 					}
 				}
-				every_country = {
-					limit = {
-						has_subject = SLO
-					}
-					country_event = {
-						id = WW_hungary.96
-						days = 2
-						random_days = 3
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = HUN_demands_tt
-				every_country = {
-					limit = {
-						AND = {
-							OR = {
-								owns_state = 70
-								owns_state = 71
-								#owns_state = 72
-								owns_state = 73
-							}
-							NOT = {
-								OR = {
-									has_war_with = ROOT
-									original_tag = ROOT
-									is_subject_of = ROOT
-								}
-							}
-						}
-					}
-					country_event = {
-						id = WW_hungary.11
-						days = 2
-						random_days = 3
-					}
-				}
+				transfer_state_to = ROOT
 			}
 
 		}
@@ -2835,7 +2482,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_act_of_defense
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -2866,100 +2513,9 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = wuw_HUN_seek_german_contracts_tt
-			if = {
-				limit = {
-					GER = {
-						has_opinion = {
-							target = ROOT
-							value > 25
-						}
-						has_opinion = {
-							target = ROOT
-							value < 50
-						}
-					}
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			else_if = {
-				limit = {
-					GER = {
-						has_opinion = {
-							target = ROOT
-							value > 50
-						}
-						has_opinion = {
-							target = ROOT
-							value < 75
-						}
-					}
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 2
-				}
-			}
-			else_if = {
-				limit = {
-					GER = {
-						has_opinion = {
-							target = ROOT
-							value > 75
-						}
-					}
-				}
-				add_offsite_building = {
-					type = industrial_complex
-					level = 1
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 2
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_henschel_organization
-
-				mio:HUN_henschel_organization = {
-					add_mio_size = 2
-				}
-
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_henschel
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = GER_rheinmetall_organization
-
-				mio:GER_rheinmetall_organization = {
-					add_mio_size = 2
-				}
-
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_rheinmetall
+			add_offsite_building = {
+				type = arms_factory
+				level = 4
 			}
 
 		}
@@ -3152,7 +2708,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_seek_german_contracts
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -3552,7 +3108,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3595,7 +3151,7 @@ focus_tree = {
 		y = 0
 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -3731,7 +3287,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3922,7 +3478,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -3944,39 +3500,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					43 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				43 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			43 = {
-				#add_manpower = 150000
-				increase_state_category = yes
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = HUN_urbanization_efforts
-				days = 365
-			}
+			add_ideas = HUN_gyor_program
 
 		}
 	}
@@ -4014,47 +3543,9 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					43 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				43 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 6
-					}
-				}
-				else = {
-					random_owned_controlled_state = {
-						limit = {
-							is_core_of = ROOT
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
 			}
 
 		}
@@ -4069,7 +3560,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_reintigrate_the_imperial_railroads
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4977,7 +4468,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -5069,7 +4560,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -5397,11 +4888,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_ideas = HUN_invite_foreign_investors
+			add_ideas = HUN_gyor_program
 		}
 	}
 
@@ -5659,7 +5146,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5913,7 +5400,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5947,7 +5434,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -6054,7 +5541,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -6584,7 +6071,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6705,71 +6192,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_award_military_promotions
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = wuw_HUN_invest_in_ludovica_academy }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_invest_in_ludovica_academy
-
-		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			army_experience = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			HUN_ivan_hindy = {
-				promote_leader = yes
-				add_planning = 1
-				add_attack = 1
-			}
-			HUN_ferenc_feketehalmyczeydner = {
-				promote_leader = yes
-				add_logistics = 1
-				add_planning = 1
-			}
-			HUN_jozsef_bajnoczy = {
-				promote_leader = yes
-				add_planning = 1
-				add_logistics = 1
-			}
-			HUN_karoly_bartha = {
-				promote_leader = yes
-				add_planning = 1
-				add_defense = 1
-			}
-
-			custom_effect_tooltip = HUN_ferenc_szombathelyi_becomes_a_general
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = HUN_ivan_hindy
-			show_ideas_tooltip = HUN_dezso_laszlo
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_magyar_kiralyi_csendorseg
@@ -6809,7 +6231,8 @@ focus_tree = {
 		id = wuw_HUN_legacy_of_the_black_legion
 		icon = GFX_focus_HUN_legacy_of_the_black_legion
 		prerequisite = { focus = wuw_HUN_magyar_kiralyi_csendorseg }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+				#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+		mutually_exclusive = { focus = wuw_HUN_light_infantry_divisions_doctrine }
 		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
@@ -6833,12 +6256,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = HUN_hungarian_gendarmerie
-				add_idea = HUN_hungarian_gendarmerie_hussars
-			}
-
+			add_ideas = HUN_legacy_of_the_black_legion_idea_updated
 		}
 	}
 
@@ -6846,7 +6264,8 @@ focus_tree = {
 		id = wuw_HUN_light_infantry_divisions_doctrine
 		icon = GFX_focus_prc_infiltration
 		prerequisite = { focus = wuw_HUN_magyar_kiralyi_csendorseg }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+				#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+		mutually_exclusive = { focus = wuw_HUN_legacy_of_the_black_legion }
 		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
@@ -6872,172 +6291,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
-			hidden_effect = {
-				if = {
-					limit = { has_tech = tech_engineers }
-					division_template = {
-						name = "Light Division"
-						division_names_group = HUN_INF_01
-						role = infantry
-						priority = 2
-
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							recon = { x = 0 y = 1 }
-							artillery = { x = 0 y = 2 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Light Division"
-							division_names_group = HUN_INF_01
-							role = infantry
-							priority = 2
-
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-							support = {
-								recon = { x = 0 y = 0 }
-								artillery = { x = 0 y = 1 }
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0"
-						owner = HUN
-					}
-				}
-			}
-			hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = HUN_jeno_ratz
+			add_ideas = HUN_light_infantry_divisions_doctrine_idea_updated
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_szent_laszlo_infantry_division
-		icon = GFX_focus_HUN_szent_laszlo_infantry_division
-		prerequisite = { focus = wuw_HUN_light_infantry_divisions_doctrine }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_light_infantry_divisions_doctrine
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1400
-				producer = ROOT
-			}
-
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 150
-				producer = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = wuw_HUN_szent_laszlo_infantry_division_tt
-
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Szent László Hadosztály"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Szent László Hadosztály"
-					division_names_group = HUN_INF_01
-					role = infantry
-					is_locked = no
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						artillery_brigade = { x = 2 y = 0 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-				}
-
-				random_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Szent László Hadosztály\" division_template = \"Szent László Hadosztály\" start_experience_factor = 0.6 start_equipment_factor = 1"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_zoltan_zsugyi
-					    	portraits = {
-					    		army = {
-					    			large = GFX_portrait_HUN_zoltan_szugyi
-					    			small = GFX_portrait_HUN_zoltan_szugyi_small
-					    		}
-					    	}
-					    }
-					}
-				}
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_quantity_over_quality
@@ -7069,21 +6326,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			add_tech_bonus = {
-				name = wuw_HUN_quantity_over_quality
-				bonus = 0.25
-				uses = 2
-				category = armor
-			}
-
-			add_tech_bonus = {
-				name = wuw_HUN_quantity_over_quality
-				bonus = 0.25
-				uses = 2
-				category = artillery
-			}
-
+			add_ideas = HUN_quantity_over_quality_idea
 		}
 	}
 
@@ -7610,847 +6853,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_invest_in_the_special_forces
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = wuw_HUN_expand_the_army }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_expand_the_army
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
 
-		ai_will_do = {
-			factor = 3
-		}
 
-		available = {
 
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_tech_bonus = {
-				name = wuw_HUN_invest_in_the_special_forces
-				bonus = 0.5
-				uses = 1
-				category = mountaineers_tech
-			}
-
-			add_tech_bonus = {
-				name = wuw_HUN_invest_in_the_special_forces
-				bonus = 0.35
-				uses = 1
-				category = para_tech
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_doctrine_cost_reduction = {
-					name = wuw_HUN_invest_in_the_special_forces
-					cost_reduction = 0.5
-					uses = 2
-					category = special_forces_doctrine
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_construct_the_arpad_line
-		icon = GFX_goal_fortify_the_westwall
-		prerequisite = { focus = wuw_HUN_expand_the_army focus = wuw_HUN_quantity_over_quality }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_expand_the_army
-
-		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_war = yes
-			73 = {
-				is_fully_controlled_by = ROOT
-			}
-			76 = {
-				is_fully_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			army_experience = 25
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = wuw_HUN_construct_the_arpad_line_tt
-
-			hidden_effect = {
-
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 11536
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 11536
-						}
-					}
-				}
-						
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 9563
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 9563
-						}
-					}
-					
-				}
-					
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 6571
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 6571
-						}
-					}
-				}
-					
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 9704
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 9704
-						}
-					}
-				}
-					
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 727
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 727
-						}
-					}
-				}
-					
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 9685
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 9685
-						}
-					}
-				}
-					
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 711
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 711
-						}
-					}
-				}
-					
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size > 1
-								province = 3689
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 3
-						    instant_build = yes
-						    province = 3689
-						}
-					}
-				}
-			
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_dezso_magos
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_transylvanian_mountaineers
-		icon = GFX_focus_SMB_special_forces_option_1
-		prerequisite = { focus = wuw_HUN_construct_the_arpad_line }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_construct_the_arpad_line
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			OR = {
-				76 = {
-					is_controlled_by = ROOT
-				}
-				84 = {
-					is_controlled_by = ROOT
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_tech_bonus = {
-				name = wuw_HUN_transylvanian_mountaineers
-				bonus = 1
-				uses = 1
-				category = mountaineers_tech
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = {
-						has_tech = mountain_gun
-					}
-				}
-				custom_effect_tooltip = ROM_mountain_artillery_tech_tt
-				hidden_effect = { set_technology = { mountain_gun = 1 } }
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_expand_the_arpad_line
-		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = wuw_HUN_construct_the_arpad_line }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_construct_the_arpad_line
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			has_war = yes
-			73 = {
-				is_fully_controlled_by = ROOT
-			}
-			76 = {
-				is_fully_controlled_by = ROOT
-			}
-
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_expand_the_arpad_line_available_tt
-
-				OR = {
-					73 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 11536
-						}
-					}
-
-					73 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 9563
-						}
-					}
-
-					73 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 6571
-						}
-					}
-
-					76 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 9704
-						}
-					}
-
-					76 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 727
-						}
-					}
-
-					76 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 9685
-						}
-					}
-
-					76 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 711
-						}
-					}
-
-					76 = {
-						free_building_slots = {
-							building = bunker
-							size > 1
-							province = 3689
-						}
-					}
-				}
-				
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_expand_the_arpad_line_tt
-
-			hidden_effect = {
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 11536
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 11536
-						}
-					}
-				}				
-
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 9563
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 9563
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						73 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 6571
-							}
-						}
-					}
-
-					73 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 6571
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 9704
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 9704
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 727 
-							}
-						}
-					}
-
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 727
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 9685
-							}
-						}
-					}
-					76 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 9685
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 711
-							}
-						}
-					}
-				}
-				76 = {
-					add_building_construction = {
-					    type = bunker
-					    level = 2
-					    instant_build = yes
-					    province = 711
-					}
-				}
-				if = {
-					limit = {
-						76 = {
-							free_building_slots = {
-								building = bunker
-								size < 1
-								province = 3689
-							}
-						}
-					}
-				}
-				76 = {
-					add_building_construction = {
-					    type = bunker
-					    level = 2
-					    instant_build = yes
-					    province = 3689
-					}
-				}
-
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = {
-						84 = {
-							is_controlled_by = ROOT
-						}
-					}
-				}
-				custom_effect_tooltip = wuw_HUN_expand_the_arpad_line_can_have_more_tt
-			}
-			else_if = {
-				limit = {
-					84 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				custom_effect_tooltip = wuw_HUN_expand_the_arpad_line_southern_expansion_tt
-				hidden_effect = {
-					84 = {
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 690
-						}
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 3676
-						}
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 6709
-						}
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 6679
-						}
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 3665
-						}
-						add_building_construction = {
-						    type = bunker
-						    level = 2
-						    instant_build = yes
-						    province = 9619
-						}
-					}
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_construct_the_szeretfalva_deda_railway_line
-		icon = GFX_focus_generic_railroad
-		prerequisite = { focus = wuw_HUN_construct_the_arpad_line }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_construct_the_arpad_line
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			#has_war = yes
-			76 = {
-				is_fully_controlled_by = ROOT
-			}
-			154 = {
-				is_fully_controlled_by = ROOT
-			}
-			43 = {
-				is_fully_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_construct_the_szeretfalva_deda_railway_line_tt
-
-			hidden_effect = {
-				build_railway = {
-				    level = 2
-				    fallback = yes
-				    path = { 9660 716 6716 699 11644 3696 3709 6714 9672 9670 }
-				    start_province = 9660
-				    target_province = 9670
-				}
-			}
-
-			76 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					instant_build = yes
-					province =  9670
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = {
-						has_tech = wartime_train
-					}
-				}
-				add_tech_bonus = {
-					name = wuw_HUN_construct_the_szeretfalva_deda_railway_line
-					bonus = 1
-					uses = 1
-					technology = wartime_train
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_the_szekel_command
-		icon = GFX_focus_HUN_the_szekel_command
-		prerequisite = { focus = wuw_HUN_transylvanian_mountaineers }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_transylvanian_mountaineers
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			has_war = yes
-			76 = {
-				is_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_the_szekel_command_division_tt
-
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Székel Command"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Székel Command Group"
-					division_names_group = HUN_MTN_01
-					role = mountaineers
-					is_locked = no
-					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 1 y = 0 }
-						mountaineers = { x = 1 y = 1 }
-						artillery_brigade = { x = 2 y = 0 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-				}
-
-				76 = {
-					create_unit = {
-					    division = "name = \"First Székel Command\" division_template = \"Székel Command Group\" start_experience_factor = 0.6 start_equipment_factor = 0.8"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_istvan_kozma
-					    }
-					}
-					create_unit = {
-					    division = "name = \"Second Székel Command\" division_template = \"Székel Command Group\" start_experience_factor = 0.6 start_equipment_factor = 0.6"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_ferenc_horvath
-					    }
-					}
-				}
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_renew_the_shipping_industry
