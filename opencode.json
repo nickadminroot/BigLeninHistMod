@@ -1,14 +1,14 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "hoi4-map": {
+    "hoi4-mcp": {
       "type": "local",
-      "enabled": true,
       "command": [
         "node",
-        "/home/nickadminroot/.vscode/extensions/uc-moddingutilities.hoi4-modding-tools-2.5.3/out/mapMcpServer.js",
-        "/home/nickadminroot/.local/share/Paradox Interactive/Hearts of Iron IV/mod/BigLeninHistMod/BigLeninHistMod"
-      ]
+        "./scripts/mcp/mapMcpServer.js",
+        "./BigLeninHistMod"
+      ],
+      "enabled": true
     }
   },
   "permission": {
