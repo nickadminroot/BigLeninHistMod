@@ -2182,6 +2182,67 @@ ideas = {
 				}
 			}
 		}
+		HUN_heirs_of_the_huns_idea_updated = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_turul_association_idea
+
+			modifier = {
+				army_armor_attack_factor = 0.15
+			}
+		}
+
+		HUN_quantity_over_quality_idea = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_turul_association_idea
+
+			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+					defense = 5
+				}
+			}
+		}
+
+		HUN_legacy_of_the_black_legion_idea_updated = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_turul_association_idea
+
+			modifier = {
+				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.15
+			}
+		}
+
+		HUN_light_infantry_divisions_doctrine_idea_updated = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_turul_association_idea
+
+			modifier = {
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.1
+			}
+		}
+
 	}
 
 	tank_manufacturer = {
@@ -2716,67 +2777,6 @@ ideas = {
 			traits = { artillery_manufacturer }
 			
 			modifier = {
-			}
-		}
-
-		HUN_heirs_of_the_huns_idea_updated = {
-			allowed = {
-				original_tag = HUN
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HUN_turul_association_idea
-
-			modifier = {
-				army_armor_attack_factor = 0.15
-			}
-		}
-
-		HUN_quantity_over_quality_idea = {
-			allowed = {
-				original_tag = HUN
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HUN_turul_association_idea
-
-			equipment_bonus = {
-				mechanized_equipment = {
-					build_cost_ic = -0.05
-					defense = 5
-				}
-			}
-		}
-
-		HUN_legacy_of_the_black_legion_idea_updated = {
-			allowed = {
-				original_tag = HUN
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HUN_turul_association_idea
-
-			modifier = {
-				army_armor_attack_factor = 0.15
-				army_armor_defence_factor = 0.15
-			}
-		}
-
-		HUN_light_infantry_divisions_doctrine_idea_updated = {
-			allowed = {
-				original_tag = HUN
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HUN_turul_association_idea
-
-			modifier = {
-				army_infantry_attack_factor = 0.15
-				army_infantry_defence_factor = 0.1
 			}
 		}
 
