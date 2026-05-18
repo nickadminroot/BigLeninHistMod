@@ -4,6 +4,37 @@ ideas = {
 
 		### TREATY OF TRIANON SPIRITS ###
 
+		HUN_gyor_program = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_old_hungary_reclaimed
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		HUN_gyor_program2 = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_old_hungary_reclaimed
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		
 		HUN_treaty_of_triannon = {
 			allowed = {
 				original_tag = HUN
@@ -2685,22 +2716,6 @@ ideas = {
 			traits = { artillery_manufacturer }
 			
 			modifier = {
-			}
-		}
-
-		HUN_gyor_program = {
-			allowed = {
-				original_tag = HUN
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HUN_old_hungary_reclaimed
-
-			modifier = {
-				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.1
-				production_speed_arms_factory_factor = 0.15
 			}
 		}
 
