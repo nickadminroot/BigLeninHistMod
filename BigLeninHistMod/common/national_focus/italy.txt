@@ -2431,9 +2431,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_steel_industry_in_terni
 		cost = 5
-		available = {
-			has_tech = synth_oil_experiments
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -2517,7 +2514,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2536,7 +2533,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2557,7 +2554,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2576,7 +2573,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2597,7 +2594,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2616,7 +2613,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2637,7 +2634,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2656,7 +2653,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2676,7 +2673,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
 			if = {
@@ -2816,6 +2813,19 @@ focus_tree = {
 				}
 			}
 
+			#Coastal fortifications for Sicily
+			115 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+
 			if = {
 				limit = {
 					has_full_control_of_state = 114
@@ -2837,6 +2847,16 @@ focus_tree = {
 							province = 11773					
 						}
 					}
+				}
+			}
+
+			#Coastal fortifications for Cagliari
+			114 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					instant_build = yes
+					province = 11773
 				}
 			}
 
@@ -2905,7 +2925,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ITA_italian_highways_bba
-		cost = 10
+		cost = 35
 		available = {
 			controls_state = 2
 			controls_state = 161
@@ -2966,7 +2986,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_railway_innovations
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -2985,7 +3005,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_railway_innovations
-		cost = 10
+		cost = 35
 		available = {
 			has_full_control_of_state = 159
 		}
@@ -3121,7 +3141,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_fiocchi_munizioni
-		cost = 5
+		cost = 35
 		available = {
 			has_full_control_of_state = 159
 		}
@@ -3185,7 +3205,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_fiocchi_munizioni
-		cost = 5
+		cost = 35
 		available = {
 			is_special_project_completed = sp:sp_air_radar
 			has_full_control_of_state = 159
@@ -3232,7 +3252,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_brescia_small_arms_industry
-		cost = 10
+		cost = 35
 		available = {
 			has_full_control_of_state = 159
 		}
@@ -3294,7 +3314,6 @@ focus_tree = {
 		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = ITA_expand_national_universities }
 		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
-		mutually_exclusive = { focus = ITA_keep_specialization }
 		x = -1
 		y = 2
 		relative_position_id = ITA_redirect_alfa_romeo_production
@@ -3321,7 +3340,6 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = ITA_expand_national_universities }
 		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
-		mutually_exclusive = { focus = ITA_increase_production }
 		x = 1
 		y = 2
 		relative_position_id = ITA_redirect_alfa_romeo_production
@@ -3545,7 +3563,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ITA_fiocchi_munizioni
-		cost = 10
+		cost = 35
 		available = {
 		}
 
