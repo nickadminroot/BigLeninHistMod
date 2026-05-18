@@ -9198,15 +9198,11 @@ focus_tree = {
 			play_peace_in_our_time_effect = yes
 
 			
-			if = {
+			GER = {
 				add_state_core = 69
 				transfer_state = 69
-			}
-			if = {
 				add_state_core = 972
 				transfer_state = 972
-			}
-			if = {
 				add_state_core = 74
 				transfer_state = 74
 			}
