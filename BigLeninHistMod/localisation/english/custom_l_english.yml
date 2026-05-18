@@ -79,3 +79,14 @@
  ss_police:0 "SS Police"
  ss_police_desc:0 "A specialized SS support company for suppressing resistance in occupied territories."
  ITA_improve_overseas_naval_bases_tt:0 "§YTripoli§! and §YBenghazi§! naval bases upgraded to §Ylevel 10§!.\nCoastal fortifications built in both locations."
+ ITA_ferrea_mole_ferreo_cuore_armor_tt:0 "§YAll Armor§! division attack: §G+10%§!"
+ ITA_bomber_designs_rm_tt:0 "Naval Strike Attack: §G+15%§!"
+ ITA_fighter_designs_ra_tt:0 "Fighter Agility: §G+5%§!
+Fighter Defense: §G+5%§!
+Light Air Attack: §G+5%§!"
+ ITA_G55_centauro:0 "§YG.55 Centauro§! Fighter Program"
+ ITA_long_range_aircraft_idea:0 "Long Range Aircraft Program"
+ ITA_bomber_designs_idea:0 "Bomber Designs Program"
+ ITA_multirole_aircraft_idea:0 "Multirole Aircraft Program"
+ ITA_bersaglieri_re_tt:0 "§YSpecial Forces§! Attack: §G+10%§!
+§YSpecial Forces§! Defense: §G+10%§!"
