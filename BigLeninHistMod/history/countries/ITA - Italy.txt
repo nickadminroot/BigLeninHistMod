@@ -17,6 +17,11 @@ if = {
 	set_oob = "ITA_1936_nsb"
 }
 
+add_offsite_building = {
+	type = industrial_complex
+	level = 5
+}
+
 starting_train_buffer = 1.5
 
 set_research_slots = 4
