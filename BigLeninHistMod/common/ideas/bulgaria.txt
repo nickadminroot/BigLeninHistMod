@@ -2300,10 +2300,6 @@ ideas = {
 				has_dlc = "Battle for the Bosporus"
 			}
 
-			visible = {
-				NOT = { has_completed_focus = BUL_an_aegean_sea_fleet }
-			}
-
 			available = {
 				has_completed_focus = BUL_expand_varna_naval_base
 			}
@@ -2328,10 +2324,6 @@ ideas = {
 			allowed = {
 				original_tag = BUL
 				has_dlc = "Battle for the Bosporus"
-			}
-
-			visible = {
-				has_completed_focus = BUL_an_aegean_sea_fleet
 			}
 
 			available = {

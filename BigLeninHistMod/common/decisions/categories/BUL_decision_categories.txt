@@ -234,7 +234,6 @@ BUL_dominance_in_the_seas = {
 	}
 	
 	visible = {
-		has_completed_focus = BUL_dominance_in_the_black_sea
 		is_subject = no
 	}
 }
