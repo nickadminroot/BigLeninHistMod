@@ -6322,321 +6322,607 @@ focus_tree = {
 
 
 	focus = {
-		id = wuw_HUN_military_aeronautical_institute
-		icon = GFX_goal_generic_air_doctrine
+		id = wuw_HUN_air_force_officer_recruitment
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = wuw_HUN_secret_rearmament }
 		x = 6
 		y = 0
-		prerequisite = { focus = wuw_HUN_secret_rearmament }
 		relative_position_id = wuw_HUN_reinstate_the_navy
 
-		cost = 10
+		cost = 5
 
 		available = {
-			wuw_HUN_does_not_have_trianon = yes
+			any_core_state = {
+				is_controlled_by = ROOT
+			}
 		}
 
-		bypass = {
-			wuw_HUN_does_not_have_trianon = yes
+		completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_air_force_officer_recruitment
+				cost_reduction = 0.50
+				uses = 1
+				category = air_doctrine
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = { modifier = HUN_axis_air_forces_dynamic_modifier }
+		}
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = wuw_HUN_expand_airfield_capacity
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = wuw_HUN_air_force_officer_recruitment }
+		relative_position_id = wuw_HUN_air_force_officer_recruitment
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
 		}
 
-		cancel_if_invalid = no
-		continue_if_invalid = yes
+		available = {
+			any_core_state = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_production_speed_air_base_factor = 0.15
+				tooltip = production_speed_air_base_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_accidents_factor = -0.05
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_weather_penalty = -0.05
+				tooltip = air_weather_penalty_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					controls_state = 43
+					43 = {
+						air_base < 8
+					}
+				}
+				43 = {
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					controls_state = 154
+					154 = {
+						air_base < 9
+					}
+				}
+				154 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					controls_state = 155
+				}
+				if = {
+					limit = {
+						155 = {
+							air_base < 9
+						}
+					}
+					155 = {
+						add_building_construction = {
+							type = air_base
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_doctrine_cost_reduction = {
-				name = wuw_HUN_military_aeronautical_institute
-				cost_reduction = 0.5
+				name = wuw_HUN_expand_airfield_capacity
+				cost_reduction = 0.25
 				uses = 1
 				category = air_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
-		id = wuw_HUN_import_foreign_fighters
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
+		id = wuw_HUN_trust_in_old_guard
+		icon = GFX_focus_generic_air_partners
+		prerequisite = { focus = wuw_HUN_expand_airfield_capacity }
+		relative_position_id = wuw_HUN_expand_airfield_capacity
+		x = 0
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+			add_daily_mastery = {
+				amount = 0.1
+				days = 180
+				name = wuw_HUN_trust_in_old_guard
+				folder = air
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			air_experience = 25
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_ace_generation_chance_factor = 0.10
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_ace_effectiveness_factor = 0.10
+				tooltip = ace_effectiveness_factor_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = wuw_HUN_expand_the_aero_clubs
+		icon = GFX_focus_SMB_special_forces_option_3
+		prerequisite = { focus = wuw_HUN_trust_in_old_guard }
+		relative_position_id = wuw_HUN_trust_in_old_guard
+		x = 0
+		y = 1
+
+		cost = 5
+
+		completion_reward = {
+			add_daily_mastery = {
+				amount = 0.1
+				days = 180
+				name = wuw_HUN_trust_in_old_guard
+				track = fighter_aircraft
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_wing_xp_loss_when_killed_factor = -0.25
+				tooltip = air_wing_xp_loss_when_killed_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_ace_generation_chance_factor = 0.10
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_ace_effectiveness_factor = 0.10
+				tooltip = ace_effectiveness_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_night_penalty = -0.10
+				tooltip = air_night_penalty_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	}
+
+	focus = {
+		id = wuw_HUN_air_training_abroad
+		icon = GFX_focus_generic_pilot_training
+		prerequisite = { focus = wuw_HUN_trust_in_old_guard }
+		relative_position_id = wuw_HUN_trust_in_old_guard
 		x = -2
 		y = 1
-		relative_position_id = wuw_HUN_military_aeronautical_institute
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		cost = 5
 
+		ai_will_do = {
+			factor = 1
+		}
+
 		available = {
-
+			any_core_state = {
+				is_controlled_by = ROOT
+			}
+			has_war_with_major = no
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_import_foreign_fighters
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
+			air_experience = 25
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery = {
+				amount = 5
+				folder = air
 			}
-		}
-	}
 
-	focus = {
-		id = wuw_HUN_light_fighter_focus
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = wuw_HUN_import_foreign_fighters }
-		mutually_exclusive = { focus = wuw_HUN_heavy_fighter_focus }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_import_foreign_fighters
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_light_fighter_focus
-				bonus = 0.5
-				uses = 1
-				category = light_fighter
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_training_xp_gain_factor = 0.10
+				tooltip = air_training_xp_gain_factor_tt
 			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_heavy_fighter_focus
-		icon = GFX_focus_usa_escort_fighters
-		prerequisite = { focus = wuw_HUN_import_foreign_fighters }
-		mutually_exclusive = { focus = wuw_HUN_light_fighter_focus }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_import_foreign_fighters
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_heavy_fighter_focus
-				bonus = 0.5
-				uses = 1
-				category = cat_heavy_fighter
+			add_to_variable = {
+				HUN_axis_air_forces_air_accidents_factor = -0.10
+				tooltip = air_accidents_factor_tt
 			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_import_foreign_bombers
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
-		x = 2
-		y = 1
-		relative_position_id = wuw_HUN_military_aeronautical_institute
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_import_foreign_bombers
-				bonus = 1.0
-				uses = 1
-				category = cas_bomber
-				category = tactical_bomber
+			add_to_variable = {
+				HUN_axis_air_forces_air_untrained_pilots_penalty_factor = -0.10
+				tooltip = air_untrained_pilots_penalty_factor_tt
 			}
-		}
-	}
 
-	focus = {
-		id = wuw_HUN_cas_focus
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = wuw_HUN_import_foreign_bombers }
-		mutually_exclusive = { focus = wuw_HUN_tac_focus }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_import_foreign_bombers
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_cas_focus
-				bonus = 0.5
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_tac_focus
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = wuw_HUN_import_foreign_bombers }
-		mutually_exclusive = { focus = wuw_HUN_cas_focus }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_import_foreign_bombers
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = wuw_HUN_tac_focus
-				bonus = 0.5
-				uses = 1
-				category = tactical_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_air_is_our_sea
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_military_aeronautical_institute
-
-		cost = 10
-
-		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_light_fighter_focus
-				has_completed_focus = wuw_HUN_heavy_fighter_focus
-			}
-			OR = {
-				has_completed_focus = wuw_HUN_cas_focus
-				has_completed_focus = wuw_HUN_tac_focus
-			}
-		}
-
-		bypass = {
-			OR = {
-				has_completed_focus = wuw_HUN_light_fighter_focus
-				has_completed_focus = wuw_HUN_heavy_fighter_focus
-			}
-			OR = {
-				has_completed_focus = wuw_HUN_cas_focus
-				has_completed_focus = wuw_HUN_tac_focus
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = HUN_axis_air_forces
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_rule_the_air
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = wuw_HUN_air_is_our_sea }
-		prerequisite = { focus = wuw_HUN_light_fighter_focus focus = wuw_HUN_heavy_fighter_focus }
-		prerequisite = { focus = wuw_HUN_cas_focus focus = wuw_HUN_tac_focus }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_air_is_our_sea
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
 			add_doctrine_cost_reduction = {
-				name = wuw_HUN_rule_the_air
-				cost_reduction = 0.5
-				uses = 3
+				name = wuw_HUN_air_training_abroad
+				cost_reduction = 0.25
+				uses = 1
 				category = air_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = wuw_HUN_establish_air_defense_zones
+		icon = GFX_focus_PRC_anti_air_effort
+		prerequisite = { focus = wuw_HUN_trust_in_old_guard }
+		relative_position_id = wuw_HUN_trust_in_old_guard
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_core_state = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_mastery_bonus = {
+				name = wuw_HUN_establish_air_defense_zones
+				bonus = 0.10
+				days = 365
+				sub_doctrine = air_subdoctrine_fighter_homeland_defense
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_production_speed_anti_air_building_factor = 0.10
+				tooltip = production_speed_anti_air_building_factor_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = wuw_HUN_establish_air_defense_zones
+				bonus = 0.75
+				uses = 1
+				category = cat_anti_air
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_owned_controlled_state = {
+				prioritize = { 155 }
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = anti_air_building
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 43 }
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = anti_air_building
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 154 }
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = anti_air_building
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = wuw_HUN_establish_air_defense_zones_enable_tt
+			custom_effect_tooltip = wuw_HUN_establish_air_defense_zones_tt
+			hidden_effect = {
+				set_technology = {
+					MUN_CZE_establish_air_defense_zones = 1
+					popup = no
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = wuw_HUN_the_air_is_our_sea
+		icon = GFX_focus_CZE_the_air_is_our_sea
+		prerequisite = { focus = wuw_HUN_air_training_abroad focus = wuw_HUN_establish_air_defense_zones focus = wuw_HUN_expand_the_aero_clubs }
+		relative_position_id = wuw_HUN_air_training_abroad
+		x = 2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_mastery = {
+				amount = 25
+				folder = air
+			}
+			add_mastery_bonus = {
+				name = wuw_HUN_the_air_is_our_sea
+				bonus = 0.25
+				days = 180
+				sub_doctrine = air_subdoctrine_dogfighting_mastery
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_attack_factor = 0.10
+				tooltip = air_attack_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_range_factor = 0.10
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_ace_effectiveness_factor = 0.25
+				tooltip = ace_effectiveness_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_weather_penalty = -0.25
+				tooltip = air_weather_penalty_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_home_defence_factor = 0.25
+				tooltip = air_home_defence_factor_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = wuw_HUN_the_air_is_our_sea
+				bonus = 0.75
+				uses = 1
+				category = air_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = wuw_HUN_second_to_none
+		icon = GFX_goal_generic_air_fighter2
+		overlay = GFX_focus_overlay_cze_air_focus
+		prerequisite = { focus = wuw_HUN_expand_airfield_capacity }
+
+		mutually_exclusive = { focus = wuw_HUN_diversify_airframe_production }
+
+		relative_position_id = wuw_HUN_expand_airfield_capacity
+		x = 2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_superiority_efficiency = 0.05
+				tooltip = air_superiority_efficiency_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_attack_factor = 0.05
+				tooltip = air_attack_factor_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = wuw_HUN_second_to_none
+				bonus = 1
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+	}
+
+	focus = {
+		id = wuw_HUN_diversify_airframe_production
+		icon = GFX_focus_generic_multi_role_aircraft
+		overlay = GFX_focus_overlay_cze_air_focus
+		prerequisite = { focus = wuw_HUN_expand_airfield_capacity }
+
+		mutually_exclusive = { focus = wuw_HUN_second_to_none }
+
+		relative_position_id = wuw_HUN_expand_airfield_capacity
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_axis_air_forces_ns_intro_tt
+			add_to_variable = {
+				HUN_axis_air_forces_air_range_factor = 0.10
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_strategic_bomber_bombing_factor = 0.05
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
+			add_to_variable = {
+				HUN_axis_air_forces_air_cas_efficiency = 0.05
+				tooltip = air_cas_efficiency_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = wuw_HUN_diversify_airframe_production
+				bonus = 0.50
+				uses = 2
+				category = cas_bomber
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {

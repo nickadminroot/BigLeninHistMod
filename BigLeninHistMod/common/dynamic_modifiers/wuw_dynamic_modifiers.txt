@@ -439,6 +439,30 @@ HUN_academy_of_sciences = {
 	research_speed_factor = HUN_academy_of_sciences_research_speed_factor
 }
 
+HUN_axis_air_forces_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_air_bonus
+
+	air_untrained_pilots_penalty_factor = HUN_axis_air_forces_air_untrained_pilots_penalty_factor
+	air_training_xp_gain_factor = HUN_axis_air_forces_air_training_xp_gain_factor
+	air_volunteer_cap = HUN_axis_air_forces_dynamic_air_volunteer_cap
+
+	air_accidents_factor = HUN_axis_air_forces_air_accidents_factor
+	air_ace_generation_chance_factor = HUN_axis_air_forces_air_ace_generation_chance_factor
+	ace_effectiveness_factor = HUN_axis_air_forces_ace_effectiveness_factor
+	production_speed_air_base_factor = HUN_axis_air_forces_production_speed_air_base_factor
+	production_speed_anti_air_building_factor = HUN_axis_air_forces_production_speed_anti_air_building_factor
+	air_home_defence_factor = HUN_axis_air_forces_air_home_defence_factor
+	air_superiority_efficiency = HUN_axis_air_forces_air_superiority_efficiency
+	air_weather_penalty = HUN_axis_air_forces_air_weather_penalty
+	air_wing_xp_loss_when_killed_factor = HUN_axis_air_forces_air_wing_xp_loss_when_killed_factor
+	air_range_factor = HUN_axis_air_forces_air_range_factor
+	air_strategic_bomber_bombing_factor = HUN_axis_air_forces_air_strategic_bomber_bombing_factor
+	air_cas_efficiency = HUN_axis_air_forces_air_cas_efficiency
+	air_attack_factor = HUN_axis_air_forces_air_attack_factor
+	air_night_penalty = HUN_axis_air_forces_air_night_penalty
+}
+
 
 ###################################################################################################
 ###################################################################################################
