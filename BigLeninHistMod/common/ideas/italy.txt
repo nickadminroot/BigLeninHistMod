@@ -63,13 +63,32 @@ ideas = {
 				always = yes
 			}
 					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				light_tank_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-					reliability = 0.05
-				}
-			}
+\t\t\tequipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+\t\t\t\tlight_tank_artillery_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t\tmedium_tank_artillery_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t\theavy_tank_artillery_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t\tlight_tank_destroyer_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t\tmedium_tank_destroyer_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t\theavy_tank_destroyer_chassis = {
+\t\t\t\t\tinstant = yes
+\t\t\t\t\tbuild_cost_ic = -0.1
+\t\t\t\t}
+\t\t\t}
 		}
 
 		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
