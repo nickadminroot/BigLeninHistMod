@@ -259,6 +259,10 @@ When adding effects or modifiers with localization keys, update **every** refere
 - After changes, run `git diff` to verify only intended lines changed
 - The mod is under active development — stale context leads to mistakes. Always re-read files before editing.
 
+### 9. Focus costs are not set properly
+
+Remember that focuses have cost = N where N is the number of weeks (7 days) - not the number of days. For example, a focus with cost = 1 week will cost 7 days to complete.  
+
 ---
 
 ## Modding Best Practices
