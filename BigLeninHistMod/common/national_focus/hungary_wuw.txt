@@ -6319,6 +6319,323 @@ focus_tree = {
 
 
 	focus = {
+		id = wuw_HUN_military_aeronautical_institute
+		icon = GFX_goal_generic_air_doctrine
+		x = 4
+		y = 0
+		relative_position_id = wuw_HUN_continue_the_regency
+
+		cost = 10
+
+		available = {
+			wuw_HUN_does_not_have_trianon = yes
+		}
+
+		bypass = {
+			wuw_HUN_does_not_have_trianon = yes
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_military_aeronautical_institute
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_import_foreign_fighters
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
+		x = -2
+		y = 1
+		relative_position_id = wuw_HUN_military_aeronautical_institute
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_import_foreign_fighters
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_light_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = wuw_HUN_import_foreign_fighters }
+		mutually_exclusive = { focus = wuw_HUN_heavy_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_import_foreign_fighters
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_light_fighter_focus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_heavy_fighter_focus
+		icon = GFX_focus_usa_escort_fighters
+		prerequisite = { focus = wuw_HUN_import_foreign_fighters }
+		mutually_exclusive = { focus = wuw_HUN_light_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_import_foreign_fighters
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_heavy_fighter_focus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_import_foreign_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
+		x = 2
+		y = 1
+		relative_position_id = wuw_HUN_military_aeronautical_institute
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_import_foreign_bombers
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_cas_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = wuw_HUN_import_foreign_bombers }
+		mutually_exclusive = { focus = wuw_HUN_tac_focus }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_import_foreign_bombers
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_cas_focus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_tac_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = wuw_HUN_import_foreign_bombers }
+		mutually_exclusive = { focus = wuw_HUN_cas_focus }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_import_foreign_bombers
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_tac_focus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_air_is_our_sea
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = wuw_HUN_military_aeronautical_institute }
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_military_aeronautical_institute
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_completed_focus = wuw_HUN_light_fighter_focus
+				has_completed_focus = wuw_HUN_heavy_fighter_focus
+			}
+			OR = {
+				has_completed_focus = wuw_HUN_cas_focus
+				has_completed_focus = wuw_HUN_tac_focus
+			}
+		}
+
+		bypass = {
+			OR = {
+				has_completed_focus = wuw_HUN_light_fighter_focus
+				has_completed_focus = wuw_HUN_heavy_fighter_focus
+			}
+			OR = {
+				has_completed_focus = wuw_HUN_cas_focus
+				has_completed_focus = wuw_HUN_tac_focus
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = HUN_axis_air_forces
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_rule_the_air
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = wuw_HUN_air_is_our_sea }
+		prerequisite = { focus = wuw_HUN_light_fighter_focus focus = wuw_HUN_heavy_fighter_focus }
+		prerequisite = { focus = wuw_HUN_cas_focus focus = wuw_HUN_tac_focus }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_air_is_our_sea
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_rule_the_air
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
 		id = wuw_HUN_renew_the_shipping_industry
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = wuw_HUN_reinstate_the_navy }

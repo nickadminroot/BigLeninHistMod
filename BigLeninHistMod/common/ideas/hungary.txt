@@ -2134,6 +2134,23 @@ ideas = {
 				}
 			}
 		}
+
+		HUN_axis_air_forces = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = air_support_focus
+			removal_cost = -1
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
 	}
 
 	tank_manufacturer = {
