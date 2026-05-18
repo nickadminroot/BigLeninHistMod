@@ -9715,14 +9715,6 @@ BUL_dominance_in_the_seas = {
 			}
 		}
 
-		activation = {
-			has_completed_focus = BUL_dominance_in_the_black_sea
-		}
-		
-		visible = {
-			has_completed_focus = BUL_dominance_in_the_black_sea
-		}
-
 		highlight_states = {
 			highlight_states_trigger = { 
 				BUL_state_is_in_the_black_sea = yes
@@ -9814,14 +9806,6 @@ BUL_dominance_in_the_seas = {
 			}
 		}
 
-		activation = {
-			has_completed_focus = BUL_dominance_in_the_aegean_sea
-		}
-		
-		visible = {
-			has_completed_focus = BUL_dominance_in_the_aegean_sea
-		}
-
 		days_mission_timeout = 730
 
 		fire_only_once = yes
@@ -9911,14 +9895,6 @@ BUL_dominance_in_the_seas = {
 					}
 				}
 			}
-		}
-
-		activation = {
-			has_completed_focus = BUL_dominance_in_the_adriatic_sea
-		}
-		
-		visible = {
-			has_completed_focus = BUL_dominance_in_the_adriatic_sea
 		}
 
 		days_mission_timeout = 730

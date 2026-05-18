@@ -522,7 +522,7 @@ foreign_mio_decisions_category = {
 				limit = { original_tag = BUL }
 				OR = {
 					has_completed_focus = BUL_contract_foreign_companies
-					has_completed_focus = BUL_a_black_sea_fleet
+
 				}
 			}
 			else = {
@@ -542,7 +542,7 @@ foreign_mio_decisions_category = {
 					is_subject_of = SOV
 				}
 				#is_in_faction_with = SOV
-				has_completed_focus = BUL_a_black_sea_fleet
+
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -907,7 +907,7 @@ foreign_mio_decisions_category = {
 				limit = { original_tag = BUL }
 				OR = {
 					has_completed_focus = BUL_contract_foreign_companies
-					has_completed_focus = BUL_a_black_sea_fleet
+
 				}
 			}
 			else = {
@@ -927,7 +927,7 @@ foreign_mio_decisions_category = {
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				has_completed_focus = BUL_a_black_sea_fleet
+
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -1008,7 +1008,7 @@ foreign_mio_decisions_category = {
 				limit = { original_tag = BUL }
 				OR = {
 					has_completed_focus = BUL_contract_foreign_companies
-					has_completed_focus = BUL_a_black_sea_fleet
+
 				}
 			}
 			else_if = {
@@ -1032,7 +1032,7 @@ foreign_mio_decisions_category = {
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				has_completed_focus = BUL_a_black_sea_fleet
+
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -1405,7 +1405,7 @@ foreign_mio_decisions_category = {
 				limit = { original_tag = BUL }
 				OR = {
 					has_completed_focus = BUL_contract_foreign_companies
-					has_completed_focus = BUL_a_black_sea_fleet
+
 				}
 			}
 			else = {
@@ -1425,7 +1425,7 @@ foreign_mio_decisions_category = {
 					is_subject_of = ITA
 				}
 				#is_in_faction_with = ITA
-				has_completed_focus = BUL_a_black_sea_fleet
+
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
