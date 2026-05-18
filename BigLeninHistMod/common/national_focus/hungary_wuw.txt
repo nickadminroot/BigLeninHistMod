@@ -1434,121 +1434,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_the_war_on_atheism
-		icon = GFX_focus_mex_restore_the_army_of_christ
-		prerequisite = { focus = wuw_HUN_a_roman_catholic_state }
-		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_a_roman_catholic_state
-
-		will_lead_to_war_with = SOV
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		select_effect = {
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-				ROOT = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = PREV
-						value = 100
-					}
-				}
-			}
-		}
-
-		available = {
-			has_government = fascism
-			is_subject = no
-			any_country = {
-				has_government = communism
-				NOT = {
-					OR = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				OR = {
-					is_major = yes
-					is_neighbor_of = ROOT
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-
-			custom_effect_tooltip = POR_the_communist_threat_tt
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-			}
-
-			hidden_effect = {
-				every_country = {
-					limit = {
-						has_government = communism
-						NOT = {
-							OR = {
-								is_in_faction_with = ROOT
-								is_subject_of = ROOT
-							}
-						}
-						OR = {
-							is_major = yes
-							is_neighbor_of = ROOT
-						}
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = declare_war
-							id = PREV
-							value = 100
-						}
-						create_wargoal = {
-							type = topple_government
-							target = PREV
-						}
-					}
-				}
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_promote_hungarianism
@@ -1862,9 +1747,6 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
-
-		will_lead_to_war_with = CZE
-		will_lead_to_war_with = SLO
 
 		cost = 5
 
@@ -2318,9 +2200,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_southern_slovakia
 
-		will_lead_to_war_with = SLO
-		will_lead_to_war_with = CZE
-
 		cost = 2
 
 		ai_will_do = {
@@ -2521,189 +2400,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_license_fiat_tankettes
-		icon = GFX_focus_generic_fiat
-		prerequisite = { focus = wuw_HUN_act_of_defense focus = wuw_HUN_wherever_the_cross_points }
-		#mutually_exclusive = { focus = wuw_HUN_claim_overlordship_over_slovakia }
-		x = -4
-		y = 1
-		relative_position_id = wuw_HUN_act_of_defense
-		cost = 5
 
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			ITA = {
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			ITA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = medium_increase
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 2000
-					equipment_type = light_tank_chassis
-					seller_tags = { ITA }
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_fiat_tankettes_organization
-
-				mio:HUN_fiat_tankettes_organization = {
-					add_mio_size = 1
-				}
-
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_fiat
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_renew_the_rome_protocols
-		icon = GFX_focus_befriend_italy
-		prerequisite = { focus = wuw_HUN_license_fiat_tankettes }
-		mutually_exclusive = { focus = wuw_HUN_invite_german_investors }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_license_fiat_tankettes
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			NOT = { has_war_with = ITA }
-			NOT = { has_war_with = AUS }
-			ITA = {
-				exists = yes
-				is_subject = no
-				NOT = { has_war_with = AUS }
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			AUS = {
-				exists = yes
-				is_subject = no
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			OR = {
-				has_country_leader = {
-					ruling_only = yes
-					character = HUN_miklos_horthy
-				}
-				has_country_leader = {
-					ruling_only = yes
-					character = HUN_franz_friedrich
-				}
-			}
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_renew_the_rome_protocols_interventionalism_tt
-			if = {
-				limit = {
-					has_idea = HUN_wuw_interventionism
-				}
-				swap_ideas = {
-					add_idea = HUN_interventionism_2
-					remove_idea = HUN_wuw_interventionism
-				}
-			}
-
-			if = {
-				limit = {
-					country_exists = AUS
-				}
-				reverse_add_opinion_modifier = { target = AUS modifier = HUN_renew_the_rome_protocols }
-				add_opinion_modifier = { target = AUS modifier = HUN_renew_the_rome_protocols }
-			}
-			if = {
-				limit = {
-					country_exists = ITA
-				}
-				reverse_add_opinion_modifier = { target = ITA modifier = HUN_renew_the_rome_protocols }
-				add_opinion_modifier = { target = ITA modifier = HUN_renew_the_rome_protocols }
-			}
-			if = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						character = HUN_miklos_horthy
-					}
-				}
-				news_event = { id = news.312 }
-			}
-
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_invite_german_investors
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = wuw_HUN_seek_german_contracts }
-		mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_seek_german_contracts
@@ -2915,186 +2617,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_protect_austria
-		icon = GFX_focus_AUS_for_a_better_future
-		prerequisite = { focus = wuw_HUN_renew_the_rome_protocols }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_renew_the_rome_protocols
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-			is_subject = no
-			975 = {
-				is_owned_by = AUS
-			}
-			AUS = {
-				NOT = {
-					OR = {
-						is_guaranteed_by = ROOT
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				AND = {
-					975 = {
-						NOT = { is_owned_by = AUS }
-					}
-					4 = {
-						NOT = { is_owned_by = AUS }
-					}
-					152 = {
-						NOT = { is_owned_by = AUS }
-					}
-					153 = {
-						NOT = { is_owned_by = AUS }
-					}
-					848 = {
-						NOT = { is_owned_by = AUS }
-					}
-					976 = {
-						NOT = { is_owned_by = AUS }
-					}
-				}
-				AUS = {
-					is_guaranteed_by = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			AUS = {
-				country_event = {
-					id = WW_hungary.8
-					days = 2
-					random_days = 3
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_an_alliance_with_italy
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = wuw_HUN_protect_austria }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_protect_austria
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			NOT = { has_war_with = ITA }
-			is_subject = no
-			is_in_faction = no
-			ITA = {
-				OR = {
-					is_in_faction = no
-					is_faction_leader = yes
-				}
-				is_subject = no
-				ITA_is_kinda_fascist = yes
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			if = {
-				limit = {
-					ITA = { is_in_faction = no }
-				}
-				ROOT = {
-					set_rule = { can_create_factions = yes }
-					create_faction_from_template = {
-						template = faction_template_regional
-						name = HUN_PACT_OF_ROME_FACTION
-						icon = GFX_faction_logo_generic_11
-					}
-					ITA = {
-						country_event = generic.5
-						add_ai_strategy = {
-							type = alliance
-							id = HUN
-							value = 200
-						}
-					}
-					if = {
-						limit = {
-							country_exists = AUS
-							AUS = {
-								is_subject = no
-							}
-						}
-						AUS = {
-							country_event = generic.5
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					ITA = { is_faction_leader = yes }
-				}
-				ITA = {
-					country_event = generic.2
-				}
-			}
-			if = {
-				limit = {
-					ITA = { is_in_faction_with = FRA }
-				}
-				FRA = {
-					country_event = generic.2
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_miklos_horthy
-						}
-					}
-					news_event = { id = news.313 }
-				}
-			}
-
-		}
-	}
 
 
 	focus = {
@@ -5186,7 +4709,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5235,7 +4758,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5354,7 +4877,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5596,7 +5119,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5639,7 +5162,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_joint_air_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5744,7 +5267,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -5808,70 +5331,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_danuvia_submachine_guns
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = -2
-		y = 1
-		relative_position_id = wuw_HUN_initiate_army_maneuvers
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_tech_bonus = {
-				name = HUN_danuvia_submachine_guns
-				bonus = 0.75
-				uses = 1
-				category = infantry_weapons
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_danuvia_inf_organization
-
-				mio:HUN_danuvia_inf_organization = {
-					add_mio_size = 2
-				}
-
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_danuvia_inf
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_pal_kiraly
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_form_the_gyorshadtest
