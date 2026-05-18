@@ -351,7 +351,7 @@ ideas = {
    # #    #    #  #   ##  #  #       #       #    # 
     #     #    #  #    #  #  ######  ######  #    # 
 				ITA_long_range_aircraft_idea = {
-			picture = GFX_focus_generic_long_range_aircraft
+			picture = ITA_regia_aeronautica_3
 
 			allowed = {
 				original_tag = ITA
@@ -369,11 +369,11 @@ ideas = {
 			}
 		}
 
-		ITA_hidden_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+		ITA_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
  			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
 			removal_cost = -1
 
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+			picture = ITA_regio_esercito_1
 				
 			allowed = {
 				original_tag = ITA
@@ -397,11 +397,11 @@ ideas = {
 			}
 		}
 
-		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+		ITA_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
  			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
 			removal_cost = -1
 
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+			picture = ITA_regio_esercito_1
 				
 			allowed = {
 				original_tag = ITA
@@ -443,7 +443,7 @@ ideas = {
  			name = ITA_standardization #Just in case it shows up anywhere
 			removal_cost = -1
 
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
+			picture = ITA_regia_aeronautica_3
 				
 			allowed = {
 				original_tag = ITA
@@ -477,7 +477,7 @@ ideas = {
  			name = ITA_specialization #Just in case it shows up anywhere
 			removal_cost = -1
 
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
+			picture = ITA_regia_aeronautica_3
 				
 			allowed = {
 				original_tag = ITA
@@ -508,7 +508,7 @@ ideas = {
 		}
 
 		ITA_bomber_designs_idea = {
-			picture = GFX_goal_generic_air_bomber
+			picture = ITA_regia_aeronautica_1
 
 			allowed = {
 				original_tag = ITA
@@ -526,7 +526,7 @@ ideas = {
 		}
 
 		ITA_G55_centauro_idea = {
-			picture = GFX_goal_generic_air_fighter
+			picture = ITA_regia_aeronautica_2
 
 			allowed = {
 				original_tag = ITA
@@ -546,7 +546,7 @@ ideas = {
 		}
 
 		ITA_multirole_aircraft_idea = {
-			picture = GFX_focus_generic_multi_role_aircraft
+			picture = ITA_regia_aeronautica_3
 
 			allowed = {
 				original_tag = ITA
