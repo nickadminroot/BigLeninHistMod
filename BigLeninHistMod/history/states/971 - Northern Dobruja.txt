@@ -6,6 +6,7 @@ state = {
 	}
 	state_category = city
 	history = {
+		add_extra_state_shared_building_slots = 20
 		owner = ROM
 		add_core_of = ROM
 		add_claim_by = BUL
