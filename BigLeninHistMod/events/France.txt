@@ -280,56 +280,13 @@ country_event = {
 		}
 	}
 	
-	option = { # Become Vichy
-		name = france.10.a
-		trigger = { is_ai = no }
-		set_country_flag = become_vichy
-		save_global_event_target_as = vichy_france
-		set_global_flag = fall_of_france
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.a_tt
-		# Switches to Vichy if GER accepts
-		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
-	}
-	option = { # Become Free French
+	option = { # Become Free France (always — Vichy forms automatically via GER event)
 		name = france.10.b
-		ai_chance = {
-			factor = 85
-		}
 		set_global_flag = fall_of_france
 		save_global_event_target_as = free_france
 		GER = { country_event = france.14 }
 		custom_effect_tooltip = france.10.b_tt
-		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
-	}
-	option = { # Ask for British Union
-		name = france.10.c
-		ai_chance = {
-			factor = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		ENG = {
-			country_event = france.11
-			effect_tooltip = {
-				annex_country = { target = FRA transfer_troops = yes }
-			}
-		}
-		custom_effect_tooltip = GAME_OVER_TT
-	}
-	option = { # decide to fight on
-		name = france.10.e
-		ai_chance = {
-			factor = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = { has_war_support > 0.7 }
-		add_stability = -0.05
+		set_country_flag = GER_dont_seize_gold_reserves_flag
 	}
 }
 
@@ -1385,12 +1342,9 @@ country_event = {
 	}
 	option = { # Conquer everything!
 		name = france.14.b
+		trigger = { always = no }
 		ai_chance = { 
-			factor = 50 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			factor = 0
 		}
 		FRA = {
 			country_event = { hours = 6 id = france.15 }
