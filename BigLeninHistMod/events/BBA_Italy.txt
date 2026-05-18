@@ -7415,10 +7415,7 @@ country_event = {
 						add = 10
 						has_completed_focus = ITA_litoranea_balbo
 					}
-					modifier = {
-						add = 10
-						has_completed_focus = ITA_via_della_vittoria
-					}
+
 					modifier = {
 						add = 10
 						has_completed_focus = ITA_prospect_for_oil
@@ -7426,10 +7423,6 @@ country_event = {
 					modifier = {
 						add = 10
 						has_completed_focus = ITA_libyan_refineries
-					}
-					modifier = {
-						add = 10
-						has_completed_focus = ITA_libyan_railway
 					}
 					modifier = {
 						add = 5

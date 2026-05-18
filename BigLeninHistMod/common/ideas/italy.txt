@@ -64,210 +64,34 @@ ideas = {
 			}
 					
 			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				light_tank_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-					reliability = 0.05
-				}
-			}
-		}
-
-		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
- 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
 				light_tank_artillery_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 				medium_tank_artillery_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 				heavy_tank_artillery_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 				light_tank_destroyer_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 				medium_tank_destroyer_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 				heavy_tank_destroyer_chassis = {
 					instant = yes
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 				}
 			}
 		}
 
-		ITA_hidden_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
- 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				armor = {
-					instant = yes
-					defense = 0.05
-					breakthrough = 0.05
-				}
-			}
-		}
-
-		ITA_hidden_standardization_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
- 			name = ITA_standardization #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		ITA_hidden_specialization_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
- 			name = ITA_specialization #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-			}
-		}
+		
 
 		ITA_hidden_light_cruisers_production_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
  			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
@@ -526,7 +350,221 @@ ideas = {
   #   #   ######  #  # #  #  #       #       ###### 
    # #    #    #  #   ##  #  #       #       #    # 
     #     #    #  #    #  #  ######  ######  #    # 
+				ITA_long_range_aircraft_idea = {
+			picture = GFX_focus_generic_long_range_aircraft
 
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_range_factor = 0.15
+				air_strategic_bomber_bombing_factor = 0.15
+			}
+		}
+
+		ITA_hidden_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+ 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				armor = {
+					instant = yes
+					defense = 0.05
+					breakthrough = 0.05
+				}
+
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.1
+			}
+		}
+
+		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+ 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				light_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				heavy_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				heavy_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		ITA_hidden_standardization_ns = { #Hidden idea to apply fighter production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
+ 			name = ITA_standardization #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_accidents_factor = 0.10
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		ITA_hidden_specialization_ns = { #Hidden idea to apply fighter production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
+ 			name = ITA_specialization #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_accidents_factor = 0.10
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		ITA_bomber_designs_idea = {
+			picture = GFX_goal_generic_air_bomber
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_strike_attack_factor = 0.15
+			}
+		}
+
+		ITA_G55_centauro_idea = {
+			picture = GFX_goal_generic_air_fighter
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_agility_factor = 0.05
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
+			}
+		}
+
+		ITA_multirole_aircraft_idea = {
+			picture = GFX_focus_generic_multi_role_aircraft
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_range_factor = 0.05
+				ground_attack_factor = 0.10
+				naval_strike_attack_factor = 0.05
+				air_attack_factor = 0.03
+			}
+		}
 
 		vittoria_mutilata = {			
 			

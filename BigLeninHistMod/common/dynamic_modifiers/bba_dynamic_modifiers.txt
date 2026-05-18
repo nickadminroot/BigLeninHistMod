@@ -823,6 +823,7 @@ ITA_regia_aeronautica_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 ITA_regia_aeronautica_2_dynamic_modifier = { #NATIONAL SPIRIT
@@ -860,6 +861,7 @@ ITA_regia_aeronautica_2_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 ITA_regia_aeronautica_3_dynamic_modifier = { #NATIONAL SPIRIT
@@ -897,6 +899,7 @@ ITA_regia_aeronautica_3_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 
@@ -937,6 +940,7 @@ ITA_regia_aeronautica_alt_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 #ALT NAME
@@ -975,6 +979,7 @@ ITA_regia_aeronautica_2_alt_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 #ALT NAME
@@ -1013,6 +1018,7 @@ ITA_regia_aeronautica_3_alt_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = ITA_ra_air_cas_present_factor
 	air_mission_efficiency = ITA_ra_air_mission_efficiency
 	air_attack_factor = ITA_ra_air_attack
+	naval_strike_attack_factor = ITA_ra_naval_strike_attack_factor
 }
 
 
