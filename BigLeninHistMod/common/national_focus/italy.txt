@@ -7815,7 +7815,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_solid_progress
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -7857,7 +7857,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_servizio_informazione_militare
-		cost = 5
+		cost = 14
 
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
@@ -7891,7 +7891,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 5
+		cost = 14
 		available = {
 		}
 
@@ -7911,7 +7911,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 5
+		cost = 14
 
 		bypass = {
 			NOT = { has_country_flag = SUEZ_SANCTIONS_FLAG }
@@ -7962,7 +7962,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 5
+		cost = 14
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_all_eth_initial_states_controlled_tt
@@ -8053,7 +8053,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 10
+		cost = 35
 		available = {
 			has_country_leader = {
 				character = ITA_benito_mussolini
@@ -8229,7 +8229,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_culto_del_duce
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -8248,7 +8248,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_culto_del_duce
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -8331,7 +8331,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_la_battaglia_per_le_nascite
-		cost = 10
+		cost = 35
 		available = {
 			has_country_leader = {
 				character = ITA_benito_mussolini
@@ -8373,7 +8373,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_strengthen_the_regime
-		cost = 5
+		cost = 35
 		available = {
 			has_country_leader = {
 				character = ITA_benito_mussolini
@@ -8478,7 +8478,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_believe_obey_fight
-		cost = 10
+		cost = 35
 
 
 		available = {
@@ -8583,7 +8583,7 @@ focus_tree = {
 		relative_position_id = ITA_security_militias
 
 
-		cost = 10
+		cost = 35
 		available = {
 			has_government = fascism
 			ITA_has_disbanded_blackshirts = no
@@ -8607,7 +8607,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = ITA_battaglioni_d_assalto
-		cost = 10
+		cost = 35
 		available = {
 			has_government = fascism
 			any_owned_state = {
@@ -8703,7 +8703,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_strengthen_the_regime
-		cost = 5
+		cost = 35
 
 		available = {
 			date > 1939.1.1
@@ -8948,7 +8948,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = ITA_towards_a_greater_italy
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -9070,7 +9070,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_towards_a_greater_italy
-		cost = 10
+		cost = 35
 		available = {
 			has_country_leader = {
 				character = ITA_benito_mussolini
@@ -9180,7 +9180,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_towards_a_greater_italy
-		cost = 5
+		cost = 35
 		available = {
 		}
 
@@ -9371,7 +9371,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_bend_the_bars
-		cost = 5
+		cost = 35
 		available = {
 		}
 
@@ -9454,7 +9454,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_subdue_the_sentinels
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -9487,7 +9487,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_a_colonial_empire
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -9527,7 +9527,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = ITA_bend_the_bars
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -9557,7 +9557,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_masters_of_the_aegean
-		cost = 10
+		cost = 35
 		available = {
 		}
 
@@ -9655,7 +9655,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_balkan_ambition
-		cost = 5
+		cost = 7
 		available = {
 		}
 
@@ -9678,7 +9678,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_albanian_occupation
-		cost = 5
+		cost = 7
 		available = {
 			44 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -9716,7 +9716,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_albanian_occupation
-		cost = 5
+		cost = 7
 		available = {
 			44 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -9812,7 +9812,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_support_albanian_irredentism
-		cost = 5
+		cost = 7
 		available = {
 			44 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -10056,7 +10056,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_pact_of_steel
-		cost = 5
+		cost = 35
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -10084,7 +10084,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_pact_of_steel
-		cost = 10
+		cost = 14
 
 		available = {
 			country_exists = JAP
@@ -10225,7 +10225,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_request_control_of_french_territories
-		cost = 10
+		cost = 35
 
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
