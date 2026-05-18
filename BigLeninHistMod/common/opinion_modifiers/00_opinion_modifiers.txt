@@ -856,8 +856,6 @@ opinion_modifiers = {
 
 	HUN_renew_the_rome_protocols = { trade = yes value = 25 }
 	
-	#Romanian focus
-	ROM_a_deal_with_the_devil = { value = 40 }
 
 	ROM_trade_treaty_with_germany = { trade = yes value = 25 }
 	
@@ -865,7 +863,6 @@ opinion_modifiers = {
 	
 	ROM_appoint_soviet_friendly_government = { value = 20 }
 	
-	ROM_appoint_allied_friendly_government = { value = 20 }
 
 	refused_alliance = { value = -50 months = 48 decay = 1}
 
