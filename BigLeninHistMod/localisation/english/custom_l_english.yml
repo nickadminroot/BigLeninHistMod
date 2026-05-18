@@ -90,3 +90,26 @@ Light Air Attack: §G+5%§!"
  ITA_multirole_aircraft_idea:0 "Multirole Aircraft Program"
  ITA_bersaglieri_re_tt:0 "§YSpecial Forces§! Attack: §G+10%§!
 §YSpecial Forces§! Defense: §G+10%§!"
+ ITA_decima_flottiglia_mas_rm_tt:0 "Convoy Raiding Efficiency: §G+5%§!
+Critical Score Chance: §G+5%§!"
+ ITA_long_range_aircraft_ra_tt:0 "Air Range: §G+15%§!
+Strategic Bombing: §G+15%§!"
+ ITA_multirole_aircraft_ra_tt:0 "Air Range: §G+5%§!
+Close Air Support Attack: §G+10%§!
+Naval Strike Attack: §G+5%§!
+Air Defense: §G+3%§!
+Light Air Attack: §G+3%§!
+Medium Air Attack: §G+3%§!"
+ ITA_standardization_ra_tt:0 "Fighter Production Cost: §G-10%§!
+Air Accidents Chance: §R+10%§!"
+ ITA_specialization_ra_tt:0 "Fighter Production Cost: §G-10%§!
+Air Accidents Chance: §R+10%§!"
+ ITA_increase_production_military_industry_tt:0 "Military Factory Output: §G+5%§!
+Production Efficiency Cap: §G+5%§!
+Production Efficiency Retention: §G+20%§!
+Production Efficiency Growth: §R-4%§!"
+ ITA_keep_specialization_military_industry_tt:0 "Military Factory Output: §G+5%§!
+Production Efficiency Growth: §G+10%§!
+Production Efficiency Base: §G+10%§!
+Production Efficiency Retention: §R-20%§!"
+ ITA_fighter_production_cost_tt:0 "Fighter Production Cost: §G-10%§!"

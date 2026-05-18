@@ -4900,7 +4900,7 @@ focus_tree = {
 			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0.25 }
 			custom_effect_tooltip = ITA_standardization_ra_tt
 			add_to_variable = { ITA_ra_air_accidents_factor = 0.1 }
-			add_to_variable = { ITA_military_industry_air_equipment_build_cost_factor = -0.1 }
+			custom_effect_tooltip = ITA_fighter_production_cost_tt
 
 			hidden_effect = {
 				add_ideas = ITA_hidden_standardization_ns
@@ -4959,7 +4959,7 @@ focus_tree = {
 			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.5 }
 			custom_effect_tooltip = ITA_specialization_ra_tt
 			add_to_variable = { ITA_ra_air_accidents_factor = 0.1 }
-			add_to_variable = { ITA_military_industry_air_equipment_build_cost_factor = -0.1 }
+			custom_effect_tooltip = ITA_fighter_production_cost_tt
 
 			hidden_effect = {
 				add_ideas = ITA_hidden_specialization_ns
