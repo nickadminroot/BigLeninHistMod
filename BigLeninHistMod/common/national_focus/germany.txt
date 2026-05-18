@@ -9197,6 +9197,20 @@ focus_tree = {
 			add_war_support = 0.1
 			play_peace_in_our_time_effect = yes
 
+			
+			if = {
+				add_state_core = 69
+				transfer_state = 69
+			}
+			if = {
+				add_state_core = 972
+				transfer_state = 972
+			}
+			if = {
+				add_state_core = 74
+				transfer_state = 74
+			}
+
 			USA = {
 				set_country_flag = { flag = USA_munich_window days = 60 value = 1 }
 			}
