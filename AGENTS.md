@@ -19,126 +19,31 @@ Agents should modify shipped game/mod content only in `./BigLeninHistMod/` and i
 Quick validation after changes:
 
 ```bash
-python3 scripts/hoi4-smoke.py
+python3 scripts/hoi4-smoke.py          # Linux
+python scripts\hoi4-smoke-windows.py   # Windows
 ```
 
-Configuration:
-- `HOI4_DIR` - Override the installed game path. Defaults to `$HOME/.steam/steam/steamapps/common/Hearts of Iron IV`.
-- `SMOKE_TIMEOUT` - How long to let HOI4 run before `timeout` stops it. Defaults to `60s`; timeout exit code `124` is acceptable. The script launches HOI4 in a separate process group and kills that process group on timeout, with `timeout --kill-after=10s` as a fallback.
-- `SMOKE_TAG` - Start country tag. Defaults to `GER`.
-- `PDX_SMOKE_HOME` - Use a fixed isolated temp/user-data root for debugging. When set, data is retained.
-- `HOI4_SMOKE_KEEP_DATA=1` - Keep generated logs and temp user data after the run.
-- `SMOKE_MAX_ERROR_ENTRIES` - Maximum parsed error entries to print on failure. Defaults to `40`.
-- `SMOKE_MAX_ENTRY_LINES` - Maximum lines to print for each error entry. Defaults to `8`.
-- `SMOKE_INCLUDE_PATTERN` - Optional regex to limit which `error.log` entries are treated as failures. When unset, every parsed `error.log` entry is treated as actionable unless its source file is hardcoded as ignored.
+Environment variables: `HOI4_DIR`, `SMOKE_TIMEOUT` (default 60s/120s), `SMOKE_TAG` (default GER), `SMOKE_INCLUDE_PATTERN`, `SMOKE_MAX_ERROR_ENTRIES` (default 40).
 
-The script seeds the isolated user-data directory from the normal profile's DLC state (`dlc_load.json`, `dlc_signature`, and `game_data.json` when present), then writes a temporary `mod/BigLeninHistMod.mod` and enables only this mod. If the installed game directory has an executable `cream.sh`, the script launches through it to match the local normal DLC-enabled start path; otherwise it launches `run_hoi4` directly. Launch stdout/stderr is captured to `hoi4-launch.log` inside the smoke temp directory instead of being printed by default, so agent-facing output stays concise. Entries sourced from `common/units/infantry.txt` and `common/decisions/USA.txt` are hardcoded as ignored. It does not modify normal Paradox launcher state.
-
-### Windows Smoke Test
-
-Use `scripts/hoi4-smoke-windows.py` on Windows. It launches `hoi4.exe` from the local Steam install, temporarily enables only this mod in the normal Paradox user-data directory, and fails if the updated `logs/error.log` contains startup/load errors.
-
-Run from the repository root in PowerShell:
-
-```powershell
-python scripts\hoi4-smoke-windows.py
-```
-
-Configuration:
-- `HOI4_DIR` - Override the installed game path. Defaults to `G:\SteamLibrary\steamapps\common\Hearts of Iron IV`.
-- `PDX_USER_DIR` - Override the normal Paradox user-data directory. Defaults to the repository's parent HOI4 user-data directory, usually `D:\Documents\Paradox Interactive\Hearts of Iron IV`.
-- `SMOKE_TIMEOUT` - How long to let HOI4 run before `taskkill /T /F` stops it. Defaults to `120s`; timeout exit code `124` is acceptable.
-- `SMOKE_TAG` - Start country tag. Defaults to `GER`.
-- `PDX_SMOKE_HOME` - Use a fixed temp root for retained launch logs and crash data. When set, data is retained.
-- `HOI4_SMOKE_KEEP_DATA=1` - Keep generated temp launch logs and crash data after the run.
-- `HOI4_SMOKE_CREAM_UNLOCKALL` - Temporarily set `unlockall = true` in `cream_api.ini` while the smoke test runs. Defaults to `1`. Set to `0` to leave `cream_api.ini` unchanged.
-- `SMOKE_MAX_ERROR_ENTRIES` - Maximum parsed error entries to print on failure. Defaults to `40`.
-- `SMOKE_MAX_ENTRY_LINES` - Maximum lines to print for each error entry. Defaults to `8`.
-- `SMOKE_INCLUDE_PATTERN` - Optional regex to limit which `error.log` entries are treated as failures. When unset, every parsed `error.log` entry is treated as actionable unless its source file is hardcoded as ignored.
-
-Important Windows behavior: the current Windows HOI4 binary writes logs to the normal user-data directory even when a separate `-userdir` is attempted, so the Windows script intentionally uses the normal `PDX_USER_DIR`. Before launch it backs up `dlc_load.json`, `mod/BigLeninHistMod.mod`, and `cream_api.ini`; writes temporary versions that enable only this mod and, by default, unlock all DLC through CreamAPI; then restores the originals in `finally`. The script checks that `logs/error.log` was actually updated by the current run before parsing it. Launch stdout/stderr is captured to `hoi4-launch.log` inside the temp smoke directory. Entries sourced from `common/units/infantry.txt` and `common/decisions/USA.txt` are hardcoded as ignored.
+The Windows variant backs up and restores `dlc_load.json`/`mod/BigLeninHistMod.mod`/`cream_api.ini`, enables only this mod, and by default unlocks all DLC. Entries from `common/units/infantry.txt` and `common/decisions/USA.txt` are ignored. See script source for full details.
 
 ---
 
-## HOI4 Modding Key Concepts
+## MCP Server (HOI4 Map Tools)
 
-### Triggers
-Triggers are conditions that check the game state. They return true/false and are used in `if`, `limit`, `allow`, and similar blocks.
+`scripts/mcp/mapMcpServer.js` provides **43 tools** across 5 categories via Model Context Protocol. Run `npm install` in `scripts/mcp/` after cloning.
 
-Common scopes: `COUNTRY`, `STATE`, `CHARACTER`, `FACTION`, `any`
+### Tool Categories
 
-Examples:
-- `has_idea = my_idea` - Check if country has an idea
-- `is_in_faction = yes` - Check faction membership
-- `date > 1936.1.1` - Date conditions
-- `any_owned_state = { is_core_of = ROOT }` - Loop through states
-- `hidden_trigger = { ... }` - Hidden condition that doesn't show in tooltips
+| Category   | Count | Key Tools |
+|------------|-------|-----------|
+| **GUI**    | 6     | `gui_create_scripted_gui`, `gui_parse_gui`, `gui_parse_gfx`, `gui_validate` |
+| **Loc**    | 5     | `loc_set`, `loc_bulk_set`, `loc_get`, `loc_search`, `loc_validate` |
+| **Map**    | 26    | `map_get_state`, `map_edit_state`, `map_search_states`, `map_render_snapshot`, `map_transfer_provinces`, `map_create_state`, `map_validate` |
+| **Script** | 7     | `script_get_definitions`, `script_get_references`, `script_lookup_effect`, `script_validate_file`, `script_search` |
+| **Mod**    | 2     | `mod_get_file`, `mod_get_structure` |
 
-See `vanilla/documentation/triggers_documentation.md` for full reference.
-
-### Effects
-Effects are actions that change the game state. They perform operations like adding ideas, declaring wars, or triggering events.
-
-Common scopes: `COUNTRY`, `STATE`, `CHARACTER`, `any`
-
-Examples:
-- `add_idea = my_idea` - Add national idea
-- `declare_war_on = { target = TAG type = annex_wargoal }` - Declare war
-- `country_event = { id = 123 }` - Trigger event
-- `set_country_flag = my_flag` - Set a flag
-- `add_to_faction = TAG` - Add to faction
-
-See `vanilla/documentation/effects_documentation.md` for full reference.
-
-### Modifiers
-Modifiers are stat adjustments applied to countries, states, or units. They are used in ideas, national foci, and dynamic modifiers.
-
-Categories:
-- `country` - National modifiers (production, research, etc.)
-- `state` - Regional modifiers (industry, resources, etc.)
-- `army`/`air`/`naval` - Military unit modifiers
-- `ai` - AI behavior modifiers
-
-Examples:
-- `production_speed_industrial_complex_factor = 0.15`
-- `army_attack_factor = 0.1`
-- `research_speed_factor = 0.1`
-
-See `vanilla/documentation/modifiers_documentation.md` for full reference.
-
-### Collections
-Collections provide an efficient way to filter and transform game objects without explicit loops.
-
-```pdx
-collection_size = {
-    input = {
-        input = game:scope
-        operators = { faction_members owned_states }
-        name = "States owned by any faction member"
-    }
-    value > 42
-}
-```
-
-Available inputs: `game:all_countries`, `game:all_states`, `game:all_possible_countries`, `collection:NAME`
-
-See `vanilla/documentation/script_collection_input.md` and `vanilla/documentation/script_collection_operator.md`.
-
-### Script Constants
-Reusable constants defined in `vanilla/common/script_constants/` that can be used across mod files.
-
-```pdx
-# In script_constants file:
-numeric_constants = {
-    pi = 3.14159
-}
-
-# Usage:
-some_variable = constant:numeric_constants.pi
-```
-
-### Dynamic Variables
-Runtime variable storage. See `vanilla/documentation/dynamic_variables_documentation.md`.
+All prefixed with `hoi4-mcp_` (e.g., `hoi4-mcp_map_get_state`). Use these for map edits, localization, code search, and validation instead of raw file manipulation.
 
 ---
 
@@ -177,10 +82,182 @@ Files in `./BigLeninHistMod/` mirror `./vanilla/common/`:
 - **Dynamic Variables**: `vanilla/documentation/dynamic_variables_documentation.md`
 
 ### Example Files
-- Events: `vanilla/events/` - Study event syntax (id, picture, options, title, desc)
-- Ideas: `vanilla/common/ideas/` - Example idea definitions
-- National Focus: `vanilla/common/national_focus/` - Focus tree structure
-- Characters: `vanilla/common/characters/` - Character definitions
+- Events: `vanilla/events/`
+- Ideas: `vanilla/common/ideas/`
+- National Focus: `vanilla/common/national_focus/`
+- Characters: `vanilla/common/characters/`
+
+---
+
+## Common Mistakes
+
+### 1. Hidden Ideas vs Country Ideas (Display)
+
+Ideas in `hidden_ideas = { }` are **invisible** in the national spirit UI. Players won't see them. Use `country = { }` for visible national spirits.
+
+```
+WRONG (idea invisible):
+ideas = { hidden_ideas = { my_national_spirit = { modifier = { ... } } } }
+
+CORRECT (idea visible in UI):
+ideas = { country = { my_national_spirit = { modifier = { ... } } } }
+```
+
+**When to use each:**
+- `country = { }` — national spirits that should display in the idea slot UI
+- `hidden_ideas = { }` — only for purely mechanical modifiers that need no player visibility (e.g., equipment_bonus tracking flags, AI-weight modifiers). Always set `allowed = { always = no }` and `removal_cost = -1` so they can only be added/removed via effects.
+
+### 2. Static Ideas vs Dynamic Modifiers
+
+This is a critical distinction that agents frequently confuse.
+
+| Aspect | Static Idea | Dynamic Modifier |
+|--------|-------------|------------------|
+| **Defined in** | `common/ideas/*.txt` | `common/dynamic_modifiers/*.txt` |
+| **Added via** | `add_idea = name` | `add_dynamic_modifier = { modifier = name scope = TAG days = N }` |
+| **Removed via** | `remove_idea = name` | Auto-removes after `days`, or via `remove_trigger` |
+| **Values** | Fixed constants | Can reference variables (e.g., `factory_output = my_variable`) |
+| **Persistence** | Permanent until removed | Temporary (timed) |
+| **UI** | Visible as national spirit | Hidden or custom tooltip |
+| **Update** | Immediate | Daily only (use `force_update_dynamic_modifier` to force) |
+
+**Static idea example** (`common/ideas/GER.txt`):
+```pdx
+ideas = {
+    country = {
+        general_staff = {
+            allowed = { original_tag = GER }
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.05
+                planning_speed = 0.25
+            }
+        }
+    }
+}
+```
+
+**Dynamic modifier example** (`common/dynamic_modifiers/0_dynamic_modifiers.txt`):
+```pdx
+BUL_foreign_industry_dynamic_modifier = {
+    enable = { always = yes }
+    icon = GFX_idea_man_five_year_plan_industry
+    political_power_gain = 0.05
+    production_speed_buildings_factor = BUL_foreign_industry_construction_speed_modifier
+    consumer_goods_factor = BUL_foreign_industry_consumer_goods_modifier
+}
+```
+Note: modifier values can reference **variables** (`BUL_foreign_industry_construction_speed_modifier`), which static ideas cannot.
+
+Applied in script:
+```pdx
+add_dynamic_modifier = {
+    modifier = BUL_foreign_industry_dynamic_modifier
+    scope = ROOT
+    days = 365
+}
+```
+
+**Static ideas support** `modifier = { }`, `equipment_bonus = { }`, `rule = { }`, `research_bonus = { }` — any permanent or toggleable effect with fixed values. This includes `country = { }` (national spirits), `hidden_ideas = { }` (invisible trackers), `economy`/`trade_laws`/`mobilization_laws` (law categories), `army_spirit`/`air_spirit`/`navy_spirit` (spirit slots).
+
+**Dynamic modifiers** can only use plain `modifier = { }` values (NOT `equipment_bonus`). Use them for: timed auto-removing effects, value-scaling via variables, effects with `remove_trigger`, combat-only via `attacker_modifier = yes`, state-scoped effects.
+
+### 3. equipment_bonus — Only in Static Ideas, Three Key Types
+
+`equipment_bonus = { }` modifies equipment stats (build_cost_ic, reliability, armor, speed, etc.). It **only works in static ideas** (`common/ideas/*.txt`) — never in dynamic modifiers, which don't support equipment bonuses.
+
+The block accepts three distinct key types:
+
+| Type | Prefix | Targets | Example |
+|------|--------|---------|---------|
+| **Specific equipment** | (none) | Exact one equipment type | `infantry_equipment`, `heavy_tank_chassis` |
+| **Built-in archetypes** | (none) | Game-defined group | `armor`, `screen_ship`, `carrier` |
+| **MIO categories** | `mio_cat_eq_` | Custom group from `common/equipment_groups/` | `mio_cat_eq_all_tanks` |
+
+```
+# Specific equipment names (in country idea):
+equipment_bonus = {
+    artillery_equipment = { instant = yes build_cost_ic = -0.1 }
+}
+
+# Built-in archetype (all armored vehicles):
+equipment_bonus = {
+    armor = { soft_attack = 0.03 }
+}
+
+# MIO category (all small planes):
+equipment_bonus = {
+    mio_cat_eq_all_small_plane = { instant = yes build_cost_ic = -0.05 }
+}
+```
+
+Rules:
+- Use `instant = yes` for build_cost_ic changes — without it, the cost only updates daily
+- `equipment_bonus` works in BOTH `country = { }` (visible) and `hidden_ideas = { }` (invisible)
+- Can apply penalties too (positive `build_cost_ic = 0.1` increases cost)
+- For naval archetypes (`screen_ship`, `capital_ship`), properties like `naval_speed`/`naval_range` do NOT need `instant = yes`
+- See `vanilla/common/equipment_groups/_documentation.md` for group definitions
+
+### 4. swap_ideas for Upgrading Static Ideas
+
+When a national spirit needs improvement (e.g., focus tree upgrade), **do not** keep piling modifiers into one idea. Use `swap_ideas` to atomically replace the old idea with a new one.
+
+```
+WRONG (stacking modifiers in one idea, fragile):
+modifier = {
+    factory_output = 0.05  # base
+    factory_output = 0.10  # upgraded via some focus — conflicts!
+}
+
+CORRECT (clean upgrade via swap):
+# base idea in ideas file:
+basic_industry = { modifier = { factory_output = 0.05 } }
+
+# upgraded idea in ideas file:
+improved_industry = { modifier = { factory_output = 0.10 } }
+
+# in focus complete effect:
+swap_ideas = {
+    remove_idea = basic_industry
+    add_idea = improved_industry
+}
+```
+
+This pattern is used **1058+ times** in the mod (e.g., in `germany.txt`, `spain.txt`). The vanilla game does not use `swap_ideas` — it's a mod-specific effect.
+
+Tip: wrap in `effect_tooltip = { ... }` for player clarity, and guard with `if = { limit = { has_idea = basic_industry } }` when the idea may not exist.
+
+### 5. Vanilla File Location (Worktree)
+
+This repo is a **git worktree**. Vanilla reference files are always available:
+
+1. **Primary**: `./vanilla/` — directly in the repo root
+2. **Fallback**: check `../../BigLeninHistMod/vanilla/` (main repo, one directory up)
+3. **Parent directory**: `../` contains the full worktree set
+
+If a vanilla file isn't found, **do not** guess the path. Look in these locations first. The most common cause is looking in the wrong directory — the repo structure is:
+```
+mod/BigLeninHistMod/          # worktree (this repo root)
+mod/BigLeninHistMod/vanilla/  # vanilla files HERE
+mod/BigLeninHistMod/BigLeninHistMod/  # shipped mod content
+```
+
+### 6. UTF-8 BOM in Localization Files
+
+`.yml` files in `localisation/` **must** be saved as UTF-8 with BOM (byte order mark: `EF BB BF`). Plain UTF-8 without BOM causes encoding errors in HOI4.
+
+Always verify BOM after writing `.yml` files. Use the MCP `hoi4-mcp_loc_set`/`hoi4-mcp_loc_bulk_set` tools — they handle BOM automatically.
+
+### 7. Update ALL Localization Keys
+
+When adding effects or modifiers with localization keys, update **every** referenced key. Partial updates leave missing text in game. Use `hoi4-mcp_loc_bulk_set` for batch updates.
+
+### 8. File Integrity & Git Awareness
+
+- Before editing, run `git status` and `git diff` to understand current state
+- If a file gets accidentally damaged, immediately use `git restore <file>`
+- After changes, run `git diff` to verify only intended lines changed
+- The mod is under active development — stale context leads to mistakes. Always re-read files before editing.
 
 ---
 
