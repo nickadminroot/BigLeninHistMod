@@ -91,71 +91,6 @@ ideas = {
 			}
 		}
 
-		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
- 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				light_tank_artillery_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_tank_artillery_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				heavy_tank_artillery_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				light_tank_destroyer_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_tank_destroyer_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				heavy_tank_destroyer_chassis = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		ITA_hidden_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
- 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				armor = {
-					instant = yes
-					defense = 0.05
-					breakthrough = 0.05
-				}
-			}
-		}
-
 		
 
 		ITA_hidden_light_cruisers_production_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
@@ -431,6 +366,76 @@ ideas = {
 			modifier = {
 				air_range_factor = 0.15
 				air_strategic_bomber_bombing_factor = 0.15
+			}
+		}
+
+		ITA_hidden_ferrea_mole_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+ 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				armor = {
+					instant = yes
+					defense = 0.05
+					breakthrough = 0.05
+				}
+
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.1
+			}
+		}
+
+		ITA_hidden_spg_production_ns = { #Hidden idea to apply armored SPG and AT production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
+ 			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
+			removal_cost = -1
+
+			picture = SOV_third_five_year_plan_military #Icon needs to match the one in ITA_military_industry_dynamic_modifier (NS icon shows up in tech tab)
+				
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
+				light_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				heavy_tank_artillery_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				heavy_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
 			}
 		}
 

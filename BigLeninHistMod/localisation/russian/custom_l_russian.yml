@@ -98,3 +98,5 @@
  ITA_multirole_aircraft_idea:0 "Многоцелевой самолёт"
  ITA_hidden_standardization_ns:0 "Стоимость производства истребителей: §G-10%§!\nВероятность летных происшествий: §R+10%§!"
  ITA_hidden_specialization_ns:0 "Стоимость производства истребителей: §G-10%§!\nВероятность летных происшествий: §R+10%§!"
+ ITA_hidden_spg_production_ns:0 "§Y§!Снижение стоимости самоходных орудий §G-10%§!"
+ ITA_hidden_ferrea_mole_ns:0 "§Y§!Ferrea Mole"

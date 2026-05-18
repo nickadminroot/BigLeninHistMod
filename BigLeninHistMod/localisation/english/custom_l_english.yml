@@ -95,3 +95,5 @@
  ITA_increase_production_military_industry_tt:0 "Military Factory Output: §G+5%§!\nProduction Efficiency Cap: §G+5%§!\nProduction Efficiency Retention: §G+20%§!\nProduction Efficiency Growth: §R-4%§!"
   ITA_keep_specialization_military_industry_tt:0 "Military Factory Output: §G+5%§!\nProduction Efficiency Growth: §G+10%§!\nProduction Efficiency Base: §G+10%§!\nProduction Efficiency Retention: §R-20%§!"
  ITA_fighter_production_cost_tt:0 "Fighter Production Cost: §G-10%§!"
+ ITA_hidden_spg_production_ns:0 "§Y§!Armored SPG and AT cost reduction §G-10%§!"
+ ITA_hidden_ferrea_mole_ns:0 "§Y§!Ferrea Mole"

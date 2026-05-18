@@ -1225,23 +1225,18 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = rubber
-				amount = 75
+				amount = 25
 				state = 448
 			}
 			add_resource = {
 				type = rubber
-				amount = 75
+				amount = 25
 				state = 449
 			}
 			add_resource = {
 				type = rubber
-				amount = 75
+				amount = 25
 				state = 450
-			}
-			add_resource = {
-				type = rubber
-				amount = 75
-				state = 451
 			}
 			if = { #TRIPOLI
 				limit = {
@@ -4240,10 +4235,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_self_propelled_guns_military_industry_tt
-			hidden_effect = {
-				add_ideas = ITA_hidden_spg_production_ns
-			}
+			add_ideas = ITA_hidden_spg_production_ns
 
 			add_tech_bonus = {
 				name = ITA_self_propelled_guns
@@ -4269,12 +4261,6 @@ focus_tree = {
 				}
 			}
 			
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				ITA_add_basic_medium_tank_templates = yes
-			}
 		}
 	}
 
@@ -4301,36 +4287,6 @@ focus_tree = {
 
 			add_to_variable = { ITA_iri_consumer_goods_factor = 0.02 }
 			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				if = {
-					limit = {
-						has_tech = improved_medium_tank_chassis
-					}
-					ITA_add_improved_medium_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_end_fiat_ansaldo_duopoly_medium_templates_tt
-					effect_tooltip = {
-						ITA_add_improved_medium_tank_templates = yes
-					}
-				}
-				if = {
-					limit = {
-						has_tech = improved_heavy_tank_chassis
-					}
-					ITA_add_improved_heavy_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_end_fiat_ansaldo_duopoly_heavy_templates_tt
-					effect_tooltip = {
-						ITA_add_improved_heavy_tank_templates = yes
-					}
-				}	
-			}
 
 			#Update NS icon
 			ITA_improve_regio_esercito_dm_effect = yes
@@ -4399,37 +4355,6 @@ focus_tree = {
 				}
 			}
 
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				if = {
-					limit = {
-						has_tech = improved_medium_tank_chassis
-					}
-					ITA_add_improved_medium_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_end_fiat_ansaldo_duopoly_medium_templates_tt
-					effect_tooltip = {
-						ITA_add_improved_medium_tank_templates = yes
-					}
-				}
-				if = {
-					limit = {
-						has_tech = improved_heavy_tank_chassis
-					}
-					ITA_add_improved_heavy_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_end_fiat_ansaldo_duopoly_heavy_templates_tt
-					effect_tooltip = {
-						ITA_add_improved_heavy_tank_templates = yes
-					}
-				}	
-			}
-
 			#Update NS icon
 			ITA_improve_regio_esercito_dm_effect = yes
 		}
@@ -4451,11 +4376,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_ferrea_mole_ferreo_cuore_military_industry_tt
-			hidden_effect = {
-				add_ideas = ITA_hidden_ferrea_mole_ns
-			}
-			add_to_variable = { ITA_re_armor_attack_factor = 0.1 }
-			custom_effect_tooltip = ITA_ferrea_mole_ferreo_cuore_armor_tt
+			add_ideas = ITA_hidden_ferrea_mole_ns
 
 			army_experience = 50
 
@@ -4483,35 +4404,7 @@ focus_tree = {
 				}
 			}
 
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				if = {
-					limit = {
-						has_tech = advanced_medium_tank_chassis
-					}
-					ITA_add_advanced_medium_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_ferrea_mole_ferreo_cuore_medium_tempaltes_tt
-					effect_tooltip = {
-						ITA_add_advanced_medium_tank_templates = yes
-					}
-				}
-				if = {
-					limit = {
-						has_tech = advanced_heavy_tank_chassis
-					}
-					ITA_add_advanced_heavy_tank_templates = yes
-				}
-				else = {
-					custom_effect_tooltip = ITA_ferrea_mole_ferreo_cuore_heavy_tempaltes_tt
-					effect_tooltip = {
-						ITA_add_advanced_heavy_tank_templates = yes
-					}
-				}
-			}
+
 		}
 	}
 
