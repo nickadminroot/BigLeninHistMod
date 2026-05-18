@@ -173,11 +173,11 @@ ideas = {
 			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
 				small_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.10
+					build_cost_ic = -0.05
 				}
 				cv_small_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.10
+					build_cost_ic = -0.05
 				}
 				small_plane_cas_airframe = {
 					instant = yes
@@ -239,11 +239,11 @@ ideas = {
 			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
 				small_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.10
+					build_cost_ic = -0.05
 				}
 				cv_small_plane_airframe = {
 					instant = yes
-					build_cost_ic = -0.10
+					build_cost_ic = -0.05
 				}
 				small_plane_cas_airframe = {
 					instant = yes
@@ -4930,48 +4930,6 @@ ideas = {
 			}
 		}
 
-		ITA_long_range_aircraft_idea = {
-			name = ITA_long_range_aircraft_idea
-			allowed = {
-				original_tag = ITA
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-		}
-
-		ITA_bomber_designs_idea = {
-			name = ITA_bomber_designs_idea
-			allowed = {
-				original_tag = ITA
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-		}
-
-		ITA_fighter_designs_idea = {
-			name = ITA_G55_centauro
-			allowed = {
-				original_tag = ITA
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-		}
-
-		ITA_multirole_aircraft_idea = {
-			name = ITA_multirole_aircraft_idea
-			allowed = {
-				original_tag = ITA
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 		}
 	}
 }

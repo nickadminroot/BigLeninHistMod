@@ -4565,7 +4565,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_air_innovations_bba
-		cost = 5
+		cost = 10
 		available = {
 			has_full_control_of_state = 2
 		}
@@ -4665,7 +4665,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = ITA_air_innovations_bba
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -4692,7 +4692,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_citta_dell_aria
-		cost = 5
+		cost = 10
 		available = {
 			has_full_control_of_state = 161
 		}
@@ -4899,8 +4899,6 @@ focus_tree = {
 			#More expensive to edit templates, more cheap to produce aircraft
 			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0.25 }
 			custom_effect_tooltip = ITA_standardization_ra_tt
-			add_to_variable = { ITA_ra_air_accidents_factor = 0.1 }
-			custom_effect_tooltip = ITA_fighter_production_cost_tt
 
 			hidden_effect = {
 				add_ideas = ITA_hidden_standardization_ns
@@ -4958,8 +4956,6 @@ focus_tree = {
 			#More expensive to edit templates, more cheap to produce aircraft
 			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.5 }
 			custom_effect_tooltip = ITA_specialization_ra_tt
-			add_to_variable = { ITA_ra_air_accidents_factor = 0.1 }
-			custom_effect_tooltip = ITA_fighter_production_cost_tt
 
 			hidden_effect = {
 				add_ideas = ITA_hidden_specialization_ns
@@ -5004,23 +5000,44 @@ focus_tree = {
 		id = ITA_long_range_aircraft
 		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = ITA_standardization }
-		mutually_exclusive = { focus = ITA_bomber_designs focus = ITA_fighter_designs focus = ITA_multirole_aircraft }
 
 		x = -2
 		y = 1
 		relative_position_id = ITA_standardization
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_ra_air_range_factor = 0.15 }
-			add_to_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0.15 }
+			add_to_variable = { ITA_ra_strategic_bomb_visibility = -0.05 }
+			add_to_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0.05 }
+			add_to_variable = { ITA_ra_air_range_factor = 0.05 }
 			custom_effect_tooltip = ITA_long_range_aircraft_ra_tt
-			hidden_effect = {
-				add_ideas = ITA_long_range_aircraft_idea
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				ITA_add_long_range_aircraft_templates = yes
 			}
 		}
 	}
@@ -5029,22 +5046,41 @@ focus_tree = {
 		id = ITA_bomber_designs
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
-		mutually_exclusive = { focus = ITA_long_range_aircraft focus = ITA_fighter_designs focus = ITA_multirole_aircraft }
 
 		x = 2
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { ITA_rm_naval_strike_attack_factor = 0.15 }
-			custom_effect_tooltip = ITA_bomber_designs_rm_tt
-			hidden_effect = {
-				add_ideas = ITA_bomber_designs_idea
+			air_experience = 25
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				ITA_add_bomber_designs_templates = yes
 			}
 		}
 	}
@@ -5053,24 +5089,41 @@ focus_tree = {
 		id = ITA_fighter_designs
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
-		mutually_exclusive = { focus = ITA_long_range_aircraft focus = ITA_bomber_designs focus = ITA_multirole_aircraft }
 
 		x = 4
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { ITA_ra_air_agility_factor = 0.05 }
-			add_to_variable = { ITA_ra_air_defence_factor = 0.05 }
-			add_to_variable = { ITA_ra_air_light_air_attack_factor = 0.05 }
-			custom_effect_tooltip = ITA_fighter_designs_ra_tt
-			hidden_effect = {
-				add_ideas = ITA_fighter_designs_idea
+			air_experience = 25
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				ITA_add_fighter_designs_templates = yes
 			}
 		}
 	}
@@ -5079,27 +5132,45 @@ focus_tree = {
 		id = ITA_multirole_aircraft
 		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = { focus = ITA_specialization }
-		mutually_exclusive = { focus = ITA_long_range_aircraft focus = ITA_bomber_designs focus = ITA_fighter_designs }
 
 		x = 6
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { ITA_ra_air_range_factor = 0.05 }
-			add_to_variable = { ITA_ra_air_cas_bomber_bombing_factor = 0.1 }
-			add_to_variable = { ITA_rm_naval_strike_attack_factor = 0.05 }
-			add_to_variable = { ITA_ra_air_defence_factor = 0.03 }
-			add_to_variable = { ITA_ra_air_light_air_attack_factor = 0.03 }
-			add_to_variable = { ITA_ra_air_medium_air_attack_factor = 0.03 }
+			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.25 }
+			custom_effect_tooltip = ITA_multirole_aircraft_military_industry_tt
+
+			add_to_variable = { ITA_ra_air_mission_xp_gain_factor = 0.1 }
 			custom_effect_tooltip = ITA_multirole_aircraft_ra_tt
-			hidden_effect = {
-				add_ideas = ITA_multirole_aircraft_idea
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				ITA_add_multirole_aircraft_templates = yes
 			}
 		}
 	}
@@ -6185,7 +6256,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = ITA_supermarina
-		cost = 5
+		cost = 10
 		available = {
 		}
 
