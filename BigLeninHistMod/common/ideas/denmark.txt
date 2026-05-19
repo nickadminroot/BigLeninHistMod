@@ -1,1 +1,27 @@
-ideas = { }
+ideas = {
+	country = {
+		DEN_declaration_of_neutrality = {
+			name = DEN_declaration_of_neutrality
+			removal_cost = -1
+			picture = neutrality_idea
+			allowed = { always = no }
+			available = {
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			}
+		}
+
+		DEN_declaration_of_neutrality_no_BBA = {
+			name = DEN_declaration_of_neutrality
+			removal_cost = -1
+			picture = neutrality_idea
+			allowed = { always = no }
+			available = {
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+			}
+		}
+	}
+}

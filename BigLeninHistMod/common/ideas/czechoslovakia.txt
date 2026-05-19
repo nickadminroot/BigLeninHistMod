@@ -1,6 +1,6 @@
-ideas = { 
+ideas = {
 	country = {
-	CZE_integrate_czech_manufacturers_GER_idea_aat = { #For GER_integrate_czech_manufacturers 
+		CZE_integrate_czech_manufacturers_GER_idea_aat = {
 			picture = ARG_rapid_militarization
 
 			allowed = {
@@ -24,6 +24,34 @@ ideas = {
 				military_industrial_organization_funds_gain = 0.05
 				line_change_production_efficiency_factor = 0.05
 			}
-	}
+		}
+
+		CZE_industrialists_veto = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+
+		CZE_industrialists_veto_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+
+		CZE_skoda_works = {
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = CZE_skoda_works
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_facility_factor = 0.05
+			}
+		}
 	}
 }

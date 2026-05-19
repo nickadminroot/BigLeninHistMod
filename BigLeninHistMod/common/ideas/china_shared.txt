@@ -1,1 +1,10 @@
-ideas = { }
+ideas = {
+	country = {
+		german_advisors = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+	}
+}

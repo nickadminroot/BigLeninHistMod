@@ -1,1 +1,29 @@
-ideas = { }
+ideas = {
+	country = {
+		SPR_national_strikes_1 = {
+			name = SPR_national_strikes
+			picture = FRA_factory_strikes
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+			}
+		}
+
+		SPR_national_strikes_9 = {
+			name = SPR_national_strikes
+			picture = FRA_factory_strikes
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+			}
+		}
+	}
+}
