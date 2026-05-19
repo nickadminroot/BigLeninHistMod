@@ -3892,9 +3892,7 @@ focus_tree = {
 		relative_position_id = ITA_preserve_army_traditions
 		cost = 5
 		available = {
-			any_enemy_country = {
-				is_major_not_original_tag_root = yes
-			}
+			date > 1939.9.1
 		}
 
 		search_filters = {FOCUS_FILTER_ARMY_XP}
@@ -3903,11 +3901,8 @@ focus_tree = {
 			add_to_variable = { ITA_re_land_doctrine_cost_factor = -0.1 }
 			add_to_variable = { ITA_re_army_army_org_factor = 0.05 }
 			add_to_variable = { ITA_re_org_loss_when_moving = -0.05 }
-
 			custom_effect_tooltip = ITA_superesercito_re_tt
-
 			army_experience = 50
-
 			#Update NS icon
 			ITA_improve_regio_esercito_dm_effect = yes
 		}
@@ -4643,9 +4638,7 @@ focus_tree = {
 		relative_position_id = ITA_citta_dell_aria
 		cost = 5
 		available = {
-			any_enemy_country = {
-				is_major_not_original_tag_root = yes
-			}
+			date > 1939.9.1
 		}
 
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -4655,9 +4648,7 @@ focus_tree = {
 			add_to_variable = { ITA_ra_air_mission_xp_gain_factor = 0.05 }
 			add_to_variable = { ITA_ra_air_doctrine_cost_factor = -0.1 }
 			custom_effect_tooltip = ITA_superaereo_ra_tt
-
 			air_experience = 50
-
 			#Update NS icon
 			ITA_improve_regia_aeronautica_dm_effect = yes
 		}
@@ -5637,9 +5628,7 @@ focus_tree = {
 		relative_position_id = ITA_expand_naval_facilities
 		cost = 5
 		available = {
-			any_enemy_country = {
-				is_major_not_original_tag_root = yes
-			}
+			date > 1939.9.1
 		}
 
 		search_filters = {FOCUS_FILTER_NAVY_XP}
@@ -5649,9 +5638,7 @@ focus_tree = {
 			add_to_variable = { ITA_rm_naval_morale_factor = 0.1 }
 			add_to_variable = { ITA_rm_strike_force_movement_org_loss = -0.05 }
 			custom_effect_tooltip = ITA_supermarina_rm_tt
-
 			navy_experience = 50
-
 			#Update NS icon
 			ITA_improve_regia_marina_dm_effect = yes
 		}
