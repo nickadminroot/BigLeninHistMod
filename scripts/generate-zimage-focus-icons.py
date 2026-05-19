@@ -553,9 +553,27 @@ def png_to_dds(png_path: Path, dds_path: Path) -> bool:
             return True
         else:
             print(f"  [DDS] ImageMagick error: {result.stderr.strip()}")
-            return False
+            return png_to_dds_pillow(png_path, dds_path)
+    except FileNotFoundError:
+        print("  [DDS] ImageMagick 'magick' not found, using Pillow DDS writer")
+        return png_to_dds_pillow(png_path, dds_path)
     except Exception as e:
         print(f"  [DDS] Failed: {e}")
+        return png_to_dds_pillow(png_path, dds_path)
+
+
+def png_to_dds_pillow(png_path: Path, dds_path: Path) -> bool:
+    try:
+        img = Image.open(png_path).convert("RGBA").resize(
+            (HOI4_ICON_WIDTH, HOI4_ICON_HEIGHT), Image.Resampling.LANCZOS
+        )
+        dds_path.parent.mkdir(parents=True, exist_ok=True)
+        img.save(dds_path)
+        size = dds_path.stat().st_size if dds_path.exists() else 0
+        print(f"  [DDS] Pillow fallback done, {size} bytes")
+        return True
+    except Exception as e:
+        print(f"  [DDS] Pillow fallback failed: {e}")
         return False
 
 
