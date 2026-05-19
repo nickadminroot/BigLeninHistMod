@@ -27,18 +27,6 @@ Relevant files there:
 - `peace_conference_*.md`, `resources_documentation.md`
 - `units_equipment_documentation.md`
 
-## Validation
-
-After content changes, run the Windows smoke test from repo root:
-
-```powershell
-python scripts\hoi4-smoke-windows.py
-```
-
-It temporarily enables only this mod, backs up/restores launcher files, unlocks DLC through CreamAPI by default, and fails on fresh `logs/error.log` entries except hardcoded ignored files. Useful env vars: `HOI4_DIR`, `PDX_USER_DIR`, `SMOKE_TIMEOUT`, `SMOKE_TAG`, `SMOKE_INCLUDE_PATTERN`, `SMOKE_MAX_ERROR_ENTRIES`.
-
-For quick syntax-only checks, also use available MCP validation tools.
-
 ## Localization Rules
 
 - `.yml` localization files must be UTF-8 with BOM.
@@ -468,6 +456,28 @@ node scripts/hoi4-mcp-cli.js loc_bulk_set --entries '[{"key":"my_focus","value":
   update its loc when the effect changes.
 
 ---
+
+## Validation
+
+use cli tools to validate files:
+
+```bash
+node scripts/hoi4-mcp-cli.js script_validate_file --file "common/achievements.txt" 
+node scripts/hoi4-mcp-cli.js script_validate_file --file "events/hl2_events.txt"
+
+node scripts/hoi4-mcp-cli.js loc_validate
+node scripts/hoi4-mcp-cli.js loc_validate --check_missing_refs true --check_languages true
+node scripts/hoi4-mcp-cli.js loc_validate --check_unused true   # slow
+```
+
+If user asks for it, run the Windows smoke test from repo root:
+
+```powershell
+python scripts\hoi4-smoke-windows.py
+```
+
+It temporarily enables only this mod, backs up/restores launcher files, unlocks DLC through CreamAPI by default, and fails on fresh `logs/error.log` entries except hardcoded ignored files. Useful env vars: `HOI4_DIR`, `PDX_USER_DIR`, `SMOKE_TIMEOUT`, `SMOKE_TAG`, `SMOKE_INCLUDE_PATTERN`, `SMOKE_MAX_ERROR_ENTRIES`.
+
 
 ## Worktrees
 
