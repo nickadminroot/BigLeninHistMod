@@ -6217,18 +6217,21 @@ focus_tree = {
 				GER_add_or_modify_wunderwaffen = yes
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_air_intercontinental_bomber }
+						NOT = { is_special_project_completed = sp:sp_air_intercontinental_bomber }
 					}
-					add_to_variable = { 
+					complete_special_project = {
+						project = sp:sp_air_intercontinental_bomber
+					}
+					add_to_variable = {
 						GER_wunderwaffen_sp_air_intercontinental_bomber_speed_factor = 0.2 #MM: This is the focus of this focus, so extra speed
 						tooltip = sp_air_intercontinental_bomber_speed_factor_tt
 					}
 				}
 				if = {
 					limit = {
-						NOT = { is_special_project_completed = sp_air_mothership_aircraft }
+						NOT = { is_special_project_completed = sp:sp_air_mothership_aircraft }
 					}
-					add_to_variable = { 
+					add_to_variable = {
 						GER_wunderwaffen_sp_air_mothership_aircraft_speed_factor = GER_wunderwaffe_research_speed_bonus
 						tooltip = sp_air_mothership_aircraft_speed_factor_tt
 					}
@@ -11448,8 +11451,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_ideas = GER_east_front_long_war_recovery
-			set_country_flag = GER_east_front_long_war_prepared
+			custom_effect_tooltip = GER_east_front_long_war_recovery_dm_tt
+			hidden_effect = {
+				remove_ideas = GER_east_front_failed_blitzkrieg
+				GER_east_front_apply_long_war_recovery = yes
+			}
 		}
 	}
 
@@ -11463,7 +11469,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			custom_trigger_tooltip = {
+				tooltip = GER_east_front_long_war_prepared_tt
+				has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			}
 		}
 
 		ai_will_do = {
@@ -11473,7 +11482,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_ideas = GER_east_front_defensive_tactics_recovery
+			custom_effect_tooltip = GER_east_front_defensive_tactics_recovery_dm_tt
+			hidden_effect = {
+				GER_east_front_apply_defensive_tactics = yes
+			}
 		}
 	}
 
@@ -11487,7 +11499,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			custom_trigger_tooltip = {
+				tooltip = GER_east_front_long_war_prepared_tt
+				has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			}
 		}
 
 		ai_will_do = {
@@ -11497,7 +11512,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = GER_east_front_supply_routes_recovery
+			custom_effect_tooltip = GER_east_front_supply_routes_recovery_dm_tt
+			hidden_effect = {
+				GER_east_front_apply_supply_routes = yes
+			}
 		}
 	}
 
@@ -11511,7 +11529,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			custom_trigger_tooltip = {
+				tooltip = GER_east_front_long_war_prepared_tt
+				has_country_flag = { flag = GER_east_front_long_war_prepared days > 70 }
+			}
 		}
 
 		ai_will_do = {
@@ -11521,7 +11542,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_ideas = GER_east_front_anti_partisan_recovery
+			custom_effect_tooltip = GER_east_front_anti_partisan_recovery_dm_tt
+			hidden_effect = {
+				GER_east_front_apply_anti_partisan = yes
+			}
 		}
 	}
 
@@ -11549,7 +11573,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
-			add_ideas = GER_east_front_victory_or_death_recovery
+			custom_effect_tooltip = GER_east_front_victory_or_death_recovery_dm_tt
+			hidden_effect = {
+				GER_east_front_apply_victory_or_death = yes
+			}
 		}
 	}
 

@@ -3390,6 +3390,9 @@ ideas = {
 					instant = yes
 				}
 			}
+			modifier = {
+				equipment_conversion_speed = -0.5
+			}
 		}
 
 		SOV_reorganized_tank_production = {

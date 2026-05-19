@@ -1372,10 +1372,10 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_speed_factor = 0.1
+				research_speed_factor = 0.05
 				lend_lease_tension = 0.20
 				faction_trade_opinion_factor = 0.25
-				#cic_construction_boost = -0.05
+				cic_construction_boost_factor = 0.1
 			}
 
 			cancel_if_invalid = no

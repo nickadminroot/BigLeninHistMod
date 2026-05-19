@@ -1401,6 +1401,24 @@ technologies = {
 		}
 	}
 
+	ROM_forest_maneuvers_tech = {
+
+		research_cost = 1
+
+		# only from focus!
+		allow = {
+			always = no
+		}
+
+		category_special_forces = {
+			forest = {
+				attack = 0.10
+				defence = 0.10
+				movement = 0.10
+			}
+		}
+	}
+
 	mountain_warfare = {
 
 		research_cost = 1

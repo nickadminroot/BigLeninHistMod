@@ -251,27 +251,6 @@ on_actions = {
 					clr_country_flag = WTT_support_from_soviet
 				}
 			}
-			if = { #TODO_Danne REMOVE THIS!!! It's replaced with the Blitzkrieg/Bewegungskrieg modifiers
-				limit = {
-					OR = {
-						AND = {
-							tag = GER
-							FROM = { tag = SOV }
-						}
-						AND = {
-							tag = SOV
-							FROM = { tag = GER }
-						}
-					}
-					GER = { has_completed_focus = GER_war_with_the_ussr }
-				}
-				hidden_effect = {
-					GER = { 
-						add_timed_idea = { idea = GER_barbarossa days = 180 }
-						activate_mission = GER_barbarossa_mission
-					}
-				}
-			}
 		}
 
 	}

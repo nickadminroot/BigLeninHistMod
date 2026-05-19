@@ -13,35 +13,7 @@ country_event = {
 
 	immediate = {
 		set_country_flag = GER_east_front_war_with_ussr_started
-		add_timed_idea = { idea = GER_east_front_war_with_ussr days = 710 }
-		country_event = { id = blhm_germany_east_front.2 days = 710 }
-	}
-}
-
-country_event = {
-	id = blhm_germany_east_front.2
-	hidden = yes
-	is_triggered_only = yes
-
-	trigger = {
-		tag = GER
-		has_country_flag = GER_east_front_war_with_ussr_started
-		NOT = { has_country_flag = GER_east_front_blitzkrieg_timer_resolved }
-	}
-
-	immediate = {
-		set_country_flag = GER_east_front_blitzkrieg_timer_resolved
-		remove_ideas = GER_east_front_war_with_ussr
-		if = {
-			limit = {
-				219 = { is_controlled_by = GER }
-				217 = { is_controlled_by = GER }
-			}
-			add_political_power = 100
-		}
-		else = {
-			country_event = { id = blhm_germany_east_front.3 }
-		}
+		activate_mission = GER_barbarossa_mission
 	}
 }
 

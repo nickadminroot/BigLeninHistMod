@@ -1,0 +1,47 @@
+GER_east_front_ensure_dynamic_modifier = {
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = GER_east_front_modifier } }
+		}
+		add_dynamic_modifier = { modifier = GER_east_front_modifier }
+	}
+	remove_ideas = GER_east_front_long_war_recovery
+	remove_ideas = GER_east_front_defensive_tactics_recovery
+	remove_ideas = GER_east_front_supply_routes_recovery
+	remove_ideas = GER_east_front_anti_partisan_recovery
+	remove_ideas = GER_east_front_victory_or_death_recovery
+}
+
+GER_east_front_apply_long_war_recovery = {
+	GER_east_front_ensure_dynamic_modifier = yes
+	set_country_flag = GER_east_front_long_war_prepared
+	add_to_variable = { GER_east_front_army_attack_factor = 0.15 }
+	add_to_variable = { GER_east_front_army_org_factor = 0.05 }
+	add_to_variable = { GER_east_front_attrition = -0.05 }
+	add_to_variable = { GER_east_front_supply_node_range = 0.08 }
+	add_to_variable = { GER_east_front_industrial_capacity_factory = 0.10 }
+}
+
+GER_east_front_apply_defensive_tactics = {
+	GER_east_front_ensure_dynamic_modifier = yes
+	add_to_variable = { GER_east_front_army_defence_factor = 0.20 }
+}
+
+GER_east_front_apply_supply_routes = {
+	GER_east_front_ensure_dynamic_modifier = yes
+	add_to_variable = { GER_east_front_supply_node_range = 0.10 }
+	add_to_variable = { GER_east_front_attrition = -0.07 }
+}
+
+GER_east_front_apply_anti_partisan = {
+	GER_east_front_ensure_dynamic_modifier = yes
+	add_to_variable = { GER_east_front_resistance_growth_on_our_occupied_states = -0.25 }
+}
+
+GER_east_front_apply_victory_or_death = {
+	GER_east_front_ensure_dynamic_modifier = yes
+	add_to_variable = { GER_east_front_army_attack_factor = 0.10 }
+	add_to_variable = { GER_east_front_industrial_capacity_factory = 0.05 }
+	add_to_variable = { GER_east_front_production_factory_max_efficiency_factor = 0.05 }
+	add_to_variable = { GER_east_front_stability_factor = 0.10 }
+}

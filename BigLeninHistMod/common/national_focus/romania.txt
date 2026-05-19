@@ -2117,10 +2117,13 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_technology = {
-				rangers = 1
+			custom_effect_tooltip = ROM_vanatori_de_munte_tt
+			hidden_effect = {
+				set_technology = {
+					rangers_tech = 1
+					ROM_forest_maneuvers_tech = 1
+				}
 			}
-			add_ideas = ROM_forest_maneuvers
 		}
 	}
 
@@ -2154,7 +2157,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ROM_artillery_modernization
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = artillery
 			}
 		}
