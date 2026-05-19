@@ -202,7 +202,7 @@ async function ensureIndex(rootDir: string): Promise<IndexResult> {
 // ─── Extension Entry Point ──────────────────────────────────────────────────
 
 export default async function ragExtension(pi: ExtensionAPI) {
-  config = defaultConfig();
+  config = defaultConfig(getProjectRoot());
   store = new VectorStore();
   embedder = new OpenAICompatibleEmbedder(
     config.embeddingApiUrl,

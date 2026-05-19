@@ -12,12 +12,23 @@ Modify shipped game content only under `BigLeninHistMod/` unless the task explic
    - `hoi4-mcp_mod_get_file`, `hoi4-mcp_script_search`, `hoi4-mcp_script_validate_file`
    - `hoi4-mcp_loc_set` / `hoi4-mcp_loc_bulk_set` for localization
    - map tools for state/province edits
-2. Use local vanilla references before guessing:
-   - `vanilla/documentation/effects_documentation.md`
-   - `vanilla/documentation/triggers_documentation.md`
-   - `vanilla/documentation/modifiers_documentation.md`
-   - `vanilla/documentation/loc_objects_documentation.md`
-   - `vanilla/common/`, `vanilla/events/`, `vanilla/interface/`
+2. Use local vanilla references before guessing.
+
+Indexed documentation corpus (git-tracked, survives worktrees): `docs/rag/corpus/`
+
+Relevant files there:
+- `effects_documentation.md`, `triggers_documentation.md`, `modifiers_documentation.md`
+- `loc_objects_documentation.md`, `loc_formatter_documentation.md`
+- `console_commands_documentation.md`, `dynamic_variables_documentation.md`
+- `script_concept_documentation.md`, `script_collection_*.md`
+- `collections_documentation.md`, `decisions_documentation.md`, `doctrines_*.md`
+- `equipment_groups_documentation.md`, `factions_documentation.md`
+- `intelligence_agency_upgrades_documentation.md`
+- `military_industrial_organization_*.md`
+- `on_actions_documentation.md`, `operations_documentation.md`
+- `operation_phases_documentation.md`, `operation_tokens_documentation.md`
+- `peace_conference_*.md`, `resources_documentation.md`
+- `units_equipment_documentation.md`
 
 ## Validation
 
@@ -269,6 +280,21 @@ hidden_effect = {
 	set_country_flag = TAG_focus_done
 }
 ```
+
+## Worktrees
+
+```powershell
+# Create:  .\scripts\git-newworktree.ps1 -Branch <name>
+# List:   git worktree list
+# Open:   code "../BigLeninHistMod.worktrees/<name>"
+```
+
+Copies extra files via symlink by default: `node_modules/`, `scripts/mcp/node_modules/`, `.pi/rag-cache.json`, `.env*`.
+
+Flags: `-UseSymlinks:$false` (copy instead), `-CopyPiCache:$false` / `-CopyNodeModules:$false` (skip items).
+
+Edit extra paths in `$ExtraItems` array in `scripts/git-newworktree.ps1`.
+
 
 ## External References Used For This Guide
 
