@@ -15734,23 +15734,23 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { country_exists = SPR }
-				SPR = { give_military_access = ROOT }
+				SPR = { diplomatic_relation = { country = ROOT relation = docking_rights active = yes } }
 			}
 			if = {
 				limit = { country_exists = SPA }
-				SPA = { give_military_access = ROOT }
+				SPA = { diplomatic_relation = { country = ROOT relation = docking_rights active = yes } }
 			}
 			if = {
 				limit = { country_exists = SPB }
-				SPB = { give_military_access = ROOT }
+				SPB = { diplomatic_relation = { country = ROOT relation = docking_rights active = yes } }
 			}
 			if = {
 				limit = { country_exists = SPC }
-				SPC = { give_military_access = ROOT }
+				SPC = { diplomatic_relation = { country = ROOT relation = docking_rights active = yes } }
 			}
 			if = {
 				limit = { country_exists = SPD }
-				SPD = { give_military_access = ROOT }
+				SPD = { diplomatic_relation = { country = ROOT relation = docking_rights active = yes } }
 			}
 		}
 	}
