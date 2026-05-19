@@ -3,8 +3,8 @@
 Generate a single custom focus or idea icon and register it in the appropriate .gfx file.
 
 Usage:
-    python3 scripts/generate-single-focus-icon.py --focus --sprite-name GFX_focus_custom_MY_FOCUS --desc "description"
-    python3 scripts/generate-single-focus-icon.py --idea  --sprite-name GFX_idea_custom_MY_IDEA   --desc "description"
+    python scripts/generate-single-focus-icon.py --focus --sprite-name GFX_focus_custom_MY_FOCUS --desc "description"
+    python scripts/generate-single-focus-icon.py --idea  --sprite-name GFX_idea_custom_MY_IDEA   --desc "description"
 
 The script:
    1. Generates an image via ComfyUI (Z-Image GGUF)
@@ -17,9 +17,11 @@ The script:
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -30,13 +32,15 @@ from pathlib import Path
 from PIL import Image
 
 
-COMFYUI_URL = "http://127.0.0.1:8188"
+DEFAULT_COMFYUI_URL = "http://localhost:8188"
+DEFAULT_COMFYUI_ROOT = Path(r"G:\ComfyUI")
+COMFYUI_URL = DEFAULT_COMFYUI_URL
 MOD_ROOT = Path(__file__).parent.parent
 OUTPUT_DIR = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "goals"
 OUTPUT_DIR_IDEAS = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "ideas"
 OUTPUT_GFX = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_focus_icons.gfx"
 OUTPUT_GFX_IDEAS = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_idea_icons.gfx"
-TEMP_DIR = Path("/tmp/zimage-single-icon")
+TEMP_DIR = Path(tempfile.gettempdir()) / "zimage-single-icon"
 
 HOI4_FOCUS_WIDTH = 100
 HOI4_FOCUS_HEIGHT = 88
@@ -165,6 +169,13 @@ def comfyui_is_running() -> bool:
             return True
     except Exception:
         return False
+
+
+def comfyui_start_hint(comfyui_root: Path) -> str:
+    main_py = comfyui_root / "main.py"
+    if main_py.exists():
+        return f'cd /d "{comfyui_root}" && python main.py --listen 127.0.0.1 --port 8188'
+    return f'ComfyUI root not found at "{comfyui_root}". Set --comfyui-root or COMFYUI_ROOT.'
 
 
 def comfyui_queue_prompt(workflow: dict) -> str | None:
@@ -381,7 +392,22 @@ def main():
     parser.add_argument("--vae", type=str, default="ae.safetensors")
     parser.add_argument("--negative-prompt", type=str, default="")
     parser.add_argument("--force", action="store_true", help="Regenerate if DDS exists")
+    parser.add_argument(
+        "--comfyui-url",
+        type=str,
+        default=DEFAULT_COMFYUI_URL,
+        help=f"ComfyUI API URL (default: {DEFAULT_COMFYUI_URL})",
+    )
+    parser.add_argument(
+        "--comfyui-root",
+        type=Path,
+        default=Path(os.environ.get("COMFYUI_ROOT", str(DEFAULT_COMFYUI_ROOT))),
+        help=f"ComfyUI install directory for Windows hints (default: {DEFAULT_COMFYUI_ROOT})",
+    )
     args = parser.parse_args()
+
+    global COMFYUI_URL
+    COMFYUI_URL = args.comfyui_url.rstrip("/")
 
     # Derive DDS filename from sprite name based on mode
     if args.idea:
@@ -437,6 +463,7 @@ def main():
     print(f"\n  [CHECK] ComfyUI at {COMFYUI_URL}...")
     if not comfyui_is_running():
         print(f"  [ERROR] ComfyUI not running!")
+        print(f"  Start it with: {comfyui_start_hint(args.comfyui_root)}")
         sys.exit(1)
 
     # Build workflow

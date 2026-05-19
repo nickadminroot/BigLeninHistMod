@@ -13,7 +13,7 @@ Workflow:
   5. Downscale to 100x88 and convert to DDS
 
 Usage:
-    python3 scripts/generate-zimage-focus-icons.py [OPTIONS]
+    python scripts/generate-zimage-focus-icons.py [OPTIONS]
 """
 
 import argparse
@@ -22,6 +22,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -32,13 +33,15 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-COMFYUI_URL = "http://127.0.0.1:8188"
+DEFAULT_COMFYUI_URL = "http://localhost:8188"
+DEFAULT_COMFYUI_ROOT = Path(r"G:\ComfyUI")
+COMFYUI_URL = DEFAULT_COMFYUI_URL
 MOD_ROOT = Path(__file__).parent.parent
 FOCUSES_TXT = MOD_ROOT / "focuses.txt"
 NF_DIR = MOD_ROOT / "BigLeninHistMod" / "common" / "national_focus"
 OUTPUT_DIR = MOD_ROOT / "BigLeninHistMod" / "gfx" / "interface" / "goals"
 OUTPUT_GFX = MOD_ROOT / "BigLeninHistMod" / "interface" / "custom_focus_icons.gfx"
-TEMP_DIR = Path("/tmp/zimage-focus-icons")
+TEMP_DIR = Path(tempfile.gettempdir()) / "zimage-focus-icons"
 PREVIEW_DIR = OUTPUT_DIR / "_previews"
 
 HOI4_ICON_WIDTH = 100
@@ -361,6 +364,13 @@ def comfyui_is_running() -> bool:
         return False
 
 
+def comfyui_start_hint(comfyui_root: Path) -> str:
+    main_py = comfyui_root / "main.py"
+    if main_py.exists():
+        return f'cd /d "{comfyui_root}" && python main.py --listen 127.0.0.1 --port 8188'
+    return f'ComfyUI root not found at "{comfyui_root}". Set --comfyui-root or COMFYUI_ROOT.'
+
+
 def comfyui_queue_prompt(workflow: dict) -> str | None:
     print("  [COMFYUI] Sending prompt to queue...")
     payload = json.dumps({"prompt": workflow, "client_id": str(uuid.uuid4())}).encode()
@@ -653,7 +663,22 @@ def main():
     parser.add_argument("--list-pending", action="store_true", help="List pending icons and exit")
     parser.add_argument("--list-done", action="store_true", help="List already generated icons and exit")
     parser.add_argument("--build-gfx", action="store_true", help="Scan all DDS files and rebuild .gfx, then exit")
+    parser.add_argument(
+        "--comfyui-url",
+        type=str,
+        default=DEFAULT_COMFYUI_URL,
+        help=f"ComfyUI API URL (default: {DEFAULT_COMFYUI_URL})",
+    )
+    parser.add_argument(
+        "--comfyui-root",
+        type=Path,
+        default=Path(os.environ.get("COMFYUI_ROOT", str(DEFAULT_COMFYUI_ROOT))),
+        help=f"ComfyUI install directory for Windows hints (default: {DEFAULT_COMFYUI_ROOT})",
+    )
     args = parser.parse_args()
+
+    global COMFYUI_URL
+    COMFYUI_URL = args.comfyui_url.rstrip("/")
 
     print("=" * 60)
     print("Z-Image Focus Icon Generator (HOI4)")
@@ -756,6 +781,7 @@ def main():
         print(f"\n[2/5] Checking ComfyUI at {COMFYUI_URL}...")
         if not comfyui_is_running():
             print(f"  [ERROR] ComfyUI not running!")
+            print(f"  Start it with: {comfyui_start_hint(args.comfyui_root)}")
             sys.exit(1)
         print("  OK!")
 

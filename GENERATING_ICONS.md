@@ -1,30 +1,38 @@
 
-## Generating Icons - !!Does not work right now!!
+## Generating Icons
 
 ### Single Icon Generation
 
 Use `scripts/generate-single-focus-icon.py` to generate a custom focus or idea icon via ComfyUI (Z-Image GGUF model). The script handles the full pipeline: generation, background removal, transparent margin cropping, alpha hole filling, DDS conversion, and .gfx registration.
 
 **Prerequisites:**
-- ComfyUI running on `http://127.0.0.1:8188`
+- Windows with ComfyUI installed in `G:\ComfyUI`
+- ComfyUI running on `http://localhost:8188`
 - `rembg` Python package installed (`pip install rembg`)
 - Z-Image GGUF model available in ComfyUI (`z-image-Q8_0.gguf`)
 
+Start ComfyUI from `cmd`:
+
+```bat
+cd /d "G:\ComfyUI"
+python main.py --listen 127.0.0.1 --port 8188
+```
+
 **Usage — Focus icon (with medal frame, laurel branches):**
 
-```bash
-python3 scripts/generate-single-focus-icon.py \
-  --focus \
-  --sprite-name "GFX_focus_custom_MY_FOCUS_ID" \
+```powershell
+python scripts/generate-single-focus-icon.py `
+  --focus `
+  --sprite-name "GFX_focus_custom_MY_FOCUS_ID" `
   --desc "A Soviet T-34 tank breaking through a shattered defensive line, artillery flashes in the background, red banner rising behind the tank"
 ```
 
 **Usage — Idea icon (no frame, no laurels, just the symbol):**
 
-```bash
-python3 scripts/generate-single-focus-icon.py \
-  --idea \
-  --sprite-name "GFX_idea_custom_MY_IDEA_ID" \
+```powershell
+python scripts/generate-single-focus-icon.py `
+  --idea `
+  --sprite-name "GFX_idea_custom_MY_IDEA_ID" `
   --desc "A steel M35 helmet covered in thick snow and icicles hanging from the brim"
 ```
 
@@ -40,6 +48,8 @@ python3 scripts/generate-single-focus-icon.py \
 | `--cfg` | No | CFG scale (default: 4.0). |
 | `--ai-size` | No | Generation resolution (default: 512). Use 1024 for higher quality. |
 | `--force` | No | Regenerate even if DDS already exists. |
+| `--comfyui-url` | No | ComfyUI API URL (default: `http://localhost:8188`). |
+| `--comfyui-root` | No | ComfyUI install directory used for Windows start hints (default: `G:\ComfyUI`). |
 
 **What the script does:**
 1. Generates a 512x512 (or 1024x1024) image via ComfyUI using Z-Image GGUF
@@ -80,22 +90,22 @@ Operation Bagration. Central image: a Soviet T-34 tank breaking through a shatte
 
 For generating many icons at once, use `scripts/generate-zimage-focus-icons.py`. It reads focus IDs from `focuses.txt` and generates icons for all pending ones.
 
-```bash
+```powershell
 # Check what's already generated vs pending
-python3 scripts/generate-zimage-focus-icons.py --list-done
-python3 scripts/generate-zimage-focus-icons.py --list-pending
+python scripts/generate-zimage-focus-icons.py --list-done
+python scripts/generate-zimage-focus-icons.py --list-pending
 
 # Generate a batch of 5 icons
-python3 scripts/generate-zimage-focus-icons.py --batch-size 5
+python scripts/generate-zimage-focus-icons.py --batch-size 5
 
 # Continue from a specific position
-python3 scripts/generate-zimage-focus-icons.py --batch-start 10 --batch-size 5
+python scripts/generate-zimage-focus-icons.py --batch-start 10 --batch-size 5
 
 # Regenerate specific icons with new descriptions
-python3 scripts/generate-zimage-focus-icons.py --force --ids "FOCUS_ID_1,FOCUS_ID_2"
+python scripts/generate-zimage-focus-icons.py --force --ids "FOCUS_ID_1,FOCUS_ID_2"
 
 # Rebuild .gfx from all existing DDS files
-python3 scripts/generate-zimage-focus-icons.py --build-gfx
+python scripts/generate-zimage-focus-icons.py --build-gfx
 ```
 
 Each icon takes ~4 minutes to generate. Run in batches of 5-10 to avoid timeouts.
