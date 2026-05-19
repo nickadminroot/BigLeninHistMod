@@ -227,11 +227,7 @@ focus_tree = {
 		relative_position_id = ITA_italian_highways_bba
 		cost = 2
 		available = {
-			NOT = { has_global_flag = second_italo_ethiopian_war_flag }
-			OR = {
-				any_owned_state = { is_on_continent = africa }
-				any_subject_country = { capital_scope = { is_on_continent = africa } }
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -259,18 +255,7 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 1
 		available = {
-			OR = {
-				any_controlled_state = {
-					is_core_of = ETH
-					is_fully_controlled_by = ROOT
-				}
-				any_subject_country = { #FOR PUPPETS
-					any_controlled_state = {
-						is_core_of = ETH
-						is_fully_controlled_by = PREV
-					}
-				}
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -574,18 +559,7 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 1
 		available = {
-			OR = {
-				any_controlled_state = {
-					is_core_of = LBA
-					is_fully_controlled_by = ROOT
-				}
-				any_subject_country = { #FOR PUPPETS
-					any_controlled_state = {
-						is_core_of = LBA
-						is_fully_controlled_by = PREV
-					}
-				}
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -880,12 +854,7 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 1
 		available = {
-			OR = {
-				550 = {	is_fully_controlled_by = ROOT }
-				any_subject_country = {
-					has_full_control_of_state = 550
-				}
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -913,12 +882,7 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 1
 		available = {
-			OR = {
-				559 = { is_fully_controlled_by = ROOT }
-				any_subject_country = {
-					has_full_control_of_state = 559
-				}
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -968,18 +932,7 @@ focus_tree = {
 		relative_position_id = ITA_develop_libya
 		cost = 2
 		available = {
-			OR = {
-				any_controlled_state = {
-					is_fully_controlled_by = ROOT
-					has_state_flag = ITA_improved_infrastructure_in_state_flag
-				}
-				any_subject_country = {
-					any_controlled_state = {
-						is_fully_controlled_by = PREV
-						has_state_flag = ITA_improved_infrastructure_in_state_flag
-					}
-				}
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1378,9 +1331,7 @@ focus_tree = {
 		relative_position_id = ITA_regional_development
 		cost = 2
 		available = {
-			any_controlled_state = {
-				is_on_continent = africa
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -1402,15 +1353,7 @@ focus_tree = {
 		relative_position_id = ITA_regional_development
 		cost = 2
 		available = {
-			any_state = {
-				OR = {
-					is_core_of = LBA
-					is_core_of = ERI
-					is_core_of = SOM
-					is_core_of = ETH
-				}
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
