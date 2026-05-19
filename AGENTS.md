@@ -8,10 +8,7 @@ Modify shipped game content only under `BigLeninHistMod/` unless the task explic
 
 ## Before Editing
 
-1. Use `rg` for search. Prefer MCP tools when available:
-   - `hoi4-mcp_mod_get_file`, `hoi4-mcp_script_search`, `hoi4-mcp_script_validate_file`
-   - `hoi4-mcp_loc_set` / `hoi4-mcp_loc_bulk_set` for localization
-   - map tools for state/province edits
+1. Use `rg` for search. Use the HOI4 MCP CLI (`scripts/hoi4-mcp-cli.js`) for script, mod, and localization operations (see sections below). Map and GUI tools live in pi skills (`/skill:hoi4-map`, `/skill:hoi4-gui`).
 2. Use local vanilla references before guessing.
 
 Indexed documentation corpus (git-tracked, survives worktrees): `docs/rag/corpus/`
@@ -280,6 +277,197 @@ hidden_effect = {
 	set_country_flag = TAG_focus_done
 }
 ```
+
+## HOI4 MCP CLI
+
+The `scripts/hoi4-mcp-cli.js` utility provides access to HOI4 modding tools
+via the command line. It automatically finds the project root and the mod content subdirectory.
+
+### Basic Usage
+
+```bash
+node scripts/hoi4-mcp-cli.js <tool_name> [--key value ...]
+node scripts/hoi4-mcp-cli.js --interactive    # interactive mode
+node scripts/hoi4-mcp-cli.js --list           # list all tools
+node scripts/hoi4-mcp-cli.js --help           # help
+```
+
+- String params: `--key "value"`
+- Number params: `--key 123`
+- Boolean params: `--key true` / `--key false`
+- Array params: `--key [1,2,3]`
+- Object params: `--key '{"a":1}'`
+
+> **Note:** Each CLI call reloads map data (~10 seconds). For map and GUI tools,
+> use `/skill:hoi4-map` and `/skill:hoi4-gui` in pi instead.
+
+---
+
+## Script Tools
+
+Search, parse, validate, and analyze Clausewitz scripts.
+
+### script_search
+
+Search across all mod files (regex supported). Like grep for the entire mod.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_search --pattern "has_idea"
+node scripts/hoi4-mcp-cli.js script_search --pattern "country_event" --file_pattern "events/"
+node scripts/hoi4-mcp-cli.js script_search --pattern "TAG_focus" --case_sensitive true --max_results 20
+```
+
+Parameters: `pattern` (required), `file_pattern`, `case_sensitive`, `max_results`.
+
+### script_get_definitions
+
+Find all definitions of a given type across the mod: event, focus, decision, idea,
+scripted_effect, scripted_trigger, scripted_gui, technology, on_action, character,
+country_flag, global_flag, state_flag, variable, country_history.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_get_definitions --type focus
+node scripts/hoi4-mcp-cli.js script_get_definitions --type idea --query "SOV_"
+node scripts/hoi4-mcp-cli.js script_get_definitions --type event --query "hl2"
+```
+
+### script_get_references
+
+Find all references to an identifier across the mod (exact word match).
+
+```bash
+node scripts/hoi4-mcp-cli.js script_get_references --name "TAG_my_focus"
+node scripts/hoi4-mcp-cli.js script_get_references --name "SOV_new_spirit"
+```
+
+### script_parse_file
+
+Parse a .txt file into a structured AST. Useful for understanding file structure.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_parse_file --file "events/hl2_events.txt"
+node scripts/hoi4-mcp-cli.js script_parse_file --file "common/national_focus/SOV.txt" --max_depth 3
+```
+
+### script_validate_file
+
+Validate a file: bracket matching, undefined references, missing localization,
+empty blocks, deprecated syntax.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_validate_file --file "common/achievements.txt"
+node scripts/hoi4-mcp-cli.js script_validate_file --file "events/hl2_events.txt"
+```
+
+### script_get_scope_context
+
+Determine the scope context at a specific line in a file. Shows current scope
+(country/state/character), scope stack, and nesting depth.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_get_scope_context --file "common/national_focus/SOV.txt" --line 50
+```
+
+### script_lookup_effect
+
+Look up a HOI4 effect/trigger/modifier. Database of 215 effects, triggers,
+modifiers, and scopes.
+
+```bash
+node scripts/hoi4-mcp-cli.js script_lookup_effect --name "add_political_power"
+node scripts/hoi4-mcp-cli.js script_lookup_effect --search "stability"
+node scripts/hoi4-mcp-cli.js script_lookup_effect --search "war" --type_filter trigger
+node scripts/hoi4-mcp-cli.js script_lookup_effect --name "add_ideas" --scope_filter country
+```
+
+Parameters: `name`, `search`, `type_filter` (effect/trigger/modifier/scope/define/structure),
+`category_filter` (resources/diplomacy/military/...), `scope_filter` (country/state/character/...).
+
+---
+
+## Mod Structure & File Tools
+
+### mod_get_structure
+
+Get the full mod directory structure: file counts per category, lines of code, file sizes.
+
+```bash
+node scripts/hoi4-mcp-cli.js mod_get_structure
+```
+
+### mod_get_file
+
+Read any file from the mod with line numbers. Supports line ranges.
+
+```bash
+node scripts/hoi4-mcp-cli.js mod_get_file --file "common/national_focus/SOV.txt"
+node scripts/hoi4-mcp-cli.js mod_get_file --file "events/hl2_events.txt" --start_line 10 --end_line 50
+```
+
+---
+
+## Localization Tools
+
+### loc_search
+
+Search localization keys and values. Matches both key names and translated text.
+
+```bash
+node scripts/hoi4-mcp-cli.js loc_search --query "SOV_"
+node scripts/hoi4-mcp-cli.js loc_search --query "industry" --language english
+node scripts/hoi4-mcp-cli.js loc_search --query "завод" --language russian
+```
+
+### loc_get
+
+Get a localization key's value in all available languages.
+
+```bash
+node scripts/hoi4-mcp-cli.js loc_get --key "STATE_1"
+node scripts/hoi4-mcp-cli.js loc_get --key "SOV_fascism"
+```
+
+### loc_validate
+
+Validate localization: keys used in scripts but not defined; keys defined but not
+referenced; keys in one language but missing in another.
+
+```bash
+node scripts/hoi4-mcp-cli.js loc_validate
+node scripts/hoi4-mcp-cli.js loc_validate --check_missing_refs true --check_languages true
+node scripts/hoi4-mcp-cli.js loc_validate --check_unused true   # slow
+```
+
+### loc_set
+
+Write or update a single localization key. Creates/updates .yml file with BOM.
+
+```bash
+node scripts/hoi4-mcp-cli.js loc_set --key "my_event.1.t" --value "Event Title"
+node scripts/hoi4-mcp-cli.js loc_set --key "my_event.1.desc" --value "Event description" --language russian
+node scripts/hoi4-mcp-cli.js loc_set --key "my_event.1.t" --value "Event Title" --file "localisation/english/my_events_l_english.yml"
+```
+
+### loc_bulk_set
+
+Write multiple localization key-value pairs at once. Efficient for generating loc
+for events, focuses, decisions.
+
+```bash
+node scripts/hoi4-mcp-cli.js loc_bulk_set --entries '[{"key":"my_focus","value":"My Focus"},{"key":"my_focus_desc","value":"Description"}]'
+node scripts/hoi4-mcp-cli.js loc_bulk_set --entries '[{"key":"my_focus","value":"Мой фокус"},{"key":"my_focus_desc","value":"Описание"}]' --language russian
+```
+
+### Localization Rules (reminder)
+
+- All .yml files must be UTF-8 with BOM.
+- Every new/changed key needs English and Russian localization.
+- Focus names: `<focus_id>`, descriptions: `<focus_id>_desc`.
+- Idea names: `<idea_id>`, descriptions: `<idea_id>_desc`.
+- Custom tooltips usually end with `_tt`. If a focus uses `custom_effect_tooltip`,
+  update its loc when the effect changes.
+
+---
 
 ## Worktrees
 
