@@ -2016,7 +2016,7 @@
 		
 
 		prerequisite = {
-			focus = FRA_protect_the_rights_of_man
+			focus = FRA_protect_the_rights_of_man focus = FRA_reform_the_labour_laws
 		}
 		relative_position_id = FRA_protect_the_rights_of_man
 		cost = 5
@@ -2242,7 +2242,7 @@
 		
 
 		prerequisite = {
-			focus = FRA_protect_the_rights_of_man
+			focus = FRA_protect_the_rights_of_man focus = FRA_reform_the_labour_laws
 		}
 		relative_position_id = FRA_protect_the_rights_of_man
 		cost = 5
@@ -2290,7 +2290,7 @@
 
 
 		prerequisite = {
-			focus = FRA_revive_the_national_bloc
+			focus = FRA_revive_the_national_bloc focus = FRA_form_the_popular_front
 		}
 		
 		relative_position_id = FRA_revive_the_national_bloc
@@ -2484,7 +2484,7 @@
 	focus = {
 		id = FRA_revive_the_national_bloc
 		icon = GFX_focus_generic_strike_at_democracy2
-		x = 32
+		x = 40
 		y = 0
 		
 
@@ -2838,7 +2838,7 @@
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 40
+		x = 50
 		y = 0
 
 		cost = 5
