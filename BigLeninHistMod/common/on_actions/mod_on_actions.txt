@@ -140,6 +140,7 @@ on_actions = {
 			every_country = {
                 limit = {
                     NOT = { tag = NPL }
+                    NOT = { tag = USA }
                 }
 				send_embargo = USA
             }
