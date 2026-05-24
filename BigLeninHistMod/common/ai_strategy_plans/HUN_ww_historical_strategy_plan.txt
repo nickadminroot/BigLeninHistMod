@@ -36,7 +36,7 @@ HUN_ww_historical = {
 		wuw_HUN_support_for_our_finnish_brothers #35 #They should do it as soon as Finland finds themselves at war
 		wuw_HUN_joint_air_development # A nice and supportive little helper, requires being in a faction
 		wuw_HUN_allied_manufacturing_programs # For once they have done the one above
-		wuw_HUN_construct_the_arpad_line # Try to secure the Transylvanian mountains
+		#wuw_HUN_construct_the_arpad_line # Try to secure the Transylvanian mountains
 		wuw_HUN_reinstate_the_navy # If for some reason we regain a coastline, we should make use of it!
 
 		#1936
@@ -95,7 +95,7 @@ HUN_ww_historical = {
 		wuw_HUN_quantity_over_quality #70
 		wuw_HUN_establish_the_mavag_army_division #70
 		wuw_HUN_expand_the_diosgyor_machinery_factory #70
-		wuw_HUN_danuvia_submachine_guns #70
+		#wuw_HUN_danuvia_submachine_guns #70
 		
 		#1942
 		wuw_HUN_the_turul_association # 35

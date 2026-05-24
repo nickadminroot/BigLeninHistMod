@@ -730,7 +730,7 @@ characters = {
 					original_tag = HUN
 				}
 				available = {
-					has_completed_focus = wuw_HUN_award_military_promotions
+					#has_completed_focus = wuw_HUN_award_military_promotions
 				}
 				traits = {
 					army_logistics_2
@@ -1625,7 +1625,7 @@ characters = {
 				logistics_skill = 3
 				legacy_id = -1
 				visible = {
-					has_completed_focus = wuw_HUN_award_military_promotions
+					#has_completed_focus = wuw_HUN_award_military_promotions
 				}
 			}
 
@@ -2178,7 +2178,7 @@ characters = {
 				}
 
 				available = {
-					has_completed_focus = wuw_HUN_award_military_promotions
+					#has_completed_focus = wuw_HUN_award_military_promotions
 				}
 
 				traits = {
@@ -3470,7 +3470,7 @@ characters = {
 			}
 
 			available = {
-				has_completed_focus = wuw_HUN_construct_the_arpad_line
+				#has_completed_focus = wuw_HUN_construct_the_arpad_line
 			}
 
 			traits = {
@@ -3780,7 +3780,7 @@ characters = {
 			}
 
 			available = {
-				has_completed_focus = wuw_HUN_danuvia_submachine_guns
+				#has_completed_focus = wuw_HUN_danuvia_submachine_guns
 			}
 
 			traits = {

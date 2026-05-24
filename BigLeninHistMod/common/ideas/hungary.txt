@@ -2352,7 +2352,7 @@ ideas = {
 			picture = fiat
 
 			available = {
-				has_completed_focus = wuw_HUN_license_fiat_tankettes
+				#has_completed_focus = wuw_HUN_license_fiat_tankettes
 			}
 
 			ai_will_do = {
@@ -2701,7 +2701,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = wuw_HUN_danuvia_submachine_guns
+				#has_completed_focus = wuw_HUN_danuvia_submachine_guns
 			}
 
 			visible = {
