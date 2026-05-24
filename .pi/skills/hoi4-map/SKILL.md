@@ -1,6 +1,6 @@
 ---
 name: hoi4-map
-description: Query and edit HOI4 map data: provinces, states, strategic regions, terrain, railways, supply nodes, victory points. Generate map snapshots and ASCII renders. Create, transfer, and edit states and provinces. Convert images to HOI4 maps.
+description: "Query and edit HOI4 map data: provinces, states, strategic regions, terrain, railways, supply nodes, victory points. Generate map snapshots and ASCII renders. Create, transfer, and edit states and provinces. Convert images to HOI4 maps."
 ---
 
 # HOI4 Map Tools
