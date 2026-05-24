@@ -185,10 +185,6 @@ set_convoys = 10
 			GRE_eon
 			GRE_metaxism_2
 		}
-		add_timed_idea = {
-			idea = GRE_four_year_plan_spirit
-			days = 730
-		}
 		set_popularities = {
 			democratic = 10
 			fascism = 22

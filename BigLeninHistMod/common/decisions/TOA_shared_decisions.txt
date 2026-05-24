@@ -3650,12 +3650,6 @@ political_actions = {
 					}
 				}
 				VEN = { 
-					swap_ideas = {
-						remove_idea = idea_VEN_blockade_inactive
-						add_idea = idea_VEN_blockade_active
-					}
-				}
-			}
 
 			ITA = { save_event_target_as = blockade_target }
 			VEN_blockade_countries = yes
@@ -3850,3 +3844,4 @@ political_actions = {
 				#	}
 				#}
 			#}
+

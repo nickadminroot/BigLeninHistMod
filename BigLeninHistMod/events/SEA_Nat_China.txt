@@ -2274,10 +2274,6 @@ country_event = {
 		}
 		name = SEA_china_democratic.6.a
 
-		add_timed_idea = {
-			idea = CHI_republican_agitation
-			days = 720
-		}
 		set_country_flag = received_CHI_republican_agitation_flag
 	}
 
@@ -2915,14 +2911,6 @@ country_event = { # [FROM.GetNameDefCap] Demands Application of Mínquán!
 			base = 100
 		}
 		
-		add_timed_idea = {
-			idea = idea_CHI_central_government_minquan_pressure_democratic
-			days = 365
-		}
-		clr_country_flag = CHI_currently_being_asked_about_minquan
-
-	}
-
 	option = { # We don't need their aid!
 		name = SEA_china_democratic.20.b	
 		ai_chance = {

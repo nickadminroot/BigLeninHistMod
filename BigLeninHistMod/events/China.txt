@@ -1304,7 +1304,6 @@ country_event = {
 
 	option = {
 		name = china.110.a
-		add_timed_idea = { idea = CHI_civil_war_deserters days = 180 }
 	}
 
 }

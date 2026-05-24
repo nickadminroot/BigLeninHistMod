@@ -1694,10 +1694,6 @@ on_actions = {
 				}
 
 				remove_ideas = SWE_crusade_against_the_eastern_threat
-				add_timed_idea = {
-					idea = SWE_crusade_against_the_eastern_threat
-					days = 365
-				}
 			}
 		}
 		effect = { # Waiting for Norway to be over 50% conquered. 
