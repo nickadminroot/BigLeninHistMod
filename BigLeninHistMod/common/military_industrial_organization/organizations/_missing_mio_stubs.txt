@@ -1,0 +1,20 @@
+# Minimal MIO stubs for organizations referenced from DLC/vanilla scripts
+# These countries are not playable in the mod but their MIOs may be referenced
+
+NOR_akers_mekaniske_verksted_organization = {
+	include = generic_escort_ship_organization
+	allowed = { original_tag = NOR }
+	available = { always = no }
+}
+
+CHI_mukden_arsenal_organization = {
+	include = generic_infantry_tank_organization
+	allowed = { original_tag = CHI }
+	available = { always = no }
+}
+
+BEL_vickers_armstrong_bel_organization = {
+	include = generic_infantry_tank_organization
+	allowed = { original_tag = BEL }
+	available = { always = no }
+}

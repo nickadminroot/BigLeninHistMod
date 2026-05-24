@@ -1,0 +1,153 @@
+# Stub focus trees for focus IDs referenced from vanilla/DLC code
+# These provide minimal trees so load_focus_tree doesn't fail
+# DO NOT set default = yes - filler_focus is the only default tree
+
+focus_tree = {
+	id = generic_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = generic_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = polish_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = polish_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = indian_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = indian_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = turkish_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = turkish_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = lithuania_tree
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = lithuania_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = estonia_tree
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = estonia_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = latvia_tree
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = latvia_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = congo_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = congo_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = china_communist_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = china_communist_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}
+
+focus_tree = {
+	id = china_communist_warlord_focus
+	country = { factor = 1 }
+	reset_on_civilwar = no
+	focus = {
+		id = china_communist_warlord_stub_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 3650
+		available_if_capitulated = yes
+		completion_reward = { }
+	}
+}

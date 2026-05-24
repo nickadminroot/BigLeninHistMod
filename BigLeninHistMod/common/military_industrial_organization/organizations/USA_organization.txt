@@ -1337,36 +1337,26 @@ USA_ford_motor_company_organization = {
 			base = 2
 		}
 	}
+}
 
-	available = {
-		if = {
-			limit = {
-				FROM = { NOT = { original_tag = USA } }
-			}
-			FROM = { NOT = { has_war_with = USA } }
-		}
+USA_rock_island_arsenal_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_rock_island_arsenal
+	
+	allowed = {	 
+		tag = USA 
+	}
+
+	initial_trait = {
+		name = USA_mio_initial_trait_rock_island_arsenal
 		
-		if = {
-			limit = {
-				FROM = {
-					original_tag = PHI
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						always = no
-					}
-				}
-				FROM = {
-					always = no
-				}
-			}
-			else = {
-				FROM = {
-					always = no
-				}
-			}
+		limit_to_equipment_type = {
+			mio_cat_eq_all_artillery
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			reliability = 0.03
 		}
 	}
 }

@@ -433,10 +433,11 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		unlock_decision_tooltip = {
-			decision = MEN_request_initiation_of_the_suiyuan_campaign_decision
-			show_effect_tooltip = no 
-		}	
+		# MEN not playable
+		# unlock_decision_tooltip = {
+		# 	decision = MEN_request_initiation_of_the_suiyuan_campaign_decision
+		# 	show_effect_tooltip = no 
+		# }	
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 

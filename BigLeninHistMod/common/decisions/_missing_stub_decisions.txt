@@ -1,0 +1,68 @@
+# Stub decisions for GOE references from mod scripts
+
+RAJ_GOE_famine_cat = {
+	RAJ_GOE_urge_non_violence = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_GOE_export_tea_subject = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_GOE_export_tea_free = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_GOE_sikh_recruitment = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_GOE_campaign_against_agrarian_societys = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_deploy_emergency_healthcare = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		fire_only_once = yes
+		complete_effect = { }
+	}
+	RAJ_GOE_eng_is_getting_involved_in_war = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		activation = { always = no }
+		days_mission_timeout = RAJ_dummy_mission_timer?30
+		fire_only_once = yes
+		complete_effect = { }
+	}
+}
+
+RAJ_concessions_to_the_congress_cat = {
+	# Mission stub for activate_mission call
+	RAJ_investments_from_local_leaders = {
+		icon = GFX_decision_generic_focus
+		allowed = { original_tag = RAJ }
+		available = { always = no }
+		activation = { always = no }
+		days_mission_timeout = RAJ_dummy_mission_timer?30
+		fire_only_once = yes
+		complete_effect = { }
+	}
+}

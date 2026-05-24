@@ -79,6 +79,44 @@ RAJ_hindustan_aircraft_organization = {
 
 ###################################
 
+# GOE DLC stubs - these organizations come from Graveyard of Empires (encrypted DLC)
+# Minimal definitions to prevent errors
+RAJ_ammunition_factory_khadki_organization = {
+	include = generic_infantry_equipment_organization
+	allowed = {
+		original_TAG = RAJ
+		has_dlc = "Graveyard of Empires"
+	}
+}
+RAJ_ordnance_factory_kanpur_organization = {
+	include = generic_artillery_organization
+	allowed = {
+		original_TAG = RAJ
+		has_dlc = "Graveyard of Empires"
+	}
+}
+RAJ_ordnance_factory_medak_organization = {
+	include = generic_artillery_organization
+	allowed = {
+		original_TAG = RAJ
+		has_dlc = "Graveyard of Empires"
+	}
+}
+RAJ_vickers_armstrong_organization = {
+	include = generic_infantry_tank_organization
+	allowed = {
+		original_TAG = RAJ
+		has_dlc = "Graveyard of Empires"
+	}
+}
+RAJ_supermarine_organization = {
+	include = generic_light_aircraft_organization
+	allowed = {
+		original_TAG = RAJ
+		has_dlc = "Graveyard of Empires"
+	}
+}
+
 RAJ_ishapore_rifle_factory_organization = {
 	name = RAJ_ishapore_rifle_factory_organization
 	include = generic_infantry_equipment_organization
