@@ -1,2 +1,5 @@
-# ETH - Ethiopia - minimal history file
+# ETH - Ethiopia - history file (non-game country)
+capital = 271
 set_convoys = 0
+add_core = 271
+add_core = 272

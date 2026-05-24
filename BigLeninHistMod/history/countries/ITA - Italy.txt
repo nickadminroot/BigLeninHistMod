@@ -489,10 +489,7 @@ if = {
 		has_start_date < 1936.01.02
 	}
 
-	declare_war_on = {
-		target = ETH
-		type = annex_everything
-	}
+	# declare_war_on removed - ETH has no territory (states owned by ITA)
 	give_guarantee = ALB
 }
 
