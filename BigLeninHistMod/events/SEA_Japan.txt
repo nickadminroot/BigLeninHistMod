@@ -2292,16 +2292,18 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_days_mission_timeout = {
-			    mission = JAP_kwantung_army_impatience
-			    days = 360 
+			hidden_effect = {
+				add_days_mission_timeout = {
+				mission = JAP_kwantung_army_impatience
+				days = 360
+			}
 			}
 			hidden_effect = {
 				CHI = {
-					add_days_mission_timeout = {
+					#add_days_mission_timeout = {
 					    # mission = CHI_kwantung_army_impatience_dummy
-					    days = 360 
-					}
+					    # days = 360 
+					#}
 				}
 			}
 		}
@@ -2768,16 +2770,18 @@ country_event = {
 				has_active_mission = JAP_kwantung_army_impatience
 			}
 
-			add_days_mission_timeout = {
-			    mission = JAP_kwantung_army_impatience
-			    days = 730 
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = JAP_kwantung_army_impatience
+					days = 730
+				}
 			}
 			hidden_effect = {
 				CHI = {
-					add_days_mission_timeout = {
+					#add_days_mission_timeout = {
 					    # mission = CHI_kwantung_army_impatience_dummy
-					    days = 730 
-					}
+					    # days = 730 
+					#}
 				}
 			}
 
@@ -2806,17 +2810,19 @@ country_event = {
 				has_active_mission = JAP_kwantung_army_impatience
 			}
 
-			add_days_mission_timeout = {
-			    mission = JAP_kwantung_army_impatience
-			    days = -360 
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = JAP_kwantung_army_impatience
+					days = -360
+				}
 			}
 
 			hidden_effect = {
 				CHI = {
-					add_days_mission_timeout = {
+					#add_days_mission_timeout = {
 					    # mission = CHI_kwantung_army_impatience_dummy
-					    days = -360 
-					}
+					    # days = -360 
+					#}
 				}
 			}
 		}

@@ -1,21 +1,6 @@
 on_actions = {
 
 	on_startup = {
-		# Launch Ethipoian BoP events
-		effect = {
-			if = {
-				limit = {
-					date < 1939.1.1
-				}
-				ETH = {
-					country_event = {
-						id = BBA_ethiopia_balance_of_power_events.50
-						days = 35
-						random_days = 35
-					}
-				}
-			}
-		}
 		effect = {
 			if = {
 				limit = {

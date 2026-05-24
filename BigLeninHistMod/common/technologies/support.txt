@@ -758,10 +758,6 @@ technologies = {
 
 		research_cost = 999
 		start_year = 1936
-		folder = {
-			name = support_folder
-			position = { x = 6 y = @1936 }
-		}
 
 		categories = {
 			support_tech

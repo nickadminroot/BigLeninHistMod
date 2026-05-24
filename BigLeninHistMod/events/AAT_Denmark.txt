@@ -3418,7 +3418,7 @@ country_event = { #Overlord: Denmark tries to placate the Overlord
 				}
 			}
 		}
-		unlock_decision_tooltip = DEN_demand_country_leader_resignation
+		#unlock_decision_tooltip = DEN_demand_country_leader_resignation
 		set_country_flag = DEN_overlord_can_demand_resignation_flag
 
 		custom_effect_tooltip = DEN_deteriorating_subject_relations
@@ -3536,7 +3536,7 @@ country_event = { #Overlord: Denmark is being a shitty subject
 				}
 			}
 		}
-		unlock_decision_tooltip = DEN_demand_country_leader_resignation
+		#unlock_decision_tooltip = DEN_demand_country_leader_resignation
 		set_country_flag = DEN_overlord_can_demand_resignation_flag
 
 		custom_effect_tooltip = DEN_deteriorating_subject_relations
@@ -5409,7 +5409,7 @@ country_event = { #Overlord: Denmark accepted our country leader
 		
 		add_political_power = 50
 
-		unlock_decision_tooltip = DEN_seize_jylland
+		#unlock_decision_tooltip = DEN_seize_jylland
 
 		if = { #Don't give good relations if Denmark tried to resist the first time aound
 			limit = {
@@ -5618,7 +5618,7 @@ country_event = { #Overlord: Denmark gives away Jutland
 			transfer_state = 912
 		}
 
-		unlock_decision_tooltip = DEN_annex_denmark
+		#unlock_decision_tooltip = DEN_annex_denmark
 
 		add_opinion_modifier = {
 			modifier = DEN_cooperative_subject
@@ -5861,8 +5861,8 @@ country_event = { #ENG or GER gets an offer from DEN for a trade deal
 			}
 		}
 
-		unlock_decision_tooltip = DEN_increase_trade_with_denmark
-		unlock_decision_tooltip = DEN_cancel_trade_with_denmark
+		#unlock_decision_tooltip = DEN_increase_trade_with_denmark
+		#unlock_decision_tooltip = DEN_cancel_trade_with_denmark
 
 		FROM = { country_event = { id = denmark_trade_deal.2 days = 1 } }
 	}
@@ -5894,7 +5894,7 @@ country_event = { #ENG/GER has accepted our trade proposal!
 			set_country_flag = has_danish_produce_basic_flag
 		}
 		custom_effect_tooltip = war_will_cancel_deal_tt
-		unlock_decision_tooltip = DEN_cancel_trade_with_country
+		#unlock_decision_tooltip = DEN_cancel_trade_with_country
 		hidden_effect = {
 			FROM = {
 				set_country_flag = DEN_danish_trading_partner_flag
@@ -7457,7 +7457,7 @@ country_event = { #Nordic country dismisses Denmark's invitation
 			}
 			set_country_flag = DEN_invade_the_nordics_flag
 		}
-		unlock_decision_tooltip = DEN_invade_nordic_countries
+		#unlock_decision_tooltip = DEN_invade_nordic_countries
 	}
 }
 
@@ -7785,7 +7785,7 @@ country_event = { #Denmark puppets Iceland
 		name = denmark_expansion_event.5.a
 		add_political_power = 50
 		ROOT = { puppet = ICE }
-		unlock_decision_tooltip = DEN_integrate_iceland
+		#unlock_decision_tooltip = DEN_integrate_iceland
 		set_country_flag = DEN_can_integrate_iceland_flag
 	}
 }
@@ -9892,7 +9892,7 @@ country_event = { #Germany Rejects Denmark
 		}
 		create_faction = DEN_northern_national_front
 		custom_effect_tooltip = DEN_remove_declaration_of_neutrality_tt
-		unlock_decision_tooltip = DEN_northern_national_front_invitation
+		#unlock_decision_tooltip = DEN_northern_national_front_invitation
 
 		set_country_flag = DEN_create_northern_national_front_flag
 	}
