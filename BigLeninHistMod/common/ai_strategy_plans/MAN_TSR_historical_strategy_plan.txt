@@ -34,7 +34,6 @@ MAN_historical_plan = {
 
 	ai_national_focuses = {
 		MAN_tsr_pacify_the_countryside
-		CHI_sea_invite_foreign_investors
 		MAN_tsr_trade_delegation
 		MAN_tsr_army_modernization
 		MAN_tsr_mukden_military_academy
