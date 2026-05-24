@@ -827,8 +827,6 @@ country_event = {
 				set_country_flag = PAR_is_going_democratic
 			}
 
-			swap_ideas = { remove_idea = BOL_toll_of_the_chaco_war add_idea = BOL_toll_of_the_chaco_war_2 }
-
 			#news_event = { 
 			#	id = south_american_news.9 
 			#	days = 3
@@ -980,11 +978,6 @@ country_event = {
 
 		add_manpower = -500
 
-		swap_ideas = {
-		    remove_idea = BOL_toll_of_the_chaco_war
-		    add_idea = BOL_toll_of_the_chaco_war_2
-		}
-
 		news_event = { 
 			id = south_american_news.12 
 			days = 3
@@ -1077,10 +1070,6 @@ country_event = {
 
 		add_manpower = -4000
 
-		add_timed_idea = {
-			idea = CHL_relief_efforts_idea
-			days = 360
-		}
 		custom_effect_tooltip = CHL_relief_efforts_idea_tt
 		effect_tooltip = {
 			CHL_anarchic_society_level_down = yes
