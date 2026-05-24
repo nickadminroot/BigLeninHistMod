@@ -1,0 +1,2 @@
+# INC - Inca - minimal history file
+set_convoys = 0

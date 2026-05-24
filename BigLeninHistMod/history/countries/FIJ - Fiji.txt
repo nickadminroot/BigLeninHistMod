@@ -1,0 +1,2 @@
+# FIJ - Fiji - minimal history file
+set_convoys = 0

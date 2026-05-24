@@ -1,0 +1,2 @@
+# BYA - Buryatia - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# RCG - Republic of Congo - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# ELS - El Salvador - minimal history file
+set_convoys = 0

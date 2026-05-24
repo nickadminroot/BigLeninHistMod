@@ -1,0 +1,2 @@
+# HON - Honduras - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# GAL - Galicia and Lodomeria - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# SAB - Sabah - minimal history file
+set_convoys = 0

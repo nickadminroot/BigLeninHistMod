@@ -1,0 +1,2 @@
+# RKK - Reichskommisariat Kaukasien - minimal history file
+set_convoys = 0

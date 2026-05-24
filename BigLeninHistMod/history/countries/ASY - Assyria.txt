@@ -1,0 +1,2 @@
+# ASY - Assyria - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# EQG - Equatorial Guinea - minimal history file
+set_convoys = 0

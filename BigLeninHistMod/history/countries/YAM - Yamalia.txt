@@ -1,0 +1,2 @@
+# YAM - Yamalia - minimal history file
+set_convoys = 0

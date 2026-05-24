@@ -1,0 +1,2 @@
+# KUM - Kumul Khanate - minimal history file
+set_convoys = 0

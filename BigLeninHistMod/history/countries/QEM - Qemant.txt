@@ -1,0 +1,2 @@
+# QEM - Qemant - minimal history file
+set_convoys = 0

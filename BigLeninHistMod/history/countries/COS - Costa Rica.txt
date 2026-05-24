@@ -1,0 +1,2 @@
+# COS - Costa Rica - minimal history file
+set_convoys = 0

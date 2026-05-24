@@ -1,0 +1,2 @@
+# GUM - Guam - minimal history file
+set_convoys = 0

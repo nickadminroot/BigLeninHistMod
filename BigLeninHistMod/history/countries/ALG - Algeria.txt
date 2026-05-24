@@ -1,0 +1,2 @@
+# ALG - Algeria - minimal history file
+set_convoys = 0

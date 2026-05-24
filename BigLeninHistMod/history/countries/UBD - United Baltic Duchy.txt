@@ -1,0 +1,2 @@
+# UBD - United Baltic Duchy - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# CHL - Chile - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# NIR - Northern Ireland - minimal history file
+set_convoys = 0

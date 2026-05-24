@@ -1,0 +1,2 @@
+# RKB - Reichskommisariat Belgien - minimal history file
+set_convoys = 0

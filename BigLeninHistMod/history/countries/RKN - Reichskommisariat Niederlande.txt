@@ -1,0 +1,2 @@
+# RKN - Reichskommisariat Niederlande - minimal history file
+set_convoys = 0

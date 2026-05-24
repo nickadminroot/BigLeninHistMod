@@ -1,0 +1,2 @@
+# RAN - Reichskommisariat Anden - minimal history file
+set_convoys = 0

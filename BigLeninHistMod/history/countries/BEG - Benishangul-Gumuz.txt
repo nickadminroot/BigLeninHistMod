@@ -1,0 +1,2 @@
+# BEG - Benishangul-Gumuz - minimal history file
+set_convoys = 0

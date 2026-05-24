@@ -1,0 +1,2 @@
+# SOL - Solomon - minimal history file
+set_convoys = 0

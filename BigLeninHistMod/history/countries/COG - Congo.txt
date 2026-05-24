@@ -1,0 +1,2 @@
+# COG - Congo - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# EZO - Ezo Republic - minimal history file
+set_convoys = 0

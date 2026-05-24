@@ -1,0 +1,2 @@
+# RKO - Reichskommisariat Ostland - minimal history file
+set_convoys = 0

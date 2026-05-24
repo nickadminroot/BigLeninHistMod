@@ -1,0 +1,2 @@
+# CMR - Cameroon - minimal history file
+set_convoys = 0

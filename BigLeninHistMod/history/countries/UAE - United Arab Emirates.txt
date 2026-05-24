@@ -1,0 +1,2 @@
+# UAE - United Arab Emirates - minimal history file
+set_convoys = 0

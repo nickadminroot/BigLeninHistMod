@@ -1,0 +1,2 @@
+# CBV - Cabo Verde - minimal history file
+set_convoys = 0

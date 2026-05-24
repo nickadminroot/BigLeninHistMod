@@ -1,0 +1,2 @@
+# MAD - Madagascar - minimal history file
+set_convoys = 0

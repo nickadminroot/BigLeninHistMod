@@ -1,0 +1,2 @@
+# RKH - Bohmen Mahren - minimal history file
+set_convoys = 0

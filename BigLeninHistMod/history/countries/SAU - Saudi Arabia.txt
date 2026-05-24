@@ -1,0 +1,2 @@
+# SAU - Saudi Arabia - minimal history file
+set_convoys = 0

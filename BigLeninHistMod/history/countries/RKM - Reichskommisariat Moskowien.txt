@@ -1,0 +1,2 @@
+# RKM - Reichskommisariat Moskowien - minimal history file
+set_convoys = 0

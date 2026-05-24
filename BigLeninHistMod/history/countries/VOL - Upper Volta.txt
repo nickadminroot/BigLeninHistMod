@@ -1,0 +1,2 @@
+# VOL - Upper Volta - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# ORO - Oromo - minimal history file
+set_convoys = 0

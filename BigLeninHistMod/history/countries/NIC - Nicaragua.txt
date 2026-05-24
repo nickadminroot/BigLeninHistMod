@@ -1,0 +1,2 @@
+# NIC - Nicaragua - minimal history file
+set_convoys = 0

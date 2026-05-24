@@ -1,0 +1,2 @@
+# HRZ - Herzegovina - minimal history file
+set_convoys = 0

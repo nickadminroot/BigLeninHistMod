@@ -1,0 +1,2 @@
+# IVO - Ivory Coast - minimal history file
+set_convoys = 0

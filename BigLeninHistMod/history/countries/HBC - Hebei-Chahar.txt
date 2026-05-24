@@ -1,0 +1,2 @@
+# HBC - Hebei-Chahar - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# RAR - Reichskommisariat Arabien - minimal history file
+set_convoys = 0

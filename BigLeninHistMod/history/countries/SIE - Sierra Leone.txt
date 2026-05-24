@@ -1,0 +1,2 @@
+# SIE - Sierra Leone - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# WUR - Wurtemberg - minimal history file
+set_convoys = 0

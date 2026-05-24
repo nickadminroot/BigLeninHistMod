@@ -1,0 +1,2 @@
+# WPG - West Papua - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# TIB - Tibet - minimal history file
+set_convoys = 0

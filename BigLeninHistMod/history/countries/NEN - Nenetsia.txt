@@ -1,0 +1,2 @@
+# NEN - Nenetsia - minimal history file
+set_convoys = 0

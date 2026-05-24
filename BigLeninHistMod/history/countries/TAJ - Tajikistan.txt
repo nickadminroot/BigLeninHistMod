@@ -1,0 +1,2 @@
+# TAJ - Tajikistan - minimal history file
+set_convoys = 0

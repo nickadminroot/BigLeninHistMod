@@ -1,0 +1,2 @@
+# ETH - Ethiopia - minimal history file
+set_convoys = 0

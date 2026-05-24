@@ -1,0 +1,2 @@
+# FSA - Federation of South Arabia - minimal history file
+set_convoys = 0

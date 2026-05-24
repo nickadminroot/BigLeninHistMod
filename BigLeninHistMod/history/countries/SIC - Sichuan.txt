@@ -1,0 +1,2 @@
+# SIC - Sichuan - minimal history file
+set_convoys = 0

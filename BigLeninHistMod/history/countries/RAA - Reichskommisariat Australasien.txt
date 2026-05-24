@@ -1,0 +1,2 @@
+# RAA - Reichskommisariat Australasien - minimal history file
+set_convoys = 0

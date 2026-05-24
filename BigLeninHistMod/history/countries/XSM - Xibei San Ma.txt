@@ -1,0 +1,2 @@
+# XSM - Xibei San Ma - minimal history file
+set_convoys = 0

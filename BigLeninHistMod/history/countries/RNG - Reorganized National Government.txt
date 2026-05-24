@@ -1,0 +1,2 @@
+# RNG - Reorganized National Government - minimal history file
+set_convoys = 0

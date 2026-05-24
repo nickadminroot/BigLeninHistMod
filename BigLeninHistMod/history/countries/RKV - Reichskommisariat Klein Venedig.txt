@@ -1,0 +1,2 @@
+# RKV - Reichskommisariat Klein Venedig - minimal history file
+set_convoys = 0

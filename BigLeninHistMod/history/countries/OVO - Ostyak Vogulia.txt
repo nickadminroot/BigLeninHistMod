@@ -1,0 +1,2 @@
+# OVO - Ostyak Vogulia - minimal history file
+set_convoys = 0

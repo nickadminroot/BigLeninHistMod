@@ -1,0 +1,2 @@
+# TOG - Togo - minimal history file
+set_convoys = 0

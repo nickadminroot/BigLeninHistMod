@@ -1,0 +1,2 @@
+# NWF - North Western Frontier States - minimal history file
+set_convoys = 0

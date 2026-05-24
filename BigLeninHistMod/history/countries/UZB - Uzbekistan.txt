@@ -1,0 +1,2 @@
+# UZB - Uzbekistan - minimal history file
+set_convoys = 0

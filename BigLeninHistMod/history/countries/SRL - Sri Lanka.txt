@@ -1,0 +1,2 @@
+# SRL - Sri Lanka - minimal history file
+set_convoys = 0

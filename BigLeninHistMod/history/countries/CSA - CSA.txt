@@ -1,0 +1,2 @@
+# CSA - CSA - minimal history file
+set_convoys = 0

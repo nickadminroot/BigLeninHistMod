@@ -1,0 +1,2 @@
+# TIG - Tigray - minimal history file
+set_convoys = 0

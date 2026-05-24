@@ -1,0 +1,2 @@
+# FER - Fareastern Republic - minimal history file
+set_convoys = 0

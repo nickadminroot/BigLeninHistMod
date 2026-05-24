@@ -1,0 +1,2 @@
+# BAH - Bahamas - minimal history file
+set_convoys = 0

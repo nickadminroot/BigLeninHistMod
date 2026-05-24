@@ -1,0 +1,2 @@
+# RKU - Reichskommisariat Ukraine - minimal history file
+set_convoys = 0

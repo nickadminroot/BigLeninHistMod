@@ -1,0 +1,2 @@
+# WGR - West Germany - minimal history file
+set_convoys = 0

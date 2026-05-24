@@ -1,0 +1,2 @@
+# NXM - Ningxia Ma - minimal history file
+set_convoys = 0

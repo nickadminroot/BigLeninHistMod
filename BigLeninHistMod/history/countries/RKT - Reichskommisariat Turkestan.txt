@@ -1,0 +1,2 @@
+# RKT - Reichskommisariat Turkestan - minimal history file
+set_convoys = 0

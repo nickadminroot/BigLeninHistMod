@@ -1,0 +1,2 @@
+# PAL - Palestine - minimal history file
+set_convoys = 0

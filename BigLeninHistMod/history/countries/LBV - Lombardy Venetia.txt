@@ -1,0 +1,2 @@
+# LBV - Lombardy Venetia - minimal history file
+set_convoys = 0

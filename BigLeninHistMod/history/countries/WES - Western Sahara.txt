@@ -1,0 +1,2 @@
+# WES - Western Sahara - minimal history file
+set_convoys = 0

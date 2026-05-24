@@ -1,0 +1,2 @@
+# JAM - Jamaica - minimal history file
+set_convoys = 0

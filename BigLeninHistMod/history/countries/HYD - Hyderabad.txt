@@ -1,0 +1,2 @@
+# HYD - Hyderabad - minimal history file
+set_convoys = 0

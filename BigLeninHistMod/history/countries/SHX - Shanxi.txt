@@ -1,0 +1,2 @@
+# SHX - Shanxi - minimal history file
+set_convoys = 0

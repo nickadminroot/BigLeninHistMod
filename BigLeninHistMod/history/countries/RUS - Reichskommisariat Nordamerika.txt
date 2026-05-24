@@ -1,0 +1,2 @@
+# RUS - Reichskommisariat Nordamerika - minimal history file
+set_convoys = 0

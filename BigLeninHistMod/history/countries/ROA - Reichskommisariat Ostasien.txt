@@ -1,0 +1,2 @@
+# ROA - Reichskommisariat Ostasien - minimal history file
+set_convoys = 0

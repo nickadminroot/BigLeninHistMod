@@ -1,0 +1,2 @@
+# DON - Don Republic - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# VLA - Vladivostok - minimal history file
+set_convoys = 0

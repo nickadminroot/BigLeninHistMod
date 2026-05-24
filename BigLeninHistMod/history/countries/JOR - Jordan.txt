@@ -1,0 +1,2 @@
+# JOR - Jordan - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# KAS - Kashmir - minimal history file
+set_convoys = 0

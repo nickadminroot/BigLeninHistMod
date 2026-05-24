@@ -1,0 +1,2 @@
+# ALT - Altay - minimal history file
+set_convoys = 0

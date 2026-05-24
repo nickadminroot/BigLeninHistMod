@@ -1,0 +1,2 @@
+# DIP - Partisans - minimal history file
+set_convoys = 0

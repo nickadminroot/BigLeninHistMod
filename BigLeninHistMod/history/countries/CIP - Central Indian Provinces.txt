@@ -1,0 +1,2 @@
+# CIP - Central Indian Provinces - minimal history file
+set_convoys = 0

@@ -1,0 +1,2 @@
+# LIB - Liberia - minimal history file
+set_convoys = 0

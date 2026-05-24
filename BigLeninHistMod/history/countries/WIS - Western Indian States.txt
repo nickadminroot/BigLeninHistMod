@@ -1,0 +1,2 @@
+# WIS - Western Indian States - minimal history file
+set_convoys = 0

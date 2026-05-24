@@ -1,0 +1,2 @@
+# KHM - Khotan Ma - minimal history file
+set_convoys = 0

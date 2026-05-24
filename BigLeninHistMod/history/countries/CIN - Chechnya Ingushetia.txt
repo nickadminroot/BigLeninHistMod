@@ -1,0 +1,2 @@
+# CIN - Chechnya Ingushetia - minimal history file
+set_convoys = 0

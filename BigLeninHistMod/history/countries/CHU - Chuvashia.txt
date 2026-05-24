@@ -1,0 +1,2 @@
+# CHU - Chuvashia - minimal history file
+set_convoys = 0

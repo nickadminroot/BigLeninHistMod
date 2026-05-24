@@ -1,0 +1,2 @@
+# KYR - Kyrgyzstan - minimal history file
+set_convoys = 0
