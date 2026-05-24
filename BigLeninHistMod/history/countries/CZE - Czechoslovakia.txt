@@ -58,7 +58,6 @@ recruit_character = CZE_vojtyech_luzha
 recruit_character = CZE_josef_shnejdarek
 recruit_character = CZE_richard_tesarzhik
 recruit_character = CZE_sergej_vojcechovsky
-recruit_character = CZE_frantishek_havlik
 recruit_character = CZE_rudolf_viest
 recruit_character = CZE_alois_vicherek
 recruit_character = CZE_antonin_hasal

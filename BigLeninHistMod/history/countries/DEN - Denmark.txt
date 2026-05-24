@@ -181,12 +181,6 @@ if = {
 		disarmed_nation
 	}
 
-	set_power_balance = {
-		id = DEN_balance_of_power
-		set_default = no  # whether or not to reset the power balance to the initial value, default = no
-		set_value = -0.1
-	}
-
 	#PARY POPULARITY
 	set_variable = { DEN_democratic_popularity = 94 }
 	set_variable = { DEN_communism_popularity = 2 }
@@ -455,12 +449,6 @@ if = {
 		volunteer_only
 	}
 	
-
-	set_power_balance = {
-		id = DEN_balance_of_power
-		set_default = no  # whether or not to reset the power balance to the initial value, default = no
-		set_value = -0.1
-	}
 
 	add_political_power = 1198
 	add_command_power = 100

@@ -1455,31 +1455,7 @@ on_actions = {
 	}
 
 	on_government_change = {
-		effect = {
-			#Change BoP when changing gov
-			if = {
-				limit = {
-					original_tag = ETH
-					has_government = communism
-				}
-				set_power_balance = {
-					id = ETH_centralization_balance
-					left_side = ETH_decentralization_anarchist
-					right_side = ETH_communist_side
-				}
-			}
-			else_if = {
-				limit = {
-					original_tag = ETH
-					NOT = { has_government = communism }
-				}
-				set_power_balance = {
-					id = ETH_centralization_balance
-					left_side = ETH_mesafint_side
-					right_side = ETH_mekwanint_side
-				}
-			}
-		}
+
 		effect = { #This is so Switzerland can keep its SWI_biggest_fascist and SWI_best_dem_ally updated. 
 			if ={
 				limit = { 

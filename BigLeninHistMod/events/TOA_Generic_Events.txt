@@ -934,11 +934,6 @@ country_event = {
 			popularity = 0.15
 		}
 
-			add_country_leader_role = {
-				character = BOL_german_busch_beccera
-				promote_leader = yes
-			}
-
 		add_manpower = 500
 
 		news_event = { 
