@@ -1410,20 +1410,6 @@ technologies = {
 			}
 		}
 
-		xp_research_type = army
-		xp_unlock_cost = 60
-
-		force_use_small_tech_layout = yes
-		path = {
-			leads_to_tech = rangers_jaegers_training
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = rangers_jungle_training
-			research_cost_coeff = 1
-		}
-
 		doctrine = yes	
 		research_cost = 2.25
 		rangers_special_forces_contribution_factor = -0.1 
@@ -1437,15 +1423,6 @@ technologies = {
 		}
 		enable_subunits = {
 			rangers_support
-		}	
-		doctrine = yes	
-		research_cost = 2.25
-		
-		allow = {
-			AND = {
-				has_tech = rangers_tech
-				can_unlock_new_special_forces_tree = yes
-			}
 		}
 		
 		folder = {

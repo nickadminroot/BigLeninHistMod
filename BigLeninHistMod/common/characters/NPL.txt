@@ -1,0 +1,16 @@
+characters = {
+	NPL_placeholder_ruler = {
+		name = NPL_placeholder_ruler
+		portraits = {
+			civilian = {
+				large = GFX_portrait_generic_europe_2
+			}
+		}
+		country_leader = {
+			ideology = moderatism
+			traits = { }
+			expire = "1990.1.1.1"
+			id = -1
+		}
+	}
+}

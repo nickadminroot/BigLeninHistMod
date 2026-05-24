@@ -13,6 +13,18 @@
 # After this, a first and second will be randomly picked from the default pool
 # The prefix must be provided for all pools
 
+NPL = {
+	male = {
+		names = {
+			Adolf Alfred Anton Christian Dieter Emil Erich Erwin Felix Fritz Gabriel Gerhard
+			Gunther Hans Heinrich Heinz Helmuth Hermann Horst Joachim Karl Ludwig Marco
+			Markus Max Maximilian Otto Otto Paul Peter Philipp Ralph Samuel Staffan Theodor
+			Tobias Walter Wilhelm
+		}
+	}
+	surnames = { "Smith" "Jones" "Taylor" "Brown" "Williams" "Wilson" "Evans" "Walker" "White" "Roberts" }
+}
+
 default = {
 	male = {
 		names = { "John" "Bob" "Lucas" "Marcus" "Alexander" "Alex" "Peter" "Jonas" "Jim" "Johannes"}

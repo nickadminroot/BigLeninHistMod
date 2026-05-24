@@ -84,10 +84,6 @@ add_cover:0 "§HResistance§!\nThe selected region will gain 75% resistance\n\n"
 ADD_COMPLIANCE1:0 "§HCompliance§!\nThe selected region will lose 100% compliance\n\n"
 add_cover1:0 "§HResistance§!\nThe selected region will lose 75% resistance\n\n"
 
-
- 
- ANNEX_COUNTRY_DELAYED:0 ""
-
 PUPPET_COUNTRY:0 "§HPuppet§!\nThe selected country will become a puppet of the selected region\n\n"
 PUPPET_COUNTRY_DELAYED:0 ""
 
@@ -124,7 +120,6 @@ CHEAT7:0   "Grant 1 research slot"
 CHEAT10:0   "Delete 1 research cell"
 CHEAT11:0   "Remove 1 war support"
 CHEAT12:0   "Remove 1 stability"
-CHEAT10:0   "I'll think of something later"
 DEBUFF_SELECT:0   "Punish the bot?"
 DEBUFF1:0   "Tank penalty - 50%"
 DEBUFF2:0   "Aviation penalty - 50%"
