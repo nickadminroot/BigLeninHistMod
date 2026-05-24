@@ -1369,34 +1369,6 @@ USA_ford_motor_company_organization = {
 			}
 		}
 	}
-
-	add_trait = { 
-		token = PHI_mio_trait_naval_caliber_artillery
-		name = PHI_mio_trait_naval_caliber_artillery
-		icon = GFX_generic_mio_trait_icon_soft_attack
-		special_trait_background = yes
-
-		position = { x=7 y=1 }  
-
-		visible = {
-			FROM = {
-				original_tag = PHI
-			}
-		}
-
-		available = {
-			FROM = {
-				always = no
-			}
-		}
-
-		any_parent = { generic_mio_trait_big_guns }
-
-		equipment_bonus = {
-			soft_attack = 0.03
-		}
-	}
-
 }
 
 USA_sikorsky_organization = {

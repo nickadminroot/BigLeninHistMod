@@ -487,75 +487,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_scientist_haven
-		icon = GFX_focus_research
-		prerequisite = { focus = USA_arsenal_of_democracy }
-		x = -2
-		y = 2
-		relative_position_id = USA_arsenal_of_democracy
-
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-		available = {
-			has_government = democratic
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = USA_manhattan_project
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = USA_scientist_haven }
-		
-		x = 0
-		y = 1
-		relative_position_id = USA_scientist_haven
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-
-			if = {
-				limit = {
-					NOT = {
-						has_tech = atomic_research
-					}
-				}
-				add_tech_bonus = {
-					name = USA_manhattan_project
-					bonus = 0.5
-					uses = 1
-					category = nuclear
-				}
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.5
-				}
-				add_ideas = USA_manhattan_project_ns
-			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 1
-				}
-				add_ideas = USA_manhattan_project_ns
-			}
-		}
-	}
-
-	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
 		x = 2
@@ -868,6 +799,75 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = USA_scientist_haven
+		icon = GFX_focus_research
+		prerequisite = { focus = USA_arsenal_of_democracy }
+		x = -2
+		y = 2
+		relative_position_id = USA_arsenal_of_democracy
+
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		available = {
+			has_government = democratic
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = USA_manhattan_project
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_scientist_haven }
+		
+		x = 0
+		y = 1
+		relative_position_id = USA_scientist_haven
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = USA_manhattan_project
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+				add_ideas = USA_manhattan_project_ns
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+				add_ideas = USA_manhattan_project_ns
+			}
+		}
+	}
+
 	focus = {
 		id = USA_the_giant_wakes
 		icon = GFX_goal_generic_construct_civ_factory
