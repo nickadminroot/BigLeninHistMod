@@ -4544,7 +4544,7 @@ country_event = {
 		SPR_clr_national_strikes = yes
 		effect_tooltip = {
 			add_timed_idea = { idea = SPA_death_before_surrender days = 900 }
-			SPD = { add_timed_idea = { idea = SPR_death_before_surrender days = 900 } }
+			SPD = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_military_junta_party_long name = SPR_neutrality_military_junta_party }
 			kill_ideology_leader = fascism
 		}
@@ -4590,7 +4590,7 @@ country_event = {
 		SPR_clr_national_strikes = yes
 		effect_tooltip = {
 			add_timed_idea = { idea = SPA_death_before_surrender days = 900 }
-			SPD = { add_timed_idea = { idea = SPR_death_before_surrender days = 900 } }
+			SPD = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_military_junta_party_long name = SPR_neutrality_military_junta_party }
 		}
 		complete_national_focus = SPA_the_phalanx_ascendant
@@ -4635,7 +4635,7 @@ country_event = {
 		SPR_clr_national_strikes = yes
 		effect_tooltip = {
 			add_timed_idea = { idea = SPA_death_before_surrender days = 900 }
-			SPD = { add_timed_idea = { idea = SPR_death_before_surrender days = 900 } }
+			SPD = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_military_junta_party_long name = SPR_neutrality_military_junta_party }
 			kill_ideology_leader = fascism
 		}
@@ -10945,7 +10945,6 @@ country_event = {
 	option = { # Ok
 		name = lar_spain.69.a
 		effect_tooltip = {
-			FROM = { add_timed_idea = { idea = SPR_equipment_shipments days = 730 } }
 		}
 	}
 }

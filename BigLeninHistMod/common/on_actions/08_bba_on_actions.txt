@@ -520,9 +520,6 @@ on_actions = {
 							target = PREV
 							legitimacy = 5
 						}
-						remove_power_balance = {
-							id = ETH_centralization_balance
-						}
 						mark_focus_tree_layout_dirty = yes
 					}
 				}

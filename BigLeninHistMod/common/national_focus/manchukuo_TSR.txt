@@ -1119,15 +1119,6 @@
 			hidden_effect = {
 				if = {
 					limit = {
-						has_idea = MAN_showa_steel_works
-					}
-					swap_ideas = {
-						remove_idea = MAN_showa_steel_works
-						add_idea = MAN_mangyo
-					}
-				}
-				else_if = {
-					limit = {
 						has_idea = MAN_south_manchuria_railway_company
 					}
 					swap_ideas = {
