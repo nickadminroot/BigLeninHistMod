@@ -4094,6 +4094,30 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = BLHM_GER_wunderwaffe_program
+		icon = GFX_focus_custom_BLHM_GER_wunderwaffe_program
+		prerequisite = { focus = GER_expand_kummersdorfs_capacity }
+		prerequisite = { focus = GER_rocketry_innovations }
+
+		x = 2
+		y = 2
+		cost = 2
+		available = {
+			has_completed_focus = GER_wunderwaffe
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			GER_add_or_modify_wunderwaffen = yes
+			add_to_variable = {
+				GER_wunderwaffen_special_project_speed_factor = 0.05
+				tooltip = special_project_speed_factor_tt
+			}
+		}
+	}
+
+	focus = {
 		id = GER_uranverein
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = BLHM_GER_wunderwaffe_program }
@@ -12781,30 +12805,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BLHM_GER_wunderwaffe_program
-		icon = GFX_focus_custom_BLHM_GER_wunderwaffe_program
-		prerequisite = { focus = GER_expand_kummersdorfs_capacity }
-		prerequisite = { focus = GER_rocketry_innovations }
 
-		x = 2
-		y = 2
-		relative_position_id = GER_expand_kummersdorfs_capacity
-		cost = 2
-		available = {
-			has_completed_focus = GER_wunderwaffe
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			GER_add_or_modify_wunderwaffen = yes
-			add_to_variable = {
-				GER_wunderwaffen_special_project_speed_factor = 0.05
-				tooltip = special_project_speed_factor_tt
-			}
-		}
-	}
 
 	focus = {
 		id = GER_wunderwaffe_me262
