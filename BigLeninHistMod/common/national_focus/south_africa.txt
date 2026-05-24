@@ -531,7 +531,7 @@
 	focus = {
 		id = SAF_native_laws_amendment_act
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SAF_police_windhoek focus = SAF_support_the_afrikaner_broederbond }
+		prerequisite = { focus = SAF_police_windhoek }
 		x = 0
 		y = 2
 		relative_position_id = SAF_support_the_policy_of_appeasement

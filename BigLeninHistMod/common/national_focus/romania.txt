@@ -1104,7 +1104,7 @@ focus_tree = {
 		id = ROM_flexible_foreign_policy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = ROM_revise_the_constitution }
-		mutually_exclusive = { focus = ROM_his_majestys_loyal_government }
+		# mutually_exclusive removed - target focus does not exist
 		x = 1
 		y = 2
 		relative_position_id = ROM_institute_royal_dictatorship

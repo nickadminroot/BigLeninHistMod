@@ -7871,6 +7871,7 @@ focus = {
         relative_position_id = RAJ_indianize_the_army
 
         cost = 5
+        mutually_exclusive = { focus = RAJ_indianize_the_army }
 
         ai_will_do = {
             factor = 1
