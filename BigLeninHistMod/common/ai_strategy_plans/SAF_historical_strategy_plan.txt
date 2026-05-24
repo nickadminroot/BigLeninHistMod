@@ -37,7 +37,7 @@ SAF_historical = {
 		SAF_commit_to_the_five_year_plan
 		SAF_improve_the_three_oh_three
 		SAF__south_african_military_college
-		SAF_voortrekker_monument
+		SAF_fund_the_university_of_south_africa
 		SAF_heavy_engineering
 		SAF_infrastructure_effort
 		SAF_improve_the_hawker_hartbees
@@ -45,7 +45,7 @@ SAF_historical = {
 		SAF_armament_effort
 		SAF_equipment_effort
 		SAF_mechanization_effort
-		SAF_commemorate_the_battle_of_blood_river
+		SAF_establish_the_atomics_energy_board
 		SAF_work_for_all_poor
 		SAF_war_measures_act 								#should probably do this as soon as possible
 		SAF_emergency_workers

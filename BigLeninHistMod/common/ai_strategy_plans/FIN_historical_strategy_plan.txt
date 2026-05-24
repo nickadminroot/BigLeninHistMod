@@ -100,8 +100,6 @@ FIN_historical_plan = {
 
 	#Focuses never to take
 	focus_factors = {
-		FIN_suomalainen_sosialismi = 0
-		FIN_right_wing_policies = 0
 		FIN_join_the_allies = 0
 		FIN_northern_defense_front = 0
 		FIN_viron_kansa = 0

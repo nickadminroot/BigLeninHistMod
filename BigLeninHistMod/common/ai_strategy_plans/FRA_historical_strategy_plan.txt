@@ -67,7 +67,6 @@ FRA_historical_plan = {
 		FRA_artillery_focus 
 		FRA_heavy_armor_focus 
 		FRA_division_cuirassee
-		FRA_arms_purchases_in_the_us
 		FRA_general_work_council
 		#1941
 		FRA_invest_in_the_colonies
@@ -87,8 +86,7 @@ FRA_historical_plan = {
 		
 	}
 	focus_factors = {
-		FRA_right_wing_rhetoric = 0
-		FRA_leftist_rhetoric = 0
+		
 	}
 	research = {
 
