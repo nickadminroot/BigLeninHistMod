@@ -3874,7 +3874,7 @@ focus_tree = {
 				set_global_flag = JAP_triggered_war_with_china_manually_flag
 				CHI = {
 					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
+					    # mission = CHI_kwantung_army_impatience_dummy
 					    days = -365 
 					}
 				}
@@ -6301,7 +6301,7 @@ focus_tree = {
 				}
 				hidden_effect = {
 					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
+					    # mission = CHI_kwantung_army_impatience_dummy
 					    days = 840 
 					}
 				}

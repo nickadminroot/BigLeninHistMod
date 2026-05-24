@@ -8982,7 +8982,7 @@ country_event = { #The Question of Neutrality
 			icon = GFX_faction_logo_generic_8
 		}
 
-		unlock_decision_tooltip = DEN_northern_security_pact_invitation
+		# unlock_decision_tooltip = DEN_northern_security_pact_invitation
 		if = {
 			limit = {
 				has_tech_sharing_feature = yes
@@ -9120,7 +9120,7 @@ country_event = { #Germany doesn't want to become Allies
 			icon = GFX_faction_logo_generic_8
 		}
 
-		unlock_decision_tooltip = DEN_northern_security_pact_invitation
+		# unlock_decision_tooltip = DEN_northern_security_pact_invitation
 		if = {
 			limit = {
 				has_tech_sharing_feature = yes

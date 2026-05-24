@@ -1,0 +1,190 @@
+# Stub events for BBA (By Blood Alone) DLC content
+# The mod replaces the events folder, so DLC event files are not loaded.
+# These stubs prevent "event not found" errors when on_actions reference them.
+
+# Ethiopian balance of power events
+country_event = {
+	id = BBA_ethiopia_balance_of_power_events.50
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+# Italo-Ethiopian war events
+country_event = {
+	id = BBA_italo_ethiopian_war_events.20
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.300
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.301
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.302
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.303
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.304
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italo_ethiopian_war_events.305
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+# Ethiopian fascist events
+country_event = {
+	id = BBA_ethiopia_fascist_events.10
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+# African Union events
+country_event = {
+	id = BBA_african_union_events.18
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+# Italy Balance of Power events
+country_event = {
+	id = BBA_italy_bop.1
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italy_bop.2
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = BBA_italy_bop.3
+	title = ""
+	desc = ""
+	picture = GFX_report_event_empty
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = ""
+	}
+}

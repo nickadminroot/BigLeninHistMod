@@ -2299,7 +2299,7 @@ country_event = {
 			hidden_effect = {
 				CHI = {
 					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
+					    # mission = CHI_kwantung_army_impatience_dummy
 					    days = 360 
 					}
 				}
@@ -2775,7 +2775,7 @@ country_event = {
 			hidden_effect = {
 				CHI = {
 					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
+					    # mission = CHI_kwantung_army_impatience_dummy
 					    days = 730 
 					}
 				}
@@ -2814,7 +2814,7 @@ country_event = {
 			hidden_effect = {
 				CHI = {
 					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
+					    # mission = CHI_kwantung_army_impatience_dummy
 					    days = -360 
 					}
 				}
