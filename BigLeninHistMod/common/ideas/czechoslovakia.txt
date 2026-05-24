@@ -40,6 +40,25 @@ ideas = {
 			picture = generic_production_bonus
 		}
 
+		CZE_divided_nation = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				conscription = -0.005
+			}
+		}
+
 		CZE_skoda_works = {
 			allowed = {
 				original_tag = CZE

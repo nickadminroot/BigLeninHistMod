@@ -1,1 +1,121 @@
-ideas = { }
+ideas = {
+	country = {
+
+		PER_anglo_iranian_oil_ns = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PER_anglo_iranian_oil_ns
+			
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = -0.15
+				industrial_capacity_factory = -0.1
+				min_export = 0.2			
+			}
+		}
+
+		PER_rural_feudalism_ns = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = POL_looming_peasants_strike
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.02
+				political_power_factor = 0.05
+				research_speed_factor = -0.05
+				conscription_factor = -0.05			
+			}
+		}
+
+		PER_islamic_traditions_ns = {
+			allowed = {
+				original_tag = PER
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = -0.1
+				political_advisor_cost_factor = 0.25
+			}
+		}
+
+		PER_azerbaijan_resistance_idea = {
+			allowed = {
+				original_tag = PER
+			}
+	
+			allowed_civil_war = {
+				NOT = {
+					tag = AZR
+					has_cosmetic_tag = AZR
+				}
+			}
+	
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		PER_kurdistan_resistance_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					tag = KUR
+					has_cosmetic_tag = KUR
+				}
+			}
+
+			picture = PLACEHOLDER_idea_icon
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+	}
+}

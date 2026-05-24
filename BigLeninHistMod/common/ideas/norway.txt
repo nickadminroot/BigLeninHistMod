@@ -1,1 +1,102 @@
-ideas = { }
+ideas = {
+	country = {
+
+		NOR_complacent_cabinet_ns = {
+			allowed = {
+				NOR_AAT = yes 
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				political_power_gain = -0.25
+				trade_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				training_time_army_factor = 0.6
+				theorist_cost_factor = 1.2
+			}	
+		}
+
+		NOR_obsolete_armed_forces_ns_1 = {
+			picture = generic_army_problems
+			allowed = {
+				NOR_AAT = yes 
+			}	
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.2
+				army_speed_factor = -0.25
+				army_attack_factor = -0.30
+			} 
+		}
+
+		NOR_crumbling_fortifications_ns = {
+			picture = generic_wall_line
+
+			allowed = {
+				NOR_AAT = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				land_bunker_effectiveness_factor = -0.5
+				coastal_bunker_effectiveness_factor = -0.5
+			}
+		}
+
+		NOR_the_hard_thirties_ns = {
+			picture = usa_great_depression_3
+			allowed = {
+				NOR_AAT = yes 
+			}	
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.55
+				production_speed_buildings_factor = -0.3 
+			} 
+		}
+
+		NOR_anti_communist_sentiment_ns = {
+			picture = NOR_anti_communist_sentiment 
+			allowed = {
+				NOR_AAT = yes 
+			}	
+
+			allowed_civil_war = {
+				has_government = fascism			
+			}
+			available = {
+				NOT = {
+					any_enemy_country = {
+						is_major = yes 
+						has_government = fascism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.015
+			} 
+		}
+
+	}
+}

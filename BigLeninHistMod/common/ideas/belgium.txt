@@ -1,1 +1,58 @@
-ideas = { }
+ideas = {
+	country = {
+
+		BEL_language_barriers_ns = {
+			picture = BEL_language_barriers 
+			allowed = {
+				original_tag = BEL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+
+		BEL_chasseurs_ardennais_ns = {
+			picture = BEL_chasseurs_ardennais
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				custom_modifier_tooltip = BEL_chasseurs_ardennais_tt
+			}
+		}
+
+		BEL_chasseurs_ardennais_ns_ncns = {
+			picture = BEL_chasseurs_ardennais
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				custom_modifier_tooltip = BEL_chasseurs_ardennais_ncns_tt
+			}
+		}
+
+	}
+}

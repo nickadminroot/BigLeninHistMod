@@ -1,1 +1,135 @@
-ideas = { }
+ideas = {
+	country = {
+
+		GRE_agrarian_society = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				industrial_capacity_factory = -0.30
+				conscription_factor = -0.45
+			}
+		}
+
+		GRE_debt_to_the_ifc = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = { 
+						has_government = communism
+						has_government = fascism 
+					}
+				}
+			}
+
+			picture = gre_debt_to_the_ifc
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.1	
+				consumer_goods_factor = 0.30	
+			}
+		}
+
+		GRE_schachtplan = {
+				
+			allowed = {
+				original_tag = GRE
+				NOT = {
+					has_war_with = GER
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = gre_schachtplan
+				
+			removal_cost = -1
+				
+			modifier = {
+				economy_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				min_export = 0.3
+				consumer_goods_factor = -0.25
+				production_speed_industrial_complex_factor = 0.15			
+			}
+		}
+
+		GRE_political_instability = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = gre_political_instability
+				
+			removal_cost = -1
+				
+			modifier = {
+				political_power_factor	= -0.15		
+			}
+		}
+
+		GRE_george_ii = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = { has_government = neutrality }	
+
+			picture = gre_george_ii
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.05
+				neutrality_drift = 0.01	
+			}
+		}
+
+		GRE_foreign_monopolies = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_exploit_mines
+				
+			removal_cost = -1
+				
+			modifier = {
+				trade_laws_cost_factor = 0.75
+				economy_cost_factor	= 0.25
+				consumer_goods_factor = 0.40
+				trade_opinion_factor = 0.25
+			}
+		}
+
+	}
+}
