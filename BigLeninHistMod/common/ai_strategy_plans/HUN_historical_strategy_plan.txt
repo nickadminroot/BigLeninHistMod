@@ -4,10 +4,7 @@ HUN_historical = {
 
 	allowed = {
 		original_tag = HUN
-		has_dlc = "Death or Dishonor"
-		NOT = {
-			has_dlc = "Gotterdammerung"
-		}
+		has_dlc = "Gotterdammerung"
 	}
 	enable = {
 		OR = {
@@ -32,52 +29,52 @@ HUN_historical = {
 	ai_national_focuses = {
 
 		#1936
-		HUN_economic_intervention
-		HUN_secret_rearmament
-		HUN_war_games
-		HUN_theoretical_air_efforts
-		HUN_strengthen_fascists
+		wuw_HUN_economic_intervention
+		wuw_HUN_secret_rearmament
+		wuw_HUN_hold_war_games
+		wuw_HUN_undercover_air_maneuvers
+		wuw_HUN_empower_the_greenshirts
 
 		#1937
-		HUN_industrial_revitalization
-		HUN_reintegrate_the_railroads
-		HUN_support_domestic_industry
-		HUN_support_urbanization
-		HUN_institute_for_industrial_techniques
+		wuw_HUN_forcefully_revitalize_the_industries
+		wuw_HUN_reintigrate_the_imperial_railroads
+		wuw_HUN_manred_weiss_steel_and_metal_works
+		wuw_HUN_promote_increased_urbanization
+		wuw_HUN_expand_the_ganz_muvek
 
 		#1938
-		HUN_bled_agreement
-		HUN_announce_the_gyor_program
-		HUN_establish_the_air_force
-		HUN_renounce_the_treaty_of_trianon
-		HUN_reaffirm_territorial_claims
+		wuw_HUN_negotiate_the_restrictions
+		wuw_HUN_announce_the_gyor_program
+		wuw_HUN_make_the_magyar_legiero_known
+		wuw_HUN_renounce_the_treaty_of_trianon
+		wuw_HUN_reaffirm_territorial_claims
 
 		#1939
-		HUN_demand_southern_slovakia
-		HUN_civilian_industry
-		HUN_invite_foreign_investors
-		HUN_trade_deal_with_germany
-		HUN_army_maneuvers
+		wuw_HUN_demand_southern_slovakia
+		wuw_HUN_devalue_the_pengo
+		wuw_HUN_invite_foreign_investors
+		wuw_HUN_seek_german_contracts
+		wuw_HUN_initiate_army_maneuvers
 
 		#1940
-		HUN_mobile_focus
-		HUN_license_foreign_designs
-		HUN_demand_transylvania
-		HUN_joint_aluminum_mining_company
-		HUN_join_axis
+		wuw_HUN_form_the_gyorshadtest
+		wuw_HUN_extensive_licensing_programs
+		wuw_HUN_demand_transylvania
+		wuw_HUN_joint_aluminum_mining_company
+		wuw_HUN_join_the_axis
 
 		#1941
-		HUN_expand_the_manfred_weiss_steel_works
-		HUN_fighter_competition
-		HUN_develop_tanks
-		HUN_armored_warfare
-		HUN_bomber_competition
+		wuw_HUN_manred_weiss_steel_and_metal_works
+		wuw_HUN_the_matyasfold_fighter_factory
+		wuw_HUN_the_toldi
+		wuw_HUN_assault_gun_focus
+		wuw_HUN_develop_laszlo_vargas_design
 
 		#1942
-		HUN_expand_the_technical_university_of_budapest
-		HUN_mobile_corps_doctrine
-		HUN_expand_the_aluminum_industry
-		HUN_joint_tank_procurement
+		wuw_HUN_budapest_university_of_technology_and_economics
+		wuw_HUN_light_infantry_divisions_doctrine
+		wuw_HUN_expand_the_aluminum_industry
+		wuw_HUN_allied_manufacturing_programs
 		
 	}
 

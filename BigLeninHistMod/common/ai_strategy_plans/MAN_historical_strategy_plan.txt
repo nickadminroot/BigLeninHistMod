@@ -32,31 +32,31 @@ MAN_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		MAN_pacify_the_countryside
-		MAN_trade_delegation
-		MAN_army_modernization
-		MAN_mukden_military_academy
-		MAN_law_university
-		MAN_obedience
-		MAN_first_five_year_plan
-		MAN_expand_the_textile_industry
-		MAN_hoankyoku
-		MAN_invite_japanese_investors
-		MAN_expand_the_railways
-		MAN_develop_aluminum_sources
-		MAN_expand_showa_steel_works
-		MAN_mukden_arsenal
-		MAN_social_research_unit
+		MAN_tsr_pacify_the_countryside
+		MAN_tsr_trade_delegation
+		MAN_tsr_army_modernization
+		MAN_tsr_mukden_military_academy
+		MAN_tsr_law_university
+		MAN_tsr_obedience
+		MAN_tsr_first_five_year_plan
+		MAN_tsr_expand_the_textile_industry
+		MAN_tsr_hoankyoku
+		MAN_tsr_invite_japanese_investors
+		MAN_tsr_expand_the_railways
+		MAN_tsr_develop_aluminum_sources
+		MAN_tsr_expand_showa_steel_works
+		MAN_tsr_mukden_arsenal
+		MAN_tsr_social_research_unit
 
-		MAN_research_and_education_department
-		MAN_alliance_with_the_kwantung_army
-		MAN_chinese_leadership
+		MAN_tsr_research_and_education_department
+		MAN_tsr_alliance_with_the_kwantung_army
+		MAN_tsr_chinese_leadership
 	}
 
 	focus_factors = {
-		MAN_vassalize_mengukuo = 0
-		MAN_national_cooperation_government = 0
-		MAN_the_two_emperors = 0
+		MAN_tsr_vassalize_mengukuo = 0
+		MAN_tsr_national_cooperation_government = 0
+		MAN_tsr_the_two_emperors = 0
 	}
 
 	research = {
