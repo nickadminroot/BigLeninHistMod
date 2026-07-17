@@ -1,1 +1,39 @@
-{}
+{
+  "packages": [
+    {
+      "source": "npm:pi-mcp-adapter",
+      "autoload": false,
+      "extensions": [
+        "-index.ts"
+      ],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    {
+      "source": "npm:pi-web-access",
+      "skills": []
+    },
+    {
+      "source": "git:github.com/nickadminroot/pi-subagents@17d0e55ad277a366b7bc531dcd1ec42596b2a9cf",
+      "extensions": [
+        "+src\\extension\\index.ts"
+      ],
+      "skills": [],
+      "prompts": []
+    }
+  ],
+  "skills": [],
+  "subagents": {
+    "disableBuiltins": true,
+    "agentOverrides": {
+      "architect": { "disabled": true },
+      "generalist": { "disabled": true },
+      "implementation-worker": { "disabled": true },
+      "recon": { "disabled": true },
+      "recon-synth": { "disabled": true },
+      "skill-optimizer": { "disabled": true },
+      "verifier": { "disabled": true }
+    }
+  }
+}

@@ -7,3 +7,9 @@ BigLeninHistMod/.vscode/hoi4_cache/focus_editor_cache.json
 .pi/rag-cache.json
 .env
 scripts/__pycache__/
+.pi/git/
+.pi/npm/
+.pi-runs/
+.pi-subagents/
+.pi/skills/hoi4-mod-development/scripts/__pycache__/
+.pi/skills/hoi4-mod-development/scripts/hoi4_upload.vdf
