@@ -13,12 +13,8 @@ Call `subagent({ action: "list" })` before execution and use only agents reporte
 
 | Agent | Purpose |
 |---|---|
-| `hoi4-recon` | Read-only script, documentation, mod, and vanilla reconnaissance |
-| `hoi4-architect` | Evidence-based implementation plans and architecture review |
-| `hoi4-script-worker` | Clausewitz and gameplay implementation |
-| `hoi4-localization-worker` | English/Russian localization and tooltip implementation |
-| `hoi4-map-gui-specialist` | Map, GUI, GFX, and sprite work |
-| `hoi4-validator` | Fresh read-only verification |
+| `hoi4-weak-agent` | Subagent worker |
+| `hoi4-strong-agent` | Subagent planner / worker (for complex tasks) |
 
 Generic builtin and user agents are disabled for this project. Do not use agent names from upstream examples unless `action: "list"` actually reports them.
 
@@ -59,7 +55,7 @@ Use one agent for one bounded responsibility:
 
 ```ts
 subagent({
-  agent: "hoi4-recon",
+  agent: "hoi4-weak-agent",
   task: "Investigate the specified focus reward. Use docs_search and local vanilla evidence. Do not edit files.",
   context: "fresh",
   acceptance: { level: "none", reason: "Explicit evidence task." }
@@ -73,8 +69,8 @@ Parallelize independent reading, research, review, or validation angles. Give ev
 ```ts
 subagent({
   tasks: [
-    { agent: "hoi4-recon", task: "Trace script definitions and references. No edits.", output: "script-context.md" },
-    { agent: "hoi4-recon", task: "Trace localization, tooltips, and vanilla precedents. No edits.", output: "loc-context.md" }
+    { agent: "hoi4-weak-agent", task: "Trace script definitions and references. No edits.", output: "script-context.md" },
+    { agent: "hoi4-weak-agent", task: "Trace localization, tooltips, and vanilla precedents. No edits.", output: "loc-context.md" }
   ],
   context: "fresh",
   concurrency: 2,
@@ -97,7 +93,7 @@ Use `reads` for durable file handoffs and `as` when a later step needs one speci
 subagent({
   chain: [
     {
-      agent: "hoi4-recon",
+      agent: "hoi4-weak-agent",
       as: "context",
       task: "Build exact HOI4 evidence for {task}. No edits.",
       output: "context.md",
@@ -105,7 +101,7 @@ subagent({
       acceptance: { level: "none", reason: "Evidence step." }
     },
     {
-      agent: "hoi4-architect",
+      agent: "hoi4-strong-agent",
       reads: ["context.md"],
       task: "Read {chain_dir}/context.md and produce an implementation-ready plan for {task}.",
       output: "plan.md",

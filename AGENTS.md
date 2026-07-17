@@ -15,7 +15,7 @@ BigLeninHistMod is a vanilla-like, multiplayer-oriented historical HOI4 mod focu
    - `hoi4-map` for map work;
    - `hoi4-gui` for GUI/GFX work;
    - `pi-subagents` for delegation.
-2. Extract HOI4-specific terms and exact identifiers from the user's request. Use `docs_search` for unfamiliar or engine-sensitive terms, then verify against local files.
+2. Extract HOI4-specific terms and exact identifiers from the user's request. Use `docs_search` for game-sensitive terms, then verify against local files.
 3. Search the mod and local vanilla data with `rg`; do not guess Clausewitz syntax or engine behavior.
 4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations.
 5. Keep effects, visible tooltips, idea variants, and English/Russian localization synchronized.
