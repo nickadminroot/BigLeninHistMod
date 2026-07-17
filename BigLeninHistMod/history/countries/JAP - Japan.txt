@@ -428,7 +428,7 @@ if = {
 	set_garrison_strength = 1.0
 }
 
-
+store_core_states_on_game_start = yes
 
 ###########################
 ### Starting Technology ###
@@ -1334,6 +1334,7 @@ if = {
 			engine_type_slot = engine_1_2x
 			special_type_slot_1 = lmg_defense_turret
 		}
+		icon = "GFX_JAP_early_bomber_medium"
 	}
 
 	create_equipment_variant = {

@@ -6,60 +6,93 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
-		
+
+		filters = { new_content continent }
+		# filters can also contain 'label'
+		# in that case the countries below can have 'label = { label_1 }' or 'label = { label_1 label_2 }'
+		# all these labels will be gathered and displayed as filter buttons
+
+		# sort_unplayed_first = no            # defaults to yes: countries with unplayed content are listed first
+		# include_majors_in_minor_list = no   # defaults to yes: when a filter is active, majors also show in the mini list
+		# apply_filter_to_majors = yes        # defaults to no: when yes, the major row also respects the filter (only majors matching it are shown)
+		# apply_filter_to_other_country = yes # defaults to no: by default the "other" (---) entry is always shown; when yes it respects the filter too
+		# label_order = { label_1 label_2 }   # optional: forces the label filter button order; a warning is logged for
+		#                                     # any label used by a country that is missing from this list
+		# scrollable_country_list = yes       # defaults to no: scroll the minor list with its vertical scrollbar instead of the overflow dropdown
+
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
+			available = { NOT = { has_dlc = "La Resistance" } }
+
+
 		}
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "La Resistance" } 
+			available = { has_dlc = "La Resistance" } 
+
+
 		}
 		"USA"={
 			history = "USA_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
+			available = { has_dlc = "Man the Guns" }
+
+
 		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
+			available = { NOT = { has_dlc = "Man the Guns" } }
+
+
 		}
 
 		GER = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { has_dlc = "Gotterdammerung" }
+			available = { has_dlc = "Gotterdammerung" }
+
+
 		}
 
 		GER = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { NOT = { has_dlc = "Gotterdammerung" } }
+			available = { NOT = { has_dlc = "Gotterdammerung" } }
+
+
 		}
 
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { has_dlc = "By Blood Alone" }			
+			available = { has_dlc = "By Blood Alone" }
+	
+		
 		}
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { NOT = { has_dlc = "By Blood Alone" } }			
+			available = { NOT = { has_dlc = "By Blood Alone" } }
+	
+		
 		}
 		JAP = {
 			history = "JAP_GATHERING_STORM_DESC"
 			available = {  NOT = { has_dlc = "No Compromise, No Surrender" } }
 			ideology = neutrality
 			new_content = yes
-			override_leader_portrait = JAP_emperor_hirohito
+			override_leader_portrait = JAP_emperor_hirohito
+
+
 		}
 
 		JAP = {
@@ -67,17 +100,23 @@ bookmarks = {
 			available = {  has_dlc = "No Compromise, No Surrender" }
 			ideology = neutrality
 			new_content = yes
-			override_leader_portrait = JAP_emperor_hirohito
+			override_leader_portrait = JAP_emperor_hirohito
+
+
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
-			available = { has_dlc = "No Step Back" }	
+			available = { has_dlc = "No Step Back" }
+
+	
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
-			available = { NOT = { has_dlc = "No Step Back" } }	
+			available = { NOT = { has_dlc = "No Step Back" } }
+
+	
 		}
 
 		"---"={
@@ -89,36 +128,48 @@ bookmarks = {
 		"CAN"={
 			minor = yes
 			history = "CAN_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		"AST"={
 			minor = yes
 			history = "AST_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		"NZL"={
 			minor = yes
 			history = "NZL_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		"SAF"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 
 		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
 			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 
 		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
 			available = {  has_dlc = "Graveyard of Empires" }
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 
 		CZE={
@@ -126,101 +177,131 @@ bookmarks = {
 			history = "CZE_GATHERING_STORM_DESC"
 			ideology = democratic
 			available = { has_dlc = "Peace For Our Time" }
-			new_content = yes
+			new_content = yes
+
+
 		}
 
 		CZE={
 			minor = yes
 			history = "CZE_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "Peace For Our Time" } }
+			available = { NOT = { has_dlc = "Peace For Our Time" } }
+
+
 		}
 
 		HUN = {
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
-			available = {  NOT = { has_dlc = "Gotterdammerung" } }
+			available = {  NOT = { has_dlc = "Gotterdammerung" } }
+
+
 		}
 
 		"ROM"={
 			minor = yes
 			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		
 		"YUG"={
 			minor = yes
 			history = "YUG_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		# Check bottom for CHI with NCNS
 		"CHI"={
 			minor = yes
 			history = "CHI_GATHERING_STORM_DESC"
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		# Check bottom for PRC with NCNS
 		"PRC"={
 			minor = yes
 			history = "PRC_GATHERING_STORM_DESC"
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
-			ideology = communism
+			ideology = communism
+
+
 		}
 		# Check bottom for MAN with NCNS
 		"MAN"={
 			minor = yes
 			history = "MAN_GATHERING_STORM_DESC"
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
-			ideology = fascism
+			ideology = fascism
+
+
 		}
 		# Check bottom for GXC with NCNS
 		"GXC"={
 			minor = yes
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = fascism
+
+
 		}		
 		# Check bottom for YUN with NCNS
 		"YUN"={
 			minor = yes
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = fascism
+
+
 		}		
 		# Check bottom for SHX with NCNS
 		"SHX"={
 			minor = yes
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = fascism
+
+
 		}		
 		# Check bottom for XSM with NCNS
 		"XSM"={
 			minor = yes
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = fascism
+
+
 		}		
 		# Check bottom for SIK with NCNS
 		"SIK"={
 			minor = yes
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			history = "WARLORDS_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = fascism
+
+
 		}
 		
 		"MEX"={
 			minor = yes
 			history = "MEXICO_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 
 		"HOL"={
 			minor = yes
 			history = "NETHERLANDS_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 
 		"SPR"={
@@ -232,123 +313,165 @@ bookmarks = {
 		"POR"={
 			minor = yes
 			history = "PORTUGAL_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 
 		"BUL"={
 			minor = yes
 			history = "BUL_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 
 		"GRE"={
 			minor = yes
 			history = "GRE_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 
 		"TUR"={
 			minor = yes
 			history = "TUR_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		
 		
 		"LIT"={
 			minor = yes
 			history = "LIT_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		
 		"LAT"={
 			minor = yes
 			history = "LAT_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		
 		"EST"={
 			minor = yes
 			history = "EST_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		"POL"={
 			minor = yes
 			history = "POL_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		"ETH"={
 			minor = yes
 			history = "ETH_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = neutrality
+
+
 		}
 		SWI = {
 			minor = yes
 			history = "SWI_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		FIN = {
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = {  NOT = { has_dlc = "Arms Against Tyranny" } }
+			available = {  NOT = { has_dlc = "Arms Against Tyranny" } }
+
+
 		}
 		FIN = {
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = { has_dlc = "Arms Against Tyranny" } 
+			available = { has_dlc = "Arms Against Tyranny" } 
+
+
 		}
 		SWE = {
 			minor = yes
 			history = SWE_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Arms Against Tyranny" } 
+			available = { has_dlc = "Arms Against Tyranny" } 
+
+
 		}
 		NOR = {
 			minor = yes
 			history = NOR_GATHERING_STORM_DESC
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		DEN = {
 			minor = yes
 			history = DEN_GATHERING_STORM_DESC
-			ideology = democratic
+			ideology = democratic
+
+
 		}
 		ICE = {
 			minor = yes
 			history = ICE_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Arms Against Tyranny" } 
+			available = { has_dlc = "Arms Against Tyranny" } 
+
+
 		}
 		BRA = {
 			minor = yes
 			history = BRA_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Trial of Allegiance" }
+			available = { has_dlc = "Trial of Allegiance" }
+
+
 		}
 		CHL = {
 			minor = yes
 			history = CHL_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Trial of Allegiance" }
+			available = { has_dlc = "Trial of Allegiance" }
+
+
 		}
 		ARG = {
 			minor = yes
 			history = ARG_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = { has_dlc = "Trial of Allegiance" }
+			available = { has_dlc = "Trial of Allegiance" }
+
+
 		}
 		AUS = {
 			minor = yes
 			history = AUS_GATHERING_STORM_DESC #might need an edit because it is not very good at the moment.
 			ideology = neutrality
-			available = { has_dlc = "Gotterdammerung" }
+			available = { has_dlc = "Gotterdammerung" }
+
+
 		}
 		HUN = {
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
-			available = { has_dlc = "Gotterdammerung" }
+			available = { has_dlc = "Gotterdammerung" }
+
+
 		}
 		BEL = {
 			minor = yes
@@ -359,107 +482,139 @@ bookmarks = {
 				NOT = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-			} 
+			} 
+
+
 		}
 		BEL = {
 			minor = yes
 			history = BEL_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Gotterdammerung" has_dlc = "No Compromise, No Surrender" } 
+			available = { has_dlc = "Gotterdammerung" has_dlc = "No Compromise, No Surrender" } 
+
+
 		}
 		COG = {
 			minor = yes
 			history = COG_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = { has_dlc = "Gotterdammerung" }
+			available = { has_dlc = "Gotterdammerung" }
+
+
 		}
 		PER = {
 			minor = yes
 			history = PER_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = { has_dlc = "Graveyard of Empires" }
+			available = { has_dlc = "Graveyard of Empires" }
+
+
 		}
 		AFG = {
 			minor = yes
 			history = "AFG_GATHERING_STORM_DESC" #might need an edit because it is not very good at the moment.
 			ideology = neutrality
-			available = { has_dlc = "Graveyard of Empires" }
+			available = { has_dlc = "Graveyard of Empires" }
+
+
 		}
 		IRQ = {
 			minor = yes
 			history = "IRQ_GATHERING_STORM_DESC"
 			ideology = neutrality
-			available = { has_dlc = "Graveyard of Empires" }
+			available = { has_dlc = "Graveyard of Empires" }
+
+
 		}
 		PHI = {
 			minor = yes
 			history = "PHI_GATHERING_STORM_DESC" 
 			ideology = neutrality
 			available = { has_dlc = "No Compromise, No Surrender" }
-			new_content = yes
+			new_content = yes
+
+
 		}
 		CHI = {
 			minor = yes
 			history = "CHI_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" }
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}
 		PRC = {
 			minor = yes
 			history = "PRC_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" }
 			ideology = communism
-			new_content = yes
+			new_content = yes
+
+
 		}
 		MAN = {
 			minor = yes
 			history = "MAN_TSR_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			ideology = fascism
-			new_content = yes
+			new_content = yes
+
+
 		}
 		GDC = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}		
 		SIC = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}		
 		XIC = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}		
 		XSM = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}		
 		KHM = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+			new_content = yes
+
+
 		}	
 		SIK = {
 			minor = yes
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = communism
-			new_content = yes
+			new_content = yes
+
+
 		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

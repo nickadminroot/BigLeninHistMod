@@ -1708,7 +1708,7 @@
 			}
 		}
 		corps_commander={
-			traits={ old_guard trait_engineer career_officer }
+			traits={ old_guard trait_engineer career_officer winter_specialist }
 			skill=3
 			attack_skill=1
 			defense_skill=4
@@ -2622,8 +2622,16 @@
 			}
 			cost = 100
 			available = {
-				has_defensive_war = yes
-				has_war_with_major = yes
+				OR = {
+					GER = {
+						has_completed_focus = GER_demand_sudetenland
+					}
+					has_defensive_war = yes
+				}
+				OR = {
+					has_war_with_major = yes
+					has_country_flag = CZE_lessons_of_war_i_had_war_with_major_flag
+				}
 				is_subject = no
 			}
 			ai_will_do = {
@@ -3259,6 +3267,9 @@
 					has_war_with = FRA
 				}
 			}
+			visible = {
+				original_tag = CZE
+			}
 			traits = {
 				army_chief_reform_2		
 			}
@@ -3285,7 +3296,27 @@
 					}
 				}
 			}
-		}	
+		}
+		advisor={
+			slot = high_command
+			idea_token = CZE_louis_eugene_faucher_high_command
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_guerilla_organizer_1
+			}
+			cost = 50
+			available = {
+				is_subject = no
+			}
+			visible = {
+				is_subject = no
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	CZE_melichar_frantisek={
@@ -3515,7 +3546,7 @@
 		name=CZE_frantisek_placak
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_3" #Yes air
+				small="GFX_portrait_CZE_frantisek_placak_small"
 			}
 		}
 		advisor={
@@ -3846,7 +3877,7 @@
 		name = CZE_jaroslav_kejla
 		portraits = {
 			army = {
-				small="GFX_idea_generic_air_europe_1"
+				small="GFX_portrait_CZE_jaroslav_kejla_small"
 			}
 		}
 		advisor = {
@@ -4159,7 +4190,10 @@
 			idea_token = CZE_vladimir_prikryl
 			ledger = army
 			allowed = {
-				original_tag = CZE
+				OR = {
+					original_tag = CZE
+					original_tag = SOV
+				}
 			}
 			traits = {
 				army_artillery_2
@@ -4167,6 +4201,30 @@
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+			available = {
+				if = {
+					limit = {
+						NOT = {
+							original_tag = CZE
+						}
+					}
+					NOT = {
+						has_war_with = CZE
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						NOT = {
+							original_tag = CZE
+						}
+					}
+					NOT = {
+						has_war_with = CZE
+					}
+				}
 			}
 			on_add = {
 				owner = {
@@ -4202,15 +4260,49 @@
 			idea_token = CZE_sergej_ingr
 			ledger = army
 			allowed = {
-				original_tag = CZE
+				OR = {
+					original_tag = CZE
+					original_tag = ENG
+				}
 			}
 			available = {
-				has_government = democratic
+				if = {
+					limit = {
+						original_tag = CZE
+					}
+					has_government = democratic
+				}
+				if = {
+					limit = {
+						NOT = {
+							original_tag = CZE
+						}
+					}
+					ROOT = {
+						NOT = {
+							has_war_with = CZE
+						}
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						NOT = {
+							original_tag = CZE
+						}
+					}
+					ROOT = {
+						NOT = {
+							has_war_with = CZE
+						}
+					}
+				}
 			}
 			traits = {
 				army_concealment_1
 			}
-			cost = 100
+			cost = 50
 			ai_will_do = {
 				factor = 0
 			}
@@ -4253,6 +4345,7 @@
 			id=-1
 			traits = {
 				anti_communist
+				JAP_militarist
 			}
 		}
 	}

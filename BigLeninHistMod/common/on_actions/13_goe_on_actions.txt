@@ -17,6 +17,11 @@ on_actions = {
 						}
 					}
 				}
+				else = {
+					430 = {
+						set_variable = { global.famine_state = THIS }
+					}
+				}
 				RAJ = {
 					every_owned_state = {
 						limit = {
@@ -454,6 +459,7 @@ on_actions = {
 							}
 						}
 						is_raj_or_raj_inheritor = no
+						exists = no 
 					}
 
 					event_target:UK_INDIA = { release = PREV }

@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		idea_SIA_army_of_siam = {
-			picture = MEX_politicised_army_2
+			picture = SIA_army_of_siam
 			allowed_civil_war = {
 				always = yes
 			}

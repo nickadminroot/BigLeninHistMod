@@ -1205,28 +1205,24 @@ en_svensk_tiger = {
 				from = GER
 				equipment = {
 					type = heavy_tank_equipment_2
-					version = 0
 				}
 			}
 			has_license = {
-				from = GER		
+				from = GER
 				equipment = {
 					type = heavy_tank_equipment_3
-					version = 0
 				}
 			}
 			has_license = {
 				from = GER
 				equipment = {
 					type = heavy_tank_chassis_2
-					version = 0
 				}
 			}
 			has_license = {
-				from = GER		
+				from = GER
 				equipment = {
 					type = heavy_tank_chassis_3
-					version = 0
 				}
 			}
 		}
@@ -7716,6 +7712,8 @@ doctrine_of_choice = {
 				check_variable = { strikers_milestone_var > 2 }
 				check_variable = { mediums_milestone_var > 2 }
 				check_variable = { heavies_milestone_var > 2 }
+				#SPECIAL FORCES
+				check_variable = { special_forces_milestone_var > 2 }
 			}
 		}
 	}

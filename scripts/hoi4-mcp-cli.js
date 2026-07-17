@@ -202,10 +202,13 @@ async function main() {
         console.error(`❌ ${err.message}`);
       }
 
-      rl.prompt();
+      // When commands are piped from a file, stdin may reach EOF while an
+      // asynchronous tool call is still running. Do not prompt a closed
+      // readline interface; buffered commands will still be consumed.
+      if (!rl.closed) rl.prompt();
     }
 
-    rl.close();
+    if (!rl.closed) rl.close();
     return;
   }
 

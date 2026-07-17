@@ -72,7 +72,14 @@ on_actions = {
 				limit = {
 					TAG = INS
 				}
-				retire_country_leader = yes
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+					}
+				}
+				else = {
+					retire_country_leader = yes
+				}
 			}
 			if = {
 				limit = {
@@ -300,9 +307,10 @@ on_actions = {
 							OR = {
 								has_cosmetic_tag = CZE_union
 								has_cosmetic_tag = CZE_second_republic
-								has_cosmetic_tag = UBF_united_balkan_federation
+								has_cosmetic_tag = CZE_union_expanded
 								has_cosmetic_tag = CZE_fall_of_the_republic
 								has_cosmetic_tag = CZE_CEF
+								has_cosmetic_tag = EUR_UNIFIED
 							}
 							SLO = {
 								is_subject_of = ROOT
@@ -417,9 +425,10 @@ on_actions = {
 							OR = {
 								has_cosmetic_tag = CZE_union
 								has_cosmetic_tag = CZE_second_republic
-								has_cosmetic_tag = UBF_united_balkan_federation
+								has_cosmetic_tag = CZE_union_expanded
 								has_cosmetic_tag = CZE_fall_of_the_republic
 								has_cosmetic_tag = CZE_CEF
+								has_cosmetic_tag = EUR_UNIFIED
 							}
 							SLO = {
 								is_subject_of = ROOT
@@ -495,9 +504,10 @@ on_actions = {
 							OR = {
 								has_cosmetic_tag = CZE_union
 								has_cosmetic_tag = CZE_second_republic
-								has_cosmetic_tag = UBF_united_balkan_federation
+								has_cosmetic_tag = CZE_union_expanded
 								has_cosmetic_tag = CZE_fall_of_the_republic
 								has_cosmetic_tag = CZE_CEF
+								has_cosmetic_tag = EUR_UNIFIED
 							}
 							SLO = {
 								is_subject_of = ROOT

@@ -764,7 +764,7 @@ JAP_leave_raj_a_bit = {
 	ai_strategy = {
 		type = invade
 		id = RAJ
-		value = -200
+		value = -250
 	}
 }
 
@@ -848,6 +848,10 @@ germany_ally_historical = {
 		original_tag = JAP
 	}
 	enable = {
+		OR = {
+			has_government = fascism
+			has_government = neutrality
+		}
 		has_completed_focus = JAP_sea_mil_tech_coop_with_germany
 		country_exists = GER
 	}
@@ -937,7 +941,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = SIK
@@ -945,7 +949,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 			SIK = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 			AND = {
@@ -960,7 +964,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 				SIK = {
 					OR = {
 						is_in_faction_with = SOU
-						is_puppet_of = SOU
+						is_subject_of = SOU
 					}
 				}
 			}
@@ -973,7 +977,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 			SIK = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 			AND = {
@@ -988,7 +992,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 				SIK = {
 					OR = {
 						is_in_faction_with = SOU
-						is_puppet_of = SOU
+						is_subject_of = SOU
 					}
 				}
 			}
@@ -1011,7 +1015,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XSM = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = XSM
@@ -1019,7 +1023,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XSM = {
 			XSM = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1030,7 +1034,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XSM = {
 		XSM = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1051,7 +1055,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GXC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = GXC
@@ -1059,7 +1063,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GXC = {
 			GXC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1070,7 +1074,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GXC = {
 		GXC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1091,7 +1095,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SHX = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = SHX
@@ -1099,7 +1103,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SHX = {
 			SHX = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1110,7 +1114,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SHX = {
 		SHX = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1131,7 +1135,7 @@ all_china_must_prosper_in_my_prosperity_sphere_YUN = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = YUN
@@ -1139,7 +1143,7 @@ all_china_must_prosper_in_my_prosperity_sphere_YUN = {
 			YUN = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1150,7 +1154,7 @@ all_china_must_prosper_in_my_prosperity_sphere_YUN = {
 		YUN = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1172,7 +1176,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SND = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = SND
@@ -1180,7 +1184,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SND = {
 			SND = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1191,7 +1195,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SND = {
 		SND = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1213,7 +1217,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GDC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = GDC
@@ -1221,7 +1225,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GDC = {
 			GDC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1232,7 +1236,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GDC = {
 		GDC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1254,7 +1258,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = SIC
@@ -1262,7 +1266,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIC = {
 			SIC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1273,7 +1277,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIC = {
 		SIC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1295,7 +1299,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XIC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = XIC
@@ -1303,7 +1307,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XIC = {
 			XIC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1314,7 +1318,7 @@ all_china_must_prosper_in_my_prosperity_sphere_XIC = {
 		XIC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1336,7 +1340,7 @@ all_china_must_prosper_in_my_prosperity_sphere_NXM = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = NXM
@@ -1344,7 +1348,7 @@ all_china_must_prosper_in_my_prosperity_sphere_NXM = {
 			NXM = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1355,7 +1359,7 @@ all_china_must_prosper_in_my_prosperity_sphere_NXM = {
 		NXM = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1377,7 +1381,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GSM = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = GSM
@@ -1385,7 +1389,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GSM = {
 			GSM = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1396,7 +1400,7 @@ all_china_must_prosper_in_my_prosperity_sphere_GSM = {
 		GSM = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1418,7 +1422,7 @@ all_china_must_prosper_in_my_prosperity_sphere_HBC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = HBC
@@ -1426,7 +1430,7 @@ all_china_must_prosper_in_my_prosperity_sphere_HBC = {
 			HBC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1437,7 +1441,7 @@ all_china_must_prosper_in_my_prosperity_sphere_HBC = {
 		HBC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -1459,7 +1463,7 @@ all_china_must_prosper_in_my_prosperity_sphere_PRC = {
 			NOT = { country_exists = CHI }
 			CHI = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 		country_exists = PRC
@@ -1467,7 +1471,7 @@ all_china_must_prosper_in_my_prosperity_sphere_PRC = {
 			PRC = {
 				OR = {
 					is_in_faction_with = JAP
-					is_puppet_of = JAP
+					is_subject_of = JAP
 				}
 			}
 		}
@@ -1478,7 +1482,7 @@ all_china_must_prosper_in_my_prosperity_sphere_PRC = {
 		PRC = {
 			OR = {
 				is_in_faction_with = JAP
-				is_puppet_of = JAP
+				is_subject_of = JAP
 			}
 		}
 	}
@@ -2240,11 +2244,11 @@ JAP_get_the_rubber_islands = {
 
 JAP_invade_burma = {
 	enable = {
-		SIA = { is_in_faction_with = JAP }
+		SIA = { is_ally_with = JAP }
 		336 = {
 			controller = {
 				OR = {
-					is_in_faction_with = JAP
+					is_ally_with = JAP
 					original_tag = JAP
 				}
 			}
@@ -2270,6 +2274,18 @@ JAP_invade_burma = {
 	}
 
 	ai_strategy = {
+	    type = invasion_unit_request
+	    state = 997
+	    value = 60
+	}
+
+	ai_strategy = {
+	    type = invasion_unit_request
+	    state = 995 
+	    value = 50 
+	}
+
+	ai_strategy = {
 		type = naval_invasion_focus
 		value = 200
 	}
@@ -2289,7 +2305,7 @@ JAP_how_about_some_more_cv_planes = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = cv_fighter
-		value = 1
+		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
@@ -2370,3 +2386,158 @@ JAP_prioritize_navy_chief = {
 	}
 }
 
+
+
+JAP_prepare_for_naval_invasion_capability = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		is_historical_focus_on = yes
+		date > 1939.10.1
+	}
+	abort = {
+		JAP = {
+			exists = no 
+		}
+	}
+
+	ai_strategy = {
+		type = research_weight_factor
+		id = mtg_landing_craft
+		value = 100
+	}
+}
+
+JAP_invade_guam = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		OR = {
+			has_war_with = USA
+			638 = { controller = { has_war_with = JAP } }
+		}
+		OR = {
+			has_completed_focus = JAP_strike_the_southern_road
+			date > 1941.10.21
+		}
+		date > 1941.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	abort = {
+		638 = { 
+			controller = {
+				OR = {
+					original_tag = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = guam_area
+		value = 280
+	}
+
+	ai_strategy = {
+		type = invade
+		id = USA
+		value = 220
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = guam_area
+		state = 638
+		value = 400
+	}
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 400
+	}
+
+}
+
+JAP_avoid_hong_kong_invasion_if_no_need = {
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = { has_war_with = ENG }
+	}
+	
+	abort = {
+		OR = {
+			focus_progress = {
+				focus = JAP_strike_the_southern_road
+				progress > 0 
+			}	
+			has_war_with = ENG
+		}
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 326
+		value = -100
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 326
+		value = -100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = -220
+	}
+
+}
+
+JAP_avoid_macau_invasion_if_no_need = {
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = { has_war_with = POR }
+	}
+	
+	abort = {
+		OR = {
+			focus_progress = {
+				focus = JAP_occupy_macau
+				progress > 0 
+			}	
+			has_war_with = POR
+		}
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 729
+		value = -100
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 729
+		value = -100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = POR
+		value = -220
+	}
+
+}

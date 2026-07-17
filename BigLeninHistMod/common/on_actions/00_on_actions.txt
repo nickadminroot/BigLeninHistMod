@@ -1,8 +1,8 @@
 on_actions = {
 	on_startup = {
 
+		# Add Canals
 		effect = {
-			# Add Canals
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung" 
@@ -21,6 +21,33 @@ on_actions = {
 						level = 1
 						instant_build = yes
 						province =  7617
+					}
+				}
+			}
+		}
+
+		# Add Dams
+		effect = {
+			IF = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+				}
+				285 = {
+					add_building_construction = {
+						type = cataract_dam_mountain
+						level = 1
+						instant_build = yes
+						province =  4864
+					}
+				}
+				ELSE = {
+					285 = {
+						add_building_construction = {
+							type = dam
+							level = 1
+							instant_build = yes
+							province =  4864
+						}
 					}
 				}
 			}
@@ -5373,7 +5400,11 @@ on_actions = {
 							 size > 0
 							 state = PREV
 						}
-						 has_tech = marines_commandos_demolition 
+						has_mastery_level = {
+							amount = 3
+						 	sub_doctrine = marines_1
+						 	#has_tech = marines_commandos_demolition - old equivalent
+						} 
 					}
 					NOT = { has_state_flag = marines_commando_effect }
 					OWNER = { NOT = { tag = ROOT } }
@@ -5408,18 +5439,25 @@ on_actions = {
 
 	on_unit_leader_promote_from_ranks_veteran = { #Unit leader scope, FROM is unit
 		effect = {
-			FROM = {
-				add_random_valid_trait_from_unit = {
-					character = ROOT
+			if = {
+				limit = {
+					is_navy_leader = yes
+					OWNER = { is_ai = no }
 				}
+				OWNER = { set_country_flag = achievement_navy_promoted_from_ranks }
 			}
-			set_unit_leader_flag = field_promotion_achievement
 		}
 	}
 
 	on_unit_leader_promote_from_ranks_green = { #Unit leader scope, FROM is unit
 		effect = {
-			set_unit_leader_flag = field_promotion_achievement
+			if = {
+				limit = {
+					is_navy_leader = yes
+					OWNER = { is_ai = no }
+				}
+				OWNER = { set_country_flag = achievement_navy_promoted_from_ranks }
+			}
 		}
 	}
 
@@ -5453,7 +5491,13 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { 
-					FROM = { has_tech = paras_dispersed_drop } 
+					FROM = { 
+						has_mastery_level = {
+							amount = 1
+							sub_doctrine = paratroopers_1
+						}
+						#has_tech = paras_dispersed_drop - old equivalent
+					} 
 					NOT = { 
 						has_state_flag = {
 						    flag = para_drop_effect
@@ -5466,7 +5510,13 @@ on_actions = {
 			}
 			if = {
 				limit = { 
-					FROM = { has_tech = paras_combat_drop } 
+					FROM = { 
+						has_mastery_level = {
+							amount = 1
+							sub_doctrine = paratroopers_2
+						}
+						#has_tech = paras_combat_drop  - old equivalent
+					} 
 					NOT = { 
 						has_state_flag = {
 						    flag = para_drop_effect

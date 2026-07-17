@@ -1956,6 +1956,16 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
+			available = {
+				PAK = {
+					exists = no
+				}
+			}
+			visible = {
+				PAK = {
+					exists = no
+				}
+			}
 			traits = {
 				muslim_scholar 
 			}
@@ -1993,6 +2003,16 @@ characters={
 			idea_token = RAJ_agha_khan_iii
 			allowed = {
 				original_tag = RAJ
+			}
+			available = {
+				PAK = {
+					exists = no
+				}
+			}
+			visible = {
+				PAK = {
+					exists = no
+				}
 			}
 			traits = {
 				well_mannered_iman 
