@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "sourceGitCommit": "cc070873610c4bc69a426a7f08f921dc53bd1eca",
+  "baseLabel": "May vanilla snapshot (vanilla/)",
+  "baseHashes": {
+    "map/definition.csv": "b43ff199a6841a7d86895d31498a423631a89f136b163be32c7de7224cbfb7ab",
+    "map/provinces.bmp": "44a1b0a8d975d2eb20b89338d1d73d4734e62fe2098a9c45122894c90075225f"
+  },
+  "modHashes": {
+    "map/definition.csv": "070b5615d5782907c729618fccdaf6e561a1697e6e686aa35b0f5a75074774ff",
+    "map/provinces.bmp": "f3dc258a0023ce51adf6cd2d625cbf1f9c0d444b8663deeac417ce8cd46faebb"
+  },
+  "summary": {
+    "baseProvinces": 13382,
+    "modProvinces": 13387,
+    "addedProvinceIds": [
+      13382,
+      13383,
+      13384,
+      13385,
+      13386
+    ],
+    "changedPixels": 2043,
+    "stateMembershipChanges": 7,
+    "addedStateIds": [],
+    "strategicRegionMembershipChanges": 5,
+    "addedStrategicRegionIds": [
+      299,
+      300
+    ],
+    "referenceEvidenceLines": 3334
+  },
+  "artifacts": {
+    "README.md": "5742ac4151da743198d6286656039272b64f0b04be2a5830d4b0b5659df4e96e",
+    "definition-delta.json": "04259656542e51815e9039a04836473e84cf5e359db7f3e91f701bf3268a8138",
+    "province-pixel-delta.json": "24cfdfa4158a9a8c070d05268e4d63ca6b2761e942b9c986963b01080130cc37",
+    "state-topology-delta.json": "ced563b236cbcd12c424e70a8bdacbb45a6bf463101cb819c05a160378678563",
+    "strategic-region-topology-delta.json": "c2d45d55e2ac867b4bff4e254fc553629f4306e1dcab20a2865c474b39954c15",
+    "id-references.json": "1ed0daf19fb1584c9902d49cff43c2eda351ba69393874135bb47f50c17942df"
+  },
+  "rawSnapshot": ".pi-runs/map-may-delta-v1/snapshot (local, SHA-256 inventory in .pi-runs/map-may-delta-v1/manifest.json)"
+}

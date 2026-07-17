@@ -1,0 +1,137 @@
+{
+  "baseCount": 298,
+  "modCount": 300,
+  "addedIds": [
+    299,
+    300
+  ],
+  "removedIds": [],
+  "textChangedIds": [
+    127,
+    128,
+    173,
+    207,
+    225
+  ],
+  "provinceMembershipChanges": [
+    {
+      "id": 127,
+      "baseFile": "127-Saharadesert.txt",
+      "modFile": "127-Saharadesert.txt",
+      "addedProvinces": [],
+      "removedProvinces": [
+        1060,
+        1143,
+        10127,
+        11951,
+        12764
+      ],
+      "baseProvinceCount": 69,
+      "modProvinceCount": 64
+    },
+    {
+      "id": 128,
+      "baseFile": "128-Egypt.txt",
+      "modFile": "128-Egypt.txt",
+      "addedProvinces": [
+        10127,
+        13382,
+        13384
+      ],
+      "removedProvinces": [
+        1028,
+        1064,
+        1080,
+        1151,
+        1206,
+        4068,
+        4910,
+        5069,
+        5078,
+        7030,
+        7073,
+        7079,
+        7144,
+        7148,
+        7156,
+        9957,
+        9989,
+        10028,
+        10061,
+        10097,
+        10126,
+        10844,
+        11910,
+        11967,
+        11974,
+        11999,
+        12002,
+        12033,
+        12044,
+        12071,
+        12091,
+        12771,
+        12889
+      ],
+      "baseProvinceCount": 55,
+      "modProvinceCount": 25
+    },
+    {
+      "id": 173,
+      "baseFile": "173-Eastern North Sea.txt",
+      "modFile": "173-Eastern North Sea.txt",
+      "addedProvinces": [],
+      "removedProvinces": [
+        2455
+      ],
+      "baseProvinceCount": 10,
+      "modProvinceCount": 9
+    },
+    {
+      "id": 207,
+      "baseFile": "207-Danish Belts.txt",
+      "modFile": "207-Danish Belts.txt",
+      "addedProvinces": [
+        2455
+      ],
+      "removedProvinces": [],
+      "baseProvinceCount": 3,
+      "modProvinceCount": 4
+    },
+    {
+      "id": 225,
+      "baseFile": "225-Tripoli.txt",
+      "modFile": "225-Tripoli.txt",
+      "addedProvinces": [],
+      "removedProvinces": [
+        1062,
+        1127,
+        1130,
+        1186,
+        1204,
+        4060,
+        4063,
+        4120,
+        4133,
+        4136,
+        4151,
+        7063,
+        7082,
+        7139,
+        7206,
+        9977,
+        9992,
+        10049,
+        10120,
+        10123,
+        11954,
+        12025,
+        12079,
+        12094,
+        13078
+      ],
+      "baseProvinceCount": 55,
+      "modProvinceCount": 30
+    }
+  ]
+}
