@@ -1,533 +1,262 @@
-/**
- * RAG Extension for pi — HOI4 Mod Documentation RAG
- *
- * Behaviour:
- *   - First prompt of session: injects topK=3 relevant chunks automatically.
- *   - Subsequent prompts: NO injection (to save tokens).
- *   - #RAG <prompt>: forces injection with topK=10 chunks.
- *
- * The documentation corpus lives in docs/rag/corpus/ (git-tracked).
- *
- * Commands:
- *   /rag-status    — show index info + last errors
- *   /rag-logs      — show full error log
- *   /rag-reindex   — rebuild index from source files
- *   /rag-search    — manually search the index
- *   /rag-toggle    — enable/disable RAG injection
- *   /rag-config    — show current configuration
- */
-
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import { defaultConfig, type RAGConfig } from "./config";
-import {
-  discoverDocumentationFiles,
-  chunkFiles,
-  type Chunk,
-} from "./chunker";
-import { OpenAICompatibleEmbedder, batchEmbed } from "./embedder";
-import { VectorStore } from "./vector-store";
+import { StringEnum } from "@earendil-works/pi-ai";
+import { Type } from "typebox";
 import { resolve } from "node:path";
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from "node:fs";
+import { chunkFiles, discoverDocumentationFiles, type Chunk } from "./chunker";
+import { defaultConfig, type RAGConfig } from "./config";
+import { batchEmbed, OpenAICompatibleEmbedder } from "./embedder";
+import { analyzeQuery, LexicalIndex, type LexicalHit } from "./lexical-index";
+import { VectorStore } from "./vector-store";
 
-// ─── Module-level state ────────────────────────────────────────────────────
+interface SearchHit {
+  chunk: Chunk;
+  score: number;
+  channels: string[];
+  matchedTerms: string[];
+}
 
 let config: RAGConfig;
-let store: VectorStore;
+let chunks: Chunk[] = [];
+let lexicalIndex = new LexicalIndex();
+let vectorStore = new VectorStore();
 let embedder: OpenAICompatibleEmbedder;
-
-/** Ring buffer of log entries (last N) */
-interface LogEntry {
-  timestamp: string;
-  level: "info" | "warn" | "error" | "debug";
-  message: string;
-}
-const MAX_LOG = 50;
-const logs: LogEntry[] = [];
-
-function log(level: LogEntry["level"], message: string): void {
-  const entry: LogEntry = {
-    timestamp: new Date().toISOString().slice(11, 23),
-    level,
-    message,
-  };
-  logs.push(entry);
-  if (logs.length > MAX_LOG) logs.shift();
-  if (level === "error") console.error(`[RAG] ${message}`);
-  else if (level === "warn") console.warn(`[RAG] ${message}`);
-  else console.log(`[RAG] ${message}`);
-}
-
-/** Set by #RAG prefix handler */
-let forceExtendedRAG = false;
-/** Whether we already injected RAG this session (first prompt flag) */
-let hasInjectedThisSession = false;
+let rootDir = process.cwd();
 let initialized = false;
 let indexing = false;
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
-
-function getProjectRoot(ctx?: { cwd: string }): string {
-  return ctx?.cwd ?? process.cwd();
+function loadLexicalCorpus(projectRoot: string): { chunkCount: number; fileCount: number } {
+  const files = discoverDocumentationFiles(config, projectRoot);
+  chunks = chunkFiles(files, config);
+  lexicalIndex.build(chunks);
+  return { chunkCount: chunks.length, fileCount: files.length };
 }
 
-function getCachePath(rootDir: string): string {
-  return resolve(rootDir, config.cachePath);
-}
-
-function formatChunk(chunk: Chunk & { similarity?: number }): string {
-  const sourceInfo = `Source: ${chunk.filePath} > ${chunk.heading}`;
-  const relevance =
-    chunk.similarity !== undefined
-      ? ` (relevance: ${(chunk.similarity * 100).toFixed(0)}%)`
-      : "";
-  return `### ${sourceInfo}${relevance}\n${chunk.content}`;
-}
-
-// ─── Indexing (with detailed step-by-step error reporting) ──────────────────
-
-interface IndexResult {
-  chunkCount: number;
-  fileCount: number;
-}
-
-async function rebuildIndex(rootDir: string): Promise<IndexResult> {
-  if (indexing) throw new Error("Indexing already in progress");
+async function rebuildVectorIndex(): Promise<{ chunkCount: number; fileCount: number }> {
+  if (indexing) throw new Error("Индекс уже перестраивается");
+  if (!config.embeddingApiKey) throw new Error("RAG_API_KEY не задан; BM25 и grep доступны без него");
   indexing = true;
-  log("info", "Starting index rebuild...");
-
   try {
-    // Step 1: discover files
-    log("info", "Step 1/4: Discovering documentation files...");
-    let files: Array<{ filePath: string; content: string }>;
-    try {
-      files = discoverDocumentationFiles(config, rootDir);
-      log("info", `  Found ${files.length} files`);
-      files.forEach((f) => log("debug", `  - ${f.filePath} (${f.content.length} bytes)`));
-    } catch (err) {
-      const msg = `File discovery failed: ${err instanceof Error ? err.message : String(err)}`;
-      log("error", msg);
-      throw new Error(msg);
+    const info = loadLexicalCorpus(rootDir);
+    const embeddings = await batchEmbed(embedder, chunks.map((chunk) => chunk.content), 50);
+    vectorStore.index(chunks, embeddings, config.embeddingModel);
+    if (!vectorStore.saveToDisk(resolve(rootDir, config.cachePath))) {
+      throw new Error("Не удалось сохранить векторный кэш");
     }
-
-    if (files.length === 0) {
-      const msg = `No documentation files found. Checked patterns: ${JSON.stringify(config.includePatterns)} in ${rootDir}`;
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    // Step 2: chunk files
-    log("info", "Step 2/4: Chunking markdown files...");
-    let chunks: Chunk[];
-    try {
-      chunks = chunkFiles(files, config);
-      log("info", `  Produced ${chunks.length} chunks`);
-    } catch (err) {
-      const msg = `Chunking failed: ${err instanceof Error ? err.message : String(err)}`;
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    if (chunks.length === 0) {
-      const msg = "Chunking produced zero chunks — check file formats";
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    // Log chunk stats
-    const sizes = chunks.map((c) => c.content.length);
-    sizes.sort((a, b) => a - b);
-    const avg = Math.round(sizes.reduce((a, b) => a + b, 0) / sizes.length);
-    log("info", `  Chunk sizes: min=${sizes[0]} max=${sizes[sizes.length - 1]} avg=${avg}`);
-
-    // Step 3: embed
-    log("info", `Step 3/4: Generating embeddings (${chunks.length} chunks)...`);
-    const texts = chunks.map((c) => c.content);
-    let embeddings: number[][];
-    try {
-      embeddings = await batchEmbed(embedder, texts, 50);
-      log("info", `  Got ${embeddings.length} embeddings, dim=${embeddings[0]?.length || "?"}`);
-    } catch (err) {
-      const msg = `Embedding failed: ${err instanceof Error ? err.message : String(err)}`;
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    if (embeddings.length !== chunks.length) {
-      const msg = `Embedding count mismatch: ${embeddings.length} embeddings for ${chunks.length} chunks`;
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    // Step 4: index + cache
-    log("info", "Step 4/4: Building index and saving cache...");
-    try {
-      store.index(chunks, embeddings, config.embeddingModel);
-      log("info", `  Index built: ${store.chunkCount} chunks, ${store.fileCount} files`);
-
-      const cachePath = getCachePath(rootDir);
-      const saved = store.saveToDisk(cachePath);
-      if (saved) {
-        log("info", `  Cache saved to ${cachePath}`);
-      } else {
-        log("warn", `  Failed to save cache to ${cachePath} (non-fatal)`);
-      }
-    } catch (err) {
-      const msg = `Index/cache error: ${err instanceof Error ? err.message : String(err)}`;
-      log("error", msg);
-      throw new Error(msg);
-    }
-
-    log("info", `Index rebuild complete: ${chunks.length} chunks from ${files.length} files`);
-    return { chunkCount: chunks.length, fileCount: files.length };
-  } catch (err) {
-    // re-throw after logging
-    throw err;
+    return info;
   } finally {
     indexing = false;
   }
 }
 
-async function ensureIndex(rootDir: string): Promise<IndexResult> {
-  const cachePath = getCachePath(rootDir);
-
-  if (store.loadFromDisk(cachePath)) {
-    log("info", `Loaded ${store.chunkCount} chunks from cache (${store.fileCount} files)`);
-    return { chunkCount: store.chunkCount, fileCount: store.fileCount };
-  }
-
-  log("info", "No valid cache found, building fresh index...");
-  return await rebuildIndex(rootDir);
+function addRankedHits(
+  target: Map<string, SearchHit>,
+  hits: LexicalHit[],
+  channel: string,
+  weight: number,
+): void {
+  hits.forEach((hit, rank) => {
+    const current = target.get(hit.chunk.id) ?? {
+      chunk: hit.chunk,
+      score: 0,
+      channels: [],
+      matchedTerms: [],
+    };
+    current.score += weight / (60 + rank + 1);
+    if (!current.channels.includes(channel)) current.channels.push(channel);
+    current.matchedTerms = [...new Set([...current.matchedTerms, ...hit.matchedTerms])];
+    target.set(hit.chunk.id, current);
+  });
 }
 
-// ─── Extension Entry Point ──────────────────────────────────────────────────
-
-export default async function ragExtension(pi: ExtensionAPI) {
-  config = defaultConfig(getProjectRoot());
-  store = new VectorStore();
-  embedder = new OpenAICompatibleEmbedder(
-    config.embeddingApiUrl,
-    config.embeddingModel,
-    config.embeddingApiKey,
-  );
-
-  // ── Session start: initialise index & reset state ───────────────────
-
-  pi.on("session_start", async (_event, ctx) => {
-    hasInjectedThisSession = false;
-    forceExtendedRAG = false;
-
-    if (initialized) return;
-    initialized = true;
-
-    const rootDir = getProjectRoot(ctx);
-    log("info", `Session start, root=${rootDir}`);
-
-    if (config.enabled) {
-      ctx.ui.setStatus("rag", "RAG: loading...");
-
-      try {
-        const info = await ensureIndex(rootDir);
-        ctx.ui.setStatus(
-          "rag",
-          `RAG: ${info.chunkCount} chunks | ${info.fileCount} files`,
-        );
-        log("info", `Ready: ${info.chunkCount} chunks, ${info.fileCount} files`);
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        ctx.ui.setStatus("rag", "RAG: error");
-        ctx.ui.notify(`RAG init failed: ${msg.slice(0, 200)}`, "error");
-        log("error", `Init failed: ${msg}`);
-      }
-    } else {
-      ctx.ui.setStatus("rag", "RAG: disabled");
-    }
-  });
-
-  // ── Detect "#RAG" prefix → extended search ─────────────────────────
-
-  pi.on("input", async (event) => {
-    if (!config.enabled) return { action: "continue" as const };
-
-    const text = event.text.trim();
-    if (text.startsWith(config.extendedPrefix)) {
-      forceExtendedRAG = true;
-      const cleaned = text.slice(config.extendedPrefix.length).trimStart();
-      log("debug", `#RAG prefix detected, extended search queued`);
-      return { action: "transform" as const, text: cleaned };
-    }
-
-    return { action: "continue" as const };
-  });
-
-  // ── Inject RAG context before agent starts ──────────────────────────
-
-  pi.on("before_agent_start", async (event) => {
-    if (!config.enabled) return;
-
-    const prompt = event.prompt?.trim();
-    if (!prompt || prompt.length < config.minPromptLength) return;
-
-    // Decision logic
-    let topK: number;
-    if (forceExtendedRAG) {
-      topK = config.extendedTopK;
-      forceExtendedRAG = false;
-      log("debug", `Extended RAG (topK=${topK}) triggered by #RAG prefix`);
-    } else if (!hasInjectedThisSession) {
-      topK = config.topK;
-      hasInjectedThisSession = true;
-      log("debug", `First-prompt RAG injection (topK=${topK})`);
-    } else {
-      return; // skip — not first prompt, no #RAG
-    }
-
-    // Build query embedding
-    let queryEmbedding: number[];
-    try {
-      const start = performance.now();
-      const embs = await embedder.embed([prompt]);
-      const elapsed = ((performance.now() - start) / 1000).toFixed(1);
-      queryEmbedding = embs[0];
-      log("debug", `Query embedded in ${elapsed}s`);
-    } catch (err) {
-      log("error", `Query embedding failed: ${err instanceof Error ? err.message : String(err)}`);
-      return;
-    }
-
-    // Search
-    const results = store.search(
-      queryEmbedding,
-      topK,
-      config.similarityThreshold,
-    ) as (Chunk & { similarity: number })[];
-
-    if (results.length === 0) {
-      log("debug", `Search returned 0 results (threshold=${config.similarityThreshold})`);
-      return;
-    }
-
-    // Format within size limits
-    let ragText = "";
-    let totalChars = 0;
-
-    for (const chunk of results) {
-      const formatted = formatChunk(chunk) + "\n\n";
-      if (totalChars + formatted.length > config.maxContextChars) break;
-      ragText += formatted;
-      totalChars += formatted.length;
-    }
-
-    if (!ragText) return;
-
-    const ragSection = [
-      "",
-      "## Relevant HOI4 Documentation",
-      "",
-      "The following sections from the HOI4 mod documentation are relevant to your task.",
-      "Use them as authoritative references when writing focus trees, ideas, decisions, effects, triggers, or modifiers.",
-      "",
-      ragText.trim(),
-      "",
-      "---",
-    ].join("\n");
-
-    log("debug", `Injected ${results.length} chunks (${totalChars} chars)`);
-
-    return {
-      systemPrompt: event.systemPrompt + ragSection,
+function addSemanticHits(target: Map<string, SearchHit>, semanticChunks: Array<Chunk & { similarity: number }>): void {
+  semanticChunks.forEach((chunk, rank) => {
+    const current = target.get(chunk.id) ?? {
+      chunk,
+      score: 0,
+      channels: [],
+      matchedTerms: [],
     };
+    current.score += 1.2 / (60 + rank + 1);
+    current.channels.push("semantic");
+    target.set(chunk.id, current);
+  });
+}
+
+async function searchDocumentation(
+  query: string,
+  mode: "hybrid" | "bm25" | "grep" | "semantic",
+  limit: number,
+  filePattern?: string,
+): Promise<{ hits: SearchHit[]; semanticSkipped?: string }> {
+  const poolSize = Math.max(limit * 4, 20);
+  const combined = new Map<string, SearchHit>();
+  let semanticSkipped: string | undefined;
+
+  if (mode === "hybrid" || mode === "bm25") {
+    addRankedHits(combined, lexicalIndex.searchBm25(query, poolSize, filePattern), "bm25", 1);
+  }
+  if (mode === "hybrid" || mode === "grep") {
+    addRankedHits(combined, lexicalIndex.searchGrep(query, poolSize, filePattern), "grep", 1.1);
+  }
+  if (mode === "hybrid" || mode === "semantic") {
+    if (!config.embeddingApiKey) {
+      semanticSkipped = "RAG_API_KEY не задан";
+    } else if (vectorStore.chunkCount === 0) {
+      semanticSkipped = "векторный кэш отсутствует; выполните /docs-reindex";
+    } else {
+      try {
+        const [queryEmbedding] = await embedder.embed([query]);
+        const semantic = vectorStore.search(queryEmbedding, poolSize, 0) as Array<Chunk & { similarity: number }>;
+        const filtered = filePattern
+          ? semantic.filter((chunk) => chunk.filePath.toLocaleLowerCase().includes(filePattern.toLocaleLowerCase()))
+          : semantic;
+        addSemanticHits(combined, filtered);
+      } catch (error) {
+        semanticSkipped = error instanceof Error ? error.message : String(error);
+      }
+    }
+  }
+
+  if (mode === "semantic" && semanticSkipped) throw new Error(semanticSkipped);
+  return {
+    hits: [...combined.values()].sort((left, right) => right.score - left.score).slice(0, limit),
+    semanticSkipped,
+  };
+}
+
+function formatResults(query: string, hits: SearchHit[], semanticSkipped?: string): string {
+  const terms = analyzeQuery(query);
+  const lines = [
+    `Запрос: ${query}`,
+    `Термины: ${terms.join(", ") || "не выделены"}`,
+    semanticSkipped ? `Semantic: пропущен (${semanticSkipped})` : "",
+    "",
+  ].filter(Boolean);
+
+  let chars = lines.join("\n").length;
+  for (let index = 0; index < hits.length; index++) {
+    const hit = hits[index];
+    const header = [
+      `## ${index + 1}. ${hit.chunk.filePath} > ${hit.chunk.heading}`,
+      `Каналы: ${hit.channels.join(" + ")}; совпадения: ${hit.matchedTerms.join(", ") || "семантическое"}`,
+    ].join("\n");
+    const block = `${header}\n\n${hit.chunk.content.trim()}\n\n`;
+    if (chars + block.length > config.maxResultChars) {
+      lines.push(`[Результаты обрезаны по лимиту ${config.maxResultChars} символов]`);
+      break;
+    }
+    lines.push(block.trimEnd(), "");
+    chars += block.length;
+  }
+  return lines.join("\n").trim();
+}
+
+export default function docsSearchExtension(pi: ExtensionAPI) {
+  pi.registerTool({
+    name: "docs_search",
+    label: "HOI4 Docs Search",
+    description: "Ищет документацию HOI4 по локальному корпусу. Hybrid объединяет точные совпадения grep, BM25 и доступный векторный RAG. Возвращает выдержки с путями; limit 1-12.",
+    promptSnippet: "Search local HOI4 documentation with grep, BM25, and optional semantic RAG",
+    promptGuidelines: [
+      "Use docs_search early for HOI4 tasks to interpret domain-specific terms and words from the user's prompt before planning or editing.",
+      "For unfamiliar HOI4 identifiers, effects, triggers, modifiers, scopes, localization syntax, or modding concepts, query docs_search with both the exact token and a short conceptual phrase; cite returned source paths in reasoning and handoffs.",
+      "Do not guess HOI4 syntax when docs_search or local vanilla references can verify it.",
+    ],
+    parameters: Type.Object({
+      query: Type.String({ description: "Термин, идентификатор или короткий вопрос по HOI4" }),
+      mode: Type.Optional(StringEnum(["hybrid", "bm25", "grep", "semantic"] as const)),
+      limit: Type.Optional(Type.Integer({ minimum: 1, maximum: 12 })),
+      filePattern: Type.Optional(Type.String({ description: "Подстрока пути для ограничения корпуса" })),
+    }),
+    async execute(_toolCallId, params) {
+      if (!initialized) {
+        rootDir = process.cwd();
+        config = defaultConfig(rootDir);
+        embedder = new OpenAICompatibleEmbedder(config.embeddingApiUrl, config.embeddingModel, config.embeddingApiKey);
+        loadLexicalCorpus(rootDir);
+        vectorStore.loadFromDisk(resolve(rootDir, config.cachePath));
+        initialized = true;
+      }
+      const query = params.query.trim();
+      if (query.length < 2) throw new Error("Запрос должен содержать минимум 2 символа");
+      const mode = params.mode ?? "hybrid";
+      const limit = Math.min(params.limit ?? config.defaultLimit, config.maxLimit);
+      const result = await searchDocumentation(query, mode, limit, params.filePattern?.trim() || undefined);
+      const text = result.hits.length > 0
+        ? formatResults(query, result.hits, result.semanticSkipped)
+        : `По запросу «${query}» ничего не найдено.`;
+      return {
+        content: [{ type: "text", text }],
+        details: {
+          query,
+          mode,
+          count: result.hits.length,
+          terms: analyzeQuery(query),
+          sources: result.hits.map((hit) => ({ path: hit.chunk.filePath, heading: hit.chunk.heading, channels: hit.channels })),
+          semanticSkipped: result.semanticSkipped,
+        },
+      };
+    },
   });
 
-  // ── Session shutdown ──────────────────────────────────────────────
+  pi.on("session_start", (_event, ctx) => {
+    rootDir = ctx.cwd;
+    config = defaultConfig(rootDir);
+    embedder = new OpenAICompatibleEmbedder(config.embeddingApiUrl, config.embeddingModel, config.embeddingApiKey);
+    const info = loadLexicalCorpus(rootDir);
+    const vectorReady = vectorStore.loadFromDisk(resolve(rootDir, config.cachePath));
+    initialized = true;
+    ctx.ui.setStatus("docs-search", `HOI4 docs: ${info.chunkCount} chunks${vectorReady ? " + RAG" : ""}`);
+  });
 
-  pi.on("session_shutdown", async () => {
+  pi.on("session_shutdown", () => {
     initialized = false;
-    hasInjectedThisSession = false;
-    forceExtendedRAG = false;
-    log("info", "Session shut down");
+    chunks = [];
+    lexicalIndex = new LexicalIndex();
+    vectorStore = new VectorStore();
   });
 
-  // ── Commands ──────────────────────────────────────────────────────
-
-  pi.registerCommand("rag-status", {
-    description: "Show RAG index status and recent errors",
+  pi.registerCommand("docs-status", {
+    description: "Показать состояние локального поиска документации HOI4",
     handler: async (_args, ctx) => {
-      if (!config.enabled) {
-        ctx.ui.notify("RAG is disabled. Use /rag-toggle to enable.", "warning");
-        return;
-      }
-
-      const recentErrors = logs
-        .filter((l) => l.level === "error")
-        .slice(-3);
-
-      if (store.chunkCount === 0) {
-        let out = "RAG index is empty.";
-        if (recentErrors.length > 0) {
-          out += "\n\nRecent errors:\n" + recentErrors.map((e) => `  ${e.timestamp} ${e.message}`).join("\n");
-        }
-        ctx.ui.notify(out, "warning");
-        return;
-      }
-
-      const info = store.getInfo();
-      const injected = hasInjectedThisSession ? "yes (first prompt done)" : "no";
-      const lines = [
-        "RAG Index:",
-        `  Chunks: ${info.chunkCount}`,
-        `  Files: ${info.fileCount}`,
-        `  Model: ${config.embeddingModel}`,
-        `  Default topK: ${config.topK} (first prompt only)`,
-        `  Extended (#RAG): ${config.extendedTopK} (always)`,
-        `  Injected this session: ${injected}`,
-      ];
-
-      if (recentErrors.length > 0) {
-        lines.push("", "Recent errors:");
-        for (const e of recentErrors) {
-          lines.push(`  ${e.timestamp} ${e.message.slice(0, 150)}`);
-        }
-        lines.push("", "Use /rag-logs for full log");
-      }
-
-      ctx.ui.notify(lines.join("\n"), "info");
+      ctx.ui.notify([
+        `Lexical chunks: ${chunks.length}`,
+        `Vector chunks: ${vectorStore.chunkCount}`,
+        `Embedding key: ${config.embeddingApiKey ? "configured" : "not configured"}`,
+        `Sources: ${config.includePatterns.join(", ")}`,
+        "Автоматическая подстановка документации отключена; используйте docs_search.",
+      ].join("\n"), "info");
     },
   });
 
-  pi.registerCommand("rag-logs", {
-    description: "Show detailed RAG error/operation log",
+  pi.registerCommand("docs-reindex", {
+    description: "Пересобрать BM25/grep и векторный индекс документации HOI4",
     handler: async (_args, ctx) => {
-      if (logs.length === 0) {
-        ctx.ui.notify("No log entries yet.", "info");
-        return;
-      }
-
-      const lines = logs.map((e) => {
-        const tag = e.level === "error" ? "ERR" : e.level === "warn" ? "WRN" : e.level === "debug" ? "DBG" : "INF";
-        return `${e.timestamp} [${tag}] ${e.message}`;
-      });
-
-      ctx.ui.notify(lines.join("\n"), "info");
-    },
-  });
-
-  pi.registerCommand("rag-reindex", {
-    description: "Rebuild RAG index from source documentation files",
-    handler: async (_args, ctx) => {
-      if (!config.enabled) {
-        ctx.ui.notify("RAG is disabled. Use /rag-toggle to enable.", "warning");
-        return;
-      }
-
-      const rootDir = getProjectRoot(ctx);
-      ctx.ui.setStatus("rag", "RAG: indexing...");
-      ctx.ui.notify("Rebuilding RAG index (check logs for progress)...", "info");
-
+      ctx.ui.setStatus("docs-search", "HOI4 docs: indexing...");
       try {
-        const info = await rebuildIndex(rootDir);
-        ctx.ui.setStatus(
-          "rag",
-          `RAG: ${info.chunkCount} chunks | ${info.fileCount} files`,
-        );
-        ctx.ui.notify(
-          `Index rebuilt: ${info.chunkCount} chunks from ${info.fileCount} files`,
-          "success",
-        );
-        hasInjectedThisSession = false;
-      } catch (err) {
-        ctx.ui.setStatus("rag", "RAG: error");
-        const msg = err instanceof Error ? err.message : String(err);
-        ctx.ui.notify(`Index rebuild failed: ${msg.slice(0, 200)}`, "error");
+        const info = await rebuildVectorIndex();
+        ctx.ui.setStatus("docs-search", `HOI4 docs: ${info.chunkCount} chunks + RAG`);
+        ctx.ui.notify(`Индекс пересобран: ${info.chunkCount} фрагментов из ${info.fileCount} файлов`, "success");
+      } catch (error) {
+        ctx.ui.setStatus("docs-search", `HOI4 docs: ${chunks.length} chunks`);
+        ctx.ui.notify(error instanceof Error ? error.message : String(error), "error");
       }
     },
   });
 
-  pi.registerCommand("rag-search", {
-    description: "Search RAG index manually. Usage: /rag-search <query>",
+  pi.registerCommand("docs-search", {
+    description: "Поиск документации HOI4: /docs-search <запрос>",
     handler: async (args, ctx) => {
-      if (!config.enabled) {
-        ctx.ui.notify("RAG is disabled.", "warning");
+      if (!args.trim()) {
+        ctx.ui.notify("Использование: /docs-search <запрос>", "warning");
         return;
       }
-      if (!args || args.trim().length < 3) {
-        ctx.ui.notify("Usage: /rag-search <query>", "warning");
-        return;
-      }
-      if (store.chunkCount === 0) {
-        ctx.ui.notify("RAG index is empty. Run /rag-reindex first.", "warning");
-        return;
-      }
-
-      ctx.ui.notify("Searching...", "info");
       try {
-        const embs = await embedder.embed([args]);
-        const results = store.search(
-          embs[0],
-          config.extendedTopK,
-          0,
-        ) as (Chunk & { similarity: number })[];
-
-        if (results.length === 0) {
-          ctx.ui.notify("No relevant results found.", "info");
-          return;
-        }
-
-        const lines = results.map(
-          (r, i) =>
-            `${i + 1}. [${(r.similarity * 100).toFixed(0)}%] ${r.filePath} > ${r.heading}`,
-        );
-        ctx.ui.notify(`Top ${results.length} results:\n${lines.join("\n")}`, "info");
-      } catch (err) {
-        ctx.ui.notify(
-          `Search failed: ${err instanceof Error ? err.message : String(err)}`,
-          "error",
-        );
+        const result = await searchDocumentation(args.trim(), "hybrid", config.defaultLimit);
+        ctx.ui.notify(result.hits.length > 0 ? formatResults(args.trim(), result.hits, result.semanticSkipped) : "Ничего не найдено", "info");
+      } catch (error) {
+        ctx.ui.notify(error instanceof Error ? error.message : String(error), "error");
       }
-    },
-  });
-
-  pi.registerCommand("rag-toggle", {
-    description: "Enable or disable RAG context injection",
-    handler: async (_args, ctx) => {
-      config.enabled = !config.enabled;
-
-      if (config.enabled) {
-        ctx.ui.setStatus("rag", "RAG: enabled");
-        ctx.ui.notify("RAG enabled", "success");
-        if (store.chunkCount === 0) {
-          const rootDir = getProjectRoot(ctx);
-          try {
-            await ensureIndex(rootDir);
-          } catch {
-            // user can /rag-reindex
-          }
-        }
-      } else {
-        ctx.ui.setStatus("rag", "RAG: disabled");
-        ctx.ui.notify("RAG disabled", "info");
-      }
-    },
-  });
-
-  pi.registerCommand("rag-config", {
-    description: "Show current RAG configuration",
-    handler: async (_args, ctx) => {
-      ctx.ui.notify(
-        [
-          "RAG Configuration:",
-          `  Enabled: ${config.enabled}`,
-          `  Model: ${config.embeddingModel}`,
-          `  API: ${config.embeddingApiUrl}`,
-          `  Default topK: ${config.topK} (first prompt only)`,
-          `  Extended topK (#RAG): ${config.extendedTopK} (always)`,
-          `  Similarity threshold: ${config.similarityThreshold}`,
-          `  Min prompt length: ${config.minPromptLength}`,
-          `  Max context chars: ${config.maxContextChars}`,
-          `  Cache: ${config.cachePath}`,
-          `  Corpus: docs/rag/corpus/`,
-        ].join("\n"),
-        "info",
-      );
     },
   });
 }
