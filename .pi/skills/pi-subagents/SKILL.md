@@ -268,7 +268,7 @@ For this project, do not set `extensions:` to empty on agents that need `docs_se
 Create, inspect, update, disable, or delete agents without manually editing files:
 
 ```ts
-subagent({ action: "get", agent: "hoi4-recon" })
+subagent({ action: "get", agent: "hoi4-weak-agent" })
 subagent({
   action: "create",
   config: {
@@ -307,14 +307,13 @@ Do not use dynamic fanout for prose parsing, arbitrary conditions, dynamic agent
 
 ## Smallest useful delegation
 
-- Locate content or understand a mechanic: one fresh `hoi4-recon`.
-- Requested plan: `hoi4-recon → hoi4-architect`.
-- Clear script change: one `hoi4-script-worker`; add recon only when terminology or scope is uncertain.
-- Localization-only task: one `hoi4-localization-worker`.
-- Map/GUI task: one `hoi4-map-gui-specialist`.
-- Explicit review request: a fresh `hoi4-validator` after implementation.
+- Locate content or understand a mechanic: one fresh `hoi4-weak-agent` (read-only).
+- Requested plan: `hoi4-weak-agent` evidence → `hoi4-strong-agent` plan.
+- Clear script or localization change: one `hoi4-weak-agent`.
+- Complex task: default to `hoi4-weak-agent`. `hoi4-strong-agent` permitted when user asks directly or `hoi4-weak-agent` fails 2 times on same task.
+- Explicit review request: a fresh `hoi4-weak-agent` after implementation.
 
-Do not launch a full workflow by default. Do not invoke `hoi4-architect` unless planning, recommendation, or a real design decision is needed.
+Do not invoke `hoi4-strong-agent` unless planning, strong review, or a real design decision is needed.
 
 ## Writer and Git safety
 

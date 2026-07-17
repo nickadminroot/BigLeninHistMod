@@ -34,29 +34,13 @@
       "recon-synth": { "disabled": true },
       "skill-optimizer": { "disabled": true },
       "verifier": { "disabled": true },
-      "hoi4-architect": {
+      "hoi4-weak-agent": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "thinking": "max"
+      },
+      "hoi4-strong-agent": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "xhigh"
-      },
-      "hoi4-localization-worker": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "thinking": "max"
-      },
-      "hoi4-map-gui-specialist": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "thinking": "max"
-      },
-      "hoi4-recon": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "thinking": "max"
-      },
-      "hoi4-script-worker": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "thinking": "max"
-      },
-      "hoi4-validator": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "thinking": "max"
+        "thinking": "high"
       }
     }
   }
