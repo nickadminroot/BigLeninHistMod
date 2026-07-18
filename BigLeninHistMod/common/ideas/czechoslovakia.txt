@@ -443,6 +443,24 @@ ideas = {
 			}
 		}
 
+		CZE_secular_education = {
+			picture = SOV_opiate_of_the_masses
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
 		CZE_communist_officers_training = {
 			picture = generic_reserve_divisions
 
