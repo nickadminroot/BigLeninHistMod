@@ -116,5 +116,1204 @@ ideas = {
 			}
 		}
 
+
+		HOL_the_foundations_of_defense = {
+
+			picture = hol_the_foundations_of_defense
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+
+		HOL_prepare_the_inundation_lines = {
+		
+			picture = hol_prepare_the_inundation_lines
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+
+		HOL_caved_to_the_british = {
+
+			name = HOL_caved_to_the_british_idea
+
+			picture = hol_caved_to_the_british
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = -0.02
+			}
+		}
+
+
+		HOL_unity_through_democracy = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = -0.02
+				communism_drift = -0.02
+				democratic_drift = 0.05
+				stability_weekly = 0.001
+			}
+		}
+
+
+		HOL_de_vaarplicht = {
+
+			picture = hol_de_vaarplicht
+
+			name = HOL_de_vaarplicht_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.025
+			}
+		}
+
+
+		HOL_modernize_the_air_fleet = {
+		
+			picture = generic_air_payment
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+		}
+
+
+		HOL_allied_technological_developments = {
+
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+
+
+		HOL_de_crisisjaren_1 = {
+
+			picture = great_depression
+
+			name = HOL_de_crisisjaren
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = -0.10
+			}
+		}
+
+
+		HOL_de_crisisjaren_2 = {
+
+			picture = great_depression
+
+			name = HOL_de_crisisjaren
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = -0.20
+			}
+		}
+
+
+		HOL_de_crisisjaren_3 = {
+
+			picture = great_depression
+
+			name = HOL_de_crisisjaren
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = -0.30
+			}
+		}
+
+
+		HOL_de_crisisjaren_4 = {
+
+			picture = great_depression
+
+			name = HOL_de_crisisjaren
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = -0.40
+			}
+		}
+
+
+		HOL_shell_shocked_spectator_1 = {
+
+			picture = hol_shell_shocked_spectator
+
+			name = HOL_shell_shocked_spectator
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+
+		HOL_shell_shocked_spectator_2 = {
+
+			picture = hol_shell_shocked_spectator
+
+			name = HOL_shell_shocked_spectator
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+
+		HOL_shell_shocked_spectator_3 = {
+
+			picture = hol_shell_shocked_spectator
+
+			name = HOL_shell_shocked_spectator
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				conscription_factor = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.03
+			}
+		}
+
+
+		HOL_shell_shocked_spectator_4 = {
+
+			picture = hol_shell_shocked_spectator
+
+			name = HOL_shell_shocked_spectator
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				conscription_factor = -0.15
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.06
+			}
+		}
+
+
+		HOL_domestic_jet_engine_designs_1 = {
+
+			name = HOL_domestic_aircraft_production
+
+			picture = generic_fighter_production_diverted
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+
+		HOL_domestic_jet_engine_designs_2 = {
+
+			name = HOL_domestic_aircraft_production
+
+			picture = generic_fighter_production_diverted
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+
+		HOL_production_under_license = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				license_infantry_eq_cost_factor = -1
+				license_artillery_eq_cost_factor = -1
+				license_infantry_eq_tech_difference_speed_factor = 0.5
+				license_artillery_eq_tech_difference_speed_factor = 0.5
+				license_infantry_eq_production_speed_factor = 0.25
+				license_artillery_eq_production_speed_factor = 0.25
+			}
+		}
+
+
+		HOL_light_tanks_for_the_colonies = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				license_light_tank_eq_cost_factor = -1
+				license_light_tank_eq_tech_difference_speed_factor = 0.5
+				license_light_tank_eq_production_speed_factor = 0.25
+			}
+		}
+
+
+		HOL_anti_tank_guns_for_the_continent = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				license_anti_tank_eq_cost_factor = -1
+				license_anti_tank_eq_tech_difference_speed_factor = 0.5
+				license_anti_tank_eq_production_speed_factor = 0.25
+			}
+		}
+
+
+		HOL_gateway_to_europe = {
+
+			picture = hol_gateway_to_europe
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.35
+			}
+		}
+
+
+		HOL_shared_intelligence_hol_eng = {
+
+			name = HOL_shared_intelligence_hol
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.02
+				defense_bonus_against = 0.05
+			}
+		}
+
+
+		HOL_shared_intelligence_hol_fra = {
+
+			name = HOL_shared_intelligence_hol
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.02
+				defense_bonus_against = 0.05
+			}
+		}
+
+
+		HOL_shared_intelligence_hol_ger = {
+
+			name = HOL_shared_intelligence_hol
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.02
+				defense_bonus_against = 0.05
+			}
+		}
+
+
+		HOL_shared_intelligence_eng_fra = {
+
+			name = HOL_shared_intelligence_eng
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_shared_intelligence_eng_ger = {
+
+			name = HOL_shared_intelligence_eng
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_shared_intelligence_fra_eng = {
+
+			name = HOL_shared_intelligence_fra
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_shared_intelligence_fra_ger = {
+
+			name = HOL_shared_intelligence_fra
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_shared_intelligence_ger_fra = {
+
+			name = HOL_shared_intelligence_ger
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_shared_intelligence_ger_eng = {
+
+			name = HOL_shared_intelligence_ger
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		HOL_staff_plan_eng = {
+
+			picture = FRA_fortification_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_core_defence_factor = 0.1
+				max_dig_in = 15
+			}
+		}
+
+
+		HOL_staff_plan_fra = {
+
+			picture = FRA_fortification_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_core_defence_factor = 0.1
+				max_dig_in = 15
+			}
+		}
+
+
+		HOL_staff_plan_ger = {
+
+			picture = FRA_fortification_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_core_defence_factor = 0.1
+				max_dig_in = 15
+			}
+		}
+
+
+		HOL_bernhard_good_air_example = {
+
+			name = HOL_bernhard_air_example
+
+			picture = generic_air_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_intercept_efficiency = 0.05
+			}
+		}
+
+
+		HOL_bernhard_bad_air_example = {
+
+			name = HOL_bernhard_air_example
+
+			picture = generic_air_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				air_superiority_efficiency = -0.05
+				air_intercept_efficiency = -0.05
+			}
+		}
+
+
+		HOL_bernhard_good_strategy_meddling = {
+
+			name = HOL_bernhard_strategy_meddling
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				planning_speed = 0.10
+			}
+		}
+
+
+		HOL_bernhard_bad_strategy_meddling = {
+
+			name = HOL_bernhard_strategy_meddling
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				planning_speed = -0.10
+			}
+		}
+
+
+		HOL_bernhard_good_intelligence = {
+
+			name = HOL_bernhard_intelligence
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
+
+		HOL_bernhard_bad_intelligence = {
+
+			name = HOL_bernhard_intelligence
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+			}
+		}
+
+
+		HOL_bernhard_organized_resistance = {
+
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.25 
+			}
+		}
+
+
+		HOL_friesland_agricultural_impetus = {
+
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+
+		HOL_domestic_vehicle_designs = {
+
+			picture = FRA_motorized_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+
+		HOL_make_use_of_our_riches = {
+
+			picture = generic_exploit_mines
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+
+		HOL_redirected_investments = {
+
+			picture = generic_exploit_mines
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.2
+			}
+
+		}
+
+
+		HOL_preparing_evacuation_of_gold_reserves = {
+
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+
+		}
+
+
+		HOL_zuiderzee_infrastructure_advancements = {
+
+			picture = generic_build_infrastructure
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+
+		}
+
+
+		HOL_zuiderzee_industrial_advancements = {
+
+			picture = generic_exploit_mines
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+
+		}
+
 	}
 }
