@@ -3770,6 +3770,18 @@
 
 		}
 
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				always = no
+			}
+		}
+
 		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4273,6 +4285,15 @@
 		}
 
 		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				always = no
+			}
 			SWI_bba_lar = yes
 		}
 		
@@ -5133,6 +5154,18 @@
 
 		bypass = {
 
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				always = no
+			}
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
@@ -7110,6 +7143,18 @@
 		
 		bypass = {
 
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				always = no
+			}
 		}
 
 		cancel_if_invalid = no
