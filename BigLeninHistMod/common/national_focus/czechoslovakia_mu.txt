@@ -9406,7 +9406,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = ETH_secular_education
+			add_ideas = CZE_secular_education
 		}
 	}
 
