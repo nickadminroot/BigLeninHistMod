@@ -1182,6 +1182,36 @@ focus_tree = {
 		y = 1
 		relative_position_id = LIT_secure_a_loyal_cabinet
 
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = LIT_free_voldemares
+						has_completed_focus = LIT_exile_voldemares
+						has_completed_focus = BALTIC_restore_workers_republic
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = LIT_free_voldemares
+			}
+		}
+
 		cost = 10
 
 		ai_will_do = {
@@ -3913,6 +3943,35 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = LIT_lithuanian_preservationism
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = LIT_a_king_for_our_people
+						has_completed_focus = BALTIC_restore_workers_republic
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = LIT_a_king_for_our_people
+			}
+		}
 
 		cost = 5
 
