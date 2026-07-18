@@ -11,13 +11,13 @@ ideas = {
 			}
 
 			picture = PER_anglo_iranian_oil_ns
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				local_resources_factor = -0.15
 				industrial_capacity_factory = -0.1
-				min_export = 0.2			
+				min_export = 0.2
 			}
 		}
 
@@ -31,14 +31,14 @@ ideas = {
 			}
 
 			picture = POL_looming_peasants_strike
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_buildings_factor = -0.02
 				political_power_factor = 0.05
 				research_speed_factor = -0.05
-				conscription_factor = -0.05			
+				conscription_factor = -0.05
 			}
 		}
 
@@ -46,17 +46,17 @@ ideas = {
 			allowed = {
 				original_tag = PER
 			}
-	
+
 			allowed_civil_war = {
 				always = yes
 			}
-	
+
 			picture = PLACEHOLDER_idea_icon
-			
+
 			removal_cost = -1
-			
+
 			equipment_bonus = {
-			
+
 			}
 
 			modifier = {
@@ -70,20 +70,20 @@ ideas = {
 			allowed = {
 				original_tag = PER
 			}
-	
+
 			allowed_civil_war = {
 				NOT = {
 					tag = AZR
 					has_cosmetic_tag = AZR
 				}
 			}
-	
+
 			picture = PLACEHOLDER_idea_icon
-			
+
 			removal_cost = -1
-			
+
 			equipment_bonus = {
-			
+
 			}
 
 			modifier = {
@@ -105,11 +105,11 @@ ideas = {
 			}
 
 			picture = PLACEHOLDER_idea_icon
-			
+
 			removal_cost = -1
-			
+
 			equipment_bonus = {
-			
+
 			}
 			modifier = {
 				stability_factor = -0.1
@@ -117,5 +117,533 @@ ideas = {
 			}
 		}
 
+		PER_modernizing_iran_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		PER_trans_iranian_railway_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_train_tracks
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_rail_way_factor = 0.05
+				production_speed_supply_node_factor = 0.05
+			}
+		}
+
+		PER_price_stabilization_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ITA_devaluated_lira
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+
+		PER_food_for_all_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PLACEHOLDER_idea_icon
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
+
+		PER_tehran_power_grid_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PLACEHOLDER_idea_icon
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		PER_oil_baron_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_stockpile_fuel
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.2
+				industrial_capacity_factory = 0.1
+				production_speed_synthetic_refinery_factor = 0.15
+			}
+		}
+
+		PER_future_of_war_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SWE_land_air_warfare
+
+			removal_cost = -1
+
+			modifier = {
+				army_armor_defence_factor = 0.05
+				army_armor_attack_factor = 0.035
+				army_org_factor = 0.04
+			}
+		}
+
+		PER_motorization_investments_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_motorized_focus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = 0.05
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = 0.05
+				}
+			}
+
+			modifier = {
+
+			}
+		}
+
+		PER_desert_training_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_tuz_golu_training_facility
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.15
+				training_time_factor = -0.02
+			}
+		}
+
+		PER_conscription_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = eng_imperial_conscription
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+
+			modifier = {
+				conscription = 0.015
+			}
+		}
+
+		PER_military_excellency_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = NORDIC_army_monarchist
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		PER_savak_idea_no_lar = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PER_savak_idea
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+
+			modifier = {
+				encryption = 1
+				decryption = 1
+			}
+		}
+
+		PER_savak_lar = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PER_savak_idea
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				operative_slot = 2
+			}
+		}
+
+		PER_fund_state_intelligence_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = PLACEHOLDER_idea_icon
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+
+			modifier = {
+				civilian_intel_to_others = -25
+				decryption = 1
+			}
+		}
+
+		PER_transfer_officer_idea_lar = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_kemalist_officers
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+
+			modifier = {
+				operative_slot = 2
+			}
+		}
+
+		PER_transfer_officer_idea_no_lar = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_kemalist_officers
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+
+			modifier = {
+				airforce_intel_to_others = -25
+				navy_intel_to_others = -25
+				army_intel_to_others = -25
+			}
+		}
+
+		PER_trial_fifty_three_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			picture = generic_communism_banned
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				stability_factor = 0.1
+				communism_drift = -0.1
+			}
+		}
+
+		PER_persian_german_trade_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = GER_german_trade
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				research_speed_factor = 0.02
+				political_power_factor = 0.02
+			}
+		}
+
+		PER_persian_german_trade_idea_2 = {
+			name = PER_persian_german_trade_idea
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = GER_german_trade
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			targeted_modifier = {
+				tag = PER
+				trade_cost_for_target_factor = -0.1
+			}
+		}
+
+		PER_compliant_subject_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_deal_with_the_devil2
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				autonomy_gain = 1.0
+				political_power_gain = 0.1
+			}
+		}
+
+		PER_constitutional_shah = {
+			allowed = {
+				tag = PER
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				research_speed_factor = 0.03
+				conscription_factor = 0.03
+			}
+		}
+
+		PER_azadi_idea = {
+			allowed = {
+				original_tag = PER
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = MEX_revolutionary_army
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+			}
+			modifier = {
+				autonomy_gain = 1.0
+				stability_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
 	}
+
+naval_manufacturer = {
+
+	designer = yes
+
+	PER_iranian_shipyards = {
+		name = PER_iranian_shipyards_organization
+		picture = PER_iranian_shipyards
+
+		allowed = {
+			original_tag = PER
+		}
+
+		visible = {
+			NOT = { has_completed_focus = PER_found_iranian_shipyards }
+		}
+
+		cost = 150
+
+		research_bonus = {
+			naval_equipment = 0.15
+		}
+
+		traits = { convoy_escort_naval_manufacturer }
+	}
+
+	PER_iranian_shipyards_improved = {
+		name = PER_iranian_shipyards_organization
+		picture = PER_iranian_shipyards
+
+		allowed = {
+			original_tag = PER
+		}
+
+		visible = {
+			has_completed_focus = PER_found_iranian_shipyards
+		}
+
+		cost = 150
+
+		research_bonus = {
+			naval_equipment = 0.15
+		}
+
+		modifier = {
+			air_escort_efficiency = 0.1
+
+		}
+		traits = { convoy_escort_naval_manufacturer }
+	}
+}
 }
