@@ -146,6 +146,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_reinforce_old_alliances
+		allow_branch = { always = no }
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = YUG_western_focus }
 		mutually_exclusive = { focus = YUG_friendship_treaty_with_italy }
@@ -364,6 +365,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_limited_self_government
+		allow_branch = { always = no }
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = YUG_attract_allied_capital focus = YUG_attract_axis_capital }
 		mutually_exclusive = { focus = YUG_evolution }
@@ -1773,6 +1775,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_crush_the_ustasa
+		allow_branch = { always = no }
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = YUG_evolution }
 		mutually_exclusive = { focus = YUG_establish_the_banovina_of_croatia }
@@ -1900,6 +1903,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_slovenia_for_support
+		allow_branch = { always = no }
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = YUG_crush_the_ustasa focus = YUG_establish_the_banovina_of_croatia }
 		mutually_exclusive = { focus = YUG_ban_slovene_nationalist_parties }
@@ -2045,6 +2049,7 @@ focus_tree = {
 	
 	focus = {
 		id = YUG_surrender_macedonia
+		allow_branch = { always = no }
 		icon = GFX_focus_CZE_german_puppet
 		prerequisite = { focus = YUG_slovenia_for_support focus = YUG_ban_slovene_nationalist_parties }
 		mutually_exclusive = { focus = YUG_concessions_for_macedonians }
@@ -2281,6 +2286,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_zara_for_axis
+		allow_branch = { always = no }
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = YUG_join_axis }
 		mutually_exclusive = { focus = YUG_surrender_italian_claims }
@@ -2333,6 +2339,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_surrender_italian_claims
+		allow_branch = { always = no }
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = YUG_join_axis }
 		mutually_exclusive = { focus = YUG_zara_for_axis }
@@ -2672,6 +2679,7 @@ focus_tree = {
 	
 	focus = {
 		id = YUG_coronation
+		allow_branch = { always = no }
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = YUG_end_the_regency focus = YUG_join_axis }
 		x = -2
@@ -2954,6 +2962,7 @@ focus_tree = {
 	
 	focus = {
 		id = YUG_enforced_neutrality
+		allow_branch = { always = no }
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = YUG_royal_wedding }
 		prerequisite = { focus = YUG_coronation }
@@ -3480,6 +3489,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_recognize_the_soviet_union
+		allow_branch = { always = no }
 		icon = GFX_focus_generic_soviet_politics
 		mutually_exclusive = { focus = YUG_western_focus }
 		x = 11
