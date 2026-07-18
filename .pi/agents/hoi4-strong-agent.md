@@ -1,6 +1,6 @@
 ---
 name: hoi4-strong-agent
-description: For planning and complex tasks when weak agent fails.
+description: For planning and complex tasks when weak agent fails. Use only if user permits it.
 tools: read,bash,docs_search,docs_search,web_search, fetch_content, get_search_content
 skills: hoi4-mod-development
 systemPromptMode: append

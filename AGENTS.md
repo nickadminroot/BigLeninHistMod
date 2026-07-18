@@ -29,8 +29,69 @@ The local documentation corpus is under `docs/rag/corpus/`. `docs_search` combin
 - Multiplayer determinism and performance take priority over decorative complexity.
 - Do not introduce random or hidden rewards without an accurate visible tooltip.
 - Do not run destructive commands or Git lifecycle operations without explicit user approval.
-- Run `python scripts/hoi4-smoke-windows.py` only when the user explicitly requests the Windows smoke test.
+- Run `python scripts/hoi4-smoke-windows.py` only when the user explicitly requests the Windows smoke test; follow the serialized procedure below.
 - Prefix shell commands with `rtk`.
+
+## Windows smoke test
+
+Run the test from the repository root in native Windows PowerShell. Close HOI4 and Paradox Launcher first, and never run the game or another smoke test concurrently from any checkout or worktree.
+
+Minimal run with the script defaults:
+
+```powershell
+rtk python scripts/hoi4-smoke-windows.py
+```
+
+Common overrides for a non-default installation or a retained diagnostic run:
+
+```powershell
+$env:HOI4_DIR = "G:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+$env:PDX_USER_DIR = "G:\Documents\Paradox Interactive\Hearts of Iron IV"
+$env:SMOKE_TIMEOUT = "180s"
+$env:SMOKE_TAG = "SOV"
+$env:HOI4_SMOKE_KEEP_DATA = "1"
+rtk python scripts/hoi4-smoke-windows.py
+```
+
+- `HOI4_DIR` must contain `hoi4.exe`; `PDX_USER_DIR` is the active Paradox user-data directory. The defaults are defined in the script.
+- `SMOKE_TIMEOUT` accepts seconds or `s`, `m`, `h`, and `d` suffixes. A timeout is the normal way the test stops HOI4: the script terminates the launched process tree and then evaluates `logs/error.log`.
+- The script temporarily replaces and restores `PDX_USER_DIR/dlc_load.json`, `PDX_USER_DIR/mod/BigLeninHistMod.mod`, and `HOI4_DIR/cream_api.ini` when present. An interrupted or concurrent run can leave `.hoi4-smoke-backup` files, so inspect them before retrying after an abnormal termination.
+- `PDX_SMOKE_HOME` selects a fixed artifact directory and implies retention; it does **not** isolate the shared HOI4 user-data directory or game installation.
+- A failure retains `hoi4-launch.log`, `matching-errors.txt`, and `crashes/` under the printed smoke directory. A passing run removes temporary artifacts unless `HOI4_SMOKE_KEEP_DATA=1` or `PDX_SMOKE_HOME` is set.
+- Optional diagnostics: `SMOKE_MAX_ERROR_ENTRIES` and `SMOKE_MAX_ENTRY_LINES` limit the summary; `HOI4_SMOKE_CREAM_UNLOCKALL=0` disables the temporary `unlockall` change. Use `SMOKE_INCLUDE_PATTERN` only for explicitly reported targeted diagnosis because it can hide unrelated errors.
+- Report the command and overrides used, PASS/FAIL and exit status, retained artifact path, relevant `error.log` sources, and any remaining in-game checks.
+
+## Worktrees
+
+Worktrees primarily isolate independent top-level Pi sessions that may write concurrently. The user normally organizes parallel work by assigning each main session its own worktree. Do not create a worktree merely because a session uses subagents.
+
+### Main Pi sessions
+
+A user instruction to "work in a worktree" authorizes the coordinating Pi session opened in the main repository to create a task branch/worktree, integrate the validated result back, and remove the task worktree and branch. It does not authorize force-removal, reset, rebase, or overwriting unrelated changes.
+
+```powershell
+# Create from the intended clean base; the helper expects the branch to exist.
+rtk git branch "<name>" "<base-commit>"
+rtk powershell -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
+
+# Inspect and open a separate Pi/editor session in the worktree.
+rtk git worktree list
+rtk code "../BigLeninHistMod.worktrees/<name>"
+```
+
+- Keep the coordinating session in the main repository. Open the implementation session with its working directory at the created worktree and perform all implementation, subagent work, and scoped validation there.
+- One top-level writing session owns one worktree and task branch. Give concurrent sessions disjoint features/files where practical; coordinate shared files and identifiers before integration.
+- After validation, the worktree session may commit its task branch. The coordinating main-repository session reviews the diff, merges the branch, validates the integrated tree, then removes the clean worktree and deletes the merged branch. Stop and report conflicts or uncommitted files instead of forcing cleanup.
+- Run the Windows smoke test only once on the integrated tree and only when explicitly requested; worktrees do not isolate HOI4 user data or the game installation.
+
+The helper symlinks extra files by default when present: `node_modules/`, `scripts/mcp/node_modules/`, `.pi/rag-cache.json`, `.env*`, and `.pnpm-store`. Use `-UseSymlinks:$false` to copy instead. Built-in switches include `-CopyEnv:$false`, `-CopyPiCache:$false`, and `-CopyNodeModules:$false`; entries in `$ExtraItems` are processed independently and can be edited in `scripts/git-newworktree.ps1`.
+
+### Subagents and workers
+
+- The top-level session's checkout is the default write boundary. Point subagents at that same worktree with an explicit `cwd`; they must not silently edit the main checkout.
+- Parallel read-only workers may share a checkout. Keep one writer at a time within one checkout.
+- Do not create one worktree per worker by default. Normally the user obtains real parallel writes through separate top-level Pi sessions and session-level worktrees.
+- Use subagent `worktree: true` only when the current session deliberately owns a separate parallel-writer workflow with disjoint ownership and a planned serial integration step. Workers do not perform Git lifecycle operations; the parent session reviews and integrates their results.
 
 ## Validation commands
 
