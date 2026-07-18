@@ -49,7 +49,7 @@ YUG_ikarus_organization = {
 			limit = {
 				has_dlc = "Death or Dishonor"
 			}
-			owner = { always = no }
+			owner = { has_completed_focus = YUG_ikarus }
 		}
 	}
 }
@@ -65,7 +65,7 @@ YUG_rogozarski_organization = {
 			limit = {
 				has_dlc = "Death or Dishonor"
 			}
-			owner = { always = no }
+			owner = { has_completed_focus = YUG_rogozarski }
 		}
 	}
 }
@@ -80,7 +80,7 @@ YUG_zmaj_organization = {
 			limit = {
 				has_dlc = "Death or Dishonor"
 			}
-			owner = { always = no }
+			owner = { has_completed_focus = YUG_zmaj }
 		}
 	}
 }
