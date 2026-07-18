@@ -60,6 +60,7 @@ rtk python scripts/hoi4-smoke-windows.py
 - A failure retains `hoi4-launch.log`, `matching-errors.txt`, and `crashes/` under the printed smoke directory. A passing run removes temporary artifacts unless `HOI4_SMOKE_KEEP_DATA=1` or `PDX_SMOKE_HOME` is set.
 - Optional diagnostics: `SMOKE_MAX_ERROR_ENTRIES` and `SMOKE_MAX_ENTRY_LINES` limit the summary; `HOI4_SMOKE_CREAM_UNLOCKALL=0` disables the temporary `unlockall` change. Use `SMOKE_INCLUDE_PATTERN` only for explicitly reported targeted diagnosis because it can hide unrelated errors.
 - Report the command and overrides used, PASS/FAIL and exit status, retained artifact path, relevant `error.log` sources, and any remaining in-game checks.
+- If smoke fails it does not mean game fails to start or crashes. Most of the time it keeps working (and user can check the changes with his own eyes) so timeout is needed to kill the process.
 
 ## Worktrees
 
