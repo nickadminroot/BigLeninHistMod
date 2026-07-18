@@ -1,3 +1,4 @@
+
 state={
 	id=847
 	name="STATE_847"
@@ -6,15 +7,15 @@ state={
 	resources={
 	}
 	history={
-		owner = NPL
-		add_core_of = NPL
+		owner = SWI
 		buildings = {
-			infrastructure = 1 
+			infrastructure = 1
 			industrial_complex = 1
 		}
+		add_core_of = SWI
 	}
 	provinces={
-		636 9587 3612 9618  
+		636 9587 3612 9618
 	}
-	local_supplies=0.0 
+	local_supplies=0.0
 }
