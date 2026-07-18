@@ -1,0 +1,221 @@
+﻿###########################
+# Latvian Events
+###########################
+
+add_namespace = LAT_events
+
+# Decide who is the true enemy
+country_event = {
+	id = LAT_events.1
+	title = LAT_events.1.t
+	desc = LAT_events.1.d
+	picture = GFX_report_event_romania_parliament
+	
+	is_triggered_only = yes
+	
+	option = { #Soviets
+		name = LAT_events.1.a
+		trigger = {
+			OR = {
+				NOT = { is_in_faction_with = SOV }
+				AND = {
+					is_in_faction_with = GER
+					is_in_faction_with = SOV
+				}
+			}
+		}
+		set_country_flag = soviets_true_enemy_flag
+		if = {
+			limit = {
+			any_owned_state = {
+				any_neighbor_state = {
+						is_controlled_by = SOV
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_controlled_by = SOV
+					}
+					NOT = {
+						state = 12
+						state = 191
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { 
+					controls_state = 810 
+				}
+				810 = {
+					add_building_construction = { type = bunker province = 6459 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 9275 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 222 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 319 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 3298 level = 2 instant_build = yes }
+				}
+				if = {
+					limit = {
+						controls_state = 810
+						SOV = {
+							controls_state = 96
+						}
+					}
+					810 = {
+						add_building_construction = { type = bunker province = 310 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 11358 level = 2 instant_build = yes }
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 784
+					GER = {
+						NOT = {
+							controls_state = 96
+							controls_state = 95
+						}
+					}
+				}
+				784 = {
+					add_building_construction = { type = bunker province = 784 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 9295 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 3320 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 9274 level = 2 instant_build = yes }
+				}			
+			}
+			else = {
+				if = {
+					limit = { controls_state = 815 }
+					815 = {	
+						add_building_construction = { type = bunker province = 11226 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 11498 level = 2 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { controls_state = 11 }
+					11 = {
+						add_building_construction = { type = bunker province = 9404 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { controls_state = 814 }
+					814 = {
+						add_building_construction = { type = bunker province = 6281 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 11312 level = 2 instant_build = yes }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 191 }
+			191 = {
+				add_building_construction = { type = bunker province = 592 level = 4 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 813 }
+			813 = {
+				add_building_construction = { type = bunker province = 4640 level = 4 instant_build = yes }
+			}
+		}
+	}
+	option = { #Germany
+		name = LAT_events.1.b
+		trigger = {
+			OR = {
+				NOT = { is_in_faction_with = GER }
+				AND = {
+					is_in_faction_with = GER
+					is_in_faction_with = SOV
+				}
+			}
+		}
+		set_country_flag = germans_true_enemy_flag
+		if = {
+			limit = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_controlled_by = GER 
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_controlled_by = GER
+					}
+					NOT = {
+						state = 190 #Kurzeme (Latvia)
+						state = 809 #Zemgale (Latvia)
+						state = 13 #Parnu (Estonia)
+						state = 191 #Tartu (Estonia)
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 190 } #Kurzeme
+			190 = { 
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 809 } #Zemgale (Latvia)
+			809 = {
+				add_building_construction = { type = bunker province = 265 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 6342 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 11358 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3255 level = 2 instant_build = yes }
+			}
+		}
+		if = {
+			limit = { controls_state = 191 } #Tartu (Estonia)
+				
+			191 = {
+				add_building_construction = { type = bunker province = 592 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 9485 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 6408 level = 2 instant_build = yes }
+			}
+		}
+		if = { #Parnu (Estonia)
+			limit = { controls_state = 13 }
+			13 = { 
+				add_building_construction = { type = bunker province = 308 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 11291 level = 2 instant_build = yes }
+			}
+		}
+	}
+}
