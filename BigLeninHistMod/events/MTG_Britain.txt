@@ -4803,11 +4803,11 @@ country_event = {
 					original_tag = AST
 					OR = {
 						AND = {
-							has_completed_focus = AST_support_the_centre_party
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = AST_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4834,11 +4834,11 @@ country_event = {
 					original_tag = NZL
 					OR = {
 						AND = {
-							has_completed_focus = NZL_in_the_darkness
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = NZL_the_lee_affair
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4849,11 +4849,11 @@ country_event = {
 					original_tag = CAN
 					OR = {
 						AND = {
-							has_completed_focus = CAN_swastika_clubs
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = CAN_burn_the_royal_portraits
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4864,11 +4864,11 @@ country_event = {
 					original_tag = SAF
 					OR = {
 						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = SAF_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4890,11 +4890,11 @@ country_event = {
 					original_tag = AST
 					OR = {
 						AND = {
-							has_completed_focus = AST_support_the_centre_party
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = AST_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4921,11 +4921,11 @@ country_event = {
 					original_tag = NZL
 					OR = {
 						AND = {
-							has_completed_focus = NZL_in_the_darkness
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = NZL_the_lee_affair
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4936,11 +4936,11 @@ country_event = {
 					original_tag = CAN
 					OR = {
 						AND = {
-							has_completed_focus = CAN_swastika_clubs
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = CAN_burn_the_royal_portraits
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -4951,11 +4951,11 @@ country_event = {
 					original_tag = SAF
 					OR = {
 						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = SAF_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -5066,11 +5066,11 @@ country_event = {
 					original_tag = AST
 					OR = {
 						AND = {
-							has_completed_focus = AST_support_the_centre_party
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = AST_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -5093,11 +5093,11 @@ country_event = {
 					original_tag = NZL
 					OR = {
 						AND = {
-							has_completed_focus = NZL_in_the_darkness
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = NZL_the_lee_affair
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -5106,11 +5106,11 @@ country_event = {
 					original_tag = CAN
 					OR = {
 						AND = {
-							has_completed_focus = CAN_swastika_clubs
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = CAN_burn_the_royal_portraits
+							always = no
 							ENG = { has_government = communism }
 						}
 					}
@@ -5119,11 +5119,11 @@ country_event = {
 					original_tag = SAF
 					OR = {
 						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
+							always = no
 							ENG = { has_government = fascism }
 						}
 						AND = {
-							has_completed_focus = SAF_empower_the_workers
+							always = no
 							ENG = { has_government = communism }
 						}
 					}

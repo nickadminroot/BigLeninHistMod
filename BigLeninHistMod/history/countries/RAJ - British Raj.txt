@@ -137,7 +137,6 @@ if = {
 	recruit_character = RAJ_mughal_industrialist
 	recruit_character = RAJ_silent_mughal
 	recruit_character = RAJ_backroom_mughal
-	recruit_character = RAJ_abdul_ghaffar_khan
 	recruit_character = RAJ_GOE_muhammad_musa
 	
 	else = {

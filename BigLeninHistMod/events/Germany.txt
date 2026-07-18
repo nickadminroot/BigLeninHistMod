@@ -4346,16 +4346,6 @@ country_event = {
 							is_government_in_exile = no
 							OR = {
 								has_government = democratic
-								has_completed_focus = POL_coerce_czechoslovakia
-								has_completed_focus = POL_camp_of_national_unity
-								has_completed_focus = POL_dissolve_the_bbwr
-								has_completed_focus = POL_align_with_the_west
-								AND = {
-									has_completed_focus = POL_the_castle
-									GER = {
-										has_completed_focus = GER_reassert_eastern_claims
-									}
-								}
 							}
 							NOT = {
 								OR = {
@@ -4380,8 +4370,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
-								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
 								OR = {
@@ -4406,7 +4394,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = ENG_steady_as_she_goes
-								has_completed_focus = ENG_tackle_fascism
 							}
 							NOT = {
 								OR = {
@@ -4877,16 +4864,6 @@ country_event = {
 							is_government_in_exile = no
 							OR = {
 								has_government = democratic
-								has_completed_focus = POL_coerce_czechoslovakia
-								has_completed_focus = POL_camp_of_national_unity
-								has_completed_focus = POL_dissolve_the_bbwr
-								has_completed_focus = POL_align_with_the_west
-								AND = {
-									has_completed_focus = POL_the_castle
-									GER = {
-										has_completed_focus = GER_reassert_eastern_claims
-									}
-								}
 							}
 							NOT = {
 								OR = {
@@ -4911,8 +4888,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
-								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
 								OR = {
@@ -4937,7 +4912,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = ENG_steady_as_she_goes
-								has_completed_focus = ENG_tackle_fascism
 							}
 							NOT = {
 								OR = {
@@ -5174,16 +5148,6 @@ country_event = {
 							is_government_in_exile = no
 							OR = {
 								has_government = democratic
-								has_completed_focus = POL_coerce_czechoslovakia
-								has_completed_focus = POL_camp_of_national_unity
-								has_completed_focus = POL_dissolve_the_bbwr
-								has_completed_focus = POL_align_with_the_west
-								AND = {
-									has_completed_focus = POL_the_castle
-									GER = {
-										has_completed_focus = GER_reassert_eastern_claims
-									}
-								}
 							}
 							NOT = {
 								OR = {
@@ -5208,8 +5172,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
-								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
 								OR = {
@@ -5234,7 +5196,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = ENG_steady_as_she_goes
-								has_completed_focus = ENG_tackle_fascism
 							}
 							NOT = {
 								OR = {
@@ -5534,16 +5495,6 @@ country_event = {
 							is_government_in_exile = no
 							OR = {
 								has_government = democratic
-								has_completed_focus = POL_coerce_czechoslovakia
-								has_completed_focus = POL_camp_of_national_unity
-								has_completed_focus = POL_dissolve_the_bbwr
-								has_completed_focus = POL_align_with_the_west
-								AND = {
-									has_completed_focus = POL_the_castle
-									GER = {
-										has_completed_focus = GER_reassert_eastern_claims
-									}
-								}
 							}
 							NOT = {
 								OR = {
@@ -5568,8 +5519,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
-								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
 								OR = {
@@ -5594,7 +5543,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = ENG_steady_as_she_goes
-								has_completed_focus = ENG_tackle_fascism
 							}
 							NOT = {
 								OR = {
@@ -5685,16 +5633,6 @@ country_event = {
 							is_government_in_exile = no
 							OR = {
 								has_government = democratic
-								has_completed_focus = POL_coerce_czechoslovakia
-								has_completed_focus = POL_camp_of_national_unity
-								has_completed_focus = POL_dissolve_the_bbwr
-								has_completed_focus = POL_align_with_the_west
-								AND = {
-									has_completed_focus = POL_the_castle
-									GER = {
-										has_completed_focus = GER_reassert_eastern_claims
-									}
-								}
 							}
 							NOT = {
 								OR = {
@@ -5719,8 +5657,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
-								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
 								OR = {
@@ -5745,7 +5681,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = ENG_steady_as_she_goes
-								has_completed_focus = ENG_tackle_fascism
 							}
 							NOT = {
 								OR = {

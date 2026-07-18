@@ -8431,10 +8431,6 @@ focus = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			add_ideas = COG_rich_in_uranium
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
 				value = 0.25
@@ -8473,27 +8469,6 @@ focus = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			IF = {
-				limit = {
-					NOT = {
-						has_country_flag = AST_1939_start
-					}
-				}
-				add_timed_idea = {
-					idea = PHI_the_great_depression_temp_construction_speed
-					days = 365
-				}
-
-				ELSE = {
-					effect_tooltip = {
-						add_timed_idea = {
-						idea = PHI_the_great_depression_temp_construction_speed
-						days = 365
-						}
-					}
-				}
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {

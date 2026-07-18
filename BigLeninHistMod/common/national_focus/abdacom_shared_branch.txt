@@ -18,7 +18,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_a_change_in_course
+			# ENG_a_change_in_course removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -31,7 +32,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_concessions_to_the_trade_unions
+			# ENG_concessions_to_the_trade_unions removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -44,7 +46,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_organize_the_blackshirts
+			# ENG_organize_the_blackshirts removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -57,7 +60,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_the_kings_party
+			# ENG_the_kings_party removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -96,7 +100,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_global_defense
+			# ENG_global_defense removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -109,7 +114,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = ENG_revisit_colonial_policy
+			# ENG_revisit_colonial_policy removed from mod's uk.txt
+			always = no
 		}
 	}
 
@@ -139,7 +145,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = USA_reestablish_the_gold_standard
+			# USA_reestablish_the_gold_standard removed from mod's usa.txt
+			always = no
 		}
 	}
 
@@ -165,7 +172,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = USA_limited_intervention
+			# USA_limited_intervention removed from mod's usa.txt
+			always = no
 		}
 	}
 
@@ -208,7 +216,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FRA_utilize_the_leagues
+			# FRA_utilize_the_leagues removed from mod's france.txt
+			always = no
 		}
 	}
 
@@ -221,7 +230,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FRA_the_council_of_rambouillet
+			# FRA_the_council_of_rambouillet removed from mod's france.txt
+			always = no
 		}
 	}
 
@@ -234,7 +244,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FRA_national_regeneration
+			# FRA_national_regeneration removed from mod's france.txt
+			always = no
 		}
 	}
 
@@ -260,7 +271,8 @@ joint_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FRA_invite_communist_ministers
+			# FRA_invite_communist_ministers removed from mod's france.txt
+			always = no
 		}
 	}
 	### FRANCE OFFSET END ###
@@ -341,9 +353,8 @@ joint_focus = {
 		y = 0
 		trigger = {
 			tag = HOL
-			INS = {
-				has_completed_focus = INS_the_jewel_in_the_crown
-			}
+			# INS_the_jewel_in_the_crown: INS focus content not in mod
+			always = no
 		}
 	}
 
@@ -373,10 +384,8 @@ joint_focus = {
 			limit = {
 				original_tag = INS
 			}
-			NOT = {
-				has_completed_focus = INS_underground_revolution
-				has_completed_focus = INS_the_declaration_of_independence
-			}
+			# INS focuses not in mod; INS can always access if tag exists
+			always = yes
 		}
 		is_vichy_france = no
 	}

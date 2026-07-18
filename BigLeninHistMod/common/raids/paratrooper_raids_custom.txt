@@ -610,19 +610,11 @@ types = {
 						}
 					}
 					var:target_state = {
-						add_dynamic_modifier = {
-							modifier = sokolov_raided_limited_success_modifier
-							days = 30
-						}
 					}
 			    }
 				actor_effects = {
 
 					var:actor_country = {
-						add_timed_idea = {
-							idea = CZE_sokolov_raid_pfot_limited_success_ns
-							days = 30
-						}
 					}
 
 
@@ -671,19 +663,11 @@ types = {
 							}
 						}
 
-						add_dynamic_modifier = {
-							modifier = sokolov_raided_success_modifier
-							days = 90
-						}
 					}
 			    }
 				actor_effects = {
 
 					var:actor_country = {
-						add_timed_idea = {
-							idea = CZE_sokolov_raid_pfot_success_ns
-							days = 90
-						}
 					}
 
 					# Damage to unit
@@ -731,19 +715,11 @@ types = {
 							}
 						}
 
-						add_dynamic_modifier = {
-							modifier = sokolov_raided_critical_modifier
-							days = 90
-						}
 					}
 			    }
 				actor_effects = {
 
 					var:actor_country = {
-						add_timed_idea = {
-							idea = CZE_sokolov_raid_pfot_critical_success_ns
-							days = 90
-						}
 					}
 
 					# Damage to unit

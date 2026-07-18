@@ -23,7 +23,7 @@
  							is_subject_of = HOL
  						}
  					}
- 					INS_set_hol_ally_strategy_effect = yes
+ 					# Indonesia ally strategy disabled: INS content not shipped
  				}
  			}
  			# If HOL is already in a faction, and someone new joins, give them the strategy
@@ -42,7 +42,7 @@
  					}
  				}
  				ROOT = {
- 					INS_set_hol_ally_strategy_effect = yes
+ 					# Indonesia ally strategy disabled: INS content not shipped
  				}
  			}
  		}
@@ -63,7 +63,7 @@
  						has_country_flag = INS_revolution_has_started
  					}
  				}
- 				INS_set_hol_ally_strategy_effect = yes
+ 				# Indonesia ally strategy disabled: INS content not shipped
  			}
  		}
  	}
@@ -1012,7 +1012,7 @@
 						HOL = { has_cosmetic_tag = INS_UNION }
 					}
 				}
-				indonesia_free_effect = yes
+				# Indonesia independence effect disabled: INS content not shipped
 			}
 		}
 		
@@ -1083,7 +1083,7 @@
 						HOL = { has_cosmetic_tag = INS_UNION }
 					}
 				}
-				indonesia_free_effect = yes
+				# Indonesia independence effect disabled: INS content not shipped
 			}
 		}
 	}
@@ -1107,20 +1107,6 @@
 					SIA_adul_aduldejajaras = {
 						set_unit_leader_flag = dont_move_in_cw
 					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					has_start_date < 1936.1.2
-				}
-				INS = {
-					country_event = {
-						id = INS_political_events.1 #New Governor General for Indonesia
-						days = 259 #September 16th, 1936
-					}
-					activate_mission = INS_soetardjo_pending
 				}
 			}
 
@@ -2161,10 +2147,10 @@
 				limit = {
 					FROM = {
 						original_tag = INS
-						has_completed_focus = INS_the_jewel_in_the_crown
+						always = no # INS focus content not shipped
 						NOT = {
 							has_country_flag = INS_has_gotten_invasion_event
-							has_completed_focus = INSHOL_netherlands_indonesia_union
+							always = no # INS focus content not shipped
 						}
 					}
 					FROM.FROM = {
@@ -2196,7 +2182,7 @@
 					if = {
 						limit = {
 							FROM = {
-								has_completed_focus = INSHOL_industrialized_colony
+								always = no # INS focus content not shipped
 							}
 						}
 						FROM = {

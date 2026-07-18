@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # turkey Events
 ###########################
 
@@ -248,7 +248,7 @@ country_event = {
 			modifier = {
 				factor = 10
 				original_tag = SOV 
-				FROM = { has_completed_focus = PER_soviet_alignment }
+				FROM = { always = no }
 			}
 		}
 		add_to_faction = FROM

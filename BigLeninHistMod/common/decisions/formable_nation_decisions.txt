@@ -2832,7 +2832,7 @@ form_european_union_category = {
 				}
 				AND = {
 					original_tag = CZE
-					has_completed_focus = CZE_bend_the_bars
+					always = no
 				}
 			}
 
@@ -9373,7 +9373,7 @@ form_hre_category = {
 					has_dlc = "Peace For Our Time"
 					original_tag = CZE
 				}
-				has_completed_focus = CZE_usurp_the_mantle
+				always = no
 			}
 			ELSE_IF = {
 				limit = {

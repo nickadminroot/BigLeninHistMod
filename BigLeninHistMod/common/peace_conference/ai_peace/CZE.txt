@@ -10,7 +10,7 @@ peace_ai_desires = {
 			
 			#no dlc check needed, focus only in dlc
 			ROOT = {
-				has_completed_focus = CZE_neutralize_the_hungarian_threat
+				always = no
 			}
 
 			FROM.FROM = {
@@ -28,7 +28,7 @@ peace_ai_desires = {
 			
 			#no dlc check needed, focus only in dlc
 			ROOT = {
-				has_completed_focus = CZE_neutralize_the_hungarian_threat
+				always = no
 			}
 
 			FROM.FROM = {

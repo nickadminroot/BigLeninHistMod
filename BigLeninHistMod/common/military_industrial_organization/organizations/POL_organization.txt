@@ -66,7 +66,7 @@ POL_pzinz_organization = {
 					is_core_of = CZE
 				}
 				FROM = {
-					has_completed_focus = CZE_integrate_lost_territories
+					always = no
 				}
 			}
 		}
@@ -173,7 +173,7 @@ POL_stocznia_gdynia_organization = {
 					is_core_of = CZE
 				}
 				FROM = {
-					has_completed_focus = CZE_integrate_lost_territories
+					always = no
 				}
 			}
 		}
