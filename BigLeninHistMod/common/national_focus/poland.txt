@@ -2738,7 +2738,7 @@ focus_tree = {
 		id = POL_polish_revanchism
 		icon = GFX_focus_POL_polish_revanchism
 		prerequisite = { focus = POL_ozon }
-		mutually_exclusive = { focus = POL_align_with_the_west focus = POL_baltic_security }
+		mutually_exclusive = { focus = POL_align_with_the_west }
 		
 		x = 0
 		y = 1
@@ -3561,36 +3561,15 @@ focus_tree = {
 	focus = {
 		id = POL_align_with_the_west
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = POL_camp_of_national_unity focus = POL_dissolve_the_bbwr focus = POL_ozon focus = POL_draw_closer_to_britain }
+		prerequisite = { focus = POL_camp_of_national_unity focus = POL_dissolve_the_bbwr focus = POL_ozon }
 		x = 0
 		y = 1
 		relative_position_id = POL_camp_of_national_unity
 		cost = 5
-		mutually_exclusive = { focus = POL_polish_revanchism focus = POL_baltic_security }
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_assemble_the_regency_council
-						has_completed_focus = POL_nationalist_constitution
-					}
-				}
-			}
-		}
+		mutually_exclusive = { focus = POL_polish_revanchism }
 
 		ai_will_do = {
 			factor = 10
-		}
-		
-		bypass = {
-			has_completed_focus = POL_draw_closer_to_britain
 		}
 
 		available = {

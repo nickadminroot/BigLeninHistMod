@@ -2950,54 +2950,6 @@ focus_tree = {
 #   #  ##  #  # #  # #  #  ##  #  # ### ##  #   #    #  # ###  ##   #  #  # #  # ### ###  #    #   
 
 	focus = {
-		id = HOL_replace_the_defeatist_government
-		prerequisite = { focus = HOL_unity_through_democracy }
-		available = {
-			has_war = yes
-		}
-		bypass = {
-			has_government = neutrality
-		}
-		icon = GFX_goal_generic_political_pressure
-		x = 1
-		y = 1
-		relative_position_id = HOL_unity_through_democracy
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
-
-		completion_reward = {
-			
-			country_event = { id = mtg_netherlands.14 }
-			effect_tooltip = {
-				add_popularity = {
-				    ideology = democratic
-				    popularity = -0.05
-				}
-				HOL_pieter_sjoerds_gerbrandy = {
-					promote_character = {
-						ideology = conservatism
-					}
-				}
-				retire_country_leader = yes
-				if = {
-					limit = {
-						has_idea = HOL_weak_government
-					}
-					remove_ideas = HOL_weak_government
-				}
-			}
-		}
-	}
-
-###  ### #   #  ##   ##  ###   ##  ### ###  ##  
-#  # #   ## ## #  # #  # #  # #  #  #   #  #  # 
-#  # ##  # # # #  # #    ###  ####  #   #  #    
-#  # #   #   # #  # #  # #  # #  #  #   #  #  # 
-###  ### #   #  ##   ##  #  # #  #  #  ###  ##  
-
-	focus = {
 		id = HOL_unity_through_democracy
 		prerequisite = { focus = HOL_cave_to_the_british }
 		icon = GFX_goal_support_democracy
@@ -3050,6 +3002,54 @@ focus_tree = {
 		}
 	}
 
+
+	focus = {
+		id = HOL_replace_the_defeatist_government
+		prerequisite = { focus = HOL_unity_through_democracy }
+		available = {
+			has_war = yes
+		}
+		bypass = {
+			has_government = neutrality
+		}
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = HOL_unity_through_democracy
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			
+			country_event = { id = mtg_netherlands.14 }
+			effect_tooltip = {
+				add_popularity = {
+				    ideology = democratic
+				    popularity = -0.05
+				}
+				HOL_pieter_sjoerds_gerbrandy = {
+					promote_character = {
+						ideology = conservatism
+					}
+				}
+				retire_country_leader = yes
+				if = {
+					limit = {
+						has_idea = HOL_weak_government
+					}
+					remove_ideas = HOL_weak_government
+				}
+			}
+		}
+	}
+
+###  ### #   #  ##   ##  ###   ##  ### ###  ##  
+#  # #   ## ## #  # #  # #  # #  #  #   #  #  # 
+#  # ##  # # # #  # #    ###  ####  #   #  #    
+#  # #   #   # #  # #  # #  # #  #  #   #  #  # 
+###  ### #   #  ##   ##  #  # #  #  #  ###  ##  
  ##   ##      #   # ### ### #  #     ###  ###  ### ###  ##  ### #  # 
 #    #  #     #   #  #   #  #  #     #  # #  #  #   #  #  #  #  ## # 
 # ## #  #     # # #  #   #  ####     ###  ###   #   #  ####  #  # ## 

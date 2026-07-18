@@ -709,28 +709,6 @@ JUNO_promote_immigration_cat = {
 	priority = 6
 }
 
-CHI_border_clashes = {
-	icon = border_war
-	allowed = {
-		OR = {
-			original_tag = CHI
-			original_tag = PRC
-		}
-	}
-	priority = 50
-}
-
-CHI_political_power_struggle = {
-	icon = generic_nationalism
-	allowed = {
-		OR = {
-			original_tag = CHI
-			original_tag = PRC
-		}
-	}
-	priority = 49
-}
-
 generic_refit_civilian_ships_category = {
 	icon = GFX_decision_category_MTG_naval_treaties
 	picture = GFX_decision_cat_picture_generic_shipbuilding

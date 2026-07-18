@@ -2601,31 +2601,13 @@ shared_focus = {
 ###########################
 shared_focus = {
 	id = BALTIC_restore_workers_republic
-	mutually_exclusive = { focus = LIT_secure_a_loyal_cabinet focus = LAT_suspend_the_constitution focus = EST_era_of_silence focus = EST_rally_the_nation }
 	icon = GFX_goal_support_communism
 	x = 25
 	y = 0
 
 	cost = 10
 
-	allow_branch = {
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-			NOT = {
-				OR = {
-					has_completed_focus = LIT_secure_a_loyal_cabinet
-					has_completed_focus = LAT_suspend_the_constitution
-					has_completed_focus = EST_era_of_silence
-					has_completed_focus = EST_rally_the_nation
-				}
-			}
-		}
-	}
+	allow_branch = { always = no }
 
 	ai_will_do = {
 		factor = 1

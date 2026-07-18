@@ -141,10 +141,10 @@ focus_tree = {
 	focus = {
 		id = GRE_crack_down_on_the_republicans
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = GRE_the_national_youth_organisation focus = GRE_petition_britain_for_aid }
+		prerequisite = { focus = GRE_the_national_youth_organisation }
 		x = 1
 		y = 1
-		relative_position_id = GRE_petition_britain_for_aid
+		relative_position_id = GRE_the_national_youth_organisation
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -575,7 +575,7 @@ focus_tree = {
 	focus = {
 		id = GRE_an_orthodox_state
 		icon = GFX_focus_GRE_an_orthodox_state
-		prerequisite = { focus = GRE_use_the_military focus = GRE_recruit_the_fascists }
+		prerequisite = { focus = GRE_use_the_military }
 
 		available = { 
 			OR = {

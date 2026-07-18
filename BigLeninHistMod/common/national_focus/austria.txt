@@ -1597,7 +1597,7 @@ focus_tree = {
 	focus = { # HISTORICAL
 		id = AUS_second_brothers_war
 		icon = GFX_focus_attack_germany
-		prerequisite = { focus = AUS_heritage_of_an_empire focus = AUS_for_a_better_future }
+		prerequisite = { focus = AUS_heritage_of_an_empire }
 		mutually_exclusive = { }
 		x = 0
 		y = 2

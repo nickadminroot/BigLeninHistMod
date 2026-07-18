@@ -3979,7 +3979,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_employment
 
 		prerequisite = { focus = DEN_increase_produce_production focus = DEN_increase_maritime_trade focus = DEN_north_sea_oil_drilling }
-		mutually_exclusive = { focus = DEN_limited_social_mobilization focus = DEN_five_year_plan focus = DEN_full_social_mobilization }
+		mutually_exclusive = { focus = DEN_limited_social_mobilization focus = DEN_five_year_plan }
 
 		relative_position_id = DEN_import_machinery_and_material	
 		x = 0
@@ -4593,7 +4593,7 @@ focus_tree = {
 
 		prerequisite = { focus = DEN_heavy_market_regulations } 
 		prerequisite = { focus = DEN_side_with_unions focus = DEN_side_with_industry } 
-		mutually_exclusive = { focus = DEN_limited_social_mobilization focus = DEN_full_employment focus = DEN_full_social_mobilization }
+		mutually_exclusive = { focus = DEN_limited_social_mobilization focus = DEN_full_employment }
 
 		relative_position_id = DEN_social_stability	
 		x = -2
@@ -4692,7 +4692,7 @@ focus_tree = {
 		icon = GFX_focus_generic_limited_social_mobilization
 
 		prerequisite = { focus = DEN_side_with_unions focus = DEN_side_with_industry } 
-		mutually_exclusive = { focus = DEN_full_employment focus = DEN_five_year_plan focus = DEN_full_social_mobilization }
+		mutually_exclusive = { focus = DEN_full_employment focus = DEN_five_year_plan }
 
 		relative_position_id = DEN_social_stability	
 		x = 2

@@ -136,7 +136,7 @@ initial_show_position = {
 		icon = GFX_focus_PHI_uncouple_the_peso_and_dollar
 		overlay = GFX_focus_fast_overlay_america 
 
-		prerequisite = { focus = PHI_align_with_the_usa focus = PHI_align_with_japan }								
+		prerequisite = { focus = PHI_align_with_the_usa }								
 
 		relative_position_id = PHI_align_with_the_usa		
 		x = -4
@@ -181,7 +181,7 @@ initial_show_position = {
 		id = PHI_quezon_city
 		icon = GFX_focus_SWE_hygienic_housing
 
-		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar }						
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar		
 		
@@ -220,7 +220,7 @@ initial_show_position = {
 		id = PHI_unicameral_legislature
 		icon = GFX_focus_generic_improve_the_administration
 
-		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar }						
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar		
 		
@@ -261,7 +261,7 @@ initial_show_position = {
 		icon = GFX_focus_generic_currency_reforms
 		overlay = GFX_focus_fast_overlay_japan_clock
 
-		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar }						
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar		
 		
@@ -310,7 +310,7 @@ initial_show_position = {
 		id = PHI_agricultural_migrants_to_hawaii
 		icon = GFX_focus_PHI_agricultural_migrants_to_hawaii
 
-		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar focus = PHI_leverage_the_peso }						
+		prerequisite = { focus = PHI_peg_the_peso_to_the_dollar }						
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar		
 		
@@ -507,7 +507,7 @@ initial_show_position = {
 #		focus_generic_land_owner
 		overlay = GFX_focus_fast_overlay_america 
 
-		prerequisite = { focus = PHI_quezon_city_campus focus = PHI_reduce_unneccessary_expenditure focus = PHI_subsidies focus = PHI_basic_welfare focus = PHI_encourage_asian_trade }
+		prerequisite = { focus = PHI_quezon_city_campus focus = PHI_reduce_unneccessary_expenditure focus = PHI_subsidies focus = PHI_basic_welfare }
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar	
 		x = 0
@@ -595,7 +595,7 @@ initial_show_position = {
 		id = PHI_sugar_barons
 		icon = GFX_focus_BRA_support_sugar_barons
 
-		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+		prerequisite = { focus = PHI_pro_hacendados }
 
 		relative_position_id = PHI_pro_hacendados	
 		
@@ -692,7 +692,7 @@ initial_show_position = {
 		icon = GFX_focus_PHI_luzon_transport
 		overlay = GFX_focus_fast_overlay_japan_clock
 
-		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+		prerequisite = { focus = PHI_pro_hacendados }
 
 		relative_position_id = PHI_pro_hacendados	
 		
@@ -750,7 +750,7 @@ initial_show_position = {
 		id = PHI_expand_gold_mining
 		icon = GFX_focus_generic_expand_gold_mining
 
-		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+		prerequisite = { focus = PHI_pro_hacendados }
 
 		relative_position_id = PHI_pro_hacendados	
 		
@@ -800,7 +800,7 @@ initial_show_position = {
 		icon = GFX_focus_PHI_mindanao_transport
 		overlay = GFX_focus_fast_overlay_japan_clock
 
-		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+		prerequisite = { focus = PHI_pro_hacendados }
 
 		relative_position_id = PHI_pro_hacendados	
 		
@@ -861,7 +861,7 @@ initial_show_position = {
 		icon = GFX_focus_generic_farmland
 		overlay = GFX_focus_fast_overlay_japan_clock	
 
-		prerequisite = { focus = PHI_pro_hacendados focus = PHI_anti_hacendados }
+		prerequisite = { focus = PHI_pro_hacendados }
 
 		relative_position_id = PHI_pro_hacendados	
 		
@@ -1280,7 +1280,7 @@ initial_show_position = {
 		id = PHI_government_filipinization
 		icon = GFX_focus_PER_limit_foreign_influence
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		
@@ -1377,7 +1377,7 @@ initial_show_position = {
 		id = PHI_bicameral_legislature
 		icon = GFX_focus_generic_improve_the_administration_2
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		
@@ -1430,7 +1430,7 @@ initial_show_position = {
 		id = PHI_uncouple_the_peso_and_dollar
 		icon = GFX_focus_PHI_uncouple_the_peso_and_dollar
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		
@@ -1509,7 +1509,7 @@ initial_show_position = {
 		icon = GFX_focus_AFG_sugar_factory
 		overlay = GFX_focus_fast_overlay_japan_clock		
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		
@@ -1555,7 +1555,7 @@ initial_show_position = {
 		id = PHI_break_chinese_monopoly
 		icon = GFX_focus_BEL_government_resigns
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		mutually_exclusive = { focus = PHI_encourage_chinese_immigration }
@@ -1630,7 +1630,7 @@ initial_show_position = {
 		icon = GFX_focus_PHI_encourage_chinese_immigration
 		overlay = GFX_focus_fast_overlay_japan_clock		
 
-		prerequisite = { focus = PHI_nationality_act focus = PHI_open_borders }
+		prerequisite = { focus = PHI_nationality_act }
 
 		relative_position_id = PHI_nationality_act	
 		mutually_exclusive = { focus = PHI_break_chinese_monopoly }

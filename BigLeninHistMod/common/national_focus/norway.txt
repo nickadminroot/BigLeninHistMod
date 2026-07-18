@@ -1409,7 +1409,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_rikstanken
-		icon = GFX_focus_generic_armor_ambitions
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = NOR_start_rearmament }
 
 		x = 2
@@ -1694,7 +1694,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_kystvakten
-		icon = GFX_goal_generic_sea_related_modifier
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = NOR_the_royal_norwegian_navy }
 
 		x = 2
@@ -1719,7 +1719,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_expand_merchant_marine
-		icon = GFX_goal_generic_merchant_marine
+		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = NOR_the_royal_norwegian_navy }
 
 		x = -2
@@ -1767,7 +1767,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_haerens_flyvevaaben
-		icon = GFX_focus_generic_air_force
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = NOR_building_an_independent_norway }
 
 		x = 0
@@ -1790,7 +1790,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_foreign_plane_designs
-		icon = GFX_focus_DEN_foreign_plane_designs
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = NOR_haerens_flyvevaaben }
 
 		x = 0
@@ -1814,7 +1814,7 @@ focus_tree = {
 
 	focus = {
 		id = NOR_invest_in_airfields
-		icon = GFX_goal_generic_construct_air_base
+		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = NOR_haerens_flyvevaaben }
 
 		x = 2

@@ -32,7 +32,6 @@ focus_tree = {
 	focus = {
 		id = LAT_suspend_the_constitution
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		mutually_exclusive = { focus = BALTIC_restore_workers_republic }
 		x = 34
 		y = 0
 
