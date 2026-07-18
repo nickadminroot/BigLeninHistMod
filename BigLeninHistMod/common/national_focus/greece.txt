@@ -24,7 +24,6 @@ focus_tree = {
 	focus = {
 		id = GRE_the_kings_government
 		icon = GFX_focus_generic_home_defense
-		mutually_exclusive = { focus = GRE_bring_home_the_exiled_republicans }
 		available = {
 			NOT = {	has_country_flag = GRE_king_arrested }
 		}
@@ -48,7 +47,6 @@ focus_tree = {
 		id = GRE_metaxism_focus
 		icon = GFX_focus_GRE_metaxism
 		prerequisite = { focus = GRE_the_kings_government }
-		mutually_exclusive = { focus = GRE_the_right_to_rule }
 		x = 1
 		y = 1
 		relative_position_id = GRE_the_kings_government
@@ -162,7 +160,6 @@ focus_tree = {
 		id = GRE_use_the_military
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = GRE_crack_down_on_the_republicans }
-		mutually_exclusive = { focus = GRE_recruit_the_fascists }
 		x = -2
 		y = 1
 		relative_position_id = GRE_crack_down_on_the_republicans
@@ -230,7 +227,6 @@ focus_tree = {
 		id = GRE_our_traditional_allies_in_the_aegean
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = GRE_use_the_military }
-		mutually_exclusive = { focus = GRE_realign_ourselves_with_the_central_powers }
 		x = -2
 		y = 1
 		relative_position_id = GRE_use_the_military
@@ -545,7 +541,7 @@ focus_tree = {
 	focus = {
 		id = GRE_expansion_of_athens_university
 		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = GRE_reclaiming_the_wayward_ally focus = GRE_the_greater_enosis focus = GRE_securing_the_bulgarian_menace }
+		prerequisite = { focus = GRE_the_greater_enosis focus = GRE_securing_the_bulgarian_menace }
 		x = 0
 		y = 1
 		relative_position_id = GRE_the_greater_enosis

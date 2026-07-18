@@ -2005,7 +2005,6 @@ focus_tree = {
 	focus = {
 		id = POL_complete_april_constitution
 		icon = GFX_focus_POL_complete_april_constitution
-		mutually_exclusive = { focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution focus = POL_assemble_the_regency_council focus = POL_restore_the_sejm }
 		
 		x = 49
 		y = 0
@@ -2015,23 +2014,6 @@ focus_tree = {
 			factor = 10
 		}
 		
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_nationalist_constitution
-						has_completed_focus = POL_assemble_the_regency_council
-					}
-				}
-			}
-		}
 		available = { is_subject = no }
 
 		available_if_capitulated = yes
@@ -5863,7 +5845,6 @@ focus_tree = {
 	focus = {
 		id = POL_develop_polish_ship_building
 		icon = GFX_focus_POL_develop_polish_shipbuilding
-		mutually_exclusive = { focus = POL_clamp_down_on_danzig }
 		x = 14
 		y = 0
 		cost = 10
@@ -5979,7 +5960,7 @@ focus_tree = {
 	focus = {
 		id = POL_study_foreign_built_ships
 		icon = GFX_focus_ger_accept_british_naval_dominance
-		prerequisite = { focus = POL_develop_polish_ship_building focus = POL_clamp_down_on_danzig }
+		prerequisite = { focus = POL_develop_polish_ship_building }
 		x = 1
 		y = 1
 		cost = 10
@@ -6077,7 +6058,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_twin_threats
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = POL_integrate_gdansk_industries focus = POL_expand_gdynia_seaport }
+		prerequisite = { focus = POL_expand_gdynia_seaport }
 		
 		x = -1
 		y = 1
@@ -6131,10 +6112,10 @@ focus_tree = {
 	focus = {
 		id = POL_import_submarine_technology
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = POL_integrate_gdansk_industries focus = POL_expand_gdynia_seaport }
+		prerequisite = { focus = POL_expand_gdynia_seaport }
 		x = 1
 		y = 1
-		relative_position_id = POL_integrate_gdansk_industries
+		relative_position_id = POL_expand_gdynia_seaport
 		cost = 10
 
 		ai_will_do = {
