@@ -1,3 +1,4 @@
+
 state={
 	id=151
 	name="STATE_151"
@@ -7,16 +8,16 @@ state={
 		aluminium=15 # was: 24
 	}
 	history={
-		owner = NPL
-		add_core_of = NPL
+		owner = SWI
 		victory_points = { 658 1 }
 		buildings = {
-			infrastructure = 1 
+			infrastructure = 1
 			industrial_complex = 1
 		}
+		add_core_of = SWI
 	}
 	provinces={
-		658 661 3660 3662 11601 
+		658 661 3660 3662 11601
 	}
-	local_supplies=0.0 
+	local_supplies=0.0
 }

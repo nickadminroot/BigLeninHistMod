@@ -3,16 +3,19 @@ state=
 	id=626
 	name="STATE_626"
 	manpower = 192257
+
 	state_category = pastoral
+
 	history=
 	{
-		owner = USA
+		owner = PHI
 		buildings = {
 			infrastructure = 2
 			4429 = {
 				naval_base = 1
 			}
 		}
+		add_core_of = PHI
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1
@@ -20,7 +23,8 @@ state=
 		}
 	}
 	provinces={
-		4429 7419 10145 
+		4429 7419 10145
 	}
-	local_supplies=0.0 
+
+	local_supplies=0.0
 }
