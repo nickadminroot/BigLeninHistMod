@@ -25,8 +25,13 @@ Requires Node.js 18+ (https://nodejs.org/).
 node scripts/hoi4-mcp-cli.js <tool_name> [--key value ...]
 node scripts/hoi4-mcp-cli.js --interactive    # Interactive mode
 node scripts/hoi4-mcp-cli.js --list           # List all tools
+node scripts/hoi4-mcp-cli.js --stop-daemon    # Stop this checkout/worktree's daemon
 node scripts/hoi4-mcp-cli.js --help           # Help
 ```
+
+Normal calls are quiet and automatically reuse a persistent daemon. The daemon identity is based on the canonical absolute mod-content path, so every Git worktree gets an isolated index. After files change, the complete index is invalidated once changes have been quiet for 750 ms; the next request rebuilds it. The daemon exits after 15 idle minutes.
+
+Use `--verbose` to show request timing. `--no-daemon` forces the old one-shot behavior and should be reserved for troubleshooting because every call rebuilds the index. The defaults can be overridden with `HOI4_MCP_DEBOUNCE_MS`, `HOI4_MCP_IDLE_MS`, and `HOI4_MCP_START_TIMEOUT_MS`.
 
 **Parameter types:**
 - String: `--key "value"`
@@ -311,14 +316,14 @@ python scripts/hoi4_workshop_upload.py --vdf-only
 
 ---
 
-## MCP Server
+## Persistent CLI daemon and MCP server
 
-For interactive use, the MCP server provides the same tools via protocol:
+The CLI daemon starts automatically; it is not necessary to start or restart a server between commands:
 
 ```bash
-# Start MCP server:
-node scripts/mcp/hoi4-mcp-server.js
-
-# Or use via CLI wrapper:
-node scripts/hoi4-mcp-cli.js --interactive
+node scripts/hoi4-mcp-cli.js script_search --pattern "has_idea"
+node scripts/hoi4-mcp-cli.js script_get_references --name "TAG_identifier"
+node scripts/hoi4-mcp-cli.js --stop-daemon       # troubleshooting only
 ```
+
+`--interactive` uses the same worktree-scoped daemon. The standalone stdio MCP server in `scripts/mcp/mapMcpServer.js` remains available for MCP hosts, but it is separate from the CLI daemon.

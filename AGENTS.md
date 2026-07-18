@@ -17,7 +17,7 @@ BigLeninHistMod is a vanilla-like, multiplayer-oriented historical HOI4 mod focu
    - `pi-subagents` for delegation.
 2. Extract HOI4-specific terms and exact identifiers from the user's request. Use `docs_search` for game-sensitive terms, then verify against local files.
 3. Search the mod and local vanilla data with `rg`; do not guess Clausewitz syntax or engine behavior.
-4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations.
+4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. Its default persistent daemon is the preferred mode; do not add `--no-daemon` or repeatedly stop it between validation calls.
 5. Keep effects, visible tooltips, idea variants, and English/Russian localization synchronized.
 6. Validate the changed files and references before reporting completion.
 
@@ -96,6 +96,8 @@ The helper symlinks extra files by default when present: `node_modules/`, `scrip
 - Use subagent `worktree: true` only when the current session deliberately owns a separate parallel-writer workflow with disjoint ownership and a planned serial integration step. Workers do not perform Git lifecycle operations; the parent session reviews and integrates their results.
 
 ## Validation commands
+
+The MCP CLI automatically starts a quiet daemon scoped to the absolute mod-content path. Each worktree therefore has an isolated in-memory index. Filesystem changes trigger one full reindex after a debounce interval, and an idle daemon exits automatically; use `--stop-daemon` only for troubleshooting. Prefer several normal CLI calls over shell loops that pass `--no-daemon`.
 
 Choose checks that match the change:
 

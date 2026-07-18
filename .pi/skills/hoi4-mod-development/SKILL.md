@@ -402,6 +402,19 @@ Located in `scripts/`. Python scripts auto-detect HOI4 installation path.
 
 **First-time setup:** `bash scripts/setup.sh` (or `scripts\setup.bat` on Windows)
 
+### Persistent CLI daemon
+
+Normal `hoi4-mcp-cli.js` calls use a quiet persistent daemon rather than rebuilding the mod index in every Node.js process.
+
+- Daemons are keyed by the canonical absolute mod-content path, so the main checkout and every Git worktree have isolated indexes.
+- The first call builds the index; subsequent calls reuse it.
+- Filesystem changes cause one full invalidation after a 750 ms debounce. The next request rebuilds the complete index.
+- A daemon exits after 15 idle minutes by default.
+- Use `--verbose` for timing diagnostics, `--stop-daemon` to stop the current worktree's daemon, and `--no-daemon` only to troubleshoot one-shot behavior.
+- Do not stop the daemon between validation calls or invoke repeated calls with `--no-daemon`.
+
+Optional environment overrides are `HOI4_MCP_DEBOUNCE_MS`, `HOI4_MCP_IDLE_MS`, and `HOI4_MCP_START_TIMEOUT_MS`.
+
 ### Auto-Detection
 
 Scripts automatically find HOI4 by:
