@@ -1,0 +1,62 @@
+﻿add_namespace = mtg_netherlands
+
+country_event = {
+	id = mtg_netherlands.26
+	title = mtg_netherlands.26.t
+	desc = mtg_netherlands.26.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.26.a
+		effect_tooltip = {
+			add_war_support = 0.1
+			give_guarantee = HOL
+		}
+		FROM = { country_event = { id = mtg_netherlands.27 } }
+	}
+
+	# Nope
+	option = {
+		name = mtg_netherlands.26.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = { country_event = { id = mtg_netherlands.28 } }
+	}
+}
+
+country_event = {
+	id = mtg_netherlands.27
+	title = mtg_netherlands.27.t
+	desc = mtg_netherlands.27.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	# Ok!
+	option = {
+		name = mtg_netherlands.27.a
+		USA = {
+			add_war_support = 0.1
+			give_guarantee = HOL
+		}
+		hidden_effect = { news_event = { id = mtg_news.52 days = 1 } }
+	}
+}
+
+country_event = {
+	id = mtg_netherlands.28
+	title = mtg_netherlands.28.t
+	desc = mtg_netherlands.28.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# Damnit
+	option = {
+		name = mtg_netherlands.28.a
+	}
+}

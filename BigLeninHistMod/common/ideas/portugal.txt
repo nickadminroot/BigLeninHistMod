@@ -38,5 +38,577 @@ ideas = {
 			}
 		}
 
+		POR_hydroelectric_power = {
+			picture = por_hydroelectric_power
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		POR_colonial_assimilation_policy = {
+			picture = por_colonial_assimilation
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.10
+			}
+		}
+
+		POR_colonial_army = {
+			picture = por_colonial_army
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.10
+			}
+		}
+
+		POR_timorese_coffe_and_sandalwood_exports_idea = {
+			picture = ETH_coffee_exports
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				original_tag = POR
+			}
+
+			cancel = {
+				721 = {
+					NOT = {
+						is_owned_by = ROOT
+						any_country = {
+							is_subject_of = ROOT
+							owns_state = PREV
+						}
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				resource_trade_cost_bonus_per_factory = 1
+				custom_modifier_tooltip = POR_if_lose_timor_exports_die_tt
+			}
+		}
+
+		POR_portuguese_legion = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		POR_endless_sea = {
+			picture = generic_sea_focused_navy 
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+				convoy_escort_efficiency = 0.15
+				naval_speed_factor = 0.10
+				navy_max_range_factor = 0.15
+				experience_gain_navy = 0.10
+			}
+		}
+
+		POR_corpo_do_estado_maior = {
+			picture = generic_manpower_bonus
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_cost_factor = -0.3
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		POR_the_capital_of_espionage = {
+			picture = generic_spy_intel
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				civilian_intel_factor = 0.05
+				army_intel_factor = 0.05
+				navy_intel_factor = 0.05
+				airforce_intel_factor = 0.05
+				enemy_operative_capture_chance_factor = 0.10
+				intelligence_agency_defense = -0.25
+			}
+		}
+
+		POR_national_gold_reserves = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		POR_estado_novo = { #Estado Novo
+			picture = por_estado_novo
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+
+		POR_estado_novo_2 = { #Strengthen the Regime
+			picture = por_estado_novo
+			name = POR_estado_novo
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				drift_defence_factor = 0.15
+			}
+		}
+
+		POR_estado_novo_3 = { #Appease Monarchists
+			picture = por_estado_novo
+			name = POR_estado_novo
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				political_power_gain = 0.1
+				drift_defence_factor = 0.15
+			}
+		}
+
+		POR_estado_novo_4 = { #Concordat with the Holy See
+			picture = por_estado_novo
+			name = POR_estado_novo
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				political_power_gain = 0.2
+				drift_defence_factor = 0.15
+			}
+		}
+
+		POR_estado_novo_5 = { #Proudly Alone
+			picture = por_estado_novo
+			name = POR_estado_novo
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				political_power_gain = 0.3
+				drift_defence_factor = 0.15
+				war_support_factor = 0.1
+			}
+		}
+
+		POR_a_new_industry = {
+			picture = man_five_year_plan_industry 
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		POR_improved_production = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		POR_volunteers_in_the_war_nationalist = {
+			picture = por_volunteers_in_the_war
+			name = POR_volunteers_in_the_war
+			allowed = {
+				original_tag = POR
+			}
+		
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 3
+				send_volunteers_tension = -1
+			} 
+		}
+
+		POR_standardization = {
+			picture = generic_central_management
+			allowed = {
+				original_tag = POR
+			}
+		
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			} 
+		}
+
+		POR_convoy_build_efficiency = {
+			picture = generic_coastal_defense_ships2
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		POR_advanced_light_aircraft = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}				
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		ogma = {
+			
+			picture = por_ogma
+
+			allowed = {
+				original_tag = POR
+				has_dlc = "La Resistance"
+			}
+
+			available = { 
+				has_completed_focus = POR_ogma
+			}
+				
+			research_bonus = {
+				light_air = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		arsenal_alfeite = {
+			
+			picture = generic_naval_manufacturer_1
+
+			allowed = {
+				original_tag = POR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes		
+
+		fnmal = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = POR
+				has_dlc = "La Resistance"
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+						
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		fabrica_material_guerra = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = POR
+				NOT = { has_dlc = "La Resistance" }
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		ogme = {
+			
+			picture = por_ogme
+
+			allowed = {
+				original_tag = POR
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_completed_focus = POR_ogme
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		fma = {
+			
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				original_tag = POR
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_completed_focus = POR_portuguese_artillery
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {	
+
+		companhia_uniao_fabril = {
+
+			picture = generic_industrial_concern_2
+			
+			allowed = {
+				original_tag = POR
+				has_dlc = "La Resistance"
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
 	}
 }

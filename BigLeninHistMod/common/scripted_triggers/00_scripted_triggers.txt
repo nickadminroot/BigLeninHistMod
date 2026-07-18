@@ -1622,15 +1622,8 @@ DEN_fascist_ai = {
 }
 
 DEN_aat = {
-	always = yes
-}
-
-NOR_aat = {
-	always = yes
-}
-
-NORDIC_is_nordic = {
-	always = yes
+	original_tag = DEN
+	has_dlc = "Arms Against Tyranny"
 }
 
 SOV_can_help_against_ENG = {

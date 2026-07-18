@@ -1,1 +1,24 @@
-ideas = { }
+ideas = {
+		SIK_battle_for_sinkiang = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = MEX_revolutionary_army
+
+			on_add = {
+				set_rule = { can_join_factions = no }
+			}
+
+			on_remove = {
+				set_rule = { can_join_factions = yes }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = PRU_no_factions_tt
+			}
+		}
+}

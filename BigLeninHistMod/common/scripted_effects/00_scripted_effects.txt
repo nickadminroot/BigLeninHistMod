@@ -4793,6 +4793,61 @@ ETH_deescalate_the_war_effect = {
 }
 
 
+##########################
+##########################
+#### BALANCE OF POWER ####
+##########################
+##########################
+
+DEN_bop_low_increase_effect = {
+	add_power_balance_value = {
+		id = DEN_balance_of_power
+		value = 0.1
+	}
+}
+
+DEN_bop_very_low_increase_effect = {
+	add_power_balance_value = {
+		id = DEN_balance_of_power
+		value = 0.05
+	}
+}
+
+DEN_bop_medium_decrease_effect = {
+	add_power_balance_value = {
+		id = DEN_balance_of_power
+		value = -0.15
+	}
+}
+
+DEN_bop_low_decrease_effect = {
+	add_power_balance_value = {
+		id = DEN_balance_of_power
+		value = -0.1
+	}
+}
+
+DEN_bop_very_low_decrease_effect = {
+	add_power_balance_value = {
+		id = DEN_balance_of_power
+		value = -0.05
+	}
+}
+
+#INDUSTRIAL CONCERNS
+DEN_replaced_designers_with_improved_version = {
+	if = {
+		limit = {
+			has_idea = DEN_aalborg_portland
+		}
+		swap_ideas = {
+			remove_idea = DEN_aalborg_portland
+			add_idea = DEN_aalborg_portland_improved
+		}
+	}
+}
+
+#POLITICAL DECISIONS
 DEN_available_candidates = {
 	hidden_effect = {
 	}
@@ -5128,13 +5183,8 @@ KUM_yulbars_khan = { hidden_effect = { } }
 MEK_christian_louis = { hidden_effect = { } }
 MEN_altanochir = { hidden_effect = { } }
 MNT_blazo_dukanovic = { hidden_effect = { } }
-NORDIC_add_to_nordic_alliance = { hidden_effect = { } }
-NORDIC_add_to_war_array = { hidden_effect = { } }
-NORDIC_cooperation_initial_setup = { hidden_effect = { } }
 NOR_reset_prep_system = { hidden_effect = { } }
-PHI_check_japanese_ideology_and_adapt = { hidden_effect = { } }
-PHI_refresh_ruling_ideology_drift = { hidden_effect = { } }
-PHI_update_war_flag = { hidden_effect = { } }
+
 POL_remove_danzig_effect = { hidden_effect = { } }
 POL_sanation_left_opposition_remove = { hidden_effect = { } }
 POL_sanation_right_opposition_remove = { hidden_effect = { } }
@@ -5156,17 +5206,6 @@ SWE_on_freed_cross_we_bear = { hidden_effect = { } }
 SWE_reduce_or_remove_ball_bearing_food_trade_modifier = { hidden_effect = { } }
 SWE_sven_linderot = { hidden_effect = { } }
 SWE_update_iron_ore_calc = { hidden_effect = { } }
-SWI_bba = { hidden_effect = { } }
-SWI_find_best_democratic_ally = { hidden_effect = { } }
-SWI_find_biggest_fascist_neighbor = { hidden_effect = { } }
-SWI_find_democratic_planes_seller = { hidden_effect = { } }
-SWI_has_any_spirit_of_helvetia = { hidden_effect = { } }
-SWI_make_helvetia_peace = { hidden_effect = { } }
-SWI_make_helvetia_war = { hidden_effect = { } }
-SWI_on_action_puppet_selection = { hidden_effect = { } }
-SWI_robert_tobler = { hidden_effect = { } }
-SWI_seize_gold = { hidden_effect = { } }
-SWI_update_neighbor_opinion_balance = { hidden_effect = { } }
 TUR_has_former_turkish_state_modifier = { hidden_effect = { } }
 TUR_has_turkish_state_modifier = { hidden_effect = { } }
 TUR_remove_state_modifier_effect = { hidden_effect = { } }
