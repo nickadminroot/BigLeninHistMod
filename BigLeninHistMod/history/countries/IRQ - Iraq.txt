@@ -33,6 +33,27 @@ if = {
 	set_technology = { camelry = 1 }
 }
 
+##### Starting National Ideas #####
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	add_ideas = IRQ_ghazi_i
+	add_ideas = IRQ_golden_square
+	add_ideas = IRQ_anglo_iraqi_treaty
+	add_ideas = IRQ_agrarian_society
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Graveyard of Empires"
+		}
+	}
+	add_ideas = IRQ_ghazi_i
+	add_ideas = IRQ_golden_square
+}
+
+
 ##### RECRUIT VANILLA CHARACTERS #####
 if = {
 	limit = {
