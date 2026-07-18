@@ -85,8 +85,6 @@ initial_show_position = {
 		prerequisite = { focus = PHI_commonwealth_of_the_philippines }								
 
 		relative_position_id = PHI_commonwealth_of_the_philippines		
-		mutually_exclusive = { focus = PHI_align_with_japan }					
-			
 		x = -2
 		y = 1
 	
@@ -141,8 +139,6 @@ initial_show_position = {
 		prerequisite = { focus = PHI_align_with_the_usa focus = PHI_align_with_japan }								
 
 		relative_position_id = PHI_align_with_the_usa		
-		mutually_exclusive = { focus = PHI_leverage_the_peso }								
-			
 		x = -4
 		y = 1
 	
@@ -514,8 +510,6 @@ initial_show_position = {
 		prerequisite = { focus = PHI_quezon_city_campus focus = PHI_reduce_unneccessary_expenditure focus = PHI_subsidies focus = PHI_basic_welfare focus = PHI_encourage_asian_trade }
 
 		relative_position_id = PHI_peg_the_peso_to_the_dollar	
-		mutually_exclusive = { focus = PHI_anti_hacendados }		
-		
 		x = 0
 		y = 3
 	
@@ -1194,8 +1188,6 @@ initial_show_position = {
 		prerequisite = { focus = PHI_san_miguel focus = PHI_textile_mills focus = PHI_encourage_gold_exports focus = PHI_mineral_prospecting focus = PHI_bill_of_rights }
 
 		relative_position_id = PHI_pro_hacendados	
-		mutually_exclusive = { focus = PHI_open_borders }
-		
 		x = 0
 		y = 3
 	
