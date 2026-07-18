@@ -90,20 +90,7 @@ focus_tree = {
 		available = {
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CHI_dang_guo
-						has_completed_focus = CHI_strengthening_our_resolve
-					}
-				}
-			}
+			always = no
 		}
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -7120,20 +7107,7 @@ focus_tree = {
 		available = {
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CHI_dang_guo
-						has_completed_focus = CHI_end_military_primacy
-					}
-				}
-			}
+			always = no
 		}
 		offset = {
 			x = -61
