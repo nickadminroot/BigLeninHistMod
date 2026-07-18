@@ -67,19 +67,6 @@ joint_focus = {
 		}
 	}
 
-	offset = {
-        x = -50
-        y = 0
-        trigger = {
-        	tag = PER
-            has_game_rule = {
-                rule = obsolete_focus_branches_visibility
-                option = HIDE
-            }
-            has_completed_focus = PER_legacy_of_greatness
-        }
-    }
-
     offset = {
         x = -50
         y = 0

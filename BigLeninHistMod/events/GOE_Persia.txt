@@ -1,0 +1,847 @@
+namespace = PER_imperial_events
+
+country_event = { #Royal Visit to Germany
+	id = PER_imperial_events.70
+	title = PER_imperial_events.70.t
+	desc = PER_imperial_events.70.desc
+	picture = GFX_report_event_PER_shah_inspection 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Jaaaaaa
+		name = PER_imperial_events.70.a
+		hidden_effect = {
+			PER = {
+			country_event = {
+				id = PER_imperial_events.71
+				hours = 1
+			}
+		}
+	}
+		GER = {
+				add_opinion_modifier = {
+				target = PER
+				modifier = large_increase
+				}
+				add_political_power = 75
+			}
+		}
+
+	option = { #Nejjjjj
+		name = PER_imperial_events.70.b
+		PER = {
+			country_event = {
+				id = PER_imperial_events.72
+				hours = 1
+			}
+		}
+	}
+}
+
+country_event = { #Peace SOV preemptive
+	id = PER_imperial_events.110
+	title = PER_imperial_events.110.t
+	desc = PER_imperial_events.110.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = PER_imperial_events.110.a
+		ai_chance = {
+			base = 95
+		}
+			SOU = {
+			white_peace = {
+				tag = PER
+				}
+			}
+			PER = {
+					transfer_state = 584
+					transfer_state = 229
+					transfer_state = 230
+					transfer_state = 231
+					
+					country_event = {
+						id = PER_imperial_events.111
+						hours = 1
+					}
+				}
+			}
+
+	option = { #naur
+		name = PER_imperial_events.110.b
+		ai_chance = {
+			base = 5
+		}
+		country_event = {
+				id = PER_imperial_events.112
+				hours = 1
+			}
+		}
+	}
+
+country_event = { #Negotiating Capitulations ENG
+	id = PER_imperial_events.120
+	title = PER_imperial_events.120.t
+	desc = PER_imperial_events.120.desc
+	picture = GFX_report_event_generic_sign_treaty2 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = PER_imperial_events.120.a
+		ai_chance = {
+			base = 95
+		}
+
+		effect_tooltip = {
+			ROOT = { puppet = PER }
+			PER = {
+				set_rule = { can_join_factions = no }
+				set_rule = { can_decline_call_to_war = yes }
+				mark_focus_tree_layout_dirty = yes
+			}
+
+			every_state = {
+				limit = {
+					is_controlled_by = ROOT 
+					is_core_of = PER 
+				}
+				transfer_state_to = PER
+			}
+		}
+
+		PER = {
+			country_event = {
+				id = PER_imperial_events.121
+				hours = 1
+			}
+		}
+	}
+
+	option = { #naur
+		name = PER_imperial_events.120.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.122
+				hours = 1
+			}
+		}
+	}
+}
+
+country_event = { #Negotiating Capitulations SOV
+	id = PER_imperial_events.130
+	title = PER_imperial_events.130.t
+	desc = PER_imperial_events.130.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = PER_imperial_events.130.a
+		ai_chance = {
+			base = 95
+		}
+
+		effect_tooltip = {
+			SOU = {
+			IF = {
+				limit = {
+					has_wargoal_against = PER
+				}
+				remove_wargoal = {
+				    type = all
+				    target = PER
+				}
+			}
+			white_peace = {
+				tag = PER
+				}
+
+			PER = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_controlled_by = SOU
+						}
+						OR = {
+							state = 420 #Gilan
+							state = 1000 #East Azerbaijan
+							state = 419 #West Azerbaijan
+							state = 1001 #kurdistan
+							state = 1004 #North Khorasan
+							state = 416 #Khorasan
+							is_controlled_by = SOU
+						}
+					}
+					display_individual_scopes = yes
+					SOU = {
+						transfer_state = PREV
+					}
+				}
+			}		
+		}
+	}
+
+		PER = {
+			country_event = {
+				id = PER_imperial_events.131
+				hours = 1
+			}
+		}
+	}
+
+	option = { #naur
+		name = PER_imperial_events.130.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+				PER = {
+					country_event = {
+					id = PER_imperial_events.132
+					hours = 1
+				}
+			}
+		}
+	}
+
+country_event = { #REBELLION
+	id = PER_imperial_events.140
+	title = PER_imperial_events.140.t
+	desc = PER_imperial_events.140.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Hell No
+		name = PER_imperial_events.140.a
+		ai_chance = {
+			base = 90
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.141
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+
+	# OK
+	option = {
+		name = BBA_ethiopia_fascist_events.20.b
+		ai_chance = {
+			base = 5
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.142
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = { #White Peace Defensive
+	id = PER_imperial_events.150
+	title = PER_imperial_events.150.t
+	desc = PER_imperial_events.150.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Yes we peace
+		name = PER_imperial_events.150.a
+		ai_chance = {
+			base = 90
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.151
+				hours = 1 
+				random_hours = 3 
+			}
+		}
+		IF = {
+			limit = {
+				ROOT = {
+					is_faction_leader = yes
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				country_event = {
+					id = PER_imperial_events.153
+					hours = 4 
+					random_hours = 8 
+				}
+			}
+		}
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			ROOT = {
+			white_peace = {
+				tag = PER
+				}
+			}
+		}
+	}
+
+	option = { # No we fight
+		name = PER_imperial_events.150.b
+		ai_chance = {
+			base = 10
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.152
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = { #reparations but for neighbors
+	id = PER_imperial_events.160
+	title = PER_imperial_events.160.t
+	desc = PER_imperial_events.160.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Yes we peace
+		name = PER_imperial_events.160.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 100
+				ROOT = {
+					any_war_score < 49
+				}
+			}
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.161
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+		IF = {
+			limit = {
+				ROOT = {
+					is_faction_leader = yes
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				country_event = {
+					id = PER_imperial_events.153
+					hours = 4 
+					random_hours = 8 
+				}
+			}
+		}
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			ROOT = {
+			white_peace = {
+				tag = PER
+			}
+			IF = {
+				limit = {
+					tag = AFG
+				}
+				PER = {
+					transfer_state = 415
+					transfer_state = 1009
+				}
+			}
+
+			ELSE_IF = {
+				limit = {
+					tag = IRQ
+				}
+				PER = {
+					transfer_state = 676
+					transfer_state = 1011
+				}
+			}
+
+			ELSE_IF = {
+				limit = {
+					tag = TUR
+				}
+				PER = {
+					transfer_state = 800
+					transfer_state = 352
+					transfer_state = 350
+					transfer_state = 344
+				}
+			}
+
+			ELSE_IF = {
+				limit = {
+					tag = RAJ
+				}
+				PER = {
+					transfer_state = 988
+					transfer_state = 444
+				}
+			}
+
+			ELSE_IF = {
+				limit = {
+					tag = SOU
+				}
+				PER = {
+					transfer_state = 584
+					transfer_state = 229
+					transfer_state = 230
+					transfer_state = 231
+				}
+			}
+
+			ELSE_IF = {
+				limit = {
+					tag = ENG
+				}
+				PER = {
+					transfer_state = 765
+					transfer_state = 658
+					transfer_state = 656
+				}
+			}
+		}
+	}
+}
+
+	option = { # No we fight
+		name = PER_imperial_events.160.b
+		ai_chance = {
+			base = 50
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.162
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = { #reparations but for far away
+	id = PER_imperial_events.170
+	title = PER_imperial_events.170.t
+	desc = PER_imperial_events.170.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Yes we peace
+		name = PER_imperial_events.170.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 100
+				ROOT = {
+					any_war_score < 49
+				}
+			}
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.171
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+		IF = {
+			limit = {
+				ROOT = {
+					is_faction_leader = yes
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				country_event = {
+					id = PER_imperial_events.153
+					hours = 4 
+					random_hours = 8 
+				}
+			}
+		}
+		custom_effect_tooltip = if_they_accept_tt
+		ROOT = {
+			add_timed_idea = {
+				idea = PER_enemy_war_reparations_idea
+				days = 730
+			}
+			add_offsite_building = {
+  				type = industrial_complex
+   				level = 2
+  			}
+		}
+	}
+
+	option = { # No we fight
+		name = PER_imperial_events.170.b
+		ai_chance = {
+			base = 50
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.172
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = { #swearing fealty (generic)
+	id = PER_imperial_events.180
+	title = PER_imperial_events.180.t
+	desc = PER_imperial_events.180.desc
+	picture = GFX_report_event_generic_read_write 
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Yes we peace
+		name = PER_imperial_events.180.a
+		ai_chance = {
+			base = 90
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.181
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			ROOT = { puppet = FROM }
+			FROM = {
+				set_rule = { can_join_factions = no }
+				set_rule = { can_decline_call_to_war = yes }
+			}
+
+			every_state = {
+				limit = {
+					is_controlled_by = ROOT 
+					is_core_of = FROM 
+				}
+				transfer_state_to = FROM
+			}
+		}
+	}
+
+	option = { # No we fight
+		name = PER_imperial_events.180.b
+		ai_chance = {
+			base = 10
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.182
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = { #Pushing Negotiations
+	id = PER_imperial_events.190
+	title = PER_imperial_events.190.t
+	desc = PER_imperial_events.190.desc
+	picture = GFX_report_event_generic_read_write 
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Yes we peace
+		name = PER_imperial_events.190.a
+		ai_chance = {
+			base = 90
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.191
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+		IF = {
+			limit = {
+				ROOT = {
+					is_faction_leader = yes
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					is_ally_with = ROOT
+				}
+				country_event = {
+					id = PER_imperial_events.153
+					hours = 4 
+					random_hours = 8 
+				}
+			}
+		}
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			IF = {
+				limit = {
+					has_country_flag = PER_invading_country_flag
+				}
+				FROM = {
+					give_resource_rights = {
+						receiver = ROOT
+						state = 413
+					}
+					give_resource_rights = {
+						receiver = ROOT
+						state = 412
+					}
+					white_peace = {
+						tag = ROOT
+					}
+				}
+			}
+			ELSE = {
+				add_political_power = 100
+				add_war_support = 0.05
+			}
+		}
+	}
+
+	option = { # No we fight
+		name = PER_imperial_events.190.b
+		ai_chance = {
+			base = 10
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.192
+				hours = 4 
+				random_hours = 8 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = PER_imperial_events.230
+	title = PER_imperial_events.230.t
+	desc = PER_imperial_events.230.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	# No Monarch in Power
+	option = {
+		name = PER_imperial_events.230.a
+		ai_chance = {
+			base = 0
+		}
+
+		trigger = {
+			PER = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+		}
+		hidden_effect = { 
+			retire_country_leader = yes
+		}
+		set_party_name = {
+				ideology = neutrality
+				long_name = PER_qajar_dynasty_party_long
+				name = PER_qajar_dynasty_party
+			}
+		promote_character = {
+			character = PER_mohammad_hassan_mirza 
+			ideology = despotism 
+		}
+		set_cosmetic_tag = PER_persia
+		
+		IF = {
+			limit = {
+				has_idea = PER_constitutional_shah
+			}
+			remove_ideas = PER_constitutional_shah
+		}
+		
+		PER = {
+			country_event = {
+				id = PER_imperial_events.233
+				hours = 1
+			}
+		}
+	}
+
+	# Depose the Pahlavis
+	option = {
+		name = PER_imperial_events.230.b
+		ai_chance = {
+			base = 0
+		}
+
+		trigger = {
+			NOT = {
+				PER = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+						has_government = fascism
+					}
+				}
+			}
+		}
+
+		effect_tooltip = {
+			hidden_effect = { 
+				retire_country_leader = yes
+				set_country_flag = PER_pahlavis_deposed_flag
+			}
+			promote_character = {
+				character = PER_mohammad_hassan_mirza 
+				ideology = despotism 
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = PER_qajar_dynasty_party_long
+				name = PER_qajar_dynasty_party
+			}
+			set_cosmetic_tag = PER_persia
+			custom_effect_tooltip =	generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = PER_reza_shah_pahlavi
+			PER_mohammed_reza_pahlavi = {
+				remove_trait = {
+					trait = compassionate_gentleman
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = PER_disinherited_heir_trait
+					slot = political_advisor
+				} 
+			}
+		}
+		PER = {
+			country_event = {
+				id = PER_imperial_events.231
+				hours = 1
+			}
+		}
+	}
+
+	# Exile the Pahlavis
+	option = {
+		name = PER_imperial_events.230.c
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			NOT = {
+				PER = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+						has_government = fascism
+					}
+				}
+			}
+		}
+		effect_tooltip = {
+			hidden_effect = { 
+				retire_country_leader = yes
+				set_global_flag = PER_pahlavis_exiled_flag
+			}
+			promote_character = {
+				character = PER_mohammad_hassan_mirza 
+				ideology = despotism 
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = PER_qajar_dynasty_party_long
+				name = PER_qajar_dynasty_party
+			}
+			set_cosmetic_tag = PER_persia
+			custom_effect_tooltip =	generic_skip_one_line_tt
+			PER_reza_shah_pahlavi = {
+				set_nationality = SAF
+			}
+			PER_mohammed_reza_pahlavi = {
+				set_nationality = SAF
+				remove_trait = {
+					trait = compassionate_gentleman
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = PER_disinherited_heir_trait
+					slot = political_advisor
+				} 
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_autonomy_score = {
+				value = 75
+				localization = PER_reinstate_qajars
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		PER = {
+			country_event = {
+				id = PER_imperial_events.232
+				hours = 1
+			}
+		}
+	}
+}
+
