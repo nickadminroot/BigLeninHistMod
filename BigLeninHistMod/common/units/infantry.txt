@@ -28,6 +28,7 @@ sub_units = {
 			category_all_infantry
 			category_army
 			category_infantry_and_bicycle
+			category_infantry_standard
 		}
 		
 		combat_width = 2
@@ -441,20 +442,25 @@ sub_units = {
 		
 		combat_width = 2
 		
-		max_strength = 25
-		max_organisation = 60
-		default_morale = 0.30
-		manpower = 1200
+		max_strength = 30
+		max_organisation = 70
+		default_morale = 0.4
+		manpower = 1000
 
-		training_time = 90
-		suppression = 2.2
+		soft_attack = 0.3
+		hard_attack = 0.5
+		defense = 0.3
+		breakthrough = 1
+
+		training_time = 120
+		suppression = 1
 		weight = 0.75
-		supply_consumption = 0.065
+		supply_consumption = 0.08
 	
 		transport = motorized_equipment
 	
 		need = {
-			infantry_equipment = 100
+			infantry_equipment = 250
 			motorized_equipment = 35
 		}
 
