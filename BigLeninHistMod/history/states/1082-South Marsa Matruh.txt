@@ -1,0 +1,16 @@
+state={
+	id=1082
+	name="STATE_1082"
+	manpower = 27226
+	state_category = wasteland
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		12091 7148 13418 1143 12764 13415
+	}
+	local_supplies=4.7
+}
