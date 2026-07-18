@@ -5209,17 +5209,6 @@ SWE_on_freed_cross_we_bear = { hidden_effect = { } }
 SWE_reduce_or_remove_ball_bearing_food_trade_modifier = { hidden_effect = { } }
 SWE_sven_linderot = { hidden_effect = { } }
 SWE_update_iron_ore_calc = { hidden_effect = { } }
-SWI_bba = { hidden_effect = { } }
-SWI_find_best_democratic_ally = { hidden_effect = { } }
-SWI_find_biggest_fascist_neighbor = { hidden_effect = { } }
-SWI_find_democratic_planes_seller = { hidden_effect = { } }
-SWI_has_any_spirit_of_helvetia = { hidden_effect = { } }
-SWI_make_helvetia_peace = { hidden_effect = { } }
-SWI_make_helvetia_war = { hidden_effect = { } }
-SWI_on_action_puppet_selection = { hidden_effect = { } }
-SWI_robert_tobler = { hidden_effect = { } }
-SWI_seize_gold = { hidden_effect = { } }
-SWI_update_neighbor_opinion_balance = { hidden_effect = { } }
 TUR_has_former_turkish_state_modifier = { hidden_effect = { } }
 TUR_has_turkish_state_modifier = { hidden_effect = { } }
 TUR_remove_state_modifier_effect = { hidden_effect = { } }
