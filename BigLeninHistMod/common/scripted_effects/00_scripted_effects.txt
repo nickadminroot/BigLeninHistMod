@@ -5183,9 +5183,6 @@ KUM_yulbars_khan = { hidden_effect = { } }
 MEK_christian_louis = { hidden_effect = { } }
 MEN_altanochir = { hidden_effect = { } }
 MNT_blazo_dukanovic = { hidden_effect = { } }
-NORDIC_add_to_nordic_alliance = { hidden_effect = { } }
-NORDIC_add_to_war_array = { hidden_effect = { } }
-NORDIC_cooperation_initial_setup = { hidden_effect = { } }
 NOR_reset_prep_system = { hidden_effect = { } }
 
 POL_remove_danzig_effect = { hidden_effect = { } }

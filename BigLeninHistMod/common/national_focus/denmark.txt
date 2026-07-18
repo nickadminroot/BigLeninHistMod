@@ -1850,7 +1850,6 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		
 		prerequisite = { focus = DEN_collaboration_government  }
-		mutually_exclusive = { focus = DEN_align_with_overlord }
 
 		relative_position_id = DEN_collaboration_government	
 		x = -3
@@ -1909,7 +1908,6 @@ focus_tree = {
 		icon = GFX_focus_DEN_civilian_preparations
 
 		prerequisite = { focus = DEN_seek_independence }
-		mutually_exclusive = { focus = DEN_pledge_allegiance }
 
 		relative_position_id = DEN_collaboration_government	
 		x = 0
@@ -3301,26 +3299,12 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 
 		prerequisite = { focus = DEN_declare_neutrality }
-		mutually_exclusive = { focus = DEN_unify_the_right }
 
 		relative_position_id = DEN_declare_neutrality	
 		x = -10
 		y = 1
 	
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = DEN_unify_the_right }
-				is_subject = no
-			}
-		}
 
 		offset = {
 			x = 10
@@ -3375,7 +3359,6 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 
 		prerequisite = { focus = DEN_political_unity }
-		mutually_exclusive = { focus = DEN_start_the_rearmament }
 
 		relative_position_id = DEN_political_unity	
 		x = -4
@@ -4828,8 +4811,6 @@ focus_tree = {
 	focus = {
 		id = DEN_total_war
 		icon = GFX_focus_generic_total_war
-		prerequisite = { focus = DEN_prioritize_navy focus = DEN_prioritize_army }
-
 		relative_position_id = DEN_political_unity
 		x = 0
 		y = 5
