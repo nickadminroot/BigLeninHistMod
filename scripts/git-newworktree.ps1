@@ -1,5 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
+    [ValidateNotNullOrEmpty()]
     [string]$Branch,
 
     [string]$WorktreePath = "",
@@ -9,6 +10,19 @@ param(
     [switch]$CopyPiCache = $true,
     [switch]$UseSymlinks = $true
 )
+
+Set-StrictMode -Version 2.0
+$ErrorActionPreference = "Stop"
+$WorktreeCreated = $false
+
+trap {
+    [Console]::Error.WriteLine("git-newworktree: ERROR: {0}", $_.Exception.Message)
+    if ($WorktreeCreated -and $WorktreePath) {
+        [Console]::Error.WriteLine("git-newworktree: worktree remains registered at: {0}", $WorktreePath)
+        [Console]::Error.WriteLine("git-newworktree: inspect it before retrying; no automatic cleanup was attempted.")
+    }
+    exit 1
+}
 
 <#
 .SYNOPSIS
@@ -56,80 +70,104 @@ $ExtraItems = @(
     # ".env.local",
     # ".env.development",
     # "node_modules",
-    ".pi/rag-cache.json",
     "scripts/mcp/node_modules",
     ".pnpm-store"   # only if you keep a local .pnpm-store
 )
 
-# --- Resolve paths ---
-$MainRepo = (git rev-parse --show-toplevel)
-if (-not $MainRepo) {
-    Write-Error "Not inside a git repository."
-    exit 1
+# --- Resolve and validate paths ---
+$MainRepo = git rev-parse --show-toplevel
+if ($LASTEXITCODE -ne 0 -or -not $MainRepo) {
+    throw "Not inside a git repository."
 }
-$MainRepo = (Resolve-Path $MainRepo).Path
+$MainRepo = (Resolve-Path -LiteralPath $MainRepo).Path
+
+# Validate the branch before creating any directories. The helper intentionally
+# checks out an existing task branch; branch creation stays an explicit Git step.
+git check-ref-format --branch $Branch *> $null
+if ($LASTEXITCODE -ne 0) {
+    throw "Invalid branch name: $Branch"
+}
+git show-ref --verify --quiet "refs/heads/$Branch"
+if ($LASTEXITCODE -ne 0) {
+    throw "Local branch does not exist: $Branch. Create it before running this helper."
+}
 
 if (-not $WorktreePath) {
-    # default: <parent_dir>/<repo>.worktrees/<branch>
-    $RepoDir = Split-Path $MainRepo -Leaf
-    $ParentDir = Split-Path $MainRepo -Parent
-    $WorktreePath = Join-Path $ParentDir "$RepoDir.worktrees" $Branch
+    # Default: <parent_dir>/<repo>.worktrees/<branch>. Use nested Join-Path calls
+    # for compatibility with Windows PowerShell 5.1.
+    $RepoDir = Split-Path -Path $MainRepo -Leaf
+    $ParentDir = Split-Path -Path $MainRepo -Parent
+    $WorktreeRoot = Join-Path -Path $ParentDir -ChildPath "$RepoDir.worktrees"
+    $WorktreePath = Join-Path -Path $WorktreeRoot -ChildPath $Branch
+}
+elseif (-not [System.IO.Path]::IsPathRooted($WorktreePath)) {
+    $WorktreePath = Join-Path -Path $MainRepo -ChildPath $WorktreePath
+}
+$WorktreePath = [System.IO.Path]::GetFullPath($WorktreePath)
+
+$RepoPrefix = $MainRepo.TrimEnd('\', '/') + [System.IO.Path]::DirectorySeparatorChar
+if ($WorktreePath.Equals($MainRepo, [System.StringComparison]::OrdinalIgnoreCase) -or
+    $WorktreePath.StartsWith($RepoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Worktree path must be outside the main repository: $WorktreePath"
+}
+if (Test-Path -LiteralPath $WorktreePath) {
+    throw "Worktree destination already exists: $WorktreePath"
 }
 
 # --- 1. Create worktree ---
 Write-Host ">>> Creating worktree at: $WorktreePath" -ForegroundColor Cyan
 git worktree add $WorktreePath $Branch
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "Failed to create worktree."
-    exit 1
+    throw "Failed to create worktree."
 }
+$WorktreeCreated = $true
 
 # --- 2. Copy / symlink extra files ---
 Write-Host ">>> Copying extra files..." -ForegroundColor Cyan
 
 function Copy-WithSymlink {
     param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
         [string]$Source,
+
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
         [string]$Dest
     )
+
     $Source = $Source.Replace('/', '\')
     $Dest = $Dest.Replace('/', '\')
 
-    if (-not (Test-Path $Source)) {
-        Write-Host "    [SKIP] $Source — not found in main repo" -ForegroundColor DarkYellow
+    if (-not (Test-Path -LiteralPath $Source)) {
+        Write-Host "    [SKIP] $Source - not found in main repo" -ForegroundColor DarkYellow
         return
     }
 
-    if (Test-Path $Dest) {
-        Write-Host "    [SKIP] $Dest — already exists in worktree" -ForegroundColor DarkYellow
+    if (Test-Path -LiteralPath $Dest) {
+        Write-Host "    [SKIP] $Dest - already exists in worktree" -ForegroundColor DarkYellow
         return
     }
 
-    # Ensure parent directory exists
-    $DestDir = Split-Path $Dest -Parent
-    if (-not (Test-Path $DestDir)) {
+    $DestDir = Split-Path -Path $Dest -Parent
+    if (-not (Test-Path -LiteralPath $DestDir)) {
         New-Item -ItemType Directory -Path $DestDir -Force | Out-Null
     }
 
     if ($UseSymlinks) {
-        # Use relative symlink
-        $RelPath = Resolve-Path -Path $Source -RelativeBase $DestDir
-        # Actually, RelativeBase doesn't exist in PS < 7. Let's do it manually.
-        $SourceFull = (Resolve-Path $Source).Path
+        $SourceFull = (Resolve-Path -LiteralPath $Source).Path
         try {
             New-Item -ItemType SymbolicLink -Path $Dest -Target $SourceFull -ErrorAction Stop | Out-Null
             Write-Host "    [SYMLINK] $Source -> $Dest" -ForegroundColor Green
+            return
         }
         catch {
-            Write-Host "    [FAIL] Symlink failed, trying copy..." -ForegroundColor Yellow
-            Copy-Item -Recurse -Path $Source -Destination $Dest -Force
-            Write-Host "    [COPY] $Source -> $Dest" -ForegroundColor Green
+            Write-Host "    [WARN] Symlink failed; copying instead: $($_.Exception.Message)" -ForegroundColor Yellow
         }
     }
-    else {
-        Copy-Item -Recurse -Path $Source -Destination $Dest -Force
-        Write-Host "    [COPY] $Source -> $Dest" -ForegroundColor Green
-    }
+
+    Copy-Item -Recurse -LiteralPath $Source -Destination $Dest -Force -ErrorAction Stop
+    Write-Host "    [COPY] $Source -> $Dest" -ForegroundColor Green
 }
 
 # --- Built-in items ---
