@@ -19,6 +19,14 @@ set_popularities = {
 	neutrality = 100
 }
 
+add_ideas = {
+	SWE_hungershield
+	SWE_severe_lack_of_ammunition
+	SWE_gustaf_v_idea
+}
+
+add_dynamic_modifier = { modifier = SWE_folkhemmet }
+
 # 1939 Scenario
 1939.1.1 = {
 	set_technology = {
