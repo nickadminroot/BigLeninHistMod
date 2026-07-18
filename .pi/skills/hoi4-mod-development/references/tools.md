@@ -40,6 +40,21 @@ Use `--verbose` to show request timing. `--no-daemon` forces the old one-shot be
 - Array: `--key [1,2,3]`
 - Object: `--key '{"a":1}'`
 
+For mod file arguments such as `--file`, the CLI accepts all of these forms:
+
+```bash
+# Relative to mod content (preferred)
+node scripts/hoi4-mcp-cli.js script_validate_file --file "common/national_focus/france.txt"
+
+# Relative to the caller's current working directory
+node scripts/hoi4-mcp-cli.js script_validate_file --file "BigLeninHistMod/common/national_focus/france.txt"
+
+# Absolute path inside mod content
+node scripts/hoi4-mcp-cli.js script_validate_file --file "G:/mods/MyMod/common/national_focus/france.txt"
+```
+
+Existing CWD-relative paths and absolute paths are normalized to mod-relative paths before they are sent to the daemon. Paths outside the detected mod-content directory are rejected.
+
 ### Script Tools
 
 **Search across mod files:**

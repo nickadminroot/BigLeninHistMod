@@ -412,6 +412,7 @@ Normal `hoi4-mcp-cli.js` calls use a quiet persistent daemon rather than rebuild
 - A daemon exits after 15 idle minutes by default.
 - Use `--verbose` for timing diagnostics, `--stop-daemon` to stop the current worktree's daemon, and `--no-daemon` only to troubleshoot one-shot behavior.
 - Do not stop the daemon between validation calls or invoke repeated calls with `--no-daemon`.
+- File arguments accept paths relative to mod content (preferred), absolute paths inside mod content, and existing paths relative to the CLI caller's current working directory. Paths outside mod content are rejected.
 
 Optional environment overrides are `HOI4_MCP_DEBOUNCE_MS`, `HOI4_MCP_IDLE_MS`, and `HOI4_MCP_START_TIMEOUT_MS`.
 

@@ -111,6 +111,56 @@ function parseArgs(argv) {
   return args;
 }
 
+const MOD_PATH_FIELDS = {
+  script_parse_file: ['file'],
+  script_validate_file: ['file'],
+  script_get_scope_context: ['file'],
+  mod_get_file: ['file'],
+  loc_set: ['file'],
+  loc_bulk_set: ['file'],
+  gui_parse_gfx: ['file'],
+  gui_parse_gui: ['file'],
+  gui_validate: ['gui_file'],
+  gui_generate_gfx: ['directory', 'output_file']
+};
+
+function isInsidePath(root, candidate) {
+  const relative = path.relative(root, candidate);
+  return relative === '' || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative));
+}
+
+function normalizeModPath(value, modContent, cwd) {
+  if (typeof value !== 'string' || value.length === 0) return value;
+
+  let candidate;
+  if (path.isAbsolute(value)) {
+    candidate = path.resolve(value);
+  } else if (/^\.\.?[\\/]/.test(value)) {
+    candidate = path.resolve(cwd, value);
+  } else {
+    const cwdCandidate = path.resolve(cwd, value);
+    const modCandidate = path.resolve(modContent, value);
+    candidate = fs.existsSync(cwdCandidate) ? cwdCandidate : modCandidate;
+  }
+
+  if (!isInsidePath(modContent, candidate)) {
+    throw new Error(`Path is outside the mod content directory: ${value}`);
+  }
+  return path.relative(modContent, candidate) || '.';
+}
+
+function normalizeToolArgs(toolName, args, modContent, cwd = process.cwd()) {
+  const fields = MOD_PATH_FIELDS[toolName];
+  if (!fields) return args;
+  const normalized = { ...args };
+  for (const field of fields) {
+    if (normalized[field] !== undefined) {
+      normalized[field] = normalizeModPath(normalized[field], modContent, cwd);
+    }
+  }
+  return normalized;
+}
+
 function printUsage() {
   console.log('HOI4 MCP CLI — persistent tools for HOI4 modding\n');
   console.log('Usage:');
@@ -119,8 +169,9 @@ function printUsage() {
   console.log('  node scripts/hoi4-mcp-cli.js --interactive');
   console.log('  node scripts/hoi4-mcp-cli.js --stop-daemon');
   console.log('  node scripts/hoi4-mcp-cli.js <tool_name> --no-daemon --verbose\n');
-  console.log('The default daemon is isolated by absolute mod/worktree path, fully');
-  console.log('reindexes after debounced file changes, and exits after 15 idle minutes.');
+  console.log('File arguments may be mod-relative, absolute, or relative to the current');
+  console.log('working directory. The daemon is isolated by absolute mod/worktree path,');
+  console.log('fully reindexes after changes, and exits after 15 idle minutes.');
 }
 
 function sendRequest(endpoint, request) {
@@ -427,8 +478,9 @@ async function main() {
       if (!parts.length) { if (!rl.closed) rl.prompt(); continue; }
       if (parts[0] === 'exit' || parts[0] === 'quit') break;
       try {
+        const interactiveArgs = normalizeToolArgs(parts[0], parseArgs(parts.slice(1)), modContent);
         const response = await requestDaemon(repoRoot, modContent, {
-          protocol: PROTOCOL_VERSION, type: 'call', toolName: parts[0], args: parseArgs(parts.slice(1))
+          protocol: PROTOCOL_VERSION, type: 'call', toolName: parts[0], args: interactiveArgs
         });
         if (!response.ok) throw new Error(response.error);
         console.log(JSON.stringify(response.result, null, 2));
@@ -443,7 +495,8 @@ async function main() {
 
   const toolName = argv[0];
   if (toolName.startsWith('--')) throw new Error(`Unknown option: ${toolName}`);
-  const toolArgs = parseArgs(argv.slice(1).filter(arg => !['--no-daemon', '--verbose'].includes(arg)));
+  const parsedToolArgs = parseArgs(argv.slice(1).filter(arg => !['--no-daemon', '--verbose'].includes(arg)));
+  const toolArgs = normalizeToolArgs(toolName, parsedToolArgs, modContent);
 
   if (verbose) console.error(`[hoi4-cli] ${toolName} (${argv.includes('--no-daemon') ? 'one-shot' : 'daemon'})`);
   let result;

@@ -98,7 +98,7 @@ The helper symlinks extra files by default when present: `node_modules/`, `scrip
 
 ## Validation commands
 
-The MCP CLI automatically starts a quiet daemon scoped to the absolute mod-content path. Each worktree therefore has an isolated in-memory index. Filesystem changes trigger one full reindex after a debounce interval, and an idle daemon exits automatically; use `--stop-daemon` only for troubleshooting. Prefer several normal CLI calls over shell loops that pass `--no-daemon`.
+The MCP CLI automatically starts a quiet daemon scoped to the absolute mod-content path. Each worktree therefore has an isolated in-memory index. Filesystem changes trigger one full reindex after a debounce interval, and an idle daemon exits automatically; use `--stop-daemon` only for troubleshooting. Prefer several normal CLI calls over shell loops that pass `--no-daemon`. File arguments may be relative to mod content (preferred), absolute paths inside mod content, or existing paths relative to the caller's current working directory.
 
 Choose checks that match the change:
 
