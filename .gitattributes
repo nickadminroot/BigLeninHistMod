@@ -1,9 +1,12 @@
-* text=auto
+# Keep repository text deterministic across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Binary game assets must never be line-ending normalized.
+*.bmp binary
 *.dds binary
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.tga binary
-*.dds binary
 *.wav binary
 *.ogg binary

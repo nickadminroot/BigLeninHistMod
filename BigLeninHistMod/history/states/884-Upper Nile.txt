@@ -5,6 +5,11 @@ state = {
 	state_category = pastoral
 	history = {
 		owner = ENG
+
+		victory_points = {
+			2096 1 
+		}
+		
 		buildings = {
 			infrastructure = 2
 		}

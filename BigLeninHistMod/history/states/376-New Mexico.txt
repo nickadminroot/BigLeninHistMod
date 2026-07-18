@@ -4,7 +4,7 @@ state={
 	manpower = 423316
 	state_category = rural
 	resources={
-		oil=14 # was: 20
+		oil=8 # was: 20 #2025-12-12: was: 14
 		aluminium=30 # was: 52
 		coal = 5 # initial distribution = with infra 8.4 / 1280 total
 	}

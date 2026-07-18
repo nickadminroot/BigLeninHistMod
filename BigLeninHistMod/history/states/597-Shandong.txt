@@ -30,13 +30,11 @@ state = {
 			}
 		}
 		1938.10.25 = {
-			if = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-			}	
 			owner = CHI
-			controller = JAP		
+			controller = JAP	
+			buildings = {
+				air_base = 1
+			}	
 		}
 	}
 	provinces = {

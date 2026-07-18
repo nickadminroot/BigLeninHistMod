@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # USA Events
 ###########################
 
@@ -2920,9 +2920,15 @@ country_event = {
 				}
 				if = {
 					limit = {
-						has_full_control_of_state = 326
+						has_full_control_of_state = 1021
 					}
-					transfer_state = 326
+					transfer_state = 1021
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 1065
+					}
+					transfer_state = 1065
 				}
 			}
 			if = {
@@ -2998,6 +3004,18 @@ country_event = {
 				FROM = { has_full_control_of_state = 118 }
 			}
 			transfer_state = 118
+		}
+		if = {
+			limit = {
+				FROM = { has_full_control_of_state = 1021 }
+			}
+			transfer_state = 1021
+		}
+		if = {
+			limit = {
+				FROM = { has_full_control_of_state = 1065 }
+			}
+			transfer_state = 1065
 		}
 		if = {
 			limit = {
@@ -3488,6 +3506,10 @@ country_event = {
 				transfer_state = 286
 				transfer_state = 1017
 				transfer_state = 741
+				transfer_state = 1069 
+				transfer_state = 1068 
+				transfer_state = 1066
+				transfer_state = 1067
 			}
 		}
 	}
@@ -3538,8 +3560,12 @@ country_event = {
 			transfer_state = 671
 			transfer_state = 670
 			transfer_state = 286
-			transfer_state = 741
 			transfer_state = 1017
+			transfer_state = 741
+			transfer_state = 1069 
+			transfer_state = 1068 
+			transfer_state = 1066
+			transfer_state = 1067
 	}
 }
 

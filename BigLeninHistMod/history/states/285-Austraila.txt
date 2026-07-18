@@ -2,9 +2,11 @@ state = {
 	id = 285
 	name = "STATE_285"
 	state_category = large_city
-	manpower = 2563100
+	manpower = 2650000
 	resources = {
-		coal = 16 #initial distribution
+		coal = 12
+		tungsten = 2
+		steel = 16
 	}
 	history = {
 		owner = AST
@@ -25,9 +27,16 @@ state = {
 			7520 = {
 				coastal_bunker = 1
 			}
-			# Cataract Dam
-			4864 = { dam = 1 }
 		}
+
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 4
+				arms_factory = 4
+				industrial_complex = 6
+			}
+		}
+
 		victory_points = {
 			7859 30 # Canberra
 		}

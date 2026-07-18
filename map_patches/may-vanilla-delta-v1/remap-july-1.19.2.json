@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "targetLabel": "Repaired HOI4 1.19.2 July vanilla",
+  "targetDefinitionSha256": "86846be71198d6772c651638aa22e3656133198de9b7c49c6234ed48cf33d87b",
+  "targetProvincesBmpSha256": "e131d30e5dcb13d9c2a8598f820a2de0ae9828f3a24f2bddc1bcfff40f71660a",
+  "provinceIdMap": {
+    "13382": 13414,
+    "13383": 13415,
+    "13384": 13416,
+    "13385": 13417,
+    "13386": 13418
+  },
+  "provinceColors": {
+    "13414": [162, 79, 178],
+    "13415": [106, 88, 96],
+    "13416": [231, 27, 158],
+    "13417": [46, 60, 164],
+    "13418": [20, 90, 215]
+  },
+  "strategicRegionIdMap": {
+    "299": 305,
+    "300": 306
+  },
+  "stateIdMap": {},
+  "affectedStateIds": [118, 169, 273, 452, 552, 663, 907],
+  "affectedExistingStrategicRegionIds": [127, 128, 173, 207, 225]
+}

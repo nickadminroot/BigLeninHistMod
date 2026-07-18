@@ -1,3 +1,4 @@
+
 state={
 	id=1000
 	name="STATE_1000"
@@ -5,9 +6,11 @@ state={
 	resources = {
 		steel = 6
 	}
+	
 	state_category = town
 	history={
 		owner = PER
+		add_core_of = PER
 		buildings = {
 			infrastructure = 2
 			arms_factory = 2
@@ -15,10 +18,11 @@ state={
 		victory_points = {
 			1896 5 
 		}
-		add_core_of = PER
 	}
+
 	provinces={
 		1896 2071 4755 4825 12793
 	}
+
 	local_supplies=4.0 
 }
