@@ -5132,9 +5132,7 @@ NORDIC_add_to_nordic_alliance = { hidden_effect = { } }
 NORDIC_add_to_war_array = { hidden_effect = { } }
 NORDIC_cooperation_initial_setup = { hidden_effect = { } }
 NOR_reset_prep_system = { hidden_effect = { } }
-PHI_check_japanese_ideology_and_adapt = { hidden_effect = { } }
-PHI_refresh_ruling_ideology_drift = { hidden_effect = { } }
-PHI_update_war_flag = { hidden_effect = { } }
+
 POL_remove_danzig_effect = { hidden_effect = { } }
 POL_sanation_left_opposition_remove = { hidden_effect = { } }
 POL_sanation_right_opposition_remove = { hidden_effect = { } }
