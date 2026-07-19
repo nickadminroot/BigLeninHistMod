@@ -1,5 +1,7 @@
 ideas = {
 
+	country = {
+
 	# Quantity over Quality - shared idea for ENG and allied nations (except USA)
 	BLHM_ENG_quantity_over_quality = {
 		picture = generic_construction_penalty
@@ -690,6 +692,8 @@ ideas = {
 			special_forces_attack_factor = 0.20
 			special_forces_defence_factor = 0.20
 		}
+	}
+
 	}
 }
 
