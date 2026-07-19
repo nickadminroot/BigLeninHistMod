@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_CHI_british_advisers",
+  "sprite_name": "GFX_idea_custom_BLHM_CHI_british_advisers",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_CHI_british_advisers.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_volunteer_group",
+  "prompt": "A British officer's peaked cap above crossed training batons, with Chinese nationalist symbol in background",
+  "style_preset": "hoi4_idea_v1"
+}

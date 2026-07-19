@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_syrian_alexandrian_corps",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_syrian_alexandrian_corps",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_syrian_alexandrian_corps.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_leadership",
+  "prompt": "A crossed rifle and palm tree on a desert dune background, with an officer's kepi above",
+  "style_preset": "hoi4_idea_v1"
+}

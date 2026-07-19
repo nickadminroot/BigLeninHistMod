@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_national_prosperity_treaty",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_national_prosperity_treaty",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_national_prosperity_treaty.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_consumer_goods",
+  "prompt": "A treaty document being signed with factory smokestacks and wheat sheaves",
+  "style_preset": "hoi4_focus_v1"
+}

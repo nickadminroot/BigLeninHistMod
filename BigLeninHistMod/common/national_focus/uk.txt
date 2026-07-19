@@ -4691,4 +4691,238 @@ focus_tree = {
 		}
 	}
 
+	# ============ BLHM FRENCH/ECONOMIC BRANCH ============
+	focus = {
+		id = BLHM_ENG_civilian_construction
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 52
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_strengthen_ties_with_france
+		prerequisite = { focus = BLHM_ENG_civilian_construction }
+		icon = GFX_goal_generic_improved_infrastructure
+		x = 52
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			# 4 civilian factories in FRA-owned North African states (conditional on FRA exists/controls)
+			if = {
+				limit = { FRA = { exists = yes } }
+				458 = {
+					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+				459 = {
+					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+				461 = {
+					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+				462 = {
+					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				}
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = BLHM_ENG_strengthen_ties_france_tt
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_french_bases_in_commonwealth
+		prerequisite = { focus = BLHM_ENG_strengthen_ties_with_france }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 52
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			AST = {
+				limit = { exists = yes }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				}
+			}
+			RAJ = {
+				limit = { exists = yes }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				}
+			}
+			CAN = {
+				limit = { exists = yes }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_aid_china
+		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
+		available = { CHI = { exists = yes has_war_with = JAP } }
+		icon = GFX_goal_generic_volunteer_expedition
+		x = 50
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			CHI = {
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 30000 producer = ENG }
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_british_specialists_in_china
+		prerequisite = { focus = BLHM_ENG_aid_china }
+		available = { CHI = { exists = yes has_war_with = JAP } }
+		icon = GFX_goal_generic_scientific_exchange
+		x = 50
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			CHI = {
+				add_ideas = BLHM_CHI_british_advisers
+			}
+			add_timed_idea = {
+				idea = BLHM_ENG_china_doctrine_observers
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_african_railway_project
+		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
+		available = { NOT = { has_war = yes } }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 52
+		y = 3
+		cost = 8
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			build_railway = {
+				level = 3
+				build_only_on_allied = yes
+				start_province = 7069
+				target_province = 12589
+			}
+			custom_effect_tooltip = BLHM_ENG_african_railway_tt
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_joint_radar_development
+		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
+		icon = GFX_goal_generic_radar
+		x = 54
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLHM_ENG_joint_radar_bonus
+				bonus = 1.0
+				uses = 1
+				category = radar_tech
+			}
+			FRA = {
+				country_event = { id = BLHM_ENG_task.1 hours = 12 }
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_national_prosperity_treaty
+		prerequisite = { focus = BLHM_ENG_african_railway_project }
+		prerequisite = { focus = BLHM_ENG_joint_radar_development }
+		icon = GFX_goal_generic_consumer_goods
+		x = 53
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = BLHM_ENG_national_prosperity_treaty
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_joint_tank_development
+		prerequisite = { focus = BLHM_ENG_national_prosperity_treaty }
+		icon = GFX_goal_generic_build_tank
+		x = 52
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = BLHM_ENG_joint_tank_development_completed
+			custom_effect_tooltip = BLHM_ENG_joint_tank_development_tt
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_syrian_alexandrian_corps
+		prerequisite = { focus = BLHM_ENG_national_prosperity_treaty }
+		icon = GFX_goal_generic_army_infantry
+		x = 54
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = BLHM_ENG_syrian_alexandrian_corps
+			every_allied_country = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_syrian_alexandrian_corps
+			}
+		}
+	}
+
 }

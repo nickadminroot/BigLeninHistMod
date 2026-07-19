@@ -1,0 +1,59 @@
+ideas = {
+
+	# Chinese British Advisers - permanent idea for CHI
+	BLHM_CHI_british_advisers = {
+		picture = generic_volunteer_group
+		allowed = {
+			original_tag = CHI
+		}
+		removal_cost = -1
+		modifier = {
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.05
+			max_dig_in = 2
+		}
+	}
+
+	# Timed idea for ENG - China Doctrine Observers (180 days)
+	BLHM_ENG_china_doctrine_observers = {
+		picture = generic_research
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			experience_gain_army_factor = 0.1
+		}
+	}
+
+	# National Prosperity Treaty - permanent for ENG
+	BLHM_ENG_national_prosperity_treaty = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = -0.15
+			production_speed_industrial_complex_factor = 0.05
+			stability_factor = 0.10
+		}
+	}
+
+	# Syrian-Alexandrian Corps - shared idea for ENG and allies
+	BLHM_ENG_syrian_alexandrian_corps = {
+		picture = generic_leadership
+		allowed = {
+			OR = {
+				original_tag = ENG
+				is_in_faction_with = ENG
+			}
+		}
+		removal_cost = -1
+		modifier = {
+			modifier_army_sub_unit_infantry_defence_factor = 0.10
+			modifier_army_sub_unit_infantry_speed_factor = 0.05
+		}
+	}
+
+}
