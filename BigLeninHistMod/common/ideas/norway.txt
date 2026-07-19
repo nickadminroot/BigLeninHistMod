@@ -40,6 +40,28 @@ ideas = {
 			} 
 		}
 
+		NOR_obsolete_armed_forces_ns_2 = {
+			picture = generic_army_problems
+			allowed = {
+				NOR_AAT = yes 
+			}	
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.15
+				army_speed_factor = -0.15
+				army_attack_factor = -0.15
+			} 
+		}
+
 		NOR_crumbling_fortifications_ns = {
 			picture = generic_wall_line
 
@@ -366,6 +388,17 @@ ideas = {
 				training_time_factor = -0.20
 			}
 		}
+
+	NOR_investing_in_norway_ns = {
+		picture = generic_economic_increase 
+		allowed = {
+			always = yes 
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.1
+		}
+	}
 
 	}
 }

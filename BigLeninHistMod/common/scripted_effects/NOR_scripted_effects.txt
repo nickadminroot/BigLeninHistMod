@@ -641,7 +641,7 @@ NOR_deploy_prep_fasc_basic_effects = {
 	if = {
 		limit = {
 			check_variable = { NOR_state_preparation > 2 }
-			ROOT = { has_completed_focus = NOR_the_secret_army } 
+			always = no 
 		}
 		NOR_spawn_militias_in_state = yes 
 	}
@@ -867,7 +867,7 @@ NOR_start_fascist_civil_war = {
 	}
 	if = { 
 		limit = { #### This is for the Player led Civil War, Alt-History Fascist Path. 
-			has_completed_focus = NOR_lurk_in_the_shadows
+			always = no
 		}
 		NOR_fcw_effect_fascist_player = yes 
 		if = {
@@ -899,7 +899,7 @@ NOR_start_fascist_civil_war = {
 	}
 	if = {
 		limit = {
-			has_completed_focus = NOR_empower_hirden 
+			always = no 
 		}
 		NOR_spawn_hirden = yes 
 	}
@@ -1182,7 +1182,7 @@ NOR_start_communist_civil_war = {
 	NOR = {
 		if = {
 			limit = {
-				has_completed_focus = NOR_prosecute_the_nkp
+				always = no
 			}
 			every_character = {
 				limit = {

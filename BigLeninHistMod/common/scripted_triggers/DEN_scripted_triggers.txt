@@ -165,9 +165,6 @@ DEN_guarantor_seller_trigger = {
 DEN_rearmament_seller_trigger = {
 	if = {
 		limit = {
-			NOT = {
-				has_completed_focus = DEN_strength_in_numbers
-			}
 			is_faction_leader = no
 		}
 		custom_trigger_tooltip = {

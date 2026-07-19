@@ -174,7 +174,7 @@ shared_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = DEN_unify_the_right
+			has_completed_focus = DEN_political_unity
 		}
 	}
 
@@ -203,7 +203,6 @@ shared_focus = {
 			is_subject = yes
 			OR = {
 				has_completed_focus = DEN_political_unity
-				has_completed_focus = DEN_unify_the_right
 			}
 		}
 	}

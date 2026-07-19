@@ -3231,7 +3231,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = DEN_unify_the_right
+				has_completed_focus = DEN_political_unity
 			}
 		}
 
@@ -4976,7 +4976,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = DEN_unify_the_right
+				has_completed_focus = DEN_political_unity
 			}
 		}
 
@@ -4994,7 +4994,6 @@ focus_tree = {
 						has_country_flag = DEN_unlock_military_branch_flag
 						OR = {
 							has_completed_focus = DEN_political_unity
-							has_completed_focus = DEN_unify_the_right
 						}
 					}
 					AND = {
@@ -5002,7 +5001,6 @@ focus_tree = {
 						has_country_flag = DEN_unlock_military_branch_flag
 						OR = {
 							has_completed_focus = DEN_political_unity
-							has_completed_focus = DEN_unify_the_right
 						}
 					}
 				}
@@ -5021,7 +5019,6 @@ focus_tree = {
 				is_subject = yes
 				NOT = {
 					has_completed_focus = DEN_political_unity
-					has_completed_focus = DEN_unify_the_right
 				}
 			}
 		}
@@ -5038,7 +5035,6 @@ focus_tree = {
 				is_subject = no
 				NOT = {
 					has_completed_focus = DEN_political_unity
-					has_completed_focus = DEN_unify_the_right
 				}
 			}
 		}
@@ -5057,7 +5053,6 @@ focus_tree = {
 						has_country_flag = DEN_unlock_military_branch_flag
 						OR = {
 							has_completed_focus = DEN_political_unity
-							has_completed_focus = DEN_unify_the_right
 						}
 					}
 					AND = {
@@ -5065,7 +5060,6 @@ focus_tree = {
 						has_country_flag = DEN_unlock_military_branch_flag
 						OR = {
 							has_completed_focus = DEN_political_unity
-							has_completed_focus = DEN_unify_the_right
 						}
 					}
 				}

@@ -115,7 +115,7 @@ defined_text = {
 	text = {
 		trigger = {
 			NOR = {
-				has_completed_focus = NOR_luftforsvaret
+				has_completed_focus = NOR_haerens_flyvevaaben
 			}
 		}
 		localization_key = NOR_royal_air_force_name
@@ -196,7 +196,7 @@ defined_text = {
 	text = { # Going Trotsky 
 		trigger = {
 			has_country_flag = NOR_trotsky_embraced
-			has_completed_focus = NOR_prosecute_the_nkp
+			always = no
 		}
 		localization_key = NOR_communist_preparation_decisions_category_desc_trostkyist
 	}
