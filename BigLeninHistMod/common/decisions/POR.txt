@@ -144,11 +144,7 @@ POR_arms_purchases = {
 			civilian_factory_use = 1
 		}
 		visible = {
-			has_completed_focus = POR_british_guns
-			NOT = {
-				has_war_with = ENG
-			}
-			country_exists = ENG
+			always = no
 		}
 		complete_effect = {
 			ENG = {
@@ -233,11 +229,7 @@ POR_arms_purchases = {
 			civilian_factory_use = 1
 		}
 		visible = {
-			has_completed_focus = POR_british_guns
-			NOT = {
-				has_war_with = ENG
-			}
-			country_exists = ENG
+			always = no
 		}
 		complete_effect = {
 			ENG = {
@@ -323,11 +315,7 @@ POR_arms_purchases = {
 			civilian_factory_use = 1
 		}
 		visible = {
-			has_completed_focus = POR_british_guns
-			NOT = {
-				has_war_with = ENG
-			}
-			country_exists = ENG
+			always = no
 		}
 		complete_effect = {
 			ENG = {
@@ -1903,7 +1891,7 @@ POR_naval_blockade = {
 
 		visible = {
 			POR = {
-				has_completed_focus = POR_refuse_the_naval_blockade
+				always = no
 			}
 			NOT = { 
 				has_country_flag = POR_evade_blockade_flag 
@@ -2081,28 +2069,7 @@ POR_iberian_summit = {
 		visible = {
 			NOT = { has_global_flag = POR_iberian_summit_pro_axis_flag }
 			country_exists = POR
-			POR = { 
-				is_in_faction = no
-				has_completed_focus = POR_iberian_summit
-				NOT = { has_government = communism }
-				NOT = { has_government = democratic }
-			}
-			country_exists = SPA
-			SPA = {
-				is_in_faction = no
-				OR = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-					AND = {
-						has_completed_focus = SPA_unify_the_nationalist_front
-						NOT = { has_completed_focus = SPA_the_iberian_pact }
-					}
-				}
-			}
-			GER = { 
-				is_faction_leader = yes 
-				has_government = fascism
-				has_capitulated = no
-			}
+			always = no
 		}
 
 		cost = 50
@@ -2112,7 +2079,7 @@ POR_iberian_summit = {
 			base = 0
 			modifier = {
 				add = 1
-				has_completed_focus = POR_send_assistance
+				always = no
 				OR = {
 					GER = {
 						has_war = yes 
@@ -2184,37 +2151,7 @@ POR_iberian_summit = {
 		}
 
 		visible = {
-			NOT = { has_global_flag = POR_iberian_summit_pro_allies_flag }
-			country_exists = POR
-			POR = {
-				is_in_faction = no
-				has_completed_focus = POR_iberian_summit
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
-			}
-			if = {
-				limit = {
-					country_exists = SPA #This is the prio
-				}
-				SPA = {
-					is_in_faction = no
-					has_completed_focus = SPA_unify_the_nationalist_front
-					NOT = { has_completed_focus = SPA_the_iberian_pact }
-				}
-			}
-			else = {
-				country_exists = SPD
-				SPD = {
-					is_in_faction = no
-					has_completed_focus = SPR_maintain_the_second_republic
-					has_government = democratic
-				}
-			}
-			ENG = { 
-				is_faction_leader = yes 
-				has_government = democratic
-				has_capitulated = no
-			}
+			always = no
 		}
 
 		cost = 50
@@ -2224,9 +2161,7 @@ POR_iberian_summit = {
 			base = 0
 			modifier = {
 				add = 1
-				POR = {
-					has_completed_focus = POR_allow_free_elections
-				}					
+				always = no
 				OR = {
 					ENG = {
 						has_war = yes 
@@ -2414,14 +2349,11 @@ POR_monarchist_cause = {
 			base = 5
 		}
 		visible = {
-			has_completed_focus = POR_a_royal_wedding
-			NOT = { has_completed_focus = POR_the_empire_of_brazil }
-			country_exists = BRA
+			always = no
 		}
 
 		cancel_trigger = {
 			OR = {
-				has_completed_focus = POR_the_empire_of_brazil
 				has_war_with = BRA
 				BRA = { neutrality < -0.15 }
 			}
@@ -2472,7 +2404,7 @@ POR_monarchist_cause = {
 		cancel_trigger = {
 			OR = {
 				NOT = { has_country_flag = POR_portugal_stirring_brazilian_monarchists_flag }
-				POR = { has_completed_focus = POR_the_empire_of_brazil }
+				always = no
 				neutrality < -0.15
 				has_war_with = POR
 			}
@@ -2513,11 +2445,11 @@ POR_monarchist_cause = {
 				has_country_flag = POR_brazilian_monarchists_stirred_flag
 			}
 			country_exists = POR
-			POR = { NOT = { has_completed_focus = POR_the_empire_of_brazil } }		
+			always = no		
 		}
 
 		cancel_trigger = {
-			POR = { has_completed_focus = POR_the_empire_of_brazil }
+			always = no
 		}
 
 		modifier = {
@@ -2553,12 +2485,11 @@ POR_monarchist_cause = {
 			base = 0 # This is self-saboutaging for the AI 
 		}
 		visible = {
-			has_completed_focus = POR_a_royal_wedding
-			NOT = { has_completed_focus = POR_restoration_of_the_monarchy }
+			always = no
 		}
 
 		cancel_trigger = {
-			has_completed_focus = POR_restoration_of_the_monarchy
+			always = no
 		}
 
 		modifier = {
@@ -2755,10 +2686,7 @@ POR_the_spanish_civil_war = {
 		}
 
 		visible = {
-			SPR_scw_in_progress = yes
-			country_exists = SPD
-			NOT = { has_war_with = SPD }
-			has_completed_focus = POR_they_need_our_help
+			always = no
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -2834,10 +2762,7 @@ POR_the_spanish_civil_war = {
 		}
 
 		visible = {
-			SPR_scw_in_progress = yes
-			country_exists = SPA
-			NOT = { has_war_with = SPA }
-			has_completed_focus = POR_send_assistance
+			always = no
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -2913,10 +2838,7 @@ POR_the_spanish_civil_war = {
 		}
 
 		visible = {
-			SPR_scw_in_progress = yes
-			country_exists = SPB
-			NOT = { has_war_with = SPB }
-			has_completed_focus = POR_join_the_carlist_fight
+			always = no
 		}
 		complete_effect = {
 			hidden_effect = {

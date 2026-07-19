@@ -22,10 +22,7 @@ POR_arms_purchases = {
 		has_dlc = "La Resistance"
 	}
 	visible = {
-		OR = {
-			has_completed_focus = POR_british_guns
-			has_completed_focus = POR_second_navy_reequipment
-		}
+		has_completed_focus = POR_second_navy_reequipment
 	}
 }
 
@@ -46,9 +43,7 @@ POR_naval_blockade = {
 			}
 			original_tag = POR
 		}
-		POR = {
-			has_completed_focus = POR_refuse_the_naval_blockade
-		}	
+		always = no
 	}
 }
 
@@ -87,9 +82,7 @@ POR_monarchist_cause = {
 		}
 	}
 	visible = {
-		POR = { 
-			has_completed_focus = POR_a_royal_wedding
-		}
+		always = no
 	}
 }
 
@@ -112,10 +105,6 @@ POR_the_spanish_civil_war = {
 	}
 	visible = { 
 		SPR_scw_in_progress = yes
-		OR = {
-			has_completed_focus = POR_they_need_our_help
-			has_completed_focus = POR_send_assistance
-			has_completed_focus = POR_join_the_carlist_fight
-		}
+		always = no
 	}
 }
