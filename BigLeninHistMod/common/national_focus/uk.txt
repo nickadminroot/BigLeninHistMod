@@ -5105,9 +5105,13 @@ focus_tree = {
 	}
 
 	# ============ BLHM SOVIET BRANCH ============
+	# Soviet Economic Compromise — triggers visible event for SOV
 	focus = {
-		id = BLHM_ENG_develop_trade_with_soviet_union
+		id = BLHM_ENG_soviet_economic_compromise
 		prerequisite = { focus = BLHM_ENG_civilian_construction }
+		available = {
+			SOV = { exists = yes }
+		}
 		icon = GFX_goal_generic_improved_infrastructure
 		x = 66
 		y = 1
@@ -5116,162 +5120,106 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_ideas = BLHM_ENG_soviet_trade_adjustment
+			SOV = {
+				country_event = { id = BLHM_ENG_task.2 hours = 12 }
+			}
 		}
 	}
 
+	# Soviet Heavy Weapons Experience
 	focus = {
-		id = BLHM_ENG_soviet_lend_lease
-		prerequisite = { focus = BLHM_ENG_develop_trade_with_soviet_union }
-		icon = GFX_goal_generic_volunteer_expedition
+		id = BLHM_ENG_soviet_heavy_weapons_experience
+		prerequisite = { focus = BLHM_ENG_soviet_economic_compromise }
+		available = {
+			has_country_flag = BLHM_ENG_soviet_compromise_accepted
+			has_tech = antitank2
+		}
+		icon = GFX_goal_generic_army_artillery
 		x = 66
 		y = 2
+		cost = 5
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLHM_ENG_soviet_heavy_weapons_experience_bonus
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	# Simplify Production Lines — mutually exclusive with sloped armor
+	focus = {
+		id = BLHM_ENG_simplify_production_lines
+		prerequisite = { focus = BLHM_ENG_soviet_heavy_weapons_experience }
+		mutually_exclusive = { focus = BLHM_ENG_sloped_armor }
+		available = {
+			has_war = yes
+		}
+		icon = GFX_goal_generic_production2
+		x = 65
+		y = 3
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			SOV = {
-				limit = { exists = yes }
-				add_equipment_to_stockpile = { type = infantry_equipment amount = 30000 producer = ENG }
-				add_equipment_to_stockpile = { type = support_equipment amount = 5000 producer = ENG }
-				add_equipment_to_stockpile = { type = motorized_equipment amount = 5000 producer = ENG }
+			add_ideas = BLHM_ENG_quantity_over_quality
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					NOT = { original_tag = USA }
+				}
+				add_ideas = BLHM_ENG_quantity_over_quality
 			}
 		}
 	}
 
+	# Sloped Armor — mutually exclusive with simplify production lines
 	focus = {
-		id = BLHM_ENG_monthly_soviet_aid
-		prerequisite = { focus = BLHM_ENG_soviet_lend_lease }
-		icon = GFX_goal_generic_army_infantry
-		x = 66
+		id = BLHM_ENG_sloped_armor
+		prerequisite = { focus = BLHM_ENG_soviet_heavy_weapons_experience }
+		mutually_exclusive = { focus = BLHM_ENG_simplify_production_lines }
+		available = {
+			has_war = yes
+		}
+		icon = GFX_goal_generic_army_tanks
+		x = 67
 		y = 3
+		cost = 5
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = BLHM_ENG_sloped_armor_completed
+			custom_effect_tooltip = BLHM_ENG_sloped_armor_tt
+		}
+	}
+
+	# Soviet Lend-Lease — available via either branch
+	focus = {
+		id = BLHM_ENG_soviet_lend_lease
+		prerequisite = { focus = BLHM_ENG_simplify_production_lines focus = BLHM_ENG_sloped_armor }
+		available = {
+			SOV = { exists = yes }
+			SOV = { has_war_with = GER }
+		}
+		icon = GFX_goal_generic_volunteer_expedition
+		x = 66
+		y = 4
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_ideas = BLHM_ENG_soviet_lend_lease_spirit
 			if = {
-				limit = { NOT = { has_country_flag = BLHM_ENG_monthly_soviet_aid_chain } }
-				set_country_flag = BLHM_ENG_monthly_soviet_aid_chain
-				country_event = { id = BLHM_ENG_task.2 hours = 24 }
-			}
-		}
-	}
-
-	focus = {
-		id = BLHM_ENG_aircraft_supplies
-		prerequisite = { focus = BLHM_ENG_monthly_soviet_aid }
-		icon = GFX_goal_generic_air_production
-		x = 65
-		y = 4
-		cost = 5
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = BLHM_ENG_aircraft_supplies_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-			add_tech_bonus = {
-				name = BLHM_ENG_aircraft_supplies_synth
-				bonus = 0.5
-				uses = 1
-				category = cat_synth_oil
-				category = cat_synth_rubber
-			}
-		}
-	}
-
-	focus = {
-		id = BLHM_ENG_soviet_oil_supplies
-		prerequisite = { focus = BLHM_ENG_aircraft_supplies }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 65
-		y = 5
-		cost = 5
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			SOV = {
-				limit = { exists = yes }
-				give_resource_rights = {
-					receiver = ENG
-					state = 1083
-					resources = { oil }
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = BLHM_ENG_land_assistance_commission
-		prerequisite = { focus = BLHM_ENG_monthly_soviet_aid }
-		mutually_exclusive = { focus = BLHM_ENG_air_assistance_commission }
-		icon = GFX_goal_generic_army_tanks
-		x = 67
-		y = 4
-		cost = 5
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_ideas = BLHM_ENG_land_assistance_commission
-		}
-	}
-
-	focus = {
-		id = BLHM_ENG_air_assistance_commission
-		prerequisite = { focus = BLHM_ENG_monthly_soviet_aid }
-		mutually_exclusive = { focus = BLHM_ENG_land_assistance_commission }
-		icon = GFX_goal_generic_air_fighter
-		x = 69
-		y = 4
-		cost = 5
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_ideas = BLHM_ENG_air_assistance_commission
-		}
-	}
-
-	focus = {
-		id = BLHM_ENG_defence_treaties
-		prerequisite = { focus = BLHM_ENG_land_assistance_commission focus = BLHM_ENG_air_assistance_commission }
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 68
-		y = 5
-		cost = 5
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			SOV = {
-				limit = { exists = yes }
-				add_ideas = BLHM_SOV_british_defence_treaty
-			}
-			RAJ = {
-				limit = { exists = yes }
-				give_resource_rights = {
-					receiver = SOV
-					state = 288
-					resources = { tungsten }
-				}
-				give_resource_rights = {
-					receiver = SOV
-					state = 431
-					resources = { tungsten }
-				}
-				give_resource_rights = {
-					receiver = SOV
-					state = 434
-					resources = { tungsten }
-				}
+				limit = { NOT = { has_country_flag = BLHM_ENG_soviet_lend_lease_chain } }
+				set_country_flag = BLHM_ENG_soviet_lend_lease_chain
+				country_event = { id = BLHM_ENG_task.3 hours = 24 }
 			}
 		}
 	}
