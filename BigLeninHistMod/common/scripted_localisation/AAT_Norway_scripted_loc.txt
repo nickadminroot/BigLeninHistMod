@@ -157,7 +157,7 @@ defined_text = {
 		trigger = {
 			ENG ={
 				exists = yes 
-				NOT = { has_completed_focus = ENG_the_fate_of_the_royal_family }
+				NOT = { always = no }
 			}
 		}
 		localization_key = NOR_exiled_monarchy_to_desc_ENG
@@ -166,7 +166,7 @@ defined_text = {
 		trigger = {
 			SWE = {
 				exists = yes
-				NOT = { has_completed_focus = SWE_liquidate_the_monarchy }
+				NOT = { always = no }
 			}	
 		}
 		localization_key = NOR_exiled_monarchy_to_desc_SWE
@@ -186,7 +186,7 @@ defined_text = {
 				has_government = communism 
 				NOT = { 
 					has_war_with = NOR 
-					has_completed_focus = SOV_the_left_opposition
+					always = no
 				}
 
 			}
@@ -346,7 +346,7 @@ defined_text = {
 			any_other_country = { 
 				original_tag = SOV
 				has_government = communism
-				NOT = { has_completed_focus = SOV_the_left_opposition }
+				NOT = { always = no }
 				has_capitulated = no
 			}
 		}
