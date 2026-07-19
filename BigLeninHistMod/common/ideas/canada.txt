@@ -120,6 +120,7 @@ ideas = {
 				communism_drift = -0.01
 				fascism_drift = -0.01
 				foreign_subversive_activites = -0.50
+				production_efficiency_max_factor = 0.05
 			}
 		}
 
@@ -141,6 +142,7 @@ ideas = {
 				democratic_drift = -0.01
 				communism_drift = -0.01
 				foreign_subversive_activites = -0.50
+				production_efficiency_max_factor = 0.05
 			}
 		}
 
@@ -162,6 +164,7 @@ ideas = {
 				democratic_drift = -0.01
 				fascism_drift = -0.01
 				foreign_subversive_activites = -0.50
+				production_efficiency_max_factor = 0.05
 			}
 		}
 

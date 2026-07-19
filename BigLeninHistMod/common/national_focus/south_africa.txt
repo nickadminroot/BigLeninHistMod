@@ -129,7 +129,7 @@
 		y = 2
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -288,7 +288,7 @@
 		x = 5
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -364,7 +364,7 @@
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -431,7 +431,7 @@
 		y = 3
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -463,7 +463,7 @@
 		y = 3
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -898,7 +898,7 @@
 		y = 3
 		relative_position_id = SAF_south_african_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -1058,7 +1058,7 @@
 		y = 4
 		relative_position_id = SAF_south_african_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -1402,7 +1402,7 @@
 		y = 3
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1439,7 +1439,7 @@
 		y = 3
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
