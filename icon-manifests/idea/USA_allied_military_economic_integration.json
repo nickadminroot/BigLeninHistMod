@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_allied_military_economic_integration",
+  "sprite_name": "GFX_idea_custom_USA_allied_military_economic_integration",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_allied_military_economic_integration.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A Sherman tank rolling off a factory assembly line beneath an overhead crane",
+  "style_preset": "hoi4_idea_v1"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_economy_mobilized",
+  "sprite_name": "GFX_idea_custom_USA_american_economy_mobilized",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_economy_mobilized.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A fast-moving tank assembly line with workers and an overhead gantry crane",
+  "style_preset": "hoi4_idea_v1"
+}

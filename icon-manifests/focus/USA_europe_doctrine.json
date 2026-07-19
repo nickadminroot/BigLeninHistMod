@@ -5,7 +5,7 @@
   "sprite_name": "GFX_focus_custom_USA_europe_doctrine",
   "texturefile": "gfx/interface/goals/focus_custom_USA_europe_doctrine.dds",
   "source_file": "common/national_focus/usa.txt",
-  "fallback_icon": "GFX_goal_generic_construction_infrastructure",
+  "fallback_icon": "GFX_goal_generic_construct_infrastructure",
   "prompt": "Naval anchor crossed with airfield tower over map of southern England and English Channel",
   "style_preset": "hoi4_focus_v1"
 }

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_economy_modernized",
+  "sprite_name": "GFX_idea_custom_USA_american_economy_modernized",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_economy_modernized.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A modern 1940s turret lathe machining an artillery shell beside stacked steel gears",
+  "style_preset": "hoi4_idea_v1"
+}

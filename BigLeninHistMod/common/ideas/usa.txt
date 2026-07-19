@@ -2247,6 +2247,8 @@ ideas = {
 		law = yes
 
 		USA_american_dream = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2264,6 +2266,8 @@ ideas = {
 		}
 
 		USA_giant_wakes_economy = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2283,6 +2287,8 @@ ideas = {
 		}
 
 		USA_giant_has_awoken_economy = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2300,6 +2306,8 @@ ideas = {
 		}
 
 		USA_american_economy = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2314,6 +2322,8 @@ ideas = {
 		}
 
 		USA_american_economy_domestic = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2329,6 +2339,8 @@ ideas = {
 		}
 
 		USA_american_economy_modernized = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
@@ -2343,6 +2355,8 @@ ideas = {
 		}
 
 		USA_american_economy_mobilized = {
+			picture = generic_production_bonus
+
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1

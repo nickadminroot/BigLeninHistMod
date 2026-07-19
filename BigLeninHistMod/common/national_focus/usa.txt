@@ -25,13 +25,51 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
+	focus = {
+		id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_self_management
+		x = 14
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 150
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
 # ---- Stage 1: Limited Intervention / War Propaganda / Europe-Asia / OSS-Magic branch ----
 
 	focus = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = USA_continue_the_new_deal }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 
@@ -64,7 +102,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = USA_limited_intervention }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_limited_intervention
 
 		cost = 5
@@ -95,7 +133,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_europe
 		prerequisite = { focus = USA_war_propaganda }
 		mutually_exclusive = { focus = USA_focus_on_asia }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = USA_war_propaganda
 
@@ -151,7 +189,7 @@ focus_tree = {
 		text = USA_focus_on_asia
 		prerequisite = { focus = USA_war_propaganda }
 		mutually_exclusive = { focus = USA_focus_on_europe }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = USA_war_propaganda
 
@@ -242,7 +280,7 @@ focus_tree = {
 		id = USA_magic
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = USA_focus_on_asia }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = USA_focus_on_asia
 
@@ -266,45 +304,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_magic
-		}
-	}
-
-	focus = {
-		id = USA_continue_the_new_deal
-		icon = GFX_focus_generic_self_management
-		x = 14
-		y = 0
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_government = democratic
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			add_political_power = 150
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 
@@ -696,7 +695,7 @@ focus_tree = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
@@ -772,7 +771,7 @@ focus_tree = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
 		x = -2
-		y = 1
+		y = 2
 		prerequisite = { focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
 
@@ -891,7 +890,7 @@ focus_tree = {
 		}
 
 		available = {
-			world_tension > 0.25
+			threat > 0.25
 		}
 
 		bypass = {
@@ -1070,7 +1069,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
@@ -3283,7 +3282,7 @@ focus_tree = {
 	focus = {
 		id = USA_modernize_the_economy
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 24
+		x = 26
 		y = 0
 
 		cost = 8
@@ -3312,7 +3311,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_modernize_the_economy }
 		mutually_exclusive = { focus = USA_domestic_production }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = USA_modernize_the_economy
 
@@ -3347,10 +3346,10 @@ focus_tree = {
 
 	focus = {
 		id = USA_asia_doctrine
-		icon = GFX_goal_generic_construction_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = USA_allied_war_industry }
 		mutually_exclusive = { focus = USA_europe_doctrine }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = USA_allied_war_industry
 
@@ -3483,10 +3482,10 @@ focus_tree = {
 
 	focus = {
 		id = USA_europe_doctrine
-		icon = GFX_goal_generic_construction_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = USA_allied_war_industry }
 		mutually_exclusive = { focus = USA_asia_doctrine }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = USA_allied_war_industry
 
@@ -3571,7 +3570,7 @@ focus_tree = {
 		id = USA_globalize_air_industry
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = USA_asia_doctrine }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = USA_asia_doctrine
 
@@ -3640,7 +3639,7 @@ focus_tree = {
 		id = USA_improve_infantry_doctrines
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = USA_asia_doctrine }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = USA_asia_doctrine
 
@@ -3674,7 +3673,7 @@ focus_tree = {
 		id = USA_joint_tank_development
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = USA_europe_doctrine }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = USA_europe_doctrine
 
@@ -3767,7 +3766,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_modernize_the_economy }
 		mutually_exclusive = { focus = USA_allied_war_industry }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = USA_modernize_the_economy
 
@@ -3840,7 +3839,7 @@ focus_tree = {
 		id = USA_american_bonds
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = USA_mass_production }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = USA_mass_production
 
@@ -3897,7 +3896,7 @@ focus_tree = {
 		id = USA_new_machine_tools
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = USA_mass_production }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = USA_mass_production
 

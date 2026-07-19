@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_sherman_firefly_program_idea",
+  "sprite_name": "GFX_idea_custom_USA_sherman_firefly_program_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_sherman_firefly_program_idea.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_army_tank_bonus",
+  "prompt": "A Sherman Firefly tank turret with its long high-velocity cannon and an armor-piercing shell",
+  "style_preset": "hoi4_idea_v1"
+}

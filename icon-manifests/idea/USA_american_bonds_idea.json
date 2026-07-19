@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_bonds_idea",
+  "sprite_name": "GFX_idea_custom_USA_american_bonds_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_bonds_idea.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_goods_red_bonus",
+  "prompt": "A hand placing a coin into a glass savings jar beside a paper bond certificate with an eagle seal",
+  "style_preset": "hoi4_idea_v1"
+}

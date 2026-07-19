@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_economy",
+  "sprite_name": "GFX_idea_custom_USA_american_economy",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_economy.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A precision milling machine cutting a steel gear inside a clean factory workshop",
+  "style_preset": "hoi4_idea_v1"
+}
