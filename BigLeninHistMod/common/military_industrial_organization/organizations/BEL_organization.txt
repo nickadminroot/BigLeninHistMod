@@ -457,12 +457,9 @@ BEL_renard_organization = {
 
         available = {
             owner = {
-            	OR = {
-            		has_completed_focus = COG_standardize_military_production
-            		has_completed_focus = BEL_fn_herstal
-            	}
+            	has_completed_focus = BEL_fn_herstal
             }
-        }			
+        }		
 		
 		position = { x=7 y=1 }  
 
@@ -482,10 +479,7 @@ BEL_renard_organization = {
 
         available = {
             owner = {
-            	OR = {
-            		has_completed_focus = COG_expand_production_facilities
-            		has_completed_focus = BEL_stampe_et_vertrongen
-            	}
+            	has_completed_focus = BEL_stampe_et_vertrongen
             }
         }		
 		
@@ -773,10 +767,7 @@ BEL_minerva_imperia_armored_car_organization = {
 
         available = {
             owner = {
-            	OR = {
-            		has_completed_focus = BEL_minerva_imperia
-            		has_completed_focus = COG_standardize_military_production
-            	}
+            	has_completed_focus = BEL_minerva_imperia
             }
         }	
 
