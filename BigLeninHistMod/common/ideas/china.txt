@@ -1588,7 +1588,7 @@ ideas = {
 					limit = {
 						has_dlc = "No Compromise, No Surrender"
 					}
-					has_completed_focus = CHI_sea_mining_commission
+					has_completed_focus = CHI_mining_commission
 				}
 				ELSE = {
 					has_completed_focus = CHI_mining_commission

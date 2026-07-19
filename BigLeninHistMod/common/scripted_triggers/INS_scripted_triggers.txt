@@ -1,14 +1,14 @@
 INS_is_volksaad_active_AVAILABLE = {
 	OR = {
 		has_idea = idea_INS_volksraad
-		has_completed_focus = INSHOL_volksraad_compromises
+		always = no
 	}
 }
 
 INS_is_volksaad_active_VISIBLE = {
 	#is_subject_of = HOL
 	NOT = {
-		has_completed_focus = INS_underground_revolution
+		always = no
 	}
 }
 
@@ -17,13 +17,13 @@ INS_character_republic_founded_check_VISIBLE = {
 	#	is_subject_of = HOL
 	#}
 	#has_country_flag = INS_republic_founded
-	has_completed_focus = INS_underground_revolution
+	always = no
 }
 
 INS_dutch_army_chief_check_VISIBLE = {
 	OR = {
 		is_subject_of = HOL
-		has_completed_focus = INSHOL_volksraad_compromises
+		always = no
 		has_cosmetic_tag = INS_UNION
 	}
 }
@@ -33,7 +33,7 @@ INS_only_militia_states_if_possible_and_needed = {
 		limit = {
 			ROOT = {
 				NOT = { has_country_flag = INS_revolution_has_started }
-				has_completed_focus = INS_underground_revolution
+				always = no
 				any_controlled_state = {
 					check_variable = {
 						var = influence_point_count
@@ -53,8 +53,8 @@ INS_only_militia_states_if_possible_and_needed = {
 
 INS_has_nationalized = {
 	OR = {
-		has_completed_focus = INS_political_stabilization
-		has_completed_focus = INSHOL_nationalize_dutch_companies
+		always = no
+		always = no
 	}
 }
 
@@ -70,7 +70,7 @@ INS_check_plan_revolution_communist = {
 	}
 	NOT = {
 		HOL = {
-			has_completed_focus = HOL_taog_guarantee_colonial_loyalty
+			always = no
 		}
 	}
 }
@@ -87,7 +87,7 @@ INS_check_plan_revolution_democratic = {
 	}
 	NOT = {
 		HOL = {
-			has_completed_focus = HOL_taog_guarantee_colonial_loyalty
+			always = no
 		}
 	}
 }
@@ -104,7 +104,7 @@ INS_check_plan_revolution_unaligned = {
 	}
 	NOT = {
 		HOL = {
-			has_completed_focus = HOL_taog_guarantee_colonial_loyalty
+			always = no
 		}
 	}
 }
@@ -112,7 +112,7 @@ INS_check_plan_revolution_unaligned = {
 INS_check_plan_loyalist = {
 	OR = {
 		HOL = {
-			has_completed_focus = HOL_taog_guarantee_colonial_loyalty
+			always = no
 		}
 		INS = {
 			OR = {
@@ -145,7 +145,7 @@ INS_check_plan_true_historical = {
 	}
 	NOT = {
 		HOL = {
-			has_completed_focus = HOL_taog_guarantee_colonial_loyalty
+			always = no
 		}
 	}
 }
@@ -172,7 +172,7 @@ HOL_check_plan_historical = {
 HOL_check_plan_colonial_alternate_democratic = {
 	HOL = {
 		OR = {
-			has_completed_focus = HOL_curtail_colonial_autonomy
+			always = no
 			has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_1
 			has_game_rule = {
 				rule = HOL_ai_behavior 
@@ -198,7 +198,7 @@ HOL_check_plan_continental_alternate_democratic = {
 HOL_check_plan_lead_the_minor_democracies = {
 	HOL = {
 		OR = {
-			has_completed_focus = HOL_lead_the_minor_democracies
+			always = no
 			has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_3
 			has_game_rule = {
 				rule = HOL_ai_behavior 
@@ -211,7 +211,7 @@ HOL_check_plan_lead_the_minor_democracies = {
 HOL_check_plan_alternate_communist = {
 	HOL = {
 		OR = {
-			has_completed_focus = HOL_legacy_of_the_de_zeven_provincien_mutiny
+			always = no
 			has_country_flag = HOL_AI_RANDOM_COMMUNIST
 			has_game_rule = {
 				rule = HOL_ai_behavior 
@@ -224,7 +224,7 @@ HOL_check_plan_alternate_communist = {
 HOL_check_plan_alternate_fascist = {
 	HOL = {
 		OR = {
-			has_completed_focus = HOL_cave_to_the_germans
+			always = no
 			has_country_flag = HOL_AI_RANDOM_FASCIST
 			has_game_rule = {
 				rule = HOL_ai_behavior 
@@ -237,7 +237,7 @@ HOL_check_plan_alternate_fascist = {
 HOL_check_plan_alternate_monarchist = {
 	HOL = {
 		OR = {
-			has_completed_focus = HOL_oranje_boven
+			always = no
 			has_game_rule = {
 				rule = HOL_AI_BEHAVIOR 
 				option = NEUTRALITY
