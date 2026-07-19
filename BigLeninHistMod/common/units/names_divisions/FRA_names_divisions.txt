@@ -925,7 +925,7 @@ FRA_INFB_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "infantry" "irregular" }
+	division_types = { "infantry" }
 
 	fallback_name = "%dème Brigade d'Infanterie"
 
