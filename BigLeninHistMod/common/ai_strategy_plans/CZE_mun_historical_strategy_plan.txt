@@ -29,8 +29,6 @@ CZE_mun_historical_strategy_plan = {
 					NOT = {
 						has_government = fascism
 					} #We're checking the focues since we need time to abort before we make our politcal choice
-					has_completed_focus = GER_oppose_hitler 
-					has_completed_focus = GER_oppose_hitler_ww
 					AND = { #I'll hear a player out
 						is_ai = no
 						has_completed_focus = GER_heed_von_neuraths_concerns

@@ -175,16 +175,11 @@ country_event = {
 				}	
 			}
 			GER = {
-				OR = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
-				}
+				has_completed_focus = GER_remilitarize_the_rhineland
 			}
 			HUN = { 
 				OR = {
 					has_completed_focus = wuw_HUN_secret_rearmament
-					has_completed_focus = HUN_secret_rearmament
 				}
 			}
 			AUS = {
@@ -198,7 +193,7 @@ country_event = {
 				}
 			}
 			ROM = {
-				has_completed_focus = ROM_balkans_dominance
+				always = no
 			}
 			date > 1936.10.10 #Okay, enough waiting for this to trigger
 		}
@@ -231,7 +226,7 @@ country_event = { #Ethiopa is told about Czech 'Observers'
 		name = MUN_czech_bop.3.a
 		trigger = {
 			NOT = {
-				has_completed_focus = ETH_arms_purchases
+				always = no
 			}
 		}
 		add_political_power = -5
@@ -282,7 +277,7 @@ country_event = { #Ethiopa is cool with us smuggling in some guns
 		name = MUN_czech_bop.4.a
 		trigger = {
 			NOT = {
-				has_completed_focus = ETH_arms_purchases
+				always = no
 			}
 		}
 		ai_chance = {

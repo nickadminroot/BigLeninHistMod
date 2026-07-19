@@ -792,27 +792,7 @@ focus_tree = {
 
 
 		select_effect = {
-			if = {
-				limit = { always = no }
-				if = {
-					limit = {
-						has_active_mission = POL_looming_peasants_strike_mission
-					}
-					add_days_mission_timeout  = {
-						mission = POL_looming_peasants_strike_mission
-						days = 70
-					}
-				}
-				if = {
-					limit = {
-						has_active_mission = POL_peasants_strike
-					}
-					add_days_mission_timeout  = {
-						mission = POL_peasants_strike
-						days = 70
-					}
-				}
-			}
+
 		}
 
 		completion_reward = {
@@ -2035,13 +2015,7 @@ focus_tree = {
 				add_idea = POL_sanation_left_opposition_2
 				remove_idea = POL_sanation_left_opposition_1
 			}
-			if = {
-				limit = { always = no }
-				activate_mission = POL_sanation_left_irritation
-				activate_mission = POL_sanation_right_irritation
-				unlock_decision_tooltip = POL_sideline_the_left
-				unlock_decision_tooltip = POL_sideline_the_right
-			}
+
 		}
 	}
 
@@ -3344,10 +3318,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_defend_in_west_state
-			}
+
 			add_doctrine_cost_reduction = {
 				name = POL_local_western_plans
 				cost_reduction = 0.5
@@ -4299,13 +4270,7 @@ focus_tree = {
 				factor = 0
 				has_idea = anti_soviet_pact
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_completed_focus = POL_seek_accommodation_with_USSR
-					has_completed_focus = POL_seek_accommodation_with_germany
-				}
-			}
+
 			modifier = {
 				factor = 0
 				is_in_faction = yes
@@ -4540,10 +4505,6 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_FIN
-			}
 		}
 	}
 
@@ -4592,12 +4553,7 @@ focus_tree = {
 				}
 			}
 
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_DEN
-				unlock_decision_tooltip = POL_diplomatic_mission_to_SWE
-				unlock_decision_tooltip = POL_diplomatic_mission_to_NOR
-			}
+
 		}
 	}
 
@@ -4728,11 +4684,6 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_CZE
-				unlock_decision_tooltip = POL_diplomatic_mission_to_YUG
-			}
 		}
 	}
 
@@ -4770,11 +4721,6 @@ focus_tree = {
 		completion_reward = {
 			CZE = {
 				country_event = { id = poland.16 days = 1 }
-			}
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_AUS
-				unlock_decision_tooltip = POL_diplomatic_mission_to_HUN
 			}
 		}
 	}
@@ -4852,10 +4798,6 @@ focus_tree = {
 					country_event = { id = poland.16 days = 1 }
 				}
 			}
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
-			}
 		}
 	}
 
@@ -4895,11 +4837,7 @@ focus_tree = {
 			YUG = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_GRE
-				unlock_decision_tooltip = POL_diplomatic_mission_to_TUR
-			}
+
 		}
 	}
 
@@ -4949,10 +4887,6 @@ focus_tree = {
 			GRE = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
-			}
 		}
 	}
 
@@ -5001,10 +4935,6 @@ focus_tree = {
 		completion_reward = {
 			TUR = {
 				country_event = { id = poland.16 days = 1 }
-			}
-			if = {
-				limit = { always = no }
-				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
 			}
 		}
 	}
