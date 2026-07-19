@@ -2127,23 +2127,7 @@ focus_tree = {
 		relative_position_id = uk_service_focus
 		cost = 5
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = ENG_fortify_the_empire_1
-				}
-				swap_ideas = {
-					remove_idea = ENG_fortify_the_empire_1
-					add_idea = ENG_fortify_the_empire_2
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_idea = ENG_fortify_the_empire_1 }
-					NOT = { has_idea = ENG_fortify_the_empire_2 }
-				}
-				add_ideas = ENG_fortify_the_empire_1
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
+			add_ideas = BLHM_ENG_mediterranean_bastion
 			447 = {
 				if = {
 					limit = {

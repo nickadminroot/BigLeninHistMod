@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_mediterranean_bastion",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_mediterranean_bastion",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_mediterranean_bastion.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_fortify_the_borders",
+  "prompt": "A stone fortress crowned by a British Union Jack flag on a Mediterranean rocky coastline, with a naval fleet visible on the horizon",
+  "style_preset": "hoi4_idea_v1"
+}
