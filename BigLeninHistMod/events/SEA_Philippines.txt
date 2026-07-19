@@ -729,7 +729,10 @@ country_event = { ## Event to PHI - US declares war
 				activate_mission = USA_execute_war_plan_brown
 			}
 		}
-		activate_mission = PHI_defend_against_USA
+		if = {
+			limit = { always = no }
+			activate_mission = PHI_defend_against_USA
+		}
 		name = SEA_PHI_political_events.14.a
 		
 	}
@@ -1551,7 +1554,10 @@ country_event = { #Ask USA for independence, optionally with Japanese backing
 		}
 		set_country_flag = PHI_unlock_peace_decision
 		custom_effect_tooltip = generic_skip_one_line_tt
-		unlock_decision_tooltip = PHI_peace_with_philippines
+		if = {
+			limit = { always = no }
+			unlock_decision_tooltip = PHI_peace_with_philippines
+		}
 	}
 }
 

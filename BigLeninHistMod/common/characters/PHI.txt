@@ -632,16 +632,8 @@ characters={
 			allowed  = {
 				has_dlc = "No Compromise, No Surrender"
 				has_dlc = "La Resistance"
-				if = {
-					limit = {
-						has_dlc = "Thunder at Our Gates"
-					}
-					NOT = {
-						INS = {
-							has_completed_focus = INS_the_declaration_of_independence
-						}
-					}
-				}
+				# INS focus INS_the_declaration_of_independence does not exist in BLHM;
+				# character already guarded by PHI_ALT_ROUTE_EXCLUDED in available block
 			}
 			available = {
 				# Tied to excluded alternative route (return of exiles)
