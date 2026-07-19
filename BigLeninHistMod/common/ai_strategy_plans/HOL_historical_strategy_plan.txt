@@ -32,7 +32,7 @@ HOL_historical_plan = {
 				option = DEFAULT
 			}
 		}
-		ENG = { has_completed_focus = ENG_a_change_in_course }
+
 		
 	}
 

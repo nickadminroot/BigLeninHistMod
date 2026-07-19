@@ -191,11 +191,6 @@ country_event = {
 
 		effect_tooltip = {
 			COG = {
-				add_timed_idea = {
-					idea = COG_redirected_resources_to_food_production
-					days = 360
-				}	
-
 				add_autonomy_score = { 
 					value = -100
 					localization = CONGO_accepted_increased_food_production
@@ -251,11 +246,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-
-		add_timed_idea = {
-			idea = COG_redirected_resources_to_food_production
-			days = 360
-		}	
 
 		add_autonomy_score = { 
 			value = -100
@@ -751,7 +741,6 @@ country_event = {
 
 				division_template = {
 					name = "Mwami's Guard"		
-					division_names_group = RWA_INFB_01
 					template_counter = 67
 					regiments = {
 						irregular_infantry = { x = 0 y = 0 }
@@ -867,7 +856,6 @@ country_event = {
 
 				division_template = {
 					name = "Mwami's Guard"		
-					division_names_group = BRD_INFB_01
 					template_counter = 67
 					regiments = {
 						irregular_infantry = { x = 0 y = 0 }
@@ -990,11 +978,6 @@ country_event = {
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_timed_idea = {
-			idea = COG_emigration_to_katanga_idea
-			days = 365
-		}	
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -1263,7 +1246,7 @@ country_event = {
 		is_subject = yes
 
 		NOT = {
-			has_completed_focus = COG_establish_the_anc
+			always = no
 		}
 
 		has_dlc = "Gotterdammerung"
@@ -1494,18 +1477,6 @@ country_event = {
 		add_war_support = 0.05
 
 		hidden_effect = {
-			IF = {
-				limit = {
-					has_completed_focus = COG_secure_soviet_aid
-				}
-				set_country_flag = COG_will_get_soviet_aid_flag
-			}
-			ELSE_IF = {
-				limit = {
-					has_completed_focus = COG_secure_german_aid
-				}
-				set_country_flag = COG_will_get_german_aid_flag
-			}
 			FROM = {
 				set_country_flag = supporter_of_congolese_independence_flag
 			}
@@ -3783,10 +3754,7 @@ country_event = {
 	option = { # We must have independence at all costs
 		name = congo_independence_struggle.1.b
 		trigger = {
-			OR = {
-				has_completed_focus = CONGO_soviet_interest
-				has_completed_focus = COG_make_use_of_the_british_proposal
-			}
+			has_completed_focus = CONGO_soviet_interest
 		}
 		ai_chance = { 
 			base = 50 
@@ -3982,20 +3950,12 @@ country_event = {
 				complete_national_focus = CONGO_republic_of_congo
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = COG_long_term_debt_payment
-				add_timed_idea = {
-					idea = COG_short_term_massive_debt_payment
-					days = 180
-				}	
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			FROM = {
 				add_ideas = COG_long_term_debt_recieved
-				add_timed_idea = {
-					idea = COG_short_term_massive_debt_recieved
-					days = 180
-				}	
 			}
 		}
 
@@ -4165,20 +4125,12 @@ country_event = {
 			complete_national_focus = CONGO_republic_of_congo
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = COG_long_term_debt_payment
-			add_timed_idea = {
-				idea = COG_short_term_massive_debt_payment
-				days = 180
-			}	
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		ROOT = {
 			add_ideas = COG_long_term_debt_recieved
-			add_timed_idea = {
-				idea = COG_short_term_massive_debt_recieved
-				days = 180
-			}	
 		}
 
 		hidden_effect = {
@@ -5360,34 +5312,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
-			limit = {
-				ROOT = {
-					has_completed_focus = COG_make_use_of_the_british_proposal
-				}
-				ENG = {
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			IF = {
-				limit = {
-					538 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				give_resource_rights = { receiver = ENG state = 538 }
-			}
-			IF = {
-				limit = {
-					890 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				give_resource_rights = { receiver = ENG state = 890 }
-			}
-		}
+
 		IF = {
 			limit = {
 				ROOT = {

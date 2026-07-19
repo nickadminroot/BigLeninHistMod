@@ -1145,7 +1145,7 @@ country_event = { #To ENG/FRA/SOV: Belgium requests guarantee
 				original_tag = SOV
 				FROM = {
 					OR = {
-						has_completed_focus = BEL_raise_the_red_flag
+						always = no
 						has_government = communism
 					}
 				}
@@ -1211,7 +1211,7 @@ country_event = { #To ENG/FRA/SOV: Belgium requests guarantee
 				factor = 10
 				original_tag = SOV
 				FROM = {
-					NOT = { has_completed_focus = BEL_raise_the_red_flag } 
+					NOT = { always = no }
 				}
 			}
 		}
@@ -2586,7 +2586,7 @@ country_event = {
 
     	is_subject = no
 
-    	has_completed_focus = BEL_demand_calais
+    	always = no
 
     	has_dlc = "Gotterdammerung"
     }

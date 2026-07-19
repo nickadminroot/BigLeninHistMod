@@ -228,8 +228,6 @@
 					original_tag = COG
 				}
 
-				COG_vast_uncentralized_nation_modifier_level_down = yes
-
 				custom_effect_tooltip = generic_skip_one_line_tt
 
 				every_state = {
@@ -1401,18 +1399,6 @@
 				show_ideas_tooltip = COG_forminiere
 			}
 
-			IF = {
-				limit = {
-					original_tag = BEL
-				}
-
-				add_timed_idea = {
-					idea = COG_forminiere_idea
-					days = 365
-				}	
-
-			}
-
 			hidden_effect = {
 				CONGO_one_more_focus_done = yes
 			}
@@ -1457,18 +1443,6 @@
 
 				custom_effect_tooltip = available_industrial_concern
 				show_ideas_tooltip = COG_forminiere
-			}
-
-			IF = {
-				limit = {
-					original_tag = BEL
-				}
-
-				add_timed_idea = {
-					idea = COG_forminiere_idea
-					days = 365
-				}	
-
 			}
 
 		}
@@ -6465,10 +6439,6 @@
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				unlock_decision_tooltip = {
-					decision = COG_increased_food_production_scheme_decision
-					show_effect_tooltip = yes
-				}	
 			}
 
 			hidden_effect = {
@@ -6496,10 +6466,6 @@
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				unlock_decision_tooltip = {
-					decision = COG_increased_food_production_scheme_decision
-					show_effect_tooltip = yes
-				}	
 			}
 
 		}
