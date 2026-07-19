@@ -402,19 +402,16 @@ Located in `scripts/`. Python scripts auto-detect HOI4 installation path.
 
 **First-time setup:** `bash scripts/setup.sh` (or `scripts\setup.bat` on Windows)
 
-### Persistent CLI daemon
+### One-shot CLI execution
 
-Normal `hoi4-mcp-cli.js` calls use a quiet persistent daemon rather than rebuilding the mod index in every Node.js process.
+Normal `hoi4-mcp-cli.js` calls intentionally run in their own process and exit after one tool invocation. There is no background daemon, socket, watcher, or shared state that can block later calls.
 
-- Daemons are keyed by the canonical absolute mod-content path, so the main checkout and every Git worktree have isolated indexes.
-- The first call builds the index; subsequent calls reuse it.
-- Filesystem changes cause one full invalidation after a 750 ms debounce. The next request rebuilds the complete index.
-- A daemon exits after 15 idle minutes by default.
-- Use `--verbose` for timing diagnostics, `--stop-daemon` to stop the current worktree's daemon, and `--no-daemon` only to troubleshoot one-shot behavior.
-- Do not stop the daemon between validation calls or invoke repeated calls with `--no-daemon`.
+- Run at most one CLI invocation per `bash` tool call; do not put repeated calls in shell loops or command chains.
+- For 2-4 independent read-only searches or validations, issue separate `bash` tool calls with `multi_tool_use.parallel`. This bounds resource use while avoiding serial wall-clock delays.
+- Never parallelize write tools such as `loc_set`, `loc_bulk_set`, or map/GUI generation and editing.
+- `--interactive` reuses one handler only inside the foreground process and is intended for deliberate manual/batch sessions; normal agent calls should remain one-shot.
+- `--verbose` prints timing diagnostics. Legacy `--no-daemon` is accepted as a no-op for command compatibility.
 - File arguments accept paths relative to mod content (preferred), absolute paths inside mod content, and existing paths relative to the CLI caller's current working directory. Paths outside mod content are rejected.
-
-Optional environment overrides are `HOI4_MCP_DEBOUNCE_MS`, `HOI4_MCP_IDLE_MS`, and `HOI4_MCP_START_TIMEOUT_MS`.
 
 ### Auto-Detection
 

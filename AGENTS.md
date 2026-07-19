@@ -17,7 +17,7 @@ BigLeninHistMod is a vanilla-like, multiplayer-oriented historical HOI4 mod focu
    - `pi-subagents` for delegation.
 2. Extract HOI4-specific terms and exact identifiers from the user's request. Use `docs_search` for game-sensitive terms, then verify against local files.
 3. Search the mod and local vanilla data with `rg`; do not guess Clausewitz syntax or engine behavior.
-4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. Its default persistent daemon is the preferred mode; do not add `--no-daemon` or repeatedly stop it between validation calls.
+4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. The CLI is intentionally one-shot: run at most one CLI invocation per `bash` tool call. Do not hide repeated invocations in shell loops or chained commands; issue 2-4 independent read-only calls as separate parallel `bash` tool calls instead, and never parallelize write tools.
 5. Keep effects, visible tooltips, idea variants, and English/Russian localization synchronized.
 6. Validate the changed files and references before reporting completion.
 
@@ -31,6 +31,7 @@ The local documentation corpus is under `docs/rag/corpus/`. `docs_search` combin
 - Do not run destructive commands or Git lifecycle operations without explicit user approval.
 - Run `python scripts/hoi4-smoke-windows.py` only when the user explicitly requests the Windows smoke test; follow the serialized procedure below.
 - Prefix shell commands with `rtk`.
+- Use `pwsh`, not legacy Windows PowerShell (`powershell`), for PowerShell commands. When invoking it through Bash, single-quote the `-Command` script so Bash does not expand PowerShell variables such as `$_`.
 
 ## Windows smoke test
 
@@ -73,7 +74,7 @@ A user instruction to "work in a worktree" authorizes the coordinating Pi sessio
 ```powershell
 # Create from the intended clean base; the helper checks out an existing branch.
 rtk git branch "<name>" "<base-commit>"
-rtk powershell -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
+rtk pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
 
 # Open a separate Pi/editor session only after "Worktree ready" and path verification.
 rtk git worktree list
@@ -98,7 +99,7 @@ The helper symlinks extra files by default when present: `node_modules/`, `scrip
 
 ## Validation commands
 
-The MCP CLI automatically starts a quiet daemon scoped to the absolute mod-content path. Each worktree therefore has an isolated in-memory index. Filesystem changes trigger one full reindex after a debounce interval, and an idle daemon exits automatically; use `--stop-daemon` only for troubleshooting. Prefer several normal CLI calls over shell loops that pass `--no-daemon`. File arguments may be relative to mod content (preferred), absolute paths inside mod content, or existing paths relative to the caller's current working directory.
+The MCP CLI is quiet and one-shot: every normal call owns its process and exits, so it cannot leave a stuck background server. Use exactly one CLI invocation per `bash` tool call. For multiple independent read-only checks, issue separate `bash` tool calls through `multi_tool_use.parallel` with bounded concurrency (normally 2-4); do not use shell loops, command chains, or parallel write operations. File arguments may be relative to mod content (preferred), absolute paths inside mod content, or existing paths relative to the caller's current working directory.
 
 Choose checks that match the change:
 

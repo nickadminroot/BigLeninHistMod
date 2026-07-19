@@ -23,15 +23,14 @@ Requires Node.js 18+ (https://nodejs.org/).
 
 ```bash
 node scripts/hoi4-mcp-cli.js <tool_name> [--key value ...]
-node scripts/hoi4-mcp-cli.js --interactive    # Interactive mode
+node scripts/hoi4-mcp-cli.js --interactive    # Foreground session; no background server
 node scripts/hoi4-mcp-cli.js --list           # List all tools
-node scripts/hoi4-mcp-cli.js --stop-daemon    # Stop this checkout/worktree's daemon
 node scripts/hoi4-mcp-cli.js --help           # Help
 ```
 
-Normal calls are quiet and automatically reuse a persistent daemon. The daemon identity is based on the canonical absolute mod-content path, so every Git worktree gets an isolated index. After files change, the complete index is invalidated once changes have been quiet for 750 ms; the next request rebuilds it. The daemon exits after 15 idle minutes.
+Normal calls are quiet, execute one tool, and exit. No daemon or background server is started. `--verbose` shows request timing; legacy `--no-daemon` remains accepted as a no-op.
 
-Use `--verbose` to show request timing. `--no-daemon` forces the old one-shot behavior and should be reserved for troubleshooting because every call rebuilds the index. The defaults can be overridden with `HOI4_MCP_DEBOUNCE_MS`, `HOI4_MCP_IDLE_MS`, and `HOI4_MCP_START_TIMEOUT_MS`.
+For agent-driven bulk work, use exactly one CLI invocation per `bash` tool call. Submit 2-4 independent read-only calls as separate parallel tool calls rather than using a shell loop or chaining several CLI commands in one shell. Keep write tools serial.
 
 **Parameter types:**
 - String: `--key "value"`
@@ -53,7 +52,7 @@ node scripts/hoi4-mcp-cli.js script_validate_file --file "BigLeninHistMod/common
 node scripts/hoi4-mcp-cli.js script_validate_file --file "G:/mods/MyMod/common/national_focus/france.txt"
 ```
 
-Existing CWD-relative paths and absolute paths are normalized to mod-relative paths before they are sent to the daemon. Paths outside the detected mod-content directory are rejected.
+Existing CWD-relative paths and absolute paths are normalized to mod-relative paths before the handler is called. Paths outside the detected mod-content directory are rejected.
 
 ### Script Tools
 
@@ -331,14 +330,13 @@ python scripts/hoi4_workshop_upload.py --vdf-only
 
 ---
 
-## Persistent CLI daemon and MCP server
+## CLI process model and standalone MCP server
 
-The CLI daemon starts automatically; it is not necessary to start or restart a server between commands:
+Each normal CLI command is an isolated one-shot process:
 
 ```bash
 node scripts/hoi4-mcp-cli.js script_search --pattern "has_idea"
 node scripts/hoi4-mcp-cli.js script_get_references --name "TAG_identifier"
-node scripts/hoi4-mcp-cli.js --stop-daemon       # troubleshooting only
 ```
 
-`--interactive` uses the same worktree-scoped daemon. The standalone stdio MCP server in `scripts/mcp/mapMcpServer.js` remains available for MCP hosts, but it is separate from the CLI daemon.
+`--interactive` keeps one handler only inside its foreground process and exits when input closes. It does not create a daemon. The standalone stdio MCP server in `scripts/mcp/mapMcpServer.js` remains available for dedicated MCP hosts, but the CLI does not start or connect to it.
