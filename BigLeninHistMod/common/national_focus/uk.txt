@@ -5266,24 +5266,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLHM_ENG_military_construction
-		prerequisite = { focus = BLHM_ENG_war_construction }
-		icon = GFX_goal_generic_construct_military
-		x = 80
-		y = 0
-		cost = 8
-		available = {
-			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
-		}
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_ideas = BLHM_ENG_military_construction_idea
-		}
-	}
-
-	focus = {
 		id = BLHM_ENG_naval_complex
 		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_construct_naval_dockyard
