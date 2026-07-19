@@ -77,56 +77,23 @@ PHI_central_focuses_done_T3_4 = {
 }
 
 PHI_usa_focus_done_T1 = {
-	if = {
-		limit = {
-			has_completed_focus = PHI_declare_military_emergency
-		}
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T1_alt_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 0 }
-		}
-	}
-	else = {
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T1_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 0 }
-		}
+	custom_trigger_tooltip = {
+		tooltip = PHI_usa_focus_done_T1_tt
+		check_variable = { PHI_amount_of_usa_focus_done > 0 }
 	}
 }
 
 PHI_usa_focus_done_T2 = { 
-	if = {
-		limit = {
-			has_completed_focus = PHI_declare_military_emergency
-		}
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T2_alt_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 1 }
-		}
-	}
-	else = {
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T2_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 1 }
-		}
+	custom_trigger_tooltip = {
+		tooltip = PHI_usa_focus_done_T2_tt
+		check_variable = { PHI_amount_of_usa_focus_done > 1 }
 	}
 }
 
 PHI_usa_focus_done_T3 = { 
-	if = {
-		limit = {
-			has_completed_focus = PHI_declare_military_emergency
-		}
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T3_alt_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 2 }
-		}
-	}
-	else = {
-		custom_trigger_tooltip = {
-			tooltip = PHI_usa_focus_done_T3_tt
-			check_variable = { PHI_amount_of_usa_focus_done > 2 }
-		}
+	custom_trigger_tooltip = {
+		tooltip = PHI_usa_focus_done_T3_tt
+		check_variable = { PHI_amount_of_usa_focus_done > 2 }
 	}
 }
 

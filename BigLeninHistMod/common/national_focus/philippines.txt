@@ -563,16 +563,6 @@ initial_show_position = {
 			set_variable = { PHI_american_intervention_value_to_add = -10 } ## Value has to be tied to the custom tooltip, 10 = small increase. See in decision loc
 			PHI_american_intervention_change_value = yes
 
-			if = {
-				limit = { 
-					has_completed_focus = PHI_partido_komunista_ng_pilipinas_coup
-					NOT = { 
-						has_country_flag = PHI_american_intervention_is_over
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = PHI_american_intervention_change_value_small_decrease_tt ## Only show the tooltip if have the decision, but add the variable regardless
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = PHI_replace_depression_dynamic_modifier_no_modifiers_tt
@@ -618,10 +608,7 @@ initial_show_position = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
-					OR = {
-						has_completed_focus = PHI_open_borders
-						has_completed_focus = PHI_nationality_act
-					}
+					has_completed_focus = PHI_nationality_act
 				}
 				custom_effect_tooltip = PHI_modify_economy_dynamic_modifier_tt
 			}
@@ -670,16 +657,7 @@ initial_show_position = {
 			set_variable = { PHI_american_intervention_value_to_add = -10 } ## Value has to be tied to the custom tooltip, 10 = small increase. See in decision loc
 			PHI_american_intervention_change_value = yes
 
-			if = {
-				limit = { 
-					has_completed_focus = PHI_partido_komunista_ng_pilipinas_coup
-					NOT = { 
-						has_country_flag = PHI_american_intervention_is_over
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = PHI_american_intervention_change_value_small_decrease_tt ## Only show the tooltip if have the decision, but add the variable regardless
-			}
+
 			hidden_effect = {
 				PHI_central_focuses_done_T2 = yes
 			}
@@ -770,10 +748,7 @@ initial_show_position = {
 		completion_reward = {
 			if = {
 				limit = {
-					OR = {
-						has_completed_focus = PHI_open_borders
-						has_completed_focus = PHI_nationality_act
-					}
+					has_completed_focus = PHI_nationality_act
 				}
 				custom_effect_tooltip = PHI_modify_economy_dynamic_modifier_tt
 			}
@@ -881,10 +856,7 @@ initial_show_position = {
 		completion_reward = {
 			if = {
 				limit = {
-					OR = {
-						has_completed_focus = PHI_open_borders
-						has_completed_focus = PHI_nationality_act
-					}
+					has_completed_focus = PHI_nationality_act
 				}
 				custom_effect_tooltip = PHI_modify_economy_dynamic_modifier_tt
 			}
@@ -898,17 +870,6 @@ initial_show_position = {
 
 			set_variable = { PHI_american_intervention_value_to_add = 10 } ## Value has to be tied to the custom tooltip, 10 = small increase. See in decision loc
 			PHI_american_intervention_change_value = yes
-
-			if = {
-				limit = { 
-					has_completed_focus = PHI_partido_komunista_ng_pilipinas_coup
-					NOT = { 
-						has_country_flag = PHI_american_intervention_is_over
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = PHI_american_intervention_change_value_medium_increase_tt ## Only show the tooltip if have the decision, but add the variable regardless
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = PHI_focus_time_reduced_T2_tt
@@ -1058,10 +1019,7 @@ initial_show_position = {
 
 			if = {
 				limit = {
-					OR = {
-						has_completed_focus = PHI_open_borders
-						has_completed_focus = PHI_nationality_act
-					}
+					has_completed_focus = PHI_nationality_act
 				}
 				custom_effect_tooltip = PHI_modify_economy_dynamic_modifier_tt
 			}
@@ -1996,7 +1954,6 @@ initial_show_position = {
 				limit = {
 					OR = {
 						NOT = {
-							has_completed_focus = PHI_open_borders
 							has_completed_focus = PHI_nationality_act
 						}
 						has_dynamic_modifier = {
@@ -3572,28 +3529,7 @@ initial_show_position = {
 		available_if_capitulated = yes
 	
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = PHI_legalize_the_communist_party
-					}
-				}
-				show_unit_leaders_tooltip = PHI_luis_taruc
-			}
-			else = {
-				PHI_luis_taruc = {
-					gain_xp = 250
-					if = {
-						limit = {
-							NOT = {
-								has_trait = camouflage_expert
-							}
-						}
-						custom_effect_tooltip = generic_skip_one_line_tt
-						add_trait = { trait = camouflage_expert }
-					}
-				}
-			}
+			show_unit_leaders_tooltip = PHI_luis_taruc
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = PHI_philippine_resistance_movement_dynamic_modifier_tt
@@ -3603,17 +3539,9 @@ initial_show_position = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			if = {
-				limit = {
-					has_completed_focus = PHI_partido_komunista_ng_pilipinas_coup
-				}
+			custom_effect_tooltip = PHI_if_communist_tt
+			effect_tooltip = {
 				add_country_leader_trait = PHI_resistance_connections
-			}
-			else = {
-				custom_effect_tooltip = PHI_if_communist_tt
-				effect_tooltip = {
-					add_country_leader_trait = PHI_resistance_connections
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL }
@@ -4339,20 +4267,14 @@ initial_show_position = {
 		ai_will_do = {
 			base = 0.5
 
-			modifier = {
-				factor = 100
-				has_completed_focus = PHI_open_borders
-			}
+# modifier removed - PHI_open_borders does not exist in mod
 
 			modifier = {
 				factor = 100
 				has_completed_focus = PHI_nationality_act
 			}
 
-			modifier = {
-				factor = 6
-				has_completed_focus = PHI_anti_hacendados
-			}
+			# modifier removed - PHI_anti_hacendados does not exist in mod
 
 			modifier = {
 				factor = 6
@@ -5488,58 +5410,14 @@ focus = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				if = {
-					limit = {
-						has_completed_focus = PHI_align_with_japan
-						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
-						}
-					}
-					every_military_industrial_organization = {
-						limit = {
-							is_military_industrial_organization = JAP_mitsubishi_organization
-						}
-						add_mio_size = 1
-					}
-				}
-				else_if = {
+				every_military_industrial_organization = {
 					limit = {
 						OR = {
-							has_completed_focus = PHI_align_with_the_usa
-							has_completed_focus = PHI_declare_military_emergency
+							is_military_industrial_organization = USA_north_american_aviation_organization
+							is_military_industrial_organization = USA_lockheed_organization
 						}
 					}
-					every_military_industrial_organization = {
-						limit = {
-							OR = {
-								is_military_industrial_organization = USA_north_american_aviation_organization
-								is_military_industrial_organization = USA_lockheed_organization
-							}
-						}
-						add_mio_size = 1
-					}
-				}
-				else = {
-					effect_tooltip = {
-						custom_effect_tooltip = PHI_if_align_with_japan_tt
-						every_military_industrial_organization = {
-							limit = {
-								is_military_industrial_organization = JAP_mitsubishi_organization
-							}
-							add_mio_size = 1
-						}
-						custom_effect_tooltip = generic_skip_one_line_tt
-						custom_effect_tooltip = PHI_if_align_with_the_usa_tt
-						every_military_industrial_organization = {
-							limit = {
-								OR = {
-									is_military_industrial_organization = USA_north_american_aviation_organization
-									is_military_industrial_organization = USA_lockheed_organization
-								}
-							}
-							add_mio_size = 1
-						}
-					}
+					add_mio_size = 1
 				}
 			}
 		}

@@ -117,16 +117,9 @@ characters={
  				}
 			available = {
 				is_country_leader = no
-				NOT = { 
-					has_completed_focus = PHI_anti_hacendados 
-				}
 			}
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 0
-					has_completed_focus = PHI_slippery_slope 
-				}
 			}
 			traits  = {
 				PHI_hacendado
@@ -295,10 +288,6 @@ characters={
 			cost = 150
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 5
-					has_completed_focus = PHI_slippery_slope 
-				}
 			}
 			available = {
 				is_country_leader = no
@@ -355,14 +344,10 @@ characters={
 			coordination_skill = 2
 			legacy_id = -1
 			visible = {
-				has_completed_focus = PHI_royal_exiles
+				# Tied to excluded monarchist route
+				has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 			}
 		}
-		# country_leader = {	#added by focus
-		# 	ideology = despotism
-		# 	expire = "1965.1.1.1"
-		# 	traits = { ICE_the_navy_king }
-		# }
 	}
 
 ### Advisors ###
@@ -438,17 +423,10 @@ characters={
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available = {
-				has_completed_focus = PHI_align_with_japan
+				# Tied to excluded alternative route - locked
+				has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 			}
 			idea_token = PHI_benigno_ramos
-
-			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 5
-					has_completed_focus = PHI_rebuild_sakdalistas 
-				}
-			}
 
 			traits  = {
 				PHI_sakdalista_editor
@@ -606,7 +584,8 @@ characters={
 				has_dlc = "No Compromise, No Surrender"
 			}
 			available = {
-				has_completed_focus = PHI_legalize_the_communist_party
+				# Tied to excluded communist route
+				has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 			}
 			idea_token = PHI_vicente_lava
 			traits  = {
@@ -665,17 +644,8 @@ characters={
 				}
 			}
 			available = {
-				has_completed_focus = PHI_return_of_the_exiles
-				if = {
-					limit = {
-						has_dlc = "Thunder at Our Gates"
-					}
-					NOT = {
-						INS = {
-							has_completed_focus = INS_the_declaration_of_independence
-						}
-					}
-				}
+				# Tied to excluded alternative route (return of exiles)
+				has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 			}
 			idea_token = PHI_tan_malaka
 			traits  = {
@@ -1304,16 +1274,11 @@ characters={
 				}
 			}
 			corps_commander = {
-				visible = { 
-					OR = {
-						has_completed_focus = PHI_japanese_advisors
-						has_completed_focus = PHI_japanese_observers
-					}
-					NOT = {
-						has_war_with = JAP
-					}
+				visible = {
+					# Tied to excluded pro-Japan route
+					has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 				}
-				traits = { 
+				traits = {
 					politically_connected
 				}
 				skill = 2
@@ -1343,13 +1308,8 @@ characters={
 			}
 			corps_commander = {
 				visible = { 
-					OR = {
-						has_completed_focus = PHI_japanese_advisors
-						has_completed_focus = PHI_japanese_observers
-					}
-					NOT = {
-						has_war_with = JAP
-					}
+					# Tied to excluded pro-Japan route
+					has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 				}
 				traits = { 
 					commando
@@ -1366,10 +1326,8 @@ characters={
 				idea_token = PHI_iwaichi_fujiwara
 				ledger = army
 				available = { 
-					OR = {
-						has_completed_focus = PHI_japanese_advisors
-						has_completed_focus = PHI_japanese_observers
-					}
+					# Tied to excluded pro-Japan route
+					has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 				}
 				traits = {
 					army_commando_3
@@ -1399,10 +1357,7 @@ characters={
 			}
 			corps_commander = {
 				visible = {
-					OR = {
-						has_completed_focus = PHI_legalize_the_communist_party
-						has_completed_focus = PHI_hukbalahap
-					}
+					has_completed_focus = PHI_hukbalahap
 				}
 				traits = { commando jungle_rat }
 				skill = 3
@@ -1663,13 +1618,8 @@ characters={
 			## Admiral
 			navy_leader = {
 				visible = { 
-					OR = {
-						has_completed_focus = PHI_japanese_advisors
-						has_completed_focus = PHI_japanese_observers
-					}
-					NOT = {
-						has_war_with = JAP
-					}
+					# Tied to excluded pro-Japan route
+					has_country_flag = PHI_ALT_ROUTE_EXCLUDED
 				}
 				traits = {
 					navy_fleet_logistics_2
