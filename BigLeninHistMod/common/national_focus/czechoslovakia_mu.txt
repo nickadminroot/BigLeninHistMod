@@ -338,17 +338,7 @@ focus_tree = {
 		y = 0
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = CZE_coalition_building
-				}
-			}
+			always = no
 		}
 
 		cost = 10
@@ -514,20 +504,7 @@ focus_tree = {
 		relative_position_id = CZE_appeal_to_the_castle
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CZE_unify_the_fascist_parties
-						has_completed_focus = CZE_coalition_building
-					}
-				}
-			}
+			always = no
 		}
 
 		offset = {
@@ -1987,21 +1964,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CZE_petition_the_nobles }
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CZE_petition_the_nobles
-						has_completed_focus = CZE_coalition_building
-					}
-					
-				}
-			}
+			always = no
 		}
 
 		cost = 5
@@ -2025,7 +1988,6 @@ focus_tree = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CZE_karel_schwarzenberg
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5953,7 +5915,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor 
-			show_ideas_tooltip = CZE_augustin_voloshyn
 		}
 	}
 
@@ -6293,7 +6254,6 @@ focus_tree = {
 			CZE_agrarian_politics_goes_down = yes
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CZE_josef_cerny
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -6332,7 +6292,6 @@ focus_tree = {
 
 			CZE_agrarian_politics_goes_down = yes
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CZE_rudolf_mlcoch
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
 	}
@@ -6641,10 +6600,7 @@ focus_tree = {
 						is_subject_of = ROOT
 						NOT = {
 							has_government = fascism
-							has_country_leader = {
-								character = SLO_vojtech_tuka
-								ruling_only = yes
-							}
+							always = no
 						}
 					}
 					ROOT = { #ROOT for tt reasons
@@ -8438,7 +8394,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CZE_ludwig_czech
 
 			if = {
 				limit = {
@@ -8611,20 +8566,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			#always = no
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = CZE_appeal_to_the_castle
-					has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-					has_completed_focus = CZE_placate_benes_faction
-				}
-			}
+			always = no
 		}
 
 		cost = 10
@@ -8726,6 +8668,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = CZE_increase_funding_from_moscow
+		}
+
+		allow_branch = {
+			always = no
 		}
 
 		cost = 5	#marijn211: can set back to 10 if I expand the effects
@@ -18332,6 +18278,10 @@ focus_tree = {
 		icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = CZE_continue_armed_force_reform }
 
+		allow_branch = {
+			always = no
+		}
+
 		relative_position_id = CZE_continue_armed_force_reform
 		x = -13
 		y = 1
@@ -18368,6 +18318,9 @@ focus_tree = {
 		id = CZE_expand_airfield_capacity
 		icon = GFX_focus_generic_air_bases
 		prerequisite = { focus = CZE_air_force_officer_recruitment }
+		allow_branch = {
+			always = no
+		}
 		relative_position_id = CZE_air_force_officer_recruitment
 		x = -2
 		y = 1
@@ -18605,7 +18558,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_chief_of_airforce
-			show_ideas_tooltip = CZE_jaroslav_kejla_idea
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 	}
