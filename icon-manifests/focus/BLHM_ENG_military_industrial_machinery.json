@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_military_industrial_machinery",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_military_industrial_machinery",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_military_industrial_machinery.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_construct_mil_factory",
+  "prompt": "A conveyor belt inside a British munitions factory, with tank hull sections being assembled under bright industrial lamps",
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_construct_mil_factory",
+  "fallback": "GFX_goal_generic_construct_mil_factory"
+}

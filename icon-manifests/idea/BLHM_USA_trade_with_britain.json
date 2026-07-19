@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_USA_trade_with_britain",
+  "sprite_name": "GFX_idea_custom_BLHM_USA_trade_with_britain",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_USA_trade_with_britain.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_construction_penalty",
+  "prompt": "A British merchant ship unloading cargo at an American dock, with customs stamps and trade documents crossed in the foreground",
+  "style_preset": "hoi4_idea_v1"
+}

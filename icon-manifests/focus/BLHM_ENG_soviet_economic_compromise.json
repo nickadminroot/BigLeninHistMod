@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_soviet_economic_compromise",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_soviet_economic_compromise",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_soviet_economic_compromise.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_construct_military",
+  "prompt": "British and Soviet diplomats signing an economic agreement with factory silhouettes and oil derricks",
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_construct_military",
+  "fallback": "GFX_goal_generic_construct_military"
+}

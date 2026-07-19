@@ -133,3 +133,16 @@ ENG_enforce_the_naval_treaties = {
 		original_tag = ENG
 	}
 }
+
+BLHM_ENG_d_day_preparations_cat = {
+	icon = GFX_decision_category_generic_fortification
+	priority = 50
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	visible = {
+		has_country_flag = BLHM_ENG_d_day_preparations
+	}
+}

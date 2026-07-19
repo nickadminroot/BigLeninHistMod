@@ -1374,9 +1374,32 @@ ideas = {
 			
 			modifier = {
 				acclimatization_hot_climate_gain_factor = 0.1
+				send_volunteer_size = 4
 			}
 
 			picture = eng_service_overseas
+
+			removal_cost = -1
+		}
+
+		BLHM_ENG_mediterranean_bastion = {
+
+			name = BLHM_ENG_mediterranean_bastion
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_bunker_factor = 0.20
+				production_speed_coastal_bunker_factor = 0.20
+			}
+
+			picture = generic_fortify_the_borders
 
 			removal_cost = -1
 		}
@@ -1914,8 +1937,368 @@ ideas = {
 			}
 		}
 
+		# ========== BLHM Fleet of Britain and Naval Ideas ==========
+
+		BLHM_ENG_fleet_of_britain = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = -0.05
+				navy_screen_attack_factor = -0.10
+				navy_max_range_factor = 0.10
+				navy_org_factor = -0.10
+				refit_ic_cost = 0.25
+				consumer_goods_factor = 0.10
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = 0.15
+					instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.15
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_next_generation_fleet_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_faithful_to_tradition_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.10
+				sp_naval_super_heavy_battleship_speed_factor = 1.0
+			}
+		}
+
+		BLHM_ENG_anti_submarine_defence_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_submarine_detection_factor = 0.10
+			}
+		}
+
+		BLHM_ENG_carrier_groups_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_cost_optimisation_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_dockyard_factor = 0.10
+				navy_capital_ship_attack_factor = -0.10
+				navy_screen_attack_factor = -0.10
+			}
+		}
+
+		BLHM_ENG_young_school_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_screen_attack_factor = 0.20
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_old_guard_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.15
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_london_mk2_torpedoes_idea = {
+			picture = generic_navy_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				naval_torpedo_hit_chance_factor = 0.15
+				naval_torpedo_screen_penetration_factor = 0.20
+				naval_strike_attack_factor = 0.15
+			}
+		}
+
+		BLHM_ENG_emergency_fleet_refit_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				refit_ic_cost = -0.35
+			}
+		}
+
+		# ====== AVIATION BRANCH IDEAS ======
+
+		BLHM_ENG_medium_air_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_mission_efficiency = 0.10
+			}
+		}
+
+		BLHM_ENG_heavy_air_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_range_factor = 0.10
+			}
+			equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_carrier_air_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				naval_strike_attack_factor = 0.20
+			}
+			equipment_bonus = {
+				cv_small_plane_airframe = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_air_production_modernisation_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_pilot_training_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_escort_efficiency = 0.07
+				air_intercept_efficiency = 0.07
+				air_superiority_efficiency = 0.05
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 0.20
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_next_gen_ground_attack_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				ground_attack_factor = 0.05
+			}
+		}
+
+		BLHM_ENG_raf_exercises_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_training_xp_gain_factor = 0.15
+				ace_effectiveness_factor = 0.10
+			}
+		}
+
+		BLHM_ENG_defence_of_britain_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_escort_efficiency = 0.03
+				air_intercept_efficiency = 0.03
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_mio_fallback_production = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = ENG
+				has_country_flag = BLHM_ENG_new_industrial_schemes_completed
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		BLHM_ENG_mio_fallback_defence = {
+			picture = generic_air_defence
+			allowed = {
+				original_tag = ENG
+				has_country_flag = BLHM_ENG_new_industrial_schemes_completed
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_defence_factor = 0.10
+			}
+		}
+
 	}
-	
+
 	naval_manufacturer = {
 		
 		designer = yes

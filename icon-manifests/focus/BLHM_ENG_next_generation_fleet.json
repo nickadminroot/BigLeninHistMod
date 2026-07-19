@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_next_generation_fleet",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_next_generation_fleet",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_next_generation_fleet.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_construct_naval_dockyard",
+  "prompt": "A sleek modern cruiser with advanced radar arrays at sea",
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_construct_naval_dockyard",
+  "fallback": "GFX_goal_generic_construct_naval_dockyard"
+}

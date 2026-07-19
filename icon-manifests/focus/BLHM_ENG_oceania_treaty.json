@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_oceania_treaty",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_oceania_treaty",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_oceania_treaty.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_construct_military",
+  "prompt": "A stylised map of Australia and New Zealand with trade route lines connecting to a British harbor, with factory cranes and cargo ships in the foreground",
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_construct_military",
+  "fallback": "GFX_goal_generic_construct_military"
+}

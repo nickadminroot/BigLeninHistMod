@@ -1,0 +1,50 @@
+BLHM_ENG_d_day_preparations_cat = {
+	icon = GFX_decision_category_generic_fortification
+	priority = 50
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	visible = {
+		has_country_flag = BLHM_ENG_d_day_preparations
+	}
+
+	BLHM_ENG_prepare_recon_aircraft = {
+		icon = GFX_goal_generic_air_naval_bomber
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		visible = {
+			has_country_flag = BLHM_ENG_d_day_preparations
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 56
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = scout_plane_equipment_1
+				amount = 50
+			}
+		}
+
+		custom_effect_tooltip = BLHM_ENG_prepare_recon_aircraft_tt
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

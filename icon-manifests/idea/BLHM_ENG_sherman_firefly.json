@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_sherman_firefly",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_sherman_firefly",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_sherman_firefly.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_armor_bonus",
+  "prompt": "A Sherman Firefly silhouette with long barrel and production gear emblem",
+  "style_preset": "hoi4_idea_v1"
+}

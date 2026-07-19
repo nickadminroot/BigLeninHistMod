@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_national_prosperity_treaty",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_national_prosperity_treaty",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_national_prosperity_treaty.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_construction_penalty",
+  "prompt": "A crossed hammer and quill above a rising economic graph and factory silhouette",
+  "style_preset": "hoi4_idea_v1"
+}

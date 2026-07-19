@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_gloster_meteor",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_gloster_meteor",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_gloster_meteor.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_secret_weapon",
+  "prompt": "The Gloster Meteor jet fighter in flight with jet exhaust trails against a blue sky",
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_secret_weapon",
+  "fallback": "GFX_goal_generic_secret_weapon"
+}

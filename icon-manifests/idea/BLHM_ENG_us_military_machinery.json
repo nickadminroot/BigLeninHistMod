@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_us_military_machinery",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_us_military_machinery",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_us_military_machinery.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_construction_penalty",
+  "prompt": "A crossed set of industrial machine tools with a tank silhouette behind them, symbolizing American military industrial equipment sent to Britain",
+  "style_preset": "hoi4_idea_v1"
+}
