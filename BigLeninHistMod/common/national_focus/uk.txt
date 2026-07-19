@@ -5273,7 +5273,10 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_armed_forces_priority_lock_tt
+				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5588,7 +5591,10 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_armed_forces_priority_lock_tt
+				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5907,7 +5913,10 @@ focus_tree = {
 		y = 1
 		cost = 8
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_armed_forces_priority_lock_tt
+				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
