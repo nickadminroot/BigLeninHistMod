@@ -74,7 +74,6 @@ country_event = { #Warning Event
 		hidden_effect = {
 			SLO = {
 				set_country_flag = SLO_little_war_warning_mission_visible
-				activate_decision = SLO_little_war_warning_mission
 				hidden_effect = {
 					every_unit_leader = {
 						set_character_flag = SLO_pull_for_little_war
