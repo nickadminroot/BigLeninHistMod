@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_britain_prospers",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_britain_prospers",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_britain_prospers.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_consumer_goods",
+  "prompt": "The British Royal Coat of Arms surrounded by symbolic industrial elements — a factory gear, a wheat sheaf, a ship's wheel, and an anchor — radiating prosperity",
+  "style_preset": "hoi4_focus_v1"
+}

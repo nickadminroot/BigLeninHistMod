@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_joint_oceania_development",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_joint_oceania_development",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_joint_oceania_development.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_construction_penalty",
+  "prompt": "A map of the South Pacific with construction cranes rising from Australia and New Zealand, with British and American flags crossed below",
+  "style_preset": "hoi4_idea_v1"
+}

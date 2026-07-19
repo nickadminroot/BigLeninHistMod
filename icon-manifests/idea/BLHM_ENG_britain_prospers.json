@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_britain_prospers",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_britain_prospers",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_britain_prospers.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_construction_penalty",
+  "prompt": "The British Imperial Crown above a rising graph and a factory silhouette, with the flags of Canada, Australia, New Zealand, India, and South Africa forming a semicircle around it",
+  "style_preset": "hoi4_idea_v1"
+}

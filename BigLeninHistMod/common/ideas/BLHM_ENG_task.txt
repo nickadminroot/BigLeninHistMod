@@ -56,4 +56,88 @@ ideas = {
 		}
 	}
 
+	# USA Trade with Britain - timed idea for USA, consumer goods bonus
+	BLHM_USA_trade_with_britain = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = USA
+		}
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+
+	# US Civilian Machinery - timed idea for ENG, civilian factory speed
+	BLHM_ENG_us_civilian_machinery = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			production_speed_industrial_complex_factor = 0.07
+		}
+	}
+
+	# US Military Machinery - permanent idea for ENG
+	BLHM_ENG_us_military_machinery = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			production_speed_arms_factory_factor = 0.07
+			industrial_capacity_factory = 0.02
+		}
+	}
+
+	# Joint Oceania Development - timed idea for ENG, consumer goods penalty
+	BLHM_ENG_joint_oceania_development = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+	}
+
+	# Joint Resource Extraction - shared idea for ENG and USA
+	BLHM_ENG_joint_resource_extraction = {
+		picture = generic_construction_penalty
+		allowed = {
+			OR = {
+				original_tag = ENG
+				original_tag = USA
+			}
+		}
+		removal_cost = -1
+		modifier = {
+			local_resources_factor = 0.10
+		}
+	}
+
+	# Britain Prospers - shared idea for ENG and British minors
+	BLHM_ENG_britain_prospers = {
+		picture = generic_construction_penalty
+		allowed = {
+			OR = {
+				original_tag = ENG
+				original_tag = AST
+				original_tag = NZL
+				original_tag = CAN
+				original_tag = RAJ
+				original_tag = SAF
+			}
+		}
+		removal_cost = -1
+		modifier = {
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.10
+		}
+	}
+
 }
