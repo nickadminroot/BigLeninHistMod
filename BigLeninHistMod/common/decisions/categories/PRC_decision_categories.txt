@@ -14,8 +14,8 @@ PRC_infiltrate_nationalist_areas = {
 
 	visible = {
 		OR = {
-			has_completed_focus = PRC_infiltration
-			has_completed_focus = PRC_sea_infiltration
+			always = no
+			always = no
 		}	
 	}
 }
@@ -36,8 +36,8 @@ PRC_anti_japanese_expedition = {
 
 	visible = {
 		OR = {
-				has_completed_focus = PRC_anti_japanese_expedition
-				has_completed_focus = PRC_sea_anti_japanese_expedition
+				always = no
+				always = no
 		}
 		OR = {
 			609 = {
@@ -112,9 +112,9 @@ PRC_guerilla_warfare_sea_cat = {
 					original_tag = PRC
 					is_subject = no
 					OR = {
-						has_completed_focus = PRC_on_guerilla_warfare
-						has_completed_focus = PRC_the_fight_of_a_people
-						has_completed_focus = PRC_promote_guerilla_warfare
+						always = no
+						always = no
+						always = no
 					}
 				}
 				AND = { #TODO_Jean, aadd unlocks for guerilla here
@@ -193,9 +193,9 @@ PRC_infiltration_sea_cat = {
 				AND = {
 					original_tag = PRC
 					OR = {
-						has_completed_focus = PRC_secure_the_peoples_support
-						has_completed_focus = PRC_playing_both_sides
-						has_completed_focus = PRC_gain_the_peoples_trust
+						always = no
+						always = no
+						always = no
 					}
 				}
 				AND = {
@@ -266,7 +266,7 @@ PRC_28_bolshevik_faction_cat = {
 	}
 
 	visible = {
-		has_completed_focus = PRC_a_stronger_united_front
+		always = no
 		is_in_faction_with = CHI
 	}
 
@@ -289,7 +289,7 @@ PRC_appeal_for_foreign_aid_cat = {
 
 
 	visible = {
-		has_completed_focus = PRC_appeal_for_foreign_aid
+		always = no
 		SOV = {
 			has_government = ROOT
 		}

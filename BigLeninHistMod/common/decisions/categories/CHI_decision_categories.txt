@@ -52,10 +52,7 @@ CHI_integrate_the_warlords = {
 	}
 	icon = generic_political_actions
 	visible = {
-		OR = {
-			has_completed_focus = CHI_subjugate_the_warlords
-			has_completed_focus = CHI_sea_subjugate_the_warlords
-		}
+		has_completed_focus = CHI_subjugate_the_warlords
 		OR = {
 			any_of_scopes = {
 				array = subjects
@@ -88,7 +85,6 @@ CHI_industrial_evacuations = {
 	visible = {
 		OR = {
 			has_completed_focus = CHI_industrial_evacuations
-			has_completed_focus = CHI_sea_industrial_evacuations
 			has_completed_focus = CHI_relocate_factories_from_the_coast
 		}
 	}
@@ -113,16 +109,7 @@ CHI_communist_infiltration = {
 	}
 	icon = infiltration
 	visible = {
-		tag = event_target:WTT_current_china_leader
-		NOT = { has_government = communism }
-		OR = {
-			any_other_country = {
-				has_completed_focus = PRC_infiltration
-			}
-			any_other_country = {
-				has_completed_focus = PRC_sea_infiltration
-			}
-		}
+		always = no
 	}
 }
 
@@ -132,10 +119,7 @@ PRC_provoke_japan = {
 	}
 	icon = revolt
 	visible = {
-		OR = {
-			has_completed_focus = PRC_provoke_japan
-			has_completed_focus = PRC_sea_provoke_japan
-		}
+		always = no
 	}
 }
 
@@ -281,7 +265,7 @@ CHI_political_power_struggle = {
 
 	visible = {
 		event_target:WTT_current_china_leader = { NOT = { has_war_with = ROOT } }
-		NOT = { has_completed_focus = CHI_opposition }
+		always = no
 	}
 }
 
@@ -456,7 +440,7 @@ CHI_integrate_the_warlords_sea_cat = {
 			limit = {
 				original_tag = PRC
 			}
-			has_completed_focus = PRC_peaceful_reunification
+			always = no
 		}
 	}
 }
@@ -540,7 +524,7 @@ SND_unclear_loyalties_cat = {
 		original_tag = SND
 	}
 	visible = {
-		has_completed_focus = CHI_sea_secure_internal_politics
+		always = no
 		NOT = { 
 			has_global_flag = jinan_has_fallen
 			has_country_flag = SND_han_fuju_stays 
@@ -654,7 +638,7 @@ RNG_state_shintoism_decisions = {
 	}
 
 	visible = {
-		has_completed_focus = CHI_tsr_embrace_japanese_cultural_institutions
+		always = no
 	}
 
 }

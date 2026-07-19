@@ -78,11 +78,6 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-			
 			JAP = { has_government = fascism }
 		}
 
@@ -113,12 +108,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = fascism }
+JAP = { has_government = fascism }
 		}
 
 		fire_only_once = no
@@ -153,12 +143,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = communism }
+JAP = { has_government = communism }
 		}
 
 		fire_only_once = no
@@ -188,12 +173,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = communism }
+JAP = { has_government = communism }
 		}
 
 		fire_only_once = no
@@ -228,12 +208,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = neutrality }
+JAP = { has_government = neutrality }
 		}
 
 		fire_only_once = no
@@ -263,12 +238,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = neutrality }
+JAP = { has_government = neutrality }
 		}
 
 		fire_only_once = no
@@ -303,12 +273,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
-
-			JAP = { has_government = democratic }
+JAP = { has_government = democratic }
 		}
 
 		fire_only_once = no
@@ -353,10 +318,7 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = CHI_seek_japanese_support
-				has_completed_focus = CHI_sea_seek_japanese_support
-			}
+			always = yes
 		}
 
 		fire_only_once = yes
@@ -467,7 +429,7 @@ SIC_xikang_offensive = {
 		}
 
 		available = {
-			has_completed_focus = SIC_push_back_the_tibetans
+			always = no
 			601 = {
 				owner = {
 					NOT = {
@@ -481,7 +443,7 @@ SIC_xikang_offensive = {
 		}
 
 		visible = {
-			has_completed_focus = SIC_push_back_the_tibetans
+			always = no
 			752 = {
 				is_controlled_by = SIC
 			}

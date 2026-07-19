@@ -1113,7 +1113,7 @@ characters={
 			traits = { cavalry_leader }
 			legacy_id = -1
 			visible = {
-				has_completed_focus = XSM_recruit_salar_officers
+				always = no
 			}
 		}
 	}
@@ -1135,7 +1135,7 @@ characters={
 			traits = { infantry_officer }
 			legacy_id = -1
 			visible = {
-				has_completed_focus = XSM_recruit_salar_officers
+				always = no
 			}
 		}
 	}
