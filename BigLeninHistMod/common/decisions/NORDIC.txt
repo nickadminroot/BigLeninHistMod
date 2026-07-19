@@ -142,7 +142,6 @@ NORDIC_debug_decisions_category = {
 				PREV = { add_to_faction = PREV } 
 			}
 			mark_focus_tree_layout_dirty = yes 
-			complete_national_focus = NOR_the_kingdom_of_norway
 			complete_national_focus = NORDIC_form_joint_alliance 
 		}
 	}

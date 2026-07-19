@@ -66,29 +66,26 @@
 
 	NOR_start_allied_prep = {
 		complete_effect = {
-			complete_national_focus = NOR_vote_of_no_confidence
+			add_political_power = 10
 		}
 
 	}
 
 	start_comm_prep = {
 		complete_effect = {
-			complete_national_focus = NOR_compromise_with_the_nkp 
-			complete_national_focus = NOR_the_seeds_of_the_revolution
+			add_political_power = 10
 		}
 	}
 
 	NOR_start_mon_prep = {
 		complete_effect = {
-			complete_national_focus = NOR_the_stumbling_storting
-			complete_national_focus = NOR_the_chamberlains_overture
+			add_political_power = 10
 		}
 	}
 
 	NOR_start_fas_prep = {
 		complete_effect = {
-			complete_national_focus = NOR_the_stumbling_storting
-			complete_national_focus = NOR_lurk_in_the_shadows
+			add_political_power = 10
 		}
 	}
 
@@ -1507,18 +1504,7 @@ NOR_allied_democratic_preparation_decisions_category = {
 		}
 
 		visible = {
-			has_completed_focus = NOR_vote_of_no_confidence
-			NOT = { has_country_flag = NOR_preps_system_has_been_reset }
-			has_war = no 
-			OR = {
-				ROOT = {
-					has_country_flag = NOR_going_dem_allied
-					#NOT = { has_country_flag = NOR_active_preparation }
-				}
-				FROM = {
-					has_state_flag = NOR_preparing_state
-				}
-			}
+			always = no
 		}
 
 		available = {
@@ -1584,6 +1570,7 @@ NOR_allied_democratic_preparation_decisions_category = {
 	NOR_alt_dem_naval_expansion = {
 		
 		visible = {
+			always = no
 			has_completed_focus = NOR_patrol_our_coast
 			NOT = { has_country_flag = NOR_preps_system_has_been_reset }
 			has_war = no
@@ -1633,9 +1620,7 @@ NOR_allied_democratic_preparation_decisions_category = {
 	NOR_alt_dem_military_industry_expansion = {
 		
 		visible = {
-			has_completed_focus = NOR_prepare_for_war
-			NOT = { has_country_flag = NOR_preps_system_has_been_reset }
-			has_war = no
+			always = no
 		}
 
 		available = {
@@ -2195,7 +2180,7 @@ NOR_fascist_preparation_decisions_category = {
 		}
 
 		visible = {
-			has_completed_focus = NOR_lurk_in_the_shadows
+			always = no
 			has_war = no 
 			NOT = { has_global_flag = NOR_quislings_coup_happened }
 			OR = {
@@ -2282,12 +2267,12 @@ NOR_fascist_preparation_decisions_category = {
 			base = 100
 			modifier = {
 				factor = 0.2
-				has_completed_focus = NOR_nasjonal_samling
+				always = no
 			}
 
 			modifier = {
 				factor = 0
-				has_completed_focus = NOR_quislings_coup
+				always = no
 			}
 		}
 	}
@@ -2297,7 +2282,6 @@ NOR_fascist_preparation_decisions_category = {
 		cost = 75 
 		
 		visible = {
-		
 			any_country = {
 				original_tag = GER
 				has_government = fascism
@@ -2307,7 +2291,7 @@ NOR_fascist_preparation_decisions_category = {
 			}
 			
 			has_country_flag = NOR_going_fascist
-			has_completed_focus = NOR_nasjonal_samling
+			always = no
 			has_war = no
 			NOT = { has_government = fascism } 
 		}
@@ -2397,7 +2381,7 @@ NOR_fascist_deploy_prep_decisions_category = {
 			has_war = yes 
 			OR = {
 				ROOT = {
-					has_completed_focus = NOR_lurk_in_the_shadows
+					always = no
 					has_country_flag = NOR_going_fascist
 					NOT = { has_country_flag = NOR_state_prep_deployment_in_progress }
 				}
@@ -2441,7 +2425,7 @@ NOR_fascist_deploy_prep_decisions_category = {
 			has_war = yes
 			OR = {
 				ROOT = {
-					has_completed_focus = NOR_lurk_in_the_shadows
+					always = no
 					has_country_flag = NOR_going_fascist
 					NOT = { has_country_flag = NOR_state_prep_deployment_in_progress }
 				}
@@ -2566,9 +2550,9 @@ NOR_communist_preparation_decisions_category = {
 			}
 		}
 
-		visible = {  
+		visible = {
+			always = no
 			has_civil_war = no 
-			has_completed_focus = NOR_the_seeds_of_the_revolution
 		}
 
 		available = {
@@ -2596,7 +2580,7 @@ NOR_communist_preparation_decisions_category = {
 					limit = {
 						check_variable = { NOR_state_preparation = 2 }
 					}
-					ROOT = { has_completed_focus = NOR_organize_partisan_militias }
+					ROOT = { always = no }
 				}
 			}
 		}
@@ -2613,7 +2597,7 @@ NOR_communist_preparation_decisions_category = {
 			}
 			modifier = {
 				factor = 0
-	 			has_completed_focus = NOR_workers_and_farmers_rise
+	 			always = no
 			}
 		}
 
@@ -2664,7 +2648,7 @@ NOR_communist_preparation_decisions_category = {
 		icon = GFX_decision_eng_propaganda_campaigns
 
 		visible = {
-			has_completed_focus = NOR_the_voice_of_the_people
+			always = no
 		}
 
 		cost = 50 
@@ -2680,7 +2664,7 @@ NOR_communist_preparation_decisions_category = {
 			}
 			modifier = {
 				factor = 0
-	 			has_completed_focus = NOR_workers_and_farmers_rise
+	 			always = no
 			}
 		}
 
@@ -2739,10 +2723,9 @@ NOR_monarchist_preparation_decisions_category = {
 			}
 		}
 
-		visible = {  
+		visible = {
+			always = no
 			has_war = no 
-			has_completed_focus = NOR_the_chamberlains_overture
-			NOT = { has_completed_focus = NOR_the_kingdom_of_norway }
 		}
 
 		available = {
@@ -2823,12 +2806,13 @@ NOR_monarchist_preparation_decisions_category = {
 		icon = GFX_decision_generic_consumer_goods
 			
 		visible = {
-			has_completed_focus = NOR_assure_the_population
+			always = no
 			OR = {
 				has_idea = NOR_the_hard_thirties_ns 
 				has_idea = NOR_the_hard_thirties_ns_2 
 				has_idea = NOR_the_hard_thirties_ns_3 
-			}  		}
+			}
+		}
 
 		available = {
 			NOT = {
@@ -2859,8 +2843,8 @@ NOR_monarchist_preparation_decisions_category = {
 	NOR_make_assurances_to_the_people = {
 		icon = GFX_decision_generic_political_address
 		visible = {
-			has_completed_focus = NOR_assure_the_population
-			NOT = { has_completed_focus = NOR_the_kingdom_of_norway }		
+			always = no
+			NOT = { always = no }
 		}
 		available = {
 			NOT = {
@@ -2889,8 +2873,8 @@ NOR_monarchist_preparation_decisions_category = {
 	NOR_promote_the_armed_defense_of_the_country = {
 		icon = GFX_decision_generic_protection
 		visible = {
-			has_completed_focus = NOR_assure_the_population
-			NOT = { has_completed_focus = NOR_the_kingdom_of_norway }
+			always = no
+			NOT = { always = no }
 		}
 		available = {
 			NOT = {

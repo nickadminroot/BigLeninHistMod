@@ -104,7 +104,7 @@ shared_focus = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FIN_suomalainen_sosialismi
+			always = no
 		}
 	}
 
@@ -112,12 +112,7 @@ shared_focus = {
 		x = -25
 		y = 0
 		trigger = {
-			has_focus_tree = finnish_focus
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = FIN_right_wing_policies
+			always = no
 		}
 	}
 
@@ -245,9 +240,7 @@ shared_focus = {
 	offset = {
 		x = -38
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_vote_of_no_confidence		
+			always = no
 		}
 	}
 
@@ -263,54 +256,42 @@ shared_focus = {
 	offset = {
 		x = -38
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_a_resurgent_labor_movement
+			always = no
 		}
 	}
 
 	offset = {
 		x = -1
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_prosecute_the_nkp
+			always = no
 		}
 	}
 
 	offset = {
 		x = -2
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_compromise_with_the_nkp
+			always = no
 		}
 	}
 		
 	offset = {
 		x = -35
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_the_stumbling_storting
+			always = no
 		}
 	}
 
 	offset = {
 		x = -8
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_lurk_in_the_shadows
+			always = no
 		}
 	}
 
 	offset = {
 		x = -3
 		trigger = {
-			has_focus_tree = norwegian_focus 
-			has_hide_rule = yes 
-			has_completed_focus = NOR_the_chamberlains_overture
+			always = no
 		}
 	}
 
@@ -336,11 +317,11 @@ shared_focus = {
 		NORDIC_alliance_created_already = no 
 		if = {
 			limit = { original_tag = SWE }
-			NOT ={ has_completed_focus = SWE_central_nordic_army_command }
+			NOT ={ always = no }
 		}
 		if = {
 			limit = { original_tag = FIN }
-			NOT ={ has_completed_focus = FIN_finnish_supremacy_in_the_north }
+			NOT ={ always = no }
 		}
 	}
 	ai_will_do = {

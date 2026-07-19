@@ -1207,11 +1207,6 @@ NOR_start_communist_civil_war = {
 		}
 	}
 	var:NOR.NOR_bourgeois_norway = {
-		uncomplete_national_focus = {
-			focus = NOR_a_resurgent_labor_movement
-			uncomplete_children = yes 
-		}
-		complete_national_focus = NOR_vote_of_no_confidence
 	}
 	NOR_create_communist_templates = yes
 	add_popularity = {
