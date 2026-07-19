@@ -10,16 +10,23 @@ from pathlib import Path
 MOD_ROOT = Path(__file__).parent.parent
 SHIPPED = MOD_ROOT / "BigLeninHistMod"
 NF_DIR = SHIPPED / "common" / "national_focus"
-CUSTOM_GFX = SHIPPED / "interface" / "custom_focus_icons.gfx"
+CUSTOM_GFX_FILES = (
+    SHIPPED / "interface" / "custom_focus_icons.gfx",
+    SHIPPED / "interface" / "deferred_focus_icons.gfx",
+)
 
 
 def parse_custom_sprites() -> dict[str, str]:
-    content = CUSTOM_GFX.read_text(encoding="utf-8", errors="ignore")
     pattern = re.compile(
         r'name\s*=\s*"?(GFX_focus_custom_[^"\s}]+)"?[^}]*?texturefile\s*=\s*"([^"]+)"',
         re.DOTALL,
     )
-    return {name: texture for name, texture in pattern.findall(content)}
+    sprites: dict[str, str] = {}
+    for path in CUSTOM_GFX_FILES:
+        if path.exists():
+            content = path.read_text(encoding="utf-8", errors="ignore")
+            sprites.update({name: texture for name, texture in pattern.findall(content)})
+    return sprites
 
 
 def used_custom_icons() -> dict[str, list[tuple[Path, int]]]:

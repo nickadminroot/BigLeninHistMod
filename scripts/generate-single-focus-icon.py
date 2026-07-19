@@ -409,6 +409,11 @@ def main():
     parser.add_argument("--negative-prompt", type=str, default="")
     parser.add_argument("--force", action="store_true", help="Regenerate if DDS exists")
     parser.add_argument(
+        "--no-register-gfx",
+        action="store_true",
+        help="Create only the DDS; a separate manifest sync will register the sprite",
+    )
+    parser.add_argument(
         "--comfyui-url",
         type=str,
         default=DEFAULT_COMFYUI_URL,
@@ -527,8 +532,8 @@ def main():
     if not png_to_dds(png_current, output_dds, dds_width, dds_height):
         sys.exit(1)
 
-    # Register in .gfx (skip only if regenerating an existing icon)
-    if not existed_before:
+    # Register in .gfx unless a deferred manifest owns deterministic registration.
+    if not existed_before and not args.no_register_gfx:
         texture_path = f"{texture_prefix}/{dds_filename}"
         append_gfx_entry(args.sprite_name, texture_path, output_gfx)
 

@@ -7,6 +7,7 @@ BigLeninHistMod/.vscode/hoi4_cache/focus_editor_cache.json
 .pi/rag-cache.json
 .env
 scripts/__pycache__/
+build/
 .pi/git/
 .pi/npm/
 .pi-runs/
