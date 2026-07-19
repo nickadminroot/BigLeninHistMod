@@ -109,3 +109,41 @@ country_event = {
 		}
 	}
 }
+
+# Event for INS informing of NL preparing to integrate
+country_event = {
+	id = mtg_netherlands.21
+	title = mtg_netherlands.21.t
+	desc = mtg_netherlands.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# Oh, well then...
+	option = {
+		name = mtg_netherlands.21.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = HOL_curtail_colonial_autonomy_subject
+				days = 545
+			}
+		}
+	}
+}
+
+# Event for INS informing of NL moving capital to Batavia
+country_event = {
+	id = mtg_netherlands.22
+	title = mtg_netherlands.22.t
+	desc = mtg_netherlands.22.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	# Goodbye, cruel world!
+	option = {
+		name = mtg_netherlands.22.a
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+}
+
