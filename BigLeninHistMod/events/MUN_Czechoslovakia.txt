@@ -192,9 +192,9 @@ country_event = {
 			}
 			POL = {
 				OR = {
-					has_completed_focus = POL_organize_the_peasants_strike
-					has_completed_focus = POL_assemble_the_regency_council
-					has_completed_focus = POL_nationalist_constitution
+					always = no
+					always = no
+					always = no
 				}
 			}
 			ROM = {
