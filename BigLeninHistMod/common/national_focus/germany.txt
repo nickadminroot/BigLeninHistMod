@@ -9775,7 +9775,6 @@ focus_tree = {
 		}
 		
 		available = {
-			date > 1941.7.1
 			is_subject = no
 		}
 
