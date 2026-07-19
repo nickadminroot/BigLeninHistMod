@@ -113,7 +113,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			unlock_decision_tooltip = SWE_urbanization_decision
 		}
 	}
 
@@ -616,7 +615,6 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 
 		completion_reward = {
-			unlock_decision_tooltip = SWE_trade_ball_bearings
 			custom_effect_tooltip = SWE_ball_bearing_trade_tt
 		}
 	}
@@ -3405,21 +3403,12 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-			unlock_decision_tooltip = {
-			 	decision = SWE_swap_herman_eriksson
-			 	show_effect_tooltip = yes
-			 	show_modifiers = no
-			}
 			custom_effect_tooltip = SWE_rationing_tt
 			effect_tooltip = {
-				unlock_decision_tooltip = SWE_gengas
 				set_variable = { SWE_rationing_fuel_gain = 0.3 tooltip = base_fuel_gain_factor_tt }
 
-				unlock_decision_tooltip = SWE_food_stamps
 				set_variable = { SWE_rationing_war_stability_factor = 0.05 tooltip = war_stability_factor_tt }
-				unlock_decision_tooltip = SWE_air_raid_shelters
 				set_variable = { SWE_rationing_bombing_war_support = 0.0003 tooltip = weekly_bombing_war_support_tt }
-				unlock_decision_tooltip = SWE_seize_civilian_tires
 				141 = {
 					add_resource = {
 						type = rubber
@@ -4185,7 +4174,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SWE_train_the_sheltered_tt
-			unlock_decision_tooltip = SWE_train_the_sheltered_decision  
 		}
 	}
 
@@ -4218,8 +4206,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SWE_hemvarnet_tt
-			unlock_decision_tooltip = SWE_set_up_home_guard_forces
-			unlock_decision_tooltip = SWE_activate_home_guard
 			division_template = {
 				name = "Hemvärn"
 				is_locked = yes
@@ -4377,7 +4363,6 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-			unlock_decision_tooltip = SWE_rangers_sabotage
 			custom_effect_tooltip = SWE_jagartrupper_tt
 			every_army_leader = {
 				random_select_amount = 4

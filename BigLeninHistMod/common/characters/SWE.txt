@@ -243,7 +243,7 @@ characters={
 			available = { 
 				is_country_leader = no
 				NOT = {
-					has_completed_focus = SWE_liquidate_the_monarchy
+					always = no
 				}
 			}
 			allowed  = {
@@ -332,7 +332,7 @@ characters={
 						if = {
 							limit = {
 								FIN = {
-									NOT = { has_completed_focus = FIN_approach_the_soviets }
+									NOT = { always = no }
 								}
 							}
 							SWE = { add_ideas =  SWE_committee_against_the_finnish_white_terror_idea } 

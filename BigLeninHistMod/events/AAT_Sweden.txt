@@ -2462,7 +2462,10 @@ country_event = {
 		FROM = { country_event = { id = AAT_Sweden.17 }}
 		effect_tooltip = {
 			SWE = {
-				add_timed_idea = { idea = SWE_save_norway days = 120 }
+				if = {
+					limit = { always = no }
+					add_timed_idea = { idea = SWE_save_norway days = 120 }
+				}
 				add_war_support = 0.05
 				create_wargoal = {
 					type = liberate_wargoal
@@ -2486,7 +2489,10 @@ country_event = {
 	
 	option = { # liberate Norway
 		name = AAT_Sweden.17.a
-		add_timed_idea = { idea = SWE_save_norway days = 120 }
+		if = {
+			limit = { always = no }
+			add_timed_idea = { idea = SWE_save_norway days = 120 }
+		}
 		add_war_support = 0.05
 		create_wargoal = {
 			type = liberate_wargoal
@@ -5062,9 +5068,12 @@ country_event = {
 			}
 		}
 
-		add_timed_idea = {
-			idea = SWE_escaping_the_mainland
-			days = 365
+		if = {
+			limit = { always = no }
+			add_timed_idea = {
+				idea = SWE_escaping_the_mainland
+				days = 365
+			}
 		}
 
 		add_ideas = SWE_hedgehog_of_the_baltic
@@ -6174,14 +6183,20 @@ country_event = { #agreed for a price
 			}
 		}
 
-		add_timed_idea = { idea = SWE_aland_agreement_swe days = 365 }
+		if = {
+			limit = { always = no }
+			add_timed_idea = { idea = SWE_aland_agreement_swe days = 365 }
+		}
 		FROM = {
 			country_event = { id = AAT_Sweden_flashpoints.82 hours = 4 }
 		}
 
 		effect_tooltip = {
 			FROM = {
-				add_timed_idea = { idea = SWE_aland_agreement_fin days = 365 }
+				if = {
+					limit = { always = no }
+					add_timed_idea = { idea = SWE_aland_agreement_fin days = 365 }
+				}
 			}
 		}
 	}
@@ -6207,7 +6222,10 @@ country_event = { #sweden paid
 		
 	option = { #cool
 		name = AAT_Sweden_flashpoints.82.a
-		add_timed_idea = { idea = SWE_aland_agreement_fin days = 365 }
+		if = {
+			limit = { always = no }
+			add_timed_idea = { idea = SWE_aland_agreement_fin days = 365 }
+		}
 	}
 }
 
@@ -6515,10 +6533,13 @@ country_event = {
 				communism > 0.5
 			}
 			# Socialists have a majority
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = -0.8
-			} 
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = -0.8
+				} 
+			}
 			set_country_flag = SWE_socialist_victory
 			country_event = {
 				id = AAT_Sweden_BoP.14
@@ -6529,9 +6550,12 @@ country_event = {
 			limit = {
 				democratic > 0.5
 			}
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = -0.3
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = -0.3
+				}
 			}
 			set_country_flag = SWE_democratic_victory
 			country_event = {
@@ -6543,9 +6567,12 @@ country_event = {
 			limit = {
 				neutrality > 0.5
 			}
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = 0.3
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = 0.3
+				}
 			}
 			set_country_flag = SWE_non_aligned_victory
 			country_event = {
@@ -6557,9 +6584,12 @@ country_event = {
 			limit = {
 				fascism > 0.5
 			}
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = 0.9
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = 0.9
+				}
 			}
 			set_country_flag = SWE_fascist_victory
 			country_event = {
@@ -6571,9 +6601,12 @@ country_event = {
 			limit = {
 				check_variable = { var = SWE_combined_left_support value = 0.5 compare = greater_than_or_equals }
 			}
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = -0.5
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = -0.5
+				}
 			}
 			set_country_flag = SWE_left_coalition_victory
 			country_event = {
@@ -6585,9 +6618,12 @@ country_event = {
 			limit = {
 				check_variable = { var = SWE_combined_right_support value = 0.5 compare = greater_than_or_equals }
 			}
-			set_power_balance = {
-				id = SWE_riksdag_political_balance
-				set_value = 0.5
+			if = {
+				limit = { always = no }
+				set_power_balance = {
+					id = SWE_riksdag_political_balance
+					set_value = 0.5
+				}
 			}
 			set_country_flag = SWE_right_coalition_victory
 			country_event = {
@@ -7092,7 +7128,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
+				always = no
 			}
 			add_popularity = { ideology = neutrality popularity = 0.10 }
 		}
@@ -7102,14 +7138,14 @@ country_event = {
 
 		IF = {
 			limit = {
-				has_completed_focus	= SWE_mythologize_swedish_history
+				always = no
 			}
 			activate_mission = SWE_implement_aristocracy_reforms_countdown
 		}
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
-	}	
+	}
 }
 
 country_event = {
@@ -7125,7 +7161,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
+				always = no
 			}
 			add_popularity = { ideology = neutrality popularity = 0.10 }
 		}
@@ -7134,14 +7170,14 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				has_completed_focus	= SWE_mythologize_swedish_history
+				always = no
 			}
 			activate_mission = SWE_implement_industrialist_reforms_countdown
 		}
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
-	}	
+	}
 }
 
 country_event = {
@@ -7157,7 +7193,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
+				always = no
 			}
 			add_popularity = { ideology = neutrality popularity = 0.10 }
 		}
@@ -7166,14 +7202,14 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				has_completed_focus	= SWE_mythologize_swedish_history
+				always = no
 			}
 			activate_mission = SWE_implement_military_reforms_countdown
 		}
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
-	}	
+	}
 }
 
 country_event = {
@@ -7189,7 +7225,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
+				always = no
 			}
 			add_popularity = { ideology = neutrality popularity = 0.10 }
 		}
@@ -7198,14 +7234,14 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				has_completed_focus = SWE_mythologize_swedish_history
+				always = no
 			}
 			activate_mission = SWE_implement_rural_reforms_countdown
 		}
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
-	}	
+	}
 }
 
 country_event = {
@@ -7696,7 +7732,7 @@ country_event = {
 		name = AAT_Sweden_nordic_defense_council.1.b
 		trigger = {
 			SWE = {
-				has_completed_focus = SWE_decentralized_nordic_army_command
+				always = no
 			}
 		}
 		ai_chance = {
@@ -7788,7 +7824,7 @@ country_event = {
 	option = {
 		trigger = {
 			SWE = {
-				has_completed_focus = SWE_central_nordic_army_command
+				always = no
 			}
 		}
 		name = AAT_Sweden_nordic_defense_council.1.c
@@ -8071,9 +8107,12 @@ country_event = {
 
 	option = {
 		name = AAT_Sweden_communism.2.a
-		swap_ideas = {
-			remove_idea = SWE_fascist_counter_revolution_0
-			add_idea = SWE_fascist_counter_revolution_1
+		if = {
+			limit = { always = no }
+			swap_ideas = {
+				remove_idea = SWE_fascist_counter_revolution_0
+				add_idea = SWE_fascist_counter_revolution_1
+			}
 		}
 	}
 }
@@ -8089,9 +8128,12 @@ country_event = {
 	option = {
 		name = AAT_Sweden_communism.3.a
 
-		swap_ideas = {
-			remove_idea = SWE_fascist_counter_revolution_1
-			add_idea = SWE_fascist_counter_revolution_2
+		if = {
+			limit = { always = no }
+			swap_ideas = {
+				remove_idea = SWE_fascist_counter_revolution_1
+				add_idea = SWE_fascist_counter_revolution_2
+			}
 		}
 
 	}
@@ -8214,7 +8256,10 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_timed_idea = { idea = SWE_confiscated_royal_wealth days = 365 }
+		if = {
+			limit = { always = no }
+			add_timed_idea = { idea = SWE_confiscated_royal_wealth days = 365 }
+		}
 		remove_ideas = SWE_gustaf_v_idea
 	}
 }
