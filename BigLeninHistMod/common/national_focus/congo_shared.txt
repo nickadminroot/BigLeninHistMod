@@ -86,58 +86,7 @@
 			}
 		}
 
-		offset = { 
-			x = -3
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_degrelle
-			}
-		}
 
-		offset = { 
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-
-				OR = {
-					has_completed_focus = BEL_support_the_rexists
-					has_completed_focus = BEL_support_the_vnv
-				}
-				
-			}
-		}
-
-		offset = { 
-			x = -13
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_constitutional_crisis
-			}
-		}
-
-		offset = { 
-			x = -16
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_vandervelde_minority
-			}
-		}
 
 		x = 63
 		y = 0
@@ -1584,7 +1533,7 @@
 				original_tag = BEL
 				AND = {
 					original_tag = COG
-					has_completed_focus = COG_closer_cooperation_with_eugene_jungers
+					always = no
 				}
 			}
 			NOT = {	
@@ -2756,7 +2705,7 @@
 				original_tag = BEL
 				AND = {
 					original_tag = COG
-					has_completed_focus = COG_congo_and_the_war_in_europe
+					always = no
 				}
 			}
 			NOT = {	
@@ -9324,7 +9273,7 @@
 			original_tag = COG
 			is_subject_of = BEL
 			NOT = {
-				has_completed_focus = COG_national_committee_for_liberation
+				always = no
 			}
 			NOT = {	
 				OR = {
@@ -9710,7 +9659,7 @@
 				}
 			}
 			NOT = {
-				has_completed_focus = COG_national_committee_for_liberation
+				always = no
 			}
 			COG = {
 				OR = {
@@ -9788,7 +9737,7 @@
 				is_subject_of = BEL
 			}
 			NOT = {
-				has_completed_focus = COG_national_committee_for_liberation
+				always = no
 			}
 			COG = {
 				OR = {

@@ -415,10 +415,7 @@ COG_rwandan_separatism_modifier = {
 	remove_trigger = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = RWA } # ROOT refers to the state on which the modifier is added
-			COG = {
-				has_completed_focus = COG_the_pro_german_mwami_focus
-				has_completed_focus = COG_the_umwami_of_rwanda_focus
-			}
+			always = no
 		}
 		
 	}
@@ -437,9 +434,7 @@ COG_burundian_separatism_modifier = {
 	remove_trigger = {
 		OR = {
 			ROOT = { is_owned_and_controlled_by = BRD } # ROOT refers to the state on which the modifier is added
-			COG = {
-				has_completed_focus = COG_the_mwami_of_burundi_focus
-			}
+			always = no
 		}
 	}
 

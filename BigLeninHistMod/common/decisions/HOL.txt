@@ -65,10 +65,7 @@ HOL_obtain_foreign_colonial_investments = {
 
 		visible = {
 			tag = HOL
-			OR = {
-				has_completed_focus = HOL_obtain_foreign_colonial_investments
-				has_completed_focus = HOL_obtain_foreign_colonial_investments_taog
-			}
+			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
 		remove_effect = {
@@ -144,10 +141,7 @@ HOL_obtain_foreign_colonial_investments = {
 
 		visible = {
 			tag = HOL
-			OR = {
-				has_completed_focus = HOL_obtain_foreign_colonial_investments
-				has_completed_focus = HOL_obtain_foreign_colonial_investments_taog
-			}
+			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
 		remove_effect = {
@@ -186,10 +180,7 @@ HOL_obtain_foreign_colonial_investments = {
 
 		visible = {
 			tag = HOL
-			OR = {
-				has_completed_focus = HOL_obtain_foreign_colonial_investments
-				has_completed_focus = HOL_obtain_foreign_colonial_investments_taog
-			}
+			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
 		remove_effect = {
@@ -285,10 +276,7 @@ HOL_obtain_foreign_colonial_investments = {
 		days_remove = 120
 
 		visible = {
-			OR = {
-				has_completed_focus = HOL_obtain_foreign_colonial_investments
-				has_completed_focus = HOL_obtain_foreign_colonial_investments_taog
-			}
+			has_completed_focus = HOL_obtain_foreign_colonial_investments
 		}
 
 		remove_effect = {
@@ -609,7 +597,7 @@ HOL_war_on_pacifism = {
 
 		visible = {
 			tag = HOL
-			has_completed_focus = HOL_war_on_pacifism
+			always = no
 		}
 
 		remove_effect = {
@@ -670,7 +658,7 @@ HOL_war_on_pacifism = {
 
 		visible = {
 			tag = HOL
-			has_completed_focus = HOL_war_on_pacifism
+			always = no
 		}
 
 		remove_effect = {
@@ -728,7 +716,7 @@ HOL_war_on_pacifism = {
 
 		visible = {
 			tag = HOL
-			has_completed_focus = HOL_war_on_pacifism
+			always = no
 		}
 
 		remove_effect = {
@@ -1124,7 +1112,7 @@ HOL_gateway_to_europe_eng_category = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = ENG_a_change_in_course
+				always = no
 			}
 		}
 
@@ -1350,8 +1338,8 @@ HOL_gateway_to_europe_ger_category = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 		}
@@ -1618,10 +1606,10 @@ HOL_gateway_to_europe_hol_category = {
 					limit = {
 						NOT = { has_dlc = "Gotterdammerung" }
 					}
-					NOT = { has_completed_focus = GER_oppose_hitler }
+					NOT = { always = no }
 				}
 				else = {
-					NOT = { has_completed_focus = GER_oppose_hitler_ww }
+					NOT = { always = no }
 				}
 			}
 		}
@@ -2074,7 +2062,7 @@ HOL_bernhard = {
 
 		visible = {
 			original_tag = HOL
-			has_completed_focus = HOL_the_only_man_in_the_dutch_government
+			always = no
 		}
 
 		complete_effect = {
@@ -2143,7 +2131,7 @@ political_actions = {
 
 		available = {
 			has_capitulated = yes
-			has_completed_focus = HOL_continue_the_war_in_batavia
+			always = no
 			OR = {
 				has_government = democratic
 				has_government = fascism
@@ -2221,7 +2209,7 @@ political_actions = {
 
 		visible = {
 			original_tag = HOL
-			has_completed_focus = HOL_form_the_benelux
+			always = no
 		}
 
 		complete_effect = {

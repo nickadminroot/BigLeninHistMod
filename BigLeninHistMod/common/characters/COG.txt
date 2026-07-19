@@ -190,7 +190,6 @@ characters = {
 				OR = {
 					is_subject = no
 					has_global_flag = COG_evolue_in_politics
-					has_completed_focus = BEL_la_belgique_et_le_congo
 				}
 			}
 
@@ -247,7 +246,7 @@ characters = {
 			}
 
 			available = {	
-				has_completed_focus = COG_uplift_the_apostolic_vicar_of_leopoldville
+				always = no
 				NOT = { has_idea = COG_simon_kimbangu }
 			}
 
@@ -284,7 +283,7 @@ characters = {
 			}
 
 			available = {	
-				has_completed_focus = COG_formally_recognize_the_kimbanguist_church
+				always = no
 				NOT = { has_idea = COG_joris_six }
 			}
 
@@ -342,7 +341,7 @@ characters = {
 				base = 1.000
 				modifier = {
 					factor = 5
-					has_completed_focus = COG_promote_marcel_maquet_to_provincial_commisioner
+					always = no
 				}
 			}
 			
@@ -410,7 +409,7 @@ characters = {
 			}
 
 			available = {	
-				has_completed_focus = COG_improve_colonial_lawmaking
+				always = no
 				is_subject = yes
 			}
 
@@ -649,7 +648,7 @@ characters = {
 							has_government = neutrality
 						}
 					}
-					has_completed_focus = COG_approach_the_disfavored_mwami
+					always = no
 				}
 			}
 
@@ -855,10 +854,7 @@ characters = {
 			}
 
 			available = {
-				OR = {
-					has_completed_focus = CONGO_aviation_militaire_de_la_force_publique
-					has_completed_focus = COG_force_arienne_congolaise
-				}
+				has_completed_focus = CONGO_aviation_militaire_de_la_force_publique
 			}
 
 			traits = {
@@ -1230,7 +1226,7 @@ characters = {
 			}
 
 			available = {	
-				has_completed_focus = COG_closer_cooperation_with_eugene_jungers
+				always = no
 				768 = {
 					is_owned_by = ROOT
 				}
@@ -1272,7 +1268,7 @@ characters = {
 			}
 
 			available = {	
-				has_completed_focus = COG_cooperate_with_the_comite_special_du_katanga
+				always = no
 			}
 
 			traits = {
