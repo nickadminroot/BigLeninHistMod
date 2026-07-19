@@ -50,15 +50,6 @@ AUS_stabilimento_tecnico_triestino_organization = {
 		}
 	}
 
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = HUN } 
-			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
-		}
-	}
-
 	available = {
 		IF = {
 			limit = {
@@ -138,15 +129,6 @@ AUS_ELIN_organization = {
 				tag = HUN 
 				has_dlc = "Gotterdammerung"
 			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = HUN } 
-			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
 		}
 	}
 
@@ -408,15 +390,6 @@ AUS_osterreichische_fleugzeugfabrik_organization = {
 				tag = HUN 
 				has_dlc = "Gotterdammerung"
 			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = HUN } 
-			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
 		}
 	}
 

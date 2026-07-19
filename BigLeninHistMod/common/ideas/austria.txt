@@ -880,10 +880,7 @@ ideas = {
 				base = 1
 				modifier = {
 					factor = 2
-					OR = {
-						has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						has_completed_focus = AUS_demand_hungarian_submission
-					}
+					has_completed_focus = AUS_bring_hungary_back_into_the_fold
 				}
 			}
 			
@@ -909,10 +906,7 @@ ideas = {
 				base = 1
 				modifier = {
 					factor = 2
-					OR = {
-						has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						has_completed_focus = AUS_demand_hungarian_submission
-					}
+					has_completed_focus = AUS_bring_hungary_back_into_the_fold
 				}
 			}
 
@@ -980,10 +974,7 @@ ideas = {
 				base = 1
 				modifier = {
 					factor = 2
-					OR = {
-						has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						has_completed_focus = AUS_demand_hungarian_submission
-					}
+					has_completed_focus = AUS_bring_hungary_back_into_the_fold
 				}
 			}
 		} 
@@ -1035,10 +1026,7 @@ ideas = {
 				base = 1
 				modifier = {
 					factor = 2
-					OR = {
-						has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						has_completed_focus = AUS_demand_hungarian_submission
-					}
+					has_completed_focus = AUS_bring_hungary_back_into_the_fold
 				}
 			}
 		}
@@ -1066,10 +1054,7 @@ ideas = {
 				base = 1
 				modifier = {
 					factor = 2
-					OR = {
-						has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						has_completed_focus = AUS_demand_hungarian_submission
-					}
+					has_completed_focus = AUS_bring_hungary_back_into_the_fold
 				}
 			}
 		}

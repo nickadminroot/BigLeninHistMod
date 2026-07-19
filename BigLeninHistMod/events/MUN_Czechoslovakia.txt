@@ -188,10 +188,7 @@ country_event = {
 				}
 			}
 			AUS = {
-				OR = {
-					has_completed_focus = AUS_repeal_the_may_constitution
-					has_completed_focus = AUS_rapid_rearmament
-				}
+				has_completed_focus = AUS_rapid_rearmament
 			}
 			POL = {
 				OR = {
