@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_share_designs_with_britain",
+  "sprite_name": "GFX_focus_custom_USA_share_designs_with_britain",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_share_designs_with_britain.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_air_naval_bomber",
+  "prompt": "Blueprint paper being passed across Atlantic with RAF roundel and US star on aircraft schematics",
+  "style_preset": "hoi4_focus_v1"
+}

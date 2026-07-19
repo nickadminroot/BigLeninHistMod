@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_globalize_air_industry",
+  "sprite_name": "GFX_focus_custom_USA_globalize_air_industry",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_globalize_air_industry.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_air_fighter",
+  "prompt": "Globe with aircraft silhouettes circling it and factory smoke rising from Americas to Europe and Asia",
+  "style_preset": "hoi4_focus_v1"
+}

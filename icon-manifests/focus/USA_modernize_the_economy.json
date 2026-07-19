@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_modernize_the_economy",
+  "sprite_name": "GFX_focus_custom_USA_modernize_the_economy",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_modernize_the_economy.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_construct_civ_factory",
+  "prompt": "Factory silhouettes and gears symbolizing industrial modernization, with dollar-sign overlay",
+  "style_preset": "hoi4_focus_v1"
+}

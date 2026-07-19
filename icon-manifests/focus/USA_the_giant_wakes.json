@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_the_giant_wakes",
+  "sprite_name": "GFX_focus_custom_USA_the_giant_wakes",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_the_giant_wakes.dds",
+  "source_file": "common/national_focus/USA.txt",
+  "fallback_icon": "GFX_goal_generic_construct_civ_factory",
+  "prompt": "A giant industrial gear rising from the ocean with battleship silhouettes and factory smokestacks under a stormy sky",
+  "style_preset": "hoi4_focus_v1"
+}

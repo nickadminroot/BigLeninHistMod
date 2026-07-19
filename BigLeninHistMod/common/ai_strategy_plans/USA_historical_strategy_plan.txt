@@ -102,7 +102,7 @@ USA_historical_plan = {
 		USA_bureau_of_ships
 		USA_carrier_primacy
 		#1943
-		USA_wartime_industry
+		USA_preventive_mobilization_projects
 		USA_build_the_pentagon
 		USA_army_of_the_united_states
 		USA_womens_armed_service_integration_act

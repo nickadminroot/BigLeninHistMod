@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_mass_production",
+  "sprite_name": "GFX_focus_custom_USA_mass_production",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_mass_production.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_production2",
+  "prompt": "Conveyor belt with identical products moving rapidly and efficiency metrics rising dramatically",
+  "style_preset": "hoi4_focus_v1"
+}

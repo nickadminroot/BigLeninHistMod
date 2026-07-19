@@ -1,0 +1,117 @@
+﻿###########################
+# BLHM USA Events
+###########################
+
+add_namespace = BLHM_USA
+
+# GER embargo event
+country_event = {
+	id = BLHM_USA.1
+	title = BLHM_USA.1.t
+	desc = BLHM_USA.1.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GER
+	}
+
+	option = {
+		name = BLHM_USA.1.a
+	}
+}
+
+# World news - Germany embargo
+news_event = {
+	id = BLHM_USA.2
+	title = BLHM_USA.2.t
+	desc = BLHM_USA.2.d
+	picture = GFX_news_event_generic_usa_treaty
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_USA.2.a
+	}
+}
+
+# JAP embargo event
+country_event = {
+	id = BLHM_USA.3
+	title = BLHM_USA.3.t
+	desc = BLHM_USA.3.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = JAP
+	}
+
+	option = {
+		name = BLHM_USA.3.a
+	}
+}
+
+# World news - Japan embargo
+news_event = {
+	id = BLHM_USA.4
+	title = BLHM_USA.4.t
+	desc = BLHM_USA.4.d
+	picture = GFX_news_event_generic_usa_treaty
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_USA.4.a
+	}
+}
+
+# Stage 2: Allied War Industry invitation
+country_event = {
+	id = BLHM_USA.5
+	title = BLHM_USA.5.t
+	desc = BLHM_USA.5.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_USA.5.a
+		add_ideas = USA_aid
+	}
+}
+
+# Stage 2: British air-design sharing
+country_event = {
+	id = BLHM_USA.6
+	title = BLHM_USA.6.t
+	desc = BLHM_USA.6.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ENG
+	}
+
+	option = {
+		name = BLHM_USA.6.a
+		add_tech_bonus = {
+			name = BLHM_usa_share_designs
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 1
+			category = air_equipment
+		}
+	}
+}

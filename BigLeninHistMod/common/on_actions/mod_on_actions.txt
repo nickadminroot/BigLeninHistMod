@@ -2,12 +2,6 @@ on_actions = {
 	on_startup = {
 		
         effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
-            # every_country = {
-            #     limit = {
-            #         is_ai = no
-            #     }
-			# 	send_embargo = USA
-            # }
 			every_country = { 
 				army_experience = 19
 				navy_experience = 19
@@ -139,10 +133,15 @@ on_actions = {
 		effect = {
 			every_country = {
                 limit = {
-                    NOT = { tag = NPL }
                     NOT = { tag = USA }
                 }
 				send_embargo = USA
+            }
+			every_country = {
+                limit = {
+                    NOT = { tag = USA }
+                }
+                USA = { send_embargo = PREV }
             }
 		}
 		# effect = {
@@ -202,15 +201,24 @@ on_actions = {
 		effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
 			if = {
 				limit = {	
-					date > 1938.11.1
-					date < 1939.2.1
+					date > 1939.12.31
+					date < 1940.2.1
+					NOT = { has_global_flag = BLHM_embargo_released }
 				}
 				every_country = {
 					limit = {
+						NOT = { tag = USA }
 				 		is_embargoing = USA
 				 	}
 				 	break_embargo = USA
 				}
+				every_country = {
+					limit = {
+						NOT = { tag = USA }
+					}
+					USA = { break_embargo = PREV }
+				}
+				set_global_flag = BLHM_embargo_released
 			 }
 			
 			ROOT = { calculate_africa_control = yes }

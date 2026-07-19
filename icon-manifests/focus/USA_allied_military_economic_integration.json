@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_allied_military_economic_integration",
+  "sprite_name": "GFX_focus_custom_USA_allied_military_economic_integration",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_allied_military_economic_integration.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_positive_trade_relations",
+  "prompt": "Interlocking gears with Allied flags forming a unified wheel representing integrated military-economic planning",
+  "style_preset": "hoi4_focus_v1"
+}

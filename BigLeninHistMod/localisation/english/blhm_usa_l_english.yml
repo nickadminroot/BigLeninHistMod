@@ -1,0 +1,197 @@
+﻿l_english:
+ # Focuses
+ USA_limited_intervention:0 "Limited Intervention"
+ USA_limited_intervention_desc:0 "It is time to take a more active role in global affairs. Our first step will be to supply those who resist the forces of aggression."
+ USA_war_propaganda:0 "War Propaganda"
+ USA_war_propaganda_desc:0 "The American people must be made aware of the threats facing our nation and our values. A coordinated propaganda campaign will prepare them for the challenges ahead."
+ USA_focus_on_europe:0 "Focus on Europe"
+ USA_focus_on_europe_desc:0 "The situation in Europe demands our attention. We must coordinate with our allies to contain German aggression and support the liberation of occupied nations."
+ USA_focus_on_asia:0 "Economic Blockade of Japan"
+ USA_focus_on_asia_desc:0 "Japan's aggression in Asia threatens the balance of power in the Pacific. An economic blockade will cripple their war machine and show our resolve."
+ USA_office_of_strategic_services:0 "Office of Strategic Services"
+ USA_office_of_strategic_services_desc:0 "We need a centralized intelligence agency to coordinate espionage and sabotage operations behind enemy lines."
+ USA_magic:0 "Marine Corps Intelligence"
+ USA_magic_desc:0 "Cryptanalysis and signals intelligence are vital to modern warfare. The Marine Corps will establish a dedicated intelligence unit to decode enemy communications."
+ USA_preventive_mobilization_projects:0 "Preventive Mobilization Projects"
+ USA_preventive_mobilization_projects_desc:0 "We must prepare in advance for possible conflicts. Tomorrow may bring unforeseen challenges, and we cannot afford to be caught off guard."
+ USA_the_giant_has_awoken:0 "The Giant Has Awoken"
+ USA_the_giant_has_awoken_desc:0 "American industry is now fully mobilized for war. Our production capabilities have reached unprecedented levels."
+
+ # Economy Laws
+ USA_american_dream:0 "American Dream"
+ USA_american_dream_desc:0 "An economic policy focused on maintaining the American standard of living while supporting the war effort through limited mobilization."
+ USA_giant_wakes_economy:0 "Giant Wakes Economy"
+ USA_giant_wakes_economy_desc:0 "As the nation awakens to the realities of war, our industry shifts toward military production while maintaining essential civilian capacity."
+ USA_giant_has_awoken_economy:0 "Giant Has Awoken Economy"
+ USA_giant_has_awoken_economy_desc:0 "The full might of the American industrial machine is now directed toward victory. Every factory works around the clock to supply our forces."
+
+ # National Spirits
+ USA_soviet_american_agreement:0 "Soviet-American Agreement"
+ USA_soviet_american_agreement_desc:0 "An economic cooperation agreement between the United States and the Soviet Union boosts our industrial capacity and reduces consumer goods demand."
+
+ # Soviet-American spirit modifiers
+ USA_soviet_american_agreement_modifier:0 "Soviet-American Agreement"
+ USA_soviet_american_agreement_modifier_desc:0 "Industrial capacity +5%, Consumer Goods -5%"
+
+ # Tooltips
+ BLHM_embargo_germany_tt:0 "§YEmbargo Germany§!\nThe USA, United Kingdom, France, the Netherlands, Belgium, and all Allied majors will embargo Germany."
+ BLHM_embargo_japan_tt:0 "§YEmbargo Japan§!\nThe USA, the Netherlands, the Dutch East Indies, and all Allied majors will embargo Japan."
+ BLHM_arsenal_of_democracy_tt:0 "§YArsenal of Democracy§!\nGrants the §YAmerican Dream§! economy law and §G8§! military factories."
+ BLHM_military_construction_tt:0 "§YMilitary Construction§!\nGrants §G8§! military factories."
+ BLHM_USACE_projects_tt:0 "§YUSACE Projects§!\nGrants §G8§! military factories."
+ BLHM_two_ocean_navy_tt:0 "§YTwo-Ocean Navy Act§!\nGrants §G6§! dockyards."
+
+ # Events - Germany Embargo
+ BLHM_USA.1.t:0 "USA Imposes Economic Embargo"
+ BLHM_USA.1.d:0 "The United States has imposed a comprehensive economic embargo against the German Reich. All American and Allied trade with Germany is now prohibited. This will severely restrict our access to vital resources and industrial goods."
+ BLHM_USA.1.a:0 "They will regret this decision."
+
+ # News - Germany Embargo
+ BLHM_USA.2.t:0 "USA Declares Economic War on Germany"
+ BLHM_USA.2.d:0 "In a decisive move, the United States has announced a complete economic embargo against Nazi Germany. The embargo, coordinated with Allied nations including the United Kingdom, France, the Netherlands, and Belgium, targets Germany's access to strategic materials and industrial resources. This marks a significant escalation in America's involvement in the European conflict, stopping short of military intervention but dealing a severe blow to the German war economy."
+ BLHM_USA.2.a:0 "The noose tightens."
+
+ # Events - Japan Embargo
+ BLHM_USA.3.t:0 "USA Imposes Oil and Rubber Embargo"
+ BLHM_USA.3.d:0 "The United States has imposed a crippling embargo on oil and rubber exports to Japan. Our military expansion in the Pacific is now directly threatened. Without access to American oil and raw materials, our war machine will grind to a halt within months."
+ BLHM_USA.3.a:0 "They will regret this decision."
+
+ # News - Japan Embargo
+ BLHM_USA.4.t:0 "USA Enforces Economic Blockade of Japan"
+ BLHM_USA.4.d:0 "In response to Japan's continued aggression in Asia and the occupation of Chinese territory, the United States has declared a comprehensive economic blockade against the Japanese Empire. Working closely with the Dutch East Indies, the United Kingdom, and other Allied nations, the blockade targets Japan's access to vital oil, rubber, and raw materials. The Imperial Japanese war machine, heavily dependent on imported resources, now faces a stark choice: halt its expansion or risk a direct confrontation with the United States."
+ BLHM_USA.4.a:0 "The Pacific balance shifts."
+
+ # Stage 2 Focuses
+ USA_modernize_the_economy:0 "Modernize the Economy"
+ USA_modernize_the_economy_desc:0 "American industry must be modernized to meet the challenges of a world at war. New production methods and economic reforms will lay the foundation for our future strength."
+ USA_allied_war_industry:0 "Allied War Industry"
+ USA_allied_war_industry_desc:0 "Our allies in Europe and Asia are fighting for survival. By coordinating our industrial efforts, we can ensure they have the resources needed to continue the fight."
+ USA_asia_doctrine:0 "Asia Defence Doctrine"
+ USA_asia_doctrine_desc:0 "The Pacific theatre requires a comprehensive defence strategy. We must fortify airfields across Burma, Singapore, and the Dutch East Indies to project air power against Japanese aggression."
+ USA_europe_doctrine:0 "Europe Defence Doctrine"
+ USA_europe_doctrine_desc:0 "The defence of the British Isles is paramount. We must prepare airfields and naval bases in southern England to support operations in the European theatre."
+ USA_globalize_air_industry:0 "Globalize Air Industry"
+ USA_globalize_air_industry_desc:0 "American aircraft production must expand to meet global demand. We will invest in new designs and production techniques to maintain air superiority."
+ USA_share_designs_with_britain:0 "Share Designs with Britain"
+ USA_share_designs_with_britain_desc:0 "The Royal Air Force urgently needs access to the latest American aircraft designs. Sharing our technology will strengthen the Allied air armada."
+ USA_improve_infantry_doctrines:0 "Improve Infantry Doctrines"
+ USA_improve_infantry_doctrines_desc:0 "Modern infantry tactics require constant refinement. We will develop new doctrines to increase the effectiveness of our ground forces and share these lessons with our allies."
+ USA_joint_tank_development:0 "Joint Tank Development"
+ USA_joint_tank_development_desc:0 "Collaboration with Allied engineers on tank design will yield more effective armoured vehicles. Combined research will give our forces the edge on the battlefield."
+ USA_domestic_production:0 "Domestic Production"
+ USA_domestic_production_desc:0 "Expanding our domestic industrial capacity is essential. We must ramp up military factory construction to supply our armed forces."
+ USA_mass_production:0 "Mass Production"
+ USA_mass_production_desc:0 "Mass production techniques pioneered by American industry will be applied to military output, dramatically increasing our productive capacity."
+ USA_american_bonds:0 "American Bonds"
+ USA_american_bonds_desc:0 "A nationwide bond drive will raise funds for the war effort while reducing consumer demand, helping to control inflation and stabilize the economy."
+ USA_radar_technologies:0 "Radar Technologies"
+ USA_radar_technologies_desc:0 "Investment in radar research will provide our forces with advanced detection capabilities, crucial for air defence and naval operations."
+ USA_new_machine_tools:0 "New Machine Tools"
+ USA_new_machine_tools_desc:0 "The latest generation of precision machine tools will revolutionize our manufacturing efficiency, eliminating wasteful production practices."
+ USA_national_mobilization:0 "National Mobilization"
+ USA_national_mobilization_desc:0 "With the nation fully mobilized for total war, every aspect of our economy is directed toward final victory over the Axis powers."
+
+ # Stage 2 National Spirits
+ USA_american_economy:0 "American Economy"
+ USA_american_economy_desc:0 "Modernization of American industry has improved production efficiency and maximum output potential."
+ USA_american_economy_domestic:0 "American Economy"
+ USA_american_economy_domestic_desc:0 "Domestic mobilization is accelerating military factory construction across the nation."
+ USA_american_economy_modernized:0 "American Economy"
+ USA_american_economy_modernized_desc:0 "Advanced machine tools have eliminated inefficiencies while military construction continues at an accelerated pace."
+ USA_american_economy_mobilized:0 "American Economy"
+ USA_american_economy_mobilized_desc:0 "The fully mobilized American economy is producing at unprecedented levels, driving research and industrial output to new heights."
+ USA_aid:0 "American Aid"
+ USA_aid_desc:0 "We receive vital industrial support and equipment from the United States under the Allied War Industry program."
+ USA_unified_infantry_command:0 "Unified Infantry Command"
+ USA_unified_infantry_command_desc:0 "Standardized infantry doctrines and unified command structures improve coordination and combat effectiveness across Allied forces."
+ USA_allied_tank_school:0 "Allied Tank School"
+ USA_allied_tank_school_desc:0 "Joint tank development programs have produced superior armoured vehicle designs with improved firepower and crew protection."
+ USA_american_bonds_idea:0 "American Bonds"
+ USA_american_bonds_idea_desc:0 "Patriotic bond drives have raised substantial funds for the war effort while reducing consumer demand."
+
+ # Stage 2 Tooltips
+ BLHM_allied_war_industry_tt:0 "§YAllied War Industry§!\nAllies in the Allied faction receive §YAmerican Aid§! national spirit:\n§G+3%§! Factory Output\n§G+5%§! Max Production Efficiency\n§G+10%§! Military Factory Construction Speed"
+ BLHM_asia_doctrine_tt:0 "§YAsia Defence Doctrine§!\nRaises air bases to §Glevel 10§! in:\n- §YBurma§! (states 288, 640, 994-999)\n- §YSingapore§! (state 1021)\n- §YDutch East Indies§! (HOL/INS-controlled states)\nRequires allied control of specified states."
+ BLHM_europe_doctrine_tt:0 "§YEurope Defence Doctrine§!\nRaises air bases to §Glevel 10§! and naval bases to §Glevel 10§! in southern England:\n- §YStates 123, 126, 127§!\n- §YProvinces 540, 11374, 3501§!\nRequires British control of target states."
+ BLHM_globalize_air_industry_tt:0 "§YGlobalize Air Industry§!\nGrants a §G2-year§! ahead-of-time reduction for §YAir Equipment§! research."
+ BLHM_share_designs_with_britain_tt:0 "§YShare Designs with Britain§!\nThe United Kingdom receives the same §G2-year§! ahead-of-time reduction for §YAir Equipment§! research."
+ BLHM_joint_tank_development_tt:0 "§YJoint Tank Development§!\nGrants §G+100%§! §YArmor§! research bonus.\nUSA and Allied faction allies receive §YAllied Tank School§!:\n§G+5%§! Tank/Army Organization\n§G+7%§! Armour Hard Attack\n§G+3%§! Armour Soft Attack"
+ BLHM_allied_military_economic_integration_tt:0 "§YAllied Military-Economic Integration§!\nUSA and all Allied faction members receive §YAllied Military-Economic Integration§! marker.\nUnlocks decision category §YAllied Integration Decisions§! for the USA (available in Stage 3)."
+ BLHM_domestic_production_tt:0 "§YDomestic Production§!\nUpgrades §YAmerican Economy§! law:\n§G+20%§! Military Factory Construction Speed"
+ BLHM_mass_production_tt:0 "§YMass Production§!\nGrants §G4§! Civilian Factories.\nGrants a §G2-year§! ahead-of-time reduction for §YMachine Tool§! technologies."
+ BLHM_new_machine_tools_tt:0 "§YNew Machine Tools§!\nUpgrades §YAmerican Economy§! law:\nRemoves §R-7%§! Efficiency Growth penalty."
+ BLHM_national_mobilization_tt:0 "§YNational Mobilization§!\nUpgrades §YAmerican Economy§! law:\n§G+10%§! Factory Output\n§G+10%§! Research Speed\nGrants two §G+75%§! §YIndustry§! research bonuses.\nRequires USA at war with Japan and Japanese control of Singapore."
+
+ # Stage 2 Events - Allied War Industry
+ BLHM_USA.5.t:0 "American War Industry Support"
+ BLHM_USA.5.d:0 "The United States has launched a massive program to coordinate industrial production with Allied nations. Under this initiative, American expertise, raw materials, and industrial capacity will be shared with Allied war industries to maximize the combined output of the Grand Alliance."
+ BLHM_USA.5.a:0 "We accept this generous offer."
+
+ # Stage 2 Events - British Air Designs
+ BLHM_USA.6.t:0 "American Aircraft Designs Shared"
+ BLHM_USA.6.d:0 "The United States has authorized the transfer of its latest aircraft design specifications to the Royal Air Force. British aerospace engineers will now have access to American advances in airframe design, engine technology, and production methods, allowing the RAF to benefit from American air technology research."
+ BLHM_USA.6.a:0 "Excellent news for the RAF!"
+
+ # Stage 2 Tech bonus names
+ BLHM_usa_share_designs:0 "Shared American Air Designs"
+
+ # Stage 2 Modifier descriptions
+ USA_american_economy_modifier:0 "American Economy"
+ USA_american_economy_modifier_desc:0 "Max Production Efficiency §G+10%§!, Efficiency Growth §R-7%§!"
+ USA_american_economy_domestic_modifier:0 "American Economy (Domestic)"
+ USA_american_economy_domestic_modifier_desc:0 "Max Production Efficiency §G+10%§!, Military Factory Construction §G+20%§!, Efficiency Growth §R-7%§!"
+ USA_american_economy_modernized_modifier:0 "American Economy (Modernized)"
+ USA_american_economy_modernized_modifier_desc:0 "Max Production Efficiency §G+10%§!, Military Factory Construction §G+20%§!"
+ USA_american_economy_mobilized_modifier:0 "American Economy (Mobilized)"
+ USA_american_economy_mobilized_modifier_desc:0 "Max Production Efficiency §G+10%§!, Military Factory Construction §G+20%§!, Factory Output §G+10%§!, Research Speed §G+10%§!"
+
+ # Stage 2 Idea modifier descriptions
+ USA_aid_modifier:0 "American Aid"
+ USA_aid_modifier_desc:0 "Factory Output §G+3%§!, Max Efficiency §G+5%§!, Military Factory Construction §G+10%§!"
+ USA_unified_infantry_command_modifier:0 "Unified Infantry Command"
+ USA_unified_infantry_command_modifier_desc:0 "Infantry Attack §G+5%§!, Infantry Defence §G+5%§!, Special Forces Attack §G+5%§!, Special Forces Defence §G+5%§!, Coordination §G+3%§!, Army Organization §G+10%§!"
+ USA_allied_tank_school_modifier:0 "Allied Tank School"
+ USA_allied_tank_school_modifier_desc:0 "Organization §G+5%§!, Armour Hard Attack §G+7%§!, Armour Soft Attack §G+3%§!"
+ USA_american_bonds_idea_modifier:0 "American Bonds"
+ USA_american_bonds_idea_modifier_desc:0 "Consumer Goods §G-10%§!"
+
+ # Stage 3 — Allied Integration Decisions
+ USA_allied_integration_decisions:0 "Allied Integration Decisions"
+ USA_allied_integration_decisions_desc:0 "Coordinated programs to integrate Allied military and economic efforts."
+
+ # Decisions
+ USA_scientist_exchange_program:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_desc:0 "Establish a program to exchange scientific knowledge and personnel with Allied nations, accelerating joint research efforts."
+ USA_scientist_exchange_program_complete_tt:0 "§YScientist Exchange Program§!\nUSA and all Allied faction members receive §G+5%§! Research Speed."
+
+ USA_sherman_firefly_program:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_desc:0 "Upgrade Allied medium tank fleets with improved firepower, fitting Sherman tanks with high-velocity guns capable of defeating heavier German armour."
+ USA_sherman_firefly_program_complete_tt:0 "§YSherman Firefly Program§!\nUSA and all Allied faction members receive §G+10%§! Medium Tank Soft and Hard Attack."
+
+ USA_unified_command_center:0 "Unified Command Center"
+ USA_unified_command_center_desc:0 "Establish a combined Allied command center to coordinate naval operations, amphibious assaults, and shore bombardment across all theatres."
+ USA_unified_command_center_complete_tt:0 "§YUnified Command Center§!\nUSA and all Allied faction members receive:\n§G+15%§! Naval Invasion Planning Speed\n§G+5%§! Amphibious Invasion Defence\n§G+15%§! Shore Bombardment Bonus"
+
+ USA_dispersed_production_program:0 "Dispersed Production Program"
+ USA_dispersed_production_program_desc:0 "Implement dispersed manufacturing techniques across Allied nations to increase production resilience and efficiency through factory decentralization."
+ USA_dispersed_production_program_complete_tt:0 "§YDispersed Production Program§!\nUSA and all Allied faction members receive:\n§G+15%§! Production Efficiency Growth\n§G+20%§! Line Change Efficiency Retention"
+
+ # Stage 3 Ideas
+ USA_scientist_exchange_program_idea:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_idea_desc:0 "Ongoing scientific collaboration with Allied nations accelerates research across all fields."
+ USA_sherman_firefly_program_idea:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_idea_desc:0 "Allied medium tank fleets have been upgraded with high-velocity guns for improved anti-armour capability."
+ USA_unified_command_center_idea:0 "Unified Command Center"
+ USA_unified_command_center_idea_desc:0 "A combined Allied command structure coordinates naval operations and amphibious warfare across all theatres."
+ USA_dispersed_production_program_idea:0 "Dispersed Production Program"
+ USA_dispersed_production_program_idea_desc:0 "Dispersed manufacturing techniques increase production resilience and efficiency across Allied industries."
+
+ # Stage 3 Idea modifier descriptions
+ USA_scientist_exchange_program_idea_modifier:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_idea_modifier_desc:0 "Research Speed §G+5%§!"
+ USA_sherman_firefly_program_idea_modifier:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_idea_modifier_desc:0 "Medium Tank Soft Attack §G+10%§!, Medium Tank Hard Attack §G+10%§!"
+ USA_unified_command_center_idea_modifier:0 "Unified Command Center"
+ USA_unified_command_center_idea_modifier_desc:0 "Naval Invasion Planning Speed §G+15%§!, Amphibious Invasion Defence §G+5%§!, Shore Bombardment §G+15%§!"
+ USA_dispersed_production_program_idea_modifier:0 "Dispersed Production Program"
+ USA_dispersed_production_program_idea_modifier_desc:0 "Production Efficiency Growth §G+15%§!, Line Change Efficiency §G+20%§!"

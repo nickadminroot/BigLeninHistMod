@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_domestic_production",
+  "sprite_name": "GFX_focus_custom_USA_domestic_production",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_domestic_production.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_production",
+  "prompt": "Rising graph of factory construction with assembly lines inside an outline of United States",
+  "style_preset": "hoi4_focus_v1"
+}
