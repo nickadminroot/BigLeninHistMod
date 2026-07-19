@@ -271,7 +271,7 @@ focus_tree = {
 
 			if = {
 				limit = {
-					has_completed_focus = POR_allow_free_elections
+					always = no
 				}
 				custom_effect_tooltip = available_political_advisor
 				show_ideas_tooltip = POR_francisco_da_cunha_leal

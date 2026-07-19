@@ -1186,7 +1186,7 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			NOT = {
-				has_completed_focus = PER_islamic_revolution
+				always = no
 			}
 		}
 
@@ -2038,7 +2038,7 @@ focus_tree = {
 			else = {
 				if = {
 					limit = {
-						NOT = { has_completed_focus = PER_form_savama }
+						NOT = { always = no }
 					}
 					add_ideas = PER_savak_idea_no_lar
 				}
@@ -2240,7 +2240,7 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			has_completed_focus = PER_establish_special_unit
+			always = no
 		}
 
 		bypass = {
@@ -3671,7 +3671,7 @@ focus_tree = {
 		
 		available = {
 			NOT = {
-				has_completed_focus = PER_the_unification_initiative
+				always = no
 			}
 			has_government = neutrality
 		}

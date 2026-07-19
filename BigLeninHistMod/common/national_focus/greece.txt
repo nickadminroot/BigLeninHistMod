@@ -153,7 +153,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_STABILITY  }
 		completion_reward = {
 			add_stability = 0.1
-			unlock_decision_tooltip = GRE_crush_republicans
 		}
 	}
 	focus = {
@@ -607,7 +606,6 @@ focus_tree = {
 			IF = {
 				limit = {
 					NOT = {
-						has_completed_focus = GRE_the_right_to_rule
 						has_completed_focus = GRE_metaxism_focus 
 					}
 				}
@@ -626,7 +624,7 @@ focus_tree = {
 			}
 			ELSE_IF = {
 				limit = {
-					has_completed_focus = GRE_the_right_to_rule
+					always = no
 				}
 				add_ideas = GRE_orthodox_church_support
 				hidden_effect = {
@@ -804,7 +802,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_political_power = 120
-			unlock_decision_category_tooltip = GRE_pay_back_debt_to_the_ifc_category
 			custom_effect_tooltip = GRE_pay_back_debt_tt
 		}
 	}
@@ -2113,7 +2110,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_category_tooltip = GRE_investment_decisions_category
+			
 		}
 	}
 	focus = {
@@ -2140,16 +2137,12 @@ focus_tree = {
 				add = 1
 				AND = { 
 					is_historical_focus_on = no
-					OR = { 
-						has_completed_focus = GRE_recruit_the_fascists
-						has_completed_focus = GRE_realign_ourselves_with_the_central_powers
-					}
+					always = no
 				}
 			}
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = GRE_exploit_errata_in_schachtplan
 			swap_ideas = {
 				remove_idea = GRE_schachtplan
 				add_idea = GRE_schachtplan_modified
@@ -2179,7 +2172,6 @@ focus_tree = {
 				AND = { 
 					is_historical_focus_on = no
 					OR = { 
-						has_completed_focus = GRE_recruit_the_fascists
 						has_country_flag = GRE_germany_rebuffed
 					}
 				}
@@ -2187,7 +2179,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = GRE_request_italian_assistance_with_industrialisation
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -2222,7 +2213,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = GRE_trade_manufactured_ship_parts_for_investment
 			diplomatic_relation = {
 				country = ENG
 				relation = docking_rights
@@ -2253,7 +2243,7 @@ focus_tree = {
 				add = 1
 				AND = { 
 					is_historical_focus_on = no
-					has_completed_focus = GRE_compromise_with_the_monarchists
+					always = no
 					ENG = { has_completed_focus = ENG_concessions_to_the_trade_unions }
 				}
 			}
@@ -2300,7 +2290,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = GRE_attend_talks_with_the_presidium
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -2327,7 +2316,6 @@ focus_tree = {
 			army_experience = 30
 			navy_experience = 30
 			air_experience = 30
-			unlock_decision_category_tooltip = GRE_hellenic_academy_category
 		}
 	}
 	focus = {
