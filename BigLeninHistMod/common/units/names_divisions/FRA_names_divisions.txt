@@ -917,6 +917,43 @@ FRA_COL_01 =
 		30 = { "%dème Div. d'Infanterie Coloniale" }
 	}
 }
+FRA_INFB_01 =
+{
+	name = "Infantry Brigade"
+
+	for_countries = { FRA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "irregular" }
+
+	fallback_name = "%dème Brigade d'Infanterie"
+
+	ordered =
+	{
+		1 = { "%dère Brigade d'Infanterie" }
+		2 = { "%dème Brigade d'Infanterie" }
+		3 = { "%dème Brigade d'Infanterie" }
+		4 = { "%dème Brigade d'Infanterie" }
+		5 = { "%dème Brigade d'Infanterie" }
+		6 = { "%dème Brigade d'Infanterie" }
+		7 = { "%dème Brigade d'Infanterie" }
+		8 = { "%dème Brigade d'Infanterie" }
+		9 = { "%dème Brigade d'Infanterie" }
+		10 = { "%dème Brigade d'Infanterie" }
+		11 = { "%dème Brigade d'Infanterie" }
+		12 = { "%dème Brigade d'Infanterie" }
+		13 = { "%dème Brigade d'Infanterie" }
+		14 = { "%dème Brigade d'Infanterie" }
+		15 = { "%dème Brigade d'Infanterie" }
+		16 = { "%dème Brigade d'Infanterie" }
+		17 = { "%dème Brigade d'Infanterie" }
+		18 = { "%dème Brigade d'Infanterie" }
+		19 = { "%dème Brigade d'Infanterie" }
+		20 = { "%dème Brigade d'Infanterie" }
+	}
+}
+
 FRA_RGR_01 = {
 	name = "Ranger Divisions"
 
