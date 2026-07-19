@@ -221,8 +221,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = NOR_leaving_the_hard_thirties_behind }
 		prerequisite = { focus = NOR_broken_gun_policies }
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = NOR_broken_gun_policies 
 
 		cost = 10
@@ -258,7 +258,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = NOR_leaving_the_hard_thirties_behind }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = NOR_leaving_the_hard_thirties_behind 
 
 		cost = 5
@@ -308,8 +308,8 @@ focus_tree = {
 		icon = GFX_focus_hol_abandon_the_gold_standard
 		prerequisite = { focus = NOR_leaving_the_hard_thirties_behind }
 
-		x = 2
-		y = 2 
+		x = 1
+		y = 1 
 		relative_position_id = NOR_leaving_the_hard_thirties_behind
 		
 		cost = 10
@@ -333,8 +333,8 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = NOR_cut_military_budget }
 
-		x = -1
-		y = 3
+		x = 0
+		y = 1
 		relative_position_id = NOR_cut_military_budget
 		cost = 10
 		available = {
@@ -366,8 +366,8 @@ focus_tree = {
 		id = NOR_restore_public_trust_in_the_storting
 		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		prerequisite = { focus = NOR_broken_gun_policies focus = NOR_weathering_the_storm_to_come }
-		x = 2
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = NOR_broken_gun_policies 
 
 		cost = 10
@@ -409,7 +409,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_print_more_money }
 
 		x = 0
-		y = 4
+		y = 1
 		relative_position_id = NOR_social_incrementalism
 		cost = 5
 		available = {
@@ -518,8 +518,8 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = NOR_restore_public_trust_in_the_storting }
 		prerequisite = { focus = NOR_the_neutrality_guard }
-		x = 1
-		y = 3
+		x = 0
+		y = 1
 		relative_position_id = NOR_restore_public_trust_in_the_storting
 		
 		cost = 10
@@ -559,8 +559,8 @@ focus_tree = {
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = { focus = NOR_rearm_for_defense }
 
-		x = -1
-		y = 4
+		x = 0
+		y = 1
 		relative_position_id = NOR_rearm_for_defense
 		cost = 10
 		
@@ -592,8 +592,8 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = NOR_rearm_for_defense }
 
-		x = 3
-		y = 3
+		x = 4
+		y = 1
 		relative_position_id = NOR_rearm_for_defense
 		
 		cost = 10
@@ -651,7 +651,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_restart_public_investment focus = NOR_patrol_our_coast }
 
 		x = -1
-		y = 5
+		y = 1
 		relative_position_id = NOR_restart_public_investment
 
 		cost = 5
@@ -719,8 +719,8 @@ focus_tree = {
 		icon = GFX_focus_generic_fortify_norway
 		prerequisite = { focus = NOR_restart_public_investment focus = NOR_patrol_our_coast }
 
-		x = 1
-		y = 5
+		x = 2
+		y = 0
 		relative_position_id = NOR_coastal_defense
 		cost = 5
 		available = {
@@ -783,7 +783,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_coastal_defense focus = NOR_fortify_norway }
 
 		x = 0
-		y = 6
+		y = 1
 		relative_position_id = NOR_coastal_defense
 		cost = 5
 
@@ -824,7 +824,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_the_kings_no }
 
 		x = -2
-		y = 7
+		y = 1
 		relative_position_id = NOR_the_kings_no
 		cost = 5
 
@@ -865,7 +865,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_the_kings_no }
 
 		x = 0
-		y = 7
+		y = 1
 		relative_position_id = NOR_the_kings_no
 		cost = 5
 
@@ -897,7 +897,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_the_kings_no }
 
 		x = 2
-		y = 7
+		y = 1
 		relative_position_id = NOR_the_kings_no
 		cost = 10
 		
@@ -925,7 +925,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_the_kings_no }
 
 		x = 4
-		y = 7
+		y = 1
 		relative_position_id = NOR_the_kings_no
 		cost = 10
 
@@ -953,7 +953,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_establish_milorg }
 
 		x = -1
-		y = 8
+		y = 1
 		relative_position_id = NOR_establish_milorg
 		cost = 10
 		
@@ -1005,7 +1005,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_establish_milorg }
 
 		x = 1
-		y = 8
+		y = 1
 		relative_position_id = NOR_establish_milorg
 		cost = 10
 		
@@ -1036,7 +1036,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_approach_kretsen }
 
 		x = 1
-		y = 8
+		y = 1
 		relative_position_id = NOR_approach_the_coordinating_committee
 		cost = 10
 		
@@ -1076,8 +1076,8 @@ focus_tree = {
 		prerequisite = { focus = NOR_use_xu }
 		prerequisite = { focus = NOR_recruit_norwegian_refugees }
 
-		x = 1
-		y = 9
+		x = 0
+		y = 1
 		relative_position_id = NOR_use_xu
 		cost = 10
 		
@@ -1129,8 +1129,8 @@ focus_tree = {
 
 		prerequisite = { focus = NOR_the_kings_no }
 
-		x = -2
-		y = 8
+		x = -4
+		y = 1
 		relative_position_id = NOR_the_kings_no
 		cost = 5
 		available = {
@@ -1334,7 +1334,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = NOR_start_rearmament }
 
-		x = 0
+		x = -3
 		y = 1
 		relative_position_id = NOR_start_rearmament
 		cost = 10
@@ -1371,7 +1371,7 @@ focus_tree = {
 		icon = GFX_focus_NOR_drobak_coastal_fort
 		prerequisite = { focus = NOR_start_rearmament }
 
-		x = -2
+		x = -5
 		y = 1
 		relative_position_id = NOR_start_rearmament
 		cost = 5
@@ -1626,7 +1626,7 @@ focus_tree = {
 		prerequisite = { focus = NOR_building_an_independent_norway }
 
 		x = 4
-		y = 1
+		y = 0
 		relative_position_id = NOR_building_an_independent_norway
 		cost = 10
 		available = {
@@ -1644,7 +1644,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = NOR_the_royal_norwegian_navy }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = NOR_the_royal_norwegian_navy
 		cost = 10
@@ -1706,7 +1706,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = NOR_the_royal_norwegian_navy }
 
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = NOR_the_royal_norwegian_navy
 		cost = 10
