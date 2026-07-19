@@ -50,8 +50,9 @@ set_technology = {
 	basic_train = 1
 }
 
+##RECRUITING CZECH CHARACTERS
+#Shared
 recruit_character = CZE_karl_albrecht
-recruit_character = CZE_edvard_benesh
 recruit_character = CZE_jaroslav_krejchi
 recruit_character = CZE_klement_gottwald
 recruit_character = CZE_vojtyech_luzha
@@ -60,24 +61,138 @@ recruit_character = CZE_richard_tesarzhik
 recruit_character = CZE_sergej_vojcechovsky
 recruit_character = CZE_rudolf_viest
 recruit_character = CZE_alois_vicherek
-recruit_character = CZE_antonin_hasal
 recruit_character = CZE_jaroslav_fajfr
 recruit_character = CZE_jan_golian
 recruit_character = CZE_karel_janousek
 recruit_character = CZE_josef_frantisek
 recruit_character = CZE_ludvik_krejci
 recruit_character = CZE_karel_vaclav_petrik
-recruit_character = CZE_karel_kuttelwascher
-recruit_character = CZE_ludvik_svoboda
 recruit_character = CZE_frantisek_havel
 recruit_character = CZE_stefan_osusky
 recruit_character = CZE_ferdinand_catlos
 recruit_character = CZE_jozef_tiso
 recruit_character = CZE_vojtech_tuka
-recruit_character = CZE_konrad_henlein
-recruit_character = CZE_gustav_husak
 recruit_character = CZE_albrecht_franz
+recruit_character =	CZE_karel_englis
+recruit_character = CZE_andrej_hlinka
 
+#Shared characters that are instanced 
+recruit_character = CZE_edvard_benesh
+recruit_character = CZE_konrad_henlein		
+recruit_character = CZE_frantisek_moravec
+recruit_character = CZE_emil_kolben 
+recruit_character = CZE_frantisek_machnik
+recruit_character = CZE_zdenek_fierlinger
+recruit_character = CZE_karel_pavala
+recruit_character = CZE_zdenko_hudecek
+
+#No Pfot only
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Peace For Our Time"
+		}
+	}
+	recruit_character = CZE_robert_rychtrmoc
+		CZE_robert_rychtrmoc = {	#make sure the other non-aligned options dont take priority due to later position
+		 	promote_character = yes
+		}
+	recruit_character = CZE_ludvik_svoboda
+	recruit_character = CZE_gustav_husak		
+	recruit_character = CZE_karel_kuttelwascher	
+}
+
+if = {
+	limit = {
+		has_dlc = "Peace For Our Time"
+	}
+	recruit_character = CZE_antonin_hampl		#Demo leader during second Republic. PLACE INFRONT OF MILAN!
+	recruit_character = CZE_milan_hodza			#start date leader for DLC
+	recruit_character = CZE_bohumir_smeral		#alternate communist leader
+	recruit_character = CZE_karel_schwarzenberg	#monarchist leader
+	recruit_character = CZE_radola_gajda		#non-collaborationist fascist leader
+	recruit_character = CZE_emil_hacha			#neutrality party leader
+	recruit_character = CZE_kamil_krofta		#advisor
+	recruit_character = CZE_karel_domin			#advisor
+	recruit_character = CZE_josef_guttman		#communist editor
+	recruit_character = CZE_milada_horakova		#womens rights activist
+	recruit_character = CZE_ferdinand_peroutka	#"liberal journalist"
+	recruit_character = CZE_bohumil_lausman		#cpt of industry
+	recruit_character = CZE_jan_dostalek		#advisor
+	recruit_character = CZE_emil_franke			#advisor
+	recruit_character = CZE_jan_krcmar			#advisor
+	recruit_character = CZE_pavel_reiman		#"socialist writer"
+	recruit_character = CZE_vaclav_kopecky		#stalinist backroom backstabber
+	recruit_character = CZE_josef_rozsevac		#monarchofascist advisor
+	recruit_character = CZE_jan_ruckl			#csl economist
+	recruit_character = CZE_vladimir_mandl		#advisor
+	recruit_character = AUS_ernst_fischer		#advisor
+	recruit_character = CZE_ludwig_czech		#advisor
+	recruit_character = CZE_jan_sramek			#advisor
+	recruit_character = CZE_bozena_machacova_dostalova #advisor
+	recruit_character = CZE_josef_cerny			#advisor
+	recruit_character =	CZE_rudolf_mlcoch 		#advisor
+	recruit_character = CZE_josef_kalfus		#advisor
+	recruit_character =	CZE_alois_tucny			#advisor
+	recruit_character = CZE_rudolf_bechyne 		#advisor
+	recruit_character = CZE_frantisek_chvalkovsky #advisor
+	recruit_character = CZE_stanislav_bukovsky	#advisor
+	recruit_character = CZE_augustin_voloshyn 	#advisor
+	recruit_character = CZE_simon_drgac			#generic head of intelligence for the context of having dlc as františek moravec has a custom trait
+	recruit_character = CZE_bedrich_homola		#general
+	recruit_character = CZE_emil_linhart		#general
+	recruit_character = CZE_frantisek_hrabcik	#general
+	recruit_character = CZE_antonin_hasal		#general
+	recruit_character = CZE_lev_prchala			#general, soon field marshall
+	recruit_character = CZE_josef_votruba		#general, soon field marshall
+	recruit_character = CZE_jan_syrovy			#field marshall, country leader later historically
+	recruit_character = CZE_stefan_jurech		#general
+	recruit_character = CZE_melichar_frantisek	#general and advisor, unlocked by focus
+	recruit_character = CZE_mikulas_dolezal		#defensive army chief - replaces Krejci so he can be high command
+	recruit_character = CZE_antonin_pavlik		#armor hc
+	recruit_character = CZE_vladimir_prikryl	#artillery hc - born 1888, not to be confused with the general born in 1895
+	recruit_character = CZE_karel_husarek		#general and advisor, unlocked by focus
+	recruit_character = CZE_alois_elias			#general, unlocked by focus
+	recruit_character = CZE_josef_vana			#general, unlocked by focus
+	recruit_character = CZE_emanuel_moravec		#general, unlocked by focus
+	recruit_character = CZE_jaroslav_kejla 		#air chief
+	recruit_character = CZE_karel_prochazka		#air chief replacement for Kuttelwascher
+	recruit_character = CZE_frantisek_placak	#navy chief
+	recruit_character = CZE_alexej_surin		#land scientist
+	recruit_character = CZE_antonin_husnik		#air scientist
+	recruit_character = CZE_georg_placzek		#nuclear scientist
+	recruit_character = CZE_karel_pavala_army	#general, split character to avoid a bug that doesn't allow admiral/commander on one character
+	recruit_character = CZE_jaroslav_slechta	#advisor
+	recruit_character = CZE_hugo_vavrecka		#advisor
+	recruit_character = CZE_jan_antonin_bata	#advisor
+	recruit_character = CZE_dominik_cipera		#advisor
+	recruit_character = CZE_sergej_ingr			#Army High Command
+	recruit_character = CZE_louis_eugene_faucher #Chief of Army
+}
+
+# Character Flags
+# CZE_vojtech_tuka = {
+# 	set_character_flag = CZE_imprisoned_flag
+# }
+
+### COUNTRY LEADER RESTACKING ### - WARNING: NEEDS TO GO AFTER CHARACTER RECRUITMENT!
+if = { #Makes sure the other options dont take priority due to later position
+	limit = {
+		has_dlc = "Peace For Our Time"
+	}
+	CZE_milan_hodza	= {	#Demo
+		promote_character = yes
+	}
+	CZE_emil_hacha	= { #Non-aligned 
+		promote_character = yes
+	}
+	CZE_radola_gajda = { #Fascist
+		promote_character = yes
+	}
+}
+CZE_andrej_hlinka = { #NEEDS TO GO BEHIND HACHA!
+	promote_character = yes
+}
 
 if = {
 	limit = {

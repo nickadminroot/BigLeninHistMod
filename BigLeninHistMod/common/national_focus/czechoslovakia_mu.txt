@@ -1988,6 +1988,7 @@ focus_tree = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CZE_karel_schwarzenberg
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5915,6 +5916,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = CZE_augustin_voloshyn
 		}
 	}
 
@@ -6254,6 +6256,7 @@ focus_tree = {
 			CZE_agrarian_politics_goes_down = yes
 
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CZE_josef_cerny
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -6292,6 +6295,7 @@ focus_tree = {
 
 			CZE_agrarian_politics_goes_down = yes
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CZE_rudolf_mlcoch
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
 	}
@@ -8394,6 +8398,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CZE_ludwig_czech
 
 			if = {
 				limit = {
@@ -18558,6 +18563,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = CZE_jaroslav_kejla_idea
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 	}
