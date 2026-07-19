@@ -992,7 +992,7 @@ political_actions = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = CZE_access_to_the_sea
+					always = no
 				}
 			}
 		}
@@ -1009,7 +1009,7 @@ political_actions = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = CZE_access_to_the_sea
+					always = no
 				}
 			}
 		}
