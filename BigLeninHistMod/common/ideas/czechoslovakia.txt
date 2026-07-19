@@ -5761,11 +5761,17 @@ ideas = {
 							NOT = {
 								has_dlc = "Peace For Our Time"
 							}
+							has_dlc = "Death or Dishonor"
 						}
 						has_completed_focus = CZE_industrial_legacy
 					}
 					else = {
-						has_completed_focus = CZE_the_slovak_arrow
+						if = {
+							limit = {
+								has_dlc = "Peace For Our Time"
+							}
+							has_completed_focus = CZE_the_slovak_arrow
+						}
 					}
 				}
 				if = {
