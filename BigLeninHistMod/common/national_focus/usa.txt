@@ -72,6 +72,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
+		mutually_exclusive = { focus = USA_neutrality_act }
 
 		cost = 5
 
@@ -100,7 +101,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_propaganda
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = USA_limited_intervention }
+		prerequisite = { focus = USA_limited_intervention focus = USA_neutrality_act }
 		x = 0
 		y = 2
 		relative_position_id = USA_limited_intervention
@@ -280,7 +281,7 @@ focus_tree = {
 		id = USA_magic
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = USA_focus_on_asia }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = USA_focus_on_asia
 
@@ -699,6 +700,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
+		mutually_exclusive = { focus = USA_limited_intervention }
 
 		cost = 5
 
@@ -772,7 +774,7 @@ focus_tree = {
 		icon = GFX_focus_generic_treaty
 		x = -2
 		y = 2
-		prerequisite = { focus = USA_neutrality_act }
+		prerequisite = { focus = USA_limited_intervention focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
 
 		cost = 5
@@ -878,7 +880,7 @@ focus_tree = {
 	focus = {
 		id = USA_arsenal_of_democracy
 		icon = GFX_goal_support_democracy
-		prerequisite = { focus = USA_neutrality_act }
+		prerequisite = { focus = USA_limited_intervention focus = USA_neutrality_act }
 		x = 0
 		y = 2
 		relative_position_id = USA_neutrality_act
@@ -944,10 +946,10 @@ focus_tree = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_magic focus = USA_office_of_strategic_services }
 		x = -2
-		y = 2
-		relative_position_id = USA_arsenal_of_democracy
+		y = 1
+		relative_position_id = USA_magic
 
 		cost = 5
 		#ai_will_do = {

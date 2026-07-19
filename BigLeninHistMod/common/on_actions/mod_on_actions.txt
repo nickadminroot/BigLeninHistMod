@@ -202,7 +202,6 @@ on_actions = {
 			if = {
 				limit = {	
 					date > 1939.12.31
-					date < 1940.2.1
 					NOT = { has_global_flag = BLHM_embargo_released }
 				}
 				every_country = {
