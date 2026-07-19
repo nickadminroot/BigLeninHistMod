@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_mio_fallback_defence",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_mio_fallback_defence",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_mio_fallback_defence.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_air_defence",
+  "prompt": "A reinforced Spitfire wing structure showing improved defensive armour plating",
+  "style_preset": "hoi4_idea_v1"
+}

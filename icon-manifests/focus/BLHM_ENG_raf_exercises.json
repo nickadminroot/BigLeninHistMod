@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_raf_exercises",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_raf_exercises",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_raf_exercises.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_air_tactics",
+  "prompt": "RAF fighters in formation over the English countryside during training exercises",
+  "style_preset": "hoi4_focus_v1"
+}

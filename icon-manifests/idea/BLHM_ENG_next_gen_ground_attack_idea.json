@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_next_gen_ground_attack_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_next_gen_ground_attack_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_next_gen_ground_attack_idea.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_air_bonus",
+  "prompt": "A heavily armed ground attack aircraft firing rockets at ground targets",
+  "style_preset": "hoi4_idea_v1"
+}

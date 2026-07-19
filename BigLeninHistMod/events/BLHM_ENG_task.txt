@@ -138,3 +138,58 @@ country_event = {
 		clr_country_flag = BLHM_ENG_armed_forces_priority_lock
 	}
 }
+
+# Aviation Armed Forces Branch - clears branch lock flag after 720 days
+country_event = {
+	id = BLHM_ENG_task.5
+	title = BLHM_ENG_task.5.t
+	desc = BLHM_ENG_task.5.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.5.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = BLHM_ENG_armed_forces_priority_lock
+	}
+}
+
+# Aviation Focus Cooldown - clears after 365 days (8760 hours)
+country_event = {
+	id = BLHM_ENG_task.6
+	title = BLHM_ENG_task.6.t
+	desc = BLHM_ENG_task.6.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.6.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = BLHM_ENG_air_focus_cooldown
+	}
+}
+
+# New Industrial Schemes - MIO fallback choice event
+country_event = {
+	id = BLHM_ENG_task.7
+	title = BLHM_ENG_task.7.t
+	desc = BLHM_ENG_task.7.d
+	picture = GFX_report_event_supermarine
+
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_ENG_task.7.a
+		ai_chance = { factor = 50 }
+		add_ideas = BLHM_ENG_mio_fallback_production
+	}
+	option = {
+		name = BLHM_ENG_task.7.b
+		ai_chance = { factor = 50 }
+		add_ideas = BLHM_ENG_mio_fallback_defence
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_medium_air_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_medium_air_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_medium_air_idea.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_air_bonus",
+  "prompt": "A formation of medium bombers with bombs falling towards industrial targets",
+  "style_preset": "hoi4_idea_v1"
+}

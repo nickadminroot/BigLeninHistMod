@@ -586,8 +586,8 @@ equipment_modules = {
 
 		add_stats = {
 			thrust = 30
-			build_cost_ic = 20
-			fuel_consumption = 0.4
+			build_cost_ic = 23
+			fuel_consumption = 0.48
 		}
 
 		multiply_stats = {
