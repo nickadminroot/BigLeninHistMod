@@ -786,31 +786,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		
 		available = {
-			NOT = { has_completed_focus = POL_organize_the_peasants_strike }
+			NOT = { always = no }
 		}
 		
-		bypass = {
-			NOT = { has_active_mission = POL_looming_peasants_strike_mission }
-			NOT = { has_active_mission = POL_peasants_strike }
-		}
+
 
 		select_effect = {
 			if = {
-				limit = {
-					has_active_mission = POL_looming_peasants_strike_mission
+				limit = { always = no }
+				if = {
+					limit = {
+						has_active_mission = POL_looming_peasants_strike_mission
+					}
+					add_days_mission_timeout  = {
+						mission = POL_looming_peasants_strike_mission
+						days = 70
+					}
 				}
-				add_days_mission_timeout  = {
-					mission = POL_looming_peasants_strike_mission
-					days = 70
-				}
-			}
-			if = {
-				limit = {
-					has_active_mission = POL_peasants_strike
-				}
-				add_days_mission_timeout  = {
-					mission = POL_peasants_strike
-					days = 70
+				if = {
+					limit = {
+						has_active_mission = POL_peasants_strike
+					}
+					add_days_mission_timeout  = {
+						mission = POL_peasants_strike
+						days = 70
+					}
 				}
 			}
 		}
@@ -1404,7 +1404,6 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
-			unlock_decision_category_tooltip = POL_invite_foreign_motor_decisions
 		}
 	}
 
@@ -2036,10 +2035,13 @@ focus_tree = {
 				add_idea = POL_sanation_left_opposition_2
 				remove_idea = POL_sanation_left_opposition_1
 			}
-			activate_mission = POL_sanation_left_irritation
-			activate_mission = POL_sanation_right_irritation
-			unlock_decision_tooltip = POL_sideline_the_left
-			unlock_decision_tooltip = POL_sideline_the_right
+			if = {
+				limit = { always = no }
+				activate_mission = POL_sanation_left_irritation
+				activate_mission = POL_sanation_right_irritation
+				unlock_decision_tooltip = POL_sideline_the_left
+				unlock_decision_tooltip = POL_sideline_the_right
+			}
 		}
 	}
 
@@ -2995,11 +2997,11 @@ focus_tree = {
 					is_subject_of = GER
 					is_in_faction_with = GER
 				}
-				has_completed_focus = POL_reach_out_to_underground_state
+				always = no
 			}
 			OR = {
-				NOT = { has_completed_focus = POL_plan_east }
-				has_completed_focus = POL_complete_plan_east
+				NOT = { always = no }
+				always = no
 			}
 		}
 
@@ -3342,7 +3344,10 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			unlock_decision_tooltip = POL_defend_in_west_state
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_defend_in_west_state
+			}
 			add_doctrine_cost_reduction = {
 				name = POL_local_western_plans
 				cost_reduction = 0.5
@@ -3941,10 +3946,10 @@ focus_tree = {
 						limit = {
 							NOT = { has_dlc = "Gotterdammerung" }
 						}
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 					exists = no
 				}
@@ -4198,27 +4203,27 @@ focus_tree = {
 			}
 			has_army_manpower = { size > 699999 }
 			OR = {
-				NOT = { has_completed_focus = POL_baltic_alliance_focus }
-				has_completed_focus = POL_romanian_alliance
+				NOT = { always = no }
+				always = no
 			}
 			OR = {
-				NOT = { has_completed_focus = POL_falangist_international }
-				has_completed_focus = POL_invite_the_baltics
+				NOT = { always = no }
+				always = no
 			}
 			OR = {
-				NOT = { has_completed_focus = POL_morges_pact }
-				has_completed_focus = POL_invite_romania_to_morges
+				NOT = { always = no }
+				always = no
 			}
 		}
 		bypass = {
 			is_faction_leader = yes
 			OR = {
-				NOT = { has_completed_focus = POL_baltic_alliance_focus }
-				has_completed_focus = POL_romanian_alliance
+				NOT = { always = no }
+				always = no
 			}
 			OR = {
-				NOT = { has_completed_focus = POL_morges_pact }
-				has_completed_focus = POL_invite_romania_to_morges
+				NOT = { always = no }
+				always = no
 			}
 		}
 		x = 97
@@ -4255,7 +4260,7 @@ focus_tree = {
 			x = -39
 			y = 0
 			trigger = {
-				has_completed_focus = POL_organize_the_peasants_strike
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -4267,7 +4272,7 @@ focus_tree = {
 			x = -31
 			y = 0
 			trigger = {
-				has_completed_focus = POL_assemble_the_regency_council
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -4279,7 +4284,7 @@ focus_tree = {
 			x = -47
 			y = 0
 			trigger = {
-				has_completed_focus = POL_nationalist_constitution
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -4535,7 +4540,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			unlock_decision_tooltip = POL_diplomatic_mission_to_FIN
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_FIN
+			}
 		}
 	}
 
@@ -4584,9 +4592,12 @@ focus_tree = {
 				}
 			}
 
-			unlock_decision_tooltip = POL_diplomatic_mission_to_DEN
-			unlock_decision_tooltip = POL_diplomatic_mission_to_SWE
-			unlock_decision_tooltip = POL_diplomatic_mission_to_NOR
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_DEN
+				unlock_decision_tooltip = POL_diplomatic_mission_to_SWE
+				unlock_decision_tooltip = POL_diplomatic_mission_to_NOR
+			}
 		}
 	}
 
@@ -4717,8 +4728,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			unlock_decision_tooltip = POL_diplomatic_mission_to_CZE
-			unlock_decision_tooltip = POL_diplomatic_mission_to_YUG
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_CZE
+				unlock_decision_tooltip = POL_diplomatic_mission_to_YUG
+			}
 		}
 	}
 
@@ -4757,8 +4771,11 @@ focus_tree = {
 			CZE = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			unlock_decision_tooltip = POL_diplomatic_mission_to_AUS
-			unlock_decision_tooltip = POL_diplomatic_mission_to_HUN
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_AUS
+				unlock_decision_tooltip = POL_diplomatic_mission_to_HUN
+			}
 		}
 	}
 
@@ -4835,7 +4852,10 @@ focus_tree = {
 					country_event = { id = poland.16 days = 1 }
 				}
 			}
-			unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			}
 		}
 	}
 
@@ -4875,8 +4895,11 @@ focus_tree = {
 			YUG = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			unlock_decision_tooltip = POL_diplomatic_mission_to_GRE
-			unlock_decision_tooltip = POL_diplomatic_mission_to_TUR
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_GRE
+				unlock_decision_tooltip = POL_diplomatic_mission_to_TUR
+			}
 		}
 	}
 
@@ -4926,7 +4949,10 @@ focus_tree = {
 			GRE = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			}
 		}
 	}
 
@@ -4976,7 +5002,10 @@ focus_tree = {
 			TUR = {
 				country_event = { id = poland.16 days = 1 }
 			}
-			unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = POL_diplomatic_mission_to_ITA
+			}
 		}
 	}
 
@@ -5074,7 +5103,7 @@ focus_tree = {
 			x = -39
 			y = 0
 			trigger = {
-				has_completed_focus = POL_organize_the_peasants_strike
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -5086,7 +5115,7 @@ focus_tree = {
 			x = -31
 			y = 0
 			trigger = {
-				has_completed_focus = POL_assemble_the_regency_council
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -5098,7 +5127,7 @@ focus_tree = {
 			x = -47
 			y = 0
 			trigger = {
-				has_completed_focus = POL_nationalist_constitution
+				always = no
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
