@@ -716,9 +716,6 @@ SWE_reduce_the_cross_we_bear = {
 SWE_on_freed_cross_we_bear = {
 	if = {
 		limit = {
-			SWE = {
-				has_completed_focus = SWE_the_cross_we_bear
-			}
 			NOT = { has_country_flag = SWE_has_already_uncapped_once }
 			NORDIC_is_nordic = yes
 		}

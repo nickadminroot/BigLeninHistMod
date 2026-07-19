@@ -105,7 +105,7 @@ SWE_rapid_mob_manpower_law_trigger = {
 			}
 		}
 
-		has_completed_focus = SWE_rapid_mobilization
+		hidden_trigger = { always = yes }
 	}
 	else = {
 		hidden_trigger = { always = no }  #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
@@ -133,7 +133,6 @@ SWE_refuge_for_revolutionaries_trigger = {
 	hidden_trigger = {
 		SWE_AAT = yes
 		SWE = { 
-			has_completed_focus = SWE_refuge_from_war 
 			exists = yes
 			is_subject = no
 		}

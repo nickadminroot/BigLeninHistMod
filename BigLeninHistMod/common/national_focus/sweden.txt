@@ -864,7 +864,7 @@ focus_tree = {
 					rule = SWE_AI_BEHAVIOR
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
+
 				has_war_support < 0.1
 				has_stability > 0.7
 				factor = 50
@@ -912,7 +912,7 @@ focus_tree = {
 					rule = SWE_AI_BEHAVIOR
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
+
 				has_war_support < 0.1
 				has_stability > 0.7
 				factor = 50
@@ -1512,7 +1512,7 @@ focus_tree = {
 					rule = SWE_AI_BEHAVIOR
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
+
 				has_war_support < 0.1
 				has_stability > 0.7
 				factor = 50
@@ -1576,7 +1576,7 @@ focus_tree = {
 					rule = SWE_AI_BEHAVIOR
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
+
 				has_war_support < 0.1
 				has_stability > 0.7
 				factor = 50
@@ -2028,7 +2028,7 @@ focus_tree = {
 					rule = SWE_AI_BEHAVIOR
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
+
 				has_war_support < 0.1
 				has_stability > 0.7
 				factor = 50
@@ -3576,7 +3576,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_completed_focus = SWE_prevent_a_red_dictatorship }
 		}
 
 		bypass = {

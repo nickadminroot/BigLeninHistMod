@@ -1,0 +1,372 @@
+characters={
+	SWE_per_albin_hansson={
+		name=SWE_per_albin_hansson
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_per_albin_hansson
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	SWE_tage_erlander={
+		name=SWE_tage_erlander
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_tage_erlander
+				small = "GFX_portrait_SWE_tage_erlander_small"
+			}
+		}
+	}
+	SWE_axel_pehrssonbramstorp={
+		name=SWE_axel_pehrssonbramstorp
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_axel_pehrsson_bramstorp
+				small="GFX_portrait_SWE_axel_pehrsson_bramstorp_small"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			traits = { SWE_support_party_in_power SWE_rearnament_proponent } 
+			id=-1
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_axel_pehrssonbramstorp
+			allowed  = {
+				original_tag  = SWE
+			}
+			traits  = {
+				SWE_minister_of_agriculture 
+			}
+			available = {
+				is_country_leader = no
+			}
+			visible = {
+				always = yes
+			}
+		}
+	}
+
+	SWE_gosta_bagge = {
+		name=SWE_gosta_bagge
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_gosta_bagge
+				small="GFX_portrait_SWE_gosta_bagge_small"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			traits = { SWE_minor_opposition_party_in_power minister_of_ecclesiastical_affairs } 
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_gosta_bagge
+			allowed  = {
+				original_tag  = SWE
+			}
+			traits  = {
+				 minister_of_ecclesiastical_affairs
+			}
+
+			visible = {
+				is_country_leader = no
+			}
+			available = { 
+				is_country_leader = no
+			}
+		}
+	}
+	SWE_ernst_wigforss={
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = SWE_ernst_wigforss
+				allowed = {
+					original_tag  = SWE	
+				}
+				traits  = {
+					financial_expert
+				}
+				available = {
+					is_country_leader = no
+				}
+			}
+
+			name=SWE_ernst_wigforss
+			portraits={
+				army={
+					large ="GFX_portrait_SWE_ernst_wigforss"
+					small = "GFX_portrait_SWE_ernst_wigforss_small"
+				}
+
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny"}
+			}
+
+			advisor={
+				slot = political_advisor
+				idea_token = SWE_ernst_wigforss
+				allowed  = {
+						original_tag  = SWE
+					}
+					traits  = {
+						captain_of_industry 
+					}
+			}
+			name=SWE_ernst_wigforss
+			portraits={
+				army={
+					small="GFX_idea_generic_political_advisor_europe_3"
+				}
+			}
+		}
+	}
+
+	SWE_fallen_riksdag = {
+		name=SWE_fallen_riksdag
+		portraits={
+			civilian={
+				small = "GFX_portrait_SWE_fallen_riksdag_small"
+				large=GFX_portrait_SWE_fallen_riksdag
+			}
+		}
+		#country_leader={
+		#	ideology=conservatism
+		#	expire="1965.1.1.1"
+		#	traits = { SWE_minor_opposition_party_in_power SWE_rearnament_proponent } 
+		#	id=-1
+		#}
+	}
+	SWE_rikard_persson={
+		name=SWE_rikard_persson 
+		portraits={
+			army={
+				large=GFX_portrait_SWE_claes_lindstrom
+				small=GFX_portrait_SWE_claes_lindstrom_small
+			}
+		}
+		navy_leader={
+			traits={ concealment_expert smoke_screen_expert blockade_runner }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			visible = { has_character_flag = has_rikard_persson }
+		}
+
+	}
+
+	SWE_herman_eriksson={
+		advisor={
+			slot = political_advisor
+			cost = 75
+			idea_token = SWE_herman_eriksson
+			visible = { 
+				OR = {
+					has_government = democratic 
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+
+			available = {
+				OR = {
+					has_government = democratic 
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			allowed  = {
+				original_tag  = SWE
+			}
+			traits  = {
+				SWE_minister_of_trade 
+			}
+
+			on_add = {
+				set_character_flag = is_hired
+			}
+
+			on_remove = {
+				clr_character_flag = is_hired
+			}
+		}
+		name=SWE_herman_eriksson
+		portraits={
+			civilian={
+				small="GFX_portrait_portrait_SWE_herman_eriksson_small"
+			}
+		}
+	}
+	SWE_king_gustaf_v = {
+		name=SWE_king_gustaf_v
+		portraits={
+			civilian={
+				small="GFX_idea_SWE_king_gustaf"
+			}
+
+			army = {
+				large = "GFX_portrait_SWE_king_gustaf_v"
+			}
+
+		}
+
+		advisor={
+			slot = political_advisor
+			cost = 200
+			idea_token = SWE_king_gustaf_v
+			visible = { 
+
+			}
+
+			visible = {
+				is_country_leader = no
+			}
+			available = { 
+				is_country_leader = no
+				NOT = {
+					has_completed_focus = SWE_liquidate_the_monarchy
+				}
+			}
+			allowed  = {
+				original_tag  = SWE
+			}
+			traits  = {
+				SWE_ardent_conservative 
+			}
+		}
+		#country_leader={
+		#	ideology=centrism
+		#	expire="1965.1.1.1"
+		#	id = -1
+		#}
+
+	}
+
+	SWE_sven_olov_lindholm={
+		name=SWE_sven_olov_lindholm
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_sven_olav_lindholm
+			}
+		}
+	}
+
+	SWE_birger_furugard = {
+		advisor={
+			slot = political_advisor
+			cost = 150
+			idea_token = SWE_birger_furugard
+			allowed  = {
+				original_tag  = SWE
+			}
+			available = { is_country_leader = no }
+			visible = { has_government = fascism }
+			traits = { national_socialist_veterinarian }
+		}
+		name=SWE_birger_furugard
+		portraits={
+			civilian={
+				large="GFX_portrait_SWE_birger_furugard"
+				small="GFX_portrait_SWE_birger_furugard_small"
+			}
+		}
+	}
+
+	SWE_karl_kilbom = {
+		advisor={
+			slot = political_advisor
+			cost = 150
+			idea_token = SWE_karl_kilbom
+			allowed  = {
+				original_tag  = SWE
+			}
+			visible = { 
+				has_government = communism 
+				NOT = {
+					has_country_leader = { character = SWE_sven_linderot }
+ 				}
+			}
+			traits = { anti_soviet_socialist }
+		}
+		name=SWE_karl_kilbom
+		portraits={
+			civilian={
+				large="GFX_portrait_SWE_karl_kilbom"
+				small="GFX_portrait_SWE_karl_kilbom_small"
+			}
+		}
+	}
+	SWE_sven_linderot={
+		instance = {
+			allowed = { has_dlc = "Arms Against Tyranny" }
+				advisor={
+				
+					visible = { has_government = communism }
+					slot = political_advisor
+					cost = 125
+					idea_token = SWE_sven_linderot
+					allowed  = {
+						original_tag  = SWE
+					}
+
+					on_add = {
+						if = {
+							limit = {
+								FIN = {
+									NOT = { has_completed_focus = FIN_approach_the_soviets }
+								}
+							}
+							SWE = { add_ideas =  SWE_committee_against_the_finnish_white_terror_idea } 
+						}
+					}
+
+					on_remove = {  
+						if = {
+							limit = {
+								SWE = { has_idea = SWE_committee_against_the_finnish_white_terror_idea }
+							}
+							SWE = { remove_ideas =  SWE_committee_against_the_finnish_white_terror_idea }
+						}
+					}
+
+					traits = { SWE_committee_against_the_finnish_white_terror }
+				}
+				name=SWE_sven_linderot
+				portraits={
+					civilian = {
+						large = GFX_portrait_SWE_sven_linderot
+						small="GFX_portrait_SWE_sven_linderot_small"
+					}
+				}
+			
+		}
+		instance = {
+			allowed = { NOT = {  has_dlc = "Arms Against Tyranny"  } }
+			name=SWE_sven_linderot
+			portraits={
+				civilian={
+					#large=GFX_portrait_SWE_sven_linderot
+				}
+			}
+		}
+	}
+}
