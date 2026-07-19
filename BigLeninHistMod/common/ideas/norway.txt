@@ -400,5 +400,100 @@ ideas = {
 		}
 	}
 
+		NOR_efficient_production_ns = { 
+			picture = man_five_year_plan_industry
+
+			allowed = {
+				NOR_AAT = yes 
+			}
+			
+			allowed_civil_war = {
+				always = yes 
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = -0.01
+			}
+		}
+
+		NOR_new_haeren_ns_1 = {
+			
+			picture = NOR_new_haeren_ns
+
+			name = NOR_new_haeren_ns_1
+			allowed = {
+				NOR_AAT = yes 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				training_time_factor = -0.15
+				conscription_factor = 0.2
+				winter_attrition_factor = -0.10
+			}
+		}
+
+		NOR_new_haeren_ns_2 = {
+			name = NOR_new_haeren_ns_1
+			allowed = {
+				NOR_AAT = yes 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			picture = NOR_new_haeren_ns
+
+			modifier = {
+				training_time_factor = -0.15
+				conscription_factor = 0.2
+				winter_attrition_factor = -0.15
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.15
+
+			}
+		}
+
+		NOR_kungens_garde_ns = {
+			picture = NOR_royal_guards_battalion_ns
+			allowed = {
+				NOR_AAT = yes
+			}
+
+			cancel = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				special_forces_cap = 0.08
+				special_forces_training_time_factor = -0.1
+				modifier_army_sub_unit_category_special_forces_max_org_factor = 0.1
+			} 
+		}
+
 	}
 }
