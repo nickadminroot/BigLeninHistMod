@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_the_giant_has_awoken",
+  "sprite_name": "GFX_focus_custom_USA_the_giant_has_awoken",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_the_giant_has_awoken.dds",
+  "source_file": "common/national_focus/USA.txt",
+  "fallback_icon": "GFX_goal_generic_construct_mil_factory",
+  "prompt": "A colossal industrial giant breaking chains with one hand while holding a factory in the other, surrounded by gears and fire",
+  "style_preset": "hoi4_focus_v1"
+}

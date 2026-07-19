@@ -1,0 +1,73 @@
+﻿###########################
+# BLHM USA Events
+###########################
+
+add_namespace = BLHM_USA
+
+# GER embargo event
+country_event = {
+	id = BLHM_USA.1
+	title = BLHM_USA.1.t
+	desc = BLHM_USA.1.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GER
+	}
+
+	option = {
+		name = BLHM_USA.1.a
+	}
+}
+
+# World news - Germany embargo
+news_event = {
+	id = BLHM_USA.2
+	title = BLHM_USA.2.t
+	desc = BLHM_USA.2.d
+	picture = GFX_news_event_generic_usa_treaty
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_USA.2.a
+	}
+}
+
+# JAP embargo event
+country_event = {
+	id = BLHM_USA.3
+	title = BLHM_USA.3.t
+	desc = BLHM_USA.3.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = JAP
+	}
+
+	option = {
+		name = BLHM_USA.3.a
+	}
+}
+
+# World news - Japan embargo
+news_event = {
+	id = BLHM_USA.4
+	title = BLHM_USA.4.t
+	desc = BLHM_USA.4.d
+	picture = GFX_news_event_generic_usa_treaty
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_USA.4.a
+	}
+}

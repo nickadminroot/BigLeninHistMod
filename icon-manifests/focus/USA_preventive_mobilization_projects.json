@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_preventive_mobilization_projects",
+  "sprite_name": "GFX_focus_custom_USA_preventive_mobilization_projects",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_preventive_mobilization_projects.dds",
+  "source_file": "common/national_focus/USA.txt",
+  "fallback_icon": "GFX_goal_generic_production",
+  "prompt": "A shield with crossed wrench and rifle in front of a factory assembly line with blueprints",
+  "style_preset": "hoi4_focus_v1"
+}

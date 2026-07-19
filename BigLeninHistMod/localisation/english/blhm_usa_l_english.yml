@@ -1,0 +1,62 @@
+﻿l_english:
+ # Focuses
+ USA_limited_intervention:0 "Limited Intervention"
+ USA_limited_intervention_desc:0 "It is time to take a more active role in global affairs. Our first step will be to supply those who resist the forces of aggression."
+ USA_war_propaganda:0 "War Propaganda"
+ USA_war_propaganda_desc:0 "The American people must be made aware of the threats facing our nation and our values. A coordinated propaganda campaign will prepare them for the challenges ahead."
+ USA_focus_on_europe:0 "Focus on Europe"
+ USA_focus_on_europe_desc:0 "The situation in Europe demands our attention. We must coordinate with our allies to contain German aggression and support the liberation of occupied nations."
+ USA_focus_on_asia:0 "Economic Blockade of Japan"
+ USA_focus_on_asia_desc:0 "Japan's aggression in Asia threatens the balance of power in the Pacific. An economic blockade will cripple their war machine and show our resolve."
+ USA_office_of_strategic_services:0 "Office of Strategic Services"
+ USA_office_of_strategic_services_desc:0 "We need a centralized intelligence agency to coordinate espionage and sabotage operations behind enemy lines."
+ USA_magic:0 "Marine Corps Intelligence"
+ USA_magic_desc:0 "Cryptanalysis and signals intelligence are vital to modern warfare. The Marine Corps will establish a dedicated intelligence unit to decode enemy communications."
+ USA_preventive_mobilization_projects:0 "Preventive Mobilization Projects"
+ USA_preventive_mobilization_projects_desc:0 "We must prepare in advance for possible conflicts. Tomorrow may bring unforeseen challenges, and we cannot afford to be caught off guard."
+ USA_the_giant_has_awoken:0 "The Giant Has Awoken"
+ USA_the_giant_has_awoken_desc:0 "American industry is now fully mobilized for war. Our production capabilities have reached unprecedented levels."
+
+ # Economy Laws
+ USA_american_dream:0 "American Dream"
+ USA_american_dream_desc:0 "An economic policy focused on maintaining the American standard of living while supporting the war effort through limited mobilization."
+ USA_giant_wakes_economy:0 "Giant Wakes Economy"
+ USA_giant_wakes_economy_desc:0 "As the nation awakens to the realities of war, our industry shifts toward military production while maintaining essential civilian capacity."
+ USA_giant_has_awoken_economy:0 "Giant Has Awoken Economy"
+ USA_giant_has_awoken_economy_desc:0 "The full might of the American industrial machine is now directed toward victory. Every factory works around the clock to supply our forces."
+
+ # National Spirits
+ USA_soviet_american_agreement:0 "Soviet-American Agreement"
+ USA_soviet_american_agreement_desc:0 "An economic cooperation agreement between the United States and the Soviet Union boosts our industrial capacity and reduces consumer goods demand."
+
+ # Soviet-American spirit modifiers
+ USA_soviet_american_agreement_modifier:0 "Soviet-American Agreement"
+ USA_soviet_american_agreement_modifier_desc:0 "Industrial capacity +5%, Consumer Goods -5%"
+
+ # Tooltips
+ BLHM_embargo_germany_tt:0 "§YEmbargo Germany§!\nThe USA, United Kingdom, France, the Netherlands, Belgium, and all Allied majors will embargo Germany."
+ BLHM_embargo_japan_tt:0 "§YEmbargo Japan§!\nThe USA, the Netherlands, the Dutch East Indies, and all Allied majors will embargo Japan."
+ BLHM_arsenal_of_democracy_tt:0 "§YArsenal of Democracy§!\nGrants the §YAmerican Dream§! economy law and §G8§! military factories."
+ BLHM_military_construction_tt:0 "§YMilitary Construction§!\nGrants §G8§! military factories."
+ BLHM_USACE_projects_tt:0 "§YUSACE Projects§!\nGrants §G8§! military factories."
+ BLHM_two_ocean_navy_tt:0 "§YTwo-Ocean Navy Act§!\nGrants §G6§! dockyards."
+
+ # Events - Germany Embargo
+ BLHM_USA.1.t:0 "USA Imposes Economic Embargo"
+ BLHM_USA.1.d:0 "The United States has imposed a comprehensive economic embargo against the German Reich. All American and Allied trade with Germany is now prohibited. This will severely restrict our access to vital resources and industrial goods."
+ BLHM_USA.1.a:0 "They will regret this decision."
+
+ # News - Germany Embargo
+ BLHM_USA.2.t:0 "USA Declares Economic War on Germany"
+ BLHM_USA.2.d:0 "In a decisive move, the United States has announced a complete economic embargo against Nazi Germany. The embargo, coordinated with Allied nations including the United Kingdom, France, the Netherlands, and Belgium, targets Germany's access to strategic materials and industrial resources. This marks a significant escalation in America's involvement in the European conflict, stopping short of military intervention but dealing a severe blow to the German war economy."
+ BLHM_USA.2.a:0 "The noose tightens."
+
+ # Events - Japan Embargo
+ BLHM_USA.3.t:0 "USA Imposes Oil and Rubber Embargo"
+ BLHM_USA.3.d:0 "The United States has imposed a crippling embargo on oil and rubber exports to Japan. Our military expansion in the Pacific is now directly threatened. Without access to American oil and raw materials, our war machine will grind to a halt within months."
+ BLHM_USA.3.a:0 "They will regret this decision."
+
+ # News - Japan Embargo
+ BLHM_USA.4.t:0 "USA Enforces Economic Blockade of Japan"
+ BLHM_USA.4.d:0 "In response to Japan's continued aggression in Asia and the occupation of Chinese territory, the United States has declared a comprehensive economic blockade against the Japanese Empire. Working closely with the Dutch East Indies, the United Kingdom, and other Allied nations, the blockade targets Japan's access to vital oil, rubber, and raw materials. The Imperial Japanese war machine, heavily dependent on imported resources, now faces a stark choice: halt its expansion or risk a direct confrontation with the United States."
+ BLHM_USA.4.a:0 "The Pacific balance shifts."

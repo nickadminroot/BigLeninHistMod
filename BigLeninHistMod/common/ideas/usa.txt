@@ -2030,6 +2030,19 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
+
+		USA_soviet_american_agreement = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
 		USA_union_pacific_railway = {
 
 			picture = idea_USA_union_pacific_railway
@@ -2046,6 +2059,77 @@ ideas = {
 			}
 
 			traits = { railway_company }
+		}
+	}
+
+	economy = {
+		law = yes
+
+		USA_american_dream = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.45
+				production_speed_arms_factory_factor = -0.25
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_dockyard_factor = -0.25
+				factory_energy_consumption = 0.25
+			}
+		}
+
+		USA_giant_wakes_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.25
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_industrial_complex_factor = -0.20
+				industrial_capacity_factory = 0.10
+				production_speed_dockyard_factor = 0.10
+			}
+		}
+
+		USA_giant_has_awoken_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_arms_factory_factor = 0.20
+				production_speed_industrial_complex_factor = -0.40
+				industrial_capacity_factory = 0.15
+				production_speed_dockyard_factor = 0.20
+			}
+		}
+
+		USA_american_economy = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.07
+			}
 		}
 	}
 }

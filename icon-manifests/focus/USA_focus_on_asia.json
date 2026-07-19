@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_focus_on_asia",
+  "sprite_name": "GFX_focus_custom_USA_focus_on_asia",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_focus_on_asia.dds",
+  "source_file": "common/national_focus/USA.txt",
+  "fallback_icon": "GFX_focus_usa_focus_on_asia",
+  "prompt": "A clenched fist breaking a chain around a rising sun emblem with oil drum and rubber plant symbols crossed out",
+  "style_preset": "hoi4_focus_v1"
+}
