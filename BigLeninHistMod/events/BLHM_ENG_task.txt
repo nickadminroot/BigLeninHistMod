@@ -121,3 +121,20 @@ country_event = {
 		}
 	}
 }
+
+# Naval Armed Forces Branch - clears branch lock flag after 720 days
+country_event = {
+	id = BLHM_ENG_task.4
+	title = BLHM_ENG_task.4.t
+	desc = BLHM_ENG_task.4.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.4.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = BLHM_ENG_armed_forces_priority_lock
+	}
+}

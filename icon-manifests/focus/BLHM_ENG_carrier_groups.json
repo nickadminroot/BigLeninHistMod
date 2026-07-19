@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_carrier_groups",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_carrier_groups",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_carrier_groups.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_navy_carrier",
+  "prompt": "Aircraft carrier with planes launching from its deck at sunrise",
+  "style_preset": "hoi4_focus_v1"
+}

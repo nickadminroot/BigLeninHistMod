@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_cost_optimisation_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_cost_optimisation_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_cost_optimisation_idea.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A dockyard production chart showing cost reduction graphs with pound sterling symbols",
+  "style_preset": "hoi4_idea_v1"
+}

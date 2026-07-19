@@ -5224,4 +5224,343 @@ focus_tree = {
 		}
 	}
 
+	# ========== BLHM Naval Armed Forces Branch ==========
+
+	focus = {
+		id = BLHM_ENG_war_construction
+		icon = GFX_goal_generic_construct_military
+		x = 75
+		y = 0
+		cost = 8
+		available = {
+			threat > 0.10
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_naval_complex
+		prerequisite = { focus = BLHM_ENG_war_construction }
+		icon = GFX_goal_generic_construct_naval
+		x = 75
+		y = 1
+		cost = 8
+		available = {
+			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock } }
+				set_country_flag = BLHM_ENG_armed_forces_priority_lock
+				country_event = { id = BLHM_ENG_task.4 hours = 17280 }
+			}
+			add_tech_bonus = {
+				name = BLHM_ENG_naval_complex_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_next_generation_fleet
+		prerequisite = { focus = BLHM_ENG_naval_complex }
+		icon = GFX_goal_generic_navy_cruiser
+		x = 73
+		y = 2
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = BLHM_ENG_fleet_of_britain } }
+				add_ideas = BLHM_ENG_fleet_of_britain
+			}
+			add_ideas = BLHM_ENG_next_generation_fleet_idea
+			add_tech_bonus = {
+				name = BLHM_ENG_naval_modules_bonus
+				bonus = 2.0
+				uses = 2
+				category = naval_modules
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_faithful_to_tradition
+		prerequisite = { focus = BLHM_ENG_naval_complex }
+		icon = GFX_goal_generic_navy_battleship
+		x = 75
+		y = 2
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = BLHM_ENG_fleet_of_britain } }
+				add_ideas = BLHM_ENG_fleet_of_britain
+			}
+			add_ideas = BLHM_ENG_faithful_to_tradition_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_anti_submarine_defence
+		prerequisite = { focus = BLHM_ENG_naval_complex }
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 77
+		y = 2
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = BLHM_ENG_fleet_of_britain } }
+				add_ideas = BLHM_ENG_fleet_of_britain
+			}
+			add_ideas = BLHM_ENG_anti_submarine_defence_idea
+			add_tech_bonus = {
+				name = BLHM_ENG_asw_bonus
+				bonus = 1.0
+				uses = 3
+				category = asw_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_carrier_groups
+		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
+		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
+		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
+		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
+		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
+		icon = GFX_goal_generic_navy_carrier
+		x = 73
+		y = 3
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = BLHM_ENG_carrier_groups_idea
+			add_tech_bonus = {
+				name = BLHM_ENG_carrier_bonus
+				bonus = 2.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_cost_optimisation
+		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
+		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
+		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
+		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
+		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
+		icon = GFX_goal_generic_production
+		x = 75
+		y = 3
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = BLHM_ENG_cost_optimisation_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_submarine_warfare
+		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
+		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
+		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
+		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
+		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
+		icon = GFX_goal_generic_navy_submarine
+		x = 77
+		y = 3
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLHM_ENG_ss_ahead_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_young_school
+		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
+		mutually_exclusive = { focus = BLHM_ENG_old_guard }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 73
+		y = 4
+		cost = 5
+		available = {
+			has_war = yes
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			add_ideas = BLHM_ENG_young_school_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_old_guard
+		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
+		mutually_exclusive = { focus = BLHM_ENG_young_school }
+		mutually_exclusive = { focus = BLHM_ENG_london_mk2_torpedoes }
+		icon = GFX_goal_generic_navy_battleship2
+		x = 75
+		y = 4
+		cost = 5
+		available = {
+			has_war = yes
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			add_ideas = BLHM_ENG_old_guard_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_london_mk2_torpedoes
+		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
+		mutually_exclusive = { focus = BLHM_ENG_old_guard }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 77
+		y = 4
+		cost = 5
+		available = {
+			has_war = yes
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			add_ideas = BLHM_ENG_london_mk2_torpedoes_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_emergency_fleet_refit
+		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
+		icon = GFX_goal_generic_production
+		x = 79
+		y = 4
+		cost = 5
+		available = {
+			has_war = yes
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = BLHM_ENG_emergency_fleet_refit_idea
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_expand_british_dockyards
+		prerequisite = { focus = BLHM_ENG_young_school focus = BLHM_ENG_old_guard focus = BLHM_ENG_london_mk2_torpedoes }
+		icon = GFX_goal_generic_construct_dockyard
+		x = 75
+		y = 5
+		cost = 5
+		available = {
+			OR = {
+				118 = { controller = { NOT = { is_in_faction_with = ROOT } } }
+				446 = { controller = { NOT = { is_in_faction_with = ROOT } } }
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			122 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			123 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			125 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_prepare_for_d_day
+		prerequisite = { focus = BLHM_ENG_expand_british_dockyards }
+		icon = GFX_goal_generic_major_war
+		x = 75
+		y = 6
+		cost = 10
+		available = {
+			has_war = yes
+			date > 1942.7.1
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_country_flag = BLHM_ENG_d_day_preparations
+		}
+	}
+
 }

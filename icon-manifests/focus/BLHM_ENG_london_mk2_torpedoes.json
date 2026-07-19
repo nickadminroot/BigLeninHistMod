@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_london_mk2_torpedoes",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_london_mk2_torpedoes",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_london_mk2_torpedoes.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_navy_doctrines_tactics",
+  "prompt": "A large torpedo being loaded into a submarine torpedo tube in a London dockyard",
+  "style_preset": "hoi4_focus_v1"
+}

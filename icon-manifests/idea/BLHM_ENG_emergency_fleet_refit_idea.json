@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_emergency_fleet_refit_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_emergency_fleet_refit_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_emergency_fleet_refit_idea.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "Workers welding new armor plates onto a warship in a floodlit drydock at night",
+  "style_preset": "hoi4_idea_v1"
+}

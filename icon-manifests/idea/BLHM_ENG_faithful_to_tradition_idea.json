@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_faithful_to_tradition_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_faithful_to_tradition_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_faithful_to_tradition_idea.dds",
+  "source_file": "common/ideas/britain.txt",
+  "fallback_picture": "generic_navy_bonus",
+  "prompt": "A historical painting of HMS Victory with modern battleships sailing behind",
+  "style_preset": "hoi4_idea_v1"
+}
