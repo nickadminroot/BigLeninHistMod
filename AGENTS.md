@@ -93,6 +93,7 @@ The helper symlinks extra files by default when present: `node_modules/`, `scrip
 
 ### Subagents and workers
 
+- Prefer async subagents - you can resume sessions of only these subagents.
 - The top-level session's checkout is the default write boundary. Point subagents at that same worktree with an explicit `cwd`; they must not silently edit the main checkout.
 - Parallel read-only workers may share a checkout. Keep one writer at a time within one checkout.
 - Do not create one worktree per worker by default. Normally the user obtains real parallel writes through separate top-level Pi sessions and session-level worktrees.
