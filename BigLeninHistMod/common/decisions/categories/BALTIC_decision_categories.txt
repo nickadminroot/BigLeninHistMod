@@ -95,17 +95,7 @@ march_through_estonia = {
 	}
 
 	visible = {
-		has_completed_focus = EST_rally_the_nation
-		NOT = { 
-			has_country_flag = EST_vapsid_takeover_finland
-			has_government = fascism 
-		}
-	}
-	
-	on_map_area = {
-		state = 812
-		name = march_through_estonia
-		zoom = 150
+		always = no #EST_rally_the_nation focus removed
 	}
 	priority = 10
 }
@@ -120,23 +110,7 @@ EST_convert_FIN_cat = {
 	}
 
 	visible = {
-		has_completed_focus = EST_national_pride_in_finland
-		NOT = {
-			has_country_flag = EST_vapsid_takeover_finland
-			any_other_country = {
-				original_tag = FIN 
-				OR = {
-					has_government = fascism
- 					has_country_flag = estonia_started_cw_in_finland
-				}
-			}
-		}
-	}
-	
-	on_map_area = {
-		state = 149
-		name = EST_convert_FIN_cat
-		zoom = 500
+		always = no #EST_national_pride_in_finland focus removed
 	}
 	priority = 10
 }
@@ -171,7 +145,7 @@ LAT_delay_perkonkrust_decisions = {
 	}
 
 	visible = {
-		has_completed_focus = LAT_latvia_for_latvians
+		always = no #LAT_latvia_for_latvians focus removed
 	}
 	priority = 9
 }
@@ -186,7 +160,7 @@ promote_baltic_fascism_cat = {
 	}
 
 	visible = {
-		has_completed_focus = LAT_support_baltic_fascists
+		always = no #LAT_support_baltic_fascists focus removed
 	}
 	priority = 9
 }
@@ -209,11 +183,7 @@ BALTIC_entente = {
 	}
 
 	visible = {
-		OR = {
-			has_completed_focus = EST_formalize_baltic_entente
-			has_completed_focus = LAT_formalize_baltic_entente
-			has_completed_focus = LIT_formalize_baltic_entente
-		}
+		always = no #Baltic Entente focuses removed
 	}
 }
 

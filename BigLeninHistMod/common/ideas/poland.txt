@@ -93,6 +93,64 @@ ideas = {
 		}
 
 
+	POL_april_constitution_2 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = neutrality
+		}
+		
+		available = {
+			is_subject = no 
+		}
+
+
+		removal_cost = -1
+
+		picture = POL_april_constitution
+
+		modifier = {
+			political_power_factor = -0.1
+			political_advisor_cost_factor = 0.1
+			economy_cost_factor = 0.1
+			mobilization_laws_cost_factor = 0.1
+			drift_defence_factor = 0.05
+			neutrality_drift = 0.1
+		}
+	}
+
+	POL_april_constitution_3 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = neutrality
+		}
+		
+		available = {
+			is_subject = no 
+		}
+
+
+		removal_cost = -1
+
+		picture = POL_april_constitution
+
+		modifier = {
+			political_power_factor = 0.1
+			drift_defence_factor = 0.1
+			neutrality_drift = 0.1
+		}
+	}
+
+
 	POL_aces_in_exile = {
 
 		allowed = {
@@ -685,6 +743,58 @@ ideas = {
 
 
 
+	POL_sanation_left_opposition_3 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+		available = {
+			is_subject = no 
+		}
+
+		removal_cost = -1
+
+		picture = generic_democratic_drift_bonus
+
+		modifier = {
+			stability_factor = -0.2
+			consumer_goods_factor = 0.1
+			neutrality_drift = -0.1
+		}
+	}
+
+	POL_sanation_left_opposition_4 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+		available = {
+			is_subject = no 
+		}
+
+		removal_cost = -1
+
+		picture = generic_democratic_drift_bonus
+
+		modifier = {
+			stability_factor = -0.25
+			consumer_goods_factor = 0.2
+			neutrality_drift = -0.2
+		}
+	}
+
+
+
 	POL_sanation_right_opposition_2 = {
 
 		allowed = {
@@ -707,6 +817,58 @@ ideas = {
 			war_support_factor = -0.1
 			conscription_factor = -0.1
 			neutrality_drift = -0.1
+		}
+	}
+
+
+
+	POL_sanation_right_opposition_3 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+		available = {
+			is_subject = no 
+		}
+
+		removal_cost = -1
+
+		picture = FRA_army_of_aggression_focus
+
+		modifier = {
+			war_support_factor = -0.2
+			conscription_factor = -0.2
+			neutrality_drift = -0.15
+		}
+	}
+
+	POL_sanation_right_opposition_4 = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+		available = {
+			is_subject = no 
+		}
+
+		removal_cost = -1
+
+		picture = FRA_army_of_aggression_focus
+
+		modifier = {
+			war_support_factor = -0.25
+			conscription_factor = -0.3
+			neutrality_drift = -0.2
 		}
 	}
 

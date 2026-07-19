@@ -16,9 +16,7 @@ characters={
 				original_tag = LAT
 				has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = LAT_military_dictatorship 
-			}
+			#available removed - LAT_military_dictatorship focus not in tree
 			traits = {
 				married_to_latvia 
 			}
@@ -58,7 +56,8 @@ characters={
 					not = {
 						has_government = fascism 
 					}
-					has_completed_focus = LAT_lift_ban_on_perkonkrusts 
+					#has_completed_focus = LAT_lift_ban_on_perkonkrusts - focus not in tree
+					always = yes
 				}
 				traits = {
 					hardline_latvian_nationalist 
@@ -127,9 +126,7 @@ characters={
 				original_tag = LAT
 				has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = LAT_renew_kviesis_term 
-			}
+			#available removed - LAT_renew_kviesis_term focus not in tree
 			traits = {
 				subservient_democrat
 			}
@@ -164,7 +161,8 @@ characters={
 			available = {
 				IF = {
 					limit = { has_dlc = "No Step Back" }
-					has_completed_focus = LAT_renew_kviesis_term 
+					#has_completed_focus = LAT_renew_kviesis_term - focus not in tree
+					always = yes
 				}
 			}
 			traits = {
