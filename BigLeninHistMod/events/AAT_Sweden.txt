@@ -3689,12 +3689,7 @@ country_event = { #yes
 				add = 2
 			}
 
-			modifier = {
-				ICE = {
-					has_completed_focus = ICE_break_with_the_crown 
-				}
-				factor = 0.5
-			}
+
 		}
 
 		if = {

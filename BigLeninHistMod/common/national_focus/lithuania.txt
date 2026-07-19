@@ -4229,7 +4229,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = POL_arm_monarchist_militants
 		}
 	}
 
