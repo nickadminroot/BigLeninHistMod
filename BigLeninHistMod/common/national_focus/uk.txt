@@ -4904,6 +4904,12 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_joint_tank_development_completed
 			custom_effect_tooltip = BLHM_ENG_joint_tank_development_tt
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
 		}
 	}
 
@@ -5196,6 +5202,12 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_sloped_armor_completed
 			custom_effect_tooltip = BLHM_ENG_sloped_armor_tt
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
 		}
 	}
 
@@ -5869,8 +5881,7 @@ focus_tree = {
 				type = small_plane_airframe_2
 				allow_without_tech = yes
 				parent_version = 0
-				upgrades = {
-				}
+
 				modules = {
 					fixed_main_weapon_slot = heavy_mg_4x
 					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
@@ -5879,6 +5890,337 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = BLHM_ENG_gloster_meteor_tt
+		}
+	}
+
+	# ========== BLHM Land Armed Forces Branch ==========
+
+	focus = {
+		id = BLHM_ENG_land_forces
+		icon = GFX_goal_generic_construct_military
+		x = 95
+		y = 0
+		cost = 8
+		available = {
+			NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock } }
+				set_country_flag = BLHM_ENG_armed_forces_priority_lock
+				country_event = { id = BLHM_ENG_task.8 hours = 17280 }
+			}
+			ENG = {
+				add_timed_idea = { idea = BLHM_ENG_new_cadres_training days = 180 }
+				army_experience = 150
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				add_timed_idea = { idea = BLHM_ENG_new_cadres_training days = 180 }
+				army_experience = 150
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ENG
+					NOT = { has_idea = BLHM_ENG_allied_tanks }
+				}
+				add_ideas = BLHM_ENG_allied_tanks
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_tank_development
+		prerequisite = { focus = BLHM_ENG_land_forces }
+		icon = GFX_goal_generic_army_tanks
+		x = 92
+		y = 1
+		cost = 5
+		available = {
+			NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = BLHM_ENG_land_specialisation_cooldown
+			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
+			country_event = { id = BLHM_ENG_task.10 }
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_infantry_forces
+		prerequisite = { focus = BLHM_ENG_land_forces }
+		icon = GFX_goal_generic_army_infantry
+		x = 99
+		y = 1
+		cost = 8
+		available = {
+			NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_country_flag = BLHM_ENG_land_specialisation_cooldown
+			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
+			add_tech_bonus = {
+				name = BLHM_ENG_infantry_forces_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	# ====== TANK DEVELOPMENT CHILDREN ======
+
+	focus = {
+		id = BLHM_ENG_study_french_conflict_experience
+		prerequisite = { focus = BLHM_ENG_tank_development }
+		icon = GFX_goal_generic_scientific_exchange
+		x = 91
+		y = 2
+		cost = 5
+		available = {
+			has_war = yes
+			FRA = { has_capitulated = yes }
+		}
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_study_french_conflict_experience
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_seventeen_pounder
+		prerequisite = { focus = BLHM_ENG_tank_development }
+		icon = GFX_goal_generic_army_artillery
+		x = 93
+		y = 2
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_seventeen_pounder
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_sherman_firefly
+		prerequisite = { focus = BLHM_ENG_seventeen_pounder }
+		mutually_exclusive = { focus = BLHM_ENG_global_tank_doctrine_update }
+		icon = GFX_goal_generic_army_tanks
+		x = 92
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_sherman_firefly
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_global_tank_doctrine_update
+		prerequisite = { focus = BLHM_ENG_seventeen_pounder }
+		mutually_exclusive = { focus = BLHM_ENG_sherman_firefly }
+		icon = GFX_goal_generic_army_doctrine
+		x = 94
+		y = 3
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_global_tank_doctrine_update
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_updated_communications
+		prerequisite = {
+			focus = BLHM_ENG_sherman_firefly
+			focus = BLHM_ENG_global_tank_doctrine_update
+		}
+		icon = GFX_goal_generic_army_technology
+		x = 93
+		y = 4
+		cost = 8
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_country_flag = BLHM_ENG_new_tanks_recipient
+				}
+				add_ideas = BLHM_ENG_updated_communications
+			}
+		}
+	}
+
+	# ====== INFANTRY CHILDREN ======
+
+	focus = {
+		id = BLHM_ENG_canadian_landings
+		prerequisite = { focus = BLHM_ENG_infantry_forces }
+		available = { CAN = { exists = yes } }
+		icon = GFX_goal_generic_amphibious_assault
+		x = 96
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			CAN = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_canadian_landings_idea
+				add_doctrine_cost_reduction = {
+					name = BLHM_ENG_canadian_landings
+					cost_reduction = 0.40
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}
+			custom_effect_tooltip = BLHM_ENG_canadian_landings_sf_doctrine_tt
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_african_infantry_corps
+		prerequisite = { focus = BLHM_ENG_infantry_forces }
+		available = { SAF = { exists = yes } }
+		icon = GFX_goal_generic_army_infantry
+		x = 98
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			SAF = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_african_infantry_corps_idea
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_indian_gurkhas
+		prerequisite = { focus = BLHM_ENG_infantry_forces }
+		available = { RAJ = { exists = yes } }
+		icon = GFX_goal_generic_army_infantry
+		x = 100
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			RAJ = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_indian_gurkhas_idea
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_australian_rangers
+		prerequisite = { focus = BLHM_ENG_infantry_forces }
+		available = { AST = { exists = yes } }
+		icon = GFX_goal_generic_army_special_forces
+		x = 102
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			AST = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_australian_rangers_idea
+			}
+		}
+	}
+
+	focus = {
+		id = BLHM_ENG_new_zealand_special_forces
+		prerequisite = { focus = BLHM_ENG_infantry_forces }
+		available = { NZL = { exists = yes } }
+		icon = GFX_goal_generic_army_special_forces
+		x = 104
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		ai_will_do = { factor = 1 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			NZL = {
+				limit = { exists = yes }
+				add_ideas = BLHM_ENG_new_zealand_special_forces_idea
+				add_doctrine_cost_reduction = {
+					name = BLHM_ENG_new_zealand_special_forces
+					cost_reduction = 0.40
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}
 		}
 	}
 

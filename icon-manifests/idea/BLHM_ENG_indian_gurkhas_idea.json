@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_indian_gurkhas_idea",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_indian_gurkhas_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_indian_gurkhas_idea.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_army_bonus",
+  "prompt": "Crossed kukri knives on a star emblem",
+  "style_preset": "hoi4_idea_v1"
+}

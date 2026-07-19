@@ -193,3 +193,203 @@ country_event = {
 		add_ideas = BLHM_ENG_mio_fallback_defence
 	}
 }
+
+# Land Armed Forces Branch - clears branch lock flag after 720 days
+country_event = {
+	id = BLHM_ENG_task.8
+	title = BLHM_ENG_task.8.t
+	desc = BLHM_ENG_task.8.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.8.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = BLHM_ENG_armed_forces_priority_lock
+	}
+}
+
+# Land Specialisation Cooldown - clears after 365 days (8760 hours)
+country_event = {
+	id = BLHM_ENG_task.9
+	title = BLHM_ENG_task.9.t
+	desc = BLHM_ENG_task.9.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.9.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = BLHM_ENG_land_specialisation_cooldown
+	}
+}
+
+# Tank Development Recipient Selection - ENG chooses one dominion to receive New Tanks
+country_event = {
+	id = BLHM_ENG_task.10
+	title = BLHM_ENG_task.10.t
+	desc = BLHM_ENG_task.10.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_ENG_task.10.can
+		trigger = {
+			CAN = { exists = yes }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				CAN = { has_idea = BLHM_ENG_allied_tanks }
+				factor = 2
+			}
+		}
+		CAN = {
+			clr_country_flag = BLHM_ENG_new_tanks_recipient
+			remove_ideas = BLHM_ENG_allied_tanks
+			set_country_flag = BLHM_ENG_new_tanks_recipient
+			add_ideas = BLHM_ENG_new_tanks_CAN
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
+		}
+	}
+
+	option = {
+		name = BLHM_ENG_task.10.saf
+		trigger = {
+			SAF = { exists = yes }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				SAF = { has_idea = BLHM_ENG_allied_tanks }
+				factor = 2
+			}
+		}
+		SAF = {
+			clr_country_flag = BLHM_ENG_new_tanks_recipient
+			remove_ideas = BLHM_ENG_allied_tanks
+			set_country_flag = BLHM_ENG_new_tanks_recipient
+			add_ideas = BLHM_ENG_new_tanks_SAF
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
+		}
+	}
+
+	option = {
+		name = BLHM_ENG_task.10.raj
+		trigger = {
+			RAJ = { exists = yes }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				RAJ = { has_idea = BLHM_ENG_allied_tanks }
+				factor = 2
+			}
+		}
+		RAJ = {
+			clr_country_flag = BLHM_ENG_new_tanks_recipient
+			remove_ideas = BLHM_ENG_allied_tanks
+			set_country_flag = BLHM_ENG_new_tanks_recipient
+			add_ideas = BLHM_ENG_new_tanks_RAJ
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
+		}
+	}
+
+	option = {
+		name = BLHM_ENG_task.10.ast
+		trigger = {
+			AST = { exists = yes }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				AST = { has_idea = BLHM_ENG_allied_tanks }
+				factor = 2
+			}
+		}
+		AST = {
+			clr_country_flag = BLHM_ENG_new_tanks_recipient
+			remove_ideas = BLHM_ENG_allied_tanks
+			set_country_flag = BLHM_ENG_new_tanks_recipient
+			add_ideas = BLHM_ENG_new_tanks_AST
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
+		}
+	}
+
+	option = {
+		name = BLHM_ENG_task.10.nzl
+		trigger = {
+			NZL = { exists = yes }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				NZL = { has_idea = BLHM_ENG_allied_tanks }
+				factor = 2
+			}
+		}
+		NZL = {
+			clr_country_flag = BLHM_ENG_new_tanks_recipient
+			remove_ideas = BLHM_ENG_allied_tanks
+			set_country_flag = BLHM_ENG_new_tanks_recipient
+			add_ideas = BLHM_ENG_new_tanks_NZL
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
+				add_ideas = BLHM_ENG_joint_tank_upgrade
+			}
+			if = {
+				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
+				add_ideas = BLHM_ENG_sloped_armor_upgrade
+			}
+		}
+	}
+
+	option = {
+		name = BLHM_ENG_task.10.none
+		trigger = {
+			NOT = {
+				OR = {
+					CAN = { exists = yes }
+					SAF = { exists = yes }
+					RAJ = { exists = yes }
+					AST = { exists = yes }
+					NZL = { exists = yes }
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_ENG_new_tanks_CAN",
+  "sprite_name": "GFX_idea_custom_BLHM_ENG_new_tanks_CAN",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_ENG_new_tanks_CAN.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_armor_bonus",
+  "prompt": "A Canadian Ram tank silhouette with a maple leaf emblem",
+  "style_preset": "hoi4_idea_v1"
+}
