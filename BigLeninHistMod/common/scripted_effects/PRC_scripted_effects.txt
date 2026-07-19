@@ -173,82 +173,12 @@ PRC_infiltration_succesful_show_uprising_effect = {
 
 #Important to put HIGHEST first
 PRC_low_popular_support_level_up = {
-	# level 5 not relevant. Cannot go above.
-	if = {
-		limit = { has_idea = PRC_low_popular_support_4 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_4
-			add_idea = PRC_low_popular_support_5
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_3 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_3
-			add_idea = PRC_low_popular_support_4
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_2 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_2
-			add_idea = PRC_low_popular_support_3
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_1 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_1
-			add_idea = PRC_low_popular_support_2
-		}		
-	}
-	if = {
-		limit = { NOT = { has_idea = PRC_low_popular_support_1 } }
-		add_ideas = PRC_low_popular_support_1
-	}
+	# gated - low_popular_support ideas not in historical mod
 }
 
 #Important to put LOWEST first
 PRC_low_popular_support_level_down = {
-	if = {
-		limit = { has_idea = PRC_low_popular_support_1 }
-		#Makes the tooltip clearer if player looks at the effect early in the game
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = PRC_low_popular_support_2
-				add_idea = PRC_low_popular_support_1
-			}
-		}
-		hidden_effect = { remove_ideas = PRC_low_popular_support_1 }
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_2 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_2
-			add_idea = PRC_low_popular_support_1
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_3 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_3
-			add_idea = PRC_low_popular_support_2
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_4 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_4
-			add_idea = PRC_low_popular_support_3
-		}
-	}
-	if = {
-		limit = { has_idea = PRC_low_popular_support_5 }
-		swap_ideas = {
-			remove_idea = PRC_low_popular_support_5
-			add_idea = PRC_low_popular_support_4
-		}
-	}
+	# gated - low_popular_support ideas not in historical mod
 }
 PRC_transfer_negative_spirits = {
 	if = {
@@ -327,15 +257,8 @@ PRC_transfer_negative_spirits = {
 
 
 PRC_check_if_red_army_or_pla = {
-	if = { ## For localisation reasons, if hasn't completed it display "Modify Red Army" when hover over, if has then display "Modify PLA"
-			limit = {
-				has_completed_focus = PRC_peoples_liberation_army_sea
-			}
-			custom_effect_tooltip = PRC_pla_ground_force_modify_tt
-		}
-		else = {
-			custom_effect_tooltip = PRC_the_chinese_red_army_modify_tt 
-	}
+	# gated - PRC_peoples_liberation_army_sea focus not in historical mod, always show RED ARMY tooltip
+	custom_effect_tooltip = PRC_the_chinese_red_army_modify_tt
 }
 
  ## ###  ##  
@@ -363,102 +286,19 @@ PRC_modify_industrial_modifier = {
 }
 
 PRC_increase_mao_BOP_small = {
-	if = {
-		limit = {
-			has_power_balance = {
-				id = PRC_communist_power_struggle
-			}
-		}
-		add_power_balance_value = {
-			id = PRC_communist_power_struggle
-			value = -0.05
-		}
-	}
+	# gated - PRC_communist_power_struggle power balance not in historical mod
 }
 
 PRC_increase_bolsheviks_BOP_small = {
-	if = {
-		limit = {
-			has_power_balance = {
-				id = PRC_communist_power_struggle
-			}
-		}
-		add_power_balance_value = {
-			id = PRC_communist_power_struggle
-			value = 0.05
-		}
-	}
+	# gated - PRC_communist_power_struggle power balance not in historical mod
 }
 
 PRC_add_mediating_general_secretary_idea = {
-	if = {
-		limit = {
-			power_balance_value = {
-				id = PRC_communist_power_struggle
-				value > -0.25
-			}
-			power_balance_value = {
-				id = PRC_communist_power_struggle
-				value < 0.25
-			}
-		}
-		add_ideas = PRC_mediating_general_secretary_idea
-	}
-	else_if = {
-		limit = {
-			power_balance_value = {
-				id = PRC_communist_power_struggle
-				value < -0.24
-			}
-		}
-		add_ideas = PRC_mediating_general_secretary_idea_drifting_right
-	}
-	else_if = {
-		limit = {
-			power_balance_value = {
-				id = PRC_communist_power_struggle
-				value > 0.24
-			}
-		}
-		add_ideas = PRC_mediating_general_secretary_idea_drifting_left
-	}
+	# gated - PRC_communist_power_struggle power balance not in historical mod
 }
 
 PRC_remove_mediating_general_secretary_idea = {
-	custom_effect_tooltip = PRC_mediating_secretary_remove_fake_idea_tt
-	hidden_effect = {
-		if = {
-			limit = {
-				power_balance_value = {
-					id = PRC_communist_power_struggle
-					value > -0.25
-				}
-				power_balance_value = {
-					id = PRC_communist_power_struggle
-					value < 0.25
-				}
-			}
-			remove_ideas = PRC_mediating_general_secretary_idea
-		}
-		else_if = {
-			limit = {
-				power_balance_value = {
-					id = PRC_communist_power_struggle
-					value > 0.24
-				}
-			}
-			remove_ideas = PRC_mediating_general_secretary_idea_drifting_left
-		}
-		else_if = {
-			limit = {
-				power_balance_value = {
-					id = PRC_communist_power_struggle
-					value < -0.24
-				}
-			}
-			remove_ideas = PRC_mediating_general_secretary_idea_drifting_right
-		}
-	}
+	# gated - PRC_communist_power_struggle power balance not in historical mod
 }
 
 PRC_this_might_anger_china = {
@@ -564,78 +404,7 @@ PRC_add_the_internal_enemy_idea = {
 }
 
 PRC_add_the_internal_enemy_idea_upgrade = {
-	custom_effect_tooltip = PRC_add_the_internal_enemy_idea_upgrade_tt
-	hidden_effect = { #Actual ideas with actual tooltips
-		swap_ideas = { #Fake idea with only tooltip
-			remove_idea = PRC_the_internal_enemy_idea
-			add_idea = PRC_the_internal_enemy_upgraded_idea
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_CHI
-			add_idea = PRC_the_internal_enemy_CHI_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_GXC
-			add_idea = PRC_the_internal_enemy_GXC_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_YUN
-			add_idea = PRC_the_internal_enemy_YUN_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_SHX
-			add_idea = PRC_the_internal_enemy_SHX_upgraded
-		}
-		
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_XSM
-			add_idea = PRC_the_internal_enemy_XSM_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_SIK
-			add_idea = PRC_the_internal_enemy_SIK_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_GDC
-			add_idea = PRC_the_internal_enemy_GDC_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_SND
-			add_idea = PRC_the_internal_enemy_SND_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_SIC
-			add_idea = PRC_the_internal_enemy_SIC_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_NXM
-			add_idea =PRC_the_internal_enemy_NXM_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_GSM
-			add_idea = PRC_the_internal_enemy_GSM_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_XIC
-			add_idea = PRC_the_internal_enemy_XIC_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_KHM
-			add_idea = PRC_the_internal_enemy_KHM_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_KUM
-			add_idea = PRC_the_internal_enemy_KUM_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_RNG
-			add_idea = PRC_the_internal_enemy_RNG_upgraded
-		}
-		swap_ideas = {
-			remove_idea = PRC_the_internal_enemy_HBC
-			add_idea = PRC_the_internal_enemy_HBC_upgraded
-		}
-	}
+	# gated - internal enemy ideas not in historical mod
 }
 
 PRC_increase_asian_democratic_union_modfier_strength = {

@@ -102,7 +102,7 @@ focus_tree = {
 			effect_tooltip = {
 				IF = {
 					limit = {
-						JAP = { NOT = { has_completed_focus = JAP_okadas_military_purge_speech } }
+						JAP = { NOT = { always = no } }
 					}
 					activate_mission = CHI_kwantung_army_impatience_dummy
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -2218,7 +2218,7 @@ focus_tree = {
 			effect_tooltip = {
 				IF = {
 					limit = {
-						JAP = { NOT = { has_completed_focus = JAP_okadas_military_purge_speech } }
+						JAP = { NOT = { always = no } }
 					}
 					activate_mission = CHI_kwantung_army_impatience_dummy
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -2326,7 +2326,6 @@ focus_tree = {
 				OR = {
 					is_ally_with = ROOT
 					has_war_with = ROOT
-					has_completed_focus = JAP_subdue_the_kwantung_army
 				}
 			}
 		}
@@ -5279,7 +5278,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						PRC = {
-							has_completed_focus = PRC_invite_soviet_general
+							always = no
 						}
 					}
 					OR = {
