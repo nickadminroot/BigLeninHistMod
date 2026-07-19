@@ -944,7 +944,7 @@ ideas = {
 			}
 
 			visible = {
-				has_completed_focus = BEL_invite_soviet_tank_makers
+				has_completed_focus = BEL_belgian_tank_development
 			}
 
 			research_bonus = {
@@ -967,7 +967,7 @@ ideas = {
 			}
 			
 			visible = {
-				has_completed_focus = BEL_invite_german_tank_organization
+				has_completed_focus = BEL_fn_herstal
 			}
 
 			cost = 150
