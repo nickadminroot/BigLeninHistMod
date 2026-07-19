@@ -918,9 +918,7 @@ ideas = {
 				always = yes
 			}
 
-			cancel = {
-				SWE = { has_completed_focus = SWE_nordic_protection_complex }
-			}
+
 			picture = generic_oppression
 			modifier = {
 				army_attack_factor = -0.3

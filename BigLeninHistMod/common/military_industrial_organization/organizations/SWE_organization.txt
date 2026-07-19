@@ -26,13 +26,6 @@ SWE_landsverk_organization = {
 		}
 	}
 
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	}
-
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
@@ -40,28 +33,6 @@ SWE_landsverk_organization = {
 				FROM = { NOT = { original_tag = SWE } }
 			}
 			FROM = { NOT = { has_war_with = SWE } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_SWE_landsverk_organization_flag
-				}
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_landsverk_mio_flag
-				}
-			}
 		}
 	}
 
@@ -122,16 +93,7 @@ SWE_gotaverken_organization = {
 			}
 			FROM = { NOT = { has_war_with = SWE } }
 		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_gotaverken_mio_flag
-				}
-			}
-		}
+
 	}
 
 	trait = {
@@ -178,16 +140,7 @@ SWE_saab_organization = {
 			}
 			FROM = { NOT = { has_war_with = SWE } }
 		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_saab_mio_flag
-				}
-			}
-		}
+
 	}
 
 	initial_trait = {
@@ -259,13 +212,6 @@ SWE_volvo_organization = {
 		}
 	}
 
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	}
-
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
@@ -273,18 +219,6 @@ SWE_volvo_organization = {
 				FROM = { NOT = { original_tag = SWE } }
 			}
 			FROM = { NOT = { has_war_with = SWE } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_SWE_volvo_organization_flag
-				}
-			}
 		}
 	}
 }
@@ -309,16 +243,7 @@ SWE_scania_vabis_organization = {
 			}
 			FROM = { NOT = { has_war_with = SWE } }
 		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_scania_vabis_mio_flag
-				}
-			}
-		}
+
 	}	
 }
 
@@ -343,10 +268,6 @@ SWE_bofors_organization = {
 	}
 
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
 		IF = {
 			limit = { FROM = { original_tag = PER } }
 			FROM = { has_completed_focus = PER_swedish_artillery }
