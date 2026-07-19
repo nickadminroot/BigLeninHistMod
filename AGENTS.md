@@ -70,7 +70,7 @@ Worktrees primarily isolate independent top-level Pi sessions that may write con
 
 ### Main Pi sessions
 
-A user instruction to "work in a worktree" authorizes the coordinating Pi session opened in the main repository to create a task branch/worktree, integrate the validated result back, and remove the task worktree and branch. It does not authorize force-removal, reset, rebase, or overwriting unrelated changes.
+A user instruction to "work in a worktree" authorizes the coordinating Pi session opened in the main repository to create a task branch/worktree and perform the requested work there. It does not authorize merging the task branch or deleting it. After reporting the validated result, obtain the user's explicit approval before merging and obtain explicit approval before deleting the branch. It also does not authorize force-removal, reset, rebase, or overwriting unrelated changes.
 
 ```powershell
 # Create from the intended clean base; the helper checks out an existing branch.
@@ -84,7 +84,7 @@ rtk code "../BigLeninHistMod.worktrees/<name>"
 
 - Keep the coordinating session in the main repository. Open the implementation session with its working directory at the created worktree and perform all implementation, subagent work, and scoped validation there.
 - One top-level writing session owns one worktree and task branch. Give concurrent sessions disjoint features/files where practical; coordinate shared files and identifiers before integration.
-- After validation, the worktree session may commit its task branch. The coordinating main-repository session reviews the diff, merges the branch, validates the integrated tree, then removes the clean worktree and deletes the merged branch. Stop and report conflicts or uncommitted files instead of forcing cleanup.
+- After validation, the worktree session may commit its task branch. The coordinating main-repository session reviews the diff and reports the validated result, but must wait for the user's explicit approval before merging the branch. After an approved merge, validate the integrated tree; remove the clean worktree only when safe, and wait for the user's explicit approval before deleting the merged branch. Stop and report conflicts or uncommitted files instead of forcing cleanup.
 - Run the Windows smoke test only once on the integrated tree and only when explicitly requested; worktrees do not isolate HOI4 user data or the game installation.
 
 The helper supports Windows PowerShell 5.1, resolves the default sibling path as `../BigLeninHistMod.worktrees/<name>`, validates that the local branch exists, and refuses destinations inside the main repository. Treat any PowerShell or Git error as a failed setup; do not work in or blindly rerun a partially created worktree. Inspect `git worktree list` and `git status` first—the helper deliberately does not force-clean a worktree created before a later copy failure.
@@ -97,7 +97,7 @@ The helper symlinks extra files by default when present: `node_modules/`, `scrip
 - The top-level session's checkout is the default write boundary. Point subagents at that same worktree with an explicit `cwd`; they must not silently edit the main checkout.
 - Parallel read-only workers may share a checkout. Keep one writer at a time within one checkout.
 - Do not create one worktree per worker by default. Normally the user obtains real parallel writes through separate top-level Pi sessions and session-level worktrees.
-- Use subagent `worktree: true` only when the current session deliberately owns a separate parallel-writer workflow with disjoint ownership and a planned serial integration step. Workers do not perform Git lifecycle operations; the parent session reviews and integrates their results.
+- Use subagent `worktree: true` only when the current session deliberately owns a separate parallel-writer workflow with disjoint ownership and a planned serial integration step. Workers do not perform Git lifecycle operations; the parent session reviews their results and must obtain the user's explicit approval before merging or deleting task branches.
 
 ## Validation commands
 
