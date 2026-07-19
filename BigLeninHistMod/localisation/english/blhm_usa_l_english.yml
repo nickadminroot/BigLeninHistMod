@@ -149,8 +149,49 @@
  USA_aid_modifier:0 "American Aid"
  USA_aid_modifier_desc:0 "Factory Output §G+3%§!, Max Efficiency §G+5%§!, Military Factory Construction §G+10%§!"
  USA_unified_infantry_command_modifier:0 "Unified Infantry Command"
- USA_unified_infantry_command_modifier_desc:0 "Army Attack §G+5%§!, Army Defence §G+5%§!, Organization §G+10%§!, Planning Speed §G+3%§!"
+ USA_unified_infantry_command_modifier_desc:0 "Infantry Attack §G+5%§!, Infantry Defence §G+5%§!, Special Forces Attack §G+5%§!, Special Forces Defence §G+5%§!, Coordination §G+3%§!, Army Organization §G+10%§!"
  USA_allied_tank_school_modifier:0 "Allied Tank School"
  USA_allied_tank_school_modifier_desc:0 "Organization §G+5%§!, Armour Hard Attack §G+7%§!, Armour Soft Attack §G+3%§!"
  USA_american_bonds_idea_modifier:0 "American Bonds"
  USA_american_bonds_idea_modifier_desc:0 "Consumer Goods §G-10%§!"
+
+ # Stage 3 — Allied Integration Decisions
+ USA_allied_integration_decisions:0 "Allied Integration Decisions"
+ USA_allied_integration_decisions_desc:0 "Coordinated programs to integrate Allied military and economic efforts."
+
+ # Decisions
+ USA_scientist_exchange_program:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_desc:0 "Establish a program to exchange scientific knowledge and personnel with Allied nations, accelerating joint research efforts."
+ USA_scientist_exchange_program_complete_tt:0 "§YScientist Exchange Program§!\nUSA and all Allied faction members receive §G+5%§! Research Speed."
+
+ USA_sherman_firefly_program:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_desc:0 "Upgrade Allied medium tank fleets with improved firepower, fitting Sherman tanks with high-velocity guns capable of defeating heavier German armour."
+ USA_sherman_firefly_program_complete_tt:0 "§YSherman Firefly Program§!\nUSA and all Allied faction members receive §G+10%§! Medium Tank Soft and Hard Attack."
+
+ USA_unified_command_center:0 "Unified Command Center"
+ USA_unified_command_center_desc:0 "Establish a combined Allied command center to coordinate naval operations, amphibious assaults, and shore bombardment across all theatres."
+ USA_unified_command_center_complete_tt:0 "§YUnified Command Center§!\nUSA and all Allied faction members receive:\n§G+15%§! Naval Invasion Planning Speed\n§G+5%§! Amphibious Invasion Defence\n§G+15%§! Shore Bombardment Bonus"
+
+ USA_dispersed_production_program:0 "Dispersed Production Program"
+ USA_dispersed_production_program_desc:0 "Implement dispersed manufacturing techniques across Allied nations to increase production resilience and efficiency through factory decentralization."
+ USA_dispersed_production_program_complete_tt:0 "§YDispersed Production Program§!\nUSA and all Allied faction members receive:\n§G+15%§! Production Efficiency Growth\n§G+20%§! Line Change Efficiency Retention"
+
+ # Stage 3 Ideas
+ USA_scientist_exchange_program_idea:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_idea_desc:0 "Ongoing scientific collaboration with Allied nations accelerates research across all fields."
+ USA_sherman_firefly_program_idea:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_idea_desc:0 "Allied medium tank fleets have been upgraded with high-velocity guns for improved anti-armour capability."
+ USA_unified_command_center_idea:0 "Unified Command Center"
+ USA_unified_command_center_idea_desc:0 "A combined Allied command structure coordinates naval operations and amphibious warfare across all theatres."
+ USA_dispersed_production_program_idea:0 "Dispersed Production Program"
+ USA_dispersed_production_program_idea_desc:0 "Dispersed manufacturing techniques increase production resilience and efficiency across Allied industries."
+
+ # Stage 3 Idea modifier descriptions
+ USA_scientist_exchange_program_idea_modifier:0 "Scientist Exchange Program"
+ USA_scientist_exchange_program_idea_modifier_desc:0 "Research Speed §G+5%§!"
+ USA_sherman_firefly_program_idea_modifier:0 "Sherman Firefly Program"
+ USA_sherman_firefly_program_idea_modifier_desc:0 "Medium Tank Soft Attack §G+10%§!, Medium Tank Hard Attack §G+10%§!"
+ USA_unified_command_center_idea_modifier:0 "Unified Command Center"
+ USA_unified_command_center_idea_modifier_desc:0 "Naval Invasion Planning Speed §G+15%§!, Amphibious Invasion Defence §G+5%§!, Shore Bombardment §G+15%§!"
+ USA_dispersed_production_program_idea_modifier:0 "Dispersed Production Program"
+ USA_dispersed_production_program_idea_modifier_desc:0 "Production Efficiency Growth §G+15%§!, Line Change Efficiency §G+20%§!"

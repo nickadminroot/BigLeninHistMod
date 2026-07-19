@@ -29,6 +29,10 @@
  USA_soviet_american_agreement: "Советско-американское соглашение"
  USA_soviet_american_agreement_desc: "Соглашение об экономическом сотрудничестве между Соединёнными Штатами и Советским Союзом увеличивает наш промышленный потенциал и снижает потребности в товарах народного потребления."
 
+ # Soviet-American spirit modifiers
+ USA_soviet_american_agreement_modifier: "Советско-американское соглашение"
+ USA_soviet_american_agreement_modifier_desc: "Промышленный потенциал §G+5%§!, Товары народного потребления §G-5%§!"
+
  # Tooltips
  BLHM_embargo_germany_tt: "§YЭмбарго против Германии§!\nСША, Великобритания, Франция, Нидерланды, Бельгия и все основные союзники введут эмбарго против Германии."
  BLHM_embargo_japan_tt: "§YЭмбарго против Японии§!\nСША, Нидерланды, Голландская Ост-Индия и все основные союзники введут эмбарго против Японии."
@@ -145,8 +149,49 @@
  USA_aid_modifier: "Американская помощь"
  USA_aid_modifier_desc: "Промышленное производство §G+3%§!, Макс. эффективность §G+5%§!, Строительство военных заводов §G+10%§!"
  USA_unified_infantry_command_modifier: "Объединённое пехотное командование"
- USA_unified_infantry_command_modifier_desc: "Атака армии §G+5%§!, Оборона армии §G+5%§!, Организация §G+10%§!, Скорость планирования §G+3%§!"
+ USA_unified_infantry_command_modifier_desc: "Атака пехоты §G+5%§!, Оборона пехоты §G+5%§!, Атака сил спецназначения §G+5%§!, Оборона сил спецназначения §G+5%§!, Координация §G+3%§!, Организация армии §G+10%§!"
  USA_allied_tank_school_modifier: "Союзная танковая школа"
  USA_allied_tank_school_modifier_desc: "Организация §G+5%§!, Атака брони §G+7%§!, Атака по мягким целям брони §G+3%§!"
  USA_american_bonds_idea_modifier: "Американские облигации"
  USA_american_bonds_idea_modifier_desc: "Товары народного потребления §G-10%§!"
+
+ # Stage 3 — Allied Integration Decisions
+ USA_allied_integration_decisions: "Решения союзной интеграции"
+ USA_allied_integration_decisions_desc: "Скоординированные программы по интеграции военных и экономических усилий союзников."
+
+ # Decisions
+ USA_scientist_exchange_program: "Программа обмена учёными"
+ USA_scientist_exchange_program_desc: "Создать программу обмена научными знаниями и специалистами с союзными странами, ускоряющую совместные исследовательские усилия."
+ USA_scientist_exchange_program_complete_tt: "§YПрограмма обмена учёными§!\nСША и все члены союзной коалиции получают §G+5%§! к скорости исследований."
+
+ USA_sherman_firefly_program: "Программа «Шерман Файрфлай»"
+ USA_sherman_firefly_program_desc: "Модернизировать парк средних танков союзников, оснастив «Шерманы» скоростными орудиями, способными пробивать броню более тяжёлых немецких танков."
+ USA_sherman_firefly_program_complete_tt: "§YПрограмма «Шерман Файрфлай»§!\nСША и все члены союзной коалиции получают §G+10%§! к атаке по мягким и твёрдым целям средних танков."
+
+ USA_unified_command_center: "Объединённый командный центр"
+ USA_unified_command_center_desc: "Создать объединённый командный центр союзников для координации морских операций, десантных операций и береговой бомбардировки на всех театрах военных действий."
+ USA_unified_command_center_complete_tt: "§YОбъединённый командный центр§!\nСША и все члены союзной коалиции получают:\n§G+15%§! к скорости планирования морских вторжений\n§G+5%§! к обороне десантных операций\n§G+15%§! к бонусу береговой бомбардировки"
+
+ USA_dispersed_production_program: "Программа рассредоточенного производства"
+ USA_dispersed_production_program_desc: "Внедрить методы рассредоточенного производства на предприятиях союзных стран для повышения производственной устойчивости и эффективности за счёт децентрализации заводов."
+ USA_dispersed_production_program_complete_tt: "§YПрограмма рассредоточенного производства§!\nСША и все члены союзной коалиции получают:\n§G+15%§! к росту эффективности производства\n§G+20%§! к сохранению эффективности при смене линии"
+
+ # Stage 3 Ideas
+ USA_scientist_exchange_program_idea: "Программа обмена учёными"
+ USA_scientist_exchange_program_idea_desc: "Постоянное научное сотрудничество с союзными странами ускоряет исследования во всех областях."
+ USA_sherman_firefly_program_idea: "Программа «Шерман Файрфлай»"
+ USA_sherman_firefly_program_idea_desc: "Парк средних танков союзников модернизирован скоростными орудиями для улучшенной борьбы с бронетехникой."
+ USA_unified_command_center_idea: "Объединённый командный центр"
+ USA_unified_command_center_idea_desc: "Объединённая командная структура союзников координирует морские операции и десантные действия на всех театрах."
+ USA_dispersed_production_program_idea: "Программа рассредоточенного производства"
+ USA_dispersed_production_program_idea_desc: "Методы рассредоточенного производства повышают производственную устойчивость и эффективность промышленности союзников."
+
+ # Stage 3 Idea modifier descriptions
+ USA_scientist_exchange_program_idea_modifier: "Программа обмена учёными"
+ USA_scientist_exchange_program_idea_modifier_desc: "Скорость исследований §G+5%§!"
+ USA_sherman_firefly_program_idea_modifier: "Программа «Шерман Файрфлай»"
+ USA_sherman_firefly_program_idea_modifier_desc: "Атака по мягким целям средних танков §G+10%§!, Атака по твёрдым целям средних танков §G+10%§!"
+ USA_unified_command_center_idea_modifier: "Объединённый командный центр"
+ USA_unified_command_center_idea_modifier_desc: "Скорость планирования морских вторжений §G+15%§!, Оборона десантных операций §G+5%§!, Береговая бомбардировка §G+15%§!"
+ USA_dispersed_production_program_idea_modifier: "Программа рассредоточенного производства"
+ USA_dispersed_production_program_idea_modifier_desc: "Рост эффективности производства §G+15%§!, Эффективность при смене линии §G+20%§!"

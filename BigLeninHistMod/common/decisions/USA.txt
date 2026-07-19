@@ -3208,3 +3208,142 @@ operations = {
 		}
 	}
 }
+
+USA_allied_integration_decisions = {
+
+	USA_scientist_exchange_program = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			tag = USA
+		}
+
+		visible = {
+			has_completed_focus = USA_allied_military_economic_integration
+		}
+
+		cost = 50
+		days_remove = 35
+		fire_only_once = yes
+
+		remove_effect = {
+			custom_effect_tooltip = USA_scientist_exchange_program_complete_tt
+			hidden_effect = {
+				add_ideas = USA_scientist_exchange_program_idea
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					add_ideas = USA_scientist_exchange_program_idea
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_sherman_firefly_program = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			tag = USA
+		}
+
+		visible = {
+			has_completed_focus = USA_allied_military_economic_integration
+		}
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		remove_effect = {
+			custom_effect_tooltip = USA_sherman_firefly_program_complete_tt
+			hidden_effect = {
+				add_ideas = USA_sherman_firefly_program_idea
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					add_ideas = USA_sherman_firefly_program_idea
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_unified_command_center = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			tag = USA
+		}
+
+		visible = {
+			has_completed_focus = USA_allied_military_economic_integration
+		}
+
+		cost = 75
+		days_remove = 60
+		fire_only_once = yes
+
+		remove_effect = {
+			custom_effect_tooltip = USA_unified_command_center_complete_tt
+			hidden_effect = {
+				add_ideas = USA_unified_command_center_idea
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					add_ideas = USA_unified_command_center_idea
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_dispersed_production_program = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			tag = USA
+		}
+
+		visible = {
+			has_completed_focus = USA_allied_military_economic_integration
+		}
+
+		cost = 100
+		days_remove = 70
+		fire_only_once = yes
+
+		remove_effect = {
+			custom_effect_tooltip = USA_dispersed_production_program_complete_tt
+			hidden_effect = {
+				add_ideas = USA_dispersed_production_program_idea
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					add_ideas = USA_dispersed_production_program_idea
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

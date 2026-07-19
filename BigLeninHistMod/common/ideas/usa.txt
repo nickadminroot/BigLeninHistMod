@@ -1431,6 +1431,85 @@ ideas = {
 			}
 		}
 
+		USA_scientist_exchange_program_idea = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		USA_sherman_firefly_program_idea = {
+			picture = generic_army_tank_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				medium_tank_chassis = {
+					soft_attack = 0.10
+					hard_attack = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		USA_unified_command_center_idea = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_invasion_planning_bonus_speed = 0.15
+				amphibious_invasion_defence = 0.05
+				shore_bombardment_bonus = 0.15
+			}
+		}
+
+		USA_dispersed_production_program_idea = {
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				line_change_production_efficiency_factor = 0.20
+			}
+		}
+
 	}
 
 
