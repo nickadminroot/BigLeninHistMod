@@ -4663,7 +4663,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_military
+					always = no
 				}
 			}
 
@@ -4698,8 +4698,8 @@ ideas = {
 
 			visible = { #We don't need to hide these right away since these ton of space in the GUI for Manufacturers
 				NOT = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 
@@ -4739,8 +4739,8 @@ ideas = {
 
 			visible = { #We don't need to hide these since these ton of space in the GUI for Manufacturers
 				NOT = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 
@@ -5074,8 +5074,8 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 			}
@@ -5341,7 +5341,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_industry
+					always = no
 					OR = {
 						controls_state = 9
 						any_subject_country = {
@@ -5356,7 +5356,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_industry
+					always = no
 				}
 			}
 
@@ -5413,7 +5413,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_military
+					always = no
 				}
 			}
 
@@ -5423,15 +5423,15 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 				if = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_military
+					always = no
 				}
 			}
 
@@ -5479,7 +5479,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_rails
+					always = no
 					OR = {
 						controls_state = 9
 						any_subject_country = {
@@ -5502,7 +5502,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_rails
+					always = no
 				}
 			}
 
@@ -5763,7 +5763,7 @@ ideas = {
 							}
 							has_dlc = "Death or Dishonor"
 						}
-						has_completed_focus = CZE_industrial_legacy
+						always = no
 					}
 					else = {
 						if = {
@@ -5778,7 +5778,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_rails
+					always = no
 				}
 			}
 
@@ -5787,7 +5787,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_rails
+					always = no
 				}
 			}
 
@@ -5917,7 +5917,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_industry
+					always = no
 				}
 			}
 
@@ -5932,7 +5932,7 @@ ideas = {
 					limit = {
 						original_tag = POL
 					}
-					has_completed_focus = POL_join_CZE_industry
+					always = no
 				}
 			}
 
@@ -6240,10 +6240,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_establish_a_customs_union
-					9 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
+					always = no
 				}
 			}
 
@@ -6264,7 +6261,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_establish_a_customs_union
+					always = no
 				}
 			}
 			
