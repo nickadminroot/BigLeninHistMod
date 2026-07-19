@@ -1947,24 +1947,13 @@ initial_show_position = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			unlock_decision_category_tooltip = PHI_department_of_foreign_affairs_category
-
-			
 			if = {
-				limit = {
-					OR = {
-						NOT = {
-							has_completed_focus = PHI_nationality_act
-						}
-						has_dynamic_modifier = {
-							modifier = PHI_japan_aligned_ideology
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				unlock_decision_tooltip = PHI_decrease_japanese_ideological_influence
-			}
+			limit = { always = no }
+			unlock_decision_category_tooltip = PHI_department_of_foreign_affairs_category
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = PHI_decrease_japanese_ideological_influence
 		}
+	}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
@@ -2509,7 +2498,10 @@ initial_show_position = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			unlock_decision_tooltip = PHI_request_indefinite_stay_for_macarthur
+			if = {
+				limit = { always = no }
+				unlock_decision_tooltip = PHI_request_indefinite_stay_for_macarthur
+			}
 		}
 	}
 
@@ -3137,9 +3129,7 @@ initial_show_position = {
 
 		available = {
 			NOT = {
-				has_active_mission = PHI_investment_plan_1
-				has_active_mission = PHI_investment_plan_2
-				has_active_mission = PHI_investment_plan_3
+				always = no
 			}
 		}
 
@@ -3151,31 +3141,26 @@ initial_show_position = {
 		completion_reward = {
 			PHI_set_pre_investment_variables = yes
 			if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_1
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_1
 				custom_effect_tooltip = PHI_investment_plan_1_tt
 			}
 			else_if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_2
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_2
 				custom_effect_tooltip = PHI_investment_plan_2_tt
 			}
 			else = {
-				activate_mission = PHI_investment_plan_3
-				custom_effect_tooltip = PHI_investment_plan_3_tt
+				if = {
+					limit = { always = no }
+					activate_mission = PHI_investment_plan_3
+					custom_effect_tooltip = PHI_investment_plan_3_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
-				unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
-				unlock_decision_tooltip = PHI_establish_new_train_connections
-				unlock_decision_tooltip = PHI_inspect_road_network
+					custom_effect_tooltip = generic_skip_one_line_tt
+					unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
+					unlock_decision_tooltip = PHI_establish_new_train_connections
+					unlock_decision_tooltip = PHI_inspect_road_network
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3231,9 +3216,7 @@ initial_show_position = {
 
 		available = {
 			NOT = {
-				has_active_mission = PHI_investment_plan_1
-				has_active_mission = PHI_investment_plan_2
-				has_active_mission = PHI_investment_plan_3
+				always = no
 			}
 		}
 
@@ -3245,31 +3228,26 @@ initial_show_position = {
 		completion_reward = {
 			PHI_set_pre_investment_variables = yes
 			if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_1
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_1
 				custom_effect_tooltip = PHI_investment_plan_1_tt
 			}
 			else_if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_2
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_2
 				custom_effect_tooltip = PHI_investment_plan_2_tt
 			}
 			else = {
-				activate_mission = PHI_investment_plan_3
-				custom_effect_tooltip = PHI_investment_plan_3_tt
+				if = {
+					limit = { always = no }
+					activate_mission = PHI_investment_plan_3
+					custom_effect_tooltip = PHI_investment_plan_3_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
-				unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
-				unlock_decision_tooltip = PHI_establish_new_train_connections
-				unlock_decision_tooltip = PHI_inspect_road_network
+					custom_effect_tooltip = generic_skip_one_line_tt
+					unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
+					unlock_decision_tooltip = PHI_establish_new_train_connections
+					unlock_decision_tooltip = PHI_inspect_road_network
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3290,9 +3268,7 @@ initial_show_position = {
 
 		available = {
 			NOT = {
-				has_active_mission = PHI_investment_plan_1
-				has_active_mission = PHI_investment_plan_2
-				has_active_mission = PHI_investment_plan_3
+				always = no
 			}
 		}
 
@@ -3304,31 +3280,26 @@ initial_show_position = {
 		completion_reward = {
 			PHI_set_pre_investment_variables = yes
 			if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_1
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_1
 				custom_effect_tooltip = PHI_investment_plan_1_tt
 			}
 			else_if = {
-				limit = {
-					NOT = {
-						has_country_flag = PHI_completed_investment_plan_2
-					}
-				}
+				limit = { always = no }
 				activate_mission = PHI_investment_plan_2
 				custom_effect_tooltip = PHI_investment_plan_2_tt
 			}
 			else = {
-				activate_mission = PHI_investment_plan_3
-				custom_effect_tooltip = PHI_investment_plan_3_tt
+				if = {
+					limit = { always = no }
+					activate_mission = PHI_investment_plan_3
+					custom_effect_tooltip = PHI_investment_plan_3_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
-				unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
-				unlock_decision_tooltip = PHI_establish_new_train_connections
-				unlock_decision_tooltip = PHI_inspect_road_network
+					custom_effect_tooltip = generic_skip_one_line_tt
+					unlock_decision_tooltip = PHI_establish_reserve_transport_fleet
+					unlock_decision_tooltip = PHI_establish_new_train_connections
+					unlock_decision_tooltip = PHI_inspect_road_network
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3462,8 +3433,11 @@ initial_show_position = {
 			custom_effect_tooltip = PHI_request_equipment_tt
 			custom_effect_tooltip = PHI_share_military_experience_tt
 			hidden_effect = {
-				unlock_decision_tooltip = PHI_request_equipment
-				unlock_decision_tooltip = PHI_share_military_experience
+				if = {
+					limit = { always = no }
+					unlock_decision_tooltip = PHI_request_equipment
+					unlock_decision_tooltip = PHI_share_military_experience
+				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

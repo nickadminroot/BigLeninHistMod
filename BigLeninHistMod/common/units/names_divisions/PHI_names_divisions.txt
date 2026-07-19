@@ -1,0 +1,71 @@
+# Division template historical names for PHI (vanilla 1.19.2 dependency)
+# Referenced by PHI_1936_ncns.txt OOB
+
+PHI_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { PHI }				
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%dth Infantry Division"
+
+	ordered =
+	{
+		1 = { "%dst Infantry Division" }
+		2 = { "%dnd Infantry Division" }
+		3 = { "%drd Infantry Division" }
+		4 = { "%dth Infantry Division" }
+		5 = { "%dth Infantry Division" }
+		6 = { "%dth Infantry Division" }
+		7 = { "%dth Infantry Division" }
+		8 = { "%dth Infantry Division" }
+		9 = { "%dth Infantry Division" }
+		10 = { "%dth Infantry Division" }
+		11 = { "%dth Infantry Division" }
+		12 = { "%dth Infantry Division" }
+		13 = { "%dth Infantry Division" }
+		14 = { "%dth Infantry Division" }
+		15 = { "%dth Infantry Division" }
+		16 = { "%dth Infantry Division" }
+		17 = { "%dth Infantry Division" }
+		18 = { "%dth Infantry Division" }
+		19 = { "%dth Infantry Division" }
+		20 = { "%dth Infantry Division" }
+		21 = { "%dst Infantry Division" }
+		22 = { "%dnd Infantry Division" }
+		23 = { "%drd Infantry Division" }
+		24 = { "%dth Infantry Division" }
+	}
+	fallback_name = "%dth Infantry Division"
+}
+
+PHI_RAN_01 = 
+{
+	name = "Scouts Division"
+
+	for_countries = { PHI }			
+
+	can_use = { always = yes }
+
+	division_types = { "ranger_battalion" }
+
+	fallback_name = "%dth Philippines Scouts Div."
+
+	ordered =
+	{
+		1 = { "%dst Philippine Scouts Div." }
+		2 = { "%dnd Philippine Scouts Div." }	
+		3 = { "%drd Philippine Scouts Div." }
+		4 = { "%dth Philippine Scouts Div." }
+		5 = { "%dth Philippine Scouts Div." }
+		6 = { "%dth Philippine Scouts Div." }
+		7 = { "%dth Philippine Scouts Div." }	
+		8 = { "%dth Philippine Scouts Div." }
+		9 = { "%dth Philippine Scouts Div." }
+		10 = { "%dth Philippine Scouts Div." }
+	}
+}
