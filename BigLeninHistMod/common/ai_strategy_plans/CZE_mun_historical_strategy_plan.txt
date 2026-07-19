@@ -48,11 +48,11 @@ CZE_mun_historical_strategy_plan = {
 
 	ai_national_focuses = {
 		#DO ASAP
+		CZE_raise_more_industrial_funds							#35
 		CZE_force_the_industrialists_hand						#35
 		CZE_mobilize_the_reserves								#35
 		
 		#1936
-		CZE_raise_more_industrial_funds							#35
 		CZE_continue_armed_force_reform							#35
 		CZE_form_the_state_defense_guard						#35
 		CZE_the_second_fortification_program					#35
@@ -197,6 +197,11 @@ CZE_mun_historical_strategy_plan = {
 	ai_strategy = {
 		type = added_military_to_civilian_factory_ratio
 		value = 15
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 20
 	}
 	ai_strategy = {
 		type = role_ratio

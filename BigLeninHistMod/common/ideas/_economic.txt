@@ -1609,6 +1609,9 @@ ideas = {
 
 		closed_economy = {
 
+			allowed_to_remove = {
+				NOT = { original_tag = NPL }
+			}
 
 			available = {
 

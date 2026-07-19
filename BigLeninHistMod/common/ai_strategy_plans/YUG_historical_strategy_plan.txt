@@ -27,12 +27,12 @@ YUG_historical = {
 	}
 
 	ai_national_focuses = {
-		YUG_western_focus
 		YUG_industrialization_program
-		YUG_friendship_treaty_with_italy
-		YUG_attract_axis_capital
 		YUG_expand_the_mining_industry
 		YUG_develop_civilian_industry
+		YUG_western_focus
+		YUG_friendship_treaty_with_italy
+		YUG_attract_axis_capital
 		YUG_evolution
 		YUG_army_modernization 			
 		YUG_mountain_brigades
@@ -80,6 +80,12 @@ YUG_historical = {
 
 	ideas = {
 		
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 15
 	}
 
 	traits = {
