@@ -2159,7 +2159,7 @@ focus_tree = {
 			IF = {
 				limit = {
 					NOT = { 
-						has_completed_focus = BEL_vandervelde_minority
+						always = no
 					}
 				 }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2980,7 +2980,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					has_completed_focus = BEL_kings_abdication
+					always = no
 				}
 
 				BEL_charles_count_of_flanders_person = {
@@ -3035,7 +3035,7 @@ focus_tree = {
 
 		available = {
 			NOT = {
-				has_completed_focus = BEL_kings_abdication
+				always = no
 			}
 		}
 	
@@ -3618,60 +3618,7 @@ focus_tree = {
 			}
 		}
 
-		offset = { 
-			x = -3
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_degrelle
-			}
-		}
 
-		offset = { 
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-
-				OR = {
-					has_completed_focus = BEL_support_the_vnv
-					has_completed_focus = BEL_support_the_rexists
-				}
-						
-					
-				
-			}
-		}
-
-		offset = { 
-			x = -13
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_constitutional_crisis
-			}
-		}
-
-		offset = { 
-			x = -16
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BEL_vandervelde_minority
-			}
-		}
 
 		available = {
 		}
