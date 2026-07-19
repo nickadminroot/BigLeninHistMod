@@ -695,11 +695,6 @@ focus_tree = {
 		completion_reward = {
 
 			add_ideas = SWE_radiotjanst_democratic
-
-			unlock_decision_tooltip = pervert_radiotjanst_fascism
-			unlock_decision_tooltip = pervert_radiotjanst_communism
-			unlock_decision_tooltip = pervert_radiotjanst_unaligned
-			unlock_decision_tooltip = restore_radiotjanst_to_democratic
 		}
 	}
 
