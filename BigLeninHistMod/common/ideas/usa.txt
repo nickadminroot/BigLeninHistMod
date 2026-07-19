@@ -79,7 +79,7 @@ ideas = {
 			
 			modifier = {
 				join_faction_tension = -0.25
-				send_volunteers_tension = -0.35
+				send_volunteers_tension = -1
 				guarantee_tension = -0.2
 				mobilization_laws_cost_factor = 1
 				economy_cost_factor = 1

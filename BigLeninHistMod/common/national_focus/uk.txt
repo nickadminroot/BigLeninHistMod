@@ -5504,7 +5504,7 @@ focus_tree = {
 		id = BLHM_ENG_emergency_fleet_refit
 		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_goal_generic_production
-		x = 79
+		x = 71
 		y = 4
 		cost = 5
 		available = {
