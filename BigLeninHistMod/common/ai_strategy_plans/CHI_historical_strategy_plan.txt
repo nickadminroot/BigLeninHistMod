@@ -27,11 +27,7 @@ CHI_nationalist_historical_plan = {
 	abort = {
 		JAP = {
 			OR = {
-				has_completed_focus = JAP_strengthen_civilian_government
-				has_completed_focus = JAP_the_unthinkable_option
-				has_completed_focus = JAP_support_the_kodoha_faction
-				has_completed_focus = JAP_okadas_military_purge_speech
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+				# gated: JAP focuses not in historical mod
 				is_in_faction_with = ENG 
 				is_in_faction_with = USA 
 			}
