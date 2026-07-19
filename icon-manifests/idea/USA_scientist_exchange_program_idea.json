@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_scientist_exchange_program_idea",
+  "sprite_name": "GFX_idea_custom_USA_scientist_exchange_program_idea",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_scientist_exchange_program_idea.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_research_bonus",
+  "prompt": "Two laboratory scientists sharing a microscope beside a glass chemistry flask",
+  "style_preset": "hoi4_idea_v1"
+}

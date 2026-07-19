@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_giant_has_awoken_economy",
+  "sprite_name": "GFX_idea_custom_USA_giant_has_awoken_economy",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_giant_has_awoken_economy.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A crowded wartime factory assembly line producing tanks beneath overhead cranes",
+  "style_preset": "hoi4_idea_v1"
+}

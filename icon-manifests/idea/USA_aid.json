@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_aid",
+  "sprite_name": "GFX_idea_custom_USA_aid",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_aid.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A wooden aid crate beside a steel helmet and stacked artillery shells",
+  "style_preset": "hoi4_idea_v1"
+}

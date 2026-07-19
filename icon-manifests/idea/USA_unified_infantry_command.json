@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_unified_infantry_command",
+  "sprite_name": "GFX_idea_custom_USA_unified_infantry_command",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_unified_infantry_command.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_army_doctrines",
+  "prompt": "An officer's steel helmet above crossed field binoculars and a command baton",
+  "style_preset": "hoi4_idea_v1"
+}

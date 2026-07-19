@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_economy_domestic",
+  "sprite_name": "GFX_idea_custom_USA_american_economy_domestic",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_economy_domestic.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A brick arms factory under construction with a tower crane and steel girders",
+  "style_preset": "hoi4_idea_v1"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_soviet_american_agreement",
+  "sprite_name": "GFX_idea_custom_USA_soviet_american_agreement",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_soviet_american_agreement.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "Two factory workers shaking hands beside a heavy metalworking lathe",
+  "style_preset": "hoi4_idea_v1"
+}

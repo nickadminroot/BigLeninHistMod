@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_allied_tank_school",
+  "sprite_name": "GFX_idea_custom_USA_allied_tank_school",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_allied_tank_school.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_army_tank_bonus",
+  "prompt": "A Sherman tank beside an instructor pointing at its turret with a wooden pointer",
+  "style_preset": "hoi4_idea_v1"
+}

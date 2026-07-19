@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "USA_american_dream",
+  "sprite_name": "GFX_idea_custom_USA_american_dream",
+  "texturefile": "gfx/interface/ideas/idea_custom_USA_american_dream.dds",
+  "source_file": "common/ideas/usa.txt",
+  "fallback_picture": "generic_production_bonus",
+  "prompt": "A 1940s suburban house with a family automobile parked beside a white picket fence",
+  "style_preset": "hoi4_idea_v1"
+}
