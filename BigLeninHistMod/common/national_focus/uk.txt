@@ -5600,7 +5600,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_air_industry
-		prerequisite = { focus = BLHM_ENG_military_construction }
+		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_air_production
 		x = 82
 		y = 1
@@ -5919,7 +5919,7 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_land_forces
-		prerequisite = { focus = BLHM_ENG_military_construction }
+		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_construct_military
 		x = 90
 		y = 1
