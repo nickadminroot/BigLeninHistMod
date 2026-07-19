@@ -2199,76 +2199,16 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			118 = {
-				if = {
-					limit = {
-						118 = {
-							free_building_slots = {
-								building = bunker
-								size > 3
-								province = 4135
-							}
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 4
-						province = 4135
-						instant_build = yes
-					}
+				set_building_level = {
+					type = coastal_bunker
+					level = 8
+					province = 4135
 				}
-				
-				if = {
-					limit = {
-						118 = {
-							free_building_slots = {
-								building = coastal_bunker
-								size > 0
-								province = 4135
-							}
-						}
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 1
-						province = 4135
-						instant_build = yes
-					}
+				set_building_level = {
+					type = coastal_bunker
+					level = 8
+					province = 13228
 				}
-				
-				if = {
-					limit = {
-						118 = {
-							free_building_slots = {
-								building = air_base
-								size > 2
-								
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-				
-				if = {
-					limit = {
-						118 = {
-							free_building_slots = {
-								building = anti_air_building
-								size > 2
-							}
-						}
-					}
-					add_building_construction = {
-						type = anti_air_building
-						level = 2
-						instant_build = yes
-					}
-				}
-				
-				
 			}
 		}
 	}
@@ -2299,97 +2239,70 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		 
-		bypass = {
-			447 = {
-				free_building_slots = {
-					building = coastal_bunker
-					size < 2
-					province = 4076
+		completion_reward = {
+			446 = {
+				set_building_level = {
+					type = naval_base
+					level = 4
+					province = 4073
 				}
-				free_building_slots = {
-					building = anti_air_building
-					size < 2
+				set_building_level = {
+					type = naval_base
+					level = 4
+					province = 12049
 				}
-				free_building_slots = {
-					building = air_base
-					size < 3
+				set_building_level = {
+					type = coastal_bunker
+					level = 4
+					province = 4073
 				}
-				free_building_slots = {
-					building = bunker
-					size < 2
-					province = 1071
+				set_building_level = {
+					type = coastal_bunker
+					level = 4
+					province = 12049
+				}
+				set_building_level = {
+					type = air_base
+					level = 4
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 4
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 4073
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 12049
 				}
 			}
-		}
-
-		completion_reward = {
-			447 = {
-				if = {
-					limit = {
-						447 = {
-							free_building_slots = {
-								building = coastal_bunker
-								size > 1
-								province = 4076
-							}
-						}
-					}
-
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 4076
-						instant_build = yes
-					}
+			907 = {
+				set_building_level = {
+					type = air_base
+					level = 4
 				}
-
-				if = {
-					limit = {
-						447 = {
-							free_building_slots = {
-								building = anti_air_building
-								size > 2
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 3
-						instant_build = yes
-					}
+				set_building_level = {
+					type = anti_air_building
+					level = 4
 				}
-
-				if = {
-					limit = {
-						free_building_slots = {
-							building = bunker
-							size > 1 
-							province = 1071
-						}
-					}
-					
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 1071
-						instant_build = yes
-					}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 7011
 				}
-				
-				if = {
-					limit = {
-						free_building_slots = {
-							building = anti_air_building
-							size > 1 
-						}
-					}
-
-					add_building_construction = {
-						type = anti_air_building
-						level = 2
-						instant_build = yes
-					}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 3996
+				}
+				set_building_level = {
+					type = bunker
+					level = 4
+					province = 1068
 				}
 			}
 		}
@@ -2413,38 +2326,25 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			116 = {
-				free_building_slots = {
-					building = coastal_bunker
-					size < 2
-					province = 12003
-				}
-				free_building_slots = {
-					building = air_base
-					size < 1
-				}
-			}
-		}
-
 		completion_reward = {
 			116 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
-					level = 2
+					level = 6
 					province = 12003
-					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
+					type = radar_station
+					level = 4
+				}
+				set_building_level = {
 					type = air_base
-					level = 3
-					instant_build = yes
+					level = 10
 				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+				set_building_level = {
+					type = naval_base
+					level = 6
+					province = 12003
 				}
 			}
 		}
