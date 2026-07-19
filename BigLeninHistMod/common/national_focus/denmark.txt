@@ -161,7 +161,6 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = war_will_cancel_deal_tt
-			unlock_decision_category_tooltip = DEN_trade_deal_category
 		}
 	}
 	
@@ -210,7 +209,6 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = war_will_cancel_deal_tt
-			unlock_decision_category_tooltip = DEN_trade_deal_category
 		}
 	}
 	
@@ -1945,9 +1943,6 @@ focus_tree = {
 
 			DEN_bop_occupation_very_low_increase_effect = yes
 
-			unlock_decision_tooltip = DEN_bop_occupation_criticize_collaboration
-			unlock_decision_tooltip = DEN_bop_occupation_strikes
-
 			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier_improved } 
@@ -2017,9 +2012,6 @@ focus_tree = {
 			add_war_support = 0.1
 
 			DEN_bop_occupation_very_low_increase_effect = yes
-
-			unlock_decision_tooltip = DEN_bop_occupation_resistance_coordination
-
 
 			if = {
 				limit = {
@@ -2112,8 +2104,6 @@ focus_tree = {
 
 			DEN_bop_occupation_very_low_increase_effect = yes
 
-			unlock_decision_tooltip = DEN_bop_occupation_underground_factories
-
 			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier_improved } 
@@ -2172,8 +2162,6 @@ focus_tree = {
 			add_war_support = 0.05
 
 			DEN_bop_occupation_very_low_increase_effect = yes
-
-			unlock_decision_tooltip = DEN_bop_occupation_raid_depots
 
 			if = {
 				limit = {
@@ -2520,7 +2508,6 @@ focus_tree = {
 
 			DEN_bop_occupation_very_low_increase_effect = yes
 
-			unlock_decision_tooltip = { decision = DEN_seek_danish_brigades_host show_effect_tooltip = yes }
 			custom_effect_tooltip = if_they_accept_tt
 			custom_effect_tooltip = DEN_danish_brigade_template_tt
 		}
@@ -2685,8 +2672,6 @@ focus_tree = {
 				add_ideas = DEN_danish_resistance_ns 
 			}
 			
-			unlock_decision_tooltip = DEN_bop_occupation_funnel_resources_danish_brigade
-
 			if = {
 				limit = {
 					NOT = { has_completed_focus = DEN_create_danforce }
@@ -2910,8 +2895,6 @@ focus_tree = {
 		search_filters = {}
 	
 		completion_reward = {
-
-			unlock_decision_tooltip = DEN_buy_foreign_destroyers
 		}
 	}
 
@@ -2952,8 +2935,7 @@ focus_tree = {
 				custom_effect_tooltip = DEN_if_denmark_becomes_independent_tt
 				FROM = { country_event = { id = denmark_resistance_event.7 }}
 			}
-			unlock_decision_tooltip = { decision = DEN_seek_foreign_support_decision show_effect_tooltip = yes } 
-		}
+			}
 	}
 
 	focus = {
@@ -3081,8 +3063,6 @@ focus_tree = {
 	
 		completion_reward = {
 			DEN_bop_occupation_very_low_increase_effect = yes
-
-			unlock_decision_tooltip = DEN_ask_for_weapons_decision
 		}
 	}
 
@@ -4072,8 +4052,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
-			unlock_decision_tooltip = DEN_bop_ban_all_political_uniforms
-		}
+			}
 	}
 
 	focus = {
@@ -5468,8 +5447,6 @@ focus_tree = {
 			add_war_support = 0.05
 			add_manpower = 5000
 			army_experience = 15
-
-			unlock_decision_tooltip = DEN_deploy_the_home_guard
 
 			DEN_improve_haeren_NS = yes
 			add_to_variable = { 

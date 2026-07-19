@@ -1426,13 +1426,13 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = light_tank_chassis
+				category = cat_light_armor
 				name = NOR_rikstanken
 			}
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = heavy_tank_chassis
+				category = cat_heavy_armor
 				name = NOR_rikstanken
 			}
 		}
@@ -1636,22 +1636,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = NORTH_unlocks_royal_navy_decisions_TT
-			unlock_decision_tooltip = {
-				decision = NOR_royal_navy_decision_1
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = NOR_royal_navy_decision_2
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = NOR_royal_navy_decision_3
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = NOR_royal_navy_decision_4
-				show_effect_tooltip = yes
-			}
 		}
 	}
 
@@ -1711,7 +1695,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = naval_torpedo
+				category = cat_torpedoes
 				name = NOR_kystvakten
 			}
 		}
