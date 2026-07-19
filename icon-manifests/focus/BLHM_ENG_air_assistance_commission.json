@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_air_assistance_commission",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_air_assistance_commission",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_air_assistance_commission.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_air_fighter",
+  "prompt": "British and Soviet air force officers discussing tactical diagrams",
+  "style_preset": "hoi4_focus_v1"
+}

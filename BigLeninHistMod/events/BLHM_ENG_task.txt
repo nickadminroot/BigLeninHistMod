@@ -20,3 +20,35 @@ country_event = {
 		}
 	}
 }
+
+# Monthly Soviet Aid - hidden deterministic check
+# Fires every 30 days while SOV exists; gives equipment if SOV at war with GER
+# Note: fighter_equipment is the generic archetype. If BBA DLC is active,
+# individual airframe types (e.g. small_plane_airframe_1) would be more precise.
+country_event = {
+	id = BLHM_ENG_task.2
+	title = BLHM_ENG_task.2.t
+	desc = BLHM_ENG_task.2.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = BLHM_ENG_task.2.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { SOV = { exists = yes } }
+			if = {
+				limit = { SOV = { has_war_with = GER } }
+				SOV = {
+					add_equipment_to_stockpile = { type = fighter_equipment amount = 500 producer = ENG }
+					add_equipment_to_stockpile = { type = motorized_equipment amount = 500 producer = ENG }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 producer = ENG }
+					add_equipment_to_stockpile = { type = anti_air_equipment amount = 500 producer = ENG }
+				}
+			}
+			country_event = { id = BLHM_ENG_task.2 hours = 720 }
+		}
+	}
+}

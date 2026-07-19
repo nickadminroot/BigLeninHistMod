@@ -57,3 +57,40 @@
  BLHM_ENG_joint_oceania_development:0 "Joint Oceania Development"
  BLHM_ENG_joint_oceania_development_desc:0 "Joint civil projects in Oceania require temporary economic adjustment."
 
+ BLHM_ENG_develop_trade_with_soviet_union:0 "Develop Trade with the Soviet Union"
+ BLHM_ENG_develop_trade_with_soviet_union_desc:0 "We do not like communists, but we dislike poverty even less. Trade with the Soviets will bring much-needed resources."
+
+ BLHM_ENG_soviet_lend_lease:0 "Soviet Lend-Lease"
+ BLHM_ENG_soviet_lend_lease_desc:0 "The Soviet Union is in dire need of military equipment. We can spare some of our stockpiles to aid our future ally."
+
+ BLHM_ENG_monthly_soviet_aid:0 "Monthly Soviet Aid"
+ BLHM_ENG_monthly_soviet_aid_desc:0 "A regular supply of arms and equipment to the Soviet war effort will help tie down German forces on the Eastern Front."
+
+ BLHM_ENG_aircraft_supplies:0 "Aircraft Supplies"
+ BLHM_ENG_aircraft_supplies_desc:0 "Sharing our aviation and synthetic fuel technology will allow the Soviets to keep their air force operational."
+
+ BLHM_ENG_aircraft_supplies_doctrine:0 "Aircraft Supplies — Air Doctrine"
+ BLHM_ENG_aircraft_supplies_synth:0 "Aircraft Supplies — Synthetic Technology"
+
+ BLHM_ENG_soviet_oil_supplies:0 "Soviet Oil Supplies"
+ BLHM_ENG_soviet_oil_supplies_desc:0 "In exchange for our aid, the Soviets will grant us access to the oil fields of Western Azerbaijan."
+
+ BLHM_ENG_land_assistance_commission:0 "Land Assistance Commission"
+ BLHM_ENG_land_assistance_commission_desc:0 "British military advisors will help coordinate Soviet ground forces, improving their defensive capability and mobility."
+
+ BLHM_ENG_air_assistance_commission:0 "Air Assistance Commission"
+ BLHM_ENG_air_assistance_commission_desc:0 "Our air attachés will share tactical knowledge to enhance the performance and range of Soviet aircraft."
+
+ BLHM_ENG_defence_treaties:0 "Defence Treaties"
+ BLHM_ENG_defence_treaties_desc:0 "Formalise our military cooperation with the Soviet Union. India will supply tungsten in exchange for continued support."
+
+ BLHM_ENG_soviet_trade_adjustment:0 "Soviet Trade Adjustment"
+ BLHM_ENG_soviet_trade_adjustment_desc:0 "Our industrial capacity has been partially diverted to produce goods for the Soviet market."
+
+ BLHM_SOV_british_defence_treaty:0 "British Defence Treaty"
+ BLHM_SOV_british_defence_treaty_desc:0 "A formal defence arrangement with Great Britain strengthens our international standing and resilience."
+
+ BLHM_ENG_task.2.t:0 "Monthly Aid to the Soviet Union"
+ BLHM_ENG_task.2.d:0 "Our convoys continue to deliver supplies to the Soviet Union."
+ BLHM_ENG_task.2.a:0 "Continue the shipments."
+

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "BLHM_ENG_soviet_oil_supplies",
+  "sprite_name": "GFX_focus_custom_BLHM_ENG_soviet_oil_supplies",
+  "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_soviet_oil_supplies.dds",
+  "source_file": "common/national_focus/uk.txt",
+  "fallback_icon": "GFX_goal_generic_construct_infrastructure",
+  "prompt": "Oil pipeline and derricks in Baku with British and Soviet flags",
+  "style_preset": "hoi4_focus_v1"
+}

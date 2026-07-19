@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "idea",
+  "asset_id": "BLHM_SOV_british_defence_treaty",
+  "sprite_name": "GFX_idea_custom_BLHM_SOV_british_defence_treaty",
+  "texturefile": "gfx/interface/ideas/idea_custom_BLHM_SOV_british_defence_treaty.dds",
+  "source_file": "common/ideas/BLHM_ENG_task.txt",
+  "fallback_picture": "generic_volunteer_group",
+  "prompt": "Treaty document with British and Soviet seals and a handshake",
+  "style_preset": "hoi4_idea_v1"
+}
