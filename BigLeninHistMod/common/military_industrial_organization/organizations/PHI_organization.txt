@@ -95,29 +95,7 @@ PHI_compania_maritima_de_cebu_organization = {
         limit_to_equipment_type = { screen_ship }
     }
 
-    add_trait = {
-        token = PHI_mio_trait_civilian_smugglers
-        name = PHI_mio_trait_civilian_smugglers
-        icon = GFX_generic_mio_trait_icon_supply_consumption
-        special_trait_background  = yes
-
-        position = { x=0 y=0 }
-        limit_to_equipment_type = { convoy }
-
-        visible = {
-            FROM = { original_tag = PHI }
-        }
-        
-        production_bonus = {
-            production_capacity_factor = 0.10
-        }   
-
-        available = {
-            owner = {
-                has_completed_focus = PHI_smugglers
-            }
-        }
-    }
+    # PHI_mio_trait_civilian_smugglers removed - tied to excluded communist route (PHI_smugglers)
 
     add_trait = {
         token = PHI_mio_trait_ethanol_fuel_adaptations
