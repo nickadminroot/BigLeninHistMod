@@ -285,8 +285,6 @@ focus_tree = {
 		}
 	}
 
-	shared_focus = HABSBURG_part_of_something_bigger
-
 	#	focus = {
 	#		id = CZE_
 	#		#icon = GFX_
