@@ -2196,7 +2196,7 @@ ideas = {
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_wartime_industry
+				has_completed_focus = USA_preventive_mobilization_projects
 			}
 			
 
