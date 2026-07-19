@@ -5463,54 +5463,6 @@ country_event = {
 			hidden_effect = { save_global_event_target_as = yugoslavia_wedding_partner }
 		}
 	}
-	option = { #Germany
-		name = DOD_yugoslavia.50.c
-		trigger = {
-			any_other_country = {
-				original_tag = GER
-				NOT = { has_war_with = ROOT }
-				OR = {
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_the_monarchy_compromise
-				}
-			}
-		}
-		random_country = {
-			limit = {
-				original_tag = GER
-				OR = {
-					has_completed_focus = GER_revive_the_kaiserreich
-					has_completed_focus = GER_the_monarchy_compromise
-				}
-			}
-			country_event = {
-				id = DOD_yugoslavia.501
-				days = 10
-			}
-			hidden_effect = { save_global_event_target_as = yugoslavia_wedding_partner }
-		}
-	}
-	option = { #Austria-Hungary
-		name = DOD_yugoslavia.50.d
-		trigger = {
-			any_other_country = {
-				original_tag = HUN
-				NOT = { has_war_with = ROOT }
-				has_completed_focus = HUN_invite_the_habsburg_prince
-			}
-		}
-		random_country = {
-			limit = {
-				original_tag = HUN
-				has_completed_focus = HUN_invite_the_habsburg_prince
-			}
-			country_event = {
-				id = DOD_yugoslavia.501
-				days = 10
-			}
-			hidden_effect = { save_global_event_target_as = yugoslavia_wedding_partner }
-		}
-	}
 	option = { #Spanish Princess
 		name = DOD_yugoslavia.50.e
 		trigger = {
