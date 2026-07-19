@@ -5,7 +5,9 @@
   "sprite_name": "GFX_focus_custom_BLHM_ENG_air_industry",
   "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_air_industry.dds",
   "source_file": "common/national_focus/uk.txt",
-  "fallback_icon": "GFX_goal_generic_construct_air_base",
+  "fallback_icon": "GFX_goal_generic_air_production",
   "prompt": "A large aircraft factory with planes being assembled on multiple production lines",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_air_production",
+  "fallback": "GFX_goal_generic_air_production"
 }

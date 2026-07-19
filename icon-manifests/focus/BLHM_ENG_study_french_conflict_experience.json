@@ -7,5 +7,7 @@
   "source_file": "common/national_focus/uk.txt",
   "fallback_icon": "GFX_goal_generic_scientific_exchange",
   "prompt": "A Somua S35 tank silhouette over a French tricolour",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_scientific_exchange",
+  "fallback": "GFX_goal_generic_scientific_exchange"
 }

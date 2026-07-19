@@ -5,7 +5,9 @@
   "sprite_name": "GFX_focus_custom_BLHM_ENG_african_railway_project",
   "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_african_railway_project.dds",
   "source_file": "common/national_focus/uk.txt",
-  "fallback_icon": "GFX_goal_generic_construct_infrastructure",
+  "fallback_icon": "GFX_goal_generic_construct_military",
   "prompt": "A steam locomotive crossing a railway bridge over an African gorge",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_construct_military",
+  "fallback": "GFX_goal_generic_construct_military"
 }

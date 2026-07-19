@@ -5,7 +5,9 @@
   "sprite_name": "GFX_focus_custom_BLHM_ENG_global_tank_doctrine_update",
   "texturefile": "gfx/interface/goals/focus_custom_BLHM_ENG_global_tank_doctrine_update.dds",
   "source_file": "common/national_focus/uk.txt",
-  "fallback_icon": "GFX_goal_generic_army_doctrine",
+  "fallback_icon": "GFX_goal_generic_air_doctrine",
   "prompt": "A global map with tank silhouettes over British Empire territories",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_air_doctrine",
+  "fallback": "GFX_goal_generic_air_doctrine"
 }

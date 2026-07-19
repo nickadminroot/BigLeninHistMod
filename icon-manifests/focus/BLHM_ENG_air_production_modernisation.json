@@ -7,5 +7,7 @@
   "source_file": "common/national_focus/uk.txt",
   "fallback_icon": "GFX_goal_generic_production",
   "prompt": "A modern aircraft factory assembly line with robots and automated machinery",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_production",
+  "fallback": "GFX_goal_generic_production"
 }

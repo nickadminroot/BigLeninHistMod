@@ -7,5 +7,7 @@
   "source_file": "common/national_focus/uk.txt",
   "fallback_icon": "GFX_goal_generic_army_tanks",
   "prompt": "A Sherman Firefly tank silhouette with a long-barrel 17-pounder gun",
-  "style_preset": "hoi4_focus_v1"
+  "style_preset": "hoi4_focus_v1",
+  "icon": "GFX_goal_generic_army_tanks",
+  "fallback": "GFX_goal_generic_army_tanks"
 }

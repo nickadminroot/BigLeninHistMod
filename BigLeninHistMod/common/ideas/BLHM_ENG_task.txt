@@ -2,6 +2,18 @@ ideas = {
 
 	country = {
 
+	# Military Construction - shared idea for ENG, enables armed forces focuses
+	BLHM_ENG_military_construction_idea = {
+		picture = generic_construction_penalty
+		allowed = {
+			original_tag = ENG
+		}
+		removal_cost = -1
+		modifier = {
+			production_speed_arms_factory_factor = 0.10
+		}
+	}
+
 	# Quantity over Quality - shared idea for ENG and allied nations (except USA)
 	BLHM_ENG_quantity_over_quality = {
 		picture = generic_construction_penalty
