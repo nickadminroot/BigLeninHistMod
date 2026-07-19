@@ -20,9 +20,13 @@ set_popularities = {
 }
 
 add_ideas = {
-	SWE_hungershield
 	SWE_severe_lack_of_ammunition
 	SWE_gustaf_v_idea
+}
+
+if = {
+	limit = { always = no }
+	add_ideas = SWE_hungershield
 }
 
 add_dynamic_modifier = { modifier = SWE_folkhemmet }
