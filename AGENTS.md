@@ -58,7 +58,7 @@ rtk python scripts/hoi4-smoke-windows.py
 - The script temporarily replaces and restores `PDX_USER_DIR/dlc_load.json`, `PDX_USER_DIR/mod/BigLeninHistMod.mod`, and `HOI4_DIR/cream_api.ini` when present. An interrupted or concurrent run can leave `.hoi4-smoke-backup` files, so inspect them before retrying after an abnormal termination.
 - `PDX_SMOKE_HOME` selects a fixed artifact directory and implies retention; it does **not** isolate the shared HOI4 user-data directory or game installation.
 - A failure retains `hoi4-launch.log`, `matching-errors.txt`, and `crashes/` under the printed smoke directory. A passing run removes temporary artifacts unless `HOI4_SMOKE_KEEP_DATA=1` or `PDX_SMOKE_HOME` is set.
-- Optional diagnostics: `SMOKE_MAX_ERROR_ENTRIES` and `SMOKE_MAX_ENTRY_LINES` limit the summary; `HOI4_SMOKE_CREAM_UNLOCKALL=0` disables the temporary `unlockall` change. Use `SMOKE_INCLUDE_PATTERN` only for explicitly reported targeted diagnosis because it can hide unrelated errors.
+- Optional diagnostics: `SMOKE_MAX_ERROR_ENTRIES` and `SMOKE_MAX_ENTRY_LINES` limit the summary; `HOI4_SMOKE_CREAM_UNLOCKALL=0` disables the temporary `unlockall` change. `SMOKE_STRICT_BASELINE=1` disables the exact pre-restoration warning allowlist. Use `SMOKE_INCLUDE_PATTERN` only for explicitly reported targeted diagnosis because it can hide unrelated errors.
 - Report the command and overrides used, PASS/FAIL and exit status, retained artifact path, relevant `error.log` sources, and any remaining in-game checks.
 - If smoke fails it does not mean game fails to start or crashes. Most of the time it keeps working (and user can check the changes with his own eyes) so timeout is needed to kill the process.
 

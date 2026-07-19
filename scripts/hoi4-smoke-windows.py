@@ -24,6 +24,97 @@ IGNORED_ERROR_FILES = frozenset(
         "common/decisions/USA.txt",
     }
 )
+# Exact warnings reproduced by the pre-restoration control at commit 32cff04.
+# Keep this allowlist narrow: SMOKE_STRICT_BASELINE=1 disables it for diagnosis.
+PRE_RESTORATION_BASELINE_MESSAGES = {
+    "character_manager.cpp:261": frozenset(
+        {
+            "Failed to generate a name for a character of origins Неиграбельная and for country Неиграбельная",
+        }
+    ),
+    "dlc.cpp:142": frozenset({"incorrect checksum for DLC"}),
+    "equipment_graphic_database.cpp:49": frozenset(
+        {
+            'GFX referenced in equipment graphic database does not exist: "GFX_JAP_land_cruiser_armor_medium", associated with JAP land_cruiser_chassis_1',
+        }
+    ),
+    "equipment_graphic_database.cpp:72": frozenset(
+        {
+            'Entity referenced in equipment graphic database does not exist: "USA_destroyer_0_entity", associated with USA ship_hull_light',
+            'Entity referenced in equipment graphic database does not exist: "USA_destroyer_0_entity", associated with USA ship_hull_light_4',
+        }
+    ),
+    "equipmentpool.cpp:1410": frozenset(
+        {
+            'Country "ENG" does not have any equipment variant for type "ship_hull_cruiser_coastal_defense_ship" version 0 created by "ENG".',
+            'Country "JAP" does not have any equipment variant for type "ship_hull_heavy_1" version 0 created by "JAP".',
+            'Country "USA" does not have any equipment variant for type "ship_hull_carrier_conversion_bb" version 0 created by "USA".',
+            'Country "USA" does not have any equipment variant for type "ship_hull_heavy_1" version 0 created by "USA".',
+        }
+    ),
+    "gameapplication.cpp:866": frozenset(
+        {"The game has loc key collisions. Check logs/text.log for more details"}
+    ),
+    "pdx_entity.cpp:2172": frozenset(
+        {
+            "Duplicate of HOL_cavalry_2_entity added to entity system",
+            "Duplicate of HOL_cavalry_entity added to entity system",
+            "Duplicate of HOL_cavalry_mg_combined_entity added to entity system",
+            "Duplicate of HOL_cavalry_rifle_combined_entity added to entity system",
+            "Duplicate of HOL_infantry_mg_rider_entity added to entity system",
+            "Duplicate of HOL_infantry_rider_entity added to entity system",
+            "Duplicate of INS_cavalry_2_entity added to entity system",
+            "Duplicate of INS_cavalry_entity added to entity system",
+            "Duplicate of INS_cavalry_mg_combined_entity added to entity system",
+            "Duplicate of INS_cavalry_rifle_combined_entity added to entity system",
+            "Duplicate of INS_infantry_mg_rider_entity added to entity system",
+            "Duplicate of INS_infantry_rider_entity added to entity system",
+            "Duplicate of JAP_light_plane_1_entity added to entity system",
+            "Duplicate of JAP_light_plane_3_entity added to entity system",
+            "Duplicate of MEX_cavalry_2_entity added to entity system",
+            "Duplicate of MEX_cavalry_entity added to entity system",
+            "Duplicate of MEX_cavalry_mg_combined_entity added to entity system",
+            "Duplicate of MEX_cavalry_rifle_combined_entity added to entity system",
+            "Duplicate of MEX_infantry_mg_rider_entity added to entity system",
+            "Duplicate of MEX_infantry_rider_entity added to entity system",
+        }
+    ),
+    "pdx_entity.cpp:324": frozenset(
+        {'Failed to find entity "INS_bicycle_vehicle_entity" for attachment in bicycle'}
+    ),
+}
+PRE_RESTORATION_BASELINE_MISSING_SHINE_FOCUSES = frozenset(
+    {
+        "BLHM_GER_develop_portuguese_mining",
+        "BLHM_GER_invest_in_italian_industry",
+        "BLHM_GER_libyan_industry",
+        "BLHM_GER_mediterranean_exercises",
+        "BLHM_GER_prepare_east_african_sabotage",
+        "BLHM_GER_spanish_african_bases",
+        "BLHM_GER_wunderwaffe_program",
+        "GER_consolidate_management_of_minor_powers",
+        "GER_develop_hungarian_bauxite_deposits",
+        "GER_diplomatic_pressure_on_potential_allies",
+        "GER_east_front_continue_offensive",
+        "GER_east_front_defensive_tactics",
+        "GER_east_front_destroy_partisans",
+        "GER_east_front_final_blow",
+        "GER_east_front_fortify_lines",
+        "GER_east_front_prepare_long_war",
+        "GER_east_front_prepare_second_winter",
+        "GER_east_front_summer_campaign",
+        "GER_east_front_supply_routes",
+        "GER_east_front_victory_or_death",
+        "GER_east_front_win_before_winter",
+        "GER_expand_oil_extraction_in_ploesti",
+        "GER_sofia_initiative",
+        "GER_wunderwaffe_e50_unification",
+        "SOV_mobilization_first_wave",
+        "SOV_mobilization_second_wave",
+        "SOV_operation_bagration",
+        "SOV_order_227",
+    }
+)
 HOI4_TEXT_EXTENSIONS = (
     "txt",
     "gui",
@@ -225,7 +316,7 @@ def iter_log_entries(error_log: Path) -> list[str]:
     entries: list[str] = []
     current: list[str] = []
     start_re = re.compile(r"^\[[0-9]{2}:[0-9]{2}:[0-9]{2}\]\[")
-    for raw_line in error_log.read_text(errors="replace").splitlines():
+    for raw_line in error_log.read_text(encoding="utf-8", errors="replace").splitlines():
         if start_re.match(raw_line) and current:
             entries.append("\n".join(current))
             current = []
@@ -274,6 +365,20 @@ def strip_log_prefix(line: str) -> str:
     return re.sub(r"^\[[^\]]+\]\[[^\]]+\]\[[^\]]+\]:\s*", "", line)
 
 
+def is_pre_restoration_baseline(entry: str) -> bool:
+    first_line = entry.splitlines()[0]
+    message = strip_log_prefix(first_line).strip()
+    channel = entry_channel(entry)
+    if message in PRE_RESTORATION_BASELINE_MESSAGES.get(channel, frozenset()):
+        return True
+    if channel != "nationalfocus.cpp:642":
+        return False
+    match = re.match(r"Missing icon shine for focus: ([A-Za-z0-9_.:-]+)\b", message)
+    return bool(
+        match and match.group(1) in PRE_RESTORATION_BASELINE_MISSING_SHINE_FOCUSES
+    )
+
+
 def format_entry(index: int, entry: str, max_lines: int) -> list[str]:
     lines = entry.splitlines()
     source = find_entry_source(entry)
@@ -293,6 +398,7 @@ def format_entry(index: int, entry: str, max_lines: int) -> list[str]:
 def classify_errors(
     error_log: Path,
     include_pattern: str | None,
+    ignore_pre_restoration_baseline: bool = True,
 ) -> tuple[list[str], list[str]]:
     matcher = re.compile(include_pattern) if include_pattern else None
     matching: list[str] = []
@@ -301,7 +407,9 @@ def classify_errors(
         if matcher and not matcher.search(entry):
             continue
         source = find_entry_source(entry)
-        if source.path in IGNORED_ERROR_FILES:
+        if source.path in IGNORED_ERROR_FILES or (
+            ignore_pre_restoration_baseline and is_pre_restoration_baseline(entry)
+        ):
             ignored_entries.append(entry)
         else:
             matching.append(entry)
@@ -361,6 +469,7 @@ def main() -> int:
     max_error_entries = int(env("SMOKE_MAX_ERROR_ENTRIES", "40"))
     max_entry_lines = int(env("SMOKE_MAX_ENTRY_LINES", "8"))
     include_pattern = os.environ.get("SMOKE_INCLUDE_PATTERN")
+    strict_baseline = env("SMOKE_STRICT_BASELINE", "0") == "1"
 
     hoi4_exe = hoi4_dir / "hoi4.exe"
     cream_api_ini = hoi4_dir / "cream_api.ini"
@@ -389,6 +498,7 @@ def main() -> int:
         error_log = log_dir / "error.log"
         launch_log = smoke_root / "hoi4-launch.log"
         matches_file = smoke_root / "matching-errors.txt"
+        ignored_file = smoke_root / "ignored-errors.txt"
         crash_dir = smoke_root / "crashes"
         previous_error_log_mtime = error_log.stat().st_mtime if error_log.exists() else None
         cream_unlockall = env("HOI4_SMOKE_CREAM_UNLOCKALL", "1") != "0"
@@ -429,8 +539,15 @@ def main() -> int:
         if previous_error_log_mtime is not None and error_log.stat().st_mtime <= previous_error_log_mtime:
             die(f"HOI4 did not update logs/error.log in user-data dir: {game_data_dir}")
 
-        entries, ignored_entries = classify_errors(error_log, include_pattern)
+        entries, ignored_entries = classify_errors(
+            error_log,
+            include_pattern,
+            ignore_pre_restoration_baseline=not strict_baseline,
+        )
         matches_file.write_text("\n\n".join(entries) + ("\n" if entries else ""))
+        ignored_file.write_text(
+            "\n\n".join(ignored_entries) + ("\n" if ignored_entries else "")
+        )
 
         if entries:
             keep_data = True
@@ -447,10 +564,17 @@ def main() -> int:
         if run_status not in (0, 124):
             die(f"HOI4 exited with status {run_status}, but no serious error pattern was found")
 
+        ignored_summary = (
+            f"; ignored pre-restoration/baseline entries: {len(ignored_entries)}"
+            if ignored_entries
+            else ""
+        )
         if keep_data:
-            print(f"hoi4-smoke-windows: PASS; retained data: {smoke_root}")
+            print(
+                f"hoi4-smoke-windows: PASS{ignored_summary}; retained data: {smoke_root}"
+            )
         else:
-            print("hoi4-smoke-windows: PASS")
+            print(f"hoi4-smoke-windows: PASS{ignored_summary}")
         return 0
     finally:
         if not keep_data and smoke_root.exists():
