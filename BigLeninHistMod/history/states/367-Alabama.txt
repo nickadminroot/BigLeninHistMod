@@ -5,7 +5,7 @@ state={
 	resources = {
 		coal = 8 # initial distribution = with infra 28.8 / 1280 total
 	}
-	state_category = city
+	state_category = large_city
 	history={
 		owner = USA
 		buildings = {

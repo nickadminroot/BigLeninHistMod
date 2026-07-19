@@ -43,5 +43,5 @@ state={
 		coal = 11 #initial distribution = with infra 28.8 / 1280 total
 	}
 	buildings_max_level_factor=1.000
-	state_category=large_city
+	state_category=metropolis
 }

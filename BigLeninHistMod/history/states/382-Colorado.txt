@@ -6,7 +6,7 @@ state={
 		oil=14 # was: 20
 		coal = 7 # initial distribution = with infra 14 / 1280 total
 	}
-	state_category = town
+	state_category = large_town
 	history={
 		owner = USA
 		buildings = {
