@@ -3489,17 +3489,16 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			custom_effect_tooltip = BLHM_allied_war_industry_tt
-		}
-
 		completion_reward = {
-			every_country = {
-				limit = {
-					is_in_faction_with = ENG
-					NOT = { tag = USA }
+			custom_override_tooltip = {
+				tooltip = BLHM_allied_war_industry_tt
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					country_event = { id = BLHM_USA.5 days = 1 }
 				}
-				country_event = { id = BLHM_USA.5 days = 1 }
 			}
 		}
 	}
@@ -3789,12 +3788,11 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-			custom_effect_tooltip = BLHM_share_designs_with_britain_tt
-		}
-
 		completion_reward = {
-			ENG = { country_event = { id = BLHM_USA.6 days = 1 } }
+			custom_override_tooltip = {
+				tooltip = BLHM_share_designs_with_britain_tt
+				ENG = { country_event = { id = BLHM_USA.6 days = 1 } }
+			}
 		}
 	}
 
@@ -3907,20 +3905,19 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-			custom_effect_tooltip = BLHM_allied_military_economic_integration_tt
-		}
-
 		completion_reward = {
-			add_ideas = USA_allied_military_economic_integration
-			every_country = {
-				limit = {
-					is_in_faction_with = ENG
-					NOT = { tag = USA }
-				}
+			custom_override_tooltip = {
+				tooltip = BLHM_allied_military_economic_integration_tt
 				add_ideas = USA_allied_military_economic_integration
+				every_country = {
+					limit = {
+						is_in_faction_with = ENG
+						NOT = { tag = USA }
+					}
+					add_ideas = USA_allied_military_economic_integration
+				}
+				unlock_decision_category_tooltip = USA_allied_integration_decisions
 			}
-			unlock_decision_category_tooltip = USA_allied_integration_decisions
 		}
 	}
 

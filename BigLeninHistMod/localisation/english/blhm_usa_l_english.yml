@@ -114,14 +114,14 @@
  USA_american_bonds_idea_desc:0 "Patriotic bond drives have raised substantial funds for the war effort while reducing consumer demand."
 
  # Stage 2 Tooltips
- BLHM_allied_war_industry_tt:0 "§YAllied War Industry§!\nAllies in the Allied faction receive §YAmerican Aid§! national spirit:\n§G+3%§! Factory Output\n§G+5%§! Max Production Efficiency\n§G+10%§! Military Factory Construction Speed"
+ BLHM_allied_war_industry_tt:0 "§YAllied War Industry§!\nGrants §YAmerican Aid§! national spirit to every Allied faction member (excluding USA):\n§G+3%§! Factory Output\n§G+5%§! Max Production Efficiency\n§G+10%§! Military Factory Construction Speed"
  BLHM_asia_doctrine_tt:0 "§YAsia Defence Doctrine§!\nRaises air bases to §Glevel 10§! in:\n- §YBurma§! (states 288, 640, 994-999)\n- §YSingapore§! (state 1021)\n- §YDutch East Indies§! (HOL/INS-controlled states)\nRequires allied control of specified states."
  BLHM_asia_doctrine_available_tt:0 "All specified Allied territories in Southeast Asia must remain under Allied control"
  BLHM_europe_doctrine_tt:0 "§YEurope Defence Doctrine§!\nRaises air bases to §Glevel 10§! and naval bases to §Glevel 10§! in southern England:\n- §YStates 123, 126, 127§!\n- §YProvinces 540, 11374, 3501§!\nRequires British control of target states."
  BLHM_globalize_air_industry_tt:0 "§YGlobalize Air Industry§!\nGrants a §G2-year§! ahead-of-time reduction for §YAir Equipment§! research."
- BLHM_share_designs_with_britain_tt:0 "§YShare Designs with Britain§!\nThe United Kingdom receives the same §G2-year§! ahead-of-time reduction for §YAir Equipment§! research."
+ BLHM_share_designs_with_britain_tt:0 "§YShare Designs with Britain§!\nGreat Britain receives a §G2-year§! ahead-of-time reduction for §YAir Equipment§! research, matching the bonus the USA receives from §YGlobalize Air Industry§!."
  BLHM_joint_tank_development_tt:0 "§YJoint Tank Development§!\nGrants §G+100%§! §YArmor§! research bonus.\nUSA and Allied faction allies receive §YAllied Tank School§!:\n§G+5%§! Tank/Army Organization\n§G+7%§! Armour Hard Attack\n§G+3%§! Armour Soft Attack"
- BLHM_allied_military_economic_integration_tt:0 "§YAllied Military-Economic Integration§!\nUSA and all Allied faction members receive §YAllied Military-Economic Integration§! marker.\nUnlocks decision category §YAllied Integration Decisions§! for the USA (available in Stage 3)."
+ BLHM_allied_military_economic_integration_tt:0 "§YAllied Military-Economic Integration§!\nUSA and all Allied faction members receive the §YAllied Military-Economic Integration§! marker idea.\nUnlocks the §YAllied Integration Decisions§! category for the USA, granting access to timed integration decisions in Stage 3."
  BLHM_domestic_production_tt:0 "§YDomestic Production§!\nUpgrades §YAmerican Economy§! law:\n§G+20%§! Military Factory Construction Speed"
  BLHM_mass_production_tt:0 "§YMass Production§!\nConstructs §G4§! civilian factories in American core states.\nGrants a §G2-year§! ahead-of-time reduction for §YMachine Tool§! technologies."
  BLHM_new_machine_tools_tt:0 "§YNew Machine Tools§!\nUpgrades §YAmerican Economy§! law:\nRemoves §R-7%§! Efficiency Growth penalty."
