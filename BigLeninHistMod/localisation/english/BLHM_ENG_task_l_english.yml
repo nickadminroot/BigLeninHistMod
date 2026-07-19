@@ -63,6 +63,7 @@
  BLHM_ENG_soviet_heavy_weapons_experience:0 "Soviet Heavy Weapons Experience"
  BLHM_ENG_soviet_heavy_weapons_experience_desc:0 "The USSR has some of the finest ordnance in the world today. Let us send a research group to study their artillery development."
  BLHM_ENG_soviet_heavy_weapons_experience_bonus:0 "Soviet Heavy Weapons Experience — Artillery Research"
+ BLHM_ENG_soviet_compromise_accepted_required_tt:0 "§RThe Soviet Union must accept the Soviet Economic Compromise.§!"
 
  BLHM_ENG_simplify_production_lines:0 "Simplify Production Lines"
  BLHM_ENG_simplify_production_lines_desc:0 "Simplified Soviet designs have reached us. Applying their mass-production experience will reduce the cost of our own small arms."

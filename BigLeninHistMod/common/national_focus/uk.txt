@@ -5137,7 +5137,10 @@ focus_tree = {
 		id = BLHM_ENG_soviet_heavy_weapons_experience
 		prerequisite = { focus = BLHM_ENG_soviet_economic_compromise }
 		available = {
-			has_country_flag = BLHM_ENG_soviet_compromise_accepted
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_soviet_compromise_accepted_required_tt
+				has_country_flag = BLHM_ENG_soviet_compromise_accepted
+			}
 			has_tech = antitank2
 		}
 		icon = GFX_goal_generic_army_artillery
@@ -5520,7 +5523,7 @@ focus_tree = {
 		y = 5
 		cost = 5
 		available = {
-			OR = {
+			AND = {
 				118 = { controller = { NOT = { is_in_faction_with = ROOT } } }
 				446 = { controller = { NOT = { is_in_faction_with = ROOT } } }
 			}

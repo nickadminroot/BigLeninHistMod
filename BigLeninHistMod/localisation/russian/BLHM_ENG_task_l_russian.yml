@@ -63,6 +63,7 @@
  BLHM_ENG_soviet_heavy_weapons_experience:0 "Перенять советский опыт в разработке тяжёлого оружия"
  BLHM_ENG_soviet_heavy_weapons_experience_desc:0 "По праву у СССР одни из лучших орудий в мире на сегодняшний день. Отправим исследовательскую группу, чтобы перенять опыт разработки."
  BLHM_ENG_soviet_heavy_weapons_experience_bonus:0 "Советский опыт тяжёлого оружия — Исследование артиллерии"
+ BLHM_ENG_soviet_compromise_accepted_required_tt:0 "§RСССР должен принять Советский экономический компромисс.§!"
 
  BLHM_ENG_simplify_production_lines:0 "Упрощение производственных линий"
  BLHM_ENG_simplify_production_lines_desc:0 "К нам попали упрощённые образцы армейского вооружения СССР. Применим их опыт в производстве собственного оружия."
