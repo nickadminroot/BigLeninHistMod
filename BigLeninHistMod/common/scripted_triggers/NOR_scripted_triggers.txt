@@ -141,10 +141,7 @@ NOR_kings_no_allow_trigger = {
 			limit = {
 				has_hide_rule = yes 
 			}
-			NOT = {
-				has_completed_focus = NOR_the_stumbling_storting
-				has_completed_focus = NOR_a_resurgent_labor_movement
-			}
+			always = yes
 		}
 	}
 	else = {
@@ -199,7 +196,7 @@ NOR_char_cw_democratic = { # Any Dem
 
 NOR_char_cw_labor_only = { # They go democratic as long as it's Labor 
 	has_government = democratic
-	NOT = { has_completed_focus = NOR_vote_of_no_confidence }
+	NOT = { has_completed_focus = NOR_continue_nygaardsvold_government }
 }
 
 NOR_char_cw_conservative = {

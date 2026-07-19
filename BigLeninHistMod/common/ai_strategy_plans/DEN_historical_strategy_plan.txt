@@ -112,10 +112,8 @@ DEN_historical_plan = {
 		
 	}
 
-	#Never takes these
+	#Never takes these (removed alternate political branch focuses)
 	focus_factors = {
-		DEN_unify_the_right = 0
-		DEN_start_the_rearmament = 0
 		DEN_develop_greenland = 0
 	}
 

@@ -99,9 +99,7 @@ country_event = { # Fascists Ransack Trotsky's residence
 			}
 		}
 		trigger = {
-			NOT = {
-				has_completed_focus = NOR_prosecute_the_nkp
-			}
+			always = no
 		}
 		country_event = {
 			id = AAT_norway.2
@@ -116,13 +114,13 @@ country_event = { # Fascists Ransack Trotsky's residence
 			base = 1
 			modifier = {
 				add = 20
-				has_completed_focus = NOR_vote_of_no_confidence 
+				always = no
 			}
 			modifier = {
 				factor = 0 
 				OR = {
 					NOR_is_historical_ai = yes 
-					has_completed_focus = NOR_lurk_in_the_shadows
+					always = no
 				}
 			}
 		}
@@ -149,10 +147,7 @@ country_event = { # Fascists Ransack Trotsky's residence
 		}
 		trigger = {
 			NOT = {
-				has_completed_focus = NOR_compromise_with_the_nkp
-				has_completed_focus = NOR_vote_of_no_confidence
 				has_completed_focus = NOR_continue_nygaardsvold_government
-				has_completed_focus = NOR_the_stumbling_storting	
 			}
 		}
 		country_event = {
@@ -194,9 +189,7 @@ country_event = { # Fascists Ransack Trotsky's residence
 			}
 		}
 		trigger = {
-			NOT = {
-				has_completed_focus = NOR_prosecute_the_nkp
-			}
+			always = no
 		}
 		country_event = {
 			id = AAT_norway.5

@@ -40,8 +40,6 @@ NORDIC_is_democratic = {
 	}
 	NOT = { has_completed_focus = SWE_undermine_the_fascists }
 	NOT = { has_completed_focus = FIN_the_finnish_throne }
-	NOT = { has_completed_focus = NOR_the_kingdom_of_norway }
-	NOT = { has_completed_focus = DEN_king_assumes_power }
 	NOT = { has_cosmetic_tag = ICE_independent_kingdom }
 }
 NORDIC_is_monarchist = {
@@ -59,8 +57,6 @@ NORDIC_is_monarchist = {
 	OR = {
 		has_completed_focus = SWE_undermine_the_fascists 
 		has_completed_focus = FIN_the_finnish_throne 
-		has_completed_focus = NOR_the_kingdom_of_norway 
-		has_completed_focus = DEN_king_assumes_power 
 		has_cosmetic_tag = ICE_independent_kingdom
 	}
 }
@@ -168,7 +164,6 @@ NORDIC_monarchist_alliance_viable = {
 NORDIC_has_started_democratic_focus_tree = {
 	OR = {
 		has_completed_focus = NOR_continue_nygaardsvold_government
-		has_completed_focus = NOR_vote_of_no_confidence
 		has_completed_focus = SWE_coalition_war_cabinet
 		has_completed_focus = FIN_social_democracy
 		has_completed_focus = FIN_finnish_neutrality
@@ -178,7 +173,6 @@ NORDIC_has_started_democratic_focus_tree = {
 
 NORDIC_has_started_communist_focus_tree = {
 	OR = {
-		has_completed_focus = NOR_a_resurgent_labor_movement
 		has_completed_focus = SWE_align_more_closely_with_the_landsorganisationen
 		has_completed_focus = FIN_towards_a_red_government
 	}
@@ -186,11 +180,8 @@ NORDIC_has_started_communist_focus_tree = {
 
 NORDIC_has_started_monarchist_focus_tree = {
 	OR = {
-		has_completed_focus = NOR_the_chamberlains_overture
-		has_completed_focus = NOR_lurk_in_the_shadows
 		has_completed_focus = SWE_prevent_a_red_dictatorship
 		has_completed_focus = FIN_finnish_neutrality
-		has_completed_focus = DEN_unify_the_right
 	}	
 }
 
