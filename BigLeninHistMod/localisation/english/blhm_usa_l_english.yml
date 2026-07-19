@@ -41,6 +41,7 @@
  BLHM_USACE_projects_tt:0 "§YUSACE Projects§!\nConstructs §G8§! military factories in American core states."
  BLHM_preventive_mobilization_projects_tt:0 "§YPreventive Mobilization Projects§!\nConstructs §G4§! military factories in American core states."
  BLHM_two_ocean_navy_tt:0 "§YTwo-Ocean Navy Act§!\nConstructs §G6§! dockyards in American core states."
+ USA_hemisphere_defense_tt:0 "§YHemisphere Defense§!\nCreates the Pan-American faction and invites democratic American nations to join."
 
  # Events - Germany Embargo
  BLHM_USA.1.t:0 "USA Imposes Economic Embargo"

@@ -1057,12 +1057,9 @@ focus_tree = {
 
 		}
 
-		complete_tooltip = {
-			custom_effect_tooltip = BLHM_preventive_mobilization_projects_tt
-		}
-
 		completion_reward = {
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = BLHM_preventive_mobilization_projects_tt
 				359 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -1471,6 +1468,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+			custom_effect_tooltip = USA_hemisphere_defense_tt
+		}
+
 		completion_reward = {
 			if = {
 				limit = {
@@ -1519,6 +1520,8 @@ focus_tree = {
 			}
 		}
 	}
+	# USA_hemisphere_defense end
+
 	focus = {
 		id = USA_intervention_in_europe
 		icon = GFX_goal_generic_territory_or_war
