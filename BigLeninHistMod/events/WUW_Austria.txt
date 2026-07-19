@@ -216,10 +216,7 @@ country_event = { #Theodor Innitzer is no longer fascist
 			has_dlc = "Gotterdammerung" 
 		}
 		NOT = {
-			OR = {
-				has_completed_focus = AUS_cut_ties_with_the_church
-				is_in_faction = yes
-			}
+			is_in_faction = yes
 		}
 	}
 
@@ -773,7 +770,7 @@ country_event = { #Informs Germany of Austria's DNSAP ban
 			effect_tooltip = {
 				IF = {
 					limit = {
-						has_completed_focus = AUS_reinstate_the_imperial_council
+						always = no
 					}
 
 					add_advisor_role = {
@@ -888,7 +885,7 @@ country_event = { # Event for Austria Germany Objects to the DNSAP ban and deman
 			
 			IF = {
 				limit = {
-					has_completed_focus = AUS_reinstate_the_imperial_council
+					always = no
 				}
 
 				add_advisor_role = {
@@ -4864,7 +4861,7 @@ country_event = { #FROM seeks to join the faction
 				factor = 10
 				FROM = {
 					original_tag = AUS
-					has_completed_focus = AUS_align_with_ussr
+					always = no
 				}
 
 				ROOT = {
@@ -5900,7 +5897,7 @@ country_event = { #FROM gives us Trentino and Alto Adige/caves to our threats
 		IF = {
 			limit = {
 				ROOT = {
-					has_completed_focus = AUS_strike_deal_with_italy
+					always = no
 				}	
 			}
 			ITA = {
@@ -5973,7 +5970,7 @@ country_event = { #FROM refuses to give us Trentino and Alto Adige/does not cave
 
 		IF = {
 			limit = {
-				has_completed_focus = AUS_renew_claims_in_italy
+				always = no
 			}
 
 			create_wargoal = {
@@ -6067,7 +6064,7 @@ country_event = { #FROM demands Trentino and Alto Adige
 		effect_tooltip = {
 			IF = {
 				limit = {
-					FROM = { has_completed_focus = AUS_renew_claims_in_italy }
+					FROM = { always = no }
 				}
 
 				FROM = {
@@ -8038,19 +8035,7 @@ country_event = { #Austria is allowed to boost communism
 			base = 10
 		}
 
-		IF = {
-			limit = {
-				NOT = {
-					has_completed_focus = AUS_demand_liberation_of_workers
-				}
-			}
-
-			custom_effect_tooltip = AUS_political_events.85.a_tt
-		}
-
-		ELSE = {
-			custom_effect_tooltip = AUS_political_events.85.2.a_tt
-		}
+		custom_effect_tooltip = AUS_political_events.85.a_tt
 	}
 }
 
@@ -8441,7 +8426,7 @@ country_event = { #Otto wants to be a field marshal
 
 		has_completed_focus = AUS_an_improved_german_state
 		has_completed_focus = AUS_courting_the_princess_of_industry
-		has_completed_focus = AUS_the_royals_of_liechtenstein
+		always = no
 
 		has_government = neutrality
 
@@ -8879,7 +8864,7 @@ country_event = { #Germany informed of Austria's refusal to install Seyss-Inquar
 			custom_effect_tooltip = AUS_political_events.16.a_tt
 			IF = {
 				limit = {
-					has_completed_focus = AUS_reinstate_the_imperial_council
+					always = no
 				}
 
 				add_advisor_role = {
@@ -9092,7 +9077,7 @@ country_event = { #Austria informed of Germany upping the pressure
 
 		IF = {
 			limit = {
-				has_completed_focus = AUS_reinstate_the_imperial_council
+				always = no
 			}
 
 			add_advisor_role = {
@@ -9200,13 +9185,8 @@ country_event = { #Event for Germany, Hitler wants Austria
 		IF = { #This is where the ticking actually starts, NOT ANYWHERE ELSE
 			limit = {
 				AUS = {
-					OR = {
-						has_government = neutrality
-						has_completed_focus = AUS_reinstate_the_imperial_council
-					}
+					has_government = neutrality
 					AND = {
-						NOT = { has_completed_focus = AUS_ban_dnsap}
-						NOT = { has_completed_focus = AUS_rebuild_democratic_systems}	
 						NOT = { has_completed_focus = AUS_clamp_down_on_dnsap}
 					}
 				}
@@ -9260,24 +9240,14 @@ country_event = { #Event for Austria, Hitler wants Austria, Now.
 		IF = { #Here is where the ticking down rate starts, NOWHERE ELSE!
 			limit = {
 				ROOT = {
-					OR = {
-						has_government = neutrality
-						has_completed_focus = AUS_reinstate_the_imperial_council
-					}
+					has_government = neutrality
 					AND = {
-						NOT = { has_completed_focus = AUS_ban_dnsap}
-						NOT = { has_completed_focus = AUS_rebuild_democratic_systems}	
 						NOT = { has_completed_focus = AUS_clamp_down_on_dnsap}
 					}
 				}
 			}
 
 			custom_effect_tooltip = AUS_anschluss_ratio_ticking_down_monarchist
-
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
 		}
 
 		ELSE = {

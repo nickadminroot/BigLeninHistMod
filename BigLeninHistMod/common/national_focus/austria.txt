@@ -192,22 +192,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { 
-					OR = {
-						has_completed_focus = AUS_austromarxism_focus
-						has_completed_focus = AUS_hold_elections
-						has_completed_focus = AUS_the_danubian_federation
-					} 
-				}
-				
-			}
+			
 		}
 
 		available_if_capitulated = no
@@ -1573,19 +1558,7 @@ focus_tree = {
 
 		}
 
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_demand_hungarian_submission
-			}
-		}
-
-		available_if_capitulated = no
+	available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = AUS_austrofascism_intro_tt
@@ -1621,32 +1594,6 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 10
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_repeal_the_may_constitution
-			}
-		}
-
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_reinstate_the_imperial_council
-			}
-		}
-
-		
-
-		offset = {
 			x = -3
 			y = 0
 			trigger = {
@@ -1655,18 +1602,6 @@ focus_tree = {
 					option = HIDE
 				}
 				has_completed_focus = AUS_bring_hungary_back_into_the_fold
-			}
-		}
-
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_demand_hungarian_submission
 			}
 		}
 
@@ -1854,77 +1789,7 @@ focus_tree = {
 
 		}
 
-		offset = {
-			x = 5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_repeal_the_may_constitution
-			}
-		}
-		
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_hold_elections
-			}
-		}
 
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_seek_support_from_guarantors
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_reinstate_the_imperial_council
-			}
-		}
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_the_danubian_federation
-				has_completed_focus = AUS_hold_elections
-			}
-		}
-
-		offset = {
-			x = 0
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = AUS_legacy_of_the_empire
-			}
-		}
 
 		available_if_capitulated = no
 
@@ -4308,11 +4173,7 @@ focus_tree = {
 		completion_reward = {
 
 			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = AUS_legacy_of_the_empire
-					}
-				}
+				limit = { always = yes }
 
 				IF = {
 					limit = { 
@@ -4408,11 +4269,7 @@ focus_tree = {
 			army_experience = 50
 
 			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = AUS_legacy_of_the_empire
-					}
-				}
+				limit = { always = yes }
 
 				IF = {
 					limit = {
@@ -4938,19 +4795,9 @@ focus_tree = {
 						}
 
 						AND = {
-							OR = {
-								has_completed_focus = AUS_rebuild_democratic_systems
-								has_completed_focus = AUS_ban_dnsap
-							}
-							NOT = { has_government = fascism }
-						}
-
-						AND = {
 							NOT = { has_government = fascism }
 							NOT = { 
 								has_completed_focus = AUS_clamp_down_on_dnsap 
-								has_completed_focus = AUS_rebuild_democratic_systems
-								has_completed_focus = AUS_ban_dnsap
 							}
 						}
 					}
