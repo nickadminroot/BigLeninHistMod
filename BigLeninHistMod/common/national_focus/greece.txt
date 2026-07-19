@@ -252,7 +252,7 @@ focus_tree = {
 				}
 				AND = { 
 					ENG = { has_government = communism }
-					ROM = { NOT = { has_completed_focus = ROM_the_cordon_sanitaire } }
+					ROM = { always = yes }
 				}
 			}
 		}
@@ -262,7 +262,7 @@ focus_tree = {
 			if = {
 				limit = { 
 					ENG = { 
-						NOT = { has_completed_focus = ENG_concessions_to_the_trade_unions }
+
 						is_faction_leader = yes
 					}
 				}
@@ -271,7 +271,7 @@ focus_tree = {
 			else_if = {
 				limit = { 
 					ROM = { 
-						has_completed_focus = ROM_the_cordon_sanitaire
+						always = no
 						is_faction_leader = yes
 					}
 				}
@@ -2244,7 +2244,7 @@ focus_tree = {
 				AND = { 
 					is_historical_focus_on = no
 					always = no
-					ENG = { has_completed_focus = ENG_concessions_to_the_trade_unions }
+					ENG = { always = no }
 				}
 			}
 		}

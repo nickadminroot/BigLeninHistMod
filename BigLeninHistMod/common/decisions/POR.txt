@@ -2336,7 +2336,7 @@ POR_monarchist_cause = {
 				
 					NOT = {
 						has_country_flag = BRA_rejected_monarchism
-						has_completed_focus = BRA_romanticize_the_old_empire
+						always = no
 					}
 				}
 			}

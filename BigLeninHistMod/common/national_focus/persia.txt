@@ -5483,10 +5483,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = ETH_rebuilding_the_country_idea
-				days = 128
-			}
+			
 		}
 	}
 
