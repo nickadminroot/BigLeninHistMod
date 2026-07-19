@@ -70,3 +70,10 @@ FIN_bop_modifier_divided_proletariat = { #Aaltonen & Leino
 FIN_bop_modifier_forgotten_finno_karelians = { #Kuusinen
 	power_balance_weekly = -0.01
 }
+
+#########################################
+########### CZE BOP MODIFIERS ###########
+#########################################
+CZE_bop_modifier_czech_sovereignty_is_threatened = {
+	power_balance_weekly = -0.01
+}

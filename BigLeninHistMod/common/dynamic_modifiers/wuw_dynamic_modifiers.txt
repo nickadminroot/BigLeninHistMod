@@ -34,6 +34,14 @@ FRA_maginot_line_dynamic_modifier = { #State Modifer
     state_bunker_max_level_terrain_limit = 6
 }
 
+############# NOR Nortraship ##############
+NOR_nortraship_dmod = {
+	enable = { always = yes }
+	icon = GFX_goal_NOR_nortraship
+	trade_route_avoidance_factor = 0.20
+	convoy_defence = 0.10
+}
+
 
 ############# RAIDS RELATED ##############
 #TODO_TA Remove or make proper modifier
