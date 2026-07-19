@@ -1,3 +1,5 @@
+add_namespace = bftb_greece
+
 # BFTB Greece events - stub file for event IDs referenced by mod
 # Original source: vanilla Hearts of Iron IV events/BFTB_Greece.txt
 
