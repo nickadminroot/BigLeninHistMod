@@ -1,51 +1,102 @@
-# Отложенная генерация иконок фокусов
+# Отложенная генерация иконок фокусов и идей
 
-Этот пайплайн отделяет разработку фокусов от генерации изображений. Агенты создают рабочие фокусы с временными иконками и независимые manifest-файлы. ComfyUI или другой генератор запускается позже одной явной пакетной операцией.
+Пайплайн отделяет разработку игрового контента от генерации изображений. Агенты создают рабочие фокусы и идеи с временными иконками и независимые manifest-файлы. ComfyUI или другой генератор запускается позже одной явной пакетной операцией.
+
+Поддерживаются:
+
+| Тип | Manifest | Поле скрипта до генерации | Custom reference | DDS |
+|---|---|---|---|---|
+| Фокус | `icon-manifests/focus/<focus_id>.json` | `icon = <fallback GFX>` | `GFX_focus_custom_<focus_id>` | 100x88 |
+| Идея | `icon-manifests/idea/<idea_id>.json` | `picture = <fallback>` | `custom_<idea_id>` | 65x67 |
+
+Для идеи движок автоматически преобразует `picture = custom_TAG_spirit` в sprite lookup `GFX_idea_custom_TAG_spirit`.
 
 ## Основной принцип
 
-Для каждого нового фокуса существуют три стадии:
+Для каждого asset существуют три нормальные стадии:
 
-1. **`pending`** — фокус использует существующую fallback-иконку, manifest хранит промпт, DDS ещё нет.
-2. **`ready`** — DDS уже получен, но ссылка в фокусе ещё не переключена.
-3. **`applied`** — DDS зарегистрирован в GFX, а фокус использует новую custom-иконку.
+1. **`pending`** — игровой скрипт использует существующий fallback, manifest хранит промпт, DDS ещё нет.
+2. **`ready`** — DDS получен, но ссылка в скрипте ещё не переключена.
+3. **`applied`** — DDS зарегистрирован в GFX, скрипт использует custom reference.
 
 До стадии `applied` мод остаётся рабочим: отсутствующий DDS никогда не указывается из игрового скрипта.
 
-Источник истины — каталог [`icon-manifests/focus/`](icon-manifests/focus/). Один фокус соответствует одному файлу `<focus_id>.json`.
+## 1. Что делает агент
 
-## 1. Что делает агент при создании фокуса
+### Новый фокус
 
-В новом фокусе агент ставит подходящую существующую иконку:
+Сначала агент ставит существующую валидную иконку:
 
 ```txt
 focus = {
     id = TAG_my_new_focus
     icon = GFX_goal_generic_construct_infrastructure
+}
+```
+
+Затем создаёт manifest из корня репозитория:
+
+```powershell
+rtk python scripts/icon-manifest.py new `
+  --type focus `
+  --id "TAG_my_new_focus" `
+  --source-file "common/national_focus/country.txt" `
+  --fallback "GFX_goal_generic_construct_infrastructure" `
+  --prompt "A heavy freight locomotive crossing a steel railway bridge, with tanker cars and signal lamps behind it"
+```
+
+Старые параметры `--focus-id` и `--fallback-icon` также поддерживаются.
+
+### Новая идея
+
+Идея также получает существующий fallback `picture` без префикса `GFX_idea_`:
+
+```txt
+TAG_industrial_spirit = {
+    picture = generic_production_bonus
     # ...
 }
 ```
 
-Затем из корня репозитория создаёт manifest:
+Manifest создаётся так:
 
 ```powershell
 rtk python scripts/icon-manifest.py new `
-  --focus-id "TAG_my_new_focus" `
-  --source-file "common/national_focus/country.txt" `
-  --fallback-icon "GFX_goal_generic_construct_infrastructure" `
-  --prompt "A heavy freight locomotive crossing a steel railway bridge, with tanker cars and signal lamps behind it"
+  --type idea `
+  --id "TAG_industrial_spirit" `
+  --source-file "common/ideas/country.txt" `
+  --fallback "generic_production_bonus" `
+  --prompt "A blast furnace pouring molten steel, with crossed industrial hammers and factory smokestacks behind it"
 ```
 
-`source-file` задаётся относительно `BigLeninHistMod/`.
+Эквивалентные сокращения: `--idea-id` и `--fallback-picture`.
+
+`source-file` всегда задаётся относительно `BigLeninHistMod/`.
+
+После создания контента агент запускает только быструю проверку:
+
+```powershell
+rtk python scripts/icon-manifest.py validate
+rtk python scripts/icon-manifest.py status
+```
+
+Агент **не запускает ComfyUI**, не создаёт DDS/GFX и не заменяет fallback reference.
+
+## 2. Как писать промпты
 
 Промпт должен описывать конкретную композицию:
 
 - один хорошо читаемый центральный объект;
-- один-два вспомогательных объекта;
+- максимум один-два вспомогательных объекта;
 - простой фон;
-- исторически подходящие предметы 1930–1940-х годов.
+- исторически подходящие предметы 1930–1940-х годов;
+- силуэт, который останется понятным после уменьшения.
 
-Не надо добавлять общие указания про стиль, рамку, медаль, отсутствие текста и т. п. Пайплайн добавит preset `hoi4_focus_v1` автоматически.
+Не надо повторять общие указания про стиль, эпоху, отсутствие текста и однотонный фон — preset добавит их автоматически.
+
+### Для фокусов
+
+Preset `hoi4_focus_v1` добавляет металлический медальон, рамку и лавровые ветви. Описывайте объект **внутри** композиции, а не саму рамку.
 
 Плохо:
 
@@ -59,219 +110,224 @@ Economic recovery, national strength and industrial progress
 A blast furnace pouring molten steel, with crossed industrial hammers and factory smokestacks behind it
 ```
 
-После этого агент запускает только быструю проверку:
+### Для идей
 
-```powershell
-rtk python scripts/icon-manifest.py validate
-rtk python scripts/icon-manifest.py status
-```
+Preset `hoi4_idea_v1` создаёт отдельный символ **без рамки, медальона и лавров**. Композиция должна быть ещё проще, поскольку итоговый размер — 65x67.
 
-Агент **не запускает ComfyUI**, не создаёт DDS/GFX и не заменяет fallback-иконку.
-
-## 2. Как это работает с несколькими параллельными ветками
-
-Manifest намеренно разбит на отдельные файлы, а не хранится одним большим JSON/таблицей:
+Плохо:
 
 ```text
-icon-manifests/focus/
-├── FRA_expand_the_arsenals.json
-├── ITA_reorganize_the_high_command.json
-└── SOV_new_industrial_centers.json
+Army reform, better organization and higher morale
 ```
 
-Поэтому параллельные ветки обычно меняют разные файлы:
+Хорошо:
 
-- ветка Франции добавляет французский фокус и `FRA_....json`;
-- ветка Италии добавляет итальянский фокус и `ITA_....json`;
-- ветка СССР добавляет советский фокус и `SOV_....json`.
+```text
+A steel officer's helmet above two crossed field marshal batons
+```
 
-Общий `deferred_focus_icons.gfx` на этом этапе не трогается, поэтому искусственных merge-конфликтов из-за порядка записей нет. Ветка коммитит вместе:
+Не просите модель рисовать читаемый текст, лозунги, названия приказов или номера частей.
 
-1. файл дерева фокусов;
-2. английскую/русскую локализацию;
-3. `icon-manifests/focus/<focus_id>.json`.
+## 3. Параллельные ветки
 
-Если две ветки создают один и тот же `focus_id`, конфликт manifest-файла полезен: это реальная коллизия идентификатора, которую нельзя автоматически скрывать.
+Один asset соответствует одному файлу:
 
-Manifest-подход устраняет общий конфликт очереди и GFX, но не может устранить конфликт самого дерева: две ветки, одновременно редактирующие один `common/national_focus/country.txt`, всё ещё могут потребовать обычного ручного merge. `sync` ищет фокус по `id`, а не по номеру строки, поэтому перемещение блока фокуса после merge не ломает manifest.
+```text
+icon-manifests/
+├── focus/
+│   ├── FRA_expand_the_arsenals.json
+│   └── SOV_new_industrial_centers.json
+└── idea/
+    ├── FRA_rearmament_spirit.json
+    └── SOV_industrial_mobilization.json
+```
 
-### Рекомендуемый порядок интеграции
+Параллельные ветки обычно добавляют разные manifest-файлы и не трогают общие generated GFX. Ветка коммитит вместе:
 
-1. Слить feature-ветки в общую интеграционную ветку.
-2. Запустить:
+1. focus/idea script;
+2. английскую и русскую локализацию;
+3. соответствующий manifest.
 
-   ```powershell
-   rtk python scripts/icon-manifest.py validate
-   rtk python scripts/icon-manifest.py status
-   ```
+Если две ветки создают один manifest с одинаковыми типом и ID, конфликт полезен: это реальная коллизия. Одинаковые ID фокуса и идеи допустимы, поскольку они находятся в разных каталогах; при фильтрации команд используйте `--type`.
 
-3. Одной отдельной сессией сгенерировать/импортировать изображения.
+Manifest-подход устраняет конфликт общей очереди и GFX, но не конфликт самого игрового файла: две ветки, редактирующие один `country.txt`, всё ещё могут потребовать ручного merge. `sync` ищет блок по ID, а не по номеру строки.
+
+### Порядок интеграции
+
+1. Слить feature-ветки в интеграционную ветку.
+2. Выполнить `validate` и `status`.
+3. Одной отдельной сессией сгенерировать или импортировать изображения.
 4. Выполнить `sync`.
-5. Проверить GFX и игровые ссылки, затем закоммитить итоговый пакет assets.
+5. Проверить GFX и ссылки, затем закоммитить итоговые assets.
 
-Не следует запускать `sync` независимо в каждой feature-ветке. Это преждевременно изменит общие focus-файлы и сгенерированный GFX, что создаст лишние конфликты. Генерацию лучше считать отдельной интеграционной стадией.
+Не запускайте `sync` независимо в каждой feature-ветке: это преждевременно изменит общие script-файлы и generated GFX. Если позже добавились новые manifests, повторный `sync` детерминированно пересоберёт GFX по всем готовым assets.
 
-Если после первого batch в интеграционную ветку добавили ещё фокусы, команда `sync` безопасно пересоберёт GFX по всем уже готовым manifest-файлам и применит только новые готовые ссылки.
-
-## 3. Пакетная генерация через ComfyUI
+## 4. Пакетная генерация через ComfyUI
 
 ### Требования
 
-- ComfyUI запущен на `http://localhost:8188`;
-- Z-Image GGUF model доступна как `z-image-Q8_0.gguf`;
+- ComfyUI на `http://localhost:8188`;
+- Z-Image GGUF `z-image-Q8_0.gguf`;
 - Python-пакеты `Pillow` и `rembg`;
-- желательно наличие ImageMagick (`magick`), иначе используется Pillow DDS writer.
-
-Пример запуска ComfyUI:
+- желательно ImageMagick (`magick`), иначе используется Pillow DDS writer.
 
 ```bat
 cd /d "G:\ComfyUI"
 python main.py --listen 127.0.0.1 --port 8188
 ```
 
-Посмотреть очередь:
+Все pending assets:
 
 ```powershell
 rtk python scripts/icon-manifest.py status
-```
-
-Сгенерировать первые десять pending-иконок и сразу применить их:
-
-```powershell
 rtk python scripts/icon-manifest.py generate --limit 10 --sync
 ```
 
-Только конкретные фокусы:
+Только идеи:
+
+```powershell
+rtk python scripts/icon-manifest.py generate --type idea --limit 10 --sync
+```
+
+Конкретные идеи:
 
 ```powershell
 rtk python scripts/icon-manifest.py generate `
-  --ids "FRA_expand_the_arsenals,ITA_reorganize_the_high_command" `
+  --type idea `
+  --ids "FRA_rearmament_spirit,SOV_industrial_mobilization" `
   --sync
 ```
 
-Перегенерировать одну иконку:
+Перегенерация:
 
 ```powershell
 rtk python scripts/icon-manifest.py generate `
-  --ids "FRA_expand_the_arsenals" `
+  --type idea `
+  --ids "FRA_rearmament_spirit" `
   --force `
   --sync
 ```
 
-Генерация вызывается только этой явной командой. `new`, `validate`, `status`, `export` и `sync` сами ComfyUI не запускают.
+Только `generate` запускает ComfyUI. Команды `new`, `validate`, `status`, `export`, `ingest` и `sync` сами генерацию не запускают.
 
-## 4. Использование другого генератора
+## 5. Другой генератор
 
-Экспортировать переносимый JSONL:
+Экспортировать все запросы:
+
+```powershell
+rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
+```
+
+Только идеи:
 
 ```powershell
 rtk python scripts/icon-manifest.py export `
-  --output "build/icon-requests.jsonl"
+  --type idea `
+  --output "build/idea-icon-requests.jsonl"
 ```
 
-Каждая строка содержит:
+JSONL содержит тип, ID, subject/full prompts, размер генерации, ожидаемый размер DDS и путь назначения.
 
-- `id` и `sprite_name`;
-- исходный `subject_prompt`;
-- готовые `positive_prompt` и `negative_prompt`;
-- размер генерации;
-- ожидаемое имя результата и путь DDS.
-
-Внешний инструмент должен вернуть прозрачный PNG/WebP либо готовый DDS. Поддерживаемые имена:
+Рекомендуемое имя результата включает тип и исключает коллизию одинаковых ID:
 
 ```text
-<focus_id>.png                         # рекомендуется
-GFX_focus_custom_<focus_id>.png
-focus_custom_<focus_id>.png
+focus_<focus_id>.png
+idea_<idea_id>.png
 ```
 
-Для DDS используются те же основы имён с расширением `.dds`. Готовый DDS должен иметь размер 100x88.
+Также поддерживаются:
 
-Импортировать результаты и применить их:
+```text
+<asset_id>.png
+GFX_focus_custom_<focus_id>.png
+focus_custom_<focus_id>.png
+GFX_idea_custom_<idea_id>.png
+idea_custom_<idea_id>.png
+```
+
+Допустимы `.png`, `.webp` и `.dds`. Внешний генератор должен подготовить прозрачность. PNG/WebP автоматически конвертируются в 100x88 для фокусов или 65x67 для идей. Готовый DDS уже должен иметь правильный размер.
 
 ```powershell
 rtk python scripts/icon-manifest.py ingest `
-  --input-dir "G:/generated-focus-icons" `
+  --input-dir "G:/generated-icons" `
   --sync
 ```
 
-PNG/WebP автоматически уменьшается до 100x88 и конвертируется в DDS. Удаление фона намеренно не выполняется при импорте: внешний генератор должен вернуть уже подготовленную прозрачность. Если прозрачных пикселей нет, будет выведено предупреждение.
+При одинаковых ID фокуса и идеи импортируйте с именами `focus_<id>`/`idea_<id>` либо используйте отдельные каталоги и `--type`.
 
-## 5. Что делает `sync`
+## 6. Что делает `sync`
 
-`sync` выполняет детерминированную интеграцию готовых файлов:
+`sync`:
 
-1. проверяет все manifest-файлы и соответствующие focus ID;
-2. находит manifest-файлы, для которых DDS уже существует;
-3. полностью пересобирает `BigLeninHistMod/interface/deferred_focus_icons.gfx` в стабильном порядке;
-4. внутри блока нужного фокуса заменяет только объявленный `fallback_icon` на `sprite_name`;
-5. отказывается менять неожиданную третью иконку, чтобы не затереть ручное изменение;
-6. повторно валидирует итоговое состояние.
+1. проверяет manifests и соответствующие focus/idea ID;
+2. находит manifests с готовым DDS;
+3. пересобирает в стабильном порядке:
+   - `BigLeninHistMod/interface/deferred_focus_icons.gfx`;
+   - `BigLeninHistMod/interface/deferred_idea_icons.gfx`;
+4. заменяет только объявленный fallback:
+   - `icon = <fallback>` → `icon = GFX_focus_custom_<id>`;
+   - `picture = <fallback>` → `picture = custom_<id>`;
+5. отказывается затирать неожиданное ручное изменение;
+6. повторно валидирует результат.
 
-Manifest после `sync` не удаляется. Он нужен для воспроизводимости, аудита промптов и будущей перегенерации.
+Manifest после `sync` сохраняется для воспроизводимости и перегенерации.
 
-Можно отдельно импортировать файлы, проверить их, а затем применить:
+Можно разделить импорт и применение:
 
 ```powershell
-rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-focus-icons"
+rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
 rtk python scripts/icon-manifest.py status
 rtk python scripts/icon-manifest.py sync
 ```
 
-## 6. Команды и состояния
+## 7. Справочник команд
 
 ```powershell
 # Создать manifest
 rtk python scripts/icon-manifest.py new --help
 
-# Проверить структуру manifest и ссылки в focus-файлах
+# Проверить всё или один тип
 rtk python scripts/icon-manifest.py validate
+rtk python scripts/icon-manifest.py validate --type idea
 
 # pending / ready / applied / broken
 rtk python scripts/icon-manifest.py status
-
-# Машиночитаемый статус
+rtk python scripts/icon-manifest.py status --type idea
 rtk python scripts/icon-manifest.py status --json
 
-# Экспорт для внешнего генератора
+# Экспорт/импорт
 rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
+rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
 
-# Импорт готовых изображений
-rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-focus-icons"
-
-# Регистрация GFX и переключение focus-ссылок
+# GFX и script references
 rtk python scripts/icon-manifest.py sync
 ```
 
-Значения статуса:
+`broken` означает, что source/reference/texture находятся в несовместимом состоянии.
 
-- `pending` — DDS отсутствует, fallback активен;
-- `ready` — DDS существует, fallback ещё активен;
-- `applied` — DDS существует, custom sprite активен;
-- `broken` — source/reference/texture находятся в несовместимом состоянии.
-
-## 7. Финальная проверка
-
-После `sync`:
+## 8. Финальная проверка
 
 ```powershell
 rtk python scripts/icon-manifest.py validate
-rtk python scripts/validate-focus-icon-references.py
+rtk python scripts/validate-icon-references.py
 rtk node scripts/hoi4-mcp-cli.js gui_validate --check_textures true
 ```
 
-`gui_validate` проверяет весь интерфейс мода и может показать уже существующие baseline-проблемы с vanilla-спрайтами. Для этого пайплайна обязательны успешные `icon-manifest.py validate` и `validate-focus-icon-references.py`; общий GUI-отчёт нужно сравнивать с предыдущим baseline.
+`gui_validate` проверяет весь интерфейс и может показать существующие baseline-проблемы с vanilla-спрайтами. Для этого пайплайна обязательны успешные первые две проверки; общий GUI-отчёт сравнивается с baseline.
 
-Также нужно проверить в игре читаемость иконок в дереве фокусов. Windows smoke test запускается только по отдельному явному запросу.
+В игре проверьте читаемость фокусов в дереве и идей в окне национальных духов. Windows smoke test запускается только по отдельному явному запросу.
 
-## Структура файлов
+## Структура
 
 ```text
-icon-manifests/focus/<focus_id>.json                 # запрос и промпт
-scripts/icon-manifest.py                             # queue/export/import/sync
-scripts/generate-single-focus-icon.py                # ComfyUI + post-processing одного asset
+icon-manifests/focus/<focus_id>.json
+icon-manifests/idea/<idea_id>.json
+scripts/icon-manifest.py
+scripts/generate-single-focus-icon.py
 BigLeninHistMod/gfx/interface/goals/focus_custom_*.dds
-BigLeninHistMod/interface/deferred_focus_icons.gfx   # генерируется sync
+BigLeninHistMod/gfx/interface/ideas/idea_custom_*.dds
+BigLeninHistMod/interface/deferred_focus_icons.gfx
+BigLeninHistMod/interface/deferred_idea_icons.gfx
 ```
 
-Существующий `BigLeninHistMod/interface/custom_focus_icons.gfx` остаётся для уже выпущенных старых иконок. Новые manifest-иконки регистрируются только в `deferred_focus_icons.gfx`.
+Старые выпущенные assets остаются в `custom_focus_icons.gfx` и `custom_idea_icons.gfx`. Новые manifest-assets регистрируются только в соответствующих `deferred_*_icons.gfx`.
