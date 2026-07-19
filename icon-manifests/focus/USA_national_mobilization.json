@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_national_mobilization",
+  "sprite_name": "GFX_focus_custom_USA_national_mobilization",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_national_mobilization.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_construct_mil_factory",
+  "prompt": "Stars and Stripes merging with factory gears and scientific beaker symbolizing total national mobilization for war",
+  "style_preset": "hoi4_focus_v1"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_radar_technologies",
+  "sprite_name": "GFX_focus_custom_USA_radar_technologies",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_radar_technologies.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_radar",
+  "prompt": "Radar dish emitting concentric waves with aircraft and ship silhouettes being detected on screen",
+  "style_preset": "hoi4_focus_v1"
+}

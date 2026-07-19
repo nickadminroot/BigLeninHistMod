@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_improve_infantry_doctrines",
+  "sprite_name": "GFX_focus_custom_USA_improve_infantry_doctrines",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_improve_infantry_doctrines.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_army_doctrines",
+  "prompt": "Stacked helmets with crossed rifles and doctrinal manual icon representing standardized infantry training",
+  "style_preset": "hoi4_focus_v1"
+}

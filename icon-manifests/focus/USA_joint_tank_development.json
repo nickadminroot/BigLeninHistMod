@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_joint_tank_development",
+  "sprite_name": "GFX_focus_custom_USA_joint_tank_development",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_joint_tank_development.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_build_tank",
+  "prompt": "American Sherman and British Churchill tank side by side with shared gear and blueprint overlay",
+  "style_preset": "hoi4_focus_v1"
+}

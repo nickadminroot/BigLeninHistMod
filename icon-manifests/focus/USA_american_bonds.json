@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_american_bonds",
+  "sprite_name": "GFX_focus_custom_USA_american_bonds",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_american_bonds.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_consumer_goods",
+  "prompt": "Liberty Bond poster with dollar sign and patriotic eagle collecting funds for war effort",
+  "style_preset": "hoi4_focus_v1"
+}

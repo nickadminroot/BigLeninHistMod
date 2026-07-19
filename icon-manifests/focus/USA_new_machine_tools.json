@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_new_machine_tools",
+  "sprite_name": "GFX_focus_custom_USA_new_machine_tools",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_new_machine_tools.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_construct_civ_factory",
+  "prompt": "Precision lathe and milling machine with sparks flying representing advanced manufacturing tooling",
+  "style_preset": "hoi4_focus_v1"
+}

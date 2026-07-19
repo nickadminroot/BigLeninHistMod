@@ -1329,6 +1329,108 @@ ideas = {
 			}
 		}
 
+		# Stage 2: Economic Modernization ideas
+		USA_aid = {
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		USA_unified_infantry_command = {
+			picture = generic_army_doctrines
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+				coordination_bonus = 0.03
+				army_org_factor = 0.10
+			}
+		}
+
+		USA_allied_tank_school = {
+			picture = generic_army_tank_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+
+			equipment_bonus = {
+				armor = {
+					hard_attack = 0.07
+					soft_attack = 0.03
+					instant = yes
+				}
+			}
+		}
+
+		USA_allied_military_economic_integration = {
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+
+		USA_american_bonds_idea = {
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+
 	}
 
 
@@ -2129,6 +2231,51 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.10
 				production_factory_efficiency_gain_factor = -0.07
+			}
+		}
+
+		USA_american_economy_domestic = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.07
+				production_speed_arms_factory_factor = 0.20
+			}
+		}
+
+		USA_american_economy_modernized = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.20
+			}
+		}
+
+		USA_american_economy_mobilized = {
+			allowed = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.20
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.10
 			}
 		}
 	}

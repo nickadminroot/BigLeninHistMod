@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_asia_doctrine",
+  "sprite_name": "GFX_focus_custom_USA_asia_doctrine",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_asia_doctrine.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_construction_infrastructure",
+  "prompt": "Airfield tower and runway map of Southeast Asia with Burma Singapore and East Indies highlighted",
+  "style_preset": "hoi4_focus_v1"
+}

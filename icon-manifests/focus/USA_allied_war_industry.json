@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "focus",
+  "asset_id": "USA_allied_war_industry",
+  "sprite_name": "GFX_focus_custom_USA_allied_war_industry",
+  "texturefile": "gfx/interface/goals/focus_custom_USA_allied_war_industry.dds",
+  "source_file": "common/national_focus/usa.txt",
+  "fallback_icon": "GFX_goal_generic_construct_mil_factory",
+  "prompt": "Ammunition crates with Allied flags (USA, UK, France) stacked together symbolizing shared war industry",
+  "style_preset": "hoi4_focus_v1"
+}
