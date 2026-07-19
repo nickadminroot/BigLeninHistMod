@@ -477,9 +477,6 @@ focus_tree = {
 								}
 							} 
 						}
-						AUS = {
-							has_completed_focus = AUS_reclaiming_yugoslavian_territories
-						}
 					}
 
 					SLV = {
@@ -503,9 +500,6 @@ focus_tree = {
 										value = THIS
 									}
 								}
-							}
-							AUS = {
-								has_completed_focus = AUS_reclaiming_yugoslavian_territories
 							}
 						}
 
@@ -661,9 +655,6 @@ focus_tree = {
 								}
 							}
 						}
-						AUS = {
-							has_completed_focus = AUS_reclaiming_yugoslavian_territories
-						}
 					}
 
 					CRO = {
@@ -687,9 +678,6 @@ focus_tree = {
 										value = THIS
 									}
 								}
-							}
-							AUS = {
-								has_completed_focus = AUS_reclaiming_yugoslavian_territories
 							}
 						}
 
@@ -867,9 +855,6 @@ focus_tree = {
 								}
 							}
 						}
-						AUS = {
-							has_completed_focus = AUS_reclaiming_yugoslavian_territories
-						}
 					}
 
 					CRO = {
@@ -893,9 +878,6 @@ focus_tree = {
 										value = THIS
 									}
 								}
-							}
-							AUS = {
-								has_completed_focus = AUS_reclaiming_yugoslavian_territories
 							}
 						}
 
