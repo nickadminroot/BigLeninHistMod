@@ -84,9 +84,6 @@ EST_historical = {
 		}
 	}
 
-	focus_factors = {
-		EST_formalize_baltic_entente = 0
-		EST_join_the_allies = 0.01
-	}
+	#focus_factors removed - alternate-history branches not in tree
 
 }

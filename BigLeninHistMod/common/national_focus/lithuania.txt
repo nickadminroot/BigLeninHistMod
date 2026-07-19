@@ -276,8 +276,8 @@ focus_tree = {
 				limit = {
 					GER = { 
 						NOT = { 
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							#GER_oppose_hitler/GER_oppose_hitler_ww focuses removed from GER tree
+							always = no
 						}
 					}
 					SOU = { has_government = communism } 
@@ -289,8 +289,8 @@ focus_tree = {
 				limit = {
 					GER = { 
 						OR = {
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							#GER_oppose_hitler/GER_oppose_hitler_ww focuses removed from GER tree
+							always = no
 						}
 					}
 					SOU = { NOT = { has_war_with = POL } }
@@ -3455,10 +3455,12 @@ focus_tree = {
 				LAT = { is_in_faction = no }
 			}
 			EST = {
-				NOT = { has_completed_focus = EST_formalize_baltic_entente }
+				#has_completed_focus = EST_formalize_baltic_entente - focus removed
+				always = yes
 			}
 			LAT = {
-				NOT = { has_completed_focus = LAT_formalize_baltic_entente }
+				#has_completed_focus = LAT_formalize_baltic_entente - focus removed
+				always = yes
 			}
 		}
 
@@ -4169,7 +4171,10 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						POL = { has_completed_focus = POL_support_monarchism_in_LIT }
+						POL = { 
+							#has_completed_focus = POL_support_monarchism_in_LIT - focus removed
+							always = no
+						}
 					}
 					set_country_flag = POL_banned_monarchy_flag
 					POL = { set_country_flag = POL_banned_monarchy_flag }
