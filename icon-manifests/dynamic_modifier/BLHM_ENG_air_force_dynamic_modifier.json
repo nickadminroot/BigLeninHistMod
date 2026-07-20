@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "dynamic_modifier",
+  "asset_id": "BLHM_ENG_air_force_dynamic_modifier",
+  "sprite_name": "GFX_idea_custom_dynamic_modifier_BLHM_ENG_air_force_dynamic_modifier",
+  "texturefile": "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_air_force_dynamic_modifier.dds",
+  "source_file": "common/dynamic_modifiers/BLHM_ENG_dynamic_modifiers.txt",
+  "fallback_icon": "GFX_idea_generic_air_bonus",
+  "prompt": "A formation of British fighter aircraft climbing above white clouds with a RAF roundel in the distance",
+  "style_preset": "hoi4_dynamic_modifier_v1"
+}
