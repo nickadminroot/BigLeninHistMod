@@ -37,7 +37,7 @@ export function defaultConfig(rootDir?: string): RAGConfig {
     embeddingModel: "qwen/qwen3-embedding-8b",
     embeddingApiKey: process.env.RAG_API_KEY || "",
     maxChunkSize: 3000,
-    cachePath: ".pi/rag-cache.json",
+    cachePath: ".cache/docs-search/rag-cache.json",
     includePatterns: [
       "docs/rag/corpus/*.md",
       ".pi/skills/hoi4-mod-development/SKILL.md",

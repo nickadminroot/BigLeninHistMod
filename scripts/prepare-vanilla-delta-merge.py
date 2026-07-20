@@ -239,7 +239,7 @@ Vanilla changed lines: {changed_lines}
 
 Apply an analogous semantic change to the existing mod file, not a wholesale
 vanilla replacement. Compare the clean mod file with `vanilla/{rel}` and
-`vanilla_new/{rel}`. Use docs_search for engine-sensitive HOI4 identifiers and
+`vanilla_new/{rel}`. Use `rtk node scripts/docs-search.mjs --query "<term>" --mode hybrid --limit 5` for engine-sensitive HOI4 identifiers and
 verify local references when needed.
 
 If the corresponding location cannot be found unambiguously, the mod structure

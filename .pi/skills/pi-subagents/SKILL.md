@@ -20,10 +20,10 @@ Generic builtin and user agents are disabled for this project. Do not use agent 
 
 ## Documentation contract
 
-Project agents receive the project extensions and can use `docs_search`. Every HOI4 child task should require the agent to:
+Project agents receive project tools and can run the standalone `scripts/docs-search.mjs` CLI. Every HOI4 child task should require the agent to:
 
 1. extract domain-specific words, exact identifiers, effects, triggers, modifiers, scopes, and localization terms from the request;
-2. call `docs_search` for unfamiliar or engine-sensitive terms before planning or editing;
+2. run `rtk node scripts/docs-search.mjs --query "<term>" --mode hybrid --limit 5` for unfamiliar or engine-sensitive terms before planning or editing;
 3. search both exact tokens and a short conceptual phrase;
 4. verify documentation against the actual mod and local vanilla files;
 5. cite documentation paths in evidence, plans, handoffs, and reviews.
@@ -37,7 +37,7 @@ Use one agent for one bounded responsibility:
 ```ts
 subagent({
   agent: "hoi4-weak-agent",
-  task: "Investigate the specified focus reward. Use docs_search and local vanilla evidence. Do not edit files.",
+  task: "Investigate the specified focus reward. Use scripts/docs-search.mjs and local vanilla evidence. Do not edit files.",
   context: "fresh",
   acceptance: { level: "none", reason: "Explicit evidence task." }
 })
@@ -195,7 +195,7 @@ Every task should include:
 
 - exact scoped goal and non-goals;
 - cwd and artifact paths to read/write;
-- instruction to use `docs_search` for request terminology;
+- instruction to use `scripts/docs-search.mjs` for request terminology;
 - required mod, vanilla, and `hoi4-mcp-cli` evidence;
 - ownership and no-Git constraints;
 - validation expectations;

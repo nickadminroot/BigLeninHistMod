@@ -15,14 +15,22 @@ BigLeninHistMod is a vanilla-like, multiplayer-oriented historical HOI4 mod focu
    - `hoi4-map` for map work;
    - `hoi4-gui` for GUI/GFX work;
    - `pi-subagents` for delegation.
-2. Extract HOI4-specific terms and exact identifiers from the user's request. Use `docs_search` for game-sensitive terms, then verify against local files.
+2. Extract HOI4-specific terms and exact identifiers from the user's request. Use the standalone `docs-search` CLI for game-sensitive terms, then verify against local files.
 3. Search the mod and local vanilla data with `rg`; do not guess Clausewitz syntax or engine behavior.
-4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. The CLI is intentionally one-shot: run at most one CLI invocation per `bash` tool call. Do not hide repeated invocations in shell loops or chained commands; issue 2-4 independent read-only calls as separate parallel `bash` tool calls instead, and never parallelize write tools.
+4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. Use `scripts/docs-search.mjs` (or `scripts/docs-search.cmd` on Windows) for local documentation search. Both CLIs are intentionally one-shot: run at most one CLI invocation per `bash` tool call. Do not hide repeated calls in shell loops or chained commands; issue 2-4 independent read-only calls as separate parallel `bash` tool calls instead, and never parallelize write tools.
 5. Keep effects, visible tooltips, idea variants, and English/Russian localization synchronized.
 6. When adding a focus, idea, or dynamic modifier that needs a new custom icon, keep a valid fallback `icon`/`picture` in the script and create `icon-manifests/focus/<focus_id>.json`, `icon-manifests/idea/<idea_id>.json`, or `icon-manifests/dynamic_modifier/<modifier_id>.json` with `scripts/icon-manifest.py new`. Do not generate images, edit the shared generated GFX, or switch to the custom sprite during normal gameplay implementation. Follow [GENERATING_ICONS.md](GENERATING_ICONS.md), including its parallel-branch integration workflow.
 7. Validate the changed files and references before reporting completion. For deferred icons, run `rtk python scripts/icon-manifest.py validate`.
 
-The local documentation corpus is under `docs/rag/corpus/`. `docs_search` combines exact grep-style matching, BM25, and optional semantic RAG; use it instead of automatic context injection or codebase-memory.
+The local documentation corpus is under `docs/rag/corpus/`. The standalone `scripts/docs-search.mjs` CLI combines exact grep-style matching, BM25, and optional semantic RAG; use it instead of automatic context injection or codebase-memory. It works outside pi and has a Windows `scripts/docs-search.cmd` wrapper.
+
+```bash
+rtk node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
+rtk node scripts/docs-search.mjs --status
+rtk node scripts/docs-search.mjs --reindex  # requires RAG_API_KEY
+```
+
+Use `--json` for scripts/IDE integrations, `--root <path>` when running against another checkout, and `scripts/docs-search.cmd` instead of `node ...` on Windows if preferred.
 
 ## Project-specific constraints
 
@@ -89,7 +97,7 @@ rtk code "../BigLeninHistMod.worktrees/<name>"
 
 The helper supports Windows PowerShell 5.1, resolves the default sibling path as `../BigLeninHistMod.worktrees/<name>`, validates that the local branch exists, and refuses destinations inside the main repository. Treat any PowerShell or Git error as a failed setup; do not work in or blindly rerun a partially created worktree. Inspect `git worktree list` and `git status` first—the helper deliberately does not force-clean a worktree created before a later copy failure.
 
-The helper symlinks extra files by default when present: `node_modules/`, `scripts/mcp/node_modules/`, `.pi/rag-cache.json`, `.env*`, and `.pnpm-store`. Use `-UseSymlinks:$false` to copy instead. Built-in switches include `-CopyEnv:$false`, `-CopyPiCache:$false`, and `-CopyNodeModules:$false`; entries in `$ExtraItems` are processed independently and can be edited in `scripts/git-newworktree.ps1`.
+The helper symlinks extra files by default when present: `node_modules/`, `scripts/mcp/node_modules/`, `.cache/docs-search/rag-cache.json`, `.env*`, and `.pnpm-store`. Use `-UseSymlinks:$false` to copy instead. Built-in switches include `-CopyEnv:$false`, `-CopyPiCache:$false`, and `-CopyNodeModules:$false`; entries in `$ExtraItems` are processed independently and can be edited in `scripts/git-newworktree.ps1`.
 
 ### Subagents and workers
 
@@ -106,6 +114,8 @@ The MCP CLI is quiet and one-shot: every normal call owns its process and exits,
 Choose checks that match the change:
 
 ```powershell
+rtk node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
+rtk scripts/docs-search.cmd --query "country scope stability" --mode grep --limit 5
 rtk node scripts/hoi4-mcp-cli.js script_validate_file --file "common/national_focus/SOV.txt"
 rtk node scripts/hoi4-mcp-cli.js script_get_references --name "SOV_identifier"
 rtk node scripts/hoi4-mcp-cli.js loc_validate --check_missing_refs true --check_languages true

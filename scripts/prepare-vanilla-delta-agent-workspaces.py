@@ -124,7 +124,7 @@ For each entry:
 3. If meaningful and unambiguous, edit `results/<path>` with the analogous semantic change, preserving mod-specific content.
 4. Never replace the complete mod file with vanilla.
 5. If the corresponding place cannot be found, structure differs too much, or the change has no meaning in the mod, leave `results/<path>` byte-identical and report `SKIP` with the reason.
-6. Use docs_search for engine-sensitive identifiers/effects/triggers/modifiers/scopes and verify local references. Cite documentation paths.
+6. Use `rtk node scripts/docs-search.mjs --query "<term>" --mode hybrid --limit 5` for engine-sensitive identifiers/effects/triggers/modifiers/scopes and verify local references. Cite documentation paths.
 7. Do not run Git lifecycle commands. Do not edit files outside this workspace.
 8. Do not read or apply the pi-subagents skill; the parent owns orchestration.
 

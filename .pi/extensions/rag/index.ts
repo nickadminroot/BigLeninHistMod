@@ -1,11 +1,11 @@
 /**
- * Re-export stub for auto-discovery.
+ * The documentation search extension was replaced by scripts/docs-search.mjs.
  *
- * Actual implementation lives in docs/rag/ (git-tracked corpus + code).
- *
- * Path: .pi/extensions/rag/index.ts → ../../../docs/rag/index
- * Resolves to: <project>/docs/rag/index.ts
+ * This no-op module remains so pi installations that auto-discover existing
+ * extension paths do not try to load the old Pi-specific implementation.
+ * Use `node scripts/docs-search.mjs --query "..."` (or docs-search.cmd on
+ * Windows) from the repository root instead.
  */
-
-import ragExtension from "../../../docs/rag/index";
-export default ragExtension;
+export default function docsSearchExtensionRemoved() {
+  // Intentionally empty: documentation search is now a standalone CLI.
+}

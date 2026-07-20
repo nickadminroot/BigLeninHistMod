@@ -5,6 +5,7 @@ vanilla_new/**
 BigLeninHistMod_backup*/**
 BigLeninHistMod/.vscode/hoi4_cache/focus_editor_cache.json
 .pi/rag-cache.json
+.cache/docs-search/
 .env
 scripts/__pycache__/
 build/

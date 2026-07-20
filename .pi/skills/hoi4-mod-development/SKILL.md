@@ -395,6 +395,7 @@ Located in `scripts/`. Python scripts auto-detect HOI4 installation path.
 | Script | Purpose |
 |--------|---------|
 | `scripts/hoi4-mcp-cli.js` | CLI for script search, validation, localization, effects lookup |
+| `scripts/docs-search.mjs` / `scripts/docs-search.cmd` | Standalone documentation search with BM25, grep, and optional semantic RAG |
 | `scripts/mcp/clausewitzMcp.js` | Clausewitz parser MCP server |
 | `scripts/mcp/mapDataLoader.js` | Map data loader |
 | `scripts/mcp/mapMcpServer.js` | Map MCP server |

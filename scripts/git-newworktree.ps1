@@ -33,7 +33,7 @@ trap {
     then copies or symlinks extra files/folders from the main repo into it:
       - .env files
       - node_modules (or .pnpm store references)
-      - .pi/rag-cache.json (pi agent cache)
+      - .cache/docs-search/rag-cache.json (standalone docs-search cache)
       - any custom items in $ExtraItems
 
 .PARAMETER Branch
@@ -49,7 +49,7 @@ trap {
     Copy or symlink node_modules.
 
 .PARAMETER CopyPiCache
-    Copy or symlink .pi/rag-cache.json.
+    Copy or symlink .cache/docs-search/rag-cache.json. The switch retains its legacy CopyPiCache name for compatibility.
 
 .PARAMETER UseSymlinks
     Use symlinks instead of copying (faster, saves space, but cache files must be
@@ -185,9 +185,9 @@ if ($CopyNodeModules) {
     Copy-WithSymlink -Source (Join-Path $MainRepo "node_modules") -Dest (Join-Path $WorktreePath "node_modules")
 }
 
-# .pi/rag-cache.json
+# docs-search cache
 if ($CopyPiCache) {
-    Copy-WithSymlink -Source (Join-Path $MainRepo ".pi/rag-cache.json") -Dest (Join-Path $WorktreePath ".pi/rag-cache.json")
+    Copy-WithSymlink -Source (Join-Path $MainRepo ".cache/docs-search/rag-cache.json") -Dest (Join-Path $WorktreePath ".cache/docs-search/rag-cache.json")
 }
 
 # Custom extra items
