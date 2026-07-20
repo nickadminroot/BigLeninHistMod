@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Manage deferred focus and idea icon requests without generating assets during gameplay work."""
+"""Manage deferred focus, idea, and dynamic-modifier icons without generating during gameplay work."""
 
 from __future__ import annotations
 
@@ -19,15 +19,17 @@ SHIPPED_ROOT = REPO_ROOT / "BigLeninHistMod"
 GENERATOR = REPO_ROOT / "scripts" / "generate-single-focus-icon.py"
 SAFE_ID = re.compile(r"^[A-Za-z0-9_.-]+$")
 FOCUS_BLOCK = re.compile(r"\b(?:focus|shared_focus)\s*=\s*\{")
-ASSET_TYPES = ("focus", "idea")
+ASSET_TYPES = ("focus", "idea", "dynamic_modifier")
 
 MANIFEST_ROOTS = {
     "focus": REPO_ROOT / "icon-manifests" / "focus",
     "idea": REPO_ROOT / "icon-manifests" / "idea",
+    "dynamic_modifier": REPO_ROOT / "icon-manifests" / "dynamic_modifier",
 }
 GENERATED_GFX = {
     "focus": SHIPPED_ROOT / "interface" / "deferred_focus_icons.gfx",
     "idea": SHIPPED_ROOT / "interface" / "deferred_idea_icons.gfx",
+    "dynamic_modifier": SHIPPED_ROOT / "interface" / "deferred_dynamic_modifier_icons.gfx",
 }
 ASSET_CONFIG = {
     "focus": {
@@ -36,6 +38,7 @@ ASSET_CONFIG = {
         "fallback_key": "fallback_icon",
         "script_field": "icon",
         "style_preset": "hoi4_focus_v1",
+        "generator_mode": "focus",
         "size": (100, 88),
     },
     "idea": {
@@ -44,6 +47,16 @@ ASSET_CONFIG = {
         "fallback_key": "fallback_picture",
         "script_field": "picture",
         "style_preset": "hoi4_idea_v1",
+        "generator_mode": "idea",
+        "size": (65, 67),
+    },
+    "dynamic_modifier": {
+        "sprite_prefix": "GFX_idea_custom_dynamic_modifier_",
+        "texture_prefix": "gfx/interface/ideas/idea_custom_dynamic_modifier_",
+        "fallback_key": "fallback_icon",
+        "script_field": "icon",
+        "style_preset": "hoi4_dynamic_modifier_v1",
+        "generator_mode": "idea",
         "size": (65, 67),
     },
 }
@@ -64,6 +77,14 @@ STYLE_PROMPTS = {
         "1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, dramatic lighting, "
         "high contrast, and dense shadows. No text, letters, numbers, UI, or caption. Use a perfectly flat "
         "uniform dark-grey background."
+    ),
+    "dynamic_modifier": (
+        "Create a square dynamic modifier icon in the style of a dark World War II grand strategy game. "
+        "{subject}. Show one large readable central military, industrial, political, or regional symbol on "
+        "its own, with clean edges and no decorative frame, medallion, border, or laurel branches. Use a "
+        "realistic illustrated 1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, "
+        "dramatic lighting, high contrast, and dense shadows. No text, letters, numbers, UI, or caption. "
+        "Use a perfectly flat uniform dark-grey background."
     ),
 }
 NEGATIVE_PROMPT = (
@@ -99,9 +120,9 @@ class Entry:
 
     @property
     def target_reference(self) -> str:
-        if self.asset_type == "focus":
-            return self.sprite_name
-        return self.sprite_name.removeprefix("GFX_idea_")
+        if self.asset_type == "idea":
+            return self.sprite_name.removeprefix("GFX_idea_")
+        return self.sprite_name
 
     @property
     def size(self) -> tuple[int, int]:
@@ -135,7 +156,9 @@ def load_entries(asset_type: str | None = None) -> list[Entry]:
                 raise ManifestError(f"{path}: missing fields: {', '.join(missing)}")
             actual_type = data["asset_type"]
             if data["schema_version"] != 1 or actual_type not in ASSET_TYPES:
-                raise ManifestError(f"{path}: schema_version=1 and asset_type focus/idea are required")
+                raise ManifestError(
+                    f"{path}: schema_version=1 and asset_type focus/idea/dynamic_modifier are required"
+                )
             if actual_type != kind:
                 raise ManifestError(f"{path}: asset_type must match its icon-manifests/{kind}/ directory")
             fallback_key = ASSET_CONFIG[kind]["fallback_key"]
@@ -200,21 +223,22 @@ def find_focus_block(text: str, focus_id: str) -> tuple[int, int]:
     return matches[0]
 
 
-def find_idea_block(text: str, idea_id: str) -> tuple[int, int]:
-    assignment = re.compile(rf"(?m)^[ \t]*{re.escape(idea_id)}[ \t]*=[ \t]*\{{")
+def find_assigned_block(text: str, asset_id: str, asset_type: str) -> tuple[int, int]:
+    assignment = re.compile(rf"(?m)^[ \t]*{re.escape(asset_id)}[ \t]*=[ \t]*\{{")
     matches: list[tuple[int, int]] = []
     for match in assignment.finditer(text):
         opening = text.find("{", match.start(), match.end())
         matches.append((match.start(), matching_brace(text, opening)))
     if len(matches) != 1:
-        raise ManifestError(f"expected one idea block for {idea_id}, found {len(matches)}")
+        label = asset_type.replace("_", " ")
+        raise ManifestError(f"expected one {label} block for {asset_id}, found {len(matches)}")
     return matches[0]
 
 
 def find_asset_block(text: str, entry: Entry) -> tuple[int, int]:
     if entry.asset_type == "focus":
         return find_focus_block(text, entry.asset_id)
-    return find_idea_block(text, entry.asset_id)
+    return find_assigned_block(text, entry.asset_id, entry.asset_type)
 
 
 def current_reference(entry: Entry) -> str:
@@ -279,7 +303,10 @@ def validate_entries(entries: Iterable[Entry], quiet: bool = False) -> int:
         return 1
     if not quiet:
         counts = {kind: sum(entry.asset_type == kind for entry in entries) for kind in ASSET_TYPES}
-        print(f"OK: {len(entries)} manifest entrie(s) (focus={counts['focus']}, idea={counts['idea']})")
+        print(
+            f"OK: {len(entries)} manifest entrie(s) "
+            f"(focus={counts['focus']}, idea={counts['idea']}, dynamic_modifier={counts['dynamic_modifier']})"
+        )
     return 0
 
 
@@ -308,13 +335,19 @@ def resolve_new_args(args: argparse.Namespace) -> tuple[str, str, str]:
         if asset_type not in (None, "idea") or asset_id:
             raise ManifestError("--idea-id cannot be combined with a different --type or --id")
         asset_type, asset_id = "idea", args.idea_id
+    if args.dynamic_modifier_id:
+        if asset_type not in (None, "dynamic_modifier") or asset_id:
+            raise ManifestError("--dynamic-modifier-id cannot be combined with a different --type or --id")
+        asset_type, asset_id = "dynamic_modifier", args.dynamic_modifier_id
     asset_type = asset_type or "focus"
     if not asset_id:
-        raise ManifestError("provide --id, --focus-id, or --idea-id")
+        raise ManifestError("provide --id, --focus-id, --idea-id, or --dynamic-modifier-id")
     fallback = args.fallback
     if args.fallback_icon:
-        if asset_type != "focus" or fallback:
-            raise ManifestError("--fallback-icon is only for focus manifests and cannot be combined with --fallback")
+        if asset_type not in ("focus", "dynamic_modifier") or fallback:
+            raise ManifestError(
+                "--fallback-icon is only for focus/dynamic_modifier manifests and cannot be combined with --fallback"
+            )
         fallback = args.fallback_icon
     if args.fallback_picture:
         if asset_type != "idea" or fallback:
@@ -558,7 +591,8 @@ def command_generate(args: argparse.Namespace) -> int:
     for index, entry in enumerate(pending, 1):
         print(f"[{index}/{len(pending)}] Generating {entry.asset_type} {entry.asset_id}")
         command = [
-            sys.executable, str(GENERATOR), f"--{entry.asset_type}", "--sprite-name", entry.sprite_name,
+            sys.executable, str(GENERATOR), f"--{ASSET_CONFIG[entry.asset_type]['generator_mode']}",
+            "--sprite-name", entry.sprite_name,
             "--desc", entry.prompt, "--no-register-gfx", "--comfyui-url", args.comfyui_url,
             "--steps", str(args.steps), "--cfg", str(args.cfg), "--ai-size", str(args.ai_size),
         ]
@@ -584,12 +618,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    new = subparsers.add_parser("new", help="create one focus or idea manifest with a valid fallback")
+    new = subparsers.add_parser("new", help="create one focus, idea, or dynamic modifier manifest")
     new.add_argument("--type", dest="asset_type", choices=ASSET_TYPES)
     ids = new.add_mutually_exclusive_group()
     ids.add_argument("--id", dest="asset_id")
     ids.add_argument("--focus-id", help="backward-compatible shortcut for --type focus --id")
     ids.add_argument("--idea-id", help="shortcut for --type idea --id")
+    ids.add_argument("--dynamic-modifier-id", help="shortcut for --type dynamic_modifier --id")
     new.add_argument("--source-file", required=True, help="path relative to BigLeninHistMod/")
     fallbacks = new.add_mutually_exclusive_group()
     fallbacks.add_argument("--fallback")

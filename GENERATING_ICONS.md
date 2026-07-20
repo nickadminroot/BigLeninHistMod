@@ -1,6 +1,6 @@
-# Отложенная генерация иконок фокусов и идей
+# Отложенная генерация иконок фокусов, идей и динамических модификаторов
 
-Пайплайн отделяет разработку игрового контента от генерации изображений. Агенты создают рабочие фокусы и идеи с временными иконками и независимые manifest-файлы. ComfyUI или другой генератор запускается позже одной явной пакетной операцией.
+Пайплайн отделяет разработку игрового контента от генерации изображений. Агенты создают рабочие фокусы, идеи и динамические модификаторы с временными иконками и независимые manifest-файлы. ComfyUI или другой генератор запускается позже одной явной пакетной операцией.
 
 Поддерживаются:
 
@@ -8,6 +8,7 @@
 |---|---|---|---|---|
 | Фокус | `icon-manifests/focus/<focus_id>.json` | `icon = <fallback GFX>` | `GFX_focus_custom_<focus_id>` | 100x88 |
 | Идея | `icon-manifests/idea/<idea_id>.json` | `picture = <fallback>` | `custom_<idea_id>` | 65x67 |
+| Динамический модификатор | `icon-manifests/dynamic_modifier/<modifier_id>.json` | `icon = <fallback GFX>` | `GFX_idea_custom_dynamic_modifier_<modifier_id>` | 65x67 |
 
 Для идеи движок автоматически преобразует `picture = custom_TAG_spirit` в sprite lookup `GFX_idea_custom_TAG_spirit`.
 
@@ -71,6 +72,30 @@ rtk python scripts/icon-manifest.py new `
 
 Эквивалентные сокращения: `--idea-id` и `--fallback-picture`.
 
+### Новый динамический модификатор
+
+Динамический модификатор использует полное имя GFX в поле `icon`:
+
+```txt
+TAG_industrial_dynamic_modifier = {
+    icon = GFX_idea_generic_production_bonus
+    # ...
+}
+```
+
+Manifest:
+
+```powershell
+rtk python scripts/icon-manifest.py new `
+  --type dynamic_modifier `
+  --id "TAG_industrial_dynamic_modifier" `
+  --source-file "common/dynamic_modifiers/country.txt" `
+  --fallback "GFX_idea_generic_production_bonus" `
+  --prompt "A large steel gear behind a glowing blast furnace and crossed industrial hammers"
+```
+
+Сокращения: `--dynamic-modifier-id` и `--fallback-icon`.
+
 `source-file` всегда задаётся относительно `BigLeninHistMod/`.
 
 После создания контента агент запускает только быструю проверку:
@@ -110,9 +135,9 @@ Economic recovery, national strength and industrial progress
 A blast furnace pouring molten steel, with crossed industrial hammers and factory smokestacks behind it
 ```
 
-### Для идей
+### Для идей и динамических модификаторов
 
-Preset `hoi4_idea_v1` создаёт отдельный символ **без рамки, медальона и лавров**. Композиция должна быть ещё проще, поскольку итоговый размер — 65x67.
+Presets `hoi4_idea_v1` и `hoi4_dynamic_modifier_v1` создают отдельный символ **без рамки, медальона и лавров**. Композиция должна быть ещё проще, поскольку итоговый размер — 65x67. Для динамического модификатора объект должен отражать изменяемое состояние — промышленность, армию, регион, сопротивление или политический режим.
 
 Плохо:
 
@@ -137,18 +162,21 @@ icon-manifests/
 ├── focus/
 │   ├── FRA_expand_the_arsenals.json
 │   └── SOV_new_industrial_centers.json
-└── idea/
-    ├── FRA_rearmament_spirit.json
-    └── SOV_industrial_mobilization.json
+├── idea/
+│   ├── FRA_rearmament_spirit.json
+│   └── SOV_industrial_mobilization.json
+└── dynamic_modifier/
+    ├── FRA_rearmament_dynamic_modifier.json
+    └── SOV_industrial_mobilization_dynamic_modifier.json
 ```
 
 Параллельные ветки обычно добавляют разные manifest-файлы и не трогают общие generated GFX. Ветка коммитит вместе:
 
-1. focus/idea script;
+1. focus/idea/dynamic modifier script;
 2. английскую и русскую локализацию;
 3. соответствующий manifest.
 
-Если две ветки создают один manifest с одинаковыми типом и ID, конфликт полезен: это реальная коллизия. Одинаковые ID фокуса и идеи допустимы, поскольку они находятся в разных каталогах; при фильтрации команд используйте `--type`.
+Если две ветки создают один manifest с одинаковыми типом и ID, конфликт полезен: это реальная коллизия. Одинаковые ID разных типов допустимы, поскольку они находятся в разных каталогах; при фильтрации команд используйте `--type`.
 
 Manifest-подход устраняет конфликт общей очереди и GFX, но не конфликт самого игрового файла: две ветки, редактирующие один `country.txt`, всё ещё могут потребовать ручного merge. `sync` ищет блок по ID, а не по номеру строки.
 
@@ -183,10 +211,11 @@ rtk python scripts/icon-manifest.py status
 rtk python scripts/icon-manifest.py generate --limit 10 --sync
 ```
 
-Только идеи:
+Только идеи или динамические модификаторы:
 
 ```powershell
 rtk python scripts/icon-manifest.py generate --type idea --limit 10 --sync
+rtk python scripts/icon-manifest.py generate --type dynamic_modifier --limit 10 --sync
 ```
 
 Конкретные идеи:
@@ -218,21 +247,25 @@ rtk python scripts/icon-manifest.py generate `
 rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
 ```
 
-Только идеи:
+Только один тип:
 
 ```powershell
 rtk python scripts/icon-manifest.py export `
   --type idea `
   --output "build/idea-icon-requests.jsonl"
+rtk python scripts/icon-manifest.py export `
+  --type dynamic_modifier `
+  --output "build/dynamic-modifier-icon-requests.jsonl"
 ```
 
-JSONL содержит тип, ID, subject/full prompts, размер генерации, ожидаемый размер DDS и путь назначения.
+JSONL содержит тип, ID, subject/full prompts, размер генерации, ожидаемый размер DDS и путь назначения. Для динамических модификаторов используйте `--type dynamic_modifier`.
 
 Рекомендуемое имя результата включает тип и исключает коллизию одинаковых ID:
 
 ```text
 focus_<focus_id>.png
 idea_<idea_id>.png
+dynamic_modifier_<modifier_id>.png
 ```
 
 Также поддерживаются:
@@ -243,9 +276,11 @@ GFX_focus_custom_<focus_id>.png
 focus_custom_<focus_id>.png
 GFX_idea_custom_<idea_id>.png
 idea_custom_<idea_id>.png
+GFX_idea_custom_dynamic_modifier_<modifier_id>.png
+idea_custom_dynamic_modifier_<modifier_id>.png
 ```
 
-Допустимы `.png`, `.webp` и `.dds`. Внешний генератор должен подготовить прозрачность. PNG/WebP автоматически конвертируются в 100x88 для фокусов или 65x67 для идей. Готовый DDS уже должен иметь правильный размер.
+Допустимы `.png`, `.webp` и `.dds`. Внешний генератор должен подготовить прозрачность. PNG/WebP автоматически конвертируются в 100x88 для фокусов или 65x67 для идей и динамических модификаторов. Готовый DDS уже должен иметь правильный размер.
 
 ```powershell
 rtk python scripts/icon-manifest.py ingest `
@@ -253,20 +288,22 @@ rtk python scripts/icon-manifest.py ingest `
   --sync
 ```
 
-При одинаковых ID фокуса и идеи импортируйте с именами `focus_<id>`/`idea_<id>` либо используйте отдельные каталоги и `--type`.
+При одинаковых ID разных типов импортируйте с префиксами `focus_`, `idea_` или `dynamic_modifier_` либо используйте отдельные каталоги и `--type`.
 
 ## 6. Что делает `sync`
 
 `sync`:
 
-1. проверяет manifests и соответствующие focus/idea ID;
+1. проверяет manifests и соответствующие focus/idea/dynamic modifier ID;
 2. находит manifests с готовым DDS;
 3. пересобирает в стабильном порядке:
    - `BigLeninHistMod/interface/deferred_focus_icons.gfx`;
    - `BigLeninHistMod/interface/deferred_idea_icons.gfx`;
+   - `BigLeninHistMod/interface/deferred_dynamic_modifier_icons.gfx`;
 4. заменяет только объявленный fallback:
-   - `icon = <fallback>` → `icon = GFX_focus_custom_<id>`;
-   - `picture = <fallback>` → `picture = custom_<id>`;
+   - `icon = <fallback>` → `icon = GFX_focus_custom_<id>` для фокуса;
+   - `picture = <fallback>` → `picture = custom_<id>` для идеи;
+   - `icon = <fallback>` → `icon = GFX_idea_custom_dynamic_modifier_<id>` для динамического модификатора;
 5. отказывается затирать неожиданное ручное изменение;
 6. повторно валидирует результат.
 
@@ -315,19 +352,22 @@ rtk node scripts/hoi4-mcp-cli.js gui_validate --check_textures true
 
 `gui_validate` проверяет весь интерфейс и может показать существующие baseline-проблемы с vanilla-спрайтами. Для этого пайплайна обязательны успешные первые две проверки; общий GUI-отчёт сравнивается с baseline.
 
-В игре проверьте читаемость фокусов в дереве и идей в окне национальных духов. Windows smoke test запускается только по отдельному явному запросу.
+В игре проверьте читаемость фокусов в дереве, идей в окне национальных духов и динамических модификаторов в соответствующих GUI. Windows smoke test запускается только по отдельному явному запросу.
 
 ## Структура
 
 ```text
 icon-manifests/focus/<focus_id>.json
 icon-manifests/idea/<idea_id>.json
+icon-manifests/dynamic_modifier/<modifier_id>.json
 scripts/icon-manifest.py
 scripts/generate-single-focus-icon.py
 BigLeninHistMod/gfx/interface/goals/focus_custom_*.dds
 BigLeninHistMod/gfx/interface/ideas/idea_custom_*.dds
+BigLeninHistMod/gfx/interface/ideas/idea_custom_dynamic_modifier_*.dds
 BigLeninHistMod/interface/deferred_focus_icons.gfx
 BigLeninHistMod/interface/deferred_idea_icons.gfx
+BigLeninHistMod/interface/deferred_dynamic_modifier_icons.gfx
 ```
 
-Старые выпущенные assets остаются в `custom_focus_icons.gfx` и `custom_idea_icons.gfx`. Новые manifest-assets регистрируются только в соответствующих `deferred_*_icons.gfx`.
+Старые выпущенные assets остаются в `custom_focus_icons.gfx` и `custom_idea_icons.gfx`. Новые manifest-assets регистрируются только в соответствующих `deferred_*_icons.gfx`. Динамические модификаторы используют idea-sized текстуры, но отдельные sprite names и отдельный generated GFX, чтобы не конфликтовать с идеями с тем же ID.

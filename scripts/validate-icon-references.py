@@ -11,11 +11,13 @@ MOD_ROOT = Path(__file__).parent.parent
 SHIPPED = MOD_ROOT / "BigLeninHistMod"
 NF_DIR = SHIPPED / "common" / "national_focus"
 IDEA_DIR = SHIPPED / "common" / "ideas"
+DYNAMIC_MODIFIER_DIR = SHIPPED / "common" / "dynamic_modifiers"
 CUSTOM_GFX_FILES = (
     SHIPPED / "interface" / "custom_focus_icons.gfx",
     SHIPPED / "interface" / "deferred_focus_icons.gfx",
     SHIPPED / "interface" / "custom_idea_icons.gfx",
     SHIPPED / "interface" / "deferred_idea_icons.gfx",
+    SHIPPED / "interface" / "deferred_dynamic_modifier_icons.gfx",
 )
 
 
@@ -45,6 +47,11 @@ def used_custom_icons() -> dict[str, list[tuple[Path, int]]]:
             if match:
                 sprite_name = f"GFX_idea_{match.group(1)}"
                 used.setdefault(sprite_name, []).append((path, line_no))
+    for path in sorted(DYNAMIC_MODIFIER_DIR.rglob("*.txt")):
+        for line_no, line in enumerate(path.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+            match = re.search(r'\bicon\s*=\s*"?(GFX_idea_custom_dynamic_modifier_[^\s"#}]+)', line)
+            if match:
+                used.setdefault(match.group(1), []).append((path, line_no))
     return used
 
 
@@ -78,10 +85,15 @@ def main() -> int:
         return 1
 
     focus_used = sum(name.startswith("GFX_focus_") for name in used)
-    idea_used = sum(name.startswith("GFX_idea_") for name in used)
+    dynamic_used = sum(name.startswith("GFX_idea_custom_dynamic_modifier_") for name in used)
+    idea_used = sum(
+        name.startswith("GFX_idea_") and not name.startswith("GFX_idea_custom_dynamic_modifier_")
+        for name in used
+    )
     print(
         f"OK: {focus_used} used focus icons, {idea_used} used idea icons, "
-        f"{len(sprites)} sprite definitions, all texture paths exist"
+        f"{dynamic_used} used dynamic modifier icons, {len(sprites)} sprite definitions, "
+        "all texture paths exist"
     )
     return 0
 
