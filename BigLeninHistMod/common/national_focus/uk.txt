@@ -5340,10 +5340,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = 0.10 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = 0 }
-			# The special-project speed modifier is a dynamic update-compatible country value.
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_org_factor = 0 }
+			add_ideas = BLHM_ENG_faithful_to_tradition_idea
 		}
 	}
 
@@ -5358,9 +5355,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_max_range_factor = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = 0 }
+			add_ideas = BLHM_ENG_anti_submarine_defence_idea
 			add_tech_bonus = {
 				name = BLHM_ENG_asw_bonus
 				bonus = 1.0
@@ -5414,11 +5409,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = -0.10 }
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0.10 }
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.10 }
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_org_factor = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_max_range_factor = 0 }
 		}
 	}
 
@@ -5509,9 +5502,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = 0 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = 0 }
+			add_ideas = BLHM_ENG_london_mk2_torpedoes_idea
 		}
 	}
 
