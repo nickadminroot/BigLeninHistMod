@@ -5258,11 +5258,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = BLHM_ENG_soviet_lend_lease_spirit
-			if = {
-				limit = { NOT = { has_country_flag = BLHM_ENG_soviet_lend_lease_chain } }
-				set_country_flag = BLHM_ENG_soviet_lend_lease_chain
-				country_event = { id = BLHM_ENG_task.3 hours = 24 }
-			}
+			set_country_flag = BLHM_ENG_soviet_lend_lease_chain
+			activate_mission = BLHM_ENG_soviet_lend_lease_mission
 		}
 	}
 
@@ -5758,7 +5755,10 @@ focus_tree = {
 		y = 3
 		cost = 10
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_air_focus_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5784,7 +5784,10 @@ focus_tree = {
 		y = 3
 		cost = 10
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_air_focus_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5813,7 +5816,10 @@ focus_tree = {
 		y = 3
 		cost = 10
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_air_focus_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5908,7 +5914,10 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_air_focus_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6026,7 +6035,10 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_land_specialisation_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6055,7 +6067,10 @@ focus_tree = {
 		y = 2
 		cost = 8
 		available = {
-			NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+			custom_trigger_tooltip = {
+				tooltip = BLHM_ENG_land_specialisation_cooldown_tt
+				NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
