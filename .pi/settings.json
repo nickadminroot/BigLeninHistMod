@@ -41,6 +41,10 @@
       "hoi4-strong-agent": {
         "model": "openai-codex/gpt-5.6-sol",
         "thinking": "high"
+      },
+      "hoi4-agent": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "high"
       }
     }
   }
