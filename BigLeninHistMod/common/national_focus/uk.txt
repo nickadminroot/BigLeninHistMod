@@ -186,6 +186,7 @@ focus_tree = {
 	
 	focus = {
 		id = limited_rearmament_focus
+		relative_position_id = crypto_bomb_focus
 		icon = GFX_goal_generic_build_tank
 		x = 5
 		y = 0
@@ -2049,6 +2050,7 @@ focus_tree = {
 
 	focus = {
 		id = uk_empire_focus 
+		relative_position_id = crypto_bomb_focus
 		available = {
 			NOT = { has_government = communism }
 			num_subjects > 0
@@ -4376,6 +4378,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_steady_as_she_goes
+		relative_position_id = crypto_bomb_focus
 		icon = GFX_goal_support_democracy
 
 		x = 40
@@ -4695,8 +4698,9 @@ focus_tree = {
 	# ============ BLHM FRENCH/ECONOMIC BRANCH ============
 	focus = {
 		id = BLHM_ENG_civilian_construction
+		relative_position_id = crypto_bomb_focus
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 58
+		x = 52
 		y = 0
 		cost = 8
 		available_if_capitulated = yes
@@ -4712,9 +4716,10 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_strengthen_ties_with_france
+		relative_position_id = BLHM_ENG_civilian_construction
 		prerequisite = { focus = BLHM_ENG_civilian_construction }
 		icon = GFX_goal_generic_construct_military
-		x = 52
+		x = -4
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
@@ -4765,10 +4770,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_french_bases_in_commonwealth
+		relative_position_id = BLHM_ENG_strengthen_ties_with_france
 		prerequisite = { focus = BLHM_ENG_strengthen_ties_with_france }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 52
-		y = 2
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4797,11 +4803,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_aid_china
+		relative_position_id = BLHM_ENG_french_bases_in_commonwealth
 		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
 		available = { CHI = { exists = yes has_war_with = JAP } }
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 50
-		y = 3
+		x = -3
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4815,11 +4822,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_british_specialists_in_china
+		relative_position_id = BLHM_ENG_aid_china
 		prerequisite = { focus = BLHM_ENG_aid_china }
 		available = { CHI = { exists = yes has_war_with = JAP } }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 50
-		y = 4
+		x = 0
+		y = 1
 		cost = 8
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4837,11 +4845,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_african_railway_project
+		relative_position_id = BLHM_ENG_french_bases_in_commonwealth
 		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
 		available = { NOT = { has_war = yes } }
 		icon = GFX_goal_generic_construct_military
-		x = 52
-		y = 3
+		x = -1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4858,10 +4867,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_joint_radar_development
+		relative_position_id = BLHM_ENG_french_bases_in_commonwealth
 		prerequisite = { focus = BLHM_ENG_french_bases_in_commonwealth }
 		icon = GFX_goal_generic_radar
-		x = 54
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4881,11 +4891,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_national_prosperity_treaty
+		relative_position_id = BLHM_ENG_african_railway_project
 		prerequisite = { focus = BLHM_ENG_african_railway_project }
 		prerequisite = { focus = BLHM_ENG_joint_radar_development }
 		icon = GFX_goal_generic_consumer_goods
-		x = 53
-		y = 4
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
@@ -4897,10 +4908,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_joint_tank_development
+		relative_position_id = BLHM_ENG_national_prosperity_treaty
 		prerequisite = { focus = BLHM_ENG_national_prosperity_treaty }
 		icon = GFX_goal_generic_build_tank
-		x = 52
-		y = 5
+		x = -1
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4933,10 +4945,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_syrian_alexandrian_corps
+		relative_position_id = BLHM_ENG_national_prosperity_treaty
 		prerequisite = { focus = BLHM_ENG_national_prosperity_treaty }
 		icon = GFX_goal_generic_army_motorized
-		x = 54
-		y = 5
+		x = 1
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -4952,9 +4965,10 @@ focus_tree = {
 	# ============ BLHM USA/OCEANIA BRANCH ============
 	focus = {
 		id = BLHM_ENG_develop_trade_with_usa
+		relative_position_id = BLHM_ENG_civilian_construction
 		prerequisite = { focus = BLHM_ENG_civilian_construction }
 		icon = GFX_goal_generic_construct_military
-		x = 58
+		x = 0
 		y = 1
 		cost = 8
 		available_if_capitulated = no
@@ -4978,11 +4992,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_civilian_industrial_machinery
+		relative_position_id = BLHM_ENG_develop_trade_with_usa
 		prerequisite = { focus = BLHM_ENG_develop_trade_with_usa }
 		mutually_exclusive = { focus = BLHM_ENG_military_industrial_machinery }
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 57
-		y = 2
+		x = -1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5003,11 +5018,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_military_industrial_machinery
+		relative_position_id = BLHM_ENG_develop_trade_with_usa
 		prerequisite = { focus = BLHM_ENG_develop_trade_with_usa }
 		mutually_exclusive = { focus = BLHM_ENG_civilian_industrial_machinery }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 59
-		y = 2
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5019,10 +5035,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_oceania_treaty
-		prerequisite = { focus = BLHM_ENG_develop_trade_with_usa }
+		relative_position_id = BLHM_ENG_civilian_industrial_machinery
+		prerequisite = { focus = BLHM_ENG_civilian_industrial_machinery focus = BLHM_ENG_military_industrial_machinery }
 		icon = GFX_goal_generic_construct_military
-		x = 62
-		y = 2
+		x = 2
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5049,11 +5066,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_joint_air_industry
-		prerequisite = { focus = BLHM_ENG_develop_trade_with_usa }
-		prerequisite = { focus = BLHM_ENG_oceania_treaty }
+		relative_position_id = BLHM_ENG_civilian_industrial_machinery
+		prerequisite = { focus = BLHM_ENG_civilian_industrial_machinery focus = BLHM_ENG_military_industrial_machinery }
 		icon = GFX_goal_generic_air_production
-		x = 58
-		y = 3
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5070,11 +5087,13 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_joint_resource_extraction
+		relative_position_id = BLHM_ENG_joint_air_industry
 		prerequisite = { focus = BLHM_ENG_joint_air_industry }
+		prerequisite = { focus = BLHM_ENG_oceania_treaty }
 		available = { has_tech = excavation2 }
 		icon = GFX_goal_generic_construct_military
-		x = 58
-		y = 4
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5089,12 +5108,13 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_britain_prospers
+		relative_position_id = BLHM_ENG_joint_resource_extraction
 		prerequisite = { focus = BLHM_ENG_joint_resource_extraction }
 		prerequisite = { focus = BLHM_ENG_syrian_alexandrian_corps }
 		prerequisite = { focus = BLHM_ENG_soviet_lend_lease }
 		icon = GFX_goal_generic_consumer_goods
-		x = 58
-		y = 6
+		x = 0
+		y = 2
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
@@ -5123,12 +5143,13 @@ focus_tree = {
 	# Soviet Economic Compromise — triggers visible event for SOV
 	focus = {
 		id = BLHM_ENG_soviet_economic_compromise
+		relative_position_id = BLHM_ENG_civilian_construction
 		prerequisite = { focus = BLHM_ENG_civilian_construction }
 		available = {
 			SOV = { exists = yes }
 		}
 		icon = GFX_goal_generic_construct_military
-		x = 66
+		x = 5
 		y = 1
 		cost = 8
 		available_if_capitulated = no
@@ -5144,6 +5165,7 @@ focus_tree = {
 	# Soviet Heavy Weapons Experience
 	focus = {
 		id = BLHM_ENG_soviet_heavy_weapons_experience
+		relative_position_id = BLHM_ENG_soviet_economic_compromise
 		prerequisite = { focus = BLHM_ENG_soviet_economic_compromise }
 		available = {
 			custom_trigger_tooltip = {
@@ -5153,8 +5175,8 @@ focus_tree = {
 			has_tech = antitank2
 		}
 		icon = GFX_goal_generic_army_artillery
-		x = 66
-		y = 2
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5172,14 +5194,15 @@ focus_tree = {
 	# Simplify Production Lines — mutually exclusive with sloped armor
 	focus = {
 		id = BLHM_ENG_simplify_production_lines
+		relative_position_id = BLHM_ENG_soviet_heavy_weapons_experience
 		prerequisite = { focus = BLHM_ENG_soviet_heavy_weapons_experience }
 		mutually_exclusive = { focus = BLHM_ENG_sloped_armor }
 		available = {
 			has_war = yes
 		}
 		icon = GFX_goal_generic_production2
-		x = 65
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5199,14 +5222,15 @@ focus_tree = {
 	# Sloped Armor — mutually exclusive with simplify production lines
 	focus = {
 		id = BLHM_ENG_sloped_armor
+		relative_position_id = BLHM_ENG_soviet_heavy_weapons_experience
 		prerequisite = { focus = BLHM_ENG_soviet_heavy_weapons_experience }
 		mutually_exclusive = { focus = BLHM_ENG_simplify_production_lines }
 		available = {
 			has_war = yes
 		}
 		icon = GFX_goal_generic_army_tanks
-		x = 67
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5239,14 +5263,15 @@ focus_tree = {
 	# Soviet Lend-Lease — available via either branch
 	focus = {
 		id = BLHM_ENG_soviet_lend_lease
+		relative_position_id = BLHM_ENG_simplify_production_lines
 		prerequisite = { focus = BLHM_ENG_simplify_production_lines focus = BLHM_ENG_sloped_armor }
 		available = {
 			SOV = { exists = yes }
 			SOV = { has_war_with = GER }
 		}
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 66
-		y = 4
+		x = 1
+		y = 2
 		cost = 8
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5262,8 +5287,9 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_war_construction
+		relative_position_id = crypto_bomb_focus
 		icon = GFX_goal_generic_construct_military
-		x = 80
+		x = 70
 		y = 0
 		cost = 8
 		available = {
@@ -5286,9 +5312,10 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_naval_complex
+		relative_position_id = BLHM_ENG_war_construction
 		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 80
+		x = 0
 		y = 1
 		cost = 8
 		available = {
@@ -5325,10 +5352,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_next_generation_fleet
+		relative_position_id = BLHM_ENG_naval_complex
 		prerequisite = { focus = BLHM_ENG_naval_complex }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 78
-		y = 2
+		x = -2
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5349,10 +5377,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_faithful_to_tradition
+		relative_position_id = BLHM_ENG_naval_complex
 		prerequisite = { focus = BLHM_ENG_naval_complex }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 80
-		y = 2
+		x = 0
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5364,10 +5393,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_anti_submarine_defence
+		relative_position_id = BLHM_ENG_naval_complex
 		prerequisite = { focus = BLHM_ENG_naval_complex }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 82
-		y = 2
+		x = 2
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5385,14 +5415,15 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_carrier_groups
+		relative_position_id = BLHM_ENG_next_generation_fleet
 		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
 		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
 		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
 		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 78
-		y = 3
+		x = 0
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5413,14 +5444,15 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_cost_optimisation
+		relative_position_id = BLHM_ENG_next_generation_fleet
 		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
 		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
 		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
 		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_goal_generic_production
-		x = 80
-		y = 3
+		x = 2
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5435,14 +5467,15 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_submarine_warfare
+		relative_position_id = BLHM_ENG_next_generation_fleet
 		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
 		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
 		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
 		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 82
-		y = 3
+		x = 4
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5460,11 +5493,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_young_school
+		relative_position_id = BLHM_ENG_carrier_groups
 		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
 		mutually_exclusive = { focus = BLHM_ENG_old_guard }
 		icon = GFX_goal_generic_air_doctrine
-		x = 78
-		y = 4
+		x = 0
+		y = 1
 		cost = 5
 		available = {
 			has_war = yes
@@ -5483,12 +5517,13 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_old_guard
+		relative_position_id = BLHM_ENG_carrier_groups
 		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
 		mutually_exclusive = { focus = BLHM_ENG_young_school }
 		mutually_exclusive = { focus = BLHM_ENG_london_mk2_torpedoes }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 80
-		y = 4
+		x = 2
+		y = 1
 		cost = 5
 		available = {
 			has_war = yes
@@ -5507,11 +5542,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_london_mk2_torpedoes
+		relative_position_id = BLHM_ENG_carrier_groups
 		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
 		mutually_exclusive = { focus = BLHM_ENG_old_guard }
 		icon = GFX_goal_generic_air_doctrine
-		x = 82
-		y = 4
+		x = 4
+		y = 1
 		cost = 5
 		available = {
 			has_war = yes
@@ -5526,10 +5562,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_emergency_fleet_refit
+		relative_position_id = BLHM_ENG_carrier_groups
 		prerequisite = { focus = BLHM_ENG_carrier_groups focus = BLHM_ENG_cost_optimisation focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_goal_generic_production
-		x = 76
-		y = 4
+		x = 6
+		y = 1
 		cost = 5
 		available = {
 			has_war = yes
@@ -5544,10 +5581,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_expand_british_dockyards
+		relative_position_id = BLHM_ENG_young_school
 		prerequisite = { focus = BLHM_ENG_young_school focus = BLHM_ENG_old_guard focus = BLHM_ENG_london_mk2_torpedoes }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 80
-		y = 5
+		x = 2
+		y = 1
 		cost = 5
 		available = {
 			AND = {
@@ -5589,10 +5627,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_prepare_for_d_day
+		relative_position_id = BLHM_ENG_expand_british_dockyards
 		prerequisite = { focus = BLHM_ENG_expand_british_dockyards }
 		icon = GFX_goal_generic_construct_military
-		x = 80
-		y = 6
+		x = 0
+		y = 1
 		cost = 10
 		available = {
 			has_war = yes
@@ -5610,9 +5649,10 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_air_industry
+		relative_position_id = BLHM_ENG_war_construction
 		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_air_production
-		x = 73
+		x = -7
 		y = 1
 		cost = 8
 		available = {
@@ -5632,10 +5672,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_light_air_development
+		relative_position_id = BLHM_ENG_air_industry
 		prerequisite = { focus = BLHM_ENG_air_industry }
 		icon = GFX_goal_generic_air_bomber
-		x = 70
-		y = 2
+		x = -3
+		y = 1
 		cost = 8
 		available = {
 			threat > 0.15
@@ -5663,10 +5704,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_medium_air_development
+		relative_position_id = BLHM_ENG_air_industry
 		prerequisite = { focus = BLHM_ENG_air_industry }
 		icon = GFX_goal_generic_air_bomber
-		x = 72
-		y = 2
+		x = -1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5687,10 +5729,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_heavy_air_development
+		relative_position_id = BLHM_ENG_air_industry
 		prerequisite = { focus = BLHM_ENG_air_industry }
 		icon = GFX_goal_generic_air_bomber
-		x = 74
-		y = 2
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5714,10 +5757,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_carrier_air_development
+		relative_position_id = BLHM_ENG_air_industry
 		prerequisite = { focus = BLHM_ENG_air_industry }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 76
-		y = 2
+		x = 3
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5741,13 +5785,14 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_air_production_modernisation
+		relative_position_id = BLHM_ENG_light_air_development
 		prerequisite = { focus = BLHM_ENG_light_air_development }
 		prerequisite = { focus = BLHM_ENG_medium_air_development }
 		prerequisite = { focus = BLHM_ENG_heavy_air_development }
 		prerequisite = { focus = BLHM_ENG_carrier_air_development }
 		icon = GFX_goal_generic_production
-		x = 71
-		y = 3
+		x = 1
+		y = 1
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -5770,13 +5815,14 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_pilot_training_programme
+		relative_position_id = BLHM_ENG_light_air_development
 		prerequisite = { focus = BLHM_ENG_light_air_development }
 		prerequisite = { focus = BLHM_ENG_medium_air_development }
 		prerequisite = { focus = BLHM_ENG_heavy_air_development }
 		prerequisite = { focus = BLHM_ENG_carrier_air_development }
 		icon = GFX_goal_generic_air_doctrine
-		x = 73
-		y = 3
+		x = 3
+		y = 1
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -5802,13 +5848,14 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_next_generation_ground_attack
+		relative_position_id = BLHM_ENG_light_air_development
 		prerequisite = { focus = BLHM_ENG_light_air_development }
 		prerequisite = { focus = BLHM_ENG_medium_air_development }
 		prerequisite = { focus = BLHM_ENG_heavy_air_development }
 		prerequisite = { focus = BLHM_ENG_carrier_air_development }
 		icon = GFX_goal_generic_air_doctrine
-		x = 75
-		y = 3
+		x = 5
+		y = 1
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -5828,10 +5875,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_aircraft_machine_tools
+		relative_position_id = BLHM_ENG_air_production_modernisation
 		prerequisite = { focus = BLHM_ENG_air_production_modernisation }
 		icon = GFX_goal_generic_production
-		x = 71
-		y = 4
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5848,10 +5896,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_new_industrial_schemes
+		relative_position_id = BLHM_ENG_aircraft_machine_tools
 		prerequisite = { focus = BLHM_ENG_aircraft_machine_tools }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 71
-		y = 5
+		x = 0
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5864,10 +5913,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_raf_exercises
+		relative_position_id = BLHM_ENG_pilot_training_programme
 		prerequisite = { focus = BLHM_ENG_pilot_training_programme }
 		icon = GFX_goal_generic_air_doctrine
-		x = 73
-		y = 4
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -5880,10 +5930,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_defence_of_britain
+		relative_position_id = BLHM_ENG_raf_exercises
 		prerequisite = { focus = BLHM_ENG_raf_exercises }
 		icon = GFX_goal_generic_air_fighter
-		x = 73
-		y = 5
+		x = 0
+		y = 1
 		cost = 8
 		available = {
 			has_war = yes
@@ -5903,10 +5954,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_heavy_bombs_and_modified_mounts
+		relative_position_id = BLHM_ENG_next_generation_ground_attack
 		prerequisite = { focus = BLHM_ENG_next_generation_ground_attack }
 		icon = GFX_goal_generic_army_artillery
-		x = 75
-		y = 4
+		x = 0
+		y = 1
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -5932,11 +5984,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_gloster_meteor
+		relative_position_id = BLHM_ENG_new_industrial_schemes
 		prerequisite = { focus = BLHM_ENG_new_industrial_schemes }
 		prerequisite = { focus = BLHM_ENG_defence_of_britain }
 		icon = GFX_goal_generic_secret_weapon
-		x = 74
-		y = 6
+		x = 3
+		y = 1
 		cost = 10
 		available = {
 			date > 1943.1.1
@@ -5968,9 +6021,10 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_land_forces
+		relative_position_id = BLHM_ENG_war_construction
 		prerequisite = { focus = BLHM_ENG_war_construction }
 		icon = GFX_goal_generic_construct_military
-		x = 95
+		x = 10
 		y = 1
 		cost = 8
 		available = {
@@ -6024,10 +6078,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_tank_development
+		relative_position_id = BLHM_ENG_land_forces
 		prerequisite = { focus = BLHM_ENG_land_forces }
 		icon = GFX_goal_generic_army_tanks
-		x = 92
-		y = 2
+		x = -3
+		y = 1
 		cost = 5
 		available = {
 			custom_trigger_tooltip = {
@@ -6056,10 +6111,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_infantry_forces
+		relative_position_id = BLHM_ENG_land_forces
 		prerequisite = { focus = BLHM_ENG_land_forces }
 		icon = GFX_goal_generic_army_motorized
-		x = 99
-		y = 2
+		x = 4
+		y = 1
 		cost = 8
 		available = {
 			custom_trigger_tooltip = {
@@ -6094,10 +6150,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_study_french_conflict_experience
+		relative_position_id = BLHM_ENG_tank_development
 		prerequisite = { focus = BLHM_ENG_tank_development }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 91
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
 		available = {
 			has_war = yes
@@ -6119,10 +6176,11 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_seventeen_pounder
+		relative_position_id = BLHM_ENG_tank_development
 		prerequisite = { focus = BLHM_ENG_tank_development }
 		icon = GFX_goal_generic_army_artillery
-		x = 93
-		y = 3
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6140,11 +6198,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_sherman_firefly
+		relative_position_id = BLHM_ENG_seventeen_pounder
 		prerequisite = { focus = BLHM_ENG_seventeen_pounder }
 		mutually_exclusive = { focus = BLHM_ENG_global_tank_doctrine_update }
 		icon = GFX_goal_generic_army_tanks
-		x = 92
-		y = 4
+		x = -1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6175,11 +6234,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_global_tank_doctrine_update
+		relative_position_id = BLHM_ENG_seventeen_pounder
 		prerequisite = { focus = BLHM_ENG_seventeen_pounder }
 		mutually_exclusive = { focus = BLHM_ENG_sherman_firefly }
 		icon = GFX_goal_generic_air_doctrine
-		x = 94
-		y = 4
+		x = 1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6214,13 +6274,14 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_updated_communications
+		relative_position_id = BLHM_ENG_sherman_firefly
 		prerequisite = {
 			focus = BLHM_ENG_sherman_firefly
 			focus = BLHM_ENG_global_tank_doctrine_update
 		}
 		icon = GFX_goal_generic_air_doctrine
-		x = 93
-		y = 5
+		x = 1
+		y = 1
 		cost = 8
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6243,11 +6304,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_canadian_landings
+		relative_position_id = BLHM_ENG_infantry_forces
 		prerequisite = { focus = BLHM_ENG_infantry_forces }
 		available = { CAN = { exists = yes } }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 96
-		y = 3
+		x = -3
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6268,11 +6330,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_african_infantry_corps
+		relative_position_id = BLHM_ENG_infantry_forces
 		prerequisite = { focus = BLHM_ENG_infantry_forces }
 		available = { SAF = { exists = yes } }
 		icon = GFX_goal_generic_army_motorized
-		x = 98
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6286,11 +6349,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_indian_gurkhas
+		relative_position_id = BLHM_ENG_infantry_forces
 		prerequisite = { focus = BLHM_ENG_infantry_forces }
 		available = { RAJ = { exists = yes } }
 		icon = GFX_goal_generic_army_motorized
-		x = 100
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6304,11 +6368,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_australian_rangers
+		relative_position_id = BLHM_ENG_infantry_forces
 		prerequisite = { focus = BLHM_ENG_infantry_forces }
 		available = { AST = { exists = yes } }
 		icon = GFX_goal_generic_army_motorized
-		x = 102
-		y = 3
+		x = 3
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
@@ -6322,11 +6387,12 @@ focus_tree = {
 
 	focus = {
 		id = BLHM_ENG_new_zealand_special_forces
+		relative_position_id = BLHM_ENG_infantry_forces
 		prerequisite = { focus = BLHM_ENG_infantry_forces }
 		available = { NZL = { exists = yes } }
 		icon = GFX_goal_generic_army_motorized
-		x = 104
-		y = 3
+		x = 5
+		y = 1
 		cost = 5
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
