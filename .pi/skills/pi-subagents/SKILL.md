@@ -1,7 +1,7 @@
----
+<!-- ---
 name: pi-subagents
 description: Project-specific guide to the pi-subagents extension and delegation workflows for BigLeninHistMod. Use for agent discovery, creation, configuration, single/parallel/chain/async runs, HOI4 implementation handoffs, review, and runtime control.
----
+--- -->
 
 # Pi Subagents — BigLeninHistMod
 
