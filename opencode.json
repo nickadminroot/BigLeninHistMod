@@ -1,0 +1,8 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "external_directory": {
+      "G:/Documents/Paradox Interactive/Hearts of Iron IV/mod/BigLeninHistMod.worktrees/**": "allow"
+    }
+  }
+}
