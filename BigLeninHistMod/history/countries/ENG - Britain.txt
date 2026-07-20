@@ -248,9 +248,15 @@ add_dynamic_modifier = { modifier = BLHM_ENG_fleet_of_britain_dynamic_modifier }
 add_dynamic_modifier = { modifier = BLHM_ENG_air_force_dynamic_modifier }
 add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 add_equipment_bonus = {
+	name = BLHM_ENG_fleet_of_britain_dynamic_modifier
 	bonus = {
 		ship_hull_heavy = { build_cost_ic = 0.15 instant = yes }
 		ship_hull_light = { build_cost_ic = 0.15 instant = yes }
+	}
+}
+add_equipment_bonus = {
+	name = BLHM_ENG_new_tanks_dynamic_modifier
+	bonus = {
 		light_tank_chassis = { build_cost_ic = 0.15 instant = yes }
 		medium_tank_chassis = { build_cost_ic = 0.15 instant = yes }
 		heavy_tank_chassis = { build_cost_ic = 0.15 instant = yes }

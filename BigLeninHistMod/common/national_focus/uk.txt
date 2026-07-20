@@ -4729,24 +4729,32 @@ focus_tree = {
 			if = {
 				limit = { FRA = { exists = yes } }
 				458 = {
-					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					if = {
+						limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
 				}
 				459 = {
-					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					if = {
+						limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
 				}
 				461 = {
-					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					if = {
+						limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
 				}
 				462 = {
-					limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					if = {
+						limit = { is_controlled_by = FRA free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
 				}
 			}
 			effect_tooltip = {
@@ -4767,21 +4775,18 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			AST = {
-				limit = { exists = yes }
 				capital_scope = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 				}
 			}
 			RAJ = {
-				limit = { exists = yes }
 				capital_scope = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 				}
 			}
 			CAN = {
-				limit = { exists = yes }
 				capital_scope = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -4939,7 +4944,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BLHM_ENG_syrian_alexandrian_corps
 			every_allied_country = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_syrian_alexandrian_corps
 			}
 		}
@@ -4964,7 +4968,6 @@ focus_tree = {
 				category = industry
 			}
 			USA = {
-				limit = { exists = yes }
 				add_timed_idea = {
 					idea = BLHM_USA_trade_with_britain
 					days = 365
@@ -5026,14 +5029,12 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			AST = {
-				limit = { exists = yes }
 				capital_scope = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 				}
 			}
 			NZL = {
-				limit = { exists = yes }
 				capital_scope = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -5081,7 +5082,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BLHM_ENG_joint_resource_extraction
 			USA = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_joint_resource_extraction
 			}
 		}
@@ -5102,23 +5102,18 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BLHM_ENG_britain_prospers
 			AST = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_britain_prospers
 			}
 			NZL = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_britain_prospers
 			}
 			CAN = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_britain_prospers
 			}
 			RAJ = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_britain_prospers
 			}
 			SAF = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_britain_prospers
 			}
 		}
@@ -5347,7 +5342,7 @@ focus_tree = {
 				name = BLHM_ENG_naval_modules_bonus
 				bonus = 2.0
 				uses = 2
-				category = naval_modules
+				category = ship_modules_tech
 			}
 		}
 	}
@@ -6259,7 +6254,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			CAN = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_canadian_landings_idea
 				add_doctrine_cost_reduction = {
 					name = BLHM_ENG_canadian_landings
@@ -6285,7 +6279,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			SAF = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_african_infantry_corps_idea
 			}
 		}
@@ -6304,7 +6297,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			RAJ = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_indian_gurkhas_idea
 			}
 		}
@@ -6323,7 +6315,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			AST = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_australian_rangers_idea
 			}
 		}
@@ -6342,7 +6333,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			NZL = {
-				limit = { exists = yes }
 				add_ideas = BLHM_ENG_new_zealand_special_forces_idea
 				add_doctrine_cost_reduction = {
 					name = BLHM_ENG_new_zealand_special_forces

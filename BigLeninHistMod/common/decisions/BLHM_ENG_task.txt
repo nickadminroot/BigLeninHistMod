@@ -1,15 +1,4 @@
 BLHM_ENG_d_day_preparations_cat = {
-	icon = GFX_decision_category_generic_fortification
-	priority = 50
-
-	allowed = {
-		original_tag = ENG
-	}
-
-	visible = {
-		has_country_flag = BLHM_ENG_d_day_preparations
-	}
-
 	BLHM_ENG_prepare_recon_aircraft = {
 		icon = GFX_goal_generic_air_naval_bomber
 
@@ -53,19 +42,6 @@ BLHM_ENG_d_day_preparations_cat = {
 # The focus completion activates this mission; the activation trigger also
 # restores it automatically after a cancellation when the war resumes.
 BLHM_ENG_soviet_lend_lease = {
-	icon = GFX_decision_category_generic_industry
-	priority = 50
-
-	allowed = {
-		original_tag = ENG
-	}
-
-	visible = {
-		original_tag = ENG
-		has_country_flag = BLHM_ENG_soviet_lend_lease_chain
-		has_idea = BLHM_ENG_soviet_lend_lease_spirit
-	}
-
 	BLHM_ENG_soviet_lend_lease_mission = {
 		icon = GFX_goal_generic_occupy_states_coastal
 
