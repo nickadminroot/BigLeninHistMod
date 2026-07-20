@@ -243,6 +243,47 @@ add_ideas = {
 
 set_convoys = 1000
 
+# BLHM British dynamic modifiers (active from the 1936 start)
+add_dynamic_modifier = { modifier = BLHM_ENG_fleet_of_britain_dynamic_modifier }
+add_dynamic_modifier = { modifier = BLHM_ENG_air_force_dynamic_modifier }
+add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
+add_equipment_bonus = {
+	name = BLHM_ENG_fleet_of_britain_dynamic_modifier
+	bonus = {
+		ship_hull_heavy = { build_cost_ic = 0.15 instant = yes }
+		ship_hull_light = { build_cost_ic = 0.15 instant = yes }
+	}
+}
+add_equipment_bonus = {
+	name = BLHM_ENG_new_tanks_dynamic_modifier
+	bonus = {
+		light_tank_chassis = { build_cost_ic = 0.15 instant = yes }
+		medium_tank_chassis = { build_cost_ic = 0.15 instant = yes }
+		heavy_tank_chassis = { build_cost_ic = 0.15 instant = yes }
+	}
+}
+set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.05 }
+set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 }
+set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = 0.25 }
+set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = 0.10 }
+set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_mission_efficiency = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_range_factor = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_naval_strike_attack_factor = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_air_training_xp_gain_factor = 0 }
+set_variable = { BLHM_ENG_air_force_dynamic_modifier_ace_effectiveness_factor = 0 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0 }
+set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0 }
+
 # DIPLOMACY
 if = {
 	limit = {

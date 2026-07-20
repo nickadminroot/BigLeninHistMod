@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "dynamic_modifier",
+  "asset_id": "BLHM_ENG_allied_tanks_dynamic_modifier",
+  "sprite_name": "GFX_idea_custom_dynamic_modifier_BLHM_ENG_allied_tanks_dynamic_modifier",
+  "texturefile": "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_allied_tanks_dynamic_modifier.dds",
+  "source_file": "common/dynamic_modifiers/BLHM_ENG_dynamic_modifiers.txt",
+  "fallback_icon": "GFX_idea_generic_armor_bonus",
+  "prompt": "A group of Allied tanks assembled beneath Commonwealth banners on a desert training ground",
+  "style_preset": "hoi4_dynamic_modifier_v1"
+}

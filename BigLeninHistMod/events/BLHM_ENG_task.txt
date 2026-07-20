@@ -47,16 +47,14 @@ country_event = {
 			}
 		}
 		SOV = {
-			limit = { exists = yes }
-			give_resource_rights = {
+				give_resource_rights = {
 				receiver = ENG
 				state = 1083
 				resources = { oil }
 			}
 		}
 		RAJ = {
-			limit = { exists = yes }
-			give_resource_rights = {
+				give_resource_rights = {
 				receiver = ROOT
 				state = 288
 				resources = { tungsten }
@@ -82,46 +80,6 @@ country_event = {
 	}
 }
 
-# Soviet Lend-Lease — hidden deterministic monthly check
-# Fires every 30 days while SOV exists and ENG has flag set
-# Gives SOV equipment if SOV is at war with GER
-# Uses ENG flag to avoid duplicate chain on re-fires
-country_event = {
-	id = BLHM_ENG_task.3
-	title = BLHM_ENG_task.3.t
-	desc = BLHM_ENG_task.3.d
-	picture = GFX_report_event_generic_handshake
-
-	is_triggered_only = yes
-	hide_window = yes
-
-	option = {
-		name = BLHM_ENG_task.3.a
-		ai_chance = { factor = 100 }
-		if = {
-			limit = {
-				has_country_flag = BLHM_ENG_soviet_lend_lease_chain
-				has_idea = BLHM_ENG_soviet_lend_lease_spirit
-			}
-			if = {
-				limit = {
-					SOV = { exists = yes }
-					SOV = { has_war_with = GER }
-				}
-				SOV = {
-					add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 producer = ENG }
-					add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = ENG }
-					add_equipment_to_stockpile = { type = fighter_equipment amount = 500 producer = ENG }
-					add_equipment_to_stockpile = { type = motorized_equipment amount = 500 producer = ENG }
-					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 producer = ENG }
-					add_equipment_to_stockpile = { type = anti_air_equipment amount = 500 producer = ENG }
-				}
-			}
-			country_event = { id = BLHM_ENG_task.3 hours = 720 }
-		}
-	}
-}
-
 # Naval Armed Forces Branch - clears branch lock flag after 720 days
 country_event = {
 	id = BLHM_ENG_task.4
@@ -130,7 +88,7 @@ country_event = {
 	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
-	hide_window = yes
+	hidden = yes
 
 	option = {
 		name = BLHM_ENG_task.4.a
@@ -147,7 +105,7 @@ country_event = {
 	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
-	hide_window = yes
+	hidden = yes
 
 	option = {
 		name = BLHM_ENG_task.5.a
@@ -164,7 +122,7 @@ country_event = {
 	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
-	hide_window = yes
+	hidden = yes
 
 	option = {
 		name = BLHM_ENG_task.6.a
@@ -202,7 +160,7 @@ country_event = {
 	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
-	hide_window = yes
+	hidden = yes
 
 	option = {
 		name = BLHM_ENG_task.8.a
@@ -219,7 +177,7 @@ country_event = {
 	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
-	hide_window = yes
+	hidden = yes
 
 	option = {
 		name = BLHM_ENG_task.9.a
@@ -245,24 +203,22 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				CAN = { has_idea = BLHM_ENG_allied_tanks }
+				CAN = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				factor = 2
 			}
 		}
 		CAN = {
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
-			remove_ideas = BLHM_ENG_allied_tanks
+			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
+			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
-			add_ideas = BLHM_ENG_new_tanks_CAN
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
-				add_ideas = BLHM_ENG_joint_tank_upgrade
-			}
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
-				add_ideas = BLHM_ENG_sloped_armor_upgrade
-			}
 		}
+		CAN = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -273,24 +229,22 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				SAF = { has_idea = BLHM_ENG_allied_tanks }
+				SAF = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				factor = 2
 			}
 		}
 		SAF = {
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
-			remove_ideas = BLHM_ENG_allied_tanks
+			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
+			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
-			add_ideas = BLHM_ENG_new_tanks_SAF
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
-				add_ideas = BLHM_ENG_joint_tank_upgrade
-			}
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
-				add_ideas = BLHM_ENG_sloped_armor_upgrade
-			}
 		}
+		SAF = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -301,24 +255,22 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				RAJ = { has_idea = BLHM_ENG_allied_tanks }
+				RAJ = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				factor = 2
 			}
 		}
 		RAJ = {
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
-			remove_ideas = BLHM_ENG_allied_tanks
+			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
+			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
-			add_ideas = BLHM_ENG_new_tanks_RAJ
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
-				add_ideas = BLHM_ENG_joint_tank_upgrade
-			}
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
-				add_ideas = BLHM_ENG_sloped_armor_upgrade
-			}
 		}
+		RAJ = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -329,24 +281,22 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				AST = { has_idea = BLHM_ENG_allied_tanks }
+				AST = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				factor = 2
 			}
 		}
 		AST = {
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
-			remove_ideas = BLHM_ENG_allied_tanks
+			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
+			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
-			add_ideas = BLHM_ENG_new_tanks_AST
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
-				add_ideas = BLHM_ENG_joint_tank_upgrade
-			}
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
-				add_ideas = BLHM_ENG_sloped_armor_upgrade
-			}
 		}
+		AST = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -357,24 +307,22 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				NZL = { has_idea = BLHM_ENG_allied_tanks }
+				NZL = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				factor = 2
 			}
 		}
 		NZL = {
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
+			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
-			remove_ideas = BLHM_ENG_allied_tanks
+			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
+			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
-			add_ideas = BLHM_ENG_new_tanks_NZL
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
-				add_ideas = BLHM_ENG_joint_tank_upgrade
-			}
-			if = {
-				limit = { ENG = { has_country_flag = BLHM_ENG_sloped_armor_completed } }
-				add_ideas = BLHM_ENG_sloped_armor_upgrade
-			}
 		}
+		NZL = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {

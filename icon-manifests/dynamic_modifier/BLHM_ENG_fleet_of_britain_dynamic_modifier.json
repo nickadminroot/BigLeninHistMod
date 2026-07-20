@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "asset_type": "dynamic_modifier",
+  "asset_id": "BLHM_ENG_fleet_of_britain_dynamic_modifier",
+  "sprite_name": "GFX_idea_custom_dynamic_modifier_BLHM_ENG_fleet_of_britain_dynamic_modifier",
+  "texturefile": "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_fleet_of_britain_dynamic_modifier.dds",
+  "source_file": "common/dynamic_modifiers/BLHM_ENG_dynamic_modifiers.txt",
+  "fallback_icon": "GFX_idea_generic_navy_bonus",
+  "prompt": "A powerful British battleship fleet steaming through rough seas beneath a naval signal flag",
+  "style_preset": "hoi4_dynamic_modifier_v1"
+}
