@@ -28,9 +28,8 @@ BLHM_ENG_d_day_preparations_cat = {
 				type = scout_plane_equipment_1
 				amount = 50
 			}
+			custom_effect_tooltip = BLHM_ENG_prepare_recon_aircraft_tt
 		}
-
-		custom_effect_tooltip = BLHM_ENG_prepare_recon_aircraft_tt
 
 		ai_will_do = {
 			factor = 1
