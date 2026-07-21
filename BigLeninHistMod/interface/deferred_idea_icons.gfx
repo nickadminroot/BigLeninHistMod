@@ -1,0 +1,314 @@
+spriteTypes = {
+    #### Generated from icon-manifests/idea; do not edit by hand ####
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_CHI_british_advisers"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_CHI_british_advisers.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_african_infantry_corps_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_african_infantry_corps_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_air_production_modernisation_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_air_production_modernisation_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_anti_submarine_defence_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_anti_submarine_defence_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_australian_rangers_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_australian_rangers_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_britain_prospers"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_britain_prospers.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_canadian_landings_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_canadian_landings_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_carrier_air_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_carrier_air_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_carrier_groups_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_carrier_groups_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_china_doctrine_observers"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_china_doctrine_observers.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_cost_optimisation_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_cost_optimisation_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_defence_of_britain_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_defence_of_britain_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_emergency_fleet_refit_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_emergency_fleet_refit_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_faithful_to_tradition_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_faithful_to_tradition_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_global_tank_doctrine_update"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_global_tank_doctrine_update.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_heavy_air_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_heavy_air_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_indian_gurkhas_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_indian_gurkhas_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_joint_oceania_development"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_joint_oceania_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_joint_resource_extraction"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_joint_resource_extraction.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_joint_tank_upgrade"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_joint_tank_upgrade.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_london_mk2_torpedoes_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_london_mk2_torpedoes_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_mediterranean_bastion"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_mediterranean_bastion.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_medium_air_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_medium_air_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_mio_fallback_defence"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_mio_fallback_defence.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_mio_fallback_production"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_mio_fallback_production.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_national_prosperity_treaty"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_national_prosperity_treaty.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_new_cadres_training"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_new_cadres_training.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_new_zealand_special_forces_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_new_zealand_special_forces_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_next_gen_ground_attack_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_next_gen_ground_attack_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_next_generation_fleet_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_next_generation_fleet_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_old_guard_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_old_guard_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_pilot_training_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_pilot_training_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_quantity_over_quality"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_quantity_over_quality.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_raf_exercises_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_raf_exercises_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_seventeen_pounder"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_seventeen_pounder.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_sherman_firefly"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_sherman_firefly.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_sloped_armor_upgrade"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_sloped_armor_upgrade.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_soviet_lend_lease_spirit"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_soviet_lend_lease_spirit.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_study_french_conflict_experience"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_study_french_conflict_experience.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_syrian_alexandrian_corps"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_syrian_alexandrian_corps.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_updated_communications"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_updated_communications.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_us_civilian_machinery"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_us_civilian_machinery.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_us_military_machinery"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_us_military_machinery.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_ENG_young_school_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_ENG_young_school_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_BLHM_USA_trade_with_britain"
+        texturefile = "gfx/interface/ideas/idea_custom_BLHM_USA_trade_with_britain.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_aid"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_aid.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_allied_military_economic_integration"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_allied_military_economic_integration.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_allied_tank_school"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_allied_tank_school.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_bonds_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_bonds_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_dream"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_dream.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_economy"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_economy.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_economy_domestic"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_economy_domestic.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_economy_mobilized"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_economy_mobilized.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_american_economy_modernized"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_american_economy_modernized.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_dispersed_production_program_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_dispersed_production_program_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_giant_has_awoken_economy"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_giant_has_awoken_economy.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_giant_wakes_economy"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_giant_wakes_economy.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_scientist_exchange_program_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_scientist_exchange_program_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_sherman_firefly_program_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_sherman_firefly_program_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_soviet_american_agreement"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_soviet_american_agreement.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_unified_command_center_idea"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_unified_command_center_idea.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_USA_unified_infantry_command"
+        texturefile = "gfx/interface/ideas/idea_custom_USA_unified_infantry_command.dds"
+    }
+
+}

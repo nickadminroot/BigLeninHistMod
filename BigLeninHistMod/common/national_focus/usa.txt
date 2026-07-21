@@ -186,7 +186,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_focus_on_asia
-		icon = GFX_focus_usa_focus_on_asia
+		icon = GFX_focus_custom_USA_focus_on_asia
 		text = USA_focus_on_asia
 		prerequisite = { focus = USA_war_propaganda }
 		mutually_exclusive = { focus = USA_focus_on_europe }
@@ -1014,7 +1014,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_giant_wakes
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_custom_USA_the_giant_wakes
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		available = {
 			has_war_with = JAP
@@ -1042,7 +1042,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_preventive_mobilization_projects
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_custom_USA_preventive_mobilization_projects
 		prerequisite = { focus = USA_the_giant_wakes }
 		x = 0
 		y = 1
@@ -1101,7 +1101,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_giant_has_awoken
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_custom_USA_the_giant_has_awoken
 		prerequisite = { focus = USA_preventive_mobilization_projects }
 		x = 0
 		y = 1
@@ -3443,7 +3443,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_modernize_the_economy
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_custom_USA_modernize_the_economy
 		x = 28
 		y = 0
 
@@ -3470,7 +3470,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_allied_war_industry
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_custom_USA_allied_war_industry
 		prerequisite = { focus = USA_modernize_the_economy }
 		mutually_exclusive = { focus = USA_domestic_production }
 		x = -2
@@ -3507,7 +3507,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_asia_doctrine
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_custom_USA_asia_doctrine
 		prerequisite = { focus = USA_allied_war_industry }
 		mutually_exclusive = { focus = USA_europe_doctrine }
 		x = -2
@@ -3646,7 +3646,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_europe_doctrine
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_custom_USA_europe_doctrine
 		prerequisite = { focus = USA_allied_war_industry }
 		mutually_exclusive = { focus = USA_asia_doctrine }
 		x = 2
@@ -3732,7 +3732,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_globalize_air_industry
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_custom_USA_globalize_air_industry
 		prerequisite = { focus = USA_asia_doctrine }
 		x = -2
 		y = 1
@@ -3769,7 +3769,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_share_designs_with_britain
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_focus_custom_USA_share_designs_with_britain
 		prerequisite = { focus = USA_globalize_air_industry }
 		x = 0
 		y = 1
@@ -3800,7 +3800,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_improve_infantry_doctrines
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_custom_USA_improve_infantry_doctrines
 		prerequisite = { focus = USA_asia_doctrine }
 		x = 2
 		y = 1
@@ -3834,7 +3834,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_joint_tank_development
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_custom_USA_joint_tank_development
 		prerequisite = { focus = USA_europe_doctrine }
 		x = 0
 		y = 1
@@ -3884,7 +3884,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_allied_military_economic_integration
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_focus_custom_USA_allied_military_economic_integration
 		prerequisite = {
 			focus = USA_improve_infantry_doctrines
 			focus = USA_joint_tank_development
@@ -3925,7 +3925,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_domestic_production
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_custom_USA_domestic_production
 		prerequisite = { focus = USA_modernize_the_economy }
 		mutually_exclusive = { focus = USA_allied_war_industry }
 		x = 4
@@ -3960,7 +3960,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_mass_production
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_custom_USA_mass_production
 		prerequisite = { focus = USA_domestic_production }
 		x = 0
 		y = 1
@@ -4030,7 +4030,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_american_bonds
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_custom_USA_american_bonds
 		prerequisite = { focus = USA_mass_production }
 		x = -2
 		y = 1
@@ -4056,7 +4056,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_radar_technologies
-		icon = GFX_goal_generic_radar
+		icon = GFX_focus_custom_USA_radar_technologies
 		prerequisite = { focus = USA_mass_production }
 		x = 0
 		y = 1
@@ -4087,7 +4087,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_new_machine_tools
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_custom_USA_new_machine_tools
 		prerequisite = { focus = USA_mass_production }
 		x = 2
 		y = 1
@@ -4120,7 +4120,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_national_mobilization
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_custom_USA_national_mobilization
 		prerequisite = { focus = USA_american_bonds }
 		prerequisite = { focus = USA_radar_technologies }
 		prerequisite = { focus = USA_new_machine_tools }

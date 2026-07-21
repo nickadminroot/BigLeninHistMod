@@ -1399,7 +1399,7 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.20
 			}
 
-			picture = generic_fortify_the_borders
+			picture = custom_BLHM_ENG_mediterranean_bastion
 
 			removal_cost = -1
 		}
@@ -1969,7 +1969,7 @@ ideas = {
 		}
 
 		BLHM_ENG_next_generation_fleet_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_next_generation_fleet_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -1986,7 +1986,7 @@ ideas = {
 		}
 
 		BLHM_ENG_faithful_to_tradition_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_faithful_to_tradition_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2001,7 +2001,7 @@ ideas = {
 		}
 
 		BLHM_ENG_anti_submarine_defence_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_anti_submarine_defence_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2015,7 +2015,7 @@ ideas = {
 		}
 
 		BLHM_ENG_carrier_groups_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_carrier_groups_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2032,7 +2032,7 @@ ideas = {
 		}
 
 		BLHM_ENG_cost_optimisation_idea = {
-			picture = generic_production_bonus
+			picture = custom_BLHM_ENG_cost_optimisation_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2049,7 +2049,7 @@ ideas = {
 		}
 
 		BLHM_ENG_young_school_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_young_school_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2069,7 +2069,7 @@ ideas = {
 		}
 
 		BLHM_ENG_old_guard_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_old_guard_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2089,7 +2089,7 @@ ideas = {
 		}
 
 		BLHM_ENG_london_mk2_torpedoes_idea = {
-			picture = generic_navy_bonus
+			picture = custom_BLHM_ENG_london_mk2_torpedoes_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2105,7 +2105,7 @@ ideas = {
 		}
 
 		BLHM_ENG_emergency_fleet_refit_idea = {
-			picture = generic_production_bonus
+			picture = custom_BLHM_ENG_emergency_fleet_refit_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2121,7 +2121,7 @@ ideas = {
 		# ====== AVIATION BRANCH IDEAS ======
 
 		BLHM_ENG_medium_air_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_medium_air_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2136,7 +2136,7 @@ ideas = {
 		}
 
 		BLHM_ENG_heavy_air_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_heavy_air_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2156,7 +2156,7 @@ ideas = {
 		}
 
 		BLHM_ENG_carrier_air_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_carrier_air_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2176,7 +2176,7 @@ ideas = {
 		}
 
 		BLHM_ENG_air_production_modernisation_idea = {
-			picture = generic_production_bonus
+			picture = custom_BLHM_ENG_air_production_modernisation_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2193,7 +2193,7 @@ ideas = {
 		}
 
 		BLHM_ENG_pilot_training_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_pilot_training_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2215,7 +2215,7 @@ ideas = {
 		}
 
 		BLHM_ENG_next_gen_ground_attack_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_next_gen_ground_attack_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2229,7 +2229,7 @@ ideas = {
 		}
 
 		BLHM_ENG_raf_exercises_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_raf_exercises_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2244,7 +2244,7 @@ ideas = {
 		}
 
 		BLHM_ENG_defence_of_britain_idea = {
-			picture = generic_air_bonus
+			picture = custom_BLHM_ENG_defence_of_britain_idea
 			allowed = {
 				original_tag = ENG
 			}
@@ -2265,7 +2265,7 @@ ideas = {
 		}
 
 		BLHM_ENG_mio_fallback_production = {
-			picture = generic_production_bonus
+			picture = custom_BLHM_ENG_mio_fallback_production
 			allowed = {
 				original_tag = ENG
 				has_country_flag = BLHM_ENG_new_industrial_schemes_completed
@@ -2283,7 +2283,7 @@ ideas = {
 		}
 
 		BLHM_ENG_mio_fallback_defence = {
-			picture = generic_air_defence
+			picture = custom_BLHM_ENG_mio_fallback_defence
 			allowed = {
 				original_tag = ENG
 				has_country_flag = BLHM_ENG_new_industrial_schemes_completed

@@ -4,11 +4,13 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -507,6 +509,91 @@ def find_delivery(input_dir: Path, entry: Entry) -> Path | None:
     return None
 
 
+def normalized_scene_name(value: str) -> str:
+    value = unicodedata.normalize("NFKD", value).casefold().replace("\ufffd", " ")
+    return re.sub(r"[^a-z0-9]+", " ", value).strip()
+
+
+def load_request_records(path: Path) -> list[dict]:
+    try:
+        text = path.read_text(encoding="utf-8")
+        if path.suffix.lower() == ".json":
+            records = json.loads(text)
+        else:
+            records = [json.loads(line) for line in text.splitlines() if line.strip()]
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ManifestError(f"cannot read icon requests from {path}: {exc}") from exc
+    if not isinstance(records, list):
+        raise ManifestError(f"{path}: expected a JSON array or JSONL records")
+    return records
+
+
+def generated_source_indexes(input_dir: Path) -> tuple[dict[str, Path], dict[int, tuple[Path, int]]]:
+    scenes: dict[str, Path] = {}
+    sheet_frames: dict[int, tuple[Path, int]] = {}
+    for path in sorted(input_dir.iterdir()):
+        if not path.is_file() or path.suffix.lower() not in {".png", ".webp", ".dds"}:
+            continue
+        match = re.fullmatch(r"(\d+)-(\d+)", path.stem)
+        if match:
+            first, last = int(match.group(1)), int(match.group(2))
+            if last - first != 3:
+                raise ManifestError(f"{path}: numbered icon sheet must describe exactly four prompts")
+            for number in range(first, last + 1):
+                if number in sheet_frames:
+                    raise ManifestError(f"duplicate numbered sheet frame for prompt {number}")
+                sheet_frames[number] = (path, number - first)
+            continue
+        key = normalized_scene_name(path.stem)
+        if key in scenes:
+            raise ManifestError(f"duplicate generated scene filename after normalization: {path.name}")
+        scenes[key] = path
+    return scenes, sheet_frames
+
+
+def extract_sheet_frame(sheet_path: Path, frame: int, output: Path) -> None:
+    try:
+        from PIL import Image
+    except ImportError as exc:
+        raise ManifestError("Pillow is required for ingesting numbered icon sheets") from exc
+    with Image.open(sheet_path) as image:
+        width, height = image.size
+        column, row = frame % 2, frame // 2
+        box = (
+            column * width // 2,
+            row * height // 2,
+            (column + 1) * width // 2,
+            (row + 1) * height // 2,
+        )
+        output.parent.mkdir(parents=True, exist_ok=True)
+        image.crop(box).save(output)
+
+
+def load_image_processor():
+    path = REPO_ROOT / "scripts" / "generate-single-focus-icon.py"
+    spec = importlib.util.spec_from_file_location("blhm_icon_image_processor", path)
+    if spec is None or spec.loader is None:
+        raise ManifestError(f"cannot load image-processing pipeline from {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def preprocess_generated_image(source: Path, output: Path, work_dir: Path, processor, rembg_session) -> None:
+    stem = output.stem
+    removed = work_dir / f"{stem}_rembg.png"
+    cropped = work_dir / f"{stem}_cropped.png"
+    filled = work_dir / f"{stem}_filled.png"
+    if not processor.remove_background_rembg(source, removed, session=rembg_session):
+        raise ManifestError(f"background removal failed: {source}")
+    if not processor.crop_transparent_margins(removed, cropped):
+        raise ManifestError(f"transparent-margin crop failed: {source}")
+    if not processor.fill_internal_alpha_holes(cropped, filled):
+        raise ManifestError(f"internal alpha-hole cleanup failed: {source}")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(filled, output)
+
+
 def import_image(source: Path, destination: Path, size: tuple[int, int], asset_type: str) -> None:
     try:
         from PIL import Image
@@ -525,7 +612,16 @@ def import_image(source: Path, destination: Path, size: tuple[int, int], asset_t
         rgba = image.convert("RGBA")
         if rgba.getchannel("A").getextrema()[0] == 255:
             print(f"WARNING: {source} has no transparent pixels", file=sys.stderr)
-        rgba.resize(size, Image.Resampling.LANCZOS).save(destination)
+        scale = min(size[0] / rgba.width, size[1] / rgba.height)
+        fitted_size = (
+            max(1, round(rgba.width * scale)),
+            max(1, round(rgba.height * scale)),
+        )
+        fitted = rgba.resize(fitted_size, Image.Resampling.LANCZOS)
+        canvas = Image.new("RGBA", size, (0, 0, 0, 0))
+        offset = ((size[0] - fitted.width) // 2, (size[1] - fitted.height) // 2)
+        canvas.alpha_composite(fitted, offset)
+        canvas.save(destination)
 
 
 def command_ingest(args: argparse.Namespace) -> int:
@@ -533,10 +629,55 @@ def command_ingest(args: argparse.Namespace) -> int:
     input_dir = Path(args.input_dir).resolve()
     if not input_dir.is_dir():
         raise ManifestError(f"input directory does not exist: {input_dir}")
+
+    request_by_asset: dict[tuple[str, str], tuple[int, str]] = {}
+    scenes: dict[str, Path] = {}
+    sheet_frames: dict[int, tuple[Path, int]] = {}
+    processor = None
+    rembg_session = None
+    work_dir = REPO_ROOT / "build" / "icon-ingest-work"
+    if args.preprocess:
+        requests_path = Path(args.requests_file)
+        if not requests_path.is_absolute():
+            requests_path = REPO_ROOT / requests_path
+        for number, record in enumerate(load_request_records(requests_path), 1):
+            try:
+                key = (str(record["asset_type"]), str(record["id"]))
+                request_by_asset[key] = (number, str(record["subject_prompt"]))
+            except KeyError as exc:
+                raise ManifestError(f"{requests_path}: request {number} is missing {exc.args[0]}") from exc
+        scenes, sheet_frames = generated_source_indexes(input_dir)
+        processor = load_image_processor()
+        try:
+            from rembg import new_session
+        except ImportError as exc:
+            raise ManifestError("rembg is required for ingest --preprocess") from exc
+        rembg_session = new_session("u2net")
+        shutil.rmtree(work_dir, ignore_errors=True)
+        work_dir.mkdir(parents=True, exist_ok=True)
+
     missing = 0
     imported = 0
+    scene_sources = 0
+    sheet_sources = 0
     for entry in entries:
         source = find_delivery(input_dir, entry)
+        source_label = source.name if source else ""
+        if source is None and args.preprocess:
+            request = request_by_asset.get((entry.asset_type, entry.asset_id))
+            if request is None:
+                raise ManifestError(f"request list has no {entry.asset_type} {entry.asset_id}")
+            number, subject = request
+            source = scenes.get(normalized_scene_name(subject))
+            if source is not None:
+                source_label = source.name
+                scene_sources += 1
+            elif number in sheet_frames:
+                sheet_path, frame = sheet_frames[number]
+                source = work_dir / f"{entry.asset_type}_{entry.asset_id}_sheet.png"
+                extract_sheet_frame(sheet_path, frame, source)
+                source_label = f"{sheet_path.name}[{frame + 1}]"
+                sheet_sources += 1
         if source is None:
             if not entry.texture_path.exists():
                 print(f"MISSING: {entry.asset_type} {entry.asset_id}", file=sys.stderr)
@@ -545,10 +686,17 @@ def command_ingest(args: argparse.Namespace) -> int:
         if entry.texture_path.exists() and not args.force:
             print(f"SKIP: {entry.asset_type} {entry.asset_id} (texture already exists)")
             continue
+        if args.preprocess:
+            processed = work_dir / "processed" / f"{entry.asset_type}_{entry.asset_id}.png"
+            preprocess_generated_image(source, processed, work_dir, processor, rembg_session)
+            source = processed
         import_image(source, entry.texture_path, entry.size, entry.asset_type)
-        print(f"IMPORTED: {source.name} -> {entry.texturefile}")
+        print(f"IMPORTED: {source_label} -> {entry.texturefile}")
         imported += 1
-    print(f"Imported {imported}; missing {missing}")
+    print(
+        f"Imported {imported}; missing {missing}; "
+        f"scene files {scene_sources}; numbered-sheet frames {sheet_sources}"
+    )
     if args.sync and not missing:
         return sync_entries(entries)
     return 1 if missing else 0
@@ -701,6 +849,14 @@ def build_parser() -> argparse.ArgumentParser:
     ingest = subparsers.add_parser("ingest", help="import externally generated PNG/WebP/DDS files")
     ingest.add_argument("--input-dir", required=True)
     add_selector_arguments(ingest)
+    ingest.add_argument(
+        "--preprocess", action="store_true",
+        help="match scene filenames/numbered 2x2 sheets, remove backgrounds, crop, and clean alpha",
+    )
+    ingest.add_argument(
+        "--requests-file", default="build/icon-requests.jsonl",
+        help="JSON/JSONL request list used to map scene names and numbered sheets",
+    )
     ingest.add_argument("--force", action="store_true")
     ingest.add_argument("--sync", action="store_true")
     ingest.set_defaults(func=command_ingest)

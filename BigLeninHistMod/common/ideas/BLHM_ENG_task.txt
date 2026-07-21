@@ -4,7 +4,7 @@ ideas = {
 
 	# Quantity over Quality - shared idea for ENG and allied nations (except USA)
 	BLHM_ENG_quantity_over_quality = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_quantity_over_quality
 		allowed = {
 			OR = {
 				original_tag = ENG
@@ -23,7 +23,7 @@ ideas = {
 
 	# Soviet Lend-Lease Spirit - permanent for ENG
 	BLHM_ENG_soviet_lend_lease_spirit = {
-		picture = generic_volunteer_group
+		picture = custom_BLHM_ENG_soviet_lend_lease_spirit
 		allowed = {
 			original_tag = ENG
 		}
@@ -38,7 +38,7 @@ ideas = {
 
 	# Chinese British Advisers - permanent idea for CHI
 	BLHM_CHI_british_advisers = {
-		picture = generic_volunteer_group
+		picture = custom_BLHM_CHI_british_advisers
 		allowed = {
 			original_tag = CHI
 		}
@@ -52,7 +52,7 @@ ideas = {
 
 	# Timed idea for ENG - China Doctrine Observers (180 days)
 	BLHM_ENG_china_doctrine_observers = {
-		picture = generic_research
+		picture = custom_BLHM_ENG_china_doctrine_observers
 		allowed = {
 			original_tag = ENG
 		}
@@ -64,7 +64,7 @@ ideas = {
 
 	# National Prosperity Treaty - permanent for ENG
 	BLHM_ENG_national_prosperity_treaty = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_national_prosperity_treaty
 		allowed = {
 			original_tag = ENG
 		}
@@ -78,7 +78,7 @@ ideas = {
 
 	# Syrian-Alexandrian Corps - shared idea for ENG and allies
 	BLHM_ENG_syrian_alexandrian_corps = {
-		picture = generic_leadership
+		picture = custom_BLHM_ENG_syrian_alexandrian_corps
 		allowed = {
 			OR = {
 				original_tag = ENG
@@ -94,7 +94,7 @@ ideas = {
 
 	# USA Trade with Britain - timed idea for USA, consumer goods bonus
 	BLHM_USA_trade_with_britain = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_USA_trade_with_britain
 		allowed = {
 			original_tag = USA
 		}
@@ -106,7 +106,7 @@ ideas = {
 
 	# US Civilian Machinery - timed idea for ENG, civilian factory speed
 	BLHM_ENG_us_civilian_machinery = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_us_civilian_machinery
 		allowed = {
 			original_tag = ENG
 		}
@@ -118,7 +118,7 @@ ideas = {
 
 	# US Military Machinery - permanent idea for ENG
 	BLHM_ENG_us_military_machinery = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_us_military_machinery
 		allowed = {
 			original_tag = ENG
 		}
@@ -131,7 +131,7 @@ ideas = {
 
 	# Joint Oceania Development - timed idea for ENG, consumer goods penalty
 	BLHM_ENG_joint_oceania_development = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_joint_oceania_development
 		allowed = {
 			original_tag = ENG
 		}
@@ -143,7 +143,7 @@ ideas = {
 
 	# Joint Resource Extraction - shared idea for ENG and USA
 	BLHM_ENG_joint_resource_extraction = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_joint_resource_extraction
 		allowed = {
 			OR = {
 				original_tag = ENG
@@ -158,7 +158,7 @@ ideas = {
 
 	# Britain Prospers - shared idea for ENG and British minors
 	BLHM_ENG_britain_prospers = {
-		picture = generic_construction_penalty
+		picture = custom_BLHM_ENG_britain_prospers
 		allowed = {
 			OR = {
 				original_tag = ENG
@@ -180,7 +180,7 @@ ideas = {
 
 	# Timed cadres training idea - 180 days, shared with all allies
 	BLHM_ENG_new_cadres_training = {
-		picture = generic_leadership
+		picture = custom_BLHM_ENG_new_cadres_training
 		allowed = {
 			OR = {
 				original_tag = ENG
@@ -200,7 +200,7 @@ ideas = {
 
 	# Study French Conflict Experience: +15% armored speed
 	BLHM_ENG_study_french_conflict_experience = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_study_french_conflict_experience
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -215,7 +215,7 @@ ideas = {
 
 	# 17-pounder: +15% armor hard attack
 	BLHM_ENG_seventeen_pounder = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_seventeen_pounder
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -241,7 +241,7 @@ ideas = {
 
 	# Sherman Firefly: medium tank cost -25%, max efficiency +7%
 	BLHM_ENG_sherman_firefly = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_sherman_firefly
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -256,7 +256,7 @@ ideas = {
 
 	# Global Tank Doctrine Update: armor cost -15%, max efficiency +5%
 	BLHM_ENG_global_tank_doctrine_update = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_global_tank_doctrine_update
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -271,7 +271,7 @@ ideas = {
 
 	# Updated Communications: +15% tank max org, +4% coordination
 	BLHM_ENG_updated_communications = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_updated_communications
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -287,7 +287,7 @@ ideas = {
 
 	# Joint Tank Upgrade: +7% hard attack, +5% soft attack (from existing Joint Tank Development focus)
 	BLHM_ENG_joint_tank_upgrade = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_joint_tank_upgrade
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -316,7 +316,7 @@ ideas = {
 
 	# Sloped Armor Upgrade: +10% armor breakthrough, +5% armor value (from existing Sloped Armor focus)
 	BLHM_ENG_sloped_armor_upgrade = {
-		picture = generic_armor_bonus
+		picture = custom_BLHM_ENG_sloped_armor_upgrade
 		allowed = {
 			has_country_flag = BLHM_ENG_new_tanks_recipient
 		}
@@ -347,7 +347,7 @@ ideas = {
 
 	# Canadian Landings: CAN-only idea
 	BLHM_ENG_canadian_landings_idea = {
-		picture = generic_army_bonus
+		picture = custom_BLHM_ENG_canadian_landings_idea
 		allowed = {
 			original_tag = CAN
 		}
@@ -364,7 +364,7 @@ ideas = {
 
 	# African Infantry Corps: SAF-only idea
 	BLHM_ENG_african_infantry_corps_idea = {
-		picture = generic_army_bonus
+		picture = custom_BLHM_ENG_african_infantry_corps_idea
 		allowed = {
 			original_tag = SAF
 		}
@@ -381,7 +381,7 @@ ideas = {
 
 	# Indian Gurkhas: RAJ-only idea
 	BLHM_ENG_indian_gurkhas_idea = {
-		picture = generic_army_bonus
+		picture = custom_BLHM_ENG_indian_gurkhas_idea
 		allowed = {
 			original_tag = RAJ
 		}
@@ -403,7 +403,7 @@ ideas = {
 
 	# Australian Rangers: AST-only idea (uses special forces tokens as closest to ranger sub-units)
 	BLHM_ENG_australian_rangers_idea = {
-		picture = generic_army_bonus
+		picture = custom_BLHM_ENG_australian_rangers_idea
 		allowed = {
 			original_tag = AST
 		}
@@ -420,7 +420,7 @@ ideas = {
 
 	# New Zealand Special Forces: NZL-only idea
 	BLHM_ENG_new_zealand_special_forces_idea = {
-		picture = generic_army_bonus
+		picture = custom_BLHM_ENG_new_zealand_special_forces_idea
 		allowed = {
 			original_tag = NZL
 		}

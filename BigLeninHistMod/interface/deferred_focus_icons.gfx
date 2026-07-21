@@ -1,0 +1,414 @@
+spriteTypes = {
+    #### Generated from icon-manifests/focus; do not edit by hand ####
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_african_infantry_corps"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_african_infantry_corps.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_african_railway_project"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_african_railway_project.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_aid_china"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_aid_china.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_air_industry"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_air_industry.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_air_production_modernisation"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_air_production_modernisation.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_aircraft_machine_tools"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_aircraft_machine_tools.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_anti_submarine_defence"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_anti_submarine_defence.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_australian_rangers"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_australian_rangers.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_britain_prospers"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_britain_prospers.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_british_specialists_in_china"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_british_specialists_in_china.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_canadian_landings"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_canadian_landings.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_carrier_air_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_carrier_air_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_carrier_groups"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_carrier_groups.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_civilian_construction"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_civilian_construction.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_civilian_industrial_machinery"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_civilian_industrial_machinery.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_cost_optimisation"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_cost_optimisation.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_defence_of_britain"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_defence_of_britain.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_develop_trade_with_usa"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_develop_trade_with_usa.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_emergency_fleet_refit"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_emergency_fleet_refit.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_expand_british_dockyards"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_expand_british_dockyards.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_faithful_to_tradition"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_faithful_to_tradition.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_french_bases_in_commonwealth"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_french_bases_in_commonwealth.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_global_tank_doctrine_update"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_global_tank_doctrine_update.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_gloster_meteor"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_gloster_meteor.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_heavy_air_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_heavy_air_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_heavy_bombs_and_modified_mounts"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_heavy_bombs_and_modified_mounts.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_indian_gurkhas"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_indian_gurkhas.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_infantry_forces"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_infantry_forces.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_joint_air_industry"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_joint_air_industry.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_joint_radar_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_joint_radar_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_joint_resource_extraction"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_joint_resource_extraction.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_joint_tank_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_joint_tank_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_land_forces"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_land_forces.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_light_air_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_light_air_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_london_mk2_torpedoes"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_london_mk2_torpedoes.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_medium_air_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_medium_air_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_military_industrial_machinery"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_military_industrial_machinery.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_national_prosperity_treaty"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_national_prosperity_treaty.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_naval_complex"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_naval_complex.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_new_industrial_schemes"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_new_industrial_schemes.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_new_zealand_special_forces"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_new_zealand_special_forces.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_next_generation_fleet"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_next_generation_fleet.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_next_generation_ground_attack"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_next_generation_ground_attack.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_oceania_treaty"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_oceania_treaty.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_old_guard"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_old_guard.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_pilot_training_programme"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_pilot_training_programme.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_prepare_for_d_day"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_prepare_for_d_day.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_raf_exercises"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_raf_exercises.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_seventeen_pounder"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_seventeen_pounder.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_sherman_firefly"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_sherman_firefly.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_simplify_production_lines"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_simplify_production_lines.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_sloped_armor"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_sloped_armor.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_soviet_economic_compromise"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_soviet_economic_compromise.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_soviet_heavy_weapons_experience"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_soviet_heavy_weapons_experience.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_soviet_lend_lease"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_soviet_lend_lease.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_strengthen_ties_with_france"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_strengthen_ties_with_france.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_study_french_conflict_experience"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_study_french_conflict_experience.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_submarine_warfare"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_submarine_warfare.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_syrian_alexandrian_corps"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_syrian_alexandrian_corps.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_tank_development"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_tank_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_updated_communications"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_updated_communications.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_war_construction"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_war_construction.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_BLHM_ENG_young_school"
+        texturefile = "gfx/interface/goals/focus_custom_BLHM_ENG_young_school.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_allied_military_economic_integration"
+        texturefile = "gfx/interface/goals/focus_custom_USA_allied_military_economic_integration.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_allied_war_industry"
+        texturefile = "gfx/interface/goals/focus_custom_USA_allied_war_industry.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_american_bonds"
+        texturefile = "gfx/interface/goals/focus_custom_USA_american_bonds.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_asia_doctrine"
+        texturefile = "gfx/interface/goals/focus_custom_USA_asia_doctrine.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_domestic_production"
+        texturefile = "gfx/interface/goals/focus_custom_USA_domestic_production.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_europe_doctrine"
+        texturefile = "gfx/interface/goals/focus_custom_USA_europe_doctrine.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_focus_on_asia"
+        texturefile = "gfx/interface/goals/focus_custom_USA_focus_on_asia.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_globalize_air_industry"
+        texturefile = "gfx/interface/goals/focus_custom_USA_globalize_air_industry.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_improve_infantry_doctrines"
+        texturefile = "gfx/interface/goals/focus_custom_USA_improve_infantry_doctrines.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_joint_tank_development"
+        texturefile = "gfx/interface/goals/focus_custom_USA_joint_tank_development.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_mass_production"
+        texturefile = "gfx/interface/goals/focus_custom_USA_mass_production.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_modernize_the_economy"
+        texturefile = "gfx/interface/goals/focus_custom_USA_modernize_the_economy.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_national_mobilization"
+        texturefile = "gfx/interface/goals/focus_custom_USA_national_mobilization.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_new_machine_tools"
+        texturefile = "gfx/interface/goals/focus_custom_USA_new_machine_tools.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_preventive_mobilization_projects"
+        texturefile = "gfx/interface/goals/focus_custom_USA_preventive_mobilization_projects.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_radar_technologies"
+        texturefile = "gfx/interface/goals/focus_custom_USA_radar_technologies.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_share_designs_with_britain"
+        texturefile = "gfx/interface/goals/focus_custom_USA_share_designs_with_britain.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_the_giant_has_awoken"
+        texturefile = "gfx/interface/goals/focus_custom_USA_the_giant_has_awoken.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_focus_custom_USA_the_giant_wakes"
+        texturefile = "gfx/interface/goals/focus_custom_USA_the_giant_wakes.dds"
+    }
+
+}

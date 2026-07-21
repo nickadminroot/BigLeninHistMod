@@ -1,0 +1,24 @@
+spriteTypes = {
+    #### Generated from icon-manifests/dynamic_modifier; do not edit by hand ####
+
+    SpriteType = {
+        name = "GFX_idea_custom_dynamic_modifier_BLHM_ENG_air_force_dynamic_modifier"
+        texturefile = "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_air_force_dynamic_modifier.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_dynamic_modifier_BLHM_ENG_allied_tanks_dynamic_modifier"
+        texturefile = "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_allied_tanks_dynamic_modifier.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_dynamic_modifier_BLHM_ENG_fleet_of_britain_dynamic_modifier"
+        texturefile = "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_fleet_of_britain_dynamic_modifier.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_idea_custom_dynamic_modifier_BLHM_ENG_new_tanks_dynamic_modifier"
+        texturefile = "gfx/interface/ideas/idea_custom_dynamic_modifier_BLHM_ENG_new_tanks_dynamic_modifier.dds"
+    }
+
+}

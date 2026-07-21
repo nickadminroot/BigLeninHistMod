@@ -1331,7 +1331,7 @@ ideas = {
 
 		# Stage 2: Economic Modernization ideas
 		USA_aid = {
-			picture = generic_production_bonus
+			picture = custom_USA_aid
 
 			allowed = {
 				always = no
@@ -1351,7 +1351,7 @@ ideas = {
 		}
 
 		USA_unified_infantry_command = {
-			picture = generic_army_doctrines
+			picture = custom_USA_unified_infantry_command
 
 			allowed = {
 				always = no
@@ -1374,7 +1374,7 @@ ideas = {
 		}
 
 		USA_allied_tank_school = {
-			picture = generic_army_tank_bonus
+			picture = custom_USA_allied_tank_school
 
 			allowed = {
 				always = no
@@ -1400,7 +1400,7 @@ ideas = {
 		}
 
 		USA_allied_military_economic_integration = {
-			picture = generic_production_bonus
+			picture = custom_USA_allied_military_economic_integration
 
 			allowed = {
 				always = no
@@ -1414,7 +1414,7 @@ ideas = {
 		}
 
 		USA_american_bonds_idea = {
-			picture = generic_goods_red_bonus
+			picture = custom_USA_american_bonds_idea
 
 			allowed = {
 				always = no
@@ -1432,7 +1432,7 @@ ideas = {
 		}
 
 		USA_scientist_exchange_program_idea = {
-			picture = generic_research_bonus
+			picture = custom_USA_scientist_exchange_program_idea
 
 			allowed = {
 				always = no
@@ -1450,7 +1450,7 @@ ideas = {
 		}
 
 		USA_sherman_firefly_program_idea = {
-			picture = generic_army_tank_bonus
+			picture = custom_USA_sherman_firefly_program_idea
 
 			allowed = {
 				always = no
@@ -1472,7 +1472,7 @@ ideas = {
 		}
 
 		USA_unified_command_center_idea = {
-			picture = generic_navy_bonus
+			picture = custom_USA_unified_command_center_idea
 
 			allowed = {
 				always = no
@@ -1492,7 +1492,7 @@ ideas = {
 		}
 
 		USA_dispersed_production_program_idea = {
-			picture = generic_production_bonus
+			picture = custom_USA_dispersed_production_program_idea
 
 			allowed = {
 				always = no
@@ -2213,7 +2213,7 @@ ideas = {
 		}
 
 		USA_soviet_american_agreement = {
-			picture = generic_production_bonus
+			picture = custom_USA_soviet_american_agreement
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -2247,7 +2247,7 @@ ideas = {
 		law = yes
 
 		USA_american_dream = {
-			picture = generic_production_bonus
+			picture = custom_USA_american_dream
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2266,7 +2266,7 @@ ideas = {
 		}
 
 		USA_giant_wakes_economy = {
-			picture = generic_production_bonus
+			picture = custom_USA_giant_wakes_economy
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2287,7 +2287,7 @@ ideas = {
 		}
 
 		USA_giant_has_awoken_economy = {
-			picture = generic_production_bonus
+			picture = custom_USA_giant_has_awoken_economy
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2306,7 +2306,7 @@ ideas = {
 		}
 
 		USA_american_economy = {
-			picture = generic_production_bonus
+			picture = custom_USA_american_economy
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2322,7 +2322,7 @@ ideas = {
 		}
 
 		USA_american_economy_domestic = {
-			picture = generic_production_bonus
+			picture = custom_USA_american_economy_domestic
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2339,7 +2339,7 @@ ideas = {
 		}
 
 		USA_american_economy_modernized = {
-			picture = generic_production_bonus
+			picture = custom_USA_american_economy_modernized
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }
@@ -2355,7 +2355,7 @@ ideas = {
 		}
 
 		USA_american_economy_mobilized = {
-			picture = generic_production_bonus
+			picture = custom_USA_american_economy_mobilized
 
 			allowed = { always = no }
 			allowed_civil_war = { has_government = democratic }

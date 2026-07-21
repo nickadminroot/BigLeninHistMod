@@ -241,7 +241,7 @@ def comfyui_download_image(filename: str, save_path: Path) -> bool:
         return False
 
 
-def remove_background_rembg(src_path: Path, dst_path: Path) -> bool:
+def remove_background_rembg(src_path: Path, dst_path: Path, session=None) -> bool:
     print(f"  [REMBG] Removing background...")
     try:
         from rembg import remove
@@ -250,7 +250,7 @@ def remove_background_rembg(src_path: Path, dst_path: Path) -> bool:
         return False
     try:
         img = Image.open(src_path).convert("RGBA")
-        out = remove(img)
+        out = remove(img, session=session)
         out.save(dst_path)
         print(f"  [REMBG] Done")
         return True
@@ -337,7 +337,10 @@ def png_to_dds(png_path: Path, dds_path: Path, width: int = 100, height: int = 8
             [
                 "magick",
                 str(png_path),
-                "-resize", f"{width}x{height}!",
+                "-resize", f"{width}x{height}",
+                "-gravity", "center",
+                "-background", "none",
+                "-extent", f"{width}x{height}",
                 "-type", "TrueColorAlpha",
                 "-define", "dds:compression=none",
                 str(dds_path),
@@ -360,9 +363,15 @@ def png_to_dds(png_path: Path, dds_path: Path, width: int = 100, height: int = 8
 
 def png_to_dds_pillow(png_path: Path, dds_path: Path, width: int, height: int) -> bool:
     try:
-        img = Image.open(png_path).convert("RGBA").resize((width, height), Image.Resampling.LANCZOS)
+        img = Image.open(png_path).convert("RGBA")
+        scale = min(width / img.width, height / img.height)
+        fitted_size = (max(1, round(img.width * scale)), max(1, round(img.height * scale)))
+        fitted = img.resize(fitted_size, Image.Resampling.LANCZOS)
+        canvas = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+        offset = ((width - fitted.width) // 2, (height - fitted.height) // 2)
+        canvas.alpha_composite(fitted, offset)
         dds_path.parent.mkdir(parents=True, exist_ok=True)
-        img.save(dds_path)
+        canvas.save(dds_path)
         size = dds_path.stat().st_size if dds_path.exists() else 0
         print(f"  [DDS] Pillow fallback done, {size} bytes")
         return True

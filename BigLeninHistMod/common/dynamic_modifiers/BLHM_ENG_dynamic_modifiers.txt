@@ -1,7 +1,7 @@
 # BigLeninHistMod British dynamic national modifiers.
 # Values are country variables so focuses/events can modify the existing modifier.
 BLHM_ENG_fleet_of_britain_dynamic_modifier = {
-	icon = GFX_idea_generic_navy_bonus
+	icon = GFX_idea_custom_dynamic_modifier_BLHM_ENG_fleet_of_britain_dynamic_modifier
 	navy_capital_ship_attack_factor = BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor
 	navy_screen_attack_factor = BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor
 	refit_ic_cost = BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost
@@ -10,7 +10,7 @@ BLHM_ENG_fleet_of_britain_dynamic_modifier = {
 }
 
 BLHM_ENG_air_force_dynamic_modifier = {
-	icon = GFX_idea_generic_air_bonus
+	icon = GFX_idea_custom_dynamic_modifier_BLHM_ENG_air_force_dynamic_modifier
 	air_superiority_efficiency = BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency
 	air_mission_efficiency = BLHM_ENG_air_force_dynamic_modifier_air_mission_efficiency
 	air_range_factor = BLHM_ENG_air_force_dynamic_modifier_air_range_factor
@@ -23,7 +23,7 @@ BLHM_ENG_air_force_dynamic_modifier = {
 }
 
 BLHM_ENG_new_tanks_dynamic_modifier = {
-	icon = GFX_idea_generic_armor_bonus
+	icon = GFX_idea_custom_dynamic_modifier_BLHM_ENG_new_tanks_dynamic_modifier
 	army_armor_speed_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor
 	army_org_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor
 	army_armor_attack_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor
@@ -34,7 +34,7 @@ BLHM_ENG_new_tanks_dynamic_modifier = {
 }
 
 BLHM_ENG_allied_tanks_dynamic_modifier = {
-	icon = GFX_idea_generic_armor_bonus
+	icon = GFX_idea_custom_dynamic_modifier_BLHM_ENG_allied_tanks_dynamic_modifier
 	army_armor_speed_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_speed_factor
 	army_org_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor
 	army_armor_attack_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor
