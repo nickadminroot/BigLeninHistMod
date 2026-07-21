@@ -1907,52 +1907,6 @@ ENG_homeland_defense_decision_cat = {
 		}
 	}
 
-	# Enforce Blackouts
-	ENG_promote_the_blitz_spirit = {
-
-		icon = GFX_decision_eng_install_government
-
-		priority = 95
-
-		visible = {
-			has_war_with = GER
-			NOT = {
-				has_idea = ENG_blitz_spirit_idea
-			}
-		}
-
-		available = {
-			has_war = yes
-			has_completed_focus = general_rearmament_focus
-		}
-	
-		cost = 50
-
-		days_remove = 35
-
-		remove_effect = {
-			swap_ideas = {
-				remove_idea = british_austerity_idea
-				add_idea = ENG_blitz_spirit_idea
-			}	
-		}
-		
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 5
-				has_war_with = GER
-				FRA = {
-					has_capitulated = yes
-				}
-			}
-		}
-	}
-
 	# The Homeland Defense Act
 	ENG_the_homeland_defense_act = {
 

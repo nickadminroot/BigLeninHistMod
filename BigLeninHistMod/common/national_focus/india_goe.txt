@@ -7996,7 +7996,7 @@ focus = {
 
         available = {
             ENG = {
-                has_completed_focus = shadow_scheme_focus
+                has_completed_focus = BLHM_ENG_war_construction
             }
             is_in_faction_with = ENG
         }
