@@ -4101,6 +4101,7 @@ focus_tree = {
 
 		x = 2
 		y = 2
+		relative_position_id = GER_expand_kummersdorfs_capacity
 		cost = 2
 		available = {
 			has_completed_focus = GER_wunderwaffe
