@@ -241,11 +241,23 @@ rtk python scripts/icon-manifest.py generate `
 
 ## 5. Другой генератор
 
-Экспортировать все запросы:
+Экспортировать все запросы в стандартном стиле (используется по умолчанию):
 
 ```powershell
 rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
 ```
+
+Доступны два стилевых пресета для развёрнутого позитивного промпта:
+
+```powershell
+# Прежний тёмный ванильный стиль
+rtk python scripts/icon-manifest.py export --style standard --output "build/icon-requests-standard.jsonl"
+
+# Более светлая сине-красно-белая стилистика Союзников
+rtk python scripts/icon-manifest.py export --style allied --output "build/icon-requests-allied.jsonl"
+```
+
+Стиль не меняет сюжетный `prompt` в manifest и выбирается только при экспорте, поэтому один набор manifests можно безопасно экспортировать в нескольких вариантах.
 
 Только один тип:
 

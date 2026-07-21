@@ -61,31 +61,73 @@ ASSET_CONFIG = {
     },
 }
 
+ICON_STYLES = ("standard", "allied")
 STYLE_PROMPTS = {
-    "focus": (
-        "Create a square national focus icon in the style of a dark World War II grand strategy game. "
-        "{subject}. The icon should look like a dark military heraldic medal: a large readable central "
-        "symbol inside a heavy bronze and steel medallion, decorated with laurel branches, worn metal, "
-        "red enamel, and subtle industrial details. Use a realistic illustrated 1930s-1940s wartime "
-        "aesthetic, dramatic lighting, high contrast, dense shadows, and a symmetrical composition. "
-        "No text, letters, numbers, UI, or caption. Use a perfectly flat uniform dark-grey background."
-    ),
-    "idea": (
-        "Create a square national idea icon in the style of a dark World War II grand strategy game. "
-        "{subject}. Show one large readable central military or political symbol on its own, with clean "
-        "edges and no decorative frame, medallion, border, or laurel branches. Use a realistic illustrated "
-        "1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, dramatic lighting, "
-        "high contrast, and dense shadows. No text, letters, numbers, UI, or caption. Use a perfectly flat "
-        "uniform dark-grey background."
-    ),
-    "dynamic_modifier": (
-        "Create a square dynamic modifier icon in the style of a dark World War II grand strategy game. "
-        "{subject}. Show one large readable central military, industrial, political, or regional symbol on "
-        "its own, with clean edges and no decorative frame, medallion, border, or laurel branches. Use a "
-        "realistic illustrated 1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, "
-        "dramatic lighting, high contrast, and dense shadows. No text, letters, numbers, UI, or caption. "
-        "Use a perfectly flat uniform dark-grey background."
-    ),
+    "standard": {
+        "focus": (
+            "Create a square national focus icon in the style of a dark World War II grand strategy game. "
+            "{subject}. The icon should look like a dark military heraldic medal: a large readable central "
+            "symbol inside a heavy bronze and steel medallion, decorated with laurel branches, worn metal, "
+            "red enamel, and subtle industrial details. Use a realistic illustrated 1930s-1940s wartime "
+            "aesthetic, dramatic lighting, high contrast, dense shadows, and a symmetrical composition. "
+            "No text, letters, numbers, UI, or caption. Use a perfectly flat uniform dark-grey background."
+        ),
+        "idea": (
+            "Create a square national idea icon in the style of a dark World War II grand strategy game. "
+            "{subject}. Show one large readable central military or political symbol on its own, with clean "
+            "edges and no decorative frame, medallion, border, or laurel branches. Use a realistic illustrated "
+            "1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, dramatic lighting, "
+            "high contrast, and dense shadows. No text, letters, numbers, UI, or caption. Use a perfectly flat "
+            "uniform dark-grey background."
+        ),
+        "dynamic_modifier": (
+            "Create a square dynamic modifier icon in the style of a dark World War II grand strategy game. "
+            "{subject}. Show one large readable central military, industrial, political, or regional symbol on "
+            "its own, with clean edges and no decorative frame, medallion, border, or laurel branches. Use a "
+            "realistic illustrated 1930s-1940s wartime aesthetic, worn bronze and steel, muted gold, red enamel, "
+            "dramatic lighting, high contrast, and dense shadows. No text, letters, numbers, UI, or caption. "
+            "Use a perfectly flat uniform dark-grey background."
+        ),
+    },
+    "allied": {
+        "focus": (
+            "Create a square national focus icon in the style of a World War II grand strategy game. "
+            "{subject}. The icon should look like a realistic Allied wartime heraldic medal: a large readable "
+            "central symbol inside a substantial steel and silver medallion, decorated with restrained laurel "
+            "branches, polished edges, navy and cobalt-blue enamel, crimson-red accents, ivory-white highlights, "
+            "and subtle industrial details. Use a historically grounded illustrated 1930s-1940s aesthetic with "
+            "the confident visual character of British, American, and Commonwealth wartime insignia. Keep the "
+            "palette brighter and cleaner than a typical dark military icon while retaining weathered metal, "
+            "dramatic directional lighting, strong contrast, controlled shadows, and a symmetrical composition. "
+            "Blue should be the dominant accent, balanced by red and white; avoid making it look modern, glossy, "
+            "cartoonish, or like a propaganda poster. No text, letters, numbers, UI, or caption. Use a perfectly "
+            "flat uniform medium charcoal-grey background."
+        ),
+        "idea": (
+            "Create a square national idea icon in the style of a World War II grand strategy game. "
+            "{subject}. Show one large readable central military or political symbol on its own, with clean "
+            "edges and no decorative frame, medallion, border, or laurel branches. Use a historically grounded "
+            "illustrated 1930s-1940s Allied wartime aesthetic inspired by British, American, and Commonwealth "
+            "insignia. Use weathered silver and steel with navy and cobalt blue as the dominant colors, restrained "
+            "crimson-red accents, ivory-white highlights, and small touches of muted bronze. Keep the image brighter "
+            "and more colorful than a typical dark military icon while preserving dramatic directional lighting, "
+            "strong contrast, controlled shadows, and the serious visual language of the game. Avoid a modern, "
+            "glossy, cartoon, or propaganda-poster appearance. No text, letters, numbers, UI, or caption. Use a "
+            "perfectly flat uniform medium charcoal-grey background."
+        ),
+        "dynamic_modifier": (
+            "Create a square dynamic modifier icon in the style of a World War II grand strategy game. "
+            "{subject}. Show one large readable central military, industrial, political, or regional symbol on "
+            "its own, with clean edges and no decorative frame, medallion, border, or laurel branches. Use a "
+            "historically grounded illustrated 1930s-1940s Allied wartime aesthetic inspired by British, American, "
+            "and Commonwealth insignia. Use weathered silver and steel with navy and cobalt blue as the dominant "
+            "colors, restrained crimson-red accents, ivory-white highlights, and small touches of muted bronze. "
+            "Keep the image brighter and more colorful than a typical dark military icon while preserving dramatic "
+            "directional lighting, strong contrast, controlled shadows, and the serious visual language of the game. "
+            "Avoid a modern, glossy, cartoon, or propaganda-poster appearance. No text, letters, numbers, UI, or "
+            "caption. Use a perfectly flat uniform medium charcoal-grey background."
+        ),
+    },
 }
 NEGATIVE_PROMPT = (
     "text, letters, numbers, readable inscriptions, logo, watermark, modern weapons, modern uniforms, "
@@ -432,8 +474,11 @@ def command_export(args: argparse.Namespace) -> int:
             "id": entry.asset_id,
             "asset_type": entry.asset_type,
             "sprite_name": entry.sprite_name,
+            "style": args.style,
             "subject_prompt": entry.prompt,
-            "positive_prompt": STYLE_PROMPTS[entry.asset_type].format(subject=entry.prompt.rstrip(".")),
+            "positive_prompt": STYLE_PROMPTS[args.style][entry.asset_type].format(
+                subject=entry.prompt.rstrip(".")
+            ),
             "negative_prompt": NEGATIVE_PROMPT,
             "width": 512,
             "height": 512,
@@ -647,6 +692,10 @@ def build_parser() -> argparse.ArgumentParser:
     add_selector_arguments(export)
     export.add_argument("--output", default="build/icon-requests.jsonl")
     export.add_argument("--format", choices=("jsonl", "json"), default="jsonl")
+    export.add_argument(
+        "--style", choices=ICON_STYLES, default="standard",
+        help="visual style preset for the expanded positive prompts (default: standard)",
+    )
     export.set_defaults(func=command_export)
 
     ingest = subparsers.add_parser("ingest", help="import externally generated PNG/WebP/DDS files")
