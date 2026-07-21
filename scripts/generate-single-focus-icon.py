@@ -380,14 +380,73 @@ def png_to_dds_pillow(png_path: Path, dds_path: Path, width: int, height: int) -
         return False
 
 
+def focus_shine_gfx_entry(sprite_name: str, texture_file: str) -> str:
+    return f"""
+    SpriteType = {{
+        name = "{sprite_name}_shine"
+        texturefile = "{texture_file}"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {{
+            animationmaskfile = "{texture_file}"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = {{ x = 0.0 y = 0.0 }}
+            animationtexturescale = {{ x = 1.0 y = 1.0 }}
+        }}
+        animation = {{
+            animationmaskfile = "{texture_file}"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = {{ x = 0.0 y = 0.0 }}
+            animationtexturescale = {{ x = 1.0 y = 1.0 }}
+        }}
+        legacy_lazy_load = no
+    }}
+"""
+
+
+def ensure_focus_shines(output_path: Path) -> int:
+    """Append missing shine variants for simple focus SpriteType entries in a GFX file."""
+    content = output_path.read_text(encoding="utf-8")
+    sprites = re.findall(
+        r'(?s)SpriteType\s*=\s*\{\s*name\s*=\s*"([^"]+)"\s*'
+        r'texturefile\s*=\s*"([^"]+)"',
+        content,
+    )
+    additions = []
+    for sprite_name, texture_file in sprites:
+        if not sprite_name.startswith("GFX_focus_") or sprite_name.endswith("_shine"):
+            continue
+        if f'name = "{sprite_name}_shine"' not in content:
+            additions.append(focus_shine_gfx_entry(sprite_name, texture_file))
+    if additions:
+        if not content.rstrip().endswith("}"):
+            raise ValueError(f"invalid GFX file without a closing spriteTypes brace: {output_path}")
+        content = content.rstrip()[:-1] + "".join(additions) + "\n}\n"
+        output_path.write_text(content, encoding="utf-8")
+    return len(additions)
+
+
 def append_gfx_entry(sprite_name: str, texture_file: str, output_path: Path):
-    """Append a single SpriteType entry to the .gfx file."""
+    """Append a base SpriteType and, for focuses, its shine variant."""
     entry = f"""
     SpriteType = {{
         name = "{sprite_name}"
         texturefile = "{texture_file}"
     }}
 """
+    if sprite_name.startswith("GFX_focus_"):
+        entry += focus_shine_gfx_entry(sprite_name, texture_file)
     if output_path.exists():
         content = output_path.read_text(encoding="utf-8")
         # Insert before the closing brace

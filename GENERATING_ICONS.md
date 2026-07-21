@@ -393,4 +393,4 @@ BigLeninHistMod/interface/deferred_idea_icons.gfx
 BigLeninHistMod/interface/deferred_dynamic_modifier_icons.gfx
 ```
 
-Старые выпущенные assets остаются в `custom_focus_icons.gfx` и `custom_idea_icons.gfx`. Новые manifest-assets регистрируются только в соответствующих `deferred_*_icons.gfx`. Динамические модификаторы используют idea-sized текстуры, но отдельные sprite names и отдельный generated GFX, чтобы не конфликтовать с идеями с тем же ID.
+Старые выпущенные assets остаются в `custom_focus_icons.gfx` и `custom_idea_icons.gfx`. Для старых focus-assets прямой генератор регистрирует одновременно базовый SpriteType и штатный `<sprite_name>_shine`. Новые manifest-assets регистрируются только в соответствующих `deferred_*_icons.gfx`. Динамические модификаторы используют idea-sized текстуры, но отдельные sprite names и отдельный generated GFX, чтобы не конфликтовать с идеями с тем же ID.
