@@ -5458,10 +5458,11 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = -0.10 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0.10 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.10 }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = -0.10 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0.10 tooltip = production_speed_dockyard_factor_tt }
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.10 tooltip = navy_capital_ship_attack_factor_tt }
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 tooltip = navy_screen_attack_factor_tt }
 		}
 	}
 
@@ -5507,7 +5508,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = 0.20 }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = 0.20 tooltip = navy_screen_attack_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_young_school
 				bonus = { ship_hull_light = { build_cost_ic = -0.20 instant = yes } }
@@ -5532,7 +5534,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = 0.15 }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = 0.15 tooltip = navy_capital_ship_attack_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_old_guard
 				bonus = { ship_hull_heavy = { build_cost_ic = -0.20 instant = yes } }
@@ -5575,7 +5578,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = -0.35 }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = -0.35 tooltip = BLHM_ENG_refit_ic_cost_tt }
 		}
 	}
 
@@ -5597,7 +5601,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			remove_dynamic_modifier = { modifier = BLHM_ENG_fleet_of_britain_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = fleet_costs_modifier }
 			122 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -5722,8 +5726,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency = 0.05 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_mission_efficiency = 0.10 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency = 0.05 tooltip = air_superiority_efficiency_tt }
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_mission_efficiency = 0.10 tooltip = air_mission_efficiency_tt }
 		}
 	}
 
@@ -5747,7 +5752,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_range_factor = 0.10 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_range_factor = 0.10 tooltip = air_range_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_heavy_air_development
 				bonus = { large_plane_airframe = { build_cost_ic = -0.20 instant = yes } }
@@ -5775,7 +5781,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_naval_strike_attack_factor = 0.20 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_naval_strike_attack_factor = 0.20 tooltip = naval_strike_attack_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_carrier_air_development
 				bonus = { cv_small_plane_airframe = { build_cost_ic = -0.20 instant = yes } }
@@ -5836,9 +5843,10 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.07 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0.07 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency = 0.05 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.07 tooltip = air_escort_efficiency_tt }
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0.07 tooltip = air_intercept_efficiency_tt }
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_superiority_efficiency = 0.05 tooltip = air_superiority_efficiency_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_pilot_training_programme
 				bonus = { small_plane_airframe = { build_cost_ic = 0.20 instant = yes } }
@@ -5869,7 +5877,8 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0.05 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0.05 tooltip = ground_attack_factor_tt }
 		}
 	}
 
@@ -5923,8 +5932,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_training_xp_gain_factor = 0.15 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ace_effectiveness_factor = 0.10 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_training_xp_gain_factor = 0.15 tooltip = air_training_xp_gain_factor_tt }
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ace_effectiveness_factor = 0.10 tooltip = ace_effectiveness_factor_tt }
 		}
 	}
 
@@ -5943,8 +5953,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.03 }
-			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0.03 }
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.03 tooltip = air_escort_efficiency_tt }
+			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0.03 tooltip = air_intercept_efficiency_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_defence_of_britain
 				bonus = { small_plane_airframe = { build_cost_ic = -0.05 instant = yes } }
@@ -6067,11 +6078,12 @@ focus_tree = {
 					NOT = { has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				}
 				add_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_attack_factor = 0.10 }
+				custom_effect_tooltip = BLHM_ENG_add_allied_tanks_dynamic_modifier_tt
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 tooltip = army_armor_speed_factor_tt }
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 tooltip = army_org_factor_tt }
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 tooltip = army_armor_attack_factor_tt }
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 tooltip = BLHM_ENG_armor_factor_tt }
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_attack_factor = 0.10 tooltip = army_attack_factor_tt }
 			}
 		}
 	}
@@ -6164,13 +6176,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = 0.15 tooltip = army_armor_speed_factor_tt }
 			every_other_country = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				add_ideas = BLHM_ENG_study_french_conflict_experience
+				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = 0.15 tooltip = army_armor_speed_factor_tt }
 			}
-			custom_effect_tooltip = BLHM_ENG_study_french_conflict_experience_tt
 		}
 	}
 
@@ -6186,13 +6200,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = 0.15 tooltip = army_armor_attack_factor_tt }
 			every_other_country = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				add_ideas = BLHM_ENG_seventeen_pounder
+				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = 0.15 tooltip = army_armor_attack_factor_tt }
 			}
-			custom_effect_tooltip = BLHM_ENG_seventeen_pounder_tt
 		}
 	}
 
@@ -6209,7 +6225,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 }
+			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 tooltip = production_factory_max_efficiency_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_sherman_firefly
 				bonus = {
@@ -6220,7 +6237,8 @@ focus_tree = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 }
+				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 tooltip = production_factory_max_efficiency_factor_tt }
 				add_equipment_bonus = {
 					name = BLHM_ENG_sherman_firefly
 					bonus = {
@@ -6228,7 +6246,6 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = BLHM_ENG_sherman_firefly_tt
 		}
 	}
 
@@ -6245,7 +6262,8 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 }
+			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_global_tank_doctrine_update
 				bonus = {
@@ -6258,7 +6276,8 @@ focus_tree = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 }
+				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
 				add_equipment_bonus = {
 					name = BLHM_ENG_global_tank_doctrine_update
 					bonus = {
@@ -6268,7 +6287,6 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = BLHM_ENG_global_tank_doctrine_update_tt
 		}
 	}
 
@@ -6287,16 +6305,17 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 }
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 }
+			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 tooltip = coordination_bonus_tt }
 			every_other_country = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 }
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 }
+				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 tooltip = coordination_bonus_tt }
 			}
-			custom_effect_tooltip = BLHM_ENG_updated_communications_tt
 		}
 	}
 
