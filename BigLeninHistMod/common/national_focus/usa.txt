@@ -190,7 +190,7 @@ focus_tree = {
 		text = USA_focus_on_asia
 		prerequisite = { focus = USA_war_propaganda }
 		mutually_exclusive = { focus = USA_focus_on_europe }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = USA_war_propaganda
 
@@ -971,7 +971,7 @@ focus_tree = {
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
 		
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 5
@@ -1019,7 +1019,7 @@ focus_tree = {
 		available = {
 			has_war_with = JAP
 		}
-		x = 0
+		x = 8
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
@@ -1140,7 +1140,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 2
+		x = 10
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
@@ -1258,7 +1258,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 42
+		x = 32
 		y = 0
 		
 		cost = 5
@@ -3445,13 +3445,15 @@ focus_tree = {
 
 
 
-# ---- Stage 2: Economic Modernization Branch (x ~24-34) ----
+# ---- Stage 2: Economic Modernization Branch (below Arsenal of Democracy) ----
 
 	focus = {
 		id = USA_modernize_the_economy
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 28
-		y = 0
+		prerequisite = { focus = USA_arsenal_of_democracy }
+		x = 0
+		y = 2
+		relative_position_id = USA_arsenal_of_democracy
 
 		cost = 8
 
