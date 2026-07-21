@@ -201,7 +201,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -243,7 +243,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -418,7 +418,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_konoes_first_cabinet }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -603,7 +603,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_cabinet_intelligence_bureau }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1557,7 +1557,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1598,7 +1598,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_yokusan_sonendan }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1710,7 +1710,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1906,7 +1906,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2030,7 +2030,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_greater_east_asian_co_properity_sphere }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2084,7 +2084,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_expand_japan_manchukuo_economic_bloc }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2153,7 +2153,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_greater_east_asian_co_properity_sphere }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2205,7 +2205,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_the_flying_geese }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2261,7 +2261,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_greater_east_asian_co_properity_sphere }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2317,7 +2317,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_east_asia_development_board }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2370,7 +2370,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_develop_the_yen_bloc }
 		prerequisite = { focus = JAP_greater_east_asia_railroad }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2419,7 +2419,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ichioku_isshin }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2490,7 +2490,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ichioku_isshin }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2553,7 +2553,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ichioku_isshin }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -3893,7 +3893,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -3950,7 +3950,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_strategic_offensives }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4170,7 +4170,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_reorganized_national_government }
 
-		cost = 2
+		cost = 1
 
 		will_lead_to_war_with = POR
 
@@ -6048,7 +6048,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_strike_the_southern_road }
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8914,7 +8914,7 @@ focus_tree = {
 		x = -5
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9096,7 +9096,7 @@ focus_tree = {
 		x = -4
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9218,7 +9218,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9312,7 +9312,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9480,7 +9480,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9532,7 +9532,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9600,7 +9600,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9670,7 +9670,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9722,7 +9722,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9798,7 +9798,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9868,7 +9868,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -9925,7 +9925,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -10031,7 +10031,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -10107,7 +10107,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
@@ -10172,7 +10172,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -10330,7 +10330,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -10417,7 +10417,7 @@ focus_tree = {
 		x = 23
 		y = 0
 
-		cost = 5 #This times perfect with the Kodoha Coup event
+		cost = 2
 
 		ai_will_do = {
 			factor = 3
