@@ -1,12 +1,4 @@
-"workshopitem"
-{
-    "appid"             "394360"
-    "publishedfileid"   "3683025629"
-    "contentfolder"     "G:\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\BigLeninHistMod\\BigLeninHistMod"
-    "previewfile"       "G:\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\BigLeninHistMod\\BigLeninHistMod\\thumbnail.png"
-    "visibility"        "0"
-    "title"             "BigLeninHistMod — Historical Multiplayer Rebalance"
-    "description"       "[h1]BigLeninHistMod[/h1]
+[h1]BigLeninHistMod[/h1]
 
 [b]A vanilla-like historical overhaul focused on multiplayer balance, predictable gameplay and performance.[/b]
 
@@ -84,6 +76,4 @@ BigLeninHistMod сохраняет привычную основу Hearts of Iro
 [*]Рекомендуется наличие всех основных игровых дополнений.
 [*]Мод является самостоятельным оверхолом и несовместим с другими модификациями, заменяющими фокусы, доктрины, снаряжение, историю стран, события или карту.
 [*]Небольшие графические и музыкальные моды могут работать, но совместимость не гарантируется.
-[/list]"
-    "changenote"        "Workshop description formatting fix."
-}
+[/list]
