@@ -2647,9 +2647,37 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
+			125 = { # East Anglia
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			127 = { # Sussex
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			129 = { # East Midlands
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			123 = { # South-West England
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2666,9 +2694,21 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			122 = { # Wales
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			121 = { # Lothian
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			# 4 civilian factories in FRA-owned North African states (conditional on FRA exists/controls)
 			if = {
@@ -3244,11 +3284,35 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
+			128 = { # West Midlands
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			130 = { # Yorkshire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			132 = { # Lancashire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			133 = { # Lanark
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3273,11 +3337,19 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 2
+			123 = { # South-West England
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			131 = { # Northumberland
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3642,11 +3714,19 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 2
+			125 = { # East Anglia
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			127 = { # Sussex
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3671,11 +3751,35 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
+			119 = { # Northern Ireland
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			121 = { # Lothian
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			122 = { # Wales
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			129 = { # East Midlands
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3697,11 +3801,35 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
+			120 = { # Scottish Highlands
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			128 = { # West Midlands
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			130 = { # Yorkshire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			136 = { # Aberdeenshire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3726,11 +3854,35 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
+			123 = { # South-West England
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			125 = { # East Anglia
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			131 = { # Northumberland
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			133 = { # Lanark
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3764,9 +3916,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_air_focus_cooldown
-			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
+			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_equipment_bonus = {
 				name = BLHM_ENG_air_production_modernisation
 				bonus = { small_plane_airframe = { build_cost_ic = -0.10 instant = yes } }
@@ -3795,8 +3947,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_air_focus_cooldown
-			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.07 tooltip = air_escort_efficiency_tt }
@@ -3830,8 +3981,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_air_focus_cooldown
-			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0.05 tooltip = ground_attack_factor_tt }
@@ -3871,10 +4021,18 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_new_industrial_schemes_completed
-			country_event = { id = BLHM_ENG_task.7 hours = 12 }
-			custom_effect_tooltip = possible_outcomes_tt
-			custom_effect_tooltip = BLHM_ENG_new_industrial_schemes_event_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:ENG_supermarine_organization = {
+					unlock_mio_trait_tooltip = ENG_mio_trait_elliptical_wings
+				}
+			}
+			else = {
+				set_country_flag = BLHM_ENG_new_industrial_schemes_completed
+				country_event = { id = BLHM_ENG_task.7 hours = 12 }
+				custom_effect_tooltip = possible_outcomes_tt
+				custom_effect_tooltip = BLHM_ENG_new_industrial_schemes_event_tt
+			}
 		}
 	}
 
@@ -3939,8 +4097,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_air_focus_cooldown
-			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_heavy_bombs_bonus
@@ -4007,11 +4164,35 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 4
+			119 = { # Northern Ireland
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			121 = { # Lothian
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			122 = { # Wales
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			127 = { # Sussex
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4043,7 +4224,14 @@ focus_tree = {
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 tooltip = army_org_factor_tt }
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 tooltip = army_armor_attack_factor_tt }
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 tooltip = BLHM_ENG_armor_factor_tt }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_attack_factor = 0.10 tooltip = army_attack_factor_tt }
+				add_equipment_bonus = {
+					name = BLHM_ENG_allied_tanks_dynamic_modifier
+					bonus = {
+						light_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+						medium_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+						heavy_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+					}
+				}
 			}
 		}
 	}
@@ -4066,11 +4254,19 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 2
+			129 = { # East Midlands
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			132 = { # Lancashire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4100,11 +4296,27 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 3
+			120 = { # Scottish Highlands
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
+					instant_build = yes
+				}
+			}
+			128 = { # West Midlands
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			136 = { # Aberdeenshire
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}

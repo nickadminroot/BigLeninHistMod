@@ -507,6 +507,8 @@ node scripts/hoi4-mcp-cli.js loc_search --query "TODO"
 
 26. **Indirect focus rewards must be explained before completion.** A focus that fires an event, starts a hidden cooldown event, or reveals decisions must show player-facing outcomes. Use `possible_outcomes_tt`/`effect_tooltip` for event choices, explicit duration text for hidden timers, and `unlock_decision_category_tooltip` plus `unlock_decision_tooltip` for decisions. Flags and raw `country_event` calls alone are not adequate visible rewards.
 
+27. **Equipment bonuses are separate from dynamic modifiers.** `add_equipment_bonus` is cumulative and does not appear automatically in a dynamic modifier tooltip or disappear with that modifier. Use `instant = yes` when existing variants must update, verify the equipment/archetype against local vanilla, and mirror the net value through `custom_modifier_tooltip` (usually backed by a hidden idea or scripted localization). See `references/ideas.md`.
+
 ---
 
 ## Verification Checklist
@@ -521,3 +523,4 @@ After any mod change:
 - [ ] Verify localization appears in-game for both EN and RU
 - [ ] Verify every focus variable update has a dynamic-modifier header and a modifier `tooltip`
 - [ ] Verify event-triggering and decision-unlocking focuses explain player-visible outcomes, durations, costs, and unlocks
+- [ ] Verify equipment bonuses target valid equipment/archetypes, use the intended `instant` behavior, and remain synchronized with any dynamic-modifier tooltip

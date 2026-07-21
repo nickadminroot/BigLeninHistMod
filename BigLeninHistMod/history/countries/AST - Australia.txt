@@ -177,13 +177,12 @@ if = {
 	set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 }
 	set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 	set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 }
-	set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 	add_equipment_bonus = {
 		name = BLHM_ENG_allied_tanks_dynamic_modifier
 		bonus = {
-			light_tank_chassis = { build_cost_ic = 0.15 instant = yes }
-			medium_tank_chassis = { build_cost_ic = 0.15 instant = yes }
-			heavy_tank_chassis = { build_cost_ic = 0.15 instant = yes }
+			light_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+			medium_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+			heavy_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
 		}
 	}
 	add_dynamic_modifier = { modifier = AST_citizen_army_spirit }

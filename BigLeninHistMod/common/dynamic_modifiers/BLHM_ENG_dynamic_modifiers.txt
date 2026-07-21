@@ -20,6 +20,8 @@ BLHM_ENG_air_force_dynamic_modifier = {
 	ground_attack_factor = BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor
 	air_training_xp_gain_factor = BLHM_ENG_air_force_dynamic_modifier_air_training_xp_gain_factor
 	ace_effectiveness_factor = BLHM_ENG_air_force_dynamic_modifier_ace_effectiveness_factor
+	# Small-airframe cost bonuses are separate equipment bonuses.
+	custom_modifier_tooltip = BLHM_ENG_air_force_equipment_cost_tt
 }
 
 BLHM_ENG_new_tanks_dynamic_modifier = {
@@ -28,9 +30,10 @@ BLHM_ENG_new_tanks_dynamic_modifier = {
 	army_org_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor
 	army_armor_attack_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor
 	armor_factor = BLHM_ENG_new_tanks_dynamic_modifier_armor_factor
-	army_attack_factor = BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor
 	production_factory_max_efficiency_factor = BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor
 	coordination_bonus = BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus
+	# Equipment bonuses are applied separately and therefore need an explicit visible summary.
+	custom_modifier_tooltip = BLHM_ENG_new_tanks_equipment_cost_tt
 }
 
 BLHM_ENG_allied_tanks_dynamic_modifier = {
@@ -39,5 +42,6 @@ BLHM_ENG_allied_tanks_dynamic_modifier = {
 	army_org_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor
 	army_armor_attack_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor
 	armor_factor = BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor
-	army_attack_factor = BLHM_ENG_allied_tanks_dynamic_modifier_army_attack_factor
+	# Equipment bonuses are applied separately and therefore need an explicit visible summary.
+	custom_modifier_tooltip = BLHM_ENG_allied_tanks_equipment_tt
 }

@@ -114,23 +114,6 @@ country_event = {
 	}
 }
 
-# Aviation Focus Cooldown - clears after 365 days (8760 hours)
-country_event = {
-	id = BLHM_ENG_task.6
-	title = BLHM_ENG_task.6.t
-	desc = BLHM_ENG_task.6.d
-	picture = GFX_report_event_generic_handshake
-
-	is_triggered_only = yes
-	hidden = yes
-
-	option = {
-		name = BLHM_ENG_task.6.a
-		ai_chance = { factor = 100 }
-		clr_country_flag = BLHM_ENG_air_focus_cooldown
-	}
-}
-
 # New Industrial Schemes - MIO fallback choice event
 country_event = {
 	id = BLHM_ENG_task.7
@@ -212,7 +195,6 @@ country_event = {
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
@@ -238,7 +220,6 @@ country_event = {
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
@@ -264,7 +245,6 @@ country_event = {
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
@@ -290,7 +270,6 @@ country_event = {
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
@@ -316,7 +295,6 @@ country_event = {
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }

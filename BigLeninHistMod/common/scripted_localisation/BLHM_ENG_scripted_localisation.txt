@@ -1,0 +1,85 @@
+# Show the net tank chassis production-cost effect applied outside the dynamic modifier.
+defined_text = {
+	name = BLHM_ENG_GetNewTanksProductionCost
+	text = {
+		trigger = {
+			ENG = { has_completed_focus = BLHM_ENG_global_tank_doctrine_update }
+		}
+		localization_key = BLHM_ENG_new_tanks_equipment_cost_neutral_tt
+	}
+	text = {
+		trigger = {
+			ENG = { has_completed_focus = BLHM_ENG_sherman_firefly }
+		}
+		localization_key = BLHM_ENG_new_tanks_equipment_cost_firefly_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_new_tanks_equipment_cost_base_tt
+	}
+}
+
+# Show the net small-airframe production-cost effect attached to the Air Force programme.
+defined_text = {
+	name = BLHM_ENG_GetAirForceProductionCost
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+			has_completed_focus = BLHM_ENG_defence_of_britain
+			has_idea = BLHM_ENG_mio_fallback_production
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_minus_5_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+			has_idea = BLHM_ENG_mio_fallback_production
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_zero_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+			has_idea = BLHM_ENG_mio_fallback_production
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_minus_20_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+			has_completed_focus = BLHM_ENG_defence_of_britain
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_plus_5_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+			has_completed_focus = BLHM_ENG_defence_of_britain
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_plus_15_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_plus_10_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_pilot_training_programme
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_plus_20_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = BLHM_ENG_air_production_modernisation
+		}
+		localization_key = BLHM_ENG_air_force_equipment_cost_minus_10_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_air_force_equipment_cost_zero_tt
+	}
+}

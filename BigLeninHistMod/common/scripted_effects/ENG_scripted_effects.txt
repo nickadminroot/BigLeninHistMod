@@ -1,4 +1,5 @@
-# Apply tank equipment upgrades already completed by ENG when a dominion is selected later.
+# Apply upgrades already completed by ENG when a dominion's Allied Tanks programme becomes New Tanks.
+# The base chassis cost and hard-attack modifiers persist from the replaced Allied Tanks programme.
 BLHM_ENG_apply_completed_tank_upgrades = {
 	if = {
 		limit = { ENG = { has_country_flag = BLHM_ENG_joint_tank_development_completed } }
