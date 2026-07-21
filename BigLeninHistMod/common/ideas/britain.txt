@@ -1379,6 +1379,7 @@ ideas = {
 			modifier = {
 				acclimatization_hot_climate_gain_factor = 0.1
 				send_volunteer_size = 4
+				send_volunteers_tension = -1
 			}
 
 			picture = eng_service_overseas
