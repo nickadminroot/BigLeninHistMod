@@ -3331,9 +3331,14 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
+		}
 		completion_reward = {
 			123 = { # South-West England
 				add_extra_state_shared_building_slots = 1
@@ -3353,8 +3358,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock } }
-				set_country_flag = BLHM_ENG_armed_forces_priority_lock
-				country_event = { id = BLHM_ENG_task.4 hours = 17280 }
+				set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
 			}
 			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 			add_tech_bonus = {
@@ -3687,12 +3691,19 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
+		}
 		completion_reward = {
-			set_country_flag = BLHM_ENG_armed_forces_priority_lock
-			country_event = { id = BLHM_ENG_task.5 hours = 17280 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock } }
+				set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
+			}
 			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 		}
 	}
@@ -3910,11 +3921,19 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
-			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+			}
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_equipment_bonus = {
@@ -3941,11 +3960,19 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
-			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+			}
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.07 tooltip = air_escort_efficiency_tt }
@@ -3975,11 +4002,19 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
-			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+			}
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0.05 tooltip = ground_attack_factor_tt }
@@ -4093,11 +4128,19 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
-			set_country_flag = { flag = BLHM_ENG_air_focus_cooldown days = 365 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_air_focus_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_air_focus_cooldown value = 1 days = 365 }
+			}
 			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_heavy_bombs_bonus
@@ -4159,9 +4202,14 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
+		}
 		completion_reward = {
 			119 = { # Northern Ireland
 				add_extra_state_shared_building_slots = 1
@@ -4197,8 +4245,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { NOT = { has_country_flag = BLHM_ENG_armed_forces_priority_lock } }
-				set_country_flag = BLHM_ENG_armed_forces_priority_lock
-				country_event = { id = BLHM_ENG_task.8 hours = 17280 }
+				set_country_flag = { flag = BLHM_ENG_armed_forces_priority_lock value = 1 days = 720 }
 			}
 			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 			ENG = {
@@ -4249,9 +4296,14 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_land_specialisation_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
 			129 = { # East Midlands
 				add_extra_state_shared_building_slots = 1
@@ -4269,8 +4321,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_country_flag = BLHM_ENG_land_specialisation_cooldown
-			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_land_specialisation_cooldown value = 1 days = 365 }
+			}
 			country_event = { id = BLHM_ENG_task.10 }
 			custom_effect_tooltip = BLHM_ENG_land_specialisation_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_tank_development_tt
@@ -4291,9 +4345,14 @@ focus_tree = {
 				NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		select_effect = {
+			set_country_flag = { flag = BLHM_ENG_land_specialisation_cooldown value = 1 days = 365 }
+		}
 		completion_reward = {
 			120 = { # Scottish Highlands
 				add_extra_state_shared_building_slots = 1
@@ -4319,8 +4378,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_country_flag = BLHM_ENG_land_specialisation_cooldown
-			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
+			if = {
+				limit = { NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown } }
+				set_country_flag = { flag = BLHM_ENG_land_specialisation_cooldown value = 1 days = 365 }
+			}
 			custom_effect_tooltip = BLHM_ENG_land_specialisation_cooldown_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_infantry_forces_bonus

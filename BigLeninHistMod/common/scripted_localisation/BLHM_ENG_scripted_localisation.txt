@@ -1,3 +1,39 @@
+# Show the current state of the armed-forces branch lock and its live countdown.
+defined_text = {
+	name = BLHM_ENG_GetArmedForcesPriorityLockStatus
+	text = {
+		trigger = { has_country_flag = BLHM_ENG_armed_forces_priority_lock }
+		localization_key = BLHM_ENG_armed_forces_priority_lock_active_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_armed_forces_priority_lock_ready_tt
+	}
+}
+
+# Show the current state of the advanced aviation programme cooldown and its live countdown.
+defined_text = {
+	name = BLHM_ENG_GetAirFocusCooldownStatus
+	text = {
+		trigger = { has_country_flag = BLHM_ENG_air_focus_cooldown }
+		localization_key = BLHM_ENG_air_focus_cooldown_active_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_air_focus_cooldown_ready_tt
+	}
+}
+
+# Show the current state of the land specialisation cooldown and its live countdown.
+defined_text = {
+	name = BLHM_ENG_GetLandSpecialisationCooldownStatus
+	text = {
+		trigger = { has_country_flag = BLHM_ENG_land_specialisation_cooldown }
+		localization_key = BLHM_ENG_land_specialisation_cooldown_active_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_land_specialisation_cooldown_ready_tt
+	}
+}
+
 # Show the net tank chassis production-cost effect applied outside the dynamic modifier.
 defined_text = {
 	name = BLHM_ENG_GetNewTanksProductionCost
