@@ -1288,6 +1288,7 @@ focus_tree = {
 	focus = {
 		id = USA_intervention_in_the_americas
 		icon = GFX_goal_generic_occupy_states_ongoing_war
+		allow_branch = { always = no }
 		x = -4
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
@@ -1562,6 +1563,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_plan_gold
 		icon = GFX_focus_attack_france
+		allow_branch = { always = no }
 		x = -2
 		y = 2
 		prerequisite = { focus = USA_intervention_in_europe }
@@ -1663,6 +1665,7 @@ focus_tree = {
 	focus = {
 		id = USA_destroyers_for_bases
 		icon = GFX_goal_generic_navy_cruiser
+		allow_branch = { always = no }
 		prerequisite = { focus = USA_war_plan_black }
 		available = {
 			country_exists = GER
@@ -1718,6 +1721,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_plan_white
 		icon = GFX_focus_attack_soviet
+		allow_branch = { always = no }
 		prerequisite = { focus = USA_intervention_in_europe }
 		available = {
 			
@@ -1778,6 +1782,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_plan_red
 		icon = GFX_focus_attack_britain
+		allow_branch = { always = no }
 		prerequisite = { focus = USA_intervention_in_europe }
 		available = {
 			
@@ -1915,6 +1920,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_plan_yellow
 		icon = GFX_focus_attack_china
+		allow_branch = { always = no }
 		x = 1
 		y = 1
 		prerequisite = { focus = USA_intervention_in_asia }
