@@ -1173,6 +1173,38 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		JAP_east_asian_co_prosperity_sphere_trade_law = {
+			picture = free_trade
+
+			visible = {
+				original_tag = JAP
+			}
+
+			available = {
+				original_tag = JAP
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+				cic_construction_boost_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+
 		free_trade = {
 
 			available = {
