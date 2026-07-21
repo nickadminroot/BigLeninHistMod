@@ -3263,7 +3263,10 @@ focus_tree = {
 			unlock_decision_category_tooltip = BLHM_ENG_soviet_lend_lease
 			unlock_decision_tooltip = BLHM_ENG_soviet_lend_lease_mission
 			custom_effect_tooltip = BLHM_ENG_soviet_lend_lease_unlock_tt
-			set_country_flag = BLHM_ENG_soviet_lend_lease_chain
+			hidden_effect = {
+				set_country_flag = BLHM_ENG_soviet_lend_lease_chain
+				country_event = { id = BLHM_ENG_task.6 days = 1 }
+			}
 		}
 	}
 

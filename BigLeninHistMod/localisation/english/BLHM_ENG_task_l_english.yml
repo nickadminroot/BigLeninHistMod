@@ -77,7 +77,7 @@
  BLHM_ENG_soviet_lend_lease_desc:0 "We must aid the Soviet Union in its struggle against Germany on the continent."
  BLHM_ENG_soviet_lend_lease_mission:0 "Soviet Lend-Lease Mission"
  BLHM_ENG_soviet_lend_lease_mission_desc:0 "Every 30 days, while the Soviet Union is at war with Germany, Britain sends: 10,000 Infantry Equipment; 1,000 Support Equipment; 500 Fighters; 500 Motorized Equipment; 500 Anti-Tank Equipment; 500 Anti-Air Equipment."
- BLHM_ENG_soviet_lend_lease_unlock_tt:0 "Unlocks the §Y$BLHM_ENG_soviet_lend_lease$§! decision category and starts a recurring mission.\n$BLHM_ENG_soviet_lend_lease_mission_desc$\nThe mission pauses when the Soviet Union is no longer at war with Germany and restarts automatically if the war resumes."
+ BLHM_ENG_soviet_lend_lease_unlock_tt:0 "Unlocks the §Y$BLHM_ENG_soviet_lend_lease$§! decision category and starts a recurring mission.\n$BLHM_ENG_soviet_lend_lease_mission_desc$\nDeliveries pause when the Soviet Union is no longer at war with Germany and restart automatically if the war resumes."
 
  BLHM_ENG_quantity_over_quality:0 "Quantity over Quality"
  BLHM_ENG_quantity_over_quality_desc:0 "Simplified production methods reduce the cost of infantry equipment at the expense of individual quality."

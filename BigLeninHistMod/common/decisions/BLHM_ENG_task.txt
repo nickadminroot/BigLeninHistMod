@@ -38,8 +38,8 @@ BLHM_ENG_d_day_preparations_cat = {
 }
 
 # Soviet Lend-Lease — recurring 30-day mission
-# The activation trigger starts and repeats the mission while the war continues,
-# and restores it automatically after a cancellation when the war resumes.
+# A delayed hidden event handles each activation so the mission is never
+# restarted in the same tick in which it finishes.
 BLHM_ENG_soviet_lend_lease = {
 	BLHM_ENG_soviet_lend_lease_mission = {
 		icon = GFX_goal_generic_occupy_states_coastal
@@ -54,25 +54,9 @@ BLHM_ENG_soviet_lend_lease = {
 			has_idea = BLHM_ENG_soviet_lend_lease_spirit
 		}
 
-		activation = {
-			original_tag = ENG
-			has_country_flag = BLHM_ENG_soviet_lend_lease_chain
-			has_idea = BLHM_ENG_soviet_lend_lease_spirit
-			SOV = {
-				exists = yes
-				has_war_with = GER
-			}
-		}
+		activation = { always = no }
 
 		cancel_if_not_visible = no
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					NOT = { SOV = { exists = yes } }
-					NOT = { SOV = { has_war_with = GER } }
-				}
-			}
-		}
 
 		fire_only_once = no
 		is_good = yes
@@ -96,6 +80,7 @@ BLHM_ENG_soviet_lend_lease = {
 					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 500 producer = ENG }
 				}
 			}
+			country_event = { id = BLHM_ENG_task.6 days = 1 }
 		}
 	}
 }
