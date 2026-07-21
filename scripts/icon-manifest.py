@@ -739,6 +739,40 @@ def write_generated_gfx(entries: list[Entry], asset_type: str) -> None:
             "    }",
             "",
         ])
+        if asset_type == "focus":
+            lines.extend([
+                "    SpriteType = {",
+                f'        name = "{entry.sprite_name}_shine"',
+                f'        texturefile = "{entry.texturefile}"',
+                '        effectFile = "gfx/FX/buttonstate.lua"',
+                "        animation = {",
+                f'            animationmaskfile = "{entry.texturefile}"',
+                '            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"',
+                "            animationrotation = -90.0",
+                "            animationlooping = no",
+                "            animationtime = 0.75",
+                "            animationdelay = 0",
+                '            animationblendmode = "add"',
+                '            animationtype = "scrolling"',
+                "            animationrotationoffset = { x = 0.0 y = 0.0 }",
+                "            animationtexturescale = { x = 1.0 y = 1.0 }",
+                "        }",
+                "        animation = {",
+                f'            animationmaskfile = "{entry.texturefile}"',
+                '            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"',
+                "            animationrotation = 90.0",
+                "            animationlooping = no",
+                "            animationtime = 0.75",
+                "            animationdelay = 0",
+                '            animationblendmode = "add"',
+                '            animationtype = "scrolling"',
+                "            animationrotationoffset = { x = 0.0 y = 0.0 }",
+                "            animationtexturescale = { x = 1.0 y = 1.0 }",
+                "        }",
+                "        legacy_lazy_load = no",
+                "    }",
+                "",
+            ])
     lines.extend(["}", ""])
     output = GENERATED_GFX[asset_type]
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -747,15 +781,18 @@ def write_generated_gfx(entries: list[Entry], asset_type: str) -> None:
 
 def sync_entries(entries: list[Entry]) -> int:
     all_entries = load_entries()
-    if validate_entries(all_entries, quiet=True):
+    if validate_entries(entries, quiet=True):
         return 1
     ready = [entry for entry in entries if entry.texture_path.exists()]
     if not ready:
         print("No generated textures are ready; nothing to synchronize.")
         return 0
-    # Generated files always reflect every ready manifest, not only the --ids selection.
+    # Each selected asset type reflects all of its ready manifests; --ids only limits script replacements.
+    selected_types = {entry.asset_type for entry in entries}
     for asset_type in ASSET_TYPES:
-        if any(entry.asset_type == asset_type and entry.texture_path.exists() for entry in all_entries):
+        if asset_type in selected_types and any(
+            entry.asset_type == asset_type and entry.texture_path.exists() for entry in all_entries
+        ):
             write_generated_gfx(all_entries, asset_type)
     changed = 0
     for entry in ready:
@@ -763,8 +800,9 @@ def sync_entries(entries: list[Entry]) -> int:
             changed += 1
     types = ", ".join(sorted({entry.asset_type for entry in ready}))
     print(f"Synchronized {len(ready)} ready icon(s) ({types}); changed {changed} script reference(s).")
-    for asset_type in sorted({entry.asset_type for entry in all_entries if entry.texture_path.exists()}):
-        print(f"Generated {GENERATED_GFX[asset_type].relative_to(REPO_ROOT)}")
+    for asset_type in sorted(selected_types):
+        if any(entry.asset_type == asset_type and entry.texture_path.exists() for entry in all_entries):
+            print(f"Generated {GENERATED_GFX[asset_type].relative_to(REPO_ROOT)}")
     return validate_entries(entries, quiet=True)
 
 

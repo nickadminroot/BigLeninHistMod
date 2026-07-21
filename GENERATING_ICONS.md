@@ -320,7 +320,7 @@ rtk python scripts/icon-manifest.py ingest `
 1. проверяет manifests и соответствующие focus/idea/dynamic modifier ID;
 2. находит manifests с готовым DDS;
 3. пересобирает в стабильном порядке:
-   - `BigLeninHistMod/interface/deferred_focus_icons.gfx`;
+   - `BigLeninHistMod/interface/deferred_focus_icons.gfx`, включая штатный `<sprite_name>_shine` для каждого фокуса;
    - `BigLeninHistMod/interface/deferred_idea_icons.gfx`;
    - `BigLeninHistMod/interface/deferred_dynamic_modifier_icons.gfx`;
 4. заменяет только объявленный fallback:
