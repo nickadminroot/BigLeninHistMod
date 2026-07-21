@@ -117,37 +117,6 @@ country_event = {
 	}
 }
 
-# Soviet Lend-Lease - delayed mission activation and wartime retry
-country_event = {
-	id = BLHM_ENG_task.6
-
-	is_triggered_only = yes
-	hidden = yes
-
-	immediate = {
-		if = {
-			limit = {
-				original_tag = ENG
-				has_country_flag = BLHM_ENG_soviet_lend_lease_chain
-				has_idea = BLHM_ENG_soviet_lend_lease_spirit
-				NOT = { has_active_mission = BLHM_ENG_soviet_lend_lease_mission }
-			}
-			if = {
-				limit = {
-					SOV = {
-						exists = yes
-						has_war_with = GER
-					}
-				}
-				activate_mission = BLHM_ENG_soviet_lend_lease_mission
-			}
-			else = {
-				country_event = { id = BLHM_ENG_task.6 days = 7 }
-			}
-		}
-	}
-}
-
 # New Industrial Schemes - MIO fallback choice event
 country_event = {
 	id = BLHM_ENG_task.7
