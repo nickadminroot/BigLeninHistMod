@@ -80,6 +80,9 @@ ideas = {
 			modifier = {
 				join_faction_tension = -0.25
 				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+				send_volunteer_factor = -1
+				send_volunteer_size = 4
 				guarantee_tension = -0.2
 				mobilization_laws_cost_factor = 1
 				economy_cost_factor = 1
@@ -583,6 +586,7 @@ ideas = {
 			
 			modifier = {
 				spotting_chance = 0.2
+				modifier_army_sub_unit_marine_attack_factor = 0.05
 			}
 		}
 		USA_banking_sector_deregulation = {	
@@ -895,6 +899,7 @@ ideas = {
 
 			modifier = {
 				decryption_factor = 0.2
+				enemy_operative_intel_extraction_rate = -0.15
 			}
 		}
 
@@ -914,6 +919,7 @@ ideas = {
 			modifier = {
 				operation_infiltrate_outcome = 0.25
 				boost_resistance_factor = 0.25
+				enemy_operative_intel_extraction_rate = -0.15
 			}
 		}
 

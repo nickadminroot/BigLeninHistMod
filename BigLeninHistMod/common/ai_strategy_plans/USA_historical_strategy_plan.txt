@@ -87,7 +87,6 @@ USA_historical_plan = {
 		USA_two_ocean_navy_act
 		USA_fund_the_navy
 		USA_selective_training_act
-		USA_destroyers_for_bases
 		#1941
 		USA_maritime_commission
 		USA_liberty_ships
