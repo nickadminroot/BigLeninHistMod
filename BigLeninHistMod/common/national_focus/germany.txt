@@ -4099,9 +4099,9 @@ focus_tree = {
 		prerequisite = { focus = GER_expand_kummersdorfs_capacity }
 		prerequisite = { focus = GER_rocketry_innovations }
 
-		x = 2
-		y = 2
-		relative_position_id = GER_expand_kummersdorfs_capacity
+		x = 6
+		y = 6
+		relative_position_id = GER_develop_modern_maneuver_warfare
 		cost = 2
 		available = {
 			has_completed_focus = GER_wunderwaffe
