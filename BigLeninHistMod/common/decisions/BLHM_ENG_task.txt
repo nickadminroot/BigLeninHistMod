@@ -38,8 +38,8 @@ BLHM_ENG_d_day_preparations_cat = {
 }
 
 # Soviet Lend-Lease — recurring 30-day mission
-# The focus completion activates this mission; the activation trigger also
-# restores it automatically after a cancellation when the war resumes.
+# The activation trigger starts and repeats the mission while the war continues,
+# and restores it automatically after a cancellation when the war resumes.
 BLHM_ENG_soviet_lend_lease = {
 	BLHM_ENG_soviet_lend_lease_mission = {
 		icon = GFX_goal_generic_occupy_states_coastal
@@ -95,7 +95,6 @@ BLHM_ENG_soviet_lend_lease = {
 					add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 500 producer = ENG }
 					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 500 producer = ENG }
 				}
-				activate_mission = BLHM_ENG_soviet_lend_lease_mission
 			}
 		}
 	}
