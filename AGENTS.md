@@ -42,6 +42,10 @@ Use `--json` for scripts/IDE integrations, `--root <path>` when running against 
 - Prefix shell commands with `rtk`.
 - Use `pwsh`, not legacy Windows PowerShell (`powershell`), for PowerShell commands. When invoking it through Bash, single-quote the `-Command` script so Bash does not expand PowerShell variables such as `$_`.
 
+## Steam Workshop updates
+
+For SteamCMD paths, credentials, VDF preparation, Steam Guard confirmation, and the upload command, follow [STEAM_WORKSHOP_UPDATE.md](docs/STEAM_WORKSHOP_UPDATE.md).
+
 ## Windows smoke test
 
 Run the test from the repository root in native Windows PowerShell. Close HOI4 and Paradox Launcher first, and never run the game or another smoke test concurrently from any checkout or worktree.
