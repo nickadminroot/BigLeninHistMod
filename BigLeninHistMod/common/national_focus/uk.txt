@@ -4022,6 +4022,8 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				mio:ENG_supermarine_organization = {
+					unlock_mio_trait_tooltip = generic_mio_trait_fabric_skin
+					unlock_mio_trait_tooltip = generic_mio_trait_metal_skin
 					unlock_mio_trait_tooltip = ENG_mio_trait_elliptical_wings
 				}
 			}

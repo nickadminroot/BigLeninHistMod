@@ -488,6 +488,26 @@ ENG_supermarine_organization = {
 	}
 
 	override_trait = {
+		token = generic_mio_trait_fabric_skin
+
+		available = {
+			owner = {
+				has_completed_focus = BLHM_ENG_new_industrial_schemes
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_metal_skin
+
+		available = {
+			owner = {
+				has_completed_focus = BLHM_ENG_new_industrial_schemes
+			}
+		}
+	}
+
+	override_trait = {
 		token = generic_mio_trait_fuel_injection_engines
 		
 		position = { x=0 y=2 }
