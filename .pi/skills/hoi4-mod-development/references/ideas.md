@@ -65,7 +65,7 @@ equipment_bonus = {
         build_cost_ic = -0.1       # 10% cheaper
         reliability = 0.1           # +10% reliability
         soft_attack = 0.1           # +10% soft attack
-        instant = yes               # Apply immediately to production
+        instant = yes               # Apply to existing variants immediately; default only affects newly created variants
     }
     armor = {                       # Archetype targeting
         armor_value = 0.1
@@ -76,6 +76,37 @@ equipment_bonus = {
         instant = yes
     }
 }
+```
+
+### Equipment Bonuses Attached to Dynamic Modifiers
+
+Equipment stats are not normal country modifiers. A dynamic modifier cannot directly own an `equipment_bonus`, and bonuses applied with `add_equipment_bonus` do not appear automatically in that dynamic modifier's tooltip.
+
+Important behavior:
+
+- `add_equipment_bonus` adds a separate, cumulative country equipment bonus. Removing the associated dynamic modifier does not remove it.
+- `instant = yes` applies the bonus to existing equipment variants immediately. Without it, the bonus applies only when a new variant is created.
+- `build_cost_ic = -0.15` means a 15% production-cost reduction; positive values are penalties. Multiple equipment bonuses add together, so document and display the net result.
+- Target an actual equipment ID, archetype, or equipment group verified in current local vanilla data. For example, `light_tank_chassis`, `medium_tank_chassis`, and `heavy_tank_chassis` are valid archetypes used by vanilla.
+- The focus tooltip may describe `add_equipment_bonus`, but a related dynamic national spirit still needs an explicit visible summary.
+
+Follow the current vanilla Nordic pattern when an equipment bonus conceptually belongs to a dynamic modifier:
+
+1. Put persistent/removable `equipment_bonus` values in a hidden idea when their lifecycle must follow an idea; use direct `add_equipment_bonus` only for intentionally permanent cumulative upgrades.
+2. Add `custom_modifier_tooltip = TAG_equipment_bonus_tt` to the visible dynamic modifier.
+3. Mirror the real equipment values in that tooltip. If bonuses change, use scripted localization or synchronized idea variants so the displayed net value remains accurate.
+4. Keep the implementation and tooltip synchronized; vanilla marks these blocks with warnings for exactly this reason.
+
+```pdx
+TAG_dynamic_program = {
+    icon = GFX_idea_generic_production
+    industrial_capacity_factory = TAG_program_factory_output
+    custom_modifier_tooltip = TAG_program_equipment_cost_tt
+}
+```
+
+```yaml
+TAG_program_equipment_cost_tt:0 "§YAll Tank Chassis§!:\n $production_cost_tt$: §G-10.00%§!"
 ```
 
 ## Spirit Templates

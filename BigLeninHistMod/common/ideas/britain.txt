@@ -1371,6 +1371,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = democratic
 			}
+
+			rule = {
+				can_send_volunteers = yes
+			}
 			
 			modifier = {
 				acclimatization_hot_climate_gain_factor = 0.1

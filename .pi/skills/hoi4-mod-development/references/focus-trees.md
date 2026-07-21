@@ -305,8 +305,11 @@ Custom formatter example when vanilla has no matching `_tt` key:
 
 ```yaml
 # English and Russian can reuse the localized vanilla modifier name.
-TAG_refit_ic_cost_tt:0 " $MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|+=%1$"
+# `-=` treats a negative cost modifier as beneficial and colors it green.
+TAG_refit_ic_cost_tt:0 " $MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|-=%1$"
 ```
+
+Use `$RIGHT|-=%1$` for inverse-benefit values such as costs and penalties; use `$RIGHT|+=%1$` when positive values are beneficial. Verify custom formatter colors in-game.
 
 For one gameplay change applied to many countries, avoid duplicating the same lines in the visible tooltip. Show the representative change once with `effect_tooltip` or a precise custom scope explanation, and put repeated implementation effects in `hidden_effect`. The visible tooltip must still state exactly which countries receive the change.
 

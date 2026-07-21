@@ -539,6 +539,12 @@ ENG_supermarine_organization = {
 
 		any_parent = { generic_mio_trait_cantilever_wing_structure }
 
+		available = {
+			owner = {
+				has_completed_focus = BLHM_ENG_new_industrial_schemes
+			}
+		}
+
 		equipment_bonus = {
 			air_defence = 0.1	
 		}

@@ -257,9 +257,9 @@ add_equipment_bonus = {
 add_equipment_bonus = {
 	name = BLHM_ENG_new_tanks_dynamic_modifier
 	bonus = {
-		light_tank_chassis = { build_cost_ic = 0.15 instant = yes }
-		medium_tank_chassis = { build_cost_ic = 0.15 instant = yes }
-		heavy_tank_chassis = { build_cost_ic = 0.15 instant = yes }
+		light_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
+		medium_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
+		heavy_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
 	}
 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.05 }
@@ -280,7 +280,6 @@ set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -
 set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
 set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 }
 set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
-set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_attack_factor = 0.10 }
 set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0 }
 set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0 }
 
