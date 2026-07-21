@@ -4886,6 +4886,7 @@ focus_tree = {
 			FRA = {
 				country_event = { id = BLHM_ENG_task.1 hours = 12 }
 			}
+			custom_effect_tooltip = BLHM_ENG_joint_radar_development_event_tt
 		}
 	}
 
@@ -5159,6 +5160,8 @@ focus_tree = {
 			SOV = {
 				country_event = { id = BLHM_ENG_task.2 hours = 12 }
 			}
+			custom_effect_tooltip = possible_outcomes_tt
+			custom_effect_tooltip = BLHM_ENG_soviet_economic_compromise_event_tt
 		}
 	}
 
@@ -5278,6 +5281,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = BLHM_ENG_soviet_lend_lease_spirit
+			unlock_decision_category_tooltip = BLHM_ENG_soviet_lend_lease
+			unlock_decision_tooltip = BLHM_ENG_soviet_lend_lease_mission
+			custom_effect_tooltip = BLHM_ENG_soviet_lend_lease_unlock_tt
 			set_country_flag = BLHM_ENG_soviet_lend_lease_chain
 			activate_mission = BLHM_ENG_soviet_lend_lease_mission
 		}
@@ -5341,6 +5347,7 @@ focus_tree = {
 				set_country_flag = BLHM_ENG_armed_forces_priority_lock
 				country_event = { id = BLHM_ENG_task.4 hours = 17280 }
 			}
+			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_naval_complex_bonus
 				bonus = 1.0
@@ -5645,6 +5652,12 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			unlock_decision_category_tooltip = BLHM_ENG_d_day_preparations_cat
+			unlock_decision_tooltip = {
+				decision = BLHM_ENG_prepare_recon_aircraft
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
 			set_country_flag = BLHM_ENG_d_day_preparations
 		}
 	}
@@ -5671,6 +5684,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_armed_forces_priority_lock
 			country_event = { id = BLHM_ENG_task.5 hours = 17280 }
+			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 		}
 	}
 
@@ -5813,6 +5827,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			add_equipment_bonus = {
 				name = BLHM_ENG_air_production_modernisation
 				bonus = { small_plane_airframe = { build_cost_ic = -0.10 instant = yes } }
@@ -5843,6 +5858,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_escort_efficiency = 0.07 tooltip = air_escort_efficiency_tt }
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_air_intercept_efficiency = 0.07 tooltip = air_intercept_efficiency_tt }
@@ -5877,6 +5893,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_modify_air_force_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_air_force_dynamic_modifier_ground_attack_factor = 0.05 tooltip = ground_attack_factor_tt }
 		}
@@ -5917,6 +5934,8 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_new_industrial_schemes_completed
 			country_event = { id = BLHM_ENG_task.7 hours = 12 }
+			custom_effect_tooltip = possible_outcomes_tt
+			custom_effect_tooltip = BLHM_ENG_new_industrial_schemes_event_tt
 		}
 	}
 
@@ -5983,6 +6002,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = BLHM_ENG_air_focus_cooldown
 			country_event = { id = BLHM_ENG_task.6 hours = 8760 }
+			custom_effect_tooltip = BLHM_ENG_air_focus_cooldown_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_heavy_bombs_bonus
 				bonus = 1.0
@@ -6061,6 +6081,7 @@ focus_tree = {
 				set_country_flag = BLHM_ENG_armed_forces_priority_lock
 				country_event = { id = BLHM_ENG_task.8 hours = 17280 }
 			}
+			custom_effect_tooltip = BLHM_ENG_armed_forces_priority_started_tt
 			ENG = {
 				add_timed_idea = { idea = BLHM_ENG_new_cadres_training days = 180 }
 				army_experience = 150
@@ -6117,6 +6138,7 @@ focus_tree = {
 			set_country_flag = BLHM_ENG_land_specialisation_cooldown
 			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
 			country_event = { id = BLHM_ENG_task.10 }
+			custom_effect_tooltip = BLHM_ENG_land_specialisation_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_tank_development_tt
 		}
 	}
@@ -6149,6 +6171,7 @@ focus_tree = {
 			}
 			set_country_flag = BLHM_ENG_land_specialisation_cooldown
 			country_event = { id = BLHM_ENG_task.9 hours = 8760 }
+			custom_effect_tooltip = BLHM_ENG_land_specialisation_cooldown_started_tt
 			add_tech_bonus = {
 				name = BLHM_ENG_infantry_forces_bonus
 				bonus = 1.0
