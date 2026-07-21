@@ -1078,7 +1078,7 @@ ENG_crewe_works_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = shadow_scheme_focus
+				has_completed_focus = BLHM_ENG_war_construction
 			}
 		}
 
@@ -1137,7 +1137,7 @@ ENG_crewe_works_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = general_rearmament_focus
+				has_completed_focus = BLHM_ENG_war_construction
 
 			}
 		}
@@ -1254,7 +1254,7 @@ ENG_crewe_works_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = shadow_scheme_focus
+				has_completed_focus = BLHM_ENG_war_construction
 			}
 		}
 
