@@ -72,7 +72,6 @@
 
  BLHM_ENG_sloped_armor:0 "Sloped Armor"
  BLHM_ENG_sloped_armor_desc:0 "The Soviet Union was one of the first to effectively use sloped armour on its tanks. Such armour withstands far more hits than our current designs."
- BLHM_ENG_sloped_armor_tt:0 "§YSloped Armour§! completed. +10% Armour Breakthrough and +5% Armour will be integrated when the §YNew Tanks§! spirit exists."
 
  BLHM_ENG_soviet_lend_lease:0 "Soviet Lend-Lease"
  BLHM_ENG_soviet_lend_lease_desc:0 "We must aid the Soviet Union in its struggle against Germany on the continent."
@@ -89,6 +88,7 @@
  BLHM_ENG_task.2.t:0 "Soviet Economic Compromise"
  BLHM_ENG_task.2.d:0 "The British propose an economic compromise: they will build factories and share Indian tungsten with us in exchange for access to our oil fields in Western Azerbaijan."
  BLHM_ENG_task.2.a:0 "Accept the compromise. Our oil for their industry."
+ BLHM_ENG_task.2.accept_tt:0 "§YUnited Kingdom§!: gains §Y2 building slots§! and §Y2 civilian factories§! in Greater London, and receives oil rights in Western Azerbaijan.\n§YSoviet Union§!: receives tungsten rights in Madras, West Bengal, and Andhra Pradesh."
  BLHM_ENG_task.2.b:0 "Refuse. We do not need British charity."
 
  BLHM_ENG_fleet_of_britain:0 "Fleet of Britain"
@@ -193,7 +193,6 @@
  BLHM_ENG_heavy_bombs_sp_tt:0 "§YHeavy Bombs§! Unlocks the §HBouncing Bomb§! special project."
  BLHM_ENG_gloster_meteor:0 "Gloster Meteor"
  BLHM_ENG_gloster_meteor_desc:0 "Develop Britain's first operational jet fighter — the Gloster Meteor — with revolutionary axial jet engine technology."
- BLHM_ENG_gloster_meteor_tt:0 "§YGloster Meteor§!\nCompletes the §HAxial Jet Engine§! special project.\nUnlocks the advanced small airframe technology.\nCreates the Gloster Meteor variant: small_plane_airframe_2 with jet_engine_axial_1x, heavy_mg_4x, aircraft_cannon_2_1x, and drop_tanks.\nThe axial jet engine module gains +15% IC cost and +20% fuel consumption."
 
  BLHM_ENG_medium_air_idea:0 "Medium Aircraft Programme"
  BLHM_ENG_medium_air_idea_desc:0 "Our medium bomber fleet receives improved command and control, increasing mission effectiveness."
@@ -283,9 +282,9 @@
  BLHM_ENG_air_force_equipment_cost_plus_20_tt:0 "§YSmall Airframe§!:\n $production_cost_tt$: §R+20.00%§!"
  BLHM_ENG_new_tanks_equipment_cost_tt:0 "[BLHM_ENG_GetNewTanksProductionCost]"
  BLHM_ENG_allied_tanks_equipment_tt:0 "$BLHM_ENG_new_tanks_equipment_cost_base_tt$"
- BLHM_ENG_new_tanks_equipment_cost_base_tt:0 "§YAll Tank Chassis§!:\n $production_cost_tt$: §R+15.00%§!\n $STAT_ARMY_HARD_ATTACK$§G+10.00%§!"
- BLHM_ENG_new_tanks_equipment_cost_neutral_tt:0 "§YAll Tank Chassis§!:\n $production_cost_tt$: §Y0.00%§! §G(Initial +15% penalty removed)§!\n $STAT_ARMY_HARD_ATTACK$§G+10.00%§!"
- BLHM_ENG_new_tanks_equipment_cost_firefly_tt:0 "§YLight and Heavy Tank Chassis§!:\n $production_cost_tt$: §R+15.00%§!\n§YMedium Tank Chassis§!:\n $production_cost_tt$: §G-10.00%§!\n§YAll Tank Chassis§!:\n $STAT_ARMY_HARD_ATTACK$§G+10.00%§!"
+ BLHM_ENG_new_tanks_equipment_cost_base_tt:0 "§YAll Tank Chassis§!:\n $production_cost_tt$: §R+15.00%§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!"
+ BLHM_ENG_new_tanks_equipment_cost_neutral_tt:0 "§YAll Tank Chassis§!:\n $production_cost_tt$: §Y0.00%§! §G(Initial +15% penalty removed)§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!"
+ BLHM_ENG_new_tanks_equipment_cost_firefly_tt:0 "§YLight and Heavy Tank Chassis§!:\n $production_cost_tt$: §R+15.00%§!\n§YMedium Tank Chassis§!:\n $production_cost_tt$: §G-10.00%§!\n§YAll Tank Chassis§!:\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!"
  BLHM_ENG_modify_new_tanks_dynamic_modifier_tt:0 "Modify §Y$BLHM_ENG_new_tanks_dynamic_modifier$§! by:"
  BLHM_ENG_allied_tanks_dynamic_modifier:0 "Allied Tanks"
  BLHM_ENG_allied_tanks_dynamic_modifier_desc:0 "The dominions begin with a shared armoured programme awaiting specialised development."

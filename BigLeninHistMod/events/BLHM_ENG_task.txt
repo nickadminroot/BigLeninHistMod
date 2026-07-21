@@ -35,6 +35,8 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.2.a
 		ai_chance = { factor = 80 }
+		custom_effect_tooltip = BLHM_ENG_task.2.accept_tt
+		hidden_effect = {
 		ENG = {
 			set_country_flag = BLHM_ENG_soviet_compromise_accepted
 			capital_scope = {
@@ -69,6 +71,7 @@ country_event = {
 				state = 434
 				resources = { tungsten }
 			}
+		}
 		}
 	}
 	option = {

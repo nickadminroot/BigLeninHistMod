@@ -3220,7 +3220,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = BLHM_ENG_sloped_armor_completed
-			custom_effect_tooltip = BLHM_ENG_sloped_armor_tt
 			add_equipment_bonus = {
 				name = BLHM_ENG_sloped_armor
 				bonus = {
@@ -4140,7 +4139,6 @@ focus_tree = {
 					special_type_slot_1 = drop_tanks
 				}
 			}
-			custom_effect_tooltip = BLHM_ENG_gloster_meteor_tt
 		}
 	}
 
@@ -4227,9 +4225,9 @@ focus_tree = {
 				add_equipment_bonus = {
 					name = BLHM_ENG_allied_tanks_dynamic_modifier
 					bonus = {
-						light_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
-						medium_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
-						heavy_tank_chassis = { build_cost_ic = 0.15 hard_attack = 0.10 instant = yes }
+						light_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
+						medium_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
+						heavy_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
 					}
 				}
 			}
