@@ -503,6 +503,10 @@ node scripts/hoi4-mcp-cli.js loc_search --query "TODO"
 
 24. **Use openai library for API calls, not urllib.** Cloudflare blocks raw `urllib.request` calls to opencode.ai with error 1010. Always use `pip install openai` and the `OpenAI` client, or `pip install requests`. The `openai` library handles headers, retries, and serialization properly.
 
+25. **Dynamic-modifier variables need explicit focus tooltips.** In focus rewards, precede variable changes with a localized "Modify §Y<spirit>§! by:" header and add `tooltip = <modifier_tt>` to every visible `set_variable`, `add_to_variable`, or `subtract_from_variable`. Prefer vanilla formatter keys; add project-prefixed EN/RU formatters when none exists. Remove obsolete summary tooltips that duplicate the generated lines. See `references/focus-trees.md`.
+
+26. **Indirect focus rewards must be explained before completion.** A focus that fires an event, starts a hidden cooldown event, or reveals decisions must show player-facing outcomes. Use `possible_outcomes_tt`/`effect_tooltip` for event choices, explicit duration text for hidden timers, and `unlock_decision_category_tooltip` plus `unlock_decision_tooltip` for decisions. Flags and raw `country_event` calls alone are not adequate visible rewards.
+
 ---
 
 ## Verification Checklist
@@ -515,3 +519,5 @@ After any mod change:
 - [ ] Run smoke test: `python scripts/hoi4-smoke.py` (cross-platform) or `python scripts/hoi4-smoke-windows.py` (Windows)
 - [ ] Check error.log for new errors
 - [ ] Verify localization appears in-game for both EN and RU
+- [ ] Verify every focus variable update has a dynamic-modifier header and a modifier `tooltip`
+- [ ] Verify event-triggering and decision-unlocking focuses explain player-visible outcomes, durations, costs, and unlocks

@@ -263,6 +263,99 @@ if = {
 custom_effect_tooltip = generic_skip_one_line_tt
 ```
 
+## Variable-Backed Dynamic Modifiers
+
+A focus that changes variables used by a dynamic modifier does **not** get a useful automatic gameplay tooltip. Follow the same pattern as the vanilla German tree:
+
+1. Add a localized header naming the dynamic modifier being changed.
+2. Give every visible `set_variable`, `add_to_variable`, or `subtract_from_variable` operation a `tooltip = <modifier_tooltip_key>`.
+3. Prefer an existing vanilla modifier tooltip key from `localisation/*/modifiers_l_*.yml` (for example, `industrial_capacity_factory_tt`).
+4. If no vanilla formatter exists, define a project-prefixed EN/RU formatter using `$LEFT$`/`$RIGHT$`.
+5. Do not keep an old summary tooltip that duplicates the generated modifier lines. Keep a custom summary only for outcomes the variable tooltips cannot express, such as affected countries or equipment variants.
+
+Good focus example:
+
+```pdx
+focus = {
+    id = TAG_expand_industry
+    # ...
+    completion_reward = {
+        custom_effect_tooltip = TAG_modify_industrial_program_tt
+        add_to_variable = {
+            TAG_industrial_program_industrial_capacity_factory = 0.05
+            tooltip = industrial_capacity_factory_tt
+        }
+        add_to_variable = {
+            TAG_industrial_program_consumer_goods_factor = -0.05
+            tooltip = consumer_goods_factor_tt
+        }
+    }
+}
+```
+
+```yaml
+# English
+TAG_modify_industrial_program_tt:0 "Modify §Y$TAG_industrial_program$§! by:"
+
+# Russian
+TAG_modify_industrial_program_tt:0 "Изменить §Y$TAG_industrial_program$§! на:"
+```
+
+Custom formatter example when vanilla has no matching `_tt` key:
+
+```yaml
+# English and Russian can reuse the localized vanilla modifier name.
+TAG_refit_ic_cost_tt:0 " $MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|+=%1$"
+```
+
+For one gameplay change applied to many countries, avoid duplicating the same lines in the visible tooltip. Show the representative change once with `effect_tooltip` or a precise custom scope explanation, and put repeated implementation effects in `hidden_effect`. The visible tooltip must still state exactly which countries receive the change.
+
+## Focuses That Fire Events
+
+`country_event` often exposes only an event title, not the consequences a player needs before choosing the focus. A focus-triggered event must explain its meaningful outcomes.
+
+For a choice event, use the vanilla-style `possible_outcomes_tt` header followed by either `effect_tooltip` previews or an accurate custom tooltip:
+
+```pdx
+completion_reward = {
+    TARGET = {
+        country_event = { id = TAG_events.10 hours = 12 }
+    }
+    custom_effect_tooltip = possible_outcomes_tt
+    custom_effect_tooltip = TAG_offer_possible_outcomes_tt
+}
+```
+
+The custom text must state who chooses, the important effects of acceptance/refusal, and whether refusal blocks later content. If effects can be represented safely in script, prefer `effect_tooltip = { ... }` so values remain synchronized with gameplay. Do not execute preview effects outside `effect_tooltip`.
+
+For hidden timer events, do not expose the technical event. Explain the player-facing rule directly:
+
+```pdx
+set_country_flag = TAG_branch_cooldown
+country_event = { id = TAG_events.20 days = 365 }
+custom_effect_tooltip = TAG_branch_cooldown_started_tt
+```
+
+The tooltip should name the locked content, duration, and automatic unlock condition.
+
+## Focuses That Unlock Decisions
+
+A flag making a category visible is not a player-facing unlock tooltip. Mirror vanilla and show the category and decision explicitly:
+
+```pdx
+completion_reward = {
+    unlock_decision_category_tooltip = TAG_preparations_category
+    unlock_decision_tooltip = {
+        decision = TAG_prepare_operation
+        show_effect_tooltip = yes
+        show_modifiers = yes
+    }
+    set_country_flag = TAG_preparations_unlocked
+}
+```
+
+`unlock_decision_tooltip` and `unlock_decision_category_tooltip` are UI effects; keep the real flag/activation logic that makes the content available. For recurring missions or complex chains, add a short custom tooltip explaining cadence, costs, pause/restart conditions, and rewards. Keep decision, event, focus, and EN/RU localization synchronized.
+
 ## Icon Selection
 
 Search for available icons:
