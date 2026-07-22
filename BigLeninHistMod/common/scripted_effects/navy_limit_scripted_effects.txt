@@ -63,49 +63,36 @@ calculator_fleet_size = {
 
 		add_to_variable = { needed_heavy_count_calculator = carrier_have_count_calculator }
 
-		set_temp_variable = { command_limit_calculator_used_temp = 0 }
+		# Per-type and total fleet command costs. Keep these synchronized with
+		# the weights used by BLH_check_fleet_size below.
+		set_variable = { destroyer_count_calculator_total = destroyer_count_calculator }
+		multiply_variable = { destroyer_count_calculator_total = 3 }
 
-		# DD
-		add_to_temp_variable = { command_limit_calculator_used_temp = destroyer_count_calculator }
+		set_variable = { light_cruiser_count_calculator_total = light_cruiser_count_calculator }
+		multiply_variable = { light_cruiser_count_calculator_total = 5 }
 
-		# LC
-		set_temp_variable = { light_cruiser_count_calculator_temp = light_cruiser_count_calculator }
-		multiply_temp_variable  = { light_cruiser_count_calculator_temp = 2 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = light_cruiser_count_calculator_temp }
+		set_variable = { heavy_cruiser_count_calculator_total = heavy_cruiser_count_calculator }
+		multiply_variable = { heavy_cruiser_count_calculator_total = 7 }
 
-		# HC
-		set_temp_variable = { heavy_cruiser_count_calculator_temp = heavy_cruiser_count_calculator }
-		multiply_temp_variable  = { heavy_cruiser_count_calculator_temp = 2 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = heavy_cruiser_count_calculator_temp }
+		set_variable = { battleship_count_calculator_total = battleship_count_calculator }
+		multiply_variable = { battleship_count_calculator_total = 10 }
 
-		# Battleship
-		set_temp_variable = { battleship_count_calculator_temp = battleship_count_calculator }
-		multiply_temp_variable  = { battleship_count_calculator_temp = 4 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = battleship_count_calculator_temp }
+		set_variable = { battlecruiser_count_calculator_total = battlecruiser_count_calculator }
+		multiply_variable = { battlecruiser_count_calculator_total = 8 }
 
-		# Battlecruiser
-		set_temp_variable = { battlecruiser_count_calculator_temp = battlecruiser_count_calculator }
-		multiply_temp_variable  = { battlecruiser_count_calculator_temp = 4 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = battlecruiser_count_calculator_temp }
+		set_variable = { carrier_count_calculator_total = carrier_count_calculator }
+		multiply_variable = { carrier_count_calculator_total = 12 }
 
-		# Carrier
-		set_temp_variable = { carrier_count_calculator_temp = carrier_count_calculator }
-		multiply_temp_variable  = { carrier_count_calculator_temp = 6 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = carrier_count_calculator_temp }
+		set_variable = { shbb_count_calculator_total = shbb_count_calculator }
+		multiply_variable = { shbb_count_calculator_total = 12 }
 
-		# SHBB
-		set_temp_variable = { shbb_count_calculator_temp = shbb_count_calculator }
-		multiply_temp_variable  = { shbb_count_calculator_temp = 6 }
-		add_to_temp_variable = { command_limit_calculator_used_temp = shbb_count_calculator_temp }
-
-
-		set_variable = {command_limit_calculator = command_limit_calculator_used_temp}
-
-
-		set_temp_variable = { carrier_limit_calculator_used_temp = 0 }
-
-
-	
+		add_to_variable = { command_limit_calculator = destroyer_count_calculator_total }
+		add_to_variable = { command_limit_calculator = light_cruiser_count_calculator_total }
+		add_to_variable = { command_limit_calculator = heavy_cruiser_count_calculator_total }
+		add_to_variable = { command_limit_calculator = battleship_count_calculator_total }
+		add_to_variable = { command_limit_calculator = battlecruiser_count_calculator_total }
+		add_to_variable = { command_limit_calculator = carrier_count_calculator_total }
+		add_to_variable = { command_limit_calculator = shbb_count_calculator_total }
 }
 
 BLH_check_fleet_size = {
