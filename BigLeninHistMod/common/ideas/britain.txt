@@ -2103,9 +2103,26 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				naval_torpedo_hit_chance_factor = 0.15
 				naval_torpedo_screen_penetration_factor = 0.20
 				naval_strike_attack_factor = 0.15
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					torpedo_attack = 0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					torpedo_attack = 0.15
+					instant = yes
+				}
+				ship_hull_heavy = {
+					torpedo_attack = 0.15
+					instant = yes
+				}
+				ship_hull_submarine = {
+					torpedo_attack = 0.15
+					instant = yes
+				}
 			}
 		}
 
