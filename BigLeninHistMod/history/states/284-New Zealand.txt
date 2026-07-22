@@ -2,7 +2,7 @@
 state={
 	id=284
 	name="STATE_284" # Wellington 
-	manpower = 449918 # was 899836
+	manpower = 674877 # +50% BLHM population
 	
 	resources = {
 		coal = 1

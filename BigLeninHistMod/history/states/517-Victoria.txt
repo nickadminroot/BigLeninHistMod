@@ -10,7 +10,7 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 6
 			arms_factory = 2
-			industrial_complex = 5
+			industrial_complex = 6
 			air_base = 3
 			7798 = {
 				naval_base = 4
@@ -21,7 +21,7 @@ state={
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 3 #Added 1 from 1936
-				industrial_complex = 6 #Added 1 from 1936
+				industrial_complex = 7 #Added 1 from 1936
 				dockyard = 1 #Added 1 from 1936
 			}
 		}

@@ -1,7 +1,7 @@
 state={
 	id=726
 	name="STATE_726"
-	manpower=113214
+	manpower=169821
 	state_category = small_island
 	history={
 		owner = NZL

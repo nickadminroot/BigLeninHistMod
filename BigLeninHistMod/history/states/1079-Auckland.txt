@@ -2,7 +2,7 @@
 state = {
 	id = 1079
 	name = "STATE_1079" # Auckland
-	manpower = 449918
+	manpower = 674877
 	
 	resources = {
 		coal = 1

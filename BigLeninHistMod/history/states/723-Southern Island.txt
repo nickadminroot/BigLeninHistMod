@@ -1,7 +1,7 @@
 state={
 	id=723
 	name="STATE_723"
-	manpower = 347198
+	manpower = 520797
 	resources={
 		tungsten=1 # was: 6, then 4
 		coal = 2 #initial distribution

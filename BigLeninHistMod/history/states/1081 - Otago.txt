@@ -1,7 +1,7 @@
 state = {
 	id = 1081
 	name = "STATE_1081" # Otago 
-	manpower = 114181
+	manpower = 171272
 	resources = {
 		tungsten = 1
 	}
