@@ -72,7 +72,7 @@ defined_text = {
 			has_completed_focus = BLHM_ENG_pilot_training_programme
 			has_idea = BLHM_ENG_mio_fallback_production
 		}
-		localization_key = BLHM_ENG_air_force_equipment_cost_zero_tt
+		localization_key = generic_null
 	}
 	text = {
 		trigger = {
@@ -116,6 +116,6 @@ defined_text = {
 		localization_key = BLHM_ENG_air_force_equipment_cost_minus_10_tt
 	}
 	text = {
-		localization_key = BLHM_ENG_air_force_equipment_cost_zero_tt
+		localization_key = generic_null
 	}
 }
