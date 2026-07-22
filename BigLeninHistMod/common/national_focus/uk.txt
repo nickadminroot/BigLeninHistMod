@@ -3482,8 +3482,13 @@ focus_tree = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = -0.10 tooltip = consumer_goods_factor_tt }
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0.10 tooltip = production_speed_dockyard_factor_tt }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.10 tooltip = navy_capital_ship_attack_factor_tt }
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 tooltip = navy_screen_attack_factor_tt }
+			add_equipment_bonus = {
+				name = BLHM_ENG_cost_optimisation_guns
+				bonus = {
+					ship_hull_heavy = { hg_attack = -0.10 instant = yes }
+					ship_hull_light = { lg_attack = -0.10 instant = yes }
+				}
+			}
 		}
 	}
 
@@ -3530,10 +3535,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = 0.20 tooltip = navy_screen_attack_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_young_school
-				bonus = { ship_hull_light = { build_cost_ic = -0.20 instant = yes } }
+				bonus = { ship_hull_light = { build_cost_ic = -0.20 lg_attack = 0.20 instant = yes } }
 			}
 		}
 	}
@@ -3556,10 +3560,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
-			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = 0.15 tooltip = navy_capital_ship_attack_factor_tt }
 			add_equipment_bonus = {
 				name = BLHM_ENG_old_guard
-				bonus = { ship_hull_heavy = { build_cost_ic = -0.20 instant = yes } }
+				bonus = { ship_hull_heavy = { build_cost_ic = -0.20 hg_attack = 0.15 instant = yes } }
 			}
 		}
 	}
