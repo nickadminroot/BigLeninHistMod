@@ -1183,7 +1183,7 @@ guiTypes = {
 					maxHeight = 24
 					fixedsize = yes
 					text = "SHIP_COST_TITLE"
-					pdx_tooltip = "OPEN_NAVAL_CALCULATOR_BUTTON"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
 				}
 				instantTextBoxType = {
 					name = "defence_spending_rate"
@@ -1193,9 +1193,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE1"
-					pdx_tooltip = "DEFENCE_SPENDING_TOOLTIP"
-					pdx_tooltip_delayed = "DEFENCE_SPENDING_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_3"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 				instantTextBoxType = {
 					name = "internal_security_spending_rate"
@@ -1205,9 +1205,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE2"
-					pdx_tooltip = "POLICE_SPENDING_TOOLTIP"
-					pdx_tooltip_delayed = "POLICE_SPENDING_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_5"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 				instantTextBoxType = {
 					name = "education_exp_rate"
@@ -1217,9 +1217,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE2"
-					pdx_tooltip = "EDUCATION_EXPENSE_TOOLTIP"
-					pdx_tooltip_delayed = "EDUCATION_EXPENSE_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_7"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				} 
 				instantTextBoxType = {
 					name = "health_expenses_rate"
@@ -1229,9 +1229,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE4"
-					pdx_tooltip = "HEALTHCARE_EXPENSE_TOOLTIP"
-					pdx_tooltip_delayed = "HEALTHCARE_EXPENSE_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_10"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 				instantTextBoxType = {
 					name = "social_expense_rate"
@@ -1241,9 +1241,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE4"
-					pdx_tooltip = "WELFARE_EXPENSE_TOOLTIP"
-					pdx_tooltip_delayed = "WELFARE_EXPENSE_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_8"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 				instantTextBoxType = {
 					name = "interest_on_debt_expense"
@@ -1253,9 +1253,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE6"
-					pdx_tooltip = "INTEREST_EXPENSE_TOOLTIP"
-					pdx_tooltip_delayed = "INTEREST_EXPENSE_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_12"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 				instantTextBoxType = {
 					name = "migration_law_expense_rates"
@@ -1265,9 +1265,9 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 24
 					fixedsize = yes
-					text = "SIZE6"
-					pdx_tooltip = "MIGRATION_LAWS_TOOLTIP"
-					pdx_tooltip_delayed = "MIGRATION_LAWS_TOOLTIP_DELAYED"
+					text = "NAVAL_COMMAND_COST_12"
+					pdx_tooltip = "NAVAL_COMMAND_COST_TT"
+					pdx_tooltip_delayed = "FLEET_CAP_DELAYED_DESC"
 				}
 			}
 		}
@@ -1287,7 +1287,7 @@ guiTypes = {
                 maxHeight = 24
                 fixedsize = yes
                 text = "TOTAL_COST_TITLE"
-                pdx_tooltip = "OPEN_NAVAL_CALCULATOR_BUTTON"
+                pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
             }
 
             containerWindowType = {
@@ -1303,7 +1303,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "DESTROYER_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1320,7 +1320,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "LIGHT_CRUISER_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1337,7 +1337,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "HEAVY_CRUISER_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1354,7 +1354,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "BATTLESHIP_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1371,7 +1371,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "BATTLECRUISER_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1388,7 +1388,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "CARRIER_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 
@@ -1405,7 +1405,7 @@ guiTypes = {
                     maxWidth = 55
                     maxHeight = 24
                     fixedsize = yes
-                    pdx_tooltip = "SHBB_COUNT_CALCULATOR_TOTAL_TT"
+                    pdx_tooltip = "NAVAL_COMMAND_TOTAL_TT"
                 }
             }
 

@@ -55,7 +55,103 @@ defined_text = {
 
 }
 
+# Fleet calculator values
 
+defined_text = {
+	name = GetCalculatorCommandLimit
+	text = {
+		trigger = { check_variable = { command_limit_calculator < 150 } }
+		localization_key = GetCalculatorCommandLimit_under_def
+	}
+	text = {
+		trigger = { check_variable = { command_limit_calculator = 150 } }
+		localization_key = GetCalculatorCommandLimit_equal_def
+	}
+	text = {
+		trigger = { check_variable = { command_limit_calculator > 150 } }
+		localization_key = GetCalculatorCommandLimit_over_def
+	}
+}
+
+defined_text = {
+	name = GetCalculatorScreenCount
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator < screen_count_calculator } }
+		localization_key = GetCalculatorScreens_under_def
+	}
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator = screen_count_calculator } }
+		localization_key = GetCalculatorScreens_equal_def
+	}
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator > screen_count_calculator } }
+		localization_key = GetCalculatorScreens_over_def
+	}
+}
+
+defined_text = {
+	name = GetCalculatorScreensNeededCount
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator < screen_count_calculator } }
+		localization_key = GetCalculatorScreensNeeded_under_def
+	}
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator = screen_count_calculator } }
+		localization_key = GetCalculatorScreensNeeded_equal_def
+	}
+	text = {
+		trigger = { check_variable = { needed_screen_count_calculator > screen_count_calculator } }
+		localization_key = GetCalculatorScreensNeeded_over_def
+	}
+}
+
+defined_text = {
+	name = GetCalculatorCarrierLimit
+	text = {
+		trigger = { check_variable = { carrier_have_count_calculator < 2 } }
+		localization_key = GetCalculatorCarrierLimit_under_def
+	}
+	text = {
+		trigger = { check_variable = { carrier_have_count_calculator = 2 } }
+		localization_key = GetCalculatorCarrierLimit_equal_def
+	}
+	text = {
+		trigger = { check_variable = { carrier_have_count_calculator > 2 } }
+		localization_key = GetCalculatorCarrierLimit_over_def
+	}
+}
+
+defined_text = {
+	name = GetCalculatorHeavyCount
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator < heavy_count_calculator } }
+		localization_key = GetCalculatorHeavys_under_def
+	}
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator = heavy_count_calculator } }
+		localization_key = GetCalculatorHeavys_equal_def
+	}
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator > heavy_count_calculator } }
+		localization_key = GetCalculatorHeavys_over_def
+	}
+}
+
+defined_text = {
+	name = GetCalculatorHeavysNeededCount
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator < heavy_count_calculator } }
+		localization_key = GetCalculatorHeavysNeeded_under_def
+	}
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator = heavy_count_calculator } }
+		localization_key = GetCalculatorHeavysNeeded_equal_def
+	}
+	text = {
+		trigger = { check_variable = { needed_heavy_count_calculator > heavy_count_calculator } }
+		localization_key = GetCalculatorHeavysNeeded_over_def
+	}
+}
 
 defined_text = { 
 	name = GetAdmiralPortrait
