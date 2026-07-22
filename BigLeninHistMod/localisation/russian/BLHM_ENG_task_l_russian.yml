@@ -285,7 +285,7 @@
  BLHM_ENG_air_force_equipment_cost_plus_15_tt:0 "§YМалый самолёт§!:\n $production_cost_tt$: §R+15.00%§!"
  BLHM_ENG_air_force_equipment_cost_plus_20_tt:0 "§YМалый самолёт§!:\n $production_cost_tt$: §R+20.00%§!"
  BLHM_ENG_new_tanks_equipment_cost_tt:0 "[BLHM_ENG_GetNewTanksProductionCost]"
- BLHM_ENG_allied_tanks_equipment_tt:0 "$BLHM_ENG_new_tanks_equipment_cost_base_tt$"
+ BLHM_ENG_allied_tanks_equipment_tt:0 "§YВсе шасси танков§!:\n $production_cost_tt$: §R+15.00%§!\n $STAT_ARMY_HARD_ATTACK$§R-15.00%§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!\n Максимальная скорость: §R-15.00%§!\n Броня: §G+10.00%§!\n§YВсе шасси истребителей танков§!:\n $production_cost_tt$: §R+15.00%§!"
  BLHM_ENG_new_tanks_equipment_cost_base_tt:0 "§YВсе шасси танков§!:\n $production_cost_tt$: §R+15.00%§!\n $STAT_ARMY_HARD_ATTACK$§R-15.00%§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!\n§YВсе шасси истребителей танков§!:\n $production_cost_tt$: §R+15.00%§!"
  BLHM_ENG_new_tanks_equipment_cost_hard_attack_neutral_tt:0 "§YВсе шасси танков§!:\n $production_cost_tt$: §R+15.00%§!\n $STAT_ARMY_HARD_ATTACK$§Y0.00%§! §G(Исходный штраф -15% снят)§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!\n§YВсе шасси истребителей танков§!:\n $production_cost_tt$: §R+15.00%§!"
  BLHM_ENG_new_tanks_equipment_cost_neutral_tt:0 "§YВсе шасси танков и истребителей танков§!:\n $production_cost_tt$: §Y0.00%§! §G(Исходный штраф +15% снят)§!\n§YВсе шасси танков§!:\n $STAT_ARMY_HARD_ATTACK$§Y0.00%§! §G(Исходный штраф -15% снят)§!\n $STAT_ARMY_SOFT_ATTACK$§G+10.00%§!"
