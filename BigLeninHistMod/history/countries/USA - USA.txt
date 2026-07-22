@@ -539,7 +539,7 @@ add_ideas = {
 	undisturbed_isolation
 	great_depression
 	disarmed_nation
-	free_trade
+	USA_zero_export_trade_law
 	home_of_the_free
 }
 

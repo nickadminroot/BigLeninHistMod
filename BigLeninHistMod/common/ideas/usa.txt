@@ -100,6 +100,18 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			on_remove = {
+				if = {
+					limit = {
+						has_idea = USA_zero_export_trade_law
+					}
+					swap_ideas = {
+						remove_idea = USA_zero_export_trade_law
+						add_idea = free_trade
+					}
+				}
+			}
 			
 			modifier = {
 				join_faction_tension = 0.25
@@ -129,6 +141,15 @@ ideas = {
 				remove_relation_rule_override = {
 					can_access_market = no
 					trigger = trade_partner_not_at_war
+				}
+				if = {
+					limit = {
+						has_idea = USA_zero_export_trade_law
+					}
+					swap_ideas = {
+						remove_idea = USA_zero_export_trade_law
+						add_idea = free_trade
+					}
 				}
 			}
 

@@ -1205,6 +1205,95 @@ ideas = {
 			}
 		}
 
+		USA_zero_export_trade_law = {
+			name = USA_zero_export_trade_law
+			picture = free_trade
+
+			visible = {
+				original_tag = USA
+			}
+
+			available = {
+				original_tag = USA
+				OR = {
+					has_idea = USA_neutrality_act
+					has_idea = USA_neutrality_act_aat
+				}
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+				cic_construction_boost_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 1
+
+				modifier = {
+					factor = 300
+
+					OR = {
+						tag = PER
+						tag = IRQ
+					}
+					is_in_faction = no
+				}
+
+				modifier = {
+					factor = 300
+
+					tag = BRA
+					date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
+				}
+
+				modifier = {
+					factor = 400
+					original_tag = SWE
+					date > 1941.6.1
+				}
+
+				# Oil for hitlers oil throne!
+				modifier = {
+					factor = 600
+					tag = ROM
+					is_in_faction_with = GER
+				}
+			}
+
+			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_trade_law > 0 } }
+
+
+						SIA_increase_civilian_approval = yes
+						SIA_decrease_military_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_trade_law = 0 }
+				}
+			}
+		}
+
 		free_trade = {
 
 			available = {

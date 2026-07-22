@@ -217,6 +217,17 @@ on_actions = {
 					}
 					USA = { break_embargo = PREV }
 				}
+				USA = {
+					if = {
+						limit = {
+							has_idea = USA_zero_export_trade_law
+						}
+						swap_ideas = {
+							remove_idea = USA_zero_export_trade_law
+							add_idea = free_trade
+						}
+					}
+				}
 				set_global_flag = BLHM_embargo_released
 			 }
 			
