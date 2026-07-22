@@ -292,6 +292,8 @@
  BLHM_ENG_allied_tanks_dynamic_modifier_desc:0 "Доминионы начинают игру с общей бронетанковой программой, ожидающей специализированного развития."
  BLHM_ENG_add_allied_tanks_dynamic_modifier_tt:0 "Члены альянса, не имеющие этого духа, получают §Y$BLHM_ENG_allied_tanks_dynamic_modifier$§! со следующими эффектами:"
  BLHM_ENG_armor_factor_tt:0 " $MODIFIER_ARMOR$: $RIGHT|+=%1$"
+ BLHM_ENG_tank_org_tt:0 " $MODIFIER_MODIFIER_ARMY_SUB_UNIT_CATEGORY_TANKS_MAX_ORG_FACTOR$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_category_tanks_max_org_factor:0 "Организация танков"
  BLHM_ENG_new_tanks_CAN:0 "Новые танки — Канада"
  BLHM_ENG_new_tanks_CAN_desc:0 "Канадская программа развития танков. Сложность снижает мобильность и надёжность, но улучшает броню и огневую мощь."
  BLHM_ENG_new_tanks_SAF:0 "Новые танки — ЮАС"
