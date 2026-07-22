@@ -85,5 +85,5 @@ BigLeninHistMod сохраняет привычную основу Hearts of Iro
 [*]Мод является самостоятельным оверхолом и несовместим с другими модификациями, заменяющими фокусы, доктрины, снаряжение, историю стран, события или карту.
 [*]Небольшие графические и музыкальные моды могут работать, но совместимость не гарантируется.
 [/list]"
-    "changenote"        "Dominion balance: +3 starting civilian factories for Canada, Australia and South Africa; New Zealand population +50%."
+    "changenote"        "Fix state building capacity: upgrade Transvaal, New South Wales and Koshinetsu state categories."
 }
