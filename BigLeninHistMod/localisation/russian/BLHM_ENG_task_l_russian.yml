@@ -334,7 +334,8 @@
  BLHM_ENG_task.10.nzl:0 "Новая Зеландия — Новозеландская бронетанковая бригада"
  BLHM_ENG_task.10.none:0 "Нет подходящего доминиона для программы «Новые танки»."
 
- BLHM_ENG_canadian_landings_sf_doctrine_tt:0 "§YКанадский десант§! также даёт Канаде §Y40%§! снижение стоимости исследований доктрин спецназа."
+ BLHM_ENG_canadian_landings_sf_doctrine_tt:0 "§YКанадский десант§! открывает Канаде вторую §Yспециализацию войск§! (спецназ)."
+ BLHM_ENG_new_zealand_special_forces_sf_doctrine_tt:0 "§YНовозеландский спецназ§! открывает Новой Зеландии вторую §Yспециализацию войск§! (спецназ)."
  BLHM_ENG_tank_development_tt:0 "Открывает событие для выбора одного существующего доминиона. Его программа §Y«$BLHM_ENG_allied_tanks_dynamic_modifier$»§! заменяется на §Y«$BLHM_ENG_new_tanks_dynamic_modifier$»§! и получает все завершённые к этому моменту общие танковые улучшения."
  BLHM_ENG_armed_forces_priority_lock_tt:0 "[BLHM_ENG_GetArmedForcesPriorityLockStatus]"
  BLHM_ENG_armed_forces_priority_lock_active_tt:0 "Другое направление вооружённых сил уже имеет приоритет. Одновременно может быть активно только одно направление (флот, авиация или сухопутные войска).\nДней до следующей разблокировки направления: [?BLHM_ENG_armed_forces_priority_lock:days_left|Y0]"
