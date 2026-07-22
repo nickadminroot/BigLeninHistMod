@@ -1,0 +1,24 @@
+BLHM_historical_neutrals_avoid_allies_until_attacked = {
+	allowed = {
+		OR = {
+			original_tag = BEL
+			original_tag = DEN
+			original_tag = HOL
+			original_tag = POR
+			original_tag = SWE
+		}
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		has_war = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = ENG
+		value = -1000
+	}
+}
