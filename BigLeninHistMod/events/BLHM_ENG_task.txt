@@ -184,7 +184,15 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.10.can
 		trigger = {
-			CAN = { exists = yes }
+			CAN = {
+				exists = yes
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_war_with = ROOT }
+				has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -208,7 +216,15 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.10.saf
 		trigger = {
-			SAF = { exists = yes }
+			SAF = {
+				exists = yes
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_war_with = ROOT }
+				has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -232,7 +248,15 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.10.raj
 		trigger = {
-			RAJ = { exists = yes }
+			RAJ = {
+				exists = yes
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_war_with = ROOT }
+				has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -256,7 +280,15 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.10.ast
 		trigger = {
-			AST = { exists = yes }
+			AST = {
+				exists = yes
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_war_with = ROOT }
+				has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -280,7 +312,15 @@ country_event = {
 	option = {
 		name = BLHM_ENG_task.10.nzl
 		trigger = {
-			NZL = { exists = yes }
+			NZL = {
+				exists = yes
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = { has_war_with = ROOT }
+				has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -306,11 +346,51 @@ country_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					CAN = { exists = yes }
-					SAF = { exists = yes }
-					RAJ = { exists = yes }
-					AST = { exists = yes }
-					NZL = { exists = yes }
+					CAN = {
+						exists = yes
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						NOT = { has_war_with = ROOT }
+						has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+					}
+					SAF = {
+						exists = yes
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						NOT = { has_war_with = ROOT }
+						has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+					}
+					RAJ = {
+						exists = yes
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						NOT = { has_war_with = ROOT }
+						has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+					}
+					AST = {
+						exists = yes
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						NOT = { has_war_with = ROOT }
+						has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+					}
+					NZL = {
+						exists = yes
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						NOT = { has_war_with = ROOT }
+						has_dynamic_modifier = BLHM_ENG_allied_tanks_dynamic_modifier
+					}
 				}
 			}
 		}
