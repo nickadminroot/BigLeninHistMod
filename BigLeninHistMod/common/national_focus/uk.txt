@@ -4269,14 +4269,13 @@ focus_tree = {
 				custom_effect_tooltip = BLHM_ENG_add_allied_tanks_dynamic_modifier_tt
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 tooltip = army_armor_speed_factor_tt }
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 tooltip = army_org_factor_tt }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_attack_factor = -0.15 tooltip = army_armor_attack_factor_tt }
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 tooltip = BLHM_ENG_armor_factor_tt }
 				add_equipment_bonus = {
 					name = BLHM_ENG_allied_tanks_dynamic_modifier
 					bonus = {
-						light_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
-						medium_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
-						heavy_tank_chassis = { build_cost_ic = 0.15 soft_attack = 0.10 instant = yes }
+						light_tank_chassis = { build_cost_ic = 0.15 hard_attack = -0.15 soft_attack = 0.10 instant = yes }
+						medium_tank_chassis = { build_cost_ic = 0.15 hard_attack = -0.15 soft_attack = 0.10 instant = yes }
+						heavy_tank_chassis = { build_cost_ic = 0.15 hard_attack = -0.15 soft_attack = 0.10 instant = yes }
 					}
 				}
 			}
@@ -4435,14 +4434,28 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = 0.15 tooltip = army_armor_attack_factor_tt }
+			custom_effect_tooltip = BLHM_ENG_seventeen_pounder_hard_attack_tt
+			add_equipment_bonus = {
+				name = BLHM_ENG_seventeen_pounder
+				bonus = {
+					light_tank_chassis = { hard_attack = 0.15 instant = yes }
+					medium_tank_chassis = { hard_attack = 0.15 instant = yes }
+					heavy_tank_chassis = { hard_attack = 0.15 instant = yes }
+				}
+			}
 			every_other_country = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
-				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_attack_factor = 0.15 tooltip = army_armor_attack_factor_tt }
+				custom_effect_tooltip = BLHM_ENG_seventeen_pounder_hard_attack_tt
+				add_equipment_bonus = {
+					name = BLHM_ENG_seventeen_pounder
+					bonus = {
+						light_tank_chassis = { hard_attack = 0.15 instant = yes }
+						medium_tank_chassis = { hard_attack = 0.15 instant = yes }
+						heavy_tank_chassis = { hard_attack = 0.15 instant = yes }
+					}
+				}
 			}
 		}
 	}

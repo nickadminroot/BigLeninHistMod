@@ -50,6 +50,12 @@ defined_text = {
 		localization_key = BLHM_ENG_new_tanks_equipment_cost_firefly_tt
 	}
 	text = {
+		trigger = {
+			ENG = { has_completed_focus = BLHM_ENG_seventeen_pounder }
+		}
+		localization_key = BLHM_ENG_new_tanks_equipment_cost_hard_attack_neutral_tt
+	}
+	text = {
 		localization_key = BLHM_ENG_new_tanks_equipment_cost_base_tt
 	}
 }

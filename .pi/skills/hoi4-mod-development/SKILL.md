@@ -263,6 +263,10 @@ Many mods already include partial translations. When creating a translation subm
 
 ## Core Concepts
 
+### Project-Specific Terms
+
+- **«Харда» / hard** means **Hard Attack** (`hard_attack`) — «противотанковая атака» or «тяжёлая атака» in Russian terminology. Do not confuse it with an armoured-division attack modifier such as `army_armor_attack_factor`: `hard_attack` is an equipment/unit combat stat used against hard targets.
+
 ### Clausewitz/PDX Script Syntax
 
 HOI4 uses a key-value scripting language called Clausewitz (or PDX script):
