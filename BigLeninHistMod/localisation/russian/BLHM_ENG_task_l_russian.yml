@@ -98,6 +98,8 @@
  BLHM_ENG_fleet_of_britain_dynamic_modifier_desc:0 "Развивающееся состояние Королевского флота, его доктрины, снабжения и промышленной нагрузки."
  BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt:0 "Изменить §Y$BLHM_ENG_fleet_of_britain_dynamic_modifier$§! на:"
  BLHM_ENG_refit_ic_cost_tt:0 " $MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|-=%1$"
+ BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_max_range_factor_tt:0 " $MODIFIER_NAVY_MAX_RANGE_FACTOR$: $RIGHT|+=%1$"
+ BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_org_factor_tt:0 " $MODIFIER_NAVY_ORG_FACTOR$: $RIGHT|-=%1$"
  BLHM_ENG_next_generation_fleet_idea:0 "Лёгкие корпуса нового поколения"
  BLHM_ENG_next_generation_fleet_idea_desc:0 "Передовые строительные технологии снижают стоимость лёгких корабельных корпусов."
  BLHM_ENG_faithful_to_tradition_idea:0 "Верность традициям"
