@@ -41,6 +41,7 @@ BLHM_ENG_new_tanks_dynamic_modifier = {
 	coordination_bonus = BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus
 	# Equipment bonuses are applied separately and therefore need an explicit visible summary.
 	custom_modifier_tooltip = BLHM_ENG_new_tanks_equipment_cost_tt
+	custom_modifier_tooltip = BLHM_ENG_new_tanks_sloped_armor_status_tt
 }
 
 BLHM_ENG_allied_tanks_dynamic_modifier = {

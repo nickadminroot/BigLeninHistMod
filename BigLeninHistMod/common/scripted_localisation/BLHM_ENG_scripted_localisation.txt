@@ -63,6 +63,21 @@ defined_text = {
 	}
 }
 
+# Show Sloped Armour only after it has actually upgraded the selected Dominion's New Tanks programme.
+defined_text = {
+	name = BLHM_ENG_GetNewTanksSlopedArmorStatus
+	text = {
+		trigger = {
+			has_country_flag = BLHM_ENG_new_tanks_recipient
+			ENG = { has_completed_focus = BLHM_ENG_sloped_armor }
+		}
+		localization_key = BLHM_ENG_new_tanks_sloped_armor_applied_tt
+	}
+	text = {
+		localization_key = BLHM_ENG_empty_tt
+	}
+}
+
 # Show the net small-airframe production-cost effect attached to the Air Force programme.
 defined_text = {
 	name = BLHM_ENG_GetAirForceProductionCost

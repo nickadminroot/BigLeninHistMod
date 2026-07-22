@@ -3211,23 +3211,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_country_flag = BLHM_ENG_sloped_armor_completed
-			add_equipment_bonus = {
-				name = BLHM_ENG_sloped_armor
-				bonus = {
-					light_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
-					medium_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
-					heavy_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
-				}
-			}
-			every_other_country = {
-				limit = { has_country_flag = BLHM_ENG_new_tanks_recipient }
-				add_equipment_bonus = {
-					name = BLHM_ENG_sloped_armor
-					bonus = {
-						light_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
-						medium_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
-						heavy_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
+			custom_effect_tooltip = BLHM_ENG_sloped_armor_effect_tt
+			hidden_effect = {
+				set_country_flag = BLHM_ENG_sloped_armor_completed
+				every_other_country = {
+					limit = { has_country_flag = BLHM_ENG_new_tanks_recipient }
+					add_equipment_bonus = {
+						name = BLHM_ENG_sloped_armor
+						bonus = {
+							light_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
+							medium_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
+							heavy_tank_chassis = { breakthrough = 0.10 armor_value = 0.05 instant = yes }
+						}
 					}
 				}
 			}
@@ -4341,7 +4336,7 @@ focus_tree = {
 				limit = { NOT = { has_country_flag = BLHM_ENG_land_specialisation_cooldown } }
 				set_country_flag = { flag = BLHM_ENG_land_specialisation_cooldown value = 1 days = 365 }
 			}
-			country_event = { id = BLHM_ENG_task.10 }
+			country_event = { id = BLHM_ENG_task.10 hours = 1 }
 			custom_effect_tooltip = BLHM_ENG_land_specialisation_cooldown_started_tt
 			custom_effect_tooltip = BLHM_ENG_tank_development_tt
 		}
@@ -4426,20 +4421,22 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_country_flag = BLHM_ENG_new_tanks_recipient
-				}
-				custom_effect_tooltip = BLHM_ENG_study_french_conflict_experience_speed_tt
-				add_equipment_bonus = {
-					name = BLHM_ENG_study_french_conflict_experience
-					bonus = {
-						light_tank_chassis = { maximum_speed = 0.15 instant = yes }
-						medium_tank_chassis = { maximum_speed = 0.15 instant = yes }
-						heavy_tank_chassis = { maximum_speed = 0.15 instant = yes }
-						modern_tank_chassis = { maximum_speed = 0.15 instant = yes }
-						super_heavy_tank_chassis = { maximum_speed = 0.15 instant = yes }
-						amphibious_tank_chassis = { maximum_speed = 0.15 instant = yes }
+			custom_effect_tooltip = BLHM_ENG_study_french_conflict_experience_speed_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_country_flag = BLHM_ENG_new_tanks_recipient
+					}
+					add_equipment_bonus = {
+						name = BLHM_ENG_study_french_conflict_experience
+						bonus = {
+							light_tank_chassis = { maximum_speed = 0.15 instant = yes }
+							medium_tank_chassis = { maximum_speed = 0.15 instant = yes }
+							heavy_tank_chassis = { maximum_speed = 0.15 instant = yes }
+							modern_tank_chassis = { maximum_speed = 0.15 instant = yes }
+							super_heavy_tank_chassis = { maximum_speed = 0.15 instant = yes }
+							amphibious_tank_chassis = { maximum_speed = 0.15 instant = yes }
+						}
 					}
 				}
 			}
@@ -4458,17 +4455,19 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_country_flag = BLHM_ENG_new_tanks_recipient
-				}
-				custom_effect_tooltip = BLHM_ENG_seventeen_pounder_hard_attack_tt
-				add_equipment_bonus = {
-					name = BLHM_ENG_seventeen_pounder
-					bonus = {
-						light_tank_chassis = { hard_attack = 0.15 instant = yes }
-						medium_tank_chassis = { hard_attack = 0.15 instant = yes }
-						heavy_tank_chassis = { hard_attack = 0.15 instant = yes }
+			custom_effect_tooltip = BLHM_ENG_seventeen_pounder_hard_attack_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_country_flag = BLHM_ENG_new_tanks_recipient
+					}
+					add_equipment_bonus = {
+						name = BLHM_ENG_seventeen_pounder
+						bonus = {
+							light_tank_chassis = { hard_attack = 0.15 instant = yes }
+							medium_tank_chassis = { hard_attack = 0.15 instant = yes }
+							heavy_tank_chassis = { hard_attack = 0.15 instant = yes }
+						}
 					}
 				}
 			}
@@ -4488,16 +4487,18 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_country_flag = BLHM_ENG_new_tanks_recipient
-				}
-				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 tooltip = production_factory_max_efficiency_factor_tt }
-				add_equipment_bonus = {
-					name = BLHM_ENG_sherman_firefly
-					bonus = {
-						medium_tank_chassis = { build_cost_ic = -0.25 instant = yes }
+			custom_effect_tooltip = BLHM_ENG_sherman_firefly_effect_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_country_flag = BLHM_ENG_new_tanks_recipient
+					}
+					add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.07 }
+					add_equipment_bonus = {
+						name = BLHM_ENG_sherman_firefly
+						bonus = {
+							medium_tank_chassis = { build_cost_ic = -0.25 instant = yes }
+						}
 					}
 				}
 			}
@@ -4517,21 +4518,23 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_country_flag = BLHM_ENG_new_tanks_recipient
-				}
-				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
-				add_equipment_bonus = {
-					name = BLHM_ENG_global_tank_doctrine_update
-					bonus = {
-						light_tank_chassis = { build_cost_ic = -0.15 instant = yes }
-						light_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
-						medium_tank_chassis = { build_cost_ic = -0.15 instant = yes }
-						medium_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
-						heavy_tank_chassis = { build_cost_ic = -0.15 instant = yes }
-						heavy_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
+			custom_effect_tooltip = BLHM_ENG_global_tank_doctrine_update_effect_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_country_flag = BLHM_ENG_new_tanks_recipient
+					}
+					add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_production_factory_max_efficiency_factor = 0.05 }
+					add_equipment_bonus = {
+						name = BLHM_ENG_global_tank_doctrine_update
+						bonus = {
+							light_tank_chassis = { build_cost_ic = -0.15 instant = yes }
+							light_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
+							medium_tank_chassis = { build_cost_ic = -0.15 instant = yes }
+							medium_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
+							heavy_tank_chassis = { build_cost_ic = -0.15 instant = yes }
+							heavy_tank_destroyer_chassis = { build_cost_ic = -0.15 instant = yes }
+						}
 					}
 				}
 			}
@@ -4553,13 +4556,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					has_country_flag = BLHM_ENG_new_tanks_recipient
+			custom_effect_tooltip = BLHM_ENG_updated_communications_effect_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_country_flag = BLHM_ENG_new_tanks_recipient
+					}
+					add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 }
+					add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 }
 				}
-				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = BLHM_ENG_tank_org_tt }
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 tooltip = coordination_bonus_tt }
 			}
 		}
 	}
