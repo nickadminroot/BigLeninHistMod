@@ -4286,7 +4286,7 @@ focus_tree = {
 				add_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 				custom_effect_tooltip = BLHM_ENG_add_allied_tanks_dynamic_modifier_tt
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 tooltip = army_armor_speed_factor_tt }
-				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 tooltip = army_org_factor_tt }
+				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_army_org_factor = -0.15 tooltip = BLHM_ENG_tank_org_tt }
 				set_variable = { BLHM_ENG_allied_tanks_dynamic_modifier_armor_factor = 0.10 tooltip = BLHM_ENG_armor_factor_tt }
 				add_equipment_bonus = {
 					name = BLHM_ENG_allied_tanks_dynamic_modifier
@@ -4572,14 +4572,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = BLHM_ENG_tank_org_tt }
 			add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 tooltip = coordination_bonus_tt }
 			every_other_country = {
 				limit = {
 					has_country_flag = BLHM_ENG_new_tanks_recipient
 				}
 				custom_effect_tooltip = BLHM_ENG_modify_new_tanks_dynamic_modifier_tt
-				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = 0.15 tooltip = BLHM_ENG_tank_org_tt }
 				add_to_variable = { BLHM_ENG_new_tanks_dynamic_modifier_coordination_bonus = 0.04 tooltip = coordination_bonus_tt }
 			}
 		}

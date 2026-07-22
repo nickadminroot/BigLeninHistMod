@@ -240,7 +240,15 @@ ideas = {
 		removal_cost = -1
 		modifier = {
 			coordination_bonus = 0.04
-			army_org_factor = 0.15
+			modifier_army_sub_unit_light_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_medium_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_heavy_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_modern_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_super_heavy_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_amphibious_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_amphibious_light_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_amphibious_medium_armor_max_org_factor = 0.15
+			modifier_army_sub_unit_amphibious_heavy_armor_max_org_factor = 0.15
 		}
 	}
 
