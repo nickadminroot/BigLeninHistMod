@@ -3438,8 +3438,6 @@ focus_tree = {
 		id = BLHM_ENG_carrier_groups
 		relative_position_id = BLHM_ENG_next_generation_fleet
 		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
-		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
-		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
 		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_focus_custom_BLHM_ENG_carrier_groups
@@ -3466,9 +3464,7 @@ focus_tree = {
 	focus = {
 		id = BLHM_ENG_cost_optimisation
 		relative_position_id = BLHM_ENG_next_generation_fleet
-		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
 		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
-		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
 		mutually_exclusive = { focus = BLHM_ENG_submarine_warfare }
 		icon = GFX_focus_custom_BLHM_ENG_cost_optimisation
@@ -3490,8 +3486,6 @@ focus_tree = {
 	focus = {
 		id = BLHM_ENG_submarine_warfare
 		relative_position_id = BLHM_ENG_next_generation_fleet
-		prerequisite = { focus = BLHM_ENG_next_generation_fleet }
-		prerequisite = { focus = BLHM_ENG_faithful_to_tradition }
 		prerequisite = { focus = BLHM_ENG_anti_submarine_defence }
 		mutually_exclusive = { focus = BLHM_ENG_carrier_groups }
 		mutually_exclusive = { focus = BLHM_ENG_cost_optimisation }
