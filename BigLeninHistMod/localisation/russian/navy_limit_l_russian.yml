@@ -3,7 +3,7 @@
  GetShipCount_def:0 "£fleet_texticon Количество кораблей: [?THIS.get_num_ships]"
  GetCommandLimit_under_def:0 "£command_power_texticon §GЛимит командования: [?THIS.command_limit_used]/150§!"
  GetCommandLimit_equal_def:0 "£command_power_texticon §HЛимит командования: [?THIS.command_limit_used]/150§!"
- GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/150 Корабли вашей страны не смогут наносить урон врагу!§!"
+ GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/150 Все флоты вашей страны не смогут наносить урон врагу!§!"
  TOTAL_SHIPS_CALCULATOR:0 "[?ROOT.number_of_ships_calculator]"
  COMMAND_LIMIT:0 "[GetCalculatorCommandLimit]"
  NUM_CAPITAL_SHIPS_CALCULATOR:0 "[?ROOT.capital_count_calculator]"
