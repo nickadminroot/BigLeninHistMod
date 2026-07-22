@@ -18,6 +18,8 @@
  USA_the_giant_has_awoken_desc:0 "American industry is now fully mobilized for war. Our production capabilities have reached unprecedented levels."
 
  # Economy Laws
+ USA_zero_export_trade_law:0 "No Resource Exports"
+ USA_zero_export_trade_law_desc:0 "While the United States is cut off from international trade, domestic resources remain available at home instead of being exported. Once trade is restored, this law is automatically replaced by Free Trade."
  USA_american_dream:0 "American Dream"
  USA_american_dream_desc:0 "An economic policy focused on maintaining the American standard of living while supporting the war effort through limited mobilization."
  USA_giant_wakes_economy:0 "Giant Wakes Economy"
