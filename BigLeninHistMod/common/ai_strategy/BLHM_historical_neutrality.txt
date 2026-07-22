@@ -3,9 +3,19 @@ BLHM_historical_neutrals_avoid_allies_until_attacked = {
 		OR = {
 			original_tag = BEL
 			original_tag = DEN
+			original_tag = EST
+			original_tag = GRE
 			original_tag = HOL
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = LUX
+			original_tag = NOR
+			original_tag = NPL
 			original_tag = POR
+			original_tag = SPR
 			original_tag = SWE
+			original_tag = SWI
+			original_tag = YUG
 		}
 	}
 
