@@ -23,7 +23,7 @@ Generic builtin and user agents are disabled for this project. Do not use agent 
 Project agents receive project tools and can run the standalone `scripts/docs-search.mjs` CLI. Every HOI4 child task should require the agent to:
 
 1. extract domain-specific words, exact identifiers, effects, triggers, modifiers, scopes, and localization terms from the request;
-2. run `rtk node scripts/docs-search.mjs --query "<term>" --mode hybrid --limit 5` for unfamiliar or engine-sensitive terms before planning or editing;
+2. run `node scripts/docs-search.mjs --query "<term>" --mode hybrid --limit 5` for unfamiliar or engine-sensitive terms before planning or editing;
 3. search both exact tokens and a short conceptual phrase;
 4. verify documentation against the actual mod and local vanilla files;
 5. cite documentation paths in evidence, plans, handoffs, and reviews.

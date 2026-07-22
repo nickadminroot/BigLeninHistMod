@@ -38,7 +38,7 @@ focus = {
 Затем создаёт manifest из корня репозитория:
 
 ```powershell
-rtk python scripts/icon-manifest.py new `
+python scripts/icon-manifest.py new `
   --type focus `
   --id "TAG_my_new_focus" `
   --source-file "common/national_focus/country.txt" `
@@ -62,7 +62,7 @@ TAG_industrial_spirit = {
 Manifest создаётся так:
 
 ```powershell
-rtk python scripts/icon-manifest.py new `
+python scripts/icon-manifest.py new `
   --type idea `
   --id "TAG_industrial_spirit" `
   --source-file "common/ideas/country.txt" `
@@ -86,7 +86,7 @@ TAG_industrial_dynamic_modifier = {
 Manifest:
 
 ```powershell
-rtk python scripts/icon-manifest.py new `
+python scripts/icon-manifest.py new `
   --type dynamic_modifier `
   --id "TAG_industrial_dynamic_modifier" `
   --source-file "common/dynamic_modifiers/country.txt" `
@@ -101,8 +101,8 @@ rtk python scripts/icon-manifest.py new `
 После создания контента агент запускает только быструю проверку:
 
 ```powershell
-rtk python scripts/icon-manifest.py validate
-rtk python scripts/icon-manifest.py status
+python scripts/icon-manifest.py validate
+python scripts/icon-manifest.py status
 ```
 
 Агент **не запускает ComfyUI**, не создаёт DDS/GFX и не заменяет fallback reference.
@@ -207,21 +207,21 @@ python main.py --listen 127.0.0.1 --port 8188
 Все pending assets:
 
 ```powershell
-rtk python scripts/icon-manifest.py status
-rtk python scripts/icon-manifest.py generate --limit 10 --sync
+python scripts/icon-manifest.py status
+python scripts/icon-manifest.py generate --limit 10 --sync
 ```
 
 Только идеи или динамические модификаторы:
 
 ```powershell
-rtk python scripts/icon-manifest.py generate --type idea --limit 10 --sync
-rtk python scripts/icon-manifest.py generate --type dynamic_modifier --limit 10 --sync
+python scripts/icon-manifest.py generate --type idea --limit 10 --sync
+python scripts/icon-manifest.py generate --type dynamic_modifier --limit 10 --sync
 ```
 
 Конкретные идеи:
 
 ```powershell
-rtk python scripts/icon-manifest.py generate `
+python scripts/icon-manifest.py generate `
   --type idea `
   --ids "FRA_rearmament_spirit,SOV_industrial_mobilization" `
   --sync
@@ -230,7 +230,7 @@ rtk python scripts/icon-manifest.py generate `
 Перегенерация:
 
 ```powershell
-rtk python scripts/icon-manifest.py generate `
+python scripts/icon-manifest.py generate `
   --type idea `
   --ids "FRA_rearmament_spirit" `
   --force `
@@ -244,17 +244,17 @@ rtk python scripts/icon-manifest.py generate `
 Экспортировать все запросы в стандартном стиле (используется по умолчанию):
 
 ```powershell
-rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
+python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
 ```
 
 Доступны два стилевых пресета для развёрнутого позитивного промпта:
 
 ```powershell
 # Прежний тёмный ванильный стиль
-rtk python scripts/icon-manifest.py export --style standard --output "build/icon-requests-standard.jsonl"
+python scripts/icon-manifest.py export --style standard --output "build/icon-requests-standard.jsonl"
 
 # Более светлая сине-красно-белая стилистика Союзников
-rtk python scripts/icon-manifest.py export --style allied --output "build/icon-requests-allied.jsonl"
+python scripts/icon-manifest.py export --style allied --output "build/icon-requests-allied.jsonl"
 ```
 
 Стиль не меняет сюжетный `prompt` в manifest и выбирается только при экспорте, поэтому один набор manifests можно безопасно экспортировать в нескольких вариантах.
@@ -262,10 +262,10 @@ rtk python scripts/icon-manifest.py export --style allied --output "build/icon-r
 Только один тип:
 
 ```powershell
-rtk python scripts/icon-manifest.py export `
+python scripts/icon-manifest.py export `
   --type idea `
   --output "build/idea-icon-requests.jsonl"
-rtk python scripts/icon-manifest.py export `
+python scripts/icon-manifest.py export `
   --type dynamic_modifier `
   --output "build/dynamic-modifier-icon-requests.jsonl"
 ```
@@ -295,7 +295,7 @@ idea_custom_dynamic_modifier_<modifier_id>.png
 Допустимы `.png`, `.webp` и `.dds`. Для уже подготовленных прозрачных файлов PNG/WebP пропорционально вписываются по центру прозрачного холста 100x88 для фокусов или 65x67 для идей и динамических модификаторов; изображение не растягивается по отдельным осям. Готовый DDS уже должен иметь правильный размер.
 
 ```powershell
-rtk python scripts/icon-manifest.py ingest `
+python scripts/icon-manifest.py ingest `
   --input-dir "G:/generated-icons" `
   --sync
 ```
@@ -303,7 +303,7 @@ rtk python scripts/icon-manifest.py ingest `
 `ingest --preprocess` также принимает необработанный экспорт генератора. Одиночный файл может называться полным `subject_prompt`, а лист из четырёх изображений — диапазоном номеров запросов, например `101-104.png`. Лист должен быть сеткой 2x2 в порядке: верхний левый, верхний правый, нижний левый, нижний правый. Команда сопоставляет запросы по JSON/JSONL, предпочитает полноразмерный одиночный файл дубликату из листа, удаляет фон через `rembg`, обрезает прозрачные края, заполняет случайные внутренние дырки альфа-канала и затем выполняет обычный импорт.
 
 ```powershell
-rtk python scripts/icon-manifest.py ingest `
+python scripts/icon-manifest.py ingest `
   --input-dir "G:/generated-icons" `
   --preprocess `
   --requests-file "build/icon-requests.jsonl" `
@@ -335,32 +335,32 @@ Manifest после `sync` сохраняется для воспроизвод�
 Можно разделить импорт и применение:
 
 ```powershell
-rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
-rtk python scripts/icon-manifest.py status
-rtk python scripts/icon-manifest.py sync
+python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
+python scripts/icon-manifest.py status
+python scripts/icon-manifest.py sync
 ```
 
 ## 7. Справочник команд
 
 ```powershell
 # Создать manifest
-rtk python scripts/icon-manifest.py new --help
+python scripts/icon-manifest.py new --help
 
 # Проверить всё или один тип
-rtk python scripts/icon-manifest.py validate
-rtk python scripts/icon-manifest.py validate --type idea
+python scripts/icon-manifest.py validate
+python scripts/icon-manifest.py validate --type idea
 
 # pending / ready / applied / broken
-rtk python scripts/icon-manifest.py status
-rtk python scripts/icon-manifest.py status --type idea
-rtk python scripts/icon-manifest.py status --json
+python scripts/icon-manifest.py status
+python scripts/icon-manifest.py status --type idea
+python scripts/icon-manifest.py status --json
 
 # Экспорт/импорт
-rtk python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
-rtk python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
+python scripts/icon-manifest.py export --output "build/icon-requests.jsonl"
+python scripts/icon-manifest.py ingest --input-dir "G:/generated-icons"
 
 # GFX и script references
-rtk python scripts/icon-manifest.py sync
+python scripts/icon-manifest.py sync
 ```
 
 `broken` означает, что source/reference/texture находятся в несовместимом состоянии.
@@ -368,9 +368,9 @@ rtk python scripts/icon-manifest.py sync
 ## 8. Финальная проверка
 
 ```powershell
-rtk python scripts/icon-manifest.py validate
-rtk python scripts/validate-icon-references.py
-rtk node scripts/hoi4-mcp-cli.js gui_validate --check_textures true
+python scripts/icon-manifest.py validate
+python scripts/validate-icon-references.py
+node scripts/hoi4-mcp-cli.js gui_validate --check_textures true
 ```
 
 `gui_validate` проверяет весь интерфейс и может показать существующие baseline-проблемы с vanilla-спрайтами. Для этого пайплайна обязательны успешные первые две проверки; общий GUI-отчёт сравнивается с baseline.

@@ -20,14 +20,14 @@ BigLeninHistMod is a vanilla-like, multiplayer-oriented historical HOI4 mod focu
 4. Use `scripts/hoi4-mcp-cli.js` for script, reference, scope, mod-structure, and localization operations. Use `scripts/docs-search.mjs` (or `scripts/docs-search.cmd` on Windows) for local documentation search. Both CLIs are intentionally one-shot: run at most one CLI invocation per `bash` tool call. Do not hide repeated calls in shell loops or chained commands; issue 2-4 independent read-only calls as separate parallel `bash` tool calls instead, and never parallelize write tools.
 5. Keep effects, visible tooltips, idea variants, and English/Russian localization synchronized.
 6. When adding a focus, idea, or dynamic modifier that needs a new custom icon, keep a valid fallback `icon`/`picture` in the script and create `icon-manifests/focus/<focus_id>.json`, `icon-manifests/idea/<idea_id>.json`, or `icon-manifests/dynamic_modifier/<modifier_id>.json` with `scripts/icon-manifest.py new`. Do not generate images, edit the shared generated GFX, or switch to the custom sprite during normal gameplay implementation. Follow [GENERATING_ICONS.md](GENERATING_ICONS.md), including its parallel-branch integration workflow.
-7. Validate the changed files and references before reporting completion. For deferred icons, run `rtk python scripts/icon-manifest.py validate`.
+7. Validate the changed files and references before reporting completion. For deferred icons, run `python scripts/icon-manifest.py validate`.
 
 The local documentation corpus is under `docs/rag/corpus/`. The standalone `scripts/docs-search.mjs` CLI combines exact grep-style matching, BM25, and optional semantic RAG; use it instead of automatic context injection or codebase-memory. It works outside pi and has a Windows `scripts/docs-search.cmd` wrapper.
 
 ```bash
-rtk node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
-rtk node scripts/docs-search.mjs --status
-rtk node scripts/docs-search.mjs --reindex  # requires RAG_API_KEY
+node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
+node scripts/docs-search.mjs --status
+node scripts/docs-search.mjs --reindex  # requires RAG_API_KEY
 ```
 
 Use `--json` for scripts/IDE integrations, `--root <path>` when running against another checkout, and `scripts/docs-search.cmd` instead of `node ...` on Windows if preferred.
@@ -39,7 +39,6 @@ Use `--json` for scripts/IDE integrations, `--root <path>` when running against 
 - Do not introduce random or hidden rewards without an accurate visible tooltip.
 - Do not run destructive commands or Git lifecycle operations without explicit user approval.
 - Run `python scripts/hoi4-smoke-windows.py` only when the user explicitly requests the Windows smoke test; follow the serialized procedure below.
-- Prefix shell commands with `rtk`.
 - Use `pwsh`, not legacy Windows PowerShell (`powershell`), for PowerShell commands. When invoking it through Bash, single-quote the `-Command` script so Bash does not expand PowerShell variables such as `$_`.
 
 ## Steam Workshop updates
@@ -53,7 +52,7 @@ Run the test from the repository root in native Windows PowerShell. Close HOI4 a
 Minimal run with the script defaults:
 
 ```powershell
-rtk python scripts/hoi4-smoke-windows.py
+python scripts/hoi4-smoke-windows.py
 ```
 
 Common overrides for a non-default installation or a retained diagnostic run:
@@ -64,7 +63,7 @@ $env:PDX_USER_DIR = "G:\Documents\Paradox Interactive\Hearts of Iron IV"
 $env:SMOKE_TIMEOUT = "180s"
 $env:SMOKE_TAG = "SOV"
 $env:HOI4_SMOKE_KEEP_DATA = "1"
-rtk python scripts/hoi4-smoke-windows.py
+python scripts/hoi4-smoke-windows.py
 ```
 
 - `HOI4_DIR` must contain `hoi4.exe`; `PDX_USER_DIR` is the active Paradox user-data directory. The defaults are defined in the script.
@@ -86,12 +85,12 @@ A user instruction to "work in a worktree" authorizes the coordinating Pi sessio
 
 ```powershell
 # Create from the intended clean base; the helper checks out an existing branch.
-rtk git branch "<name>" "<base-commit>"
-rtk pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
+git branch "<name>" "<base-commit>"
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
 
 # Open a separate Pi/editor session only after "Worktree ready" and path verification.
-rtk git worktree list
-rtk code "../BigLeninHistMod.worktrees/<name>"
+git worktree list
+code "../BigLeninHistMod.worktrees/<name>"
 ```
 
 - Keep the coordinating session in the main repository. Open the implementation session with its working directory at the created worktree and perform all implementation, subagent work, and scoped validation there.
@@ -118,11 +117,11 @@ The MCP CLI is quiet and one-shot: every normal call owns its process and exits,
 Choose checks that match the change:
 
 ```powershell
-rtk node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
-rtk scripts/docs-search.cmd --query "country scope stability" --mode grep --limit 5
-rtk node scripts/hoi4-mcp-cli.js script_validate_file --file "common/national_focus/SOV.txt"
-rtk node scripts/hoi4-mcp-cli.js script_get_references --name "SOV_identifier"
-rtk node scripts/hoi4-mcp-cli.js loc_validate --check_missing_refs true --check_languages true
+node scripts/docs-search.mjs --query "add_stability country scope" --mode hybrid --limit 5
+scripts/docs-search.cmd --query "country scope stability" --mode grep --limit 5
+node scripts/hoi4-mcp-cli.js script_validate_file --file "common/national_focus/SOV.txt"
+node scripts/hoi4-mcp-cli.js script_get_references --name "SOV_identifier"
+node scripts/hoi4-mcp-cli.js loc_validate --check_missing_refs true --check_languages true
 ```
 
 Report commands run, results, and any in-game checks still required.
