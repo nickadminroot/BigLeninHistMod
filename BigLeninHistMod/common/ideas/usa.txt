@@ -2256,6 +2256,7 @@ ideas = {
 			picture = custom_USA_american_dream
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2275,6 +2276,7 @@ ideas = {
 			picture = custom_USA_giant_wakes_economy
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2296,6 +2298,7 @@ ideas = {
 			picture = custom_USA_giant_has_awoken_economy
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2315,6 +2318,7 @@ ideas = {
 			picture = custom_USA_american_economy
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2331,6 +2335,7 @@ ideas = {
 			picture = custom_USA_american_economy_domestic
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2348,6 +2353,7 @@ ideas = {
 			picture = custom_USA_american_economy_modernized
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
@@ -2364,6 +2370,7 @@ ideas = {
 			picture = custom_USA_american_economy_mobilized
 
 			allowed = { always = no }
+			allowed_to_remove = { always = no }
 			allowed_civil_war = { has_government = democratic }
 			removal_cost = -1
 			visible = {
