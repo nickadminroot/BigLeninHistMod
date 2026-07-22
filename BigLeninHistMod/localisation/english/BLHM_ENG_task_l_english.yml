@@ -98,6 +98,8 @@
  BLHM_ENG_fleet_of_britain_dynamic_modifier_desc:0 "The evolving state of the Royal Navy, its doctrine, procurement, and industrial burden."
  BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt:0 "Modify §Y$BLHM_ENG_fleet_of_britain_dynamic_modifier$§! by:"
  BLHM_ENG_refit_ic_cost_tt:0 " $MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|-=%1$"
+ BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_max_range_factor_tt:0 " $MODIFIER_NAVY_MAX_RANGE_FACTOR$: $RIGHT|+=%1$"
+ BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_org_factor_tt:0 " $MODIFIER_NAVY_ORG_FACTOR$: $RIGHT|-=%1$"
  BLHM_ENG_next_generation_fleet_idea:0 "Next-Generation Light Hulls"
  BLHM_ENG_next_generation_fleet_idea_desc:0 "Advanced construction techniques reduce the cost of light ship hulls."
  BLHM_ENG_faithful_to_tradition_idea:0 "Faithful to Tradition"
