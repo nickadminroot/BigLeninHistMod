@@ -250,8 +250,9 @@ add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 add_equipment_bonus = {
 	name = BLHM_ENG_fleet_of_britain_dynamic_modifier
 	bonus = {
-		ship_hull_heavy = { build_cost_ic = 0.15 instant = yes }
-		ship_hull_light = { build_cost_ic = 0.15 instant = yes }
+		ship_hull_heavy = { build_cost_ic = 0.15 hg_attack = -0.05 instant = yes }
+		ship_hull_cruiser = { hg_attack = -0.05 lg_attack = -0.10 instant = yes }
+		ship_hull_light = { build_cost_ic = 0.15 lg_attack = -0.10 instant = yes }
 	}
 }
 add_equipment_bonus = {
@@ -262,10 +263,14 @@ add_equipment_bonus = {
 		heavy_tank_chassis = { build_cost_ic = 0.15 hard_attack = -0.15 soft_attack = 0.10 instant = yes }
 	}
 }
-set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_capital_ship_attack_factor = -0.05 }
-set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_screen_attack_factor = -0.10 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_max_range_factor = 0.10 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_navy_org_factor = -0.10 }
+# Mirror the separate permanent equipment bonuses in the Fleet of Britain tooltip.
+set_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_hull_cost = 0.15 }
+set_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost = 0.15 }
+set_variable = { BLHM_ENG_fleet_of_britain_equipment_carrier_hull_cost = 0 }
+set_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_gun_attack = -0.05 }
+set_variable = { BLHM_ENG_fleet_of_britain_equipment_light_gun_attack = -0.10 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_refit_ic_cost = 0.25 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = 0.10 }
 set_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0 }
