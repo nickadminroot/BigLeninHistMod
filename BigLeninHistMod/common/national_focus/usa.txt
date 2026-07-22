@@ -1148,10 +1148,6 @@ focus_tree = {
 		#ai_will_do = {
 		#	factor = 1
 		#}
-		complete_tooltip = {
-			custom_effect_tooltip = BLHM_military_construction_tt
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
