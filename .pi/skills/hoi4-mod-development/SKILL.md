@@ -266,6 +266,7 @@ Many mods already include partial translations. When creating a translation subm
 ### Project-Specific Terms
 
 - **«Харда» / hard** means **Hard Attack** (`hard_attack`) — «противотанковая атака» or «тяжёлая атака» in Russian terminology. Do not confuse it with an armoured-division attack modifier such as `army_armor_attack_factor`: `hard_attack` is an equipment/unit combat stat used against hard targets.
+- In this project, **«идея» / «национальный дух»** is contextual shorthand for a country-spirit mechanism: it may be an `idea`, a `dynamic_modifier`, or another national-spirit implementation. Determine the concrete type from the surrounding script and references; never infer it from the Russian term alone.
 
 ### Clausewitz/PDX Script Syntax
 

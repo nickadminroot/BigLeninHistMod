@@ -39,18 +39,21 @@ defined_text = {
 	name = BLHM_ENG_GetNewTanksProductionCost
 	text = {
 		trigger = {
+			has_country_flag = BLHM_ENG_new_tanks_recipient
 			ENG = { has_completed_focus = BLHM_ENG_global_tank_doctrine_update }
 		}
 		localization_key = BLHM_ENG_new_tanks_equipment_cost_neutral_tt
 	}
 	text = {
 		trigger = {
+			has_country_flag = BLHM_ENG_new_tanks_recipient
 			ENG = { has_completed_focus = BLHM_ENG_sherman_firefly }
 		}
 		localization_key = BLHM_ENG_new_tanks_equipment_cost_firefly_tt
 	}
 	text = {
 		trigger = {
+			has_country_flag = BLHM_ENG_new_tanks_recipient
 			ENG = { has_completed_focus = BLHM_ENG_seventeen_pounder }
 		}
 		localization_key = BLHM_ENG_new_tanks_equipment_cost_hard_attack_neutral_tt
