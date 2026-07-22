@@ -143,3 +143,53 @@ defined_text = {
 		localization_key = generic_null
 	}
 }
+
+# Render the live Fleet of Britain equipment values with the same good/bad colours
+# used by normal modifier tooltips. Positive production cost is bad; negative cost
+# is good. Attack uses the normal polarity (positive good, negative bad).
+# These values mirror the country variables changed by the British naval focuses.
+
+# Heavy hull production cost
+
+defined_text = {
+	name = BLHM_ENG_GetFleetHeavyHullCost
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_hull_cost > 0 } } localization_key = BLHM_ENG_fleet_heavy_hull_cost_bad_tt }
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_hull_cost < 0 } } localization_key = BLHM_ENG_fleet_heavy_hull_cost_good_tt }
+	text = { localization_key = BLHM_ENG_fleet_heavy_hull_cost_neutral_tt }
+}
+
+# Heavy-gun attack
+
+defined_text = {
+	name = BLHM_ENG_GetFleetHeavyGunAttack
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_gun_attack > 0 } } localization_key = BLHM_ENG_fleet_heavy_gun_attack_good_tt }
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_gun_attack < 0 } } localization_key = BLHM_ENG_fleet_heavy_gun_attack_bad_tt }
+	text = { localization_key = BLHM_ENG_fleet_heavy_gun_attack_neutral_tt }
+}
+
+# Light hull production cost
+
+defined_text = {
+	name = BLHM_ENG_GetFleetLightHullCost
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost > 0 } } localization_key = BLHM_ENG_fleet_light_hull_cost_bad_tt }
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost < 0 } } localization_key = BLHM_ENG_fleet_light_hull_cost_good_tt }
+	text = { localization_key = BLHM_ENG_fleet_light_hull_cost_neutral_tt }
+}
+
+# Light-gun attack
+
+defined_text = {
+	name = BLHM_ENG_GetFleetLightGunAttack
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_light_gun_attack > 0 } } localization_key = BLHM_ENG_fleet_light_gun_attack_good_tt }
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_light_gun_attack < 0 } } localization_key = BLHM_ENG_fleet_light_gun_attack_bad_tt }
+	text = { localization_key = BLHM_ENG_fleet_light_gun_attack_neutral_tt }
+}
+
+# Carrier hull production cost
+
+defined_text = {
+	name = BLHM_ENG_GetFleetCarrierHullCost
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_carrier_hull_cost > 0 } } localization_key = BLHM_ENG_fleet_carrier_hull_cost_bad_tt }
+	text = { trigger = { check_variable = { BLHM_ENG_fleet_of_britain_equipment_carrier_hull_cost < 0 } } localization_key = BLHM_ENG_fleet_carrier_hull_cost_good_tt }
+	text = { localization_key = BLHM_ENG_fleet_carrier_hull_cost_neutral_tt }
+}

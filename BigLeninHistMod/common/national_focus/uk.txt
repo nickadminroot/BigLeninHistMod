@@ -3370,11 +3370,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_equipment_bonus = {
-				name = BLHM_ENG_next_generation_fleet
-				bonus = { ship_hull_light = { build_cost_ic = -0.10 instant = yes } }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			custom_effect_tooltip = BLHM_ENG_next_generation_fleet_equipment_tt
+			hidden_effect = {
+				add_equipment_bonus = {
+					name = BLHM_ENG_next_generation_fleet
+					bonus = { ship_hull_light = { build_cost_ic = -0.10 instant = yes } }
+				}
+				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost = -0.10 }
 			}
-			hidden_effect = { add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost = -0.10 } }
 			add_tech_bonus = {
 				name = BLHM_ENG_naval_modules_bonus
 				bonus = 2.0
@@ -3436,11 +3440,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_equipment_bonus = {
-				name = BLHM_ENG_carrier_groups
-				bonus = { ship_hull_carrier = { build_cost_ic = -0.15 instant = yes } }
+			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
+			custom_effect_tooltip = BLHM_ENG_carrier_groups_equipment_tt
+			hidden_effect = {
+				add_equipment_bonus = {
+					name = BLHM_ENG_carrier_groups
+					bonus = { ship_hull_carrier = { build_cost_ic = -0.15 instant = yes } }
+				}
+				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_carrier_hull_cost = -0.15 }
 			}
-			hidden_effect = { add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_carrier_hull_cost = -0.15 } }
 			add_tech_bonus = {
 				name = BLHM_ENG_carrier_bonus
 				bonus = 2.0
@@ -3467,15 +3475,16 @@ focus_tree = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_consumer_goods_factor = -0.10 tooltip = consumer_goods_factor_tt }
 			add_to_variable = { BLHM_ENG_fleet_of_britain_dynamic_modifier_production_speed_dockyard_factor = 0.10 tooltip = production_speed_dockyard_factor_tt }
-			add_equipment_bonus = {
-				name = BLHM_ENG_cost_optimisation_guns
-				bonus = {
-					ship_hull_heavy = { hg_attack = -0.10 instant = yes }
-					ship_hull_cruiser = { hg_attack = -0.10 lg_attack = -0.10 instant = yes }
-					ship_hull_light = { lg_attack = -0.10 instant = yes }
-				}
-			}
+			custom_effect_tooltip = BLHM_ENG_cost_optimisation_equipment_tt
 			hidden_effect = {
+				add_equipment_bonus = {
+					name = BLHM_ENG_cost_optimisation_guns
+					bonus = {
+						ship_hull_heavy = { hg_attack = -0.10 instant = yes }
+						ship_hull_cruiser = { hg_attack = -0.10 lg_attack = -0.10 instant = yes }
+						ship_hull_light = { lg_attack = -0.10 instant = yes }
+					}
+				}
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_gun_attack = -0.10 }
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_light_gun_attack = -0.10 }
 			}
@@ -3523,14 +3532,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
-			add_equipment_bonus = {
-				name = BLHM_ENG_young_school
-				bonus = {
-					ship_hull_light = { build_cost_ic = -0.20 lg_attack = 0.20 instant = yes }
-					ship_hull_cruiser = { lg_attack = 0.20 instant = yes }
-				}
-			}
+			custom_effect_tooltip = BLHM_ENG_young_school_equipment_tt
 			hidden_effect = {
+				add_equipment_bonus = {
+					name = BLHM_ENG_young_school
+					bonus = {
+						ship_hull_light = { build_cost_ic = -0.20 lg_attack = 0.20 instant = yes }
+						ship_hull_cruiser = { lg_attack = 0.20 instant = yes }
+					}
+				}
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_light_hull_cost = -0.20 }
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_light_gun_attack = 0.20 }
 			}
@@ -3555,14 +3565,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			custom_effect_tooltip = BLHM_ENG_modify_fleet_of_britain_dynamic_modifier_tt
-			add_equipment_bonus = {
-				name = BLHM_ENG_old_guard
-				bonus = {
-					ship_hull_heavy = { build_cost_ic = -0.20 hg_attack = 0.15 instant = yes }
-					ship_hull_cruiser = { hg_attack = 0.15 instant = yes }
-				}
-			}
+			custom_effect_tooltip = BLHM_ENG_old_guard_equipment_tt
 			hidden_effect = {
+				add_equipment_bonus = {
+					name = BLHM_ENG_old_guard
+					bonus = {
+						ship_hull_heavy = { build_cost_ic = -0.20 hg_attack = 0.15 instant = yes }
+						ship_hull_cruiser = { hg_attack = 0.15 instant = yes }
+					}
+				}
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_hull_cost = -0.20 }
 				add_to_variable = { BLHM_ENG_fleet_of_britain_equipment_heavy_gun_attack = 0.15 }
 			}
