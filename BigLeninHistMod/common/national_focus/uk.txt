@@ -4584,12 +4584,7 @@ focus_tree = {
 		completion_reward = {
 			CAN = {
 				add_ideas = BLHM_ENG_canadian_landings_idea
-				add_doctrine_cost_reduction = {
-					name = BLHM_ENG_canadian_landings
-					cost_reduction = 0.40
-					uses = 1
-					category = special_forces_doctrine
-				}
+				add_potential_special_forces_tree = yes
 			}
 			custom_effect_tooltip = BLHM_ENG_canadian_landings_sf_doctrine_tt
 		}
@@ -4667,13 +4662,9 @@ focus_tree = {
 		completion_reward = {
 			NZL = {
 				add_ideas = BLHM_ENG_new_zealand_special_forces_idea
-				add_doctrine_cost_reduction = {
-					name = BLHM_ENG_new_zealand_special_forces
-					cost_reduction = 0.40
-					uses = 1
-					category = special_forces_doctrine
-				}
+				add_potential_special_forces_tree = yes
 			}
+			custom_effect_tooltip = BLHM_ENG_new_zealand_special_forces_sf_doctrine_tt
 		}
 	}
 
