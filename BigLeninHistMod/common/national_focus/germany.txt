@@ -4135,22 +4135,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_tech = atomic_research }
-				}
-				add_tech_bonus = {
-					name = GER_uranverein
-					bonus = 1.0
-					uses = 1
-					category = nuclear
-				}
+			set_technology = {
+				atomic_research = 1
+				popup = yes
 			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.5
-				}
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+				custom_effect_tooltip = GER_uranverein_projects_tt
 			}
 
 			add_timed_idea = { idea = GER_wunderwaffe_investments_idea days = 365 }
@@ -4158,81 +4149,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			if = {
-				limit = {
-					OR = {
-						NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-						NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
-						AND = {
-							has_dlc = "Gotterdammerung"
-							NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
-						}
-					}
-				}
-				GER_add_or_modify_wunderwaffen = yes
-			}
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_reactor_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_reactor_speed_factor_tt
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_bomb_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_bomb_speed_factor_tt
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
-				}
-				add_to_variable = { 
-					GER_wunderwaffen_sp_nuclear_warheads_speed_factor = GER_wunderwaffe_research_speed_bonus
-					tooltip = sp_nuclear_warheads_speed_factor_tt
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
-				}
-				complete_special_project = {
-					project = sp:sp_nuclear_reactor
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					NOT = { is_special_project_completed = sp:sp_nuclear_bomb }
-				}
-				complete_special_project = {
-					project = sp:sp_nuclear_bomb
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					NOT = { is_special_project_completed = sp:sp_nuclear_warheads }
-				}
-				complete_special_project = {
-					project = sp:sp_nuclear_warheads
-				}
-			}
-
 			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_stable }
-			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_shortage }
+			custom_effect_tooltip = GER_uranverein_heavy_water_switch_tt
 		}
 	}
 	

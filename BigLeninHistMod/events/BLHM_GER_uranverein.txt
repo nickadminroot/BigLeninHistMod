@@ -1,0 +1,25 @@
+add_namespace = BLHM_GER_uranverein
+
+country_event = {
+	id = BLHM_GER_uranverein.1
+	title = BLHM_GER_uranverein.1.t
+	desc = BLHM_GER_uranverein.1.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = BLHM_GER_uranverein.1.a
+		if = {
+			limit = {
+				NOT = { controls_state = 110 }
+			}
+			remove_dynamic_modifier = { modifier = GER_heavy_water_supplies_stable }
+			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_shortage }
+		}
+		else = {
+			remove_dynamic_modifier = { modifier = GER_heavy_water_supplies_shortage }
+			add_dynamic_modifier = { modifier = GER_heavy_water_supplies_stable }
+		}
+	}
+}
