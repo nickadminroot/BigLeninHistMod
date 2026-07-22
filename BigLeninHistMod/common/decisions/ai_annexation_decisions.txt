@@ -378,10 +378,14 @@ USA_annex_mexico = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		MEX = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		custom_effect_tooltip = USA_annex_mexico_compliance_tt
+		hidden_effect = {
+			# Apply this while MEX still owns its core states; annex_country changes their owner.
+			MEX = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_compliance = 100
+				}
 			}
 		}
 		annex_country = { target = MEX transfer_troops = yes }

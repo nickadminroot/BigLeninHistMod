@@ -43,7 +43,7 @@
 
  # USA Decisions
  USA_annex_mexico: "Annex Mexico"
- USA_annex_mexico_desc: "Annex Mexico into the United States."
+ USA_annex_mexico_desc: "Annex Mexico into the United States. Mexican core states will have §Y100%§! compliance."
 
  # USSR Category
  ai_annexation_sov_cat: "AI Annexation - USSR"
@@ -64,3 +64,4 @@
  # Research Slot Tooltips
  GER_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries puppeted"
  ENG_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries annexed"
+ USA_annex_mexico_compliance_tt:0 "Sets compliance to §Y100%§! in every Mexican core state before annexation."
