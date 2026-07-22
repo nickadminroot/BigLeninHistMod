@@ -202,15 +202,12 @@ country_event = {
 			}
 		}
 		CAN = {
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
 		}
-		CAN = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -234,15 +231,12 @@ country_event = {
 			}
 		}
 		SAF = {
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
 		}
-		SAF = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -266,15 +260,12 @@ country_event = {
 			}
 		}
 		RAJ = {
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
 		}
-		RAJ = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -298,15 +289,12 @@ country_event = {
 			}
 		}
 		AST = {
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
 		}
-		AST = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
@@ -330,15 +318,12 @@ country_event = {
 			}
 		}
 		NZL = {
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_armor_speed_factor = -0.15 }
 			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_army_org_factor = -0.15 }
-			set_variable = { BLHM_ENG_new_tanks_dynamic_modifier_armor_factor = 0.10 }
 			clr_country_flag = BLHM_ENG_new_tanks_recipient
 			remove_dynamic_modifier = { modifier = BLHM_ENG_allied_tanks_dynamic_modifier }
 			add_dynamic_modifier = { modifier = BLHM_ENG_new_tanks_dynamic_modifier }
 			set_country_flag = BLHM_ENG_new_tanks_recipient
 		}
-		NZL = { BLHM_ENG_apply_completed_tank_upgrades = yes }
 	}
 
 	option = {
