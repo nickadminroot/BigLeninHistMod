@@ -267,6 +267,14 @@ Many mods already include partial translations. When creating a translation subm
 
 - **«Харда» / hard** means **Hard Attack** (`hard_attack`) — «противотанковая атака» or «тяжёлая атака» in Russian terminology. Do not confuse it with an armoured-division attack modifier such as `army_armor_attack_factor`: `hard_attack` is an equipment/unit combat stat used against hard targets.
 
+### Strict entity-selection rule
+
+- Add a **design bureau (КБ)** or **Military Industrial Organization (MIO)** only when the request explicitly asks for a КБ/design bureau or MIO.
+- Add an **economic law** only when the request explicitly asks for a law.
+- Add an **advisor** only when the request explicitly asks for an advisor.
+- Never freely reinterpret a request for an **idea/national spirit** as one of these specialized entities (including an industrial concern, designer, manufacturer, MIO, law, or advisor).
+- For an **idea/national spirit**, choose only an ordinary static `national idea` or a `dynamic modifier`, based on the surrounding meaning and the existing design; do not substitute any other specialized type.
+
 ### Clausewitz/PDX Script Syntax
 
 HOI4 uses a key-value scripting language called Clausewitz (or PDX script):

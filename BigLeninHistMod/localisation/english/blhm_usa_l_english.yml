@@ -29,10 +29,6 @@
  USA_soviet_american_agreement:0 "Soviet-American Agreement"
  USA_soviet_american_agreement_desc:0 "An economic cooperation agreement between the United States and the Soviet Union boosts our industrial capacity and reduces consumer goods demand."
 
- # Soviet-American spirit modifiers
- USA_soviet_american_agreement_modifier:0 "Soviet-American Agreement"
- USA_soviet_american_agreement_modifier_desc:0 "Industrial capacity +5%, Consumer Goods -5%"
-
  # Tooltips
  BLHM_embargo_germany_tt:0 "§YEmbargo Germany§!\nThe USA, United Kingdom, France, the Netherlands, Belgium, and all Allied majors will embargo Germany."
  BLHM_embargo_japan_tt:0 "§YEmbargo Japan§!\nThe USA, the Netherlands, the Dutch East Indies, and all Allied majors will embargo Japan."

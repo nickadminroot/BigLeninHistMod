@@ -1336,6 +1336,19 @@ ideas = {
 		}
 
 		# Stage 2: Economic Modernization ideas
+		USA_soviet_american_agreement = {
+			picture = custom_USA_soviet_american_agreement
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
 		USA_aid = {
 			picture = custom_USA_aid
 
@@ -2215,18 +2228,6 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.05
-			}
-		}
-
-		USA_soviet_american_agreement = {
-			picture = custom_USA_soviet_american_agreement
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = 0.05
-				consumer_goods_factor = -0.05
 			}
 		}
 
