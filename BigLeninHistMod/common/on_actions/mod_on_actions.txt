@@ -197,19 +197,18 @@ on_actions = {
 
 	}
 
-	on_monthly = {
-		effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
+	on_daily = {
+		effect = { # Release the startup embargoes on the first day of 1940.
 			if = {
-				limit = {	
+				limit = {
 					date > 1939.12.31
-					NOT = { has_global_flag = BLHM_embargo_released }
+					NOT = { has_global_flag = BLHM_embargo_released_1940 }
 				}
 				every_country = {
 					limit = {
 						NOT = { tag = USA }
-				 		is_embargoing = USA
-				 	}
-				 	break_embargo = USA
+					}
+					break_embargo = USA
 				}
 				every_country = {
 					limit = {
@@ -228,9 +227,13 @@ on_actions = {
 						}
 					}
 				}
-				set_global_flag = BLHM_embargo_released
-			 }
-			
+				set_global_flag = BLHM_embargo_released_1940
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
 			ROOT = { calculate_africa_control = yes }
 			
 			every_country = {
