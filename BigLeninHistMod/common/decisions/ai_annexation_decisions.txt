@@ -160,13 +160,20 @@ ai_annexation_eng_cat = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		CAN = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			CAN = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_CAN_core
+				}
 			}
 		}
 		annex_country = { target = CAN transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_CAN_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_CAN_core
+		}
 		set_country_flag = ENG_canada_annexed
 		hidden_effect = {
 			ENG_update_research_slots_ai = yes
@@ -202,13 +209,20 @@ ENG_annex_australia = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		AST = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			AST = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_AST_core
+				}
 			}
 		}
 		annex_country = { target = AST transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_AST_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_AST_core
+		}
 		set_country_flag = ENG_australia_annexed
 		hidden_effect = {
 			ENG_update_research_slots_ai = yes
@@ -244,13 +258,20 @@ ENG_annex_newzealand = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		NZL = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			NZL = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_NZL_core
+				}
 			}
 		}
 		annex_country = { target = NZL transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_NZL_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_NZL_core
+		}
 		set_country_flag = ENG_newzealand_annexed
 		hidden_effect = {
 			ENG_update_research_slots_ai = yes
@@ -286,13 +307,20 @@ ENG_annex_southafrica = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		SAF = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			SAF = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_SAF_core
+				}
 			}
 		}
 		annex_country = { target = SAF transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_SAF_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_SAF_core
+		}
 		set_country_flag = ENG_southafrica_annexed
 		hidden_effect = {
 			ENG_update_research_slots_ai = yes
@@ -328,13 +356,20 @@ ENG_annex_india = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		RAJ = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			RAJ = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_RAJ_core
+				}
 			}
 		}
 		annex_country = { target = RAJ transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_RAJ_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_RAJ_core
+		}
 		set_country_flag = ENG_india_annexed
 		hidden_effect = {
 			ENG_update_research_slots_ai = yes
@@ -380,15 +415,20 @@ USA_annex_mexico = {
 	complete_effect = {
 		custom_effect_tooltip = USA_annex_mexico_compliance_tt
 		hidden_effect = {
-			# Apply this while MEX still owns its core states; annex_country changes their owner.
+			# Mark the states before annexation; compliance is applied after ownership changes.
 			MEX = {
 				every_owned_state = {
 					limit = { is_core_of = PREV }
-					set_compliance = 100
+					set_state_flag = BLHM_ai_annex_MEX_core
 				}
 			}
 		}
 		annex_country = { target = MEX transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_MEX_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_MEX_core
+		}
 		set_country_flag = USA_mexico_annexed
 	}
 	
@@ -427,13 +467,20 @@ ai_annexation_sov_cat = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		MON = {
-			every_owned_state = {
-				limit = { is_core_of = PREV }
-				set_compliance = 100
+		hidden_effect = {
+			MON = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_MON_core
+				}
 			}
 		}
 		annex_country = { target = MON transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_MON_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_MON_core
+		}
 		set_country_flag = SOV_mongolia_annexed
 	}
 	
@@ -474,15 +521,22 @@ ai_annexation_sov_cat = {
  	
  	fire_only_once = yes
  	
- 	complete_effect = {
- 		MAN = {
- 			every_owned_state = {
- 				limit = { is_core_of = PREV }
- 				set_compliance = 100
- 			}
- 		}
- 		annex_country = { target = MAN transfer_troops = yes }
- 		set_country_flag = JAP_manchukuo_annexed
+	complete_effect = {
+		hidden_effect = {
+			MAN = {
+				every_owned_state = {
+					limit = { is_core_of = PREV }
+					set_state_flag = BLHM_ai_annex_MAN_core
+				}
+			}
+		}
+		annex_country = { target = MAN transfer_troops = yes }
+		every_owned_state = {
+			limit = { has_state_flag = BLHM_ai_annex_MAN_core }
+			set_compliance = 100
+			clr_state_flag = BLHM_ai_annex_MAN_core
+		}
+		set_country_flag = JAP_manchukuo_annexed
  	}
  	
  	ai_will_do = {

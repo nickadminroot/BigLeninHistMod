@@ -64,4 +64,4 @@
  # Research Slot Tooltips
  GER_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries puppeted"
  ENG_annex_research_slots_tt: "Gains §Y1§! research slot for every two countries annexed"
- USA_annex_mexico_compliance_tt:0 "Sets compliance to §Y100%§! in every Mexican core state before annexation."
+ USA_annex_mexico_compliance_tt:0 "Sets compliance to §Y100%§! in every former Mexican core state after annexation."
