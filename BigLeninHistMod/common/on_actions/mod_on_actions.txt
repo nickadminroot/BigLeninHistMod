@@ -198,22 +198,18 @@ on_actions = {
 	}
 
 	on_daily = {
-		effect = { # Release the startup embargoes on the first day of 1940.
+		effect = { # Release the startup embargoes on 1940.1.1.
 			if = {
 				limit = {
 					date > 1939.12.31
-					NOT = { has_global_flag = BLHM_embargo_released_1940 }
+					date < 1940.1.2
 				}
 				every_country = {
 					limit = {
 						NOT = { tag = USA }
 					}
+					# Run both effects from their respective sending countries.
 					break_embargo = USA
-				}
-				every_country = {
-					limit = {
-						NOT = { tag = USA }
-					}
 					USA = { break_embargo = PREV }
 				}
 				USA = {
@@ -227,7 +223,6 @@ on_actions = {
 						}
 					}
 				}
-				set_global_flag = BLHM_embargo_released_1940
 			}
 		}
 	}
@@ -279,23 +274,6 @@ on_actions = {
 			}
 		}
 	}
-
-	# on_monthly = {
-	# 	effect = { # NEVER FORGET! Important to include this line to distinguish it from random_events = { ... }
-	# 		if = {
-	# 			limit = {	
-	# 				date > 1938.11.1
-	# 				date < 1939.2.1
-	# 			}
-	# 			every_country = {
-	# 				limit = {
-	# 					is_embargoing = USA
-	# 				}
-	# 				break_embargo = USA
-	# 			}
-	# 		}
-	# 	}
-	# }
 }
 
 
