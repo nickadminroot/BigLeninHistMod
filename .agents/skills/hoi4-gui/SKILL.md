@@ -53,6 +53,19 @@ node scripts/hoi4-mcp-cli.js gui_get_sprites --type spriteType
 node scripts/hoi4-mcp-cli.js gui_get_sprites --query "goal" --type corneredTileSpriteType
 ```
 
+## Debug scripted GUI layout
+
+Use this sequence when a scripted GUI looks clipped, misplaced, or incomplete:
+
+1. Separate visible geometry from dynamic-list population. Search the array's `clear_array`, `add_to_array`, and filter/limit logic, then prove the expected entry count independently of layout.
+2. Resolve every `parent_window_name` against local vanilla `.gui` files. Inspect the parent size, `clipping`, `orientation`, and `origo`; nested `100%%` dimensions are parent-relative, and a small or clipping parent can cap a larger child.
+3. For a player-context singleton panel, bind to an appropriate non-clipping root when the context permits. Preserve the panel's visibility and context semantics while changing the anchor.
+4. For bottom panels, follow vanilla anchor conventions such as `center_down` with a suitable `origo`. Calculate card size, viewport height, number of fully visible cards, and scrollbar gap arithmetically.
+5. Build a red-capable static geometry/data check before editing: assert the intended sizes, anchor, binding, and entry-count condition. Then run GUI parsing and script validation.
+6. Require a live screenshot check at the target resolution and UI scale. Infer anchor changes from the measured old position before changing `x`/`y`; parser output alone cannot establish visual correctness.
+
+Keep edits minimal and preserve each existing file's line endings. Completion requires all six checks, with the live screenshot confirming placement, clipping, text fit, and the expected number of entries.
+
 ## Create Scripted GUI
 
 Generates a scripted GUI definition file (`common/scripted_guis/*.txt`):

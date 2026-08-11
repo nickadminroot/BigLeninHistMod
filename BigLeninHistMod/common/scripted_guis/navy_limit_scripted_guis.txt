@@ -22,7 +22,7 @@ scripted_gui = {
 	}
 	horst_admiral_current_command_limit_used = {
 		context_type = player_context 
-		parent_window_name  = "navy_reserve_portrait_window" 
+		parent_window_name  = "navy_leader_window"
 		window_name = "horst_admiral_current_command_limit_used_window"
 		dynamic_lists = { 
 			admirals_leading_battlefleets_list = {

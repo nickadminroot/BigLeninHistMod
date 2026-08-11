@@ -37,13 +37,15 @@ guiTypes = {
 
 	containerWindowType = {    
 		name = "horst_admiral_current_command_limit_used_window"
-		size = { width = 950 height = 1100 } 
-		position = { x=55 y =-350 }  	 
+		size = { width = 300 height = 248 }
+		position = { x = 290 y = 0 }
+		clipping = no
+		orientation = center_down
+		origo = lower_left
 		fade_time = 300
 		fade_type = linear
 		show_sound = menu_open_window
 		click_to_front = yes
-		orientation = center
 		background = {
 			name = "Background"
 			spriteType = "GFX_tiled_window_transparent"
@@ -52,8 +54,8 @@ guiTypes = {
 		containerWindowType = {
             name = "admirals_leading_battlefleets_list_container"
             position = { x=12 y =-2 }
-            size = { width = 844 height=324 }
-            margin = { top = 10 bottom = 10 }
+            size = { width = 280 height=248 }
+            margin = { top = 4 bottom = 4 }
 			Orientation = upper_left
             verticalScrollbar = "right_vertical_slider"
             
@@ -65,8 +67,8 @@ guiTypes = {
             gridboxType = {
                 name ="admirals_leading_battlefleets_list"
                 position = { x = 0 y = 0 }
-				size = { width = 842 height = 100%% }
-				slotsize = { width = 842 height = 1 } #if width or height is 1, it will use slot element's dimension
+				size = { width = 265 height = 100%% }
+				slotsize = { width = 265 height = 1 } #if width or height is 1, it will use slot element's dimension
 				max_slots_horizontal = 1
 				add_horizontal = no
             }
@@ -77,45 +79,36 @@ guiTypes = {
 	containerWindowType = {
 		name = "admirals_with_fleets_list"
 		position = { x = 0 y = 0}	
-		size = { width = 660 height = 120 }
+		size = { width = 265 height = 60 }
 		background = {
 			name = "Background"		
 			quadTextureSprite = "GFX_tiled_plain_bg"
 		}
-		instantTextBoxType = {
-			name = "pp" 
-			position = { x = 110 y = 10 }
-			font = "hoi_18mbs"  
-			text = "[GetAdmiralNameTitle]"
-			format = left
-			maxWidth = 300
-			maxHeight = 24
-			fixedsize = yes
-		}
 			instantTextBoxType = {
 			name = "pp2"
-			position = { x = 110 y = 50 }
-			font = "hoi_18mbs"  
+			position = { x = 50 y = 5 }
+			font = "hoi_16mbs"
 			text = "[GetShipCount]"
 			format = left
-			maxWidth = 500
+			maxWidth = 205
 			maxHeight = 24
 			fixedsize = yes
 		}	
 
 		iconType = {    
 			name = "admiral_portrait"
-			position = { x = 8 y = 10 }    
-			scale = 0.5
+			position = { x = 6 y = 8 }
+			scale = 0.2
 			pdx_tooltip = GetAdmiralPortrait_tt
 		}
 				instantTextBoxType = {
 			name = "name"
-			position = { x = 110 y = 90 }
-			font = "hoi_18mbs"
+			position = { x = 50 y = 31 }
+			font = "hoi_16mbs"
 			text = "[GetCommandLimit]" 
+			pdx_tooltip = GetCommandLimit_tt
 			format = left
-			maxWidth = 600
+			maxWidth = 205
 			maxHeight = 24
 			fixedsize = yes		
 		}	

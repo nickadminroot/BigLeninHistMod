@@ -1550,6 +1550,78 @@ ideas = {
 			}
 		}
 
+
+		USA_american_economy = {
+			picture = custom_USA_american_economy
+
+			allowed = { always = no }
+			allowed_to_remove = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.07
+			}
+		}
+
+		USA_american_economy_domestic = {
+			picture = custom_USA_american_economy_domestic
+
+			allowed = { always = no }
+			allowed_to_remove = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.07
+				production_speed_arms_factory_factor = 0.20
+			}
+		}
+
+		USA_american_economy_modernized = {
+			picture = custom_USA_american_economy_modernized
+
+			allowed = { always = no }
+			allowed_to_remove = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.20
+			}
+		}
+
+		USA_american_economy_mobilized = {
+			picture = custom_USA_american_economy_mobilized
+
+			allowed = { always = no }
+			allowed_to_remove = { always = no }
+			allowed_civil_war = { has_government = democratic }
+			removal_cost = -1
+			visible = {
+				original_tag = USA
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.20
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+
 	}
 
 
@@ -2336,75 +2408,8 @@ ideas = {
 			}
 		}
 
-		USA_american_economy = {
-			picture = custom_USA_american_economy
 
-			allowed = { always = no }
-			allowed_to_remove = { always = no }
-			allowed_civil_war = { has_government = democratic }
-			removal_cost = -1
-			visible = {
-				original_tag = USA
-			}
 
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = -0.07
-			}
-		}
 
-		USA_american_economy_domestic = {
-			picture = custom_USA_american_economy_domestic
-
-			allowed = { always = no }
-			allowed_to_remove = { always = no }
-			allowed_civil_war = { has_government = democratic }
-			removal_cost = -1
-			visible = {
-				original_tag = USA
-			}
-
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = -0.07
-				production_speed_arms_factory_factor = 0.20
-			}
-		}
-
-		USA_american_economy_modernized = {
-			picture = custom_USA_american_economy_modernized
-
-			allowed = { always = no }
-			allowed_to_remove = { always = no }
-			allowed_civil_war = { has_government = democratic }
-			removal_cost = -1
-			visible = {
-				original_tag = USA
-			}
-
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_speed_arms_factory_factor = 0.20
-			}
-		}
-
-		USA_american_economy_mobilized = {
-			picture = custom_USA_american_economy_mobilized
-
-			allowed = { always = no }
-			allowed_to_remove = { always = no }
-			allowed_civil_war = { has_government = democratic }
-			removal_cost = -1
-			visible = {
-				original_tag = USA
-			}
-
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_speed_arms_factory_factor = 0.20
-				industrial_capacity_factory = 0.10
-				research_speed_factor = 0.10
-			}
-		}
 	}
 }

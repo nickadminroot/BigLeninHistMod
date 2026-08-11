@@ -1,9 +1,9 @@
 ﻿l_russian:
  GetAdmiralNameTitle_def:0 "Адмирал [THIS.GetName]"
- GetShipCount_def:0 "£fleet_texticon Количество кораблей: [?THIS.get_num_ships]"
- GetCommandLimit_under_def:0 "£command_power_texticon §GЛимит командования: [?THIS.command_limit_used]/150§!"
- GetCommandLimit_equal_def:0 "£command_power_texticon §HЛимит командования: [?THIS.command_limit_used]/150§!"
- GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/150 Все флоты вашей страны не смогут наносить урон врагу!§!"
+ GetShipCount_def:0 "£fleet_texticon Кораблей: [?THIS.get_num_ships]"
+ GetCommandLimit_under_def:0 "£command_power_texticon §GЛимит: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_equal_def:0 "£command_power_texticon §HЛимит: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_over_def:0 "£command_power_texticon §RЛимит: [?THIS.command_limit_used]/150§!"
  TOTAL_SHIPS_CALCULATOR:0 "[?ROOT.number_of_ships_calculator]"
  COMMAND_LIMIT:0 "[GetCalculatorCommandLimit]"
  NUM_CAPITAL_SHIPS_CALCULATOR:0 "[?ROOT.capital_count_calculator]"
@@ -82,3 +82,5 @@
  GetScreensNeeded_under_def:0 "§GТребуется: [?THIS.needed_screen_count]§!"
  GetScreensNeeded_equal_def:0 "§HТребуется: [?THIS.needed_screen_count]§!"
  GetScreensNeeded_over_def:0 "§RТребуется: [?THIS.needed_screen_count]§!"
+
+ GetCommandLimit_tt:0 "Превышение адмиралом лимита командования §Y150§! приводит к тому, что все флоты вашей страны не смогут наносить урон противнику."

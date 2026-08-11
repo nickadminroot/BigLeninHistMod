@@ -1,9 +1,9 @@
 ﻿l_english:
  GetAdmiralNameTitle_def:0 "Admiral [THIS.GetName]"
- GetShipCount_def:0 "£fleet_texticon Ship Count: [?THIS.get_num_ships]"
- GetCommandLimit_under_def:0 "£command_power_texticon §GCommand Limit: [?THIS.command_limit_used]/150§!"
- GetCommandLimit_equal_def:0 "£command_power_texticon §HCommand Limit: [?THIS.command_limit_used]/150§!"
- GetCommandLimit_over_def:0 "£command_power_texticon §R[?THIS.command_limit_used]/150 Ships of your country won`t be able do deal any damage to the enemy!§!"
+ GetShipCount_def:0 "£fleet_texticon Ships: [?THIS.get_num_ships]"
+ GetCommandLimit_under_def:0 "£command_power_texticon §GLimit: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_equal_def:0 "£command_power_texticon §HLimit: [?THIS.command_limit_used]/150§!"
+ GetCommandLimit_over_def:0 "£command_power_texticon §RLimit: [?THIS.command_limit_used]/150§!"
  TOTAL_SHIPS_CALCULATOR:0 "[?ROOT.number_of_ships_calculator]"
  COMMAND_LIMIT:0 "[GetCalculatorCommandLimit]"
  NUM_CAPITAL_SHIPS_CALCULATOR:0 "[?ROOT.capital_count_calculator]"
@@ -82,3 +82,4 @@
  GetScreensNeeded_under_def:0 "§GNeeded: [?THIS.needed_screen_count]§!"
  GetScreensNeeded_equal_def:0 "§HNeeded: [?THIS.needed_screen_count]§!"
  GetScreensNeeded_over_def:0 "§RNeeded: [?THIS.needed_screen_count]§!"
+ GetCommandLimit_tt:0 "An admiral exceeding §Y150§! command limit causes all fleets of your country to deal no damage to the enemy."
