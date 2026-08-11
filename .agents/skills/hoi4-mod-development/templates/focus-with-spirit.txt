@@ -1,0 +1,55 @@
+# Focus + Spirit Template
+# Focus that grants a national spirit
+
+# === STEP 1: Define the idea in common/ideas/TAG.txt ===
+
+ideas = {
+    country = {
+        TAG_industrial_spirit = {
+            allowed = { always = no }            # Not purchasable
+            allowed_civil_war = { always = yes } # Survives civil war
+            removal_cost = -1                    # Cannot be manually removed
+            picture = generic_production_bonus   # Icon (search with rg)
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = 0.1
+            }
+
+            # Uncomment for equipment bonuses:
+            # equipment_bonus = {
+            #     infantry_equipment = {
+            #         build_cost_ic = -0.10
+            #         instant = yes
+            #     }
+            # }
+        }
+    }
+}
+
+# === STEP 2: Add the focus ===
+
+focus = {
+    id = TAG_industrial_focus
+    icon = GFX_goal_generic_construct_civilian
+    prerequisite = { focus = TAG_parent }
+    x = 0
+    y = 1
+    relative_position_id = TAG_parent
+    cost = 5
+    ai_will_do = { factor = 1 }
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_ideas = TAG_industrial_spirit
+    }
+}
+
+# === STEP 3: Add localization ===
+
+# localisation/english/my_focuses_l_english.yml
+# l_english:
+#  TAG_industrial_focus: "Industrial Development"
+#  TAG_industrial_focus_desc: "Invest in our industrial base to prepare for the challenges ahead."
+#  TAG_industrial_spirit: "Industrial Development Spirit"
+#  TAG_industrial_spirit_desc: "A national spirit representing focused industrial growth.\nIncreases factory output by 5% and construction speed by 10%."

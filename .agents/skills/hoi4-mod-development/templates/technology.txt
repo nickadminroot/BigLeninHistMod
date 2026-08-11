@@ -1,0 +1,52 @@
+# Technology Template
+# Copy this block into your tech file in common/technologies/
+
+technologies = {
+    # Position variables:
+    @1936 = 2
+    @1938 = 4
+    @1939 = 6
+    @1940 = 8
+
+    TAG_my_tech = {
+        # Equipment unlock:
+        enable_equipments = {
+            TAG_infantry_equipment_1
+        }
+
+        # Or subunit unlock:
+        # enable_subunits = {
+        #     TAG_infantry
+        # }
+
+        # Research path:
+        path = {
+            leads_to_tech = TAG_my_tech_2
+            research_cost_coeff = 1
+        }
+
+        # Requirements:
+        research_cost = 1.0
+        start_year = 1936
+
+        # Folder position:
+        folder = {
+            name = infantry_folder
+            position = { x = 0 y = @1936 }
+        }
+
+        # Categories (for bonuses):
+        categories = {
+            infantry_tech
+        }
+
+        # AI behavior:
+        ai_will_do = {
+            base = 2
+            modifier = {
+                factor = 4
+                date > 1937.1.1
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+# Decision Template
+# Copy this block into your decision file in common/decisions/
+
+TAG_my_decisions = {                    # Category name (visible in UI)
+    TAG_industrial_decision = {         # Decision ID
+        icon = GFX_decision_generic_factory
+
+        allowed = {                     # Who can see this
+            tag = TAG
+        }
+
+        visible = {                     # When visible
+            has_country_flag = TAG_unlocked_decision
+        }
+
+        available = {                   # When can be taken
+            has_political_power > 50
+        }
+
+        priority = 100
+
+        cost = 50                       # Political power cost
+        days_remove = 30                # Days until remove_effect
+        days_re_enable = 90             # Cooldown
+
+        complete_effect = {             # Immediate effect
+            add_political_power = -50
+        }
+
+        remove_effect = {               # After days_remove
+            add_stability = 0.05
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 has_political_power < 100 }
+        }
+    }
+}

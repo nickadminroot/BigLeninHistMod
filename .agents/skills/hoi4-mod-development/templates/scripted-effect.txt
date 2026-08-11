@@ -1,0 +1,29 @@
+# Scripted Effect Template
+# Copy this block into your scripted effect file in common/scripted_effects/TAG_effects.txt
+
+TAG_my_effect = {
+    # This effect can be called from any script with: TAG_my_effect = yes
+
+    # Example: add buildings in a random state
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = industrial_complex
+                size > 0
+                include_locked = yes
+            }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+        }
+    }
+
+    # Example: add political power
+    add_political_power = 50
+
+    # Example: call another scripted effect
+    TAG_another_effect = yes
+}

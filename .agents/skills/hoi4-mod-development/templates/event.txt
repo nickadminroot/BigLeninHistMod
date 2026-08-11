@@ -1,0 +1,46 @@
+# Event Template
+# Copy this block into your event file in events/
+
+add_namespace = TAG_my_events
+
+country_event = {
+    id = TAG_my_events.1
+    title = TAG_my_events.1.t          # Loc key
+    desc = TAG_my_events.1.desc        # Loc key
+    picture = GFX_report_event_generic_handshake  # Event image
+
+    # When can this event fire:
+    trigger = {
+        tag = TAG
+    }
+
+    # Mean time to happen:
+    mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 0.5
+            has_war = yes
+        }
+    }
+
+    # Options:
+    option = {
+        name = TAG_my_events.1.a       # Loc key
+        ai_chance = { factor = 70 }
+        add_political_power = 50
+    }
+
+    option = {
+        name = TAG_my_events.1.b
+        ai_chance = { factor = 30 }
+        add_stability = 0.05
+    }
+}
+
+# === Localization ===
+# localisation/english/my_events_l_english.yml
+# l_english:
+#  TAG_my_events.1.t: "An Important Event"
+#  TAG_my_events.1.desc: "Something significant has happened that requires our attention."
+#  TAG_my_events.1.a: "We shall act decisively."
+#  TAG_my_events.1.b: "We must be cautious."

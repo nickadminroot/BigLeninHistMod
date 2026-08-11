@@ -75,40 +75,9 @@ python scripts/hoi4-smoke-windows.py
 - Report the command and overrides used, PASS/FAIL and exit status, retained artifact path, relevant `error.log` sources, and any remaining in-game checks.
 - If smoke fails it does not mean game fails to start or crashes. Most of the time it keeps working (and user can check the changes with his own eyes) so timeout is needed to kill the process.
 
-## Worktrees
+## Worktree helper scripts
 
-Worktrees primarily isolate independent top-level Pi sessions that may write concurrently. The user normally organizes parallel work by assigning each main session its own worktree. Do not create a worktree merely because a session uses subagents.
-
-### Main Pi sessions
-
-A user instruction to "work in a worktree" authorizes the coordinating Pi session opened in the main repository to create a task branch/worktree and perform the requested work there. It does not authorize merging the task branch or deleting it. After reporting the validated result, obtain the user's explicit approval before merging and obtain explicit approval before deleting the branch. It also does not authorize force-removal, reset, rebase, or overwriting unrelated changes.
-
-```powershell
-# Create from the intended clean base; the helper checks out an existing branch.
-git branch "<name>" "<base-commit>"
 pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
-
-# Open a separate Pi/editor session only after "Worktree ready" and path verification.
-git worktree list
-code "../BigLeninHistMod.worktrees/<name>"
-```
-
-- Keep the coordinating session in the main repository. Open the implementation session with its working directory at the created worktree and perform all implementation, subagent work, and scoped validation there.
-- One top-level writing session owns one worktree and task branch. Give concurrent sessions disjoint features/files where practical; coordinate shared files and identifiers before integration.
-- After validation, the worktree session may commit its task branch. The coordinating main-repository session reviews the diff and reports the validated result, but must wait for the user's explicit approval before merging the branch. After an approved merge, validate the integrated tree; remove the clean worktree only when safe, and wait for the user's explicit approval before deleting the merged branch. Stop and report conflicts or uncommitted files instead of forcing cleanup.
-- The Windows smoke test may run from the active worktree when explicitly requested. Worktrees do not isolate HOI4 user data or the game installation, so run only one smoke test at a time and ensure HOI4 and Paradox Launcher are closed first.
-
-The helper supports Windows PowerShell 5.1, resolves the default sibling path as `../BigLeninHistMod.worktrees/<name>`, validates that the local branch exists, and refuses destinations inside the main repository. Treat any PowerShell or Git error as a failed setup; do not work in or blindly rerun a partially created worktree. Inspect `git worktree list` and `git status` first—the helper deliberately does not force-clean a worktree created before a later copy failure.
-
-The helper symlinks extra files by default when present: `node_modules/`, `scripts/mcp/node_modules/`, `.cache/docs-search/rag-cache.json`, `.env*`, and `.pnpm-store`. Use `-UseSymlinks:$false` to copy instead. Built-in switches include `-CopyEnv:$false`, `-CopyPiCache:$false`, and `-CopyNodeModules:$false`; entries in `$ExtraItems` are processed independently and can be edited in `scripts/git-newworktree.ps1`.
-
-### Subagents and workers
-
-- Prefer async subagents - you can resume sessions of only these subagents.
-- The top-level session's checkout is the default write boundary. Point subagents at that same worktree with an explicit `cwd`; they must not silently edit the main checkout.
-- Parallel read-only workers may share a checkout. Keep one writer at a time within one checkout.
-- Do not create one worktree per worker by default. Normally the user obtains real parallel writes through separate top-level Pi sessions and session-level worktrees.
-- Use subagent `worktree: true` only when the current session deliberately owns a separate parallel-writer workflow with disjoint ownership and a planned serial integration step. Workers do not perform Git lifecycle operations; the parent session reviews their results and must obtain the user's explicit approval before merging or deleting task branches.
 
 ## Validation commands
 

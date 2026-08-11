@@ -1,0 +1,51 @@
+# Character Template
+# Copy this block into your character file in common/characters/TAG.txt
+
+characters = {
+    TAG_character_name = {
+        name = TAG_character_name             # Loc key
+        portrait = GFX_portrait_TAG_character  # Portrait sprite
+
+        country = {
+            origin = TAG
+        }
+
+        # Choose ONE of these roles:
+
+        # Army leader:
+        army_leader = {
+            traits = { brilliant_strategist winter_specialist }
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+            legacy_id = TAG_leader_001
+        }
+
+        # OR Navy leader:
+        # navy_leader = {
+        #     traits = { superior_tactician }
+        #     attack_skill = 3
+        #     defense_skill = 2
+        #     maneuvering_skill = 3
+        #     coordination_skill = 2
+        #     legacy_id = TAG_naval_001
+        # }
+
+        # OR Political advisor:
+        # advisor = {
+        #     slot = political_advisor
+        #     ledger = army
+        #     cost = 150
+        #     traits = { silent_workhorse }
+        #     ai_will_do = { factor = 1 }
+        # }
+
+        # OR Country leader:
+        # country_leader = {
+        #     ideology = fascism
+        #     desc = TAG_character_leader_desc
+        #     expire = "1946.1.1"
+        # }
+    }
+}

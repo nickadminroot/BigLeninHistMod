@@ -1,0 +1,42 @@
+"workshopitem"
+{
+    "appid"             "394360"
+    "publishedfileid"   "3105171247"
+    "contentfolder"     "G:\Documents\Paradox Interactive\Hearts of Iron IV\mod\HorstRussianLoc\HorstRussianLoc"
+    "previewfile"       "G:\Documents\Paradox Interactive\Hearts of Iron IV\mod\HorstRussianLoc\HorstRussianLoc\thumbnail.png"
+    "visibility"        "0"
+    "title"             "Horstorical Multiplayer 2 — Русская локализация"
+    "description"       "Полная русская локализация для Horstorical Multiplayer 2
+
+100% переведено (31,157 ключей):
+• Деревья фокусов для всех стран
+• Решения и события
+• Исследования и доктрины
+• Национальные духи и модификаторы
+• Военно-промышленные организации (MIO)
+• Замены ванильных локализаций (AAT, BBA, NSB, JUNO)
+• Названия штатов и вспомогательные тексты
+
+Установка:
+1. Подпишитесь на Horstorical Multiplayer 2
+2. Подпишитесь на этот мод
+3. В лаунчере HOI4 включите: Horstorical Multiplayer 2 → Horst Russian Localisation
+
+Совместимость: HOI4 1.19.*, Horstorical Multiplayer 2
+
+Примечание: 42 строки в дереве фокусов хардкождены в скриптах
+оригинального мода и не могут быть переведены через локализацию."
+    "changenote"        "Обновление до Horstorical MP2 v2.0.0
+
+Изменения:
+- Полная русская локализация (99.8% ключей)
+- Деревья фокусов, решения, события, исследования
+- Национальные духи, модификаторы, MIO
+- Замены ванильных локализаций (AAT, BBA, NSB, JUNO)
+- Совместимость с Horstorical MP2
+
+Установка:
+1. Подпишитесь на Horstorical Multiplayer 2
+2. Подпишитесь на этот мод
+3. Включите моды в лаунчере: сначала Horstorical MP2, потом эта локализация"
+}

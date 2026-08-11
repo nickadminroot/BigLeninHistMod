@@ -1,0 +1,35 @@
+# Focus Template
+# Copy this block into your country's focus tree file in common/national_focus/
+
+focus = {
+    id = TAG_focus_id                    # UNIQUE: country prefix + descriptive name
+    icon = GFX_goal_generic_construct_civilian  # Search available icons with rg
+    prerequisite = { focus = TAG_parent }       # Parent focus(es)
+    x = 0                                 # X position
+    y = 1                                 # Y position (1 below parent)
+    relative_position_id = TAG_parent     # Relative to parent
+
+    cost = 5                              # Duration in weeks (5 = 35 days)
+    ai_will_do = { factor = 1 }          # AI priority
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    available = {
+        # Conditions to START this focus
+    }
+
+    bypass = {
+        # Auto-complete conditions
+    }
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+    completion_reward = {
+        # Effects when completed
+        add_political_power = 50
+    }
+
+    # Optional: custom tooltip if effects are hidden/complex
+    # custom_effect_tooltip = TAG_focus_tt
+}

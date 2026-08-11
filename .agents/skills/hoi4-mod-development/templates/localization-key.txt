@@ -1,0 +1,45 @@
+# Localization Key Template
+# Add these keys to your .yml files in localisation/english/ and localisation/russian/
+
+# === English (localisation/english/my_mod_l_english.yml) ===
+l_english:
+ # Focus
+ TAG_focus_name: "Focus Display Name"
+ TAG_focus_name_desc: "Description of what this focus represents and why it matters."
+
+ # Idea / National Spirit
+ TAG_spirit_name: "Spirit Display Name"
+ TAG_spirit_name_desc: "Description of the national spirit and its effects.\nLine breaks use \n."
+
+ # Event
+ TAG_events.1.t: "Event Title"
+ TAG_events.1.desc: "Event description with details about what happened."
+ TAG_events.1.a: "Option A text"
+ TAG_events.1.b: "Option B text"
+
+ # Decision
+ TAG_decision_name: "Decision Display Name"
+ TAG_decision_name_desc: "Description of what this decision does."
+
+ # Custom tooltip
+ TAG_effect_tt: "This provides +10% factory output for 365 days."
+ TAG_condition_tt: "Requires: 50+ political power and at war"
+
+ # Separator
+ generic_skip_one_line_tt: " "
+
+# === Russian (localisation/russian/my_mod_l_russian.yml) ===
+l_russian:
+ TAG_focus_name: "Название фокуса"
+ TAG_focus_name_desc: "Описание того, что представляет собой этот фокус и почему он важен."
+ TAG_spirit_name: "Название духа"
+ TAG_spirit_name_desc: "Описание национального духа и его эффектов.\nПереносы строк через \n."
+ TAG_events.1.t: "Название события"
+ TAG_events.1.desc: "Описание события с подробностями о том, что произошло."
+ TAG_events.1.a: "Текст варианта А"
+ TAG_events.1.b: "Текст варианта Б"
+ TAG_decision_name: "Название решения"
+ TAG_decision_name_desc: "Описание того, что делает это решение."
+ TAG_effect_tt: "Это обеспечивает +10% к производству фабрик на 365 дней."
+ TAG_condition_tt: "Требуется: 50+ политической силы и война"
+ generic_skip_one_line_tt: " "

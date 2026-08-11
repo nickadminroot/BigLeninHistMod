@@ -2,8 +2,8 @@
 {
     "appid"             "394360"
     "publishedfileid"   "3683025629"
-    "contentfolder"     "G:\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\BigLeninHistMod\\BigLeninHistMod"
-    "previewfile"       "G:\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\BigLeninHistMod\\BigLeninHistMod\\thumbnail.png"
+    "contentfolder"     "\\\\wsl.localhost\\Ubuntu\\home\\nickadminroot\\projects\\BigLeninHistMod\\BigLeninHistMod"
+    "previewfile"       "\\\\wsl.localhost\\Ubuntu\\home\\nickadminroot\\projects\\BigLeninHistMod\\BigLeninHistMod\\thumbnail.png"
     "visibility"        "0"
     "title"             "BigLeninHistMod — Historical Multiplayer Rebalance"
     "description"       "[h1]BigLeninHistMod[/h1]
@@ -85,5 +85,5 @@ BigLeninHistMod сохраняет привычную основу Hearts of Iro
 [*]Мод является самостоятельным оверхолом и несовместим с другими модификациями, заменяющими фокусы, доктрины, снаряжение, историю стран, события или карту.
 [*]Небольшие графические и музыкальные моды могут работать, но совместимость не гарантируется.
 [/list]"
-    "changenote"        "Fix Britain starting tank programme: replace New Tanks with Allied Tanks."
+    "changenote"        "Обновление за сегодня: исправлена стабильность после аннексий и восстановлены права СССР на ресурсы после аннексии Индии; добавлены ограничения для фокусов безопасности Балтии и японской хурмы; исправлены теги доступности MIO и время снятия эмбарго США."
 }
