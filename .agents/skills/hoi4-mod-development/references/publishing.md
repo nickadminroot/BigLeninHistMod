@@ -256,6 +256,7 @@ remote_file_id="3683025629"
 | "Failed to parse build config" | VDF syntax error | Use single braces `{}`, not `{{}}` |
 | Steam Guard timeout | Mobile authenticator needs phone confirmation | Confirm on phone within timeout window |
 | "Cached credentials not found" | First login on this SteamCMD install | Use `--login USER --password PASS` first time |
+| "Invalid Password" only from WSL | Bash sourced a CRLF `.env` and retained trailing `\r` | Use the upload script/Python dotenv parsing, or source `. <(sed 's/\r$//' .env)` |
 
 ## VDF Generation Pitfalls
 

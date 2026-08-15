@@ -38,7 +38,6 @@ Use `--json` for scripts/IDE integrations, `--root <path>` when running against 
 - Multiplayer determinism and performance take priority over decorative complexity.
 - Do not introduce random or hidden rewards without an accurate visible tooltip.
 - Do not run destructive commands or Git lifecycle operations without explicit user approval.
-- Run `python scripts/hoi4-smoke-windows.py` only when the user explicitly requests the Windows smoke test; follow the serialized procedure below.
 - Use `pwsh`, not legacy Windows PowerShell (`powershell`), for PowerShell commands. When invoking it through Bash, single-quote the `-Command` script so Bash does not expand PowerShell variables such as `$_`.
 
 ## Steam Workshop updates
@@ -75,7 +74,7 @@ python scripts/hoi4-smoke-windows.py
 - Report the command and overrides used, PASS/FAIL and exit status, retained artifact path, relevant `error.log` sources, and any remaining in-game checks.
 - If smoke fails it does not mean game fails to start or crashes. Most of the time it keeps working (and user can check the changes with his own eyes) so timeout is needed to kill the process.
 
-## Worktree helper scripts
+## Git worktree helper script
 
 pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/git-newworktree.ps1 -Branch "<name>"
 

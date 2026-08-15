@@ -22,14 +22,14 @@ The repository is stored in WSL at `~/projects/BigLeninHistMod`, while SteamCMD 
 
 ```bash
 set -a
-. ./.env
+. <(sed 's/\r$//' ./.env)  # Strip CR from CRLF files before Bash sourcing.
 set +a
 STEAMCMD="${STEAMCMD:-/mnt/d/SteamCMD/steamcmd.exe}"
 VDF_WIN="$(wslpath -w ./scripts/hoi4_upload.vdf)"
 "$STEAMCMD" +login "$STEAM_USER" "$STEAM_PASS" +workshop_build_item "$VDF_WIN" +quit
 ```
 
-The VDF uses the Windows UNC path of the WSL checkout. If the repository is moved again, regenerate its `contentfolder` and `previewfile` values with `wslpath -w` before uploading.
+The VDF uses the Windows UNC path of the WSL checkout. If the repository is moved again, regenerate its `contentfolder` and `previewfile` values with `wslpath -w` before uploading. Keep the CR-stripping step: sourcing a CRLF `.env` directly from WSL appends `\r` to the Steam credentials and SteamCMD reports `Invalid Password`.
 
 ## Upload from native PowerShell
 
